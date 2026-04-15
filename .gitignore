@@ -1,8 +1,0 @@
-# Reference documents — not part of the website
-*.pdf
-*.pptx
-*.doc
-*.docx
-
-# System files
-.DS_Store
