@@ -27,8 +27,8 @@
 
   /* ── Persona colors (unified — North Star standard)
      COLOR CHANGE NOTE: Grammar Table & JTBD Map originally assigned
-     Sharon=purple, Emilie=green, Owen=blue. Standardized here to match
-     North Star & OPD Cards: Sharon=green, Emilie=blue, Owen=orange.
+     Sam=purple, Sam=green, Jordan=blue. Standardized here to match
+     North Star & OPD Cards: Sam=green, Sam=blue, Jordan=orange.
      Purple is freed exclusively for E3 (the North Star metric itself).
      See /project/momentus_grammar_table.html and jtbd_map.jsx for originals.
   ── */
@@ -37,9 +37,9 @@
   --owen:     #f97316; --owen-bg:   rgba(249,115,22,0.07);   --owen-b:   rgba(249,115,22,0.25);
   --e3:       #b266e4; --e3-bg:     rgba(178,102,228,0.07);  --e3-b:     rgba(178,102,228,0.25);
   /* ── Attribute type colors (OPD attribute semantics) ── */
-  --fixed-c:   #b266e4; /* Fixed Conditions — ontological commitment */
-  --dynamic-c: #38bdf8; /* Dynamic States */
-  --struct-c:  #fb923c; /* Structural Status */
+  --fixed-c:   #fbbf24; /* Fixed Conditions — amber */
+  --dynamic-c: #2dd4bf; /* Dynamic States — teal */
+  --struct-c:  #fb7185; /* Structural Status — rose */
 
   /* ── Input metric dimension colors (North Star) ── */
   --c-adopt:  #4ade80;
@@ -328,11 +328,11 @@ body {
 .zo-sub { font-size: 14px; color: var(--text-s); margin-bottom: 20px; }
 .zo-chain { display: flex; align-items: center; gap: 0; overflow-x: auto; margin-bottom: 14px; }
 .zo-persona {
-  flex: 1; min-width: 140px; background: var(--bg);
-  border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px;
-  cursor: pointer; transition: border-color 0.15s;
+  flex: 1; min-width: 140px;
+  border: 1px solid; border-radius: var(--r-sm); padding: 14px;
+  cursor: pointer; transition: opacity 0.15s;
 }
-.zo-persona:hover { border-color: var(--bhi); }
+.zo-persona:hover { opacity: 0.85; }
 .zo-num { font-family: var(--f-mono); font-size: 10px; letter-spacing: 2px; color: var(--text-d); margin-bottom: 5px; }
 .zo-archetype { font-family: var(--f-disp); font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 3px; }
 .zo-role { font-size: 12px; color: var(--text-s); margin-bottom: 9px; }
@@ -390,9 +390,11 @@ body {
 .gt-legend-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text-s); }
 .gt-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
-.product-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; margin-bottom: 16px; }
+.product-row { display: flex; gap: 12px; margin-bottom: 20px; align-items: stretch; }
+.product-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; flex: 1; min-width: 0; display: flex; flex-direction: column; }
 
-.ph { padding: 16px 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.ph { padding: 16px 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; cursor: pointer; transition: opacity 0.15s; }
+.ph:hover { opacity: 0.85; }
 .ph.ph-s { border-left: 3px solid var(--sharon); background: var(--sharon-bg); }
 .ph.ph-p { border-left: 3px solid var(--emilie); background: var(--emilie-bg); }
 .ph.ph-o { border-left: 3px solid var(--owen);   background: var(--owen-bg);   }
@@ -414,14 +416,15 @@ body {
 .grammar-line .val-s { color: var(--sharon); }
 .grammar-line .val-p { color: var(--emilie); }
 .grammar-line .val-o { color: var(--owen);   }
+.grammar-line .val-e3 { color: var(--e3);   }
 .grammar-line .dim   { color: var(--text-d); font-size: 11px; }
 
-.attr-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--border); }
+.attr-grid { display: none; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--border); }
 .attr-col { padding: 16px 18px 18px; border-right: 1px solid var(--border); }
 .attr-col:last-child { border-right: none; }
-.attr-col.fixed-col     { background: rgba(178,102,228,0.04); }
-.attr-col.dynamic-col   { background: rgba(56,189,248,0.04);  }
-.attr-col.structural-col { background: rgba(251,146,60,0.04);  }
+.attr-col.fixed-col     { background: rgba(251,191,36,0.04);  }
+.attr-col.dynamic-col   { background: rgba(45,212,191,0.04);  }
+.attr-col.structural-col { background: rgba(251,113,133,0.04); }
 .attr-header { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 7px; }
 .attr-header.fixed-h     { color: var(--fixed-c); }
 .attr-header.dynamic-h   { color: var(--dynamic-c); }
@@ -432,7 +435,18 @@ body {
 .attr-name { font-size: 13px; color: var(--text); font-weight: 500; }
 .attr-note { font-size: 12px; color: var(--text-s); font-style: italic; }
 
-.actions-row { padding: 14px 20px; background: var(--surface2); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.actions-row { padding: 14px 20px; background: var(--surface2); display: none; flex-direction: column; gap: 12px; }
+.act-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.act-desc { font-size: 13px; color: var(--text-s); line-height: 1.6; display: none; padding: 10px 14px; background: var(--surface); border-radius: var(--r-sm); border: 1px solid var(--border); }
+.act-desc.visible { display: block; }
+.act-chip.act-selected { box-shadow: 0 0 0 2px currentColor; opacity: 1; }
+.act-destroy { border-color: #f87171; color: #f87171; background: rgba(248,113,113,0.06); }
+.act-destroy.act-selected { background: #f87171; color: var(--bg); border-color: #f87171; }
+.ph-hint { visibility: hidden; font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; letter-spacing: 1px; }
+.ph:hover .ph-hint { visibility: visible; }
+.object-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
+.object-modal-overlay.open { display: flex; }
+.object-modal-box { max-width: 900px; width: 100%; max-height: 86vh; overflow-y: auto; border-radius: var(--r); }
 .actions-lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-d); min-width: 55px; flex-shrink: 0; }
 .act-chip { font-family: var(--f-mono); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: var(--r-sm); border: 1px solid; letter-spacing: 0.3px; }
 .act-primary { color: var(--bg); }
@@ -440,9 +454,14 @@ body {
 .act-sp { background: var(--sharon); border-color: var(--sharon); }
 .act-pp { background: var(--emilie); border-color: var(--emilie); }
 .act-op { background: var(--owen);   border-color: var(--owen);   }
+.act-ep { background: var(--e3);     border-color: var(--e3);     }
 .act-ss { border-color: var(--sharon-b); color: var(--sharon); }
 .act-ps { border-color: var(--emilie-b); color: var(--emilie); }
 .act-os { border-color: var(--owen-b);   color: var(--owen);   }
+.act-es { border-color: var(--e3-b);     color: var(--e3);     }
+.ph.ph-e3 { border-left: 3px solid var(--e3); background: var(--e3-bg); }
+.ph-stage.ph-e3-c { color: var(--e3); }
+.ph-pill.e3-pill { background: var(--e3-bg); color: var(--e3); border-color: var(--e3-b); }
 
 .gt-principles { margin-top: 20px; padding: 18px 22px; border: 1px solid var(--border); border-radius: var(--r); background: var(--surface); }
 .gt-principles-header { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-d); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
@@ -474,6 +493,26 @@ body {
   overflow-y: auto;
   border-radius: var(--r);
 }
+.persona-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.persona-modal-overlay.open { display: flex; }
+.persona-modal-box {
+  max-width: 520px;
+  width: 100%;
+  max-height: 86vh;
+  overflow-y: auto;
+  border-radius: var(--r);
+}
+.zo-hint { visibility: hidden; font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; letter-spacing: 1px; }
+.zo-persona:hover .zo-hint { visibility: visible; }
 .jtbd-stage-header {
   display: grid;
   grid-template-columns: 200px repeat(8, minmax(0,1fr));
@@ -915,7 +954,7 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
 
     <hr class="section-divider">
     <div class="sl" style="margin-bottom:12px">Why ME — rationale</div>
-    <div class="rationale"><div class="rat-q">Why not revenue or bookings?</div><div class="rat-a">Revenue is a lagging indicator. Bookings only measure Sharon's success. ME measures whether the entire promise — book it, plan it, execute it — is delivered inside Momentus. It's the only metric that captures all three products working together.</div></div>
+    <div class="rationale"><div class="rat-q">Why not revenue or bookings?</div><div class="rat-a">Revenue is a lagging indicator. Bookings only measure Alex's success. ME measures whether the entire promise — book it, plan it, execute it — is delivered inside Momentus. It's the only metric that captures all three products working together.</div></div>
     <div class="rationale"><div class="rat-q">What does ME tell us that ARR doesn't?</div><div class="rat-a">ARR tells you what customers paid. ME tells you whether they got what they paid for. An account that pays for all three products but executes operations on paper hasn't realized the platform's value — and is at high churn risk.</div></div>
     <div class="rationale"><div class="rat-q">How does ME align PM, Engineering, and Design?</div><div class="rat-a">Any feature that doesn't move ME is a distraction. Any friction that breaks the MB → MP → MW chain is a product failure. ME gives every team a shared definition of what "done" means for a venue.</div></div>
   </div>
@@ -935,8 +974,8 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
 
     <div class="persona-strip">
       <div class="dot" style="background:var(--sharon)"></div>
-      <span class="pname"><a class="xlink xlink-sharon" href="#" onclick="goToPersona('sharon'); return false;">Sharon Smith</a></span>
-      <span class="prole">— Sales Manager · "The Possibility Maker"</span>
+      <span class="pname"><a class="xlink xlink-sharon" href="#" onclick="goToPersona('sharon'); return false;">Alex Smith</a></span>
+      <span class="prole">— Sales Manager · "The Dream Catcher"</span>
       <span class="ptag">Primary Persona · Event Sales</span>
     </div>
 
@@ -954,7 +993,7 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
     <div class="sl" style="margin-bottom:12px">Why MB — grounded in the research</div>
     <div class="rationale"><div class="rat-q">The core failure MB addresses</div><div class="rat-a">The vertical research found that many venues use Momentus to track bookings but complete the actual contracting in email, Word, or separate CRMs. MB only counts when the full intake-to-contract workflow completes inside the platform — it cannot be gamed by logging a booking that was really done elsewhere.</div></div>
     <div class="rationale"><div class="rat-q">Why not total bookings created?</div><div class="rat-a">Total bookings is gameable: a sales rep can log a booking after the fact, or log it inside Momentus while doing the real work in Salesforce. MB requires the process — lead qualification, availability check, proposal, contract — to happen inside Momentus. That's the signal that the platform replaced the external tool.</div></div>
-    <div class="rationale"><div class="rat-q">How MB starts the ME chain</div><div class="rat-a">MB is the handoff trigger. When Sharon closes a booking in-platform, Emilie has something to pick up inside Momentus. If Sharon logs the booking after closing it in a CRM, the handoff is broken — and ME cannot start cleanly. MB measures whether Sharon gave Emilie a clean baton.</div></div>
+    <div class="rationale"><div class="rat-q">How MB starts the ME chain</div><div class="rat-a">MB is the handoff trigger. When Alex closes a booking in-platform, Sam has something to pick up inside Momentus. If Alex logs the booking after closing it in a CRM, the handoff is broken — and ME cannot start cleanly. MB measures whether Alex gave Sam a clean baton.</div></div>
   </div>
 
   <!-- EMILIE / EVENT PLANNING VIEW -->
@@ -972,7 +1011,7 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
 
     <div class="persona-strip">
       <div class="dot" style="background:var(--emilie)"></div>
-      <span class="pname"><a class="xlink xlink-emilie" href="#" onclick="goToPersona('emilie'); return false;">Emilie Evans</a></span>
+      <span class="pname"><a class="xlink xlink-emilie" href="#" onclick="goToPersona('emilie'); return false;">Sam Evans</a></span>
       <span class="prole">— Event Coordinator · "The Promise Keeper"</span>
       <span class="ptag">Primary Persona · Event Planning</span>
     </div>
@@ -984,14 +1023,14 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
       <div class="ic"><div class="ic-dim d-engage">Engagement · Feature usage</div><div class="ic-name">Avg. function details completed per event</div><div class="ic-def">Average number of function-level detail fields (space, F&amp;B, AV, setup, timing) completed per event. Measures the depth of event documentation inside the platform vs. externally.</div></div>
       <div class="ic"><div class="ic-dim d-retain">Retention · Return rate</div><div class="ic-name">Month-over-month coordinator return rate</div><div class="ic-def">Percentage of active coordinators in a given month who were also active the prior month for detailing tasks. Consistent return signals Momentus has replaced Word and Excel as the detailing tool.</div></div>
       <div class="ic"><div class="ic-dim d-effic">Efficiency · Time to value</div><div class="ic-name">Avg. time from handoff to BEO distribution</div><div class="ic-def">Median hours from event booking handoff from sales to complete function detail distribution to operations, measured entirely inside the platform. Shrinking time signals friction reduction in the detailing workflow.</div></div>
-      <div class="ic"><div class="ic-dim d-effect">Effectiveness · Task success</div><div class="ic-name">% events with approved detail before event date</div><div class="ic-def">Percentage of events where function detail is marked complete and approved inside Momentus before the event execution date. Direct measure of whether the product enables Emilie to keep her promise to ops.</div></div>
+      <div class="ic"><div class="ic-dim d-effect">Effectiveness · Task success</div><div class="ic-name">% events with approved detail before event date</div><div class="ic-def">Percentage of events where function detail is marked complete and approved inside Momentus before the event execution date. Direct measure of whether the product enables Sam to keep their promise to ops.</div></div>
     </div>
 
     <hr class="section-divider">
     <div class="sl" style="margin-bottom:12px">Why MP — grounded in the research</div>
-    <div class="rationale"><div class="rat-q">The core failure MP addresses</div><div class="rat-a">The vertical research explicitly states: "Elite customers tend to detail and share event needs in Word/Excel. Downstream this makes ops more manual." MP only counts when Emilie documents and distributes the full plan inside Momentus — triggering a clean handoff to Owen.</div></div>
+    <div class="rationale"><div class="rat-q">The core failure MP addresses</div><div class="rat-a">The vertical research explicitly states: "Elite customers tend to detail and share event needs in Word/Excel. Downstream this makes ops more manual." MP only counts when Sam documents and distributes the full plan inside Momentus — triggering a clean handoff to Jordan.</div></div>
     <div class="rationale"><div class="rat-q">Why not events created or functions added?</div><div class="rat-a">Creating a function record doesn't mean the plan is complete or shared. MP requires both completion (all detail fields populated) and distribution (shared to ops inside the platform). A half-finished BEO sent via email is a failure state for ME.</div></div>
-    <div class="rationale"><div class="rat-q">How MP connects to ME</div><div class="rat-a">MP is the middle link. If Emilie's detail lives in Word, Owen has nothing to execute from inside Momentus, and ME cannot complete. Every MP event is an event Owen can pick up in-platform — the bridge between sales and operations.</div></div>
+    <div class="rationale"><div class="rat-q">How MP connects to ME</div><div class="rat-a">MP is the middle link. If Sam's detail lives in Word, Jordan has nothing to execute from inside Momentus, and ME cannot complete. Every MP event is an event Jordan can pick up in-platform — the bridge between sales and operations.</div></div>
   </div>
 
   <!-- OWEN / EVENT OPERATIONS VIEW -->
@@ -1009,7 +1048,7 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
 
     <div class="persona-strip">
       <div class="dot" style="background:var(--owen)"></div>
-      <span class="pname"><a class="xlink xlink-owen" href="#" onclick="goToPersona('owen'); return false;">Owen Olsen</a></span>
+      <span class="pname"><a class="xlink xlink-owen" href="#" onclick="goToPersona('owen'); return false;">Jordan Olsen</a></span>
       <span class="prole">— Operations Supervisor · "The Moment Maker"</span>
       <span class="ptag">Primary Persona · Event Operations</span>
     </div>
@@ -1026,9 +1065,9 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
 
     <hr class="section-divider">
     <div class="sl" style="margin-bottom:12px">Why MW — grounded in the research</div>
-    <div class="rationale"><div class="rat-q">The core failure MW addresses</div><div class="rat-a">The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Owen's execution currently happens on printed sheets, radio, and email follow-up. MW rises only when that execution moves inside the platform — it cannot be gamed by creating tasks and never updating them.</div></div>
+    <div class="rationale"><div class="rat-q">The core failure MW addresses</div><div class="rat-a">The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Jordan's execution currently happens on printed sheets, radio, and email follow-up. MW rises only when that execution moves inside the platform — it cannot be gamed by creating tasks and never updating them.</div></div>
     <div class="rationale"><div class="rat-q">Why MW is the hardest and most valuable metric</div><div class="rat-a">The value realization gap is largest in operations. Enterprise customers range "from using customized reports to MWO to no ops in Momentus due to usability, cost, and learning curve." MW directly measures whether that gap is closing — and it's the gap the convention center research identified as most underserved.</div></div>
-    <div class="rationale"><div class="rat-q">How MW completes ME</div><div class="rat-a">MW is the final link. MB hands off a contracted booking. MP hands off a detailed plan. MW completes the loop by executing that plan inside the platform. An event that passes MB → MP → MW is a ME event. Owen is the last mile.</div></div>
+    <div class="rationale"><div class="rat-q">How MW completes ME</div><div class="rat-a">MW is the final link. MB hands off a contracted booking. MP hands off a detailed plan. MW completes the loop by executing that plan inside the platform. An event that passes MB → MP → MW is a ME event. Jordan is the last mile.</div></div>
   </div>
 
   <div class="page-footer">
@@ -1055,89 +1094,60 @@ Momentus serves three distinct people across the event lifecycle — a sales man
 
 Understanding who they are at this depth is what allows us to design for their reality, not just their workflow — making Momentus feel like it was built for them, not just used by them.</div>
 
-  <!-- ZOOM OUT: OPERATIONAL CHAIN -->
-  <div class="sl">Operational chain · zoom out</div>
-  <div class="zo-card">
-    <div class="zo-headline">The event is the medium.</div>
-    <div class="zo-sub">Three people. One shared object. Every time.</div>
-    <div class="zo-chain">
-      <div class="zo-persona" id="zo-sharon" role="button" tabindex="0" aria-label="View Sharon Smith persona detail" onclick="goToPersona('sharon',true)">
-        <div class="zo-num">01 · Event Sales</div>
-        <div class="zo-archetype">The Possibility<br>Maker</div>
-        <div class="zo-role">Sales Manager</div>
-        <div class="zo-tagline">"She decides what's worth making."</div>
-        <div><span class="zo-obj obj-sharon">Event Booking</span></div>
+  <!-- OPERATIONAL CHAIN -->
+  <div class="zo-chain">
+      <div class="zo-persona" id="zo-sharon" role="button" tabindex="0" aria-label="View Alex Smith persona detail" onclick="openPersonaModal('sharon')" style="background:var(--sharon-bg);border-color:var(--sharon-b)">
+        <div class="jpl-area">Sales</div>
+        <div class="jpl-name">Alex Smith</div>
+        <div class="jpl-role">Sales Manager</div>
+        <div class="jpl-archetype" style="color:var(--sharon)">The Dream Catcher</div>
+        <div class="zo-tagline">"They decide what's worth making."</div>
+        <div class="jpl-obj-wrap">
+          <span class="jpl-obj-lbl">main object:</span>
+          <span class="jpl-obj" style="color:var(--sharon);border-color:var(--sharon-b)">Event Booking</span>
+        </div>
+        <div class="zo-hint">expand ↗</div>
       </div>
       <div class="zo-arrow">→</div>
-      <div class="zo-persona" id="zo-emilie" role="button" tabindex="0" aria-label="View Emilie Evans persona detail" onclick="goToPersona('emilie',true)">
-        <div class="zo-num">02 · Event Planning</div>
-        <div class="zo-archetype">The Promise<br>Keeper</div>
-        <div class="zo-role">Event Coordinator</div>
-        <div class="zo-tagline">"She turns intent into instruction."</div>
-        <div><span class="zo-obj obj-emilie">Event Plan</span></div>
+      <div class="zo-persona" id="zo-emilie" role="button" tabindex="0" aria-label="View Sam Evans persona detail" onclick="openPersonaModal('emilie')" style="background:var(--emilie-bg);border-color:var(--emilie-b)">
+        <div class="jpl-area">Planning</div>
+        <div class="jpl-name">Sam Evans</div>
+        <div class="jpl-role">Event Coordinator</div>
+        <div class="jpl-archetype" style="color:var(--emilie)">The Promise Keeper</div>
+        <div class="zo-tagline">"They turn intent into instruction."</div>
+        <div class="jpl-obj-wrap">
+          <span class="jpl-obj-lbl">main object:</span>
+          <span class="jpl-obj" style="color:var(--emilie);border-color:var(--emilie-b)">Event Plan</span>
+        </div>
+        <div class="zo-hint">expand ↗</div>
       </div>
       <div class="zo-arrow">→</div>
-      <div class="zo-persona" id="zo-owen" role="button" tabindex="0" aria-label="View Owen Olsen persona detail" onclick="goToPersona('owen',true)">
-        <div class="zo-num">03 · Event Operations</div>
-        <div class="zo-archetype">The Moment<br>Maker</div>
-        <div class="zo-role">Operations Supervisor</div>
-        <div class="zo-tagline">"He makes sure it actually happens."</div>
-        <div><span class="zo-obj obj-owen">Event Task</span></div>
-      </div>
-      <div class="zo-arrow">→</div>
-      <div class="zo-e3">
-        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false"><defs><linearGradient id="mg3" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#b266e4"/><stop offset="100%" stop-color="#674ee7"/></linearGradient></defs><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mg3)" opacity="0.9"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mg3)" opacity="0.9" transform="rotate(60 18 18)"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mg3)" opacity="0.9" transform="rotate(120 18 18)"/><rect x="13" y="13" width="10" height="10" rx="1.5" fill="#0d0f14"/></svg>
-        <div class="zo-e3-metric">E3</div>
-        <div class="zo-e3-def">Event executed end-to-end</div>
+      <div class="zo-persona" id="zo-owen" role="button" tabindex="0" aria-label="View Jordan Olsen persona detail" onclick="openPersonaModal('owen')" style="background:var(--owen-bg);border-color:var(--owen-b)">
+        <div class="jpl-area">Operations</div>
+        <div class="jpl-name">Jordan Olsen</div>
+        <div class="jpl-role">Operations Supervisor</div>
+        <div class="jpl-archetype" style="color:var(--owen)">The Moment Maker</div>
+        <div class="zo-tagline">"They make sure it actually happens."</div>
+        <div class="jpl-obj-wrap">
+          <span class="jpl-obj-lbl">main object:</span>
+          <span class="jpl-obj" style="color:var(--owen);border-color:var(--owen-b)">Event Task</span>
+        </div>
+        <div class="zo-hint">expand ↗</div>
       </div>
     </div>
-    <div class="zo-footer">The event is what all three share. It is the medium through which each person serves the humans they are responsible for — the client, the crew, the venue itself.</div>
-  </div>
 
-  <!-- ZOOM OUT: STRATEGIC CHAIN -->
-  <div class="sl" style="margin-top:24px">Strategic layer · zoom out</div>
-  <div class="zo-card">
-    <div class="zo-headline">E3 is not the end.<br>It's the evidence.</div>
-    <div class="zo-sub">Two people read what three people built — and decide what happens next.</div>
-    <div class="zo-chain">
-      <div class="zo-e3" style="padding:0 12px 0 0;flex-shrink:0">
-        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false"><defs><linearGradient id="mg4" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#b266e4"/><stop offset="100%" stop-color="#674ee7"/></linearGradient></defs><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mg4)" opacity="0.9"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mg4)" opacity="0.9" transform="rotate(60 18 18)"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mg4)" opacity="0.9" transform="rotate(120 18 18)"/><rect x="13" y="13" width="10" height="10" rx="1.5" fill="#0d0f14"/></svg>
-        <div class="zo-e3-def" style="margin-top:4px">E3 output feeds up</div>
-      </div>
-      <div class="zo-arrow">→</div>
-      <div class="zo-persona">
-        <div class="zo-num">04 · Strategic Layer</div>
-        <div class="zo-archetype">The Clarity<br>Maker</div>
-        <div class="zo-role">Director of Operations / Technology</div>
-        <div class="zo-tagline">"She turns performance data into decisions."</div>
-        <div><span class="zo-obj obj-dir">Performance Report</span></div>
-      </div>
-      <div class="zo-arrow">→</div>
-      <div class="zo-persona">
-        <div class="zo-num">05 · Strategic Layer</div>
-        <div class="zo-archetype">The Future<br>Keeper</div>
-        <div class="zo-role">General Manager / CFO / CDO</div>
-        <div class="zo-tagline">"He decides if the venue has a future."</div>
-        <div><span class="zo-obj obj-exec">Venue Intelligence</span></div>
-      </div>
-    </div>
-    <div class="zo-footer">The operational chain creates E3. The strategic chain depends on it. Without directors and executives seeing the full picture clearly, every booking, function, and task happens in an institutional vacuum — and Momentus gets replaced or built around.</div>
-  </div>
-
-  <!-- ZOOM IN: OPERATIONAL PERSONAS -->
-  <div class="sl" style="margin-top:24px">Operational chain · zoom in</div>
-  <div class="zi-grid">
-    <!-- SHARON -->
+  <!-- PERSONA CARDS NOW RENDERED AS MODAL ON CLICK -->
+  <div class="zi-grid" style="display:none">
     <div class="zi-card" id="zi-sharon">
       <div class="zi-bar" style="background:var(--sharon)"></div>
       <div class="zi-top">
         <div class="zi-product">Event Sales</div>
-        <div class="zi-archetype">The Possibility Maker</div>
-        <div class="zi-role">Sharon Smith · Sales Manager</div>
+        <div class="zi-archetype">The Dream Catcher</div>
+        <div class="zi-role">Alex Smith · Sales Manager</div>
       </div>
       <div class="zi-quote">
         <div class="zi-quote-text">"Are we meeting the trend? Beating it? Behind it?"</div>
-        <div class="zi-quote-src">Sharon Smith · Convention Center</div>
+        <div class="zi-quote-src">Alex Smith · Convention Center</div>
       </div>
       <div class="zi-attrs">
         <div class="zi-attr-block">
@@ -1185,11 +1195,11 @@ Understanding who they are at this depth is what allows us to design for their r
       <div class="zi-top">
         <div class="zi-product">Event Planning</div>
         <div class="zi-archetype">The Promise Keeper</div>
-        <div class="zi-role">Emilie Evans · Event Coordinator</div>
+        <div class="zi-role">Sam Evans · Event Coordinator</div>
       </div>
       <div class="zi-quote">
         <div class="zi-quote-text">"I need to make sure every detail is confirmed before I send out the BEO."</div>
-        <div class="zi-quote-src">Emilie Evans · Hotel Convention Team</div>
+        <div class="zi-quote-src">Sam Evans · Hotel Convention Team</div>
       </div>
       <div class="zi-attrs">
         <div class="zi-attr-block">
@@ -1237,11 +1247,11 @@ Understanding who they are at this depth is what allows us to design for their r
       <div class="zi-top">
         <div class="zi-product">Event Operations</div>
         <div class="zi-archetype">The Moment Maker</div>
-        <div class="zi-role">Owen Olsen · Operations Supervisor</div>
+        <div class="zi-role">Jordan Olsen · Operations Supervisor</div>
       </div>
       <div class="zi-quote">
         <div class="zi-quote-text">"We don't really have a section where people tick off that they have done the event set up."</div>
-        <div class="zi-quote-src">Owen Olsen · Convention Center Operations</div>
+        <div class="zi-quote-src">Jordan Olsen · Convention Center Operations</div>
       </div>
       <div class="zi-attrs">
         <div class="zi-attr-block">
@@ -1308,51 +1318,22 @@ Momentus operates across sales, planning, and operations — three product areas
 
 Without this foundation, each product area risks developing its own vocabulary and logic — creating silos that contradict each other and make the platform harder to learn, harder to use, and harder to build.</div>
 
-  <!-- E3 chain summary -->
-  <div class="gt-e3-chain">
-    <div class="gt-e3-node">
-      <div class="gt-e3-obj" style="background:var(--sharon-bg);color:var(--sharon);border-color:var(--sharon-b)">Event Booking</div>
-      <div class="gt-e3-name">Sharon · Event Sales</div>
-    </div>
-    <div class="gt-e3-sep">···→</div>
-    <div class="gt-e3-node">
-      <div class="gt-e3-obj" style="background:var(--emilie-bg);color:var(--emilie);border-color:var(--emilie-b)">Event Plan</div>
-      <div class="gt-e3-name">Emilie · Event Planning</div>
-    </div>
-    <div class="gt-e3-sep">···→</div>
-    <div class="gt-e3-node">
-      <div class="gt-e3-obj" style="background:var(--owen-bg);color:var(--owen);border-color:var(--owen-b)">Event Task</div>
-      <div class="gt-e3-name">Owen · Event Operations</div>
-    </div>
-    <div class="gt-e3-sep">···→</div>
-    <div class="gt-e3-node">
-      <div class="gt-e3-obj" style="background:var(--e3-bg);color:var(--e3);border-color:var(--e3-b)">✦ E3</div>
-      <div class="gt-e3-name">North Star</div>
-    </div>
-  </div>
-
   <!-- Attribute type legend -->
-  <div class="gt-legend">
-    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--fixed-c)"></div><span><strong style="color:var(--fixed-c)">Fixed</strong> — Identity descriptors. Set once, never changed.</span></div>
-    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--dynamic-c)"></div><span><strong style="color:var(--dynamic-c)">Dynamic</strong> — State descriptors. Change through the object lifecycle.</span></div>
-    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--struct-c)"></div><span><strong style="color:var(--struct-c)">Structural</strong> — System position. Authority, assignment, record identity.</span></div>
-  </div>
-
+  <div class="product-row">
   <!-- PRODUCT 1: EVENT SALES -->
-  <div class="product-block">
-    <div class="ph ph-s">
+  <div class="product-block" id="pb-booking">
+    <div class="ph ph-s" role="button" tabindex="0" aria-label="Expand Event Booking object detail" onclick="openObjectModal('booking')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('booking');}">
       <div>
-        <div class="ph-stage ph-s-c">Product Area 01 — Event Sales</div>
+        <div class="ph-stage ph-s-c">Sales Primary Object</div>
         <div class="ph-object">Event Booking</div>
-        <div class="ph-persona"><strong role="button" tabindex="0" onclick="goToPersona('sharon')">Sharon Smith</strong> · Sales Manager · "The Possibility Maker"</div>
-      </div>
-      <div class="ph-right">
-        <div class="ph-pill s-pill">✦ Primary Object</div>
         <div class="grammar-line">
           <span>noun</span><span class="sep">·</span><span class="val-s">Event Booking</span>
           <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-s">Create</span>
           <span class="sep">→</span><span class="dim">Product type</span>
         </div>
+      </div>
+      <div class="ph-right">
+        <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
@@ -1393,32 +1374,30 @@ Without this foundation, each product area risks developing its own vocabulary a
       </div>
     </div>
     <div class="actions-row">
-      <div class="actions-lbl">Actions</div>
-      <span class="act-chip act-primary act-sp">Create</span>
-      <span class="act-chip act-secondary act-ss">Hold</span>
-      <span class="act-chip act-secondary act-ss">Convert</span>
-      <span class="act-chip act-secondary act-ss">Propose</span>
-      <span class="act-chip act-secondary act-ss">Confirm</span>
-      <span class="act-chip act-secondary act-ss">Update</span>
-      <span class="act-chip act-secondary act-ss">Cancel</span>
+      <div class="act-top">
+        <div class="actions-lbl">Actions</div>
+        <span class="act-chip act-secondary act-ss" data-desc="Brings a new Event Booking into existence within the system — capturing the client, dates, requested spaces, and revenue potential that define a sales opportunity." onclick="selectObjectAction(this)">Create</span>
+        <span class="act-chip act-secondary act-ss" data-desc="Modifies the attributes of an existing Event Booking — such as its status, hold priority, contract state, deposit status, or estimated attendance — as the opportunity evolves." onclick="selectObjectAction(this)">Update</span>
+        <span class="act-chip act-destroy" data-desc="Permanently removes an Event Booking from the system, erasing the record and all of its associated history." onclick="selectObjectAction(this)">Delete</span>
+      </div>
+      <div class="act-desc"></div>
     </div>
   </div>
 
   <!-- PRODUCT 2: EVENT PLANNING -->
-  <div class="product-block">
-    <div class="ph ph-p">
+  <div class="product-block" id="pb-planning">
+    <div class="ph ph-p" role="button" tabindex="0" aria-label="Expand Event Plan object detail" onclick="openObjectModal('planning')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('planning');}">
       <div>
-        <div class="ph-stage ph-p-c">Product Area 02 — Event Planning</div>
+        <div class="ph-stage ph-p-c">Planning Primary Object</div>
         <div class="ph-object">Event Plan</div>
-        <div class="ph-persona"><strong role="button" tabindex="0" onclick="goToPersona('emilie')">Emilie Evans</strong> · Event Coordinator · "The Promise Keeper"</div>
-      </div>
-      <div class="ph-right">
-        <div class="ph-pill p-pill">✦ Primary Object</div>
         <div class="grammar-line">
           <span>noun</span><span class="sep">·</span><span class="val-p">Event Plan</span>
           <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-p">Create</span>
           <span class="sep">→</span><span class="dim">Product type</span>
         </div>
+      </div>
+      <div class="ph-right">
+        <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
@@ -1458,31 +1437,30 @@ Without this foundation, each product area risks developing its own vocabulary a
       </div>
     </div>
     <div class="actions-row">
-      <div class="actions-lbl">Actions</div>
-      <span class="act-chip act-primary act-pp">Create</span>
-      <span class="act-chip act-secondary act-ps">Detail</span>
-      <span class="act-chip act-secondary act-ps">Share</span>
-      <span class="act-chip act-secondary act-ps">Update</span>
-      <span class="act-chip act-secondary act-ps">Finalize</span>
-      <span class="act-chip act-secondary act-ps">Close</span>
+      <div class="act-top">
+        <div class="actions-lbl">Actions</div>
+        <span class="act-chip act-secondary act-ps" data-desc="Brings a new Event Plan into existence within the system — establishing the function details, room assignment, timeline, and setup requirements that will guide event delivery." onclick="selectObjectAction(this)">Create</span>
+        <span class="act-chip act-secondary act-ps" data-desc="Modifies the attributes of an existing Event Plan — such as setup type, guaranteed covers, BEO publication status, or client approval state — as the event date approaches." onclick="selectObjectAction(this)">Update</span>
+        <span class="act-chip act-destroy" data-desc="Permanently removes an Event Plan from the system, erasing the function record and its distribution history." onclick="selectObjectAction(this)">Delete</span>
+      </div>
+      <div class="act-desc"></div>
     </div>
   </div>
 
   <!-- PRODUCT 3: EVENT OPERATIONS -->
-  <div class="product-block">
-    <div class="ph ph-o">
+  <div class="product-block" id="pb-operations">
+    <div class="ph ph-o" role="button" tabindex="0" aria-label="Expand Event Task object detail" onclick="openObjectModal('operations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('operations');}">
       <div>
-        <div class="ph-stage ph-o-c">Product Area 03 — Event Operations</div>
+        <div class="ph-stage ph-o-c">Operations Primary Object</div>
         <div class="ph-object">Event Task</div>
-        <div class="ph-persona"><strong role="button" tabindex="0" onclick="goToPersona('owen')">Owen Olsen</strong> · Operations Supervisor · "The Moment Maker"</div>
-      </div>
-      <div class="ph-right">
-        <div class="ph-pill o-pill">✦ Primary Object</div>
         <div class="grammar-line">
           <span>noun</span><span class="sep">·</span><span class="val-o">Event Task</span>
           <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-o">Create</span>
           <span class="sep">→</span><span class="dim">Product type</span>
         </div>
+      </div>
+      <div class="ph-right">
+        <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
@@ -1512,7 +1490,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         <div class="attr-header structural-h">Structural <span class="sub">— system position, authority</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Assigned Crew / Staff</div><div class="attr-note">who is executing the task</div></li>
-          <li class="attr-item"><div class="attr-name">Supervising Supervisor</div><div class="attr-note">accountable role (Owen)</div></li>
+          <li class="attr-item"><div class="attr-name">Supervising Supervisor</div><div class="attr-note">accountable operations role</div></li>
           <li class="attr-item"><div class="attr-name">Department Owner</div><div class="attr-note">Facilities, F&amp;B, AV, Security</div></li>
           <li class="attr-item"><div class="attr-name">Work Order # / Task ID</div><div class="attr-note">system-generated identifier</div></li>
           <li class="attr-item"><div class="attr-name">BEO Reference</div><div class="attr-note">traceability back to Event Plan</div></li>
@@ -1521,22 +1499,86 @@ Without this foundation, each product area risks developing its own vocabulary a
       </div>
     </div>
     <div class="actions-row">
-      <div class="actions-lbl">Actions</div>
-      <span class="act-chip act-primary act-op">Create</span>
-      <span class="act-chip act-secondary act-os">Assign</span>
-      <span class="act-chip act-secondary act-os">Execute</span>
-      <span class="act-chip act-secondary act-os">Complete</span>
-      <span class="act-chip act-secondary act-os">Verify</span>
-      <span class="act-chip act-secondary act-os">Report</span>
+      <div class="act-top">
+        <div class="actions-lbl">Actions</div>
+        <span class="act-chip act-secondary act-os" data-desc="Brings a new Event Task into existence within the system — defining the work to be completed, the crew responsible, and the execution window." onclick="selectObjectAction(this)">Create</span>
+        <span class="act-chip act-secondary act-os" data-desc="Modifies the attributes of an existing Event Task — such as its status, priority, assigned crew, completion progress, or incident notes — as execution unfolds." onclick="selectObjectAction(this)">Update</span>
+        <span class="act-chip act-destroy" data-desc="Permanently removes an Event Task from the system, erasing the work order and its associated records." onclick="selectObjectAction(this)">Delete</span>
+      </div>
+      <div class="act-desc"></div>
     </div>
   </div>
+
+  <!-- PRODUCT 4: E3 EVENT (END-TO-END) -->
+  <div class="product-block" id="pb-event">
+    <div class="ph ph-e3" role="button" tabindex="0" aria-label="Expand Event object detail" onclick="openObjectModal('event')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('event');}">
+      <div>
+        <div class="ph-stage ph-e3-c">Momentus End-to-End Primary Object</div>
+        <div class="ph-object">Event</div>
+        <div class="grammar-line">
+          <span>noun</span><span class="sep">·</span><span class="val-e3">Event</span>
+          <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-e3">Execute</span>
+          <span class="sep">→</span><span class="dim">E3 type</span>
+        </div>
+      </div>
+      <div class="ph-right">
+        <div class="ph-hint">expand ↗</div>
+      </div>
+    </div>
+    <div class="attr-grid">
+      <div class="attr-col fixed-col">
+        <div class="attr-header fixed-h">Fixed <span class="sub">— identity, never changes</span></div>
+        <ul class="attr-list">
+          <li class="attr-item"><div class="attr-name">Client / Account</div><div class="attr-note">the organization hosting the event</div></li>
+          <li class="attr-item"><div class="attr-name">Event Type</div><div class="attr-note">conference, gala, concert, meeting…</div></li>
+          <li class="attr-item"><div class="attr-name">Event Window</div><div class="attr-note">aggregate date range across all functions</div></li>
+          <li class="attr-item"><div class="attr-name">Venue / Location</div><div class="attr-note">property or properties involved</div></li>
+          <li class="attr-item"><div class="attr-name">Total Estimated Attendance</div><div class="attr-note">combined guest count across functions</div></li>
+          <li class="attr-item"><div class="attr-name">Total Revenue Potential</div><div class="attr-note">aggregate estimated value at booking</div></li>
+        </ul>
+      </div>
+      <div class="attr-col dynamic-col">
+        <div class="attr-header dynamic-h">Dynamic <span class="sub">— state, changes through lifecycle</span></div>
+        <ul class="attr-list">
+          <li class="attr-item"><div class="attr-name">Overall Status</div><div class="attr-note">Prospect → Booked → Planning → Confirmed → Executing → Closed</div></li>
+          <li class="attr-item"><div class="attr-name">Coverage Completeness</div><div class="attr-note">% of lifecycle managed in-platform</div></li>
+          <li class="attr-item"><div class="attr-name">E3 Progress</div><div class="attr-note">Booking ✓ · Plan ✓ · Tasks ✓</div></li>
+          <li class="attr-item"><div class="attr-name">Revenue Realization</div><div class="attr-note">actuals vs. contracted value</div></li>
+          <li class="attr-item"><div class="attr-name">Execution Health</div><div class="attr-note">On Track / At Risk / Escalated</div></li>
+          <li class="attr-item"><div class="attr-name">Client Approval State</div><div class="attr-note">Pending → Approved → Change Requested</div></li>
+        </ul>
+      </div>
+      <div class="attr-col structural-col">
+        <div class="attr-header structural-h">Structural <span class="sub">— system position, authority</span></div>
+        <ul class="attr-list">
+          <li class="attr-item"><div class="attr-name">Event Master Record ID</div><div class="attr-note">top-level system identifier</div></li>
+          <li class="attr-item"><div class="attr-name">Linked Booking Record(s)</div><div class="attr-note">all associated Event Booking objects</div></li>
+          <li class="attr-item"><div class="attr-name">Linked Event Plan(s)</div><div class="attr-note">all associated BEO / function plans</div></li>
+          <li class="attr-item"><div class="attr-name">Linked Event Task(s)</div><div class="attr-note">all operational work orders</div></li>
+          <li class="attr-item"><div class="attr-name">Primary Account Owner</div><div class="attr-note">lead responsible across lifecycle</div></li>
+          <li class="attr-item"><div class="attr-name">Created Date</div><div class="attr-note">first capture timestamp</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="actions-row">
+      <div class="act-top">
+        <div class="actions-lbl">Actions</div>
+        <span class="act-chip act-secondary act-es" data-desc="Brings a new Event into existence within the system — establishing the top-level record that unifies all bookings, plans, and tasks under a single event lifecycle." onclick="selectObjectAction(this)">Create</span>
+        <span class="act-chip act-secondary act-es" data-desc="Modifies the attributes of an existing Event — such as its overall status, execution health, revenue realization, or coverage completeness — as it moves through its lifecycle." onclick="selectObjectAction(this)">Update</span>
+        <span class="act-chip act-destroy" data-desc="Permanently removes an Event from the system, along with all linked booking, planning, and operations records." onclick="selectObjectAction(this)">Delete</span>
+      </div>
+      <div class="act-desc"></div>
+    </div>
+  </div>
+
+  </div><!-- /product-row -->
 
   <!-- Principles -->
   <div class="gt-principles">
     <div class="gt-principles-header">Grammar Principles Applied — Rosenberg Semantic IxD + OPD</div>
     <div class="gt-principles-grid">
       <div class="gt-principle"><strong>Consistent Object Type.</strong> All three operational primary objects are Product type — the irreducible unit each product creates. Not People, not Money, not Institution. Per OPD Checkpoint 2, money is a lagging indicator; the object must be the leading signal closest to the human motivation.</div>
-      <div class="gt-principle"><strong>Consistent Core Action.</strong> Create is the primary action across all three operational products. This is the E3 structural insight: the North Star only completes when all three creation events happen inside Momentus. If Sharon logs elsewhere, Emilie details in Word, or Owen prints work orders — E3 fails at that link.</div>
+      <div class="gt-principle"><strong>Consistent Core Action.</strong> Create is the primary action across all three operational products. This is the E3 structural insight: the North Star only completes when all three creation events happen inside Momentus. If a booking is logged outside the platform, a plan is detailed in Word, or work orders are printed — E3 fails at that link.</div>
       <div class="gt-principle"><strong>Attribute Taxonomy follows OPD.</strong> Fixed / Dynamic / Structural mirrors the three-layer persona attribute structure grounded in Guarino's ontological commitment (fixed conditions), computational ontology (dynamic states), and Barry Smith's categories of being (structural status). Applied here to objects, not personas.</div>
     </div>
   </div>
@@ -1598,14 +1640,210 @@ function navigate(sectionId) {
   document.querySelector('.main').scrollTo(0, 0);
 }
 
-function goToPersona(personaId, scroll) {
-  navigate('personas');
-  if (scroll) {
-    setTimeout(() => {
-      const el = document.getElementById('zi-' + personaId);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 100);
+/* ── PERSONA DETAIL DATA ── */
+const PERSONAS_DETAIL = {
+  sharon: {
+    color: '--sharon', bgColor: '--sharon-bg', border: '--sharon-b',
+    product: 'Event Sales',
+    archetype: 'The Dream Catcher',
+    role: 'Alex Smith \u00b7 Sales Manager',
+    quote: '\u201cAre we meeting the trend? Beating it? Behind it?\u201d',
+    quoteSrc: 'Alex Smith \u00b7 Convention Center',
+    object: 'Event Booking', objClass: 'obj-sharon',
+    fixed: [
+      'Analytical, competitive, and relationship-driven',
+      'Background in hospitality, sales, or event industry',
+      'Skilled in pipeline management and negotiation'
+    ],
+    dynamic: [
+      'From unqualified inquiries \u2192 to revenue-generating pipeline',
+      'From dark calendar days \u2192 to optimized space utilization',
+      'From gut-based decisions \u2192 to data-informed strategy'
+    ],
+    structural: [
+      'Calendar gatekeeper \u2014 authority over what events enter the venue',
+      'Accountable to leadership for revenue and utilization targets',
+      'The venue\u2019s primary interface with the outside market'
+    ],
+    grammarPills: ['Event Booking', 'Product', 'Create'],
+    interaction: 'Secure a booking'
+  },
+  emilie: {
+    color: '--emilie', bgColor: '--emilie-bg', border: '--emilie-b',
+    product: 'Event Planning',
+    archetype: 'The Promise Keeper',
+    role: 'Sam Evans \u00b7 Event Coordinator',
+    quote: '\u201cI need to make sure every detail is confirmed before I send out the BEO.\u201d',
+    quoteSrc: 'Sam Evans \u00b7 Hotel Convention Team',
+    object: 'Event Plan', objClass: 'obj-emilie',
+    fixed: [
+      'Detail-oriented, methodical, and client-focused',
+      'Background in event coordination, hospitality, or F&amp;B management',
+      'Skilled in BEO creation, vendor coordination, and internal communication'
+    ],
+    dynamic: [
+      'From fragmented client requirements \u2192 to a complete, approved event plan',
+      'From Word/Excel documents \u2192 to a platform-native BEO',
+      'From coordinator-to-ops verbal briefings \u2192 to distributed, written instructions'
+    ],
+    structural: [
+      'Receives the booking baton from sales \u2014 accountable for detailing it',
+      'Authority over the BEO: the single source of truth for the event',
+      'The translator between client intent and operational instruction'
+    ],
+    grammarPills: ['Event Plan', 'Product', 'Create'],
+    interaction: 'Detail and distribute a function'
+  },
+  owen: {
+    color: '--owen', bgColor: '--owen-bg', border: '--owen-b',
+    product: 'Event Operations',
+    archetype: 'The Moment Maker',
+    role: 'Jordan Olsen \u00b7 Operations Supervisor',
+    quote: '\u201cWe don\u2019t really have a section where people tick off that they have done the event set up.\u201d',
+    quoteSrc: 'Jordan Olsen \u00b7 Convention Center Operations',
+    object: 'Event Task', objClass: 'obj-owen',
+    fixed: [
+      'Execution-driven, calm under pressure, crew-focused',
+      'Background in facilities management, hospitality operations, or event logistics',
+      'Skilled in task delegation, real-time coordination, and incident management'
+    ],
+    dynamic: [
+      'From printed work orders and radio calls \u2192 to platform-based task management',
+      'From reactive incident handling \u2192 to proactive task tracking',
+      'From informal verbal handoffs \u2192 to documented, verified completion'
+    ],
+    structural: [
+      'Receives the plan baton from planning \u2014 accountable for executing it',
+      'Authority over the event floor: the final decision-maker on execution day',
+      'The last mile between the platform\u2019s promise and the client\u2019s experience'
+    ],
+    grammarPills: ['Event Task', 'Product', 'Create'],
+    interaction: 'Execute and close a task'
   }
+};
+
+function openPersonaModal(pId) {
+  const d = PERSONAS_DETAIL[pId];
+  const c = `var(${d.color})`;
+  const bg = `var(${d.bgColor})`;
+  const b = `var(${d.border})`;
+
+  const order = ['sharon','emilie','owen'];
+  const dots = order.map((id, i) => {
+    const dotColor = id === pId ? `var(${PERSONAS_DETAIL[id].color})` : 'var(--border)';
+    return `<div class="zi-ch-dot" style="background:${dotColor}"></div>${i < 2 ? '<div class="zi-ch-line"></div>' : ''}`;
+  }).join('') + `<svg width="10" height="10" viewBox="0 0 36 36" fill="none" style="flex-shrink:0" aria-hidden="true" focusable="false"><defs><linearGradient id="mgpmod" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#b266e4"/><stop offset="100%" stop-color="#674ee7"/></linearGradient></defs><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6" transform="rotate(60 18 18)"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6" transform="rotate(120 18 18)"/><rect x="13" y="13" width="10" height="10" rx="1.5" fill="#0d0f14"/></svg>`;
+
+  document.getElementById('persona-modal').classList.add('open');
+  document.getElementById('persona-detail').innerHTML = `
+    <div class="zi-card" style="border-color:${b};position:relative">
+      <div class="zi-bar" style="background:${c}"></div>
+      <button class="jd-close" onclick="closePersonaModal()" style="position:absolute;top:14px;right:14px;z-index:1">\u2715</button>
+      <div class="zi-top">
+        <div class="zi-product">${d.product}</div>
+        <div class="zi-archetype">${d.archetype}</div>
+        <div class="zi-role">${d.role}</div>
+      </div>
+      <div class="zi-quote">
+        <div class="zi-quote-text">${d.quote}</div>
+        <div class="zi-quote-src">${d.quoteSrc}</div>
+      </div>
+      <div class="zi-attrs">
+        <div class="zi-attr-block">
+          <div class="zi-attr-label lbl-fixed">Fixed Conditions</div>
+          ${d.fixed.map(x => `<div class="zi-attr-item">${x}</div>`).join('')}
+        </div>
+        <div class="zi-attr-block">
+          <div class="zi-attr-label lbl-dynamic">Dynamic States</div>
+          ${d.dynamic.map(x => `<div class="zi-attr-item">${x}</div>`).join('')}
+        </div>
+        <div class="zi-attr-block">
+          <div class="zi-attr-label lbl-struct">Structural Status</div>
+          ${d.structural.map(x => `<div class="zi-attr-item">${x}</div>`).join('')}
+        </div>
+      </div>
+      <div class="zi-grammar">
+        <div class="zi-grammar-label">Interaction grammar</div>
+        <div class="zi-grammar-pills">
+          ${d.grammarPills.map((p, i) => `<span class="g-pill">${p}</span>${i < d.grammarPills.length - 1 ? '<span class="g-sep">\u00b7</span>' : ''}`).join('')}
+        </div>
+        <div class="zi-interaction">${d.interaction}</div>
+        <div class="zi-chain-track" style="margin-top:10px">${dots}</div>
+      </div>
+    </div>`;
+}
+
+function closePersonaModal() {
+  document.getElementById('persona-modal').classList.remove('open');
+  document.getElementById('persona-detail').innerHTML = '';
+}
+
+function goToPersona(personaId) {
+  const isOnPersonas = document.getElementById('sec-personas').classList.contains('active');
+  navigate('personas');
+  setTimeout(() => openPersonaModal(personaId), isOnPersonas ? 0 : 50);
+}
+
+/* ── OBJECT MODAL (Semantic Layer) ── */
+function openObjectModal(objId) {
+  const pb = document.getElementById('pb-' + objId);
+  const ph = pb.querySelector('.ph').cloneNode(true);
+  const grid = pb.querySelector('.attr-grid').cloneNode(true);
+  const actions = pb.querySelector('.actions-row').cloneNode(true);
+
+  ph.removeAttribute('onclick');
+  ph.removeAttribute('onkeydown');
+  ph.removeAttribute('role');
+  ph.removeAttribute('tabindex');
+  ph.style.cursor = 'default';
+  const hint = ph.querySelector('.ph-hint');
+  if (hint) hint.remove();
+
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'jd-close';
+  closeBtn.style.cssText = 'position:absolute;top:14px;right:14px;z-index:1';
+  closeBtn.innerHTML = '\u2715';
+  closeBtn.onclick = closeObjectModal;
+  ph.style.position = 'relative';
+  ph.appendChild(closeBtn);
+
+  grid.style.display = 'grid';
+  actions.style.display = 'flex';
+
+  const legend = document.createElement('div');
+  legend.className = 'gt-legend';
+  legend.style.cssText = 'padding:12px 20px;border-top:1px solid var(--border);flex-direction:column;gap:8px';
+  legend.innerHTML = `
+    <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:10px">Ontological Attribute Definition</div>
+    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--fixed-c)"></div><span><strong style="color:var(--fixed-c)">Fixed Conditions</strong> — Identity descriptors. Set once, never changed.</span></div>
+    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--dynamic-c)"></div><span><strong style="color:var(--dynamic-c)">Dynamic States</strong> — State descriptors. Change through the object lifecycle.</span></div>
+    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--struct-c)"></div><span><strong style="color:var(--struct-c)">Structural Status</strong> — System position. Authority, assignment, record identity.</span></div>`;
+
+  const wrap = document.createElement('div');
+  wrap.style.cssText = 'border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--border)';
+  wrap.appendChild(ph);
+  wrap.appendChild(grid);
+  wrap.appendChild(legend);
+  wrap.appendChild(actions);
+
+  const detail = document.getElementById('object-detail');
+  detail.innerHTML = '';
+  detail.appendChild(wrap);
+  document.getElementById('object-modal').classList.add('open');
+}
+
+function closeObjectModal() {
+  document.getElementById('object-modal').classList.remove('open');
+  document.getElementById('object-detail').innerHTML = '';
+}
+
+function selectObjectAction(chip) {
+  const top = chip.closest('.act-top');
+  top.querySelectorAll('.act-chip').forEach(c => c.classList.remove('act-selected'));
+  chip.classList.add('act-selected');
+  const desc = chip.closest('.actions-row').querySelector('.act-desc');
+  desc.textContent = chip.dataset.desc;
+  desc.classList.add('visible');
 }
 
 /* ── NORTH STAR CHAIN NAVIGATION ── */
@@ -1648,9 +1886,9 @@ const STAGES = [
 ];
 
 const PERSONAS_J = [
-  { id:'sharon',  name:'Sharon Smith',    role:'Sales Manager',                    archetype:'The Possibility Maker', product:'Event Sales',       object:'Event Booking',       job:'Book high-value events that maximize revenue and calendar utilization for the venue', color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
-  { id:'emilie',  name:'Emilie Evans',    role:'Event Coordinator',                archetype:'The Promise Keeper',    product:'Event Planning',     object:'Event Plan',      job:'Plan and coordinate every detail of a committed event so it can be delivered as promised', color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
-  { id:'owen',    name:'Owen Olsen',      role:'Operations Supervisor',            archetype:'The Moment Maker',      product:'Event Operations',   object:'Event Task',          job:'Execute all operational tasks required to set up and run an event flawlessly on the day', color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
+  { id:'sharon',  name:'Alex Smith',    role:'Sales Manager',                    archetype:'The Dream Catcher', product:'Event Sales',       object:'Event Booking',       job:'Book high-value events that maximize revenue and calendar utilization for the venue', color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
+  { id:'emilie',  name:'Sam Evans',    role:'Event Coordinator',                archetype:'The Promise Keeper',    product:'Event Planning',     object:'Event Plan',      job:'Plan and coordinate every detail of a committed event so it can be delivered as promised', color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
+  { id:'owen',    name:'Jordan Olsen',      role:'Operations Supervisor',            archetype:'The Moment Maker',      product:'Event Operations',   object:'Event Task',          job:'Execute all operational tasks required to set up and run an event flawlessly on the day', color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
 ];
 
 const SHORT = {
@@ -1994,6 +2232,8 @@ function renderJTBDDetail(pId, sId) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
+    if (document.getElementById('persona-modal').classList.contains('open')) closePersonaModal();
+    if (document.getElementById('object-modal').classList.contains('open')) closeObjectModal();
   }
   if (e.key === 'Enter' || e.key === ' ') {
     const el = e.target;
@@ -2007,5 +2247,16 @@ document.addEventListener('keydown', function(e) {
 /* ── INIT ── */
 buildJTBDGrid();
 </script>
+<div id="object-modal" class="object-modal-overlay" role="dialog" aria-modal="true" aria-label="Object detail" onclick="closeObjectModal()">
+  <div class="object-modal-box" onclick="event.stopPropagation()">
+    <div id="object-detail"></div>
+  </div>
+</div>
+
+<div id="persona-modal" class="persona-modal-overlay" role="dialog" aria-modal="true" aria-label="Persona detail" onclick="closePersonaModal()">
+  <div class="persona-modal-box" onclick="event.stopPropagation()">
+    <div id="persona-detail"></div>
+  </div>
+</div>
 </body>
 </html>
