@@ -2108,36 +2108,38 @@ const MAP = {
   }
 };
 
+/* ── SHARED ICON MAPS ── */
+const _ico = (size, paths) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">${paths}</svg>`;
+const PERSONA_PATHS = {
+  sharon: `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/>`,
+  emilie: `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/>`,
+  owen:   `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/>`
+};
+const OBJECT_PATHS = {
+  booking:    `<path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10.4 19.5-2.4.5.5-2.4 5-5c.33-.33.86-.33 1.2 0l.7.7a.848.848 0 0 1 0 1.2z"/>`,
+  planning:   `<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>`,
+  operations: `<polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>`
+};
+const STAGE_PATHS = {
+  define:   `<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>`,
+  locate:   `<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>`,
+  prepare:  `<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="3" y="12" width="7" height="5" rx="1"/><path d="M14 5h7M14 9h5M14 14h7M14 18h5"/>`,
+  confirm:  `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`,
+  execute:  `<circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>`,
+  monitor:  `<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>`,
+  modify:   `<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>`,
+  conclude: `<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>`
+};
+const CHIP_PERSONA_ICONS = Object.fromEntries(Object.entries(PERSONA_PATHS).map(([k,v]) => [k, _ico(12, v)]));
+const CHIP_OBJECT_ICONS  = Object.fromEntries(Object.entries(OBJECT_PATHS).map(([k,v])  => [k, _ico(12, v)]));
+const STAGE_ICONS        = Object.fromEntries(Object.entries(STAGE_PATHS).map(([k,v])   => [k, _ico(14, v)]));
+
 /* ── JTBD GRID BUILDER ── */
 let jtbdSelected = null;
 
 function buildJTBDGrid() {
   const grid = document.getElementById('jtbd-grid');
   const colTemplate = '240px repeat(8, minmax(0,1fr))';
-
-  const _s = 'fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"';
-  const CHIP_PERSONA_ICONS = {
-    sharon: `<svg width="12" height="12" viewBox="0 0 24 24" ${_s}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>`,
-    emilie: `<svg width="12" height="12" viewBox="0 0 24 24" ${_s}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/></svg>`,
-    owen:   `<svg width="12" height="12" viewBox="0 0 24 24" ${_s}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/></svg>`
-  };
-  const CHIP_OBJECT_ICONS = {
-    booking:    `<svg width="12" height="12" viewBox="0 0 24 24" ${_s}><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10.4 19.5-2.4.5.5-2.4 5-5c.33-.33.86-.33 1.2 0l.7.7a.848.848 0 0 1 0 1.2z"/></svg>`,
-    planning:   `<svg width="12" height="12" viewBox="0 0 24 24" ${_s}><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>`,
-    operations: `<svg width="12" height="12" viewBox="0 0 24 24" ${_s}><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`
-  };
-
-  const _si = 'width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"';
-  const STAGE_ICONS = {
-    define:   `<svg ${_si}><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`,
-    locate:   `<svg ${_si}><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
-    prepare:  `<svg ${_si}><rect x="3" y="3" width="7" height="5" rx="1"/><rect x="3" y="12" width="7" height="5" rx="1"/><path d="M14 5h7M14 9h5M14 14h7M14 18h5"/></svg>`,
-    confirm:  `<svg ${_si}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
-    execute:  `<svg ${_si}><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`,
-    monitor:  `<svg ${_si}><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
-    modify:   `<svg ${_si}><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>`,
-    conclude: `<svg ${_si}><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`
-  };
 
   let html = '';
 
@@ -2260,29 +2262,44 @@ function renderJTBDDetail(pId, sId) {
     </div>
   `).join('');
 
+  const area = p.product.replace('Event ', '');
   document.getElementById('jtbd-modal').classList.add('open');
   document.getElementById('jtbd-detail').innerHTML = `
-    <div class="jd-panel" style="border-color:${b}">
-      <div class="jd-header">
-        <div style="flex:1">
-          <div class="jd-tags">
-            <span class="jd-tag" style="color:${c};background:${bg};border-color:${b}">${p.name} · ${p.object}</span>
-            <span style="color:var(--text-d);font-size:13px">×</span>
-            <span class="jd-tag" style="color:var(--text-s);background:rgba(255,255,255,0.03);border-color:var(--border)">${s.num} ${s.label} · ${s.verbs}</span>
+    <div class="jd-panel" style="border-color:${b};padding:0;overflow:hidden">
+      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};display:flex;align-items:flex-start;gap:20px">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Primary Job</div>
+          <div style="font-family:var(--f-disp);font-size:18px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:10px;display:flex;align-items:center;gap:8px">${_ico(18,PERSONA_PATHS[pId])}${p.mainAction}</div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span class="jpl-obj-lbl">Primary Object:</span>
+              <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${p.objId}',event)">${CHIP_OBJECT_ICONS[p.objId]}${p.object}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span class="jpl-obj-lbl">Primary Persona:</span>
+              <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Persona" onclick="goToPersona('${pId}');event.stopPropagation()">${CHIP_PERSONA_ICONS[pId]}${p.role}</span>
+            </div>
           </div>
-          <div class="jd-step">${d.step}</div>
-          <div class="jd-job">Functional job: <span style="color:var(--text-d)">${p.job}</span></div>
         </div>
-        <button class="jd-close" onclick="closeJTBDModal()">✕</button>
+        <div style="width:1px;background:${b};align-self:stretch;flex-shrink:0"></div>
+        <div style="min-width:130px;flex-shrink:0">
+          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:5px">${s.num} · Step</div>
+          <div style="font-family:var(--f-disp);font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px;display:flex;align-items:center;gap:5px">${STAGE_ICONS[s.id]}${s.label}</div>
+          <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
+        </div>
+        <button class="jd-close" onclick="closeJTBDModal()" style="flex-shrink:0">✕</button>
       </div>
-      <div class="jd-odi-label">Desired outcome statements — ODI format · 5 of ~50–150 · Ulwick (2018) p.94</div>
-      <div class="jd-outcomes">${outcomesHTML}</div>
-      <div class="jd-legend">
-        <div class="jd-legend-item"><div class="jd-legend-dot" style="background:#f87171"></div>Direction — Minimize</div>
-        <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--sharon)"></div>Direction — Maximize</div>
-        <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text-d)"></div>Performance metric (italic)</div>
-        <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text)"></div>Object of control</div>
-        <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text-s)"></div>Contextual clarifier</div>
+      <div style="padding:16px 20px 20px">
+        <div class="jd-step" style="margin-bottom:12px">${d.step}</div>
+        <div class="jd-odi-label">Desired outcome statements — ODI format · 5 of ~50–150 · Ulwick (2018) p.94</div>
+        <div class="jd-outcomes">${outcomesHTML}</div>
+        <div class="jd-legend">
+          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:#f87171"></div>Direction — Minimize</div>
+          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--sharon)"></div>Direction — Maximize</div>
+          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text-d)"></div>Performance metric (italic)</div>
+          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text)"></div>Object of control</div>
+          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text-s)"></div>Contextual clarifier</div>
+        </div>
       </div>
     </div>
   `;
