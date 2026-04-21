@@ -532,6 +532,46 @@ body {
 }
 .main-job-modal-overlay.open { display: flex; }
 .main-job-modal-box { max-width: 620px; width: 100%; max-height: 86vh; overflow-y: auto; border-radius: var(--r); }
+
+.ns-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.ns-modal-overlay.open { display: flex; }
+.ns-modal-box {
+  max-width: 860px;
+  width: 100%;
+  max-height: 86vh;
+  overflow-y: auto;
+  border-radius: var(--r);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.ns-metrics-grid {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.ns-metric-col { padding: 12px 14px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 16px; }
+.ns-metric-col:last-child { border-bottom: none; }
+.ns-metric-col-hd { flex-shrink: 0; width: 150px; }
+.ns-metric-col-bd { flex: 1; min-width: 0; }
+.nmc-adopt  { background: rgba(74,222,128,0.04);  }
+.nmc-engage { background: rgba(56,189,248,0.04);  }
+.nmc-retain { background: rgba(251,146,60,0.04);  }
+.nmc-effic  { background: rgba(232,121,249,0.04); }
+.nmc-effect { background: rgba(178,102,228,0.04); }
+.ns-metric-col-name { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+.ns-metric-col-def  { font-size: 11px; color: var(--text-d); line-height: 1.55; }
 .zo-hint { visibility: hidden; font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; letter-spacing: 1px; }
 .zo-persona:hover .zo-hint { visibility: visible; }
 .jtbd-stage-header {
@@ -588,6 +628,8 @@ body {
 .jd-job { font-size: 12px; color: var(--text-d); }
 .jd-close { background: none; border: 1px solid var(--border); border-radius: var(--r-sm); color: var(--text-d); cursor: pointer; padding: 4px 10px; font-size: 12px; font-family: var(--f-mono); flex-shrink: 0; }
 .jd-close:hover { color: var(--text-s); border-color: var(--bhi); }
+.jd-nav-btn { background: none; border: 1px solid; border-radius: var(--r-sm); cursor: pointer; padding: 4px 10px; font-size: 11px; font-family: var(--f-mono); transition: background 0.15s, color 0.15s; }
+.jd-nav-btn:hover { background: rgba(255,255,255,0.05); }
 .jd-odi-label { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
 .jd-outcomes { display: flex; flex-direction: column; gap: 7px; }
 .jd-outcome { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start; }
@@ -920,31 +962,67 @@ body {
 
   <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">A North Star metric is a single leading indicator that connects revenue increase with trackable user behavior that proves the customer is getting the core value from the product.<br><br>Momentus delivers value across three main lifecycle product areas, so we define one end-to-end metric that proves the platform is working as a whole, and one product area-level metric per stage that shows each link in the chain is carrying its weight. If any product area isn't aligned to its North Star, the end-to-end metric drops — making alignment both a strategic compass and an early warning system.</div>
 
-  <div class="sl" style="padding-top:20px;margin-bottom:10px">The Momentus Stars Align — explore the North Stars</div>
-  <div class="chain" style="margin-bottom:28px;padding-bottom:20px" role="tablist" aria-label="North Star views">
-    <div class="chain-node" role="tab" tabindex="0" aria-selected="false" aria-controls="ns-sharon" style="--cn-bg:var(--sharon-bg);--cn-b:var(--sharon-b);--cn-color:var(--sharon)" onclick="switchNsChain('sharon',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchNsChain('sharon',this);}">
-      <div class="chain-lbl" style="color:var(--sharon)">✦ Sales North Star</div>
-      <div class="chain-val" style="color:var(--sharon)">MB</div>
+  <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px;padding-top:20px">Momentus North Stars</div>
+  <div class="product-row" style="margin-bottom:28px">
+    <div class="product-block" id="nspb-sharon">
+      <div class="ph ph-s" role="button" tabindex="0" aria-label="View Sales North Star detail"
+           onclick="openNsModal('sharon')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNsModal('sharon');}">
+        <div>
+          <div class="ph-stage ph-s-c">Sales</div>
+          <div class="ph-object">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><g transform="translate(5,8) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>
+            Momentus Bookings
+          </div>
+          <div class="ph-hint">expand ↗</div>
+        </div>
+      </div>
     </div>
-    <div class="chain-dot" aria-hidden="true">→</div>
-    <div class="chain-node" role="tab" tabindex="0" aria-selected="false" aria-controls="ns-emilie" style="--cn-bg:var(--emilie-bg);--cn-b:var(--emilie-b);--cn-color:var(--emilie)" onclick="switchNsChain('emilie',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchNsChain('emilie',this);}">
-      <div class="chain-lbl" style="color:var(--emilie)">✦ Planning North Star</div>
-      <div class="chain-val" style="color:var(--emilie)">MP</div>
+    <div class="zo-arrow" style="align-self:center">→</div>
+    <div class="product-block" id="nspb-emilie">
+      <div class="ph ph-p" role="button" tabindex="0" aria-label="View Planning North Star detail"
+           onclick="openNsModal('emilie')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNsModal('emilie');}">
+        <div>
+          <div class="ph-stage ph-p-c">Planning</div>
+          <div class="ph-object">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><g transform="translate(6,8) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>
+            Momentus Plans
+          </div>
+          <div class="ph-hint">expand ↗</div>
+        </div>
+      </div>
     </div>
-    <div class="chain-dot" aria-hidden="true">→</div>
-    <div class="chain-node" role="tab" tabindex="0" aria-selected="false" aria-controls="ns-owen" style="--cn-bg:var(--owen-bg);--cn-b:var(--owen-b);--cn-color:var(--owen)" onclick="switchNsChain('owen',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchNsChain('owen',this);}">
-      <div class="chain-lbl" style="color:var(--owen)">✦ Operations North Star</div>
-      <div class="chain-val" style="color:var(--owen)">MW</div>
+    <div class="zo-arrow" style="align-self:center">→</div>
+    <div class="product-block" id="nspb-owen">
+      <div class="ph ph-o" role="button" tabindex="0" aria-label="View Operations North Star detail"
+           onclick="openNsModal('owen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNsModal('owen');}">
+        <div>
+          <div class="ph-stage ph-o-c">Operations</div>
+          <div class="ph-object">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><g transform="translate(6,6) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>
+            Momentus Jobs
+          </div>
+          <div class="ph-hint">expand ↗</div>
+        </div>
+      </div>
     </div>
-    <div class="chain-dot" aria-hidden="true">→</div>
-    <div class="chain-node chain-active" role="tab" tabindex="0" aria-selected="true" aria-controls="ns-e3" style="--cn-bg:var(--e3-bg);--cn-b:var(--e3-b);--cn-color:var(--e3)" onclick="switchNsChain('e3',this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchNsChain('e3',this);}">
-      <div class="chain-lbl" style="color:var(--e3)">✦ Momentus North Star</div>
-      <div class="chain-val" style="color:var(--e3)">ME</div>
+    <div class="zo-arrow" style="align-self:center">→</div>
+    <div class="product-block" id="nspb-e3">
+      <div class="ph ph-e3" role="button" tabindex="0" aria-label="View Momentus North Star detail"
+           onclick="openNsModal('e3')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNsModal('e3');}">
+        <div>
+          <div class="ph-stage ph-e3-c">End-to-End</div>
+          <div class="ph-object">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><g transform="translate(6,10) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>
+            Momentus Events
+          </div>
+          <div class="ph-hint">expand ↗</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- E3 VIEW -->
-  <div class="tab-view active" id="ns-e3" role="tabpanel" aria-labelledby="tab-ns-e3">
+  <!-- Hidden data containers for NS modals -->
+  <div class="tab-view" id="ns-e3" role="tabpanel" aria-labelledby="tab-ns-e3">
     <div class="star-card sc-e3">
       <div class="star-eyebrow" style="color:var(--e3)">✦ North Star · Momentus Unified</div>
       <div class="star-metric">Momentus Events <span class="star-abbr">(ME)</span></div>
@@ -970,7 +1048,7 @@ body {
     <div class="sl" style="margin-bottom:12px">Why ME — rationale</div>
     <div class="rationale"><div class="rat-q">Why not revenue or bookings?</div><div class="rat-a">Revenue is a lagging indicator. Bookings only measure Alex's success. ME measures whether the entire promise — book it, plan it, execute it — is delivered inside Momentus. It's the only metric that captures all three products working together.</div></div>
     <div class="rationale"><div class="rat-q">What does ME tell us that ARR doesn't?</div><div class="rat-a">ARR tells you what customers paid. ME tells you whether they got what they paid for. An account that pays for all three products but executes operations on paper hasn't realized the platform's value — and is at high churn risk.</div></div>
-    <div class="rationale"><div class="rat-q">How does ME align PM, Engineering, and Design?</div><div class="rat-a">Any feature that doesn't move ME is a distraction. Any friction that breaks the MB → MP → MW chain is a product failure. ME gives every team a shared definition of what "done" means for a venue.</div></div>
+    <div class="rationale"><div class="rat-q">How does ME align PM, Engineering, and Design?</div><div class="rat-a">Any feature that doesn't move ME is a distraction. Any friction that breaks the MB → MP → MJ chain is a product failure. ME gives every team a shared definition of what "done" means for a venue.</div></div>
   </div>
 
   <!-- SHARON / EVENT SALES VIEW -->
@@ -1051,7 +1129,7 @@ body {
   <div class="tab-view" id="ns-owen" role="tabpanel" aria-labelledby="tab-ns-owen">
     <div class="star-card sc-owen">
       <div class="star-eyebrow" style="color:var(--owen)">◆ North Star · Operations Product Area</div>
-      <div class="star-metric">Momentus Work <span class="star-abbr">(MW)</span></div>
+      <div class="star-metric">Momentus Jobs <span class="star-abbr">(MJ)</span></div>
       <div class="star-def">The number of events where all assigned tasks — setup, execution, teardown, incident response — are created, tracked, and closed inside Momentus during the event execution window (pre-event, day-of, post-event) in a rolling 30-day window. An event counts only when task execution does not fall back to paper, radio, or email.</div>
       <div class="ov-badges">
         <span class="chip-label">Completes the ME chain</span>
@@ -1068,20 +1146,20 @@ body {
     </div>
 
     <div class="sl">Key input metrics</div>
-    <div class="arrow-row"><span>↓ MW key input metrics drive</span><strong>Momentus Work</strong><span>which completes →</span><strong>ME operations stage</strong></div>
+    <div class="arrow-row"><span>↓ MJ key input metrics drive</span><strong>Momentus Jobs</strong><span>which completes →</span><strong>ME operations stage</strong></div>
     <div class="inputs-grid">
       <div class="ic"><div class="ic-dim d-adopt">Adoption · Active user</div><div class="ic-name">Active ops supervisors using task features</div><div class="ic-def">Number of operations supervisors who created or updated at least one task or work order inside Momentus — not on paper or printed sheets — in the past 30 days.</div></div>
       <div class="ic"><div class="ic-dim d-engage">Engagement · Feature usage</div><div class="ic-name">Avg. tasks created and tracked per event</div><div class="ic-def">Average number of tasks assigned and updated per event inside the platform. Measures how deeply the operations workflow executes inside Momentus vs. managed via radio calls, paper work orders, or manual check-ins.</div></div>
       <div class="ic"><div class="ic-dim d-retain">Retention · Return rate</div><div class="ic-name">Month-over-month ops user return rate</div><div class="ic-def">Percentage of active operations users in a given month who were also active the prior month. Consistent return signals the platform has embedded into their execution rhythm, not just their setup routine.</div></div>
       <div class="ic"><div class="ic-dim d-effic">Efficiency · Time to value</div><div class="ic-name">Avg. task assignment-to-completion time</div><div class="ic-def">Median hours from task creation to closure inside Momentus per event. A decreasing cycle time signals the platform is accelerating execution, not just recording it after the fact.</div></div>
-      <div class="ic"><div class="ic-dim d-effect">Effectiveness · Task success</div><div class="ic-name">Task completion rate before or during event</div><div class="ic-def">Percentage of assigned operations tasks marked complete before or during the event. The research finding — "we don't really have a section where people tick off that they have done the event set up" — is exactly what MW closes.</div></div>
+      <div class="ic"><div class="ic-dim d-effect">Effectiveness · Task success</div><div class="ic-name">Task completion rate before or during event</div><div class="ic-def">Percentage of assigned operations tasks marked complete before or during the event. The research finding — "we don't really have a section where people tick off that they have done the event set up" — is exactly what MJ closes.</div></div>
     </div>
 
     <hr class="section-divider">
-    <div class="sl" style="margin-bottom:12px">Why MW — grounded in the research</div>
-    <div class="rationale"><div class="rat-q">The core failure MW addresses</div><div class="rat-a">The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Jordan's execution currently happens on printed sheets, radio, and email follow-up. MW rises only when that execution moves inside the platform — it cannot be gamed by creating tasks and never updating them.</div></div>
-    <div class="rationale"><div class="rat-q">Why MW is the hardest and most valuable metric</div><div class="rat-a">The value realization gap is largest in operations. Enterprise customers range "from using customized reports to MWO to no ops in Momentus due to usability, cost, and learning curve." MW directly measures whether that gap is closing — and it's the gap the convention center research identified as most underserved.</div></div>
-    <div class="rationale"><div class="rat-q">How MW completes ME</div><div class="rat-a">MW is the final link. MB hands off a contracted booking. MP hands off a detailed plan. MW completes the loop by executing that plan inside the platform. An event that passes MB → MP → MW is a ME event. Jordan is the last mile.</div></div>
+    <div class="sl" style="margin-bottom:12px">Why MJ — grounded in the research</div>
+    <div class="rationale"><div class="rat-q">The core failure MJ addresses</div><div class="rat-a">The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Jordan's execution currently happens on printed sheets, radio, and email follow-up. MJ rises only when that execution moves inside the platform — it cannot be gamed by creating tasks and never updating them.</div></div>
+    <div class="rationale"><div class="rat-q">Why MJ is the hardest and most valuable metric</div><div class="rat-a">The value realization gap is largest in operations. Enterprise customers range "from using customized reports to MWO to no ops in Momentus due to usability, cost, and learning curve." MJ directly measures whether that gap is closing — and it's the gap the convention center research identified as most underserved.</div></div>
+    <div class="rationale"><div class="rat-q">How MJ completes ME</div><div class="rat-a">MJ is the final link. MB hands off a contracted booking. MP hands off a detailed plan. MJ completes the loop by executing that plan inside the platform. An event that passes MB → MP → MJ is a ME event. Jordan is the last mile.</div></div>
   </div>
 
   <div class="page-footer">
@@ -1105,39 +1183,18 @@ body {
       <div class="zo-persona zp-sharon" id="zo-sharon" role="button" tabindex="0" aria-label="View Alex Smith persona detail" onclick="openPersonaModal('sharon')">
         <div class="jpl-area" style="color:var(--sharon)">Sales</div>
         <div class="jpl-role" style="display:flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85"><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>Sales Manager</div>
-        <div class="jpl-name">Alex Smith</div>
-        <div class="jpl-archetype" style="color:var(--sharon)">The Dream Catcher</div>
-        <div class="zo-tagline">"They decide what's worth making."</div>
-        <div class="jpl-obj-wrap">
-          <span class="jpl-obj-lbl">Primary Object:</span>
-          <span class="jpl-obj" style="color:var(--sharon);border-color:var(--sharon-b)" title="Go to Primary Object" onclick="goToPrimaryObject('booking', event)">Event Booking</span>
-        </div>
         <div class="zo-hint">expand ↗</div>
       </div>
       <div class="zo-arrow">→</div>
       <div class="zo-persona zp-emilie" id="zo-emilie" role="button" tabindex="0" aria-label="View Sam Evans persona detail" onclick="openPersonaModal('emilie')">
         <div class="jpl-area" style="color:var(--emilie)">Planning</div>
         <div class="jpl-role" style="display:flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85"><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/></svg>Event Coordinator</div>
-        <div class="jpl-name">Sam Evans</div>
-        <div class="jpl-archetype" style="color:var(--emilie)">The Promise Keeper</div>
-        <div class="zo-tagline">"They turn intent into instruction."</div>
-        <div class="jpl-obj-wrap">
-          <span class="jpl-obj-lbl">Primary Object:</span>
-          <span class="jpl-obj" style="color:var(--emilie);border-color:var(--emilie-b)" title="Go to Primary Object" onclick="goToPrimaryObject('planning', event)">Event Plan</span>
-        </div>
         <div class="zo-hint">expand ↗</div>
       </div>
       <div class="zo-arrow">→</div>
       <div class="zo-persona zp-owen" id="zo-owen" role="button" tabindex="0" aria-label="View Jordan Olsen persona detail" onclick="openPersonaModal('owen')">
         <div class="jpl-area" style="color:var(--owen)">Operations</div>
         <div class="jpl-role" style="display:flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85"><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/></svg>Operations Supervisor</div>
-        <div class="jpl-name">Jordan Olsen</div>
-        <div class="jpl-archetype" style="color:var(--owen)">The Moment Maker</div>
-        <div class="zo-tagline">"They make sure it actually happens."</div>
-        <div class="jpl-obj-wrap">
-          <span class="jpl-obj-lbl">Primary Object:</span>
-          <span class="jpl-obj" style="color:var(--owen);border-color:var(--owen-b)" title="Go to Primary Object" onclick="goToPrimaryObject('operations', event)">Event Job</span>
-        </div>
         <div class="zo-hint">expand ↗</div>
       </div>
     </div>
@@ -1500,7 +1557,7 @@ body {
     <div class="ph ph-e3" role="button" tabindex="0" aria-label="Expand Event object detail" onclick="openObjectModal('event')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('event');}">
       <div>
         <div class="ph-stage ph-e3-c">Momentus End-to-End</div>
-        <div class="ph-object"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/></svg>Event</div>
+        <div class="ph-object"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>Event</div>
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
@@ -1574,12 +1631,6 @@ body {
     <div id="jtbd-grid"><!-- built by JS --></div>
   </div>
   <div id="jtbd-instruction" class="jtbd-instruction">Select any cell to view the job step and 3 ODI desired outcome statements</div>
-
-  <div id="jtbd-modal" class="jtbd-modal-overlay" role="dialog" aria-modal="true" aria-label="Job stage detail" onclick="closeJTBDModal()">
-    <div class="jtbd-modal-box" onclick="event.stopPropagation()">
-      <div id="jtbd-detail"></div>
-    </div>
-  </div>
 
   <div class="page-footer" style="margin-top:28px">
     <span>Sources: Ulwick (2018) Jobs-to-be-Done: Theory to Practice · Strategyn ODI · Momentus OPD Framework</span>
@@ -1759,7 +1810,106 @@ function closePersonaModal() {
   document.getElementById('persona-detail').innerHTML = '';
 }
 
+function openNsModal(id) {
+  const src   = document.getElementById('ns-' + id);
+  const clone = src.cloneNode(true);
+
+  const colorMap = {
+    e3:     { c:'var(--e3)',     bg:'var(--e3-bg)',     b:'var(--e3-b)'     },
+    sharon: { c:'var(--sharon)', bg:'var(--sharon-bg)', b:'var(--sharon-b)' },
+    emilie: { c:'var(--emilie)', bg:'var(--emilie-bg)', b:'var(--emilie-b)' },
+    owen:   { c:'var(--owen)',   bg:'var(--owen-bg)',   b:'var(--owen-b)'   },
+  };
+  const { c, bg, b } = colorMap[id] || colorMap.e3;
+
+  // Per-NS chip data
+  const nsMeta = {
+    sharon: { pId:'sharon', pRole:'Sales Manager',          objId:'booking',    objName:'Event Booking'   },
+    emilie: { pId:'emilie', pRole:'Event Coordinator',      objId:'planning',   objName:'Event Plan'      },
+    owen:   { pId:'owen',   pRole:'Operations Supervisor',  objId:'operations', objName:'Event Job'       },
+    e3:     { pId:null,     pRole:null,                     objId:'event',      objName:'Momentus Events' },
+  };
+  const meta = nsMeta[id] || nsMeta.e3;
+  const calCheck = `<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/>`;
+  const objIcon = meta.objId === 'event' ? _ico(12, calCheck) : (CHIP_OBJECT_ICONS[meta.objId] || '');
+  const objChip = `<div style="display:flex;align-items:center;gap:5px"><span class="jpl-obj-lbl">Primary Object:</span><span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${meta.objId}',event)">${objIcon}${meta.objName}</span></div>`;
+  const perChip = meta.pId ? `<div style="display:flex;align-items:center;gap:5px"><span class="jpl-obj-lbl">Primary Persona:</span><span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Persona" onclick="goToPersona('${meta.pId}');event.stopPropagation()">${CHIP_PERSONA_ICONS[meta.pId] || ''}${meta.pRole}</span></div>` : '';
+
+  // Header data from star-card
+  const sc         = clone.querySelector('.star-card');
+  const eyebrow    = sc.querySelector('.star-eyebrow').textContent.trim();
+  const metricEl   = sc.querySelector('.star-metric');
+  const abbrEl     = metricEl.querySelector('.star-abbr');
+  const abbr       = abbrEl ? abbrEl.textContent.trim() : '';
+  const metricName = metricEl.childNodes[0].textContent.trim();
+  const defHTML    = sc.querySelector('.star-def').innerHTML.trim();
+
+  // Arrow row
+  const ar     = clone.querySelector('.arrow-row');
+  const arHTML = ar ? ar.outerHTML : '';
+
+  // Input metrics → 5-column attribute-style grid
+  const dimCfg = [
+    { cls:'d-adopt',  bgCls:'nmc-adopt',  label:'Adoption',      sub:'active user'  },
+    { cls:'d-engage', bgCls:'nmc-engage', label:'Engagement',    sub:'feature usage' },
+    { cls:'d-retain', bgCls:'nmc-retain', label:'Retention',     sub:'return rate'  },
+    { cls:'d-effic',  bgCls:'nmc-effic',  label:'Efficiency',    sub:'time to value' },
+    { cls:'d-effect', bgCls:'nmc-effect', label:'Effectiveness', sub:'task success'  },
+  ];
+  const colsHTML = Array.from(clone.querySelectorAll('.ic')).map((ic, i) => {
+    const cfg = dimCfg[i] || {};
+    const nm  = ic.querySelector('.ic-name');
+    const df  = ic.querySelector('.ic-def');
+    return `<div class="ns-metric-col ${cfg.bgCls}">
+      <div class="ns-metric-col-hd">
+        <div class="attr-header ${cfg.cls}">${cfg.label}<span class="sub">${cfg.sub}</span></div>
+      </div>
+      <div class="ns-metric-col-bd">
+        <div class="ns-metric-col-name">${nm ? nm.innerHTML.trim() : ''}</div>
+        <div class="ns-metric-col-def">${df ? df.innerHTML.trim() : ''}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Rationale section
+  const sls       = Array.from(clone.querySelectorAll('.sl'));
+  const ratSlHTML = sls.length > 1 ? sls[sls.length - 1].outerHTML : '';
+  const ratHTML   = Array.from(clone.querySelectorAll('.rationale')).map(r => r.outerHTML).join('');
+
+  document.getElementById('ns-modal-detail').innerHTML = `
+    <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid ${b}">
+      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};position:relative">
+        <button class="jd-close" onclick="closeNsModal()" style="position:absolute;top:14px;right:14px">\u2715</button>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-right:40px">
+          <div>
+            <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${c};margin-bottom:5px">${eyebrow}</div>
+            <div style="font-family:var(--f-disp);font-size:22px;font-weight:800;color:var(--text);margin-bottom:3px;line-height:1.15">${metricName} <span style="font-size:16px;font-weight:300;color:var(--text-d)">${abbr}</span></div>
+            <div style="font-size:13px;color:var(--text-s);line-height:1.65;margin-top:8px;max-width:560px">${defHTML}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;align-self:flex-end;padding-bottom:2px">
+            ${objChip}
+            ${perChip}
+          </div>
+        </div>
+      </div>
+      <div style="padding:20px 24px 24px">
+        <div class="sl" style="margin-bottom:8px">Key input metrics</div>
+        ${arHTML}
+        <div class="ns-metrics-grid">${colsHTML}</div>
+        <hr class="section-divider">
+        ${ratSlHTML}
+        ${ratHTML}
+      </div>
+    </div>`;
+  document.getElementById('ns-modal').classList.add('open');
+}
+function closeNsModal() {
+  document.getElementById('ns-modal').classList.remove('open');
+  document.getElementById('ns-modal-detail').innerHTML = '';
+}
+
 function goToPersona(personaId) {
+  if (document.getElementById('ns-modal').classList.contains('open')) closeNsModal();
   if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
   if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
   if (document.getElementById('object-modal').classList.contains('open')) closeObjectModal();
@@ -1768,6 +1918,7 @@ function goToPersona(personaId) {
 
 function goToPrimaryObject(objId, event) {
   event.stopPropagation();
+  if (document.getElementById('ns-modal').classList.contains('open')) closeNsModal();
   if (document.getElementById('persona-modal').classList.contains('open')) closePersonaModal();
   if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
   if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
@@ -1784,13 +1935,22 @@ function openMainJobModal(pId) {
   document.getElementById('main-job-modal').classList.add('open');
   document.getElementById('main-job-detail').innerHTML = `
     <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid ${b}">
-      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
-        <div>
-          <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Primary Job</div>
-          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px">${p.mainAction}</div>
-          <div style="font-size:13px;color:var(--text-s)">${p.name} \u00b7 ${p.role}</div>
+      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};position:relative">
+        <button class="jd-close" onclick="closeMainJobModal()" style="position:absolute;top:14px;right:14px">\u2715</button>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-right:40px">
+          <div>
+            <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Primary Job</div>
+            <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px;line-height:1.2">${p.mainAction}</div>
+            <div style="font-size:13px;color:var(--text-s)">${p.name} \u00b7 ${p.role}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;align-self:flex-end;padding-bottom:2px">
+            <div style="display:flex;align-items:center;gap:5px"><span class="jpl-obj-lbl">Primary Object:</span><span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${p.objId}',event)">${CHIP_OBJECT_ICONS[p.objId]}${p.object}</span></div>
+            <div style="display:flex;align-items:center;gap:5px"><span class="jpl-obj-lbl">Primary Persona:</span><span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Persona" onclick="goToPersona('${p.id}');event.stopPropagation()">${CHIP_PERSONA_ICONS[p.id]}${p.role}</span></div>
+          </div>
         </div>
-        <button class="jd-close" onclick="closeMainJobModal()">\u2715</button>
+        <div style="display:flex;justify-content:flex-end;margin-top:12px;padding-top:10px;border-top:1px solid ${b}">
+          <button class="jd-nav-btn" style="color:${c};border-color:${b}" onclick="goToJobSteps('${p.id}')">Job Steps →</button>
+        </div>
       </div>
       <div style="padding:12px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Jobs to Be Done Statement</div>
       <div style="padding:0 20px 20px;display:flex;flex-direction:column;gap:10px">
@@ -1938,56 +2098,80 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'overlooking a high-value lead',when:'screening multiple concurrent inquiries arriving through different intake channels'},
       {dir:'Maximize',metric:'the accuracy of',obj:'initial revenue estimates for a potential Event Booking',when:'forecasting its contribution to the annual PACE target at the qualification stage'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating lead qualification decisions to the originating channel',when:'bureau, agency, or referral partners are waiting for a response on a submitted inquiry'},
-      {dir:'Minimize',metric:'the risk of',obj:'pursuing a lead that conflicts with strategic displacement rules or exclusion periods',when:'evaluating an incoming inquiry against existing high-value holds or contracted exclusivity windows'}
+      {dir:'Minimize',metric:'the risk of',obj:'pursuing a lead that conflicts with strategic displacement rules or exclusion periods',when:'evaluating an incoming inquiry against existing high-value holds or contracted exclusivity windows'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'account history and prior revenue captured before making a qualification decision',when:'evaluating a returning client from a competitor property with limited history in the current system'},
+      {dir:'Minimize',metric:'the effort required to',obj:'route a disqualified lead to an alternative contact or venue partner',when:'an inbound inquiry does not meet minimum revenue or fit requirements for the property'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a qualified lead going stale without an initial response',when:'the sales team receives a high volume of inbound inquiries during peak season and response capacity is limited'}
     ]},
     locate:{ step:'Gather available spaces, dates, and client history to assess whether a booking can be made', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:"identify space and date combinations that meet a lead's requirements",when:'checking availability against existing holds and confirmed bookings on the calendar'},
       {dir:'Minimize',metric:'the likelihood of',obj:'double-booking or creating conflicting holds',when:'retrieving calendar availability for a prospective Event Booking'},
       {dir:'Minimize',metric:'the effort required to',obj:"access a repeat client's prior booking history and preferences",when:'evaluating a returning customer as a new event lead'},
       {dir:'Maximize',metric:'the speed of',obj:'presenting a set of alternative space and date options to a prospect',when:'the first-choice configuration is unavailable and the client needs a revised offer to maintain momentum'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'presenting availability to a client that is superseded by a hold placed by another sales manager',when:'multiple team members are working simultaneous leads with overlapping space requirements'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'presenting availability to a client that is superseded by a hold placed by another sales manager',when:'multiple team members are working simultaneous leads with overlapping space requirements'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'availability information presented to a prospect',when:'a specific space has pending holds, maintenance windows, or setup constraints not yet reflected in the system'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify alternative configurations that meet the client\'s stated requirements',when:'the preferred space is unavailable and a non-standard room combination would satisfy the event\'s functional needs'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'committing to availability contingent on a pending cancellation not yet confirmed',when:'a desirable date has an existing hold in a late follow-up stage'}
     ]},
     prepare:{ step:'Assemble the proposal, pricing structure, and hold configuration needed to present an offer', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'generate a complete and accurate proposal',when:'assembling space pricing, F&B estimates, and AV rates for an Event Booking offer'},
       {dir:'Minimize',metric:'the likelihood of',obj:'pricing errors in the proposal',when:'applying variable rate structures, discounts, and commissions to an Event Booking estimate'},
       {dir:'Minimize',metric:'the number of exchanges required to',obj:'collect all qualifying information from the client',when:'preparing an Event Booking for formal proposal submission'},
       {dir:'Maximize',metric:'the quality of',obj:'the visual presentation and completeness of a proposal sent to a prospective client',when:'competing with external venues for the same piece of business'},
-      {dir:'Minimize',metric:'the number of manual inputs required to',obj:'populate a new proposal from an existing template or prior event record',when:'preparing a renewal offer for a returning client with consistent annual requirements'}
+      {dir:'Minimize',metric:'the number of manual inputs required to',obj:'populate a new proposal from an existing template or prior event record',when:'preparing a renewal offer for a returning client with consistent annual requirements'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'catering minimums and contracted service inclusions shown in a proposal',when:'presenting a price estimate that will form the basis of a formal offer and displacement decision'},
+      {dir:'Minimize',metric:'the effort required to',obj:'customize proposal content to match the client\'s stated priorities and event type',when:'preparing a proposal for a corporate event that requires a branded template different from the venue default'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'get pricing approval from revenue management before sending a proposal',when:'the booking requires a below-standard rate that must be authorized before the offer is extended'}
     ]},
     confirm:{ step:'Decide which lead to convert, prioritizing against competing holds and pipeline health', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'prioritize between competing leads requesting the same space and date',when:'deciding which hold to advance to a confirmed Event Booking'},
       {dir:'Minimize',metric:'the likelihood of',obj:'accepting a lower-value booking that displaces a higher-revenue opportunity',when:'converting a hold to confirmed under pipeline pressure'},
       {dir:'Maximize',metric:'the confidence in',obj:'the decision to advance a specific Event Booking',when:'evaluating displacement risk against the annual revenue strategy and PACE targets'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a prioritization decision to a lead whose hold is about to expire',when:'a competing inquiry for the same space requires an immediate response to protect the higher-value opportunity'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'losing a confirmed booking because the hold expired before the client was contacted',when:'managing a large pipeline of active holds at different stages of follow-up'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'losing a confirmed booking because the hold expired before the client was contacted',when:'managing a large pipeline of active holds at different stages of follow-up'},
+      {dir:'Maximize',metric:'the speed of',obj:'moving a tentative hold to a definite booking status once verbal agreement is reached',when:'the client has committed verbally but contract paperwork has not yet been signed'},
+      {dir:'Minimize',metric:'the effort required to',obj:'document the rationale behind a displacement decision for internal audit',when:'choosing to advance a lower-revenue booking over a higher-value hold that was still in negotiation'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a hold conversion triggering a notification gap to a competing client whose hold was displaced',when:'the venue policy requires courtesy notification when a hold is superseded by a confirmed booking'}
     ]},
     execute:{ step:'Create the confirmed Event Booking and initiate the contract within Momentus', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'convert an accepted lead into a confirmed Event Booking record',when:'the client has agreed to terms and space has been verified as available'},
       {dir:'Minimize',metric:'the likelihood of',obj:'errors or missing terms in the generated contract',when:'creating booking documents from event details already captured in the system'},
       {dir:'Minimize',metric:'the number of system switches required to',obj:'complete an Event Booking creation',when:'moving from lead intake through proposal to contract generation within Momentus'},
       {dir:'Maximize',metric:'the speed of',obj:'sending the executed contract to the client for signature',when:'the client has verbally agreed to terms and expects to receive documents the same day'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'creating a booking record with incomplete or misconfigured data fields',when:'converting a proposal to a confirmed Event Booking under time pressure at period end'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'creating a booking record with incomplete or misconfigured data fields',when:'converting a proposal to a confirmed Event Booking under time pressure at period end'},
+      {dir:'Maximize',metric:'the completeness of',obj:'the initial Event Booking record at the time of creation',when:'entering a booking whose full requirements were negotiated verbally and not fully captured in the lead record'},
+      {dir:'Minimize',metric:'the effort required to',obj:'generate and format contract attachments for signature',when:'the booking requires non-standard addenda or custom clauses that were negotiated during the proposal stage'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a booking creation error propagating to downstream planning and finance systems',when:'creating a high-volume booking where errors in the initial record would require retroactive correction across multiple departments'}
     ]},
     monitor:{ step:'Track the pipeline, PACE report, and follow-up activity across all active Event Bookings', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'understand the current state of the sales pipeline',when:'reviewing daily booking activity and identifying calendar gaps or risk areas'},
       {dir:'Minimize',metric:'the likelihood of',obj:'missing a critical follow-up with a prospect',when:'managing multiple active Event Bookings at different pipeline stages simultaneously'},
       {dir:'Minimize',metric:'the effort required to',obj:'produce an accurate PACE and revenue variance report',when:'presenting pipeline performance to venue leadership'},
       {dir:'Maximize',metric:'the clarity of',obj:'forward-looking revenue risk exposure in the pipeline',when:'conducting a weekly review to identify bookings at risk of cancellation or displacement'},
-      {dir:'Minimize',metric:'the effort required to',obj:'forecast close probability across all active leads',when:'preparing an end-of-period revenue outlook for venue leadership'}
+      {dir:'Minimize',metric:'the effort required to',obj:'forecast close probability across all active leads',when:'preparing an end-of-period revenue outlook for venue leadership'},
+      {dir:'Maximize',metric:'the clarity of',obj:'individual sales manager performance against target in the shared pipeline view',when:'reviewing team contribution to period revenue goals in advance of a monthly performance meeting'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify which active holds are at risk of expiring without a follow-up',when:'reviewing a large pipeline during a high-volume season where follow-up cadence has fallen behind'},
+      {dir:'Maximize',metric:'the speed of',obj:'generating a period-end revenue summary from confirmed bookings',when:'the venue director requests an updated PACE report with less than 24 hours notice before a leadership review'}
     ]},
     modify:{ step:'Update booking terms, holds, or contract details in response to client requests or internal changes', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'apply a requested change to an active Event Booking',when:'the client modifies space requirements, date, or attendance after the initial hold is placed'},
       {dir:'Minimize',metric:'the likelihood of',obj:'creating a conflicting hold or availability error',when:'modifying space or date assignments on an Event Booking that has already been distributed to planning'},
       {dir:'Minimize',metric:'the disruption caused by',obj:'a booking amendment to downstream planning and operations teams',when:'a change is initiated by the client after the BEO process has begun'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a booking amendment to all affected internal teams',when:'a space or date change is confirmed by the client and operations has already begun preparation'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a contract discrepancy between the original signed document and the amended Event Booking record',when:'processing a change that affects contracted rates, spaces, or minimum spend commitments'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a contract discrepancy between the original signed document and the amended Event Booking record',when:'processing a change that affects contracted rates, spaces, or minimum spend commitments'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a modification to an Event Booking creating a revenue variance that is not tracked',when:'adjusting contracted minimums, space configurations, or headcount after the original contract has been signed'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the amendment documentation sent to the client',when:'processing a change that affects pricing or contract terms and requires the client\'s written acknowledgment'},
+      {dir:'Minimize',metric:'the effort required to',obj:'coordinate the impact of a booking modification with the operations and finance teams',when:'a change involves both a space reassignment and a revision to the contracted catering minimum'}
     ]},
     conclude:{ step:'Close the booking, transfer it to planning, and archive the sales record for reporting', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'formally close and hand off a confirmed Event Booking to the event planning team',when:'the contract is signed and the event is ready to enter the planning workflow'},
       {dir:'Minimize',metric:'the likelihood of',obj:'incomplete or inaccurate data in the closed booking record',when:'archiving the Event Booking for post-event revenue reporting and PACE reconciliation'},
       {dir:'Maximize',metric:'the accuracy of',obj:'revenue actuals captured at booking close',when:'finalizing the Event Booking record to support financial reporting and commission calculation'},
       {dir:'Maximize',metric:'the completeness of',obj:'the final booking record before it is archived',when:'ensuring all commission-eligible revenue and performance credits are captured accurately for compensation reporting'},
-      {dir:'Minimize',metric:'the time it takes to',obj:'complete the post-close handoff documentation required by the planning team',when:'transitioning a complex multi-function Event Booking from sales to planning ownership'}
+      {dir:'Minimize',metric:'the time it takes to',obj:'complete the post-close handoff documentation required by the planning team',when:'transitioning a complex multi-function Event Booking from sales to planning ownership'},
+      {dir:'Maximize',metric:'the confidence in',obj:'the final commission calculation at booking close',when:'the event included multiple amendments that each modified the contracted revenue basis for commission purposes'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'the planning team beginning work from a booking record that has not been formally signed off',when:'closing and handing off an Event Booking before the client has returned the final counter-signed contract'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'displacement outcome records archived at booking close',when:'reconciling whether the original displacement decision resulted in the forecasted revenue outcome for performance review'}
     ]}
   },
   emilie:{
@@ -1996,56 +2180,80 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'missing a required function or service during the initial scoping',when:'reviewing a complex multi-day Event Booking with multiple spaces and departments involved'},
       {dir:'Maximize',metric:'the completeness of',obj:'the initial function plan',when:'scoping an Event Booking where client requirements were communicated verbally or informally during the sales process'},
       {dir:'Maximize',metric:'the clarity of',obj:"the client's priority requirements and non-negotiables",when:"scoping an Event Booking where multiple contacts have provided conflicting or incomplete instructions during sales"},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a scope discrepancy surfacing during the execution phase',when:'finalizing the function plan for an event whose requirements were established months before the event date'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a scope discrepancy surfacing during the execution phase',when:'finalizing the function plan for an event whose requirements were established months before the event date'},
+      {dir:'Minimize',metric:'the effort required to',obj:'translate verbal client expectations into a structured function scope',when:'the sales handoff included high-level client notes but no formal requirement documentation'},
+      {dir:'Maximize',metric:'the clarity of',obj:'department-specific requirements identified during initial scoping',when:'beginning to plan a multi-function event that involves catering, AV, facilities, and external vendors simultaneously'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'misinterpreting a sales-stage commitment as a fixed requirement during scope definition',when:'reviewing a sales proposal where certain service inclusions were offered conditionally but are now being treated as confirmed by the client'}
     ]},
     locate:{ step:'Access the confirmed Event Booking record and all prior client information needed to begin detailing', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'access the full Event Booking record and associated client history',when:'beginning the detailing process for a newly assigned event'},
       {dir:'Minimize',metric:'the likelihood of',obj:'working from an outdated or incomplete version of the Event Booking',when:'multiple team members have accessed or modified the record since handoff from sales'},
       {dir:'Minimize',metric:'the effort required to',obj:"retrieve a returning client's prior event preferences and BEO templates",when:'starting the function detail process for a repeat booking'},
       {dir:'Maximize',metric:'the speed of',obj:'cross-referencing a current Event Booking against similar past events for template or preference reuse',when:'beginning the detailing process for a new booking in a familiar event category'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'inheriting errors or outdated information from a prior booking used as a template',when:'cloning a previous BEO as the starting point for a recurring client event'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'inheriting errors or outdated information from a prior booking used as a template',when:'cloning a previous BEO as the starting point for a recurring client event'},
+      {dir:'Maximize',metric:'the completeness of',obj:'client communication history accessible from the Event Booking record',when:'beginning detail work on a booking where the client relationship was managed by a sales manager who has since left the property'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify and import applicable templates from prior similar events',when:'beginning the BEO detail process for a returning client whose prior event requirements are archived in the system'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'beginning detail work on an Event Booking still subject to contract changes by the sales team',when:'a booking was recently converted from hold to confirmed and the contract amendment process has not yet been finalized'}
     ]},
     prepare:{ step:'Build the complete BEO/event order for each function, including space, F&B, AV, setup, and timing', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'complete all function-level detail fields for a single Event Plan',when:'building the BEO for a multi-function event with concurrent F&B, AV, and setup requirements'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an incomplete or internally inconsistent BEO',when:'coordinating multiple departments in the detailing of a complex Event Plan with interdependent requirements'},
       {dir:'Minimize',metric:'the number of communication exchanges required to',obj:'finalize all function details with the client',when:'preparing an Event Plan for internal review and distribution to operations'},
       {dir:'Maximize',metric:'the accuracy of',obj:'F&B quantities, AV configurations, and setup timings in the initial BEO draft',when:'completing the function detail for a large-scale event without a pre-event site visit with the client'},
-      {dir:'Minimize',metric:'the effort required to',obj:'coordinate department-specific detail across catering, AV, and facilities in a single Event Plan record',when:'building a BEO that requires separate inputs from three or more internal service departments'}
+      {dir:'Minimize',metric:'the effort required to',obj:'coordinate department-specific detail across catering, AV, and facilities in a single Event Plan record',when:'building a BEO that requires separate inputs from three or more internal service departments'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'event timelines and space transition sequences captured in the BEO',when:'preparing function orders for a multi-day event with back-to-back functions requiring setup and teardown coordination between sessions'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a service requirement being omitted from the BEO because it was communicated verbally between the client and a department head',when:'building an event order where the client has a direct relationship with the F&B or AV department lead outside the formal planning channel'},
+      {dir:'Minimize',metric:'the effort required to',obj:'resolve conflicting specifications between client-provided event details and the venue\'s operational constraints',when:'building the BEO for an event where the client is requesting a non-standard setup that requires coordination with engineering or facilities'}
     ]},
     confirm:{ step:'Obtain client approval and internal sign-off on the complete function detail before distribution', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'obtain client approval on the finalized BEO',when:'the event date is approaching and operations needs the confirmed detail to begin preparation'},
       {dir:'Minimize',metric:'the likelihood of',obj:'distributing a BEO that requires a revision after operations has begun preparation',when:'finalizing function details with a client who is still making changes close to the event date'},
       {dir:'Maximize',metric:'the confidence that',obj:'all required approvals are captured before BEO distribution',when:'the event involves multiple client contacts or departments with separate sign-off authority'},
       {dir:'Maximize',metric:'the speed of',obj:'resolving open questions from the client that are blocking BEO finalization',when:'the event is approaching and multiple outstanding details remain unconfirmed by the client'},
-      {dir:'Minimize',metric:'the number of revision cycles required to',obj:'reach a finalized and approved BEO',when:'working with a client contact who is approving an event for the first time without prior experience reviewing function orders'}
+      {dir:'Minimize',metric:'the number of revision cycles required to',obj:'reach a finalized and approved BEO',when:'working with a client contact who is approving an event for the first time without prior experience reviewing function orders'},
+      {dir:'Minimize',metric:'the effort required to',obj:'track outstanding approval items across multiple client contacts',when:'the event involves a main client contact plus a separate technical or operations liaison who must each sign off on different parts of the function plan'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the BEO approval audit trail',when:'confirming function detail for an event that may be subject to post-event dispute regarding what was agreed before distribution'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a department beginning setup preparation from an unapproved draft BEO',when:'the final approval is delayed and a department requests a copy of the working document to begin preliminary preparation'}
     ]},
     execute:{ step:'Distribute the finalized BEO to all relevant operations departments inside Momentus', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'distribute the finalized BEO to all relevant departments',when:'the event is approaching and operations teams need the confirmed plan to begin their preparation'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a department not receiving the BEO or receiving an outdated version',when:'distributing to multiple internal teams with different communication preferences or platform access levels'},
       {dir:'Minimize',metric:'the number of manual steps required to',obj:'complete BEO distribution to all departments',when:'the event involves catering, AV, facilities, security, and external vendors who each need specific detail'},
       {dir:'Maximize',metric:'the confidence that',obj:'all external vendors and third-party service providers have received the information they need to execute their scope',when:'the event includes off-property catering, external AV, or contracted entertainment that requires separate coordination'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a department beginning preparation from an incorrect or non-final version of the BEO',when:'a finalized plan is distributed while a parallel revision is still being processed in the system'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a department beginning preparation from an incorrect or non-final version of the BEO',when:'a finalized plan is distributed while a parallel revision is still being processed in the system'},
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm receipt and acknowledgment of the BEO by each receiving department',when:'distributing a time-sensitive function order in the days leading up to an event where preparation windows are short'},
+      {dir:'Maximize',metric:'the completeness of',obj:'vendor-specific instructions included in the BEO portions sent to external service providers',when:'the event relies on off-property catering, contracted AV, or third-party entertainment who must also receive function detail'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a department receiving an incomplete BEO because only their relevant section was extracted for distribution',when:'the event plan was built as a single document and requires manual extraction of department-specific sections before distribution'}
     ]},
     monitor:{ step:"Track BEO completion, client changes, and department acknowledgment across all active events in the coordinator's portfolio", outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:"understand the completion status of all active Event Plans in the coordinator's current portfolio",when:'managing multiple events simultaneously at different stages of the detailing process'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a detail change from the client going unacknowledged by an operations department',when:'a modification to an Event Plan is received after the initial BEO has already been distributed'},
       {dir:'Minimize',metric:'the effort required to',obj:"maintain an accurate view of which events are ready, pending, or at risk in the coordinator's active portfolio",when:'preparing for an internal operations review with the planning team lead'},
       {dir:'Maximize',metric:'the speed of',obj:'identifying which events in the active portfolio are at risk of missing a detailing deadline',when:'reviewing the planning calendar to prioritize workload across multiple upcoming events'},
-      {dir:'Minimize',metric:'the effort required to',obj:'confirm that all departments have acknowledged and accepted the BEO for an upcoming event',when:'conducting a pre-event check in the 48 hours before an event with multiple service dependencies'}
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm that all departments have acknowledged and accepted the BEO for an upcoming event',when:'conducting a pre-event check in the 48 hours before an event with multiple service dependencies'},
+      {dir:'Maximize',metric:'the clarity of',obj:'the current state of each active event in the portfolio at a glance',when:'managing five or more concurrent events at different stages of the detailing and confirmation process'},
+      {dir:'Minimize',metric:'the effort required to',obj:'track client-initiated changes across multiple active events simultaneously',when:'managing a portfolio where several clients are making concurrent modifications to their pending function orders'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an approaching distribution deadline going unnoticed',when:'balancing detail work across upcoming events while simultaneously responding to client change requests on already-distributed plans'}
     ]},
     modify:{ step:'Update function details and notify impacted departments when client changes arrive after initial BEO distribution', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'update an Event Plan record and re-distribute the revised BEO to all impacted departments',when:'a client change is received after the initial BEO has been shared with operations'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an operations team executing against an outdated version of the BEO',when:'multiple revisions are made to an Event Plan in the days leading up to the event'},
       {dir:'Minimize',metric:'the disruption caused by',obj:'a last-minute function change to the operations team',when:'the modification requires a re-scoping of space setup, catering quantities, or AV configuration'},
       {dir:'Maximize',metric:'the accuracy of',obj:'the revised BEO re-issued to all affected departments',when:'a last-minute client change affects multiple function details that were previously confirmed and distributed'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a department acting on a superseded version of the BEO',when:'issuing a revision to an active event plan after the original has already been acknowledged by one or more departments'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a department acting on a superseded version of the BEO',when:'issuing a revision to an active event plan after the original has already been acknowledged by one or more departments'},
+      {dir:'Maximize',metric:'the speed of',obj:'issuing a revised BEO and confirming re-acknowledgment by all affected departments',when:'a client change arrives within 48 hours of the event and requires same-day redistribution to operations'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify which portions of the BEO were affected by a client change and which can remain as distributed',when:'a single-function modification is received for an event with multiple concurrent functions already in execution preparation'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a post-modification version conflict causing two departments to execute against different versions of the same function plan',when:'a revision is issued while one department has already printed and begun preparation from the prior approved BEO'}
     ]},
     conclude:{ step:'Capture post-event actuals, archive the BEO, and close out all function records for billing and reporting', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'capture and record post-event actuals against each Event Plan',when:'the event has concluded and the coordinator is reconciling actual attendance, consumption, and service delivery against the BEO'},
       {dir:'Minimize',metric:'the likelihood of',obj:'missing or inaccurate actuals in the closed Event Plan record',when:'closing out a multi-function event where actual vs. planned quantities vary significantly across departments'},
       {dir:'Maximize',metric:'the accuracy of',obj:'final billing data captured from closed Event Plans',when:'preparing the post-event invoice reconciliation with the client and finance team'},
       {dir:'Maximize',metric:'the completeness of',obj:'variance documentation between the planned and actual Event Plan',when:'closing an event where significant deviations from the BEO occurred due to last-minute client changes or operational issues'},
-      {dir:'Minimize',metric:'the effort required to',obj:'compile and submit all post-event information required by the finance team for invoice finalization',when:'closing out a multi-function event with complex billing across food, beverage, AV, and external vendor services'}
+      {dir:'Minimize',metric:'the effort required to',obj:'compile and submit all post-event information required by the finance team for invoice finalization',when:'closing out a multi-function event with complex billing across food, beverage, AV, and external vendor services'},
+      {dir:'Minimize',metric:'the effort required to',obj:'reconcile final attendance and consumption actuals against each function line in the BEO',when:'concluding a multi-function event where actual guest counts, F&B consumption, and setup usage varied significantly from the plan'},
+      {dir:'Maximize',metric:'the completeness of',obj:'documentation supporting any unbilled overages or service additions',when:'closing out an event where client-requested additions during execution were not captured in the original BEO'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a discrepancy between the closed BEO and the finance invoice going undetected before billing',when:'finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours'}
     ]}
   },
   owen:{
@@ -2054,56 +2262,80 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'an Event Job being omitted from the pre-event work order',when:'scoping a complex multi-department event plan with interdependent setup sequences'},
       {dir:'Maximize',metric:'the completeness of',obj:'the initial operational task list for an Event Plan',when:'planning setup for an event with non-standard configurations, external vendors, or time-critical dependencies'},
       {dir:'Maximize',metric:'the accuracy of',obj:'the pre-event staffing plan based on the scope of work orders',when:'scheduling crew for a complex event with multiple concurrent setup tracks and time-sensitive sequencing'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'discovering a missing task dependency after setup has already begun',when:'reviewing the operational task list for an event with non-standard space configurations or external vendor integrations'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'discovering a missing task dependency after setup has already begun',when:'reviewing the operational task list for an event with non-standard space configurations or external vendor integrations'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'equipment and material quantities required to execute all Event Jobs',when:'scoping operational tasks for an event with non-standard configurations that differ significantly from the venue\'s standard setup inventory'},
+      {dir:'Minimize',metric:'the effort required to',obj:'decompose a BEO into individual actionable work units',when:'receiving a complex multi-function event plan that has not previously been broken down into crew-level task assignments'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'over-staffing or under-staffing an event',when:'estimating crew size from a BEO where headcount and timing information is incomplete or non-standard'}
     ]},
     locate:{ step:'Access the finalized BEO and all supporting documentation needed to build and assign work orders', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'access the finalized BEO and associated function details for a scheduled event',when:'beginning task assignment for a function whose BEO has just been distributed by the planning team'},
       {dir:'Minimize',metric:'the likelihood of',obj:'building a work order from an outdated or unfinalized version of the BEO',when:'the event coordinator is still making changes to the Event Plan while the operations team is beginning preparation'},
       {dir:'Minimize',metric:'the effort required to',obj:'locate all space, equipment, and resource specifications needed to build a complete work order',when:'accessing function detail for an event with non-standard AV, catering, or setup configurations'},
       {dir:'Maximize',metric:'the speed of',obj:'confirming that the BEO accessed is the most current approved version',when:'starting work order creation for an event where recent changes may have been submitted by the planning team'},
-      {dir:'Minimize',metric:'the effort required to',obj:'access event-specific floor plans, room diagrams, and equipment specs alongside the BEO',when:'building work orders for a non-standard setup that requires visual reference materials to assign tasks correctly'}
+      {dir:'Minimize',metric:'the effort required to',obj:'access event-specific floor plans, room diagrams, and equipment specs alongside the BEO',when:'building work orders for a non-standard setup that requires visual reference materials to assign tasks correctly'},
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm the BEO is fully approved and authorized before beginning work order creation',when:'the event coordinator has indicated the BEO is finalized but the formal approval record has not yet been updated in the system'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'all floor plan and space layout details available at the time of work order creation',when:'building operational task assignments for an event using a non-standard room configuration that requires custom layout reference materials'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'beginning work order creation from a BEO that the planning team is still revising',when:'the event coordinator and operations team are working on parallel timelines and the final detail has not been formally locked'}
     ]},
     prepare:{ step:'Assign all operational tasks to crew members, departments, and equipment, with timing and location details', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'assign all Event Jobs to the appropriate crew members and departments',when:'building work orders for a multi-function event with concurrent setup tracks across multiple venue spaces'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an Event Job being unassigned or assigned to the wrong crew member',when:'distributing work orders across multiple departments with different staffing levels on event day'},
       {dir:'Minimize',metric:'the effort required to',obj:'replicate a standard task assignment template from a prior similar event',when:'preparing work orders for a recurring event type with a consistent setup configuration'},
       {dir:'Maximize',metric:'the accuracy of',obj:'task timing assignments relative to the overall event timeline',when:'building work orders where setup sequences are interdependent and crew from different departments must coordinate arrivals'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving a task assignment without sufficient detail to complete it independently',when:'assigning work orders to staff who were not involved in the pre-event planning discussion'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving a task assignment without sufficient detail to complete it independently',when:'assigning work orders to staff who were not involved in the pre-event planning discussion'},
+      {dir:'Maximize',metric:'the clarity of',obj:'task priority and sequencing communicated to each crew member',when:'assigning interdependent setup tasks where the completion of one job must precede the start of another'},
+      {dir:'Minimize',metric:'the effort required to',obj:'build a complete crew schedule from a work order template for a recurring event type',when:'preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a time conflict between two assignments given to the same crew member',when:'scheduling staff who are assigned to multiple sequential functions within the same event window'}
     ]},
     confirm:{ step:'Validate all assignments, run a pre-event readiness check, and confirm crew is on-schedule before the event begins', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'verify that all Event Jobs are assigned, acknowledged, and on-schedule',when:'conducting a pre-event readiness check in the final hours before setup begins'},
       {dir:'Minimize',metric:'the likelihood of',obj:'discovering an unassigned or unacknowledged task during the pre-event check',when:'supervising a multi-team setup with staff distributed across several venue spaces'},
       {dir:'Maximize',metric:'the confidence in',obj:'crew readiness and task assignment completeness before the event window opens',when:'overseeing a high-stakes event where setup delays directly impact the client experience'},
       {dir:'Maximize',metric:'the speed of',obj:'resolving a missing assignment or resource gap identified during the pre-event readiness check',when:'completing final preparation for an event that begins within two hours and requires immediate corrective action'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member arriving at the wrong location or time due to a miscommunication in task assignment',when:'supervising a multi-space event where crew members are assigned to rooms they have not previously worked'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member arriving at the wrong location or time due to a miscommunication in task assignment',when:'supervising a multi-space event where crew members are assigned to rooms they have not previously worked'},
+      {dir:'Maximize',metric:'the completeness of',obj:'the pre-event readiness verification across all departments',when:'conducting the final check before a high-profile event where any gap in preparation would be immediately visible to the client'},
+      {dir:'Minimize',metric:'the effort required to',obj:'escalate a readiness issue to the appropriate department head before the event window opens',when:'a pre-event check reveals a missing resource or incomplete setup that requires managerial intervention to resolve'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a last-minute BEO change invalidating work orders already distributed and acknowledged by crew',when:'a planning team revision arrives after the crew has been dispatched and briefed on their assignments'}
     ]},
     execute:{ step:'Supervise live task execution across all crew and spaces during the event window', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'begin executing setup tasks',when:'the operations crew arrives on site at the start of the event window'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an Event Job being performed incorrectly',when:'crew members reference their assignments from a mobile device in the field during active execution'},
       {dir:'Minimize',metric:'the disruption to the event timeline caused by',obj:'a setup discrepancy during live execution',when:'the operations team must resolve the issue without stopping the event flow'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a real-time task update or priority change to crew in the field',when:'a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue'},
-      {dir:'Minimize',metric:'the effort required to',obj:'confirm task completion in real time without interrupting crew during active execution',when:'supervising multiple concurrent setup tracks that are progressing simultaneously across the venue'}
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm task completion in real time without interrupting crew during active execution',when:'supervising multiple concurrent setup tracks that are progressing simultaneously across the venue'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member executing an Event Job against an outdated task specification',when:'a modification was issued by the planning team after the crew was dispatched with printed task assignments'},
+      {dir:'Maximize',metric:'the clarity of',obj:'real-time task status visible to the operations lead',when:'supervising crew distributed across multiple concurrent event spaces during peak execution'},
+      {dir:'Minimize',metric:'the effort required to',obj:'reallocate crew from a lower-priority task to address an urgent execution gap',when:'an issue is identified during live execution that requires pulling resources away from non-critical setup work'}
     ]},
     monitor:{ step:'Track task completion, crew location, and incident status in real time during the event', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'verify the completion status of all Event Jobs',when:'supervising a multi-team, multi-space event in real time'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an operational incident going unaddressed',when:'monitoring Event Job activity across concurrent functions running simultaneously in the venue'},
       {dir:'Minimize',metric:'the effort required to',obj:'maintain visibility into crew location and task progress',when:'supervising a complex event with staff distributed across multiple venue spaces'},
       {dir:'Maximize',metric:'the speed of',obj:'routing an operational incident to the correct crew member for immediate resolution',when:'an issue is reported during an active event and the closest available staff member must be identified and dispatched'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an operational gap going undetected until it escalates into a client-visible failure',when:'monitoring task status across a large-scale event with multiple functions running concurrently in different venue spaces'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'an operational gap going undetected until it escalates into a client-visible failure',when:'monitoring task status across a large-scale event with multiple functions running concurrently in different venue spaces'},
+      {dir:'Maximize',metric:'the speed of',obj:'identifying a task that is falling behind schedule during live execution',when:'monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event'},
+      {dir:'Minimize',metric:'the effort required to',obj:'document an operational incident in real time',when:'managing an active event and a client-visible issue requires immediate logging without stopping the operations supervisor from coordinating the resolution'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the real-time status view of all active Event Jobs',when:'a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team'}
     ]},
     modify:{ step:'Reassign or update tasks when changes are communicated from the planning team during execution', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'reassign or update an Event Job',when:'a last-minute change is communicated by the event coordinator during live execution'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a change request being missed by crew in the field',when:'a modification arrives while staff are actively executing tasks across multiple venue spaces'},
       {dir:'Minimize',metric:'the disruption to the operational sequence caused by',obj:'an unexpected task re-sequencing or emergency resource reallocation',when:'a client change requires immediate adjustment during a live event'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a change request from the event coordinator to the affected crew member',when:'a client modification arrives mid-event and requires immediate reassignment of resources already deployed in the field'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a task conflict arising from a mid-event reassignment',when:'reallocating crew or equipment from one function to another while both are actively executing in the venue'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a task conflict arising from a mid-event reassignment',when:'reallocating crew or equipment from one function to another while both are actively executing in the venue'},
+      {dir:'Maximize',metric:'the speed of',obj:'acknowledging a change request from the planning team and confirming the correct crew member has been notified',when:'a modification is received mid-event and the coordinator needs confirmation that the operations team has actioned the update'},
+      {dir:'Minimize',metric:'the effort required to',obj:'document the reason for a task reassignment and the time it was actioned',when:'a mid-event change is made that may need to be referenced during post-event billing or incident review'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving conflicting instructions from both the original assignment and a verbal update',when:'a task modification is communicated directly by the event coordinator to an individual crew member without updating the formal work order record'}
     ]},
     conclude:{ step:'Log task completion, document all actuals and incidents, and close the work order record', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'log completion of all Event Jobs and document operational actuals',when:'the event has concluded and teardown is complete'},
       {dir:'Minimize',metric:'the likelihood of',obj:'incomplete or inaccurate incident records',when:'concluding the operational log for a complex multi-department event'},
       {dir:'Maximize',metric:'the accuracy of',obj:'resource, labor, and material actuals captured',when:'closing out all Event Jobs to support post-event financial reconciliation with the planning team'},
       {dir:'Maximize',metric:'the completeness of',obj:'incident and deviation records captured at event conclusion',when:'closing out a work order for an event where multiple unplanned operational issues required real-time resolution during execution'},
-      {dir:'Minimize',metric:'the effort required to',obj:'confirm all Event Job completions and submit the closed work order to the planning team',when:'wrapping up teardown for a late-running event while crew are still on site and pending their next assignment'}
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm all Event Job completions and submit the closed work order to the planning team',when:'wrapping up teardown for a late-running event while crew are still on site and pending their next assignment'},
+      {dir:'Minimize',metric:'the effort required to',obj:'collect and consolidate completion confirmations from all crew members after teardown',when:'wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'equipment return and inventory counts submitted at event close',when:'concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an unresolved incident remaining open after the work order is submitted as complete',when:'concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented'}
     ]}
   }
 };
@@ -2166,14 +2398,6 @@ function buildJTBDGrid() {
     html += `<div class="jtbd-persona-label" role="button" tabindex="0" aria-label="View primary job: ${p.mainAction}" style="background:${bg};border:1px solid ${b};border-left:3px solid ${c}" onclick="openMainJobModal('${p.id}')">
       <div class="jpl-area" style="color:${c}">${p.product.replace('Event ', '')}</div>
       <div class="jpl-role">${p.mainAction}</div>
-      <div class="jpl-obj-wrap">
-        <span class="jpl-obj-lbl">Primary Object:</span>
-        <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${p.objId}', event)">${CHIP_OBJECT_ICONS[p.objId]}${p.object}</span>
-      </div>
-      <div class="jpl-obj-wrap">
-        <span class="jpl-obj-lbl">Primary Persona:</span>
-        <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Persona" onclick="goToPersona('${p.id}');event.stopPropagation()">${CHIP_PERSONA_ICONS[p.id]}${p.role}</span>
-      </div>
     </div>`;
 
     /* Stage cells */
@@ -2241,6 +2465,30 @@ function closeJTBDModal() {
   });
 }
 
+function toggleOutcomes(pId, sId) {
+  const moreDiv = document.getElementById(`outcomes-more-${pId}-${sId}`);
+  const btn     = document.getElementById(`outcomes-toggle-${pId}-${sId}`);
+  const isHidden = moreDiv.style.display === 'none';
+  moreDiv.style.display = isHidden ? 'block' : 'none';
+  const count = moreDiv.querySelectorAll('.jd-outcome').length;
+  btn.textContent = isHidden ? 'Show less' : `Show ${count} more`;
+}
+
+function goToJTBDStep(pId, sId) {
+  jtbdSelected = null;
+  toggleJTBD(pId, sId);
+}
+
+function goToMainJobFromJTBD(pId) {
+  closeJTBDModal();
+  openMainJobModal(pId);
+}
+
+function goToJobSteps(pId) {
+  closeMainJobModal();
+  goToJTBDStep(pId, STAGES[0].id);
+}
+
 function renderJTBDDetail(pId, sId) {
   const p = PERSONAS_J.find(x=>x.id===pId);
   const s = STAGES.find(x=>x.id===sId);
@@ -2249,9 +2497,9 @@ function renderJTBDDetail(pId, sId) {
   const b = `var(${p.border})`;
   const bg = `var(${p.bgColor})`;
 
-  const outcomesHTML = d.outcomes.map((o, i) => `
+  const renderOutcome = (o, i) => `
     <div class="jd-outcome">
-      <div class="jd-outcome-num">0${i+1}</div>
+      <div class="jd-outcome-num">${String(i+1).padStart(2,'0')}</div>
       <div class="jd-outcome-text">
         <span class="${o.dir==='Minimize'?'odi-dir-min':'odi-dir-max'}">${o.dir}</span>
         <span class="odi-metric"> ${o.metric} </span>
@@ -2260,9 +2508,18 @@ function renderJTBDDetail(pId, sId) {
         <span class="odi-ctx">${o.when}</span>
       </div>
     </div>
-  `).join('');
+  `;
+  const visible = d.outcomes.slice(0, 5);
+  const hidden  = d.outcomes.slice(5);
+  const visibleHTML = visible.map((o, i) => renderOutcome(o, i)).join('');
+  const hiddenHTML  = hidden.map((o, i) => renderOutcome(o, i + 5)).join('');
+  const moreId   = `outcomes-more-${pId}-${sId}`;
+  const toggleId = `outcomes-toggle-${pId}-${sId}`;
 
   const area = p.product.replace('Event ', '');
+  const stageIdx  = STAGES.findIndex(st => st.id === sId);
+  const prevStage = stageIdx > 0 ? STAGES[stageIdx - 1] : null;
+  const nextStage = stageIdx < STAGES.length - 1 ? STAGES[stageIdx + 1] : null;
   document.getElementById('jtbd-modal').classList.add('open');
   document.getElementById('jtbd-detail').innerHTML = `
     <div class="jd-panel" style="border-color:${b};padding:0;overflow:hidden">
@@ -2286,10 +2543,11 @@ function renderJTBDDetail(pId, sId) {
           </div>
         </div>
         <!-- Bottom row: step name left + descriptions right -->
-        <div style="border-top:1px solid ${b};padding-top:10px;display:flex;align-items:flex-start;gap:20px">
+        <div style="border-top:1px solid ${b};padding-top:10px;display:flex;align-items:stretch;gap:20px">
           <div style="flex-shrink:0">
             <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:4px">${s.num} · Step</div>
-            <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:3px;display:flex;align-items:center;gap:8px">${_ico(18,STAGE_PATHS[sId])}${s.label}</div>
+            <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:3px;display:flex;align-items:center;gap:8px">${_ico(18,STAGE_PATHS[sId])}${s.label} ${p.object}</div>
+            <div style="font-family:var(--f-mono);font-size:11px;color:${c};margin-bottom:4px">${SHORT[pId][sId]}</div>
             <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
           </div>
           <div style="flex:1;min-width:0;border-left:1px solid ${b};padding-left:16px">
@@ -2297,17 +2555,20 @@ function renderJTBDDetail(pId, sId) {
             <div class="jd-job">Functional job: <span style="color:var(--text-d)">${p.job}</span></div>
           </div>
         </div>
+        <!-- Nav strip -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid ${b}">
+          <div>
+            ${prevStage ? `<button class="jd-nav-btn" style="color:${c};border-color:${b}" onclick="goToJTBDStep('${pId}','${prevStage.id}')">← Previous Step</button>` : `<button class="jd-nav-btn" style="color:${c};border-color:${b}" onclick="goToMainJobFromJTBD('${pId}')">← Primary Job</button>`}
+          </div>
+          <div style="display:flex;gap:6px">
+            ${nextStage ? `<button class="jd-nav-btn" style="color:${c};border-color:${b}" onclick="goToJTBDStep('${pId}','${nextStage.id}')">Next Step →</button>` : ''}
+          </div>
+        </div>
       </div>
       <div style="padding:16px 20px 20px">
-        <div class="jd-odi-label">Desired outcome statements — ODI format · 5 of ~50–150 · Ulwick (2018) p.94</div>
-        <div class="jd-outcomes">${outcomesHTML}</div>
-        <div class="jd-legend">
-          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:#f87171"></div>Direction — Minimize</div>
-          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--sharon)"></div>Direction — Maximize</div>
-          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text-d)"></div>Performance metric (italic)</div>
-          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text)"></div>Object of control</div>
-          <div class="jd-legend-item"><div class="jd-legend-dot" style="background:var(--text-s)"></div>Contextual clarifier</div>
-        </div>
+        <div class="jd-odi-label">Desired Outcomes</div>
+        <div class="jd-outcomes">${visibleHTML}${hidden.length > 0 ? `<div id="${moreId}" style="display:none">${hiddenHTML}</div>` : ''}</div>
+        ${hidden.length > 0 ? `<button id="${toggleId}" onclick="toggleOutcomes('${pId}','${sId}')" style="margin-top:10px;background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 12px;font-family:var(--f-mono);font-size:10px;color:var(--text-d);cursor:pointer;transition:border-color 0.15s,color 0.15s" onmouseover="this.style.borderColor='var(--bhi)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-d)'">Show ${hidden.length} more</button>` : ''}
       </div>
     </div>
   `;
@@ -2316,6 +2577,7 @@ function renderJTBDDetail(pId, sId) {
 /* ── KEYBOARD SUPPORT FOR role="button" ELEMENTS (WCAG 2.1.1) ── */
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
+    if (document.getElementById('ns-modal').classList.contains('open')) closeNsModal();
     if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
     if (document.getElementById('persona-modal').classList.contains('open')) closePersonaModal();
     if (document.getElementById('object-modal').classList.contains('open')) closeObjectModal();
@@ -2332,6 +2594,12 @@ document.addEventListener('keydown', function(e) {
 /* ── INIT ── */
 buildJTBDGrid();
 </script>
+<div id="jtbd-modal" class="jtbd-modal-overlay" role="dialog" aria-modal="true" aria-label="Job stage detail" onclick="closeJTBDModal()">
+  <div class="jtbd-modal-box" onclick="event.stopPropagation()">
+    <div id="jtbd-detail"></div>
+  </div>
+</div>
+
 <div id="object-modal" class="object-modal-overlay" role="dialog" aria-modal="true" aria-label="Object detail" onclick="closeObjectModal()">
   <div class="object-modal-box" onclick="event.stopPropagation()">
     <div id="object-detail"></div>
@@ -2347,6 +2615,12 @@ buildJTBDGrid();
 <div id="main-job-modal" class="main-job-modal-overlay" role="dialog" aria-modal="true" aria-label="Primary job detail" onclick="closeMainJobModal()">
   <div class="main-job-modal-box" onclick="event.stopPropagation()">
     <div id="main-job-detail"></div>
+  </div>
+</div>
+
+<div id="ns-modal" class="ns-modal-overlay" role="dialog" aria-modal="true" aria-label="North Star detail" onclick="closeNsModal()">
+  <div class="ns-modal-box" onclick="event.stopPropagation()">
+    <div id="ns-modal-detail"></div>
   </div>
 </div>
 </body>
