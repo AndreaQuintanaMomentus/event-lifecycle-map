@@ -2618,10 +2618,10 @@ function renderStagesOverview() {
   };
 
   const all = [
-    { pId:'sharon', num:'01', abbr:'MB', name:'Sales',       fw:'Momentus Bookings', action:'Secure Event Booking',  bg:'linear-gradient(135deg,#092115 0%,#123020 100%)', border:'rgba(52,211,153,0.22)',  dot:'var(--sharon)', target:'stage-sharon' },
-    { pId:'emilie', num:'02', abbr:'MP', name:'Planning',    fw:'Momentus Plans',    action:'Detail Event Plan',     bg:'linear-gradient(135deg,#060e22 0%,#0d1e3c 100%)', border:'rgba(96,165,250,0.22)',  dot:'var(--emilie)', target:'stage-emilie' },
-    { pId:'owen',   num:'03', abbr:'MJ', name:'Operations',  fw:'Momentus Jobs',     action:'Execute Event Job',     bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', border:'rgba(249,115,22,0.22)', dot:'var(--owen)',   target:'stage-owen'   },
-    { pId:'e3',     num:'04', abbr:'ME', name:'End-to-End',  fw:'Momentus Events',   action:'Sales · Planning · Operations — unified', bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', border:'rgba(178,102,228,0.22)', dot:'var(--e3)', target:'stage-e3' },
+    { pId:'sharon', num:'01', name:'Sales',       fw:'Momentus Bookings', action:'Sales Managers Secure Event Bookings',           bg:'linear-gradient(135deg,#092115 0%,#123020 100%)', border:'rgba(52,211,153,0.22)',  dot:'var(--sharon)', target:'stage-sharon' },
+    { pId:'emilie', num:'02', name:'Planning',    fw:'Momentus Plans',    action:'Event Coordinators Detail Event Plans',          bg:'linear-gradient(135deg,#060e22 0%,#0d1e3c 100%)', border:'rgba(96,165,250,0.22)',  dot:'var(--emilie)', target:'stage-emilie' },
+    { pId:'owen',   num:'03', name:'Operations',  fw:'Momentus Jobs',     action:'Operations Supervisors Execute Event Jobs',      bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', border:'rgba(249,115,22,0.22)', dot:'var(--owen)',   target:'stage-owen'   },
+    { pId:'e3',     num:'04', name:'End-to-End',  fw:'Momentus Events',   action:'Sales · Planning · Operations — unified',        bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', border:'rgba(178,102,228,0.22)', dot:'var(--e3)', target:'stage-e3' },
   ];
 
   // Timeline rail: dots centered over each card column using flex 1:2:2:2:1 ratio
@@ -2646,12 +2646,11 @@ function renderStagesOverview() {
   const cardsHTML = all.map(s => `
     <div class="st-card" style="--st-bg:${s.bg};--st-border:${s.border}" role="button" tabindex="0"
          onclick="navigate('${s.target}')" onkeydown="if(event.key==='Enter'||event.key===' '){navigate('${s.target}');}">
-      <div class="st-card-num">${s.num} · ${s.abbr}</div>
+      <div class="st-card-num">${s.num}</div>
       <div class="st-card-icon">${icons[s.pId]}</div>
       <div class="st-card-name">${s.name}</div>
       <div class="st-card-fw">${s.fw}</div>
       <div class="st-card-action">${s.action}</div>
-      <div class="st-card-hint">View stage →</div>
     </div>`).join('');
 
   el.innerHTML = `<div class="st-flow">${railHTML}<div class="st-all">${cardsHTML}</div></div>`;
