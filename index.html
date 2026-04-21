@@ -2146,9 +2146,8 @@ function buildJTBDGrid() {
   html += `<div class="jtbd-corner"><span class="jtbd-corner-lbl">Primary Job / Steps</span></div>`;
   STAGES.forEach(s => {
     html += `<div class="jtbd-stage-cell">
-      <div style="color:var(--text-d);margin-bottom:5px;line-height:1">${STAGE_ICONS[s.id]}</div>
       <div class="stage-num">${s.num}</div>
-      <div class="stage-name">${s.label}</div>
+      <div class="stage-name" style="display:flex;align-items:center;gap:5px">${STAGE_ICONS[s.id]}${s.label}</div>
       <div class="stage-verbs">${s.verbs}</div>
     </div>`;
   });
