@@ -849,7 +849,7 @@ body {
 .st-card-hint { font-family: var(--f-mono); font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 8px; letter-spacing: 0.5px; }
 
 /* ── STAGE PAGE LAYOUT ── */
-.sv-layers { display: flex; flex-direction: column; gap: 14px; max-width: 900px; }
+.sv-layers { display: block; }
 .sv-layer { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
 .sv-layer-hd { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--border); background: var(--surface2); }
 .sv-layer-num { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); letter-spacing: 1px; min-width: 22px; }
@@ -1818,35 +1818,35 @@ body {
 </section>
 
 <section id="sec-stage-sharon" class="section">
-  <div class="page-eyebrow">Sales · Momentus Bookings (MB)</div>
+  <div class="page-eyebrow">Event Lifecycle Map · Sales</div>
   <div class="page-title">Sales Stage</div>
-  <div class="page-sub">The full Sales journey across all four layers — objects, personas, jobs, and North Star.</div>
+  <div class="page-sub">Make Sales Momentus layer by layer.</div>
   <div class="sv-layers" id="sv-sharon"><!-- built by JS --></div>
-  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Sales Stage · MB</span></div>
+  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Sales Stage</span></div>
 </section>
 
 <section id="sec-stage-emilie" class="section">
-  <div class="page-eyebrow">Planning · Momentus Plans (MP)</div>
+  <div class="page-eyebrow">Event Lifecycle Map · Planning</div>
   <div class="page-title">Planning Stage</div>
-  <div class="page-sub">The full Planning journey across all four layers — objects, personas, jobs, and North Star.</div>
+  <div class="page-sub">Make Planning Momentus layer by layer.</div>
   <div class="sv-layers" id="sv-emilie"><!-- built by JS --></div>
-  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Planning Stage · MP</span></div>
+  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Planning Stage</span></div>
 </section>
 
 <section id="sec-stage-owen" class="section">
-  <div class="page-eyebrow">Operations · Momentus Jobs (MJ)</div>
+  <div class="page-eyebrow">Event Lifecycle Map · Operations</div>
   <div class="page-title">Operations Stage</div>
-  <div class="page-sub">The full Operations journey across all four layers — objects, personas, jobs, and North Star.</div>
+  <div class="page-sub">Make Operations Momentus layer by layer.</div>
   <div class="sv-layers" id="sv-owen"><!-- built by JS --></div>
-  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Operations Stage · MJ</span></div>
+  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Operations Stage</span></div>
 </section>
 
 <section id="sec-stage-e3" class="section">
-  <div class="page-eyebrow">End-to-End · Momentus Events (ME)</div>
+  <div class="page-eyebrow">Event Lifecycle Map · End-to-End</div>
   <div class="page-title">End-to-End Stage</div>
-  <div class="page-sub">The unified event lifecycle — all three stages, all four layers, one end-to-end view.</div>
+  <div class="page-sub">Make it Momentus at every stage of the lifecycle.</div>
   <div class="sv-layers" id="sv-e3"><!-- built by JS --></div>
-  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>End-to-End · ME</span></div>
+  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>End-to-End Stage</span></div>
 </section>
 
 </main><!-- end .main -->
@@ -2656,6 +2656,60 @@ function renderStagesOverview() {
   el.innerHTML = `<div class="st-flow">${railHTML}<div class="st-all">${cardsHTML}</div></div>`;
 }
 
+/* ── STAGE PAGE LAYER ROW BUILDER ── */
+function buildLmRow(num, bg, depth, icon, name, fw, desc, onclick) {
+  return `<div class="lm-row" style="--lp-bg:${bg};--lp-depth:${depth};--lp-w:295px;--lp-h:72px"
+    role="button" tabindex="0"
+    aria-label="Open ${name}"
+    onclick="${onclick}"
+    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();${onclick}}">
+    <div class="lm-content-num">${num}</div>
+    <div class="lm-slab-wrap">
+      <div class="lm-slab">${icon}</div>
+      <div class="lm-slab-depth"></div>
+    </div>
+    <div class="lm-content-lower">
+      <div class="lm-content-name">${name}</div>
+      <div class="lm-content-fw">${fw}</div>
+      <div class="lm-content-desc">${desc}</div>
+    </div>
+  </div>`;
+}
+
+const LAYER_SLAB_ICONS = {
+  semantic: `<svg class="lm-slab-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L20 7.5L20 16.5L12 21L4 16.5L4 7.5L12 3Z"/><line x1="12" y1="3" x2="12" y2="12"/><line x1="20" y1="7.5" x2="12" y2="12"/><line x1="4" y1="7.5" x2="12" y2="12"/></svg>`,
+  human:    `<svg class="lm-slab-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>`,
+  innov:    `<svg class="lm-slab-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 2a6 6 0 0 0-3 11.18V16a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.82A6 6 0 0 0 12 2z"/></svg>`,
+  strat:    `<svg class="lm-slab-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2.5 14.35,8.76 21.03,9.07 15.80,13.24 17.59,19.69 12,16 6.41,19.69 8.20,13.24 2.97,9.07 9.65,8.76"/></svg>`,
+};
+
+const STAGE_GRADS = {
+  sharon: [
+    { bg:'linear-gradient(135deg,#062010 0%,#0d3018 100%)', depth:'#040f08' },
+    { bg:'linear-gradient(135deg,#0a2a14 0%,#133a1e 100%)', depth:'#06180d' },
+    { bg:'linear-gradient(135deg,#133a1e 0%,#1f5228 100%)', depth:'#0d2416' },
+    { bg:'linear-gradient(135deg,#1f5228 0%,#2f7a3c 100%)', depth:'#143318' },
+  ],
+  emilie: [
+    { bg:'linear-gradient(135deg,#030814 0%,#060e22 100%)', depth:'#020508' },
+    { bg:'linear-gradient(135deg,#060e22 0%,#0d1e3c 100%)', depth:'#040a18' },
+    { bg:'linear-gradient(135deg,#0d1e3c 0%,#1a3464 100%)', depth:'#091428' },
+    { bg:'linear-gradient(135deg,#1a3464 0%,#2a5090 100%)', depth:'#101e40' },
+  ],
+  owen: [
+    { bg:'linear-gradient(135deg,#160602 0%,#260e04 100%)', depth:'#0c0402' },
+    { bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', depth:'#120802' },
+    { bg:'linear-gradient(135deg,#301808 0%,#4e2410 100%)', depth:'#1c0e06' },
+    { bg:'linear-gradient(135deg,#4e2410 0%,#7a3818 100%)', depth:'#2a1408' },
+  ],
+  e3: [
+    { bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', depth:'#0e0822' },
+    { bg:'linear-gradient(135deg,#24145a 0%,#3d2882 100%)', depth:'#180e44' },
+    { bg:'linear-gradient(135deg,#3d2882 0%,#6240bc 100%)', depth:'#2a1a64' },
+    { bg:'linear-gradient(135deg,#5828a0 0%,#9252e0 100%)', depth:'#3e1e80' },
+  ],
+};
+
 function renderStagePage(pId) {
   const el = document.getElementById('sv-' + pId);
   if (!el || el.dataset.built) return;
@@ -2666,89 +2720,9 @@ function renderStagePage(pId) {
   const pd = PERSONAS_DETAIL[pId];
   const pj = PERSONAS_J.find(x => x.id === pId);
   const c  = `var(${pd.color})`;
-  const b  = `var(${pd.border})`;
-  const bg = `var(${pd.bgColor})`;
   const [personaName, jobTitle] = pd.role.split(' · ');
   const area = pd.product.replace('Event ', '');
 
-  // ── 01 Semantic ──
-  const pbEl = document.getElementById('pb-' + pd.objId);
-  let attrHTML = '';
-  if (pbEl) {
-    const cols = pbEl.querySelectorAll('.attr-col');
-    const labels = [
-      { cls:'var(--fixed-c)',   b:'rgba(251,191,36,0.25)',  label:'Fixed Conditions' },
-      { cls:'var(--dynamic-c)', b:'rgba(45,212,191,0.25)',  label:'Dynamic States'   },
-      { cls:'var(--struct-c)',  b:'rgba(251,113,133,0.25)', label:'Structural Status' },
-    ];
-    cols.forEach((col, i) => {
-      const count = col.querySelectorAll('.attr-item').length;
-      const lbl = labels[i] || { cls:'var(--text-d)', b:'var(--border)', label:'Attributes' };
-      attrHTML += `<span class="sv-attr-pill" style="color:${lbl.cls};border-color:${lbl.b}">${count} ${lbl.label}</span>`;
-    });
-    const items = pbEl.querySelectorAll('.attr-col:first-child .attr-item');
-    const preview = Array.from(items).slice(0,2).map(i => `<div style="font-size:12px;color:var(--text-d);margin-bottom:3px;line-height:1.5">${i.textContent.trim()}</div>`).join('');
-    attrHTML += preview ? `<div style="margin-top:10px">${preview}</div>` : '';
-  }
-  const semanticBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">01</div>
-      <div><div class="sv-layer-title">Semantic Layer</div><div class="sv-layer-sub">Semantic IxD · Ontological Object Definition</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div class="sv-obj-name" style="color:${c}">${pd.object}</div>
-      <div class="sv-attr-row">${attrHTML}</div>
-      <div style="font-size:12px;color:var(--text-d)">Primary interaction: <span style="color:var(--text-s)">${pd.interaction}</span></div>
-      <button class="sv-expand" onclick="openObjectModal('${pd.objId}')">View full definition ↗</button>
-    </div>
-  </div>`;
-
-  // ── 02 Human ──
-  const humanBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">02</div>
-      <div><div class="sv-layer-title">Human Layer</div><div class="sv-layer-sub">Ontological Persona Definition</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div class="sv-persona-hd">
-        <div class="sv-persona-dot" style="background:${c}"></div>
-        <div class="sv-persona-role">${jobTitle}</div>
-      </div>
-      <div class="sv-persona-area">${area} · ${pd.archetype}</div>
-      <div class="sv-persona-quote">${pd.quote}</div>
-      <div style="font-size:12px;color:var(--text-d);margin-bottom:3px">${pd.fixed[0]}</div>
-      <div style="font-size:12px;color:var(--text-d);margin-bottom:3px">${pd.dynamic[0]}</div>
-      <div style="font-size:12px;color:var(--text-d)">${pd.structural[0]}</div>
-      <button class="sv-expand" onclick="openPersonaModal('${pId}')">View persona profile ↗</button>
-    </div>
-  </div>`;
-
-  // ── 03 Innovation ──
-  const gridCells = STAGES.map(s => `
-    <div class="sv-grid-cell" style="border-color:${b}" onclick="goToJTBDStep('${pId}','${s.id}')" title="${SHORT[pId][s.id]}">
-      <div class="sv-grid-num">${s.num}</div>
-      <div class="sv-grid-label" style="color:${c}">${s.label}</div>
-      <div class="sv-grid-short">${SHORT[pId][s.id]}</div>
-    </div>`).join('');
-  const innovBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">03</div>
-      <div><div class="sv-layer-title">Innovation Layer</div><div class="sv-layer-sub">Jobs to Be Done Framework</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div class="sv-job-action" style="color:${c}">${pj.mainAction}</div>
-      <div class="sv-jtbd-wrap">
-        <div class="sv-jtbd-block"><div class="sv-jtbd-lbl" style="color:${c}">When</div><div class="sv-jtbd-val">${pj.jtbd.when}</div></div>
-        <div class="sv-jtbd-block"><div class="sv-jtbd-lbl" style="color:${c}">I want to</div><div class="sv-jtbd-val">${pj.jtbd.want}</div></div>
-        <div class="sv-jtbd-block"><div class="sv-jtbd-lbl" style="color:${c}">So I can</div><div class="sv-jtbd-val">${pj.jtbd.soCan}</div></div>
-      </div>
-      <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px">8 Job Steps</div>
-      <div class="sv-grid">${gridCells}</div>
-      <button class="sv-expand" onclick="openMainJobModal('${pId}')">View primary job ↗</button>
-    </div>
-  </div>`;
-
-  // ── 04 Strategy ──
   const nsEl = document.getElementById('ns-' + pId);
   const sc = nsEl ? nsEl.querySelector('.star-card') : null;
   const nsMetricEl = sc ? sc.querySelector('.star-metric') : null;
@@ -2756,122 +2730,38 @@ function renderStagePage(pId) {
   const nsAbbr = nsAbbrEl ? nsAbbrEl.textContent.trim() : '';
   const nsName = nsMetricEl ? nsMetricEl.textContent.replace(nsAbbr,'').trim() : '';
   const nsDef  = sc ? (sc.querySelector('.star-def') ? sc.querySelector('.star-def').textContent.trim() : '') : '';
-  const dimCfgNS = [
-    { cls:'d-adopt',  label:'Adoption',      sub:'active user'   },
-    { cls:'d-engage', label:'Engagement',    sub:'feature usage' },
-    { cls:'d-retain', label:'Retention',     sub:'return rate'   },
-    { cls:'d-effic',  label:'Efficiency',    sub:'time to value' },
-    { cls:'d-effect', label:'Effectiveness', sub:'task success'  },
-  ];
-  const inputPills = dimCfgNS.map(d => `<span class="sv-attr-pill ${d.cls}" style="border-color:currentColor;opacity:0.8">${d.label} <span style="font-size:9px;opacity:0.7">· ${d.sub}</span></span>`).join('');
-  const stratBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">04</div>
-      <div><div class="sv-layer-title">Strategy Layer</div><div class="sv-layer-sub">North Star Framework</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${c};margin-bottom:6px">◆ North Star · ${area} Product Area</div>
-      <div class="sv-ns-name">${nsName} <span style="font-family:var(--f-mono);font-size:13px;color:var(--text-d)">${nsAbbr}</span></div>
-      <div class="sv-ns-def">${nsDef}</div>
-      <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px">Key Input Metrics</div>
-      <div class="sv-ns-inputs">${inputPills}</div>
-      <button class="sv-expand" onclick="openNsModal('${pId}')">View North Star ↗</button>
-    </div>
+
+  const g = STAGE_GRADS[pId];
+
+  const semanticDesc = `The <strong style="color:${c}">${pd.object}</strong> — its fixed conditions, dynamic states, and structural statuses that form the ontological core of the ${area} lifecycle. Primary interaction: ${pd.interaction}.`;
+  const humanDesc    = `<strong style="color:${c}">${personaName}</strong>, ${jobTitle} — <em>${pd.archetype}</em>. ${pd.fixed[0]}. ${pd.dynamic[0]}.`;
+  const innovDesc    = `Primary job: <em>${pj.mainAction}</em>. ${pj.job}. Mapped across 8 lifecycle steps — from ${STAGES[0].label} to ${STAGES[STAGES.length-1].label}.`;
+  const stratDesc    = nsDef
+    ? `<strong style="color:${c}">${nsName}</strong> <span style="opacity:0.6">${nsAbbr}</span> — ${nsDef} Tracked through five input metrics: adoption, engagement, retention, efficiency, and effectiveness.`
+    : `North Star metric for the ${area} product area.`;
+
+  const specHTML = `<div class="lm-spec">
+    <div class="lm-spec-lbl lm-spec-lbl-top">Regular</div>
+    <div class="lm-spec-dot"></div>
+    <div class="lm-spec-line" style="background:linear-gradient(to bottom,rgba(255,255,255,0.12),${c})"></div>
+    <img src="momentus_logo.png" class="lm-spec-logo" alt="Momentus" aria-hidden="true">
+    <div class="lm-spec-lbl lm-spec-lbl-bot" style="color:${c}">Momentus</div>
   </div>`;
 
-  el.innerHTML = semanticBlock + humanBlock + innovBlock + stratBlock;
+  const stackHTML = [
+    buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, `openObjectModal('${pd.objId}')`),
+    buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition',                              humanDesc,    `openPersonaModal('${pId}')`),
+    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework',                                   innovDesc,    `openMainJobModal('${pId}')`),
+    buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    `openNsModal('${pId}')`),
+  ].join('');
+
+  el.innerHTML = `<div class="lm-wrap" style="margin-top:0"><div class="lm-stack">${stackHTML}</div>${specHTML}</div>`;
 }
 
 function renderStageE2E(el) {
-  const c  = 'var(--e3)';
-  const b  = 'var(--e3-b)';
-  const bg = 'var(--e3-bg)';
+  const c = 'var(--e3)';
+  const g = STAGE_GRADS.e3;
 
-  // ── 01 Semantic ──
-  const pbEl = document.getElementById('pb-event');
-  let attrHTML = '';
-  if (pbEl) {
-    const cols = pbEl.querySelectorAll('.attr-col');
-    const labels = [
-      { cls:'var(--fixed-c)',   b:'rgba(251,191,36,0.25)',  label:'Fixed Conditions'  },
-      { cls:'var(--dynamic-c)', b:'rgba(45,212,191,0.25)',  label:'Dynamic States'    },
-      { cls:'var(--struct-c)',  b:'rgba(251,113,133,0.25)', label:'Structural Status' },
-    ];
-    cols.forEach((col, i) => {
-      const count = col.querySelectorAll('.attr-item').length;
-      const lbl = labels[i] || { cls:'var(--text-d)', b:'var(--border)', label:'Attributes' };
-      attrHTML += `<span class="sv-attr-pill" style="color:${lbl.cls};border-color:${lbl.b}">${count} ${lbl.label}</span>`;
-    });
-  }
-  const semanticBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">01</div>
-      <div><div class="sv-layer-title">Semantic Layer</div><div class="sv-layer-sub">Semantic IxD · Ontological Object Definition</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div class="sv-obj-name" style="color:${c}">Momentus Events</div>
-      <div class="sv-attr-row">${attrHTML}</div>
-      <div style="font-size:12px;color:var(--text-d)">The unified event record — the central object of the end-to-end lifecycle.</div>
-      <button class="sv-expand" onclick="openObjectModal('event')">View full definition ↗</button>
-    </div>
-  </div>`;
-
-  // ── 02 Human ──
-  const personaDefs = [
-    { pId:'sharon', label:'Sales',      role:'Sales Manager',         color:'var(--sharon)', b:'var(--sharon-b)' },
-    { pId:'emilie', label:'Planning',   role:'Event Coordinator',     color:'var(--emilie)', b:'var(--emilie-b)' },
-    { pId:'owen',   label:'Operations', role:'Operations Supervisor', color:'var(--owen)',   b:'var(--owen-b)'   },
-  ];
-  const personaCards = personaDefs.map(p => `
-    <div class="sv-e2e-pcard" style="border-color:${p.b}" onclick="openPersonaModal('${p.pId}')">
-      <div class="sv-e2e-area" style="color:${p.color}">${p.label}</div>
-      <div class="sv-e2e-role">${p.role}</div>
-      <div style="font-family:var(--f-mono);font-size:9px;color:var(--text-d);margin-top:6px">expand ↗</div>
-    </div>`).join('');
-  const humanBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">02</div>
-      <div><div class="sv-layer-title">Human Layer</div><div class="sv-layer-sub">Ontological Persona Definition · Three Roles</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div style="font-size:13px;color:var(--text-s);margin-bottom:14px">Three personas collaborate across the full event lifecycle, each owning a distinct stage of the journey.</div>
-      <div class="sv-e2e-row">${personaCards}</div>
-    </div>
-  </div>`;
-
-  // ── 03 Innovation — full 3-persona compact grid ──
-  const stageHeaderCells = STAGES.map(s => `
-    <div style="text-align:center;padding:6px 4px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm)">
-      <div style="font-family:var(--f-mono);font-size:9px;color:var(--text-d)">${s.num}</div>
-      <div style="font-family:var(--f-disp);font-size:10px;font-weight:700;color:var(--text)">${s.label}</div>
-    </div>`).join('');
-  const personaRows = PERSONAS_J.map(p => {
-    const pc = `var(${p.color})`;
-    const pb2 = `var(${p.border})`;
-    const cells = STAGES.map(s => `
-      <div class="sv-grid-cell" style="border-color:${pb2}" onclick="goToJTBDStep('${p.id}','${s.id}')">
-        <div class="sv-grid-short">${SHORT[p.id][s.id]}</div>
-      </div>`).join('');
-    return `<div class="sv-e2e-prow">
-      <div class="sv-e2e-plbl" style="color:${pc};background:var(--bg);border:1px solid ${pb2};border-radius:var(--r-sm)">${p.product.replace('Event ','')}</div>
-      ${cells}
-    </div>`;
-  }).join('');
-  const innovBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">03</div>
-      <div><div class="sv-layer-title">Innovation Layer</div><div class="sv-layer-sub">Jobs to Be Done Framework · All Three Personas</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div style="font-size:13px;color:var(--text-s);margin-bottom:14px">The full job matrix — 3 personas × 8 lifecycle steps. Select any cell to explore the job step detail.</div>
-      <div class="sv-e2e-grid">
-        <div class="sv-e2e-prow"><div style="background:none;border:none"></div>${stageHeaderCells}</div>
-        ${personaRows}
-      </div>
-    </div>
-  </div>`;
-
-  // ── 04 Strategy ──
   const nsEl = document.getElementById('ns-e3');
   const sc = nsEl ? nsEl.querySelector('.star-card') : null;
   const nsMetricEl = sc ? sc.querySelector('.star-metric') : null;
@@ -2879,30 +2769,30 @@ function renderStageE2E(el) {
   const nsAbbr = nsAbbrEl ? nsAbbrEl.textContent.trim() : '';
   const nsName = nsMetricEl ? nsMetricEl.textContent.replace(nsAbbr,'').trim() : '';
   const nsDef  = sc ? (sc.querySelector('.star-def') ? sc.querySelector('.star-def').textContent.trim() : '') : '';
-  const dimCfgE2E = [
-    { cls:'d-adopt',  label:'Adoption',      sub:'active user'   },
-    { cls:'d-engage', label:'Engagement',    sub:'feature usage' },
-    { cls:'d-retain', label:'Retention',     sub:'return rate'   },
-    { cls:'d-effic',  label:'Efficiency',    sub:'time to value' },
-    { cls:'d-effect', label:'Effectiveness', sub:'task success'  },
-  ];
-  const inputPills = dimCfgE2E.map(d => `<span class="sv-attr-pill ${d.cls}" style="border-color:currentColor;opacity:0.8">${d.label} <span style="font-size:9px;opacity:0.7">· ${d.sub}</span></span>`).join('');
-  const stratBlock = `<div class="sv-layer">
-    <div class="sv-layer-hd">
-      <div class="sv-layer-num">04</div>
-      <div><div class="sv-layer-title">Strategy Layer</div><div class="sv-layer-sub">North Star Framework</div></div>
-    </div>
-    <div class="sv-layer-bd">
-      <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${c};margin-bottom:6px">◆ North Star · End-to-End</div>
-      <div class="sv-ns-name">${nsName} <span style="font-family:var(--f-mono);font-size:13px;color:var(--text-d)">${nsAbbr}</span></div>
-      <div class="sv-ns-def">${nsDef}</div>
-      <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px">Key Input Metrics</div>
-      <div class="sv-ns-inputs">${inputPills}</div>
-      <button class="sv-expand" onclick="openNsModal('e3')">View North Star ↗</button>
-    </div>
+
+  const semanticDesc = `The unified <strong style="color:${c}">Event</strong> — the lifecycle object spanning all stages from booking intake to post-event close, across all three product areas.`;
+  const humanDesc    = `<strong style="color:var(--sharon)">Sales Manager</strong>, <strong style="color:var(--emilie)">Event Coordinator</strong>, and <strong style="color:var(--owen)">Operations Supervisor</strong> — three personas, one seamless end-to-end lifecycle.`;
+  const innovDesc    = `The complete job matrix — 3 personas × 8 lifecycle stages, from ${STAGES[0].label} to ${STAGES[STAGES.length-1].label}. Each role, every step, the full event journey.`;
+  const stratDesc    = nsDef
+    ? `<strong style="color:${c}">${nsName}</strong> <span style="opacity:0.6">${nsAbbr}</span> — ${nsDef} Unified across five input metrics: adoption, engagement, retention, efficiency, and effectiveness.`
+    : `North Star metric for the unified End-to-End product area.`;
+
+  const specHTML = `<div class="lm-spec">
+    <div class="lm-spec-lbl lm-spec-lbl-top">Regular</div>
+    <div class="lm-spec-dot"></div>
+    <div class="lm-spec-line"></div>
+    <img src="momentus_logo.png" class="lm-spec-logo" alt="Momentus" aria-hidden="true">
+    <div class="lm-spec-lbl lm-spec-lbl-bot">Momentus</div>
   </div>`;
 
-  el.innerHTML = semanticBlock + humanBlock + innovBlock + stratBlock;
+  const stackHTML = [
+    buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, "openObjectModal('event')"),
+    buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition · Three Roles',                humanDesc,    "navigate('personas')"),
+    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework · All Three Personas',              innovDesc,    "navigate('jtbd')"),
+    buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    "openNsModal('e3')"),
+  ].join('');
+
+  el.innerHTML = `<div class="lm-wrap" style="margin-top:0"><div class="lm-stack">${stackHTML}</div>${specHTML}</div>`;
 }
 
 /* ── END STAGES VIEW RENDER ── */
