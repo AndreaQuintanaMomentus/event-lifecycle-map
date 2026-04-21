@@ -1760,17 +1760,18 @@ function closePersonaModal() {
 }
 
 function goToPersona(personaId) {
-  const isOnPersonas = document.getElementById('sec-personas').classList.contains('active');
-  navigate('personas');
-  setTimeout(() => openPersonaModal(personaId), isOnPersonas ? 0 : 50);
+  if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
+  if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
+  if (document.getElementById('object-modal').classList.contains('open')) closeObjectModal();
+  openPersonaModal(personaId);
 }
 
 function goToPrimaryObject(objId, event) {
   event.stopPropagation();
-  closePersonaModal();
-  const isOnGrammar = document.getElementById('sec-grammar').classList.contains('active');
-  navigate('grammar');
-  setTimeout(() => openObjectModal(objId), isOnGrammar ? 0 : 50);
+  if (document.getElementById('persona-modal').classList.contains('open')) closePersonaModal();
+  if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
+  if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
+  openObjectModal(objId);
 }
 
 /* ── MAIN JOB MODAL (JTBD Map) ── */
