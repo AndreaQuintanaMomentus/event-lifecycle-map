@@ -832,6 +832,22 @@ body {
 .lm-stage-obj { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-bottom: 4px; }
 .lm-stage-hint { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 8px; letter-spacing: 0.5px; }
 
+/* Stage card (mirrors lm-row visual language) */
+.st-flow { max-width: 820px; }
+.st-trio { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.st-card {
+  background: var(--st-bg, var(--surface)); border: 1px solid var(--st-border, var(--border));
+  border-radius: var(--r); padding: 22px 24px 20px; cursor: pointer;
+  transition: filter 0.18s ease; position: relative; overflow: hidden; min-height: 180px;
+}
+.st-card:hover { filter: brightness(1.18) saturate(1.1); }
+.st-card-num { font-family: var(--f-mono); font-size: 10px; letter-spacing: 2px; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+.st-card-icon { position: absolute; top: 18px; right: 18px; opacity: 0.2; }
+.st-card-name { font-family: var(--f-disp); font-size: 22px; font-weight: 800; color: white; margin-bottom: 4px; line-height: 1.2; }
+.st-card-fw { font-family: var(--f-mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+.st-card-action { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.5; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
+.st-card-hint { font-family: var(--f-mono); font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 8px; letter-spacing: 0.5px; }
+
 /* ── STAGE PAGE LAYOUT ── */
 .sv-layers { display: flex; flex-direction: column; gap: 14px; max-width: 900px; }
 .sv-layer { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
@@ -900,7 +916,17 @@ body {
     </div>
   </div>
 
-  <div class="sb-section-label" id="sb-view-label">Layers</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 18px 8px">
+    <div class="sb-section-label" id="sb-view-label" style="padding:0">Layers</div>
+    <div class="view-switcher">
+      <button class="vs-btn active" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
+      </button>
+      <button class="vs-btn" data-view="stages" data-tip="Stages View" onclick="switchToView('stages')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="3" width="5" height="18" rx="0.75"/><rect x="9.5" y="3" width="5" height="18" rx="0.75"/><rect x="17" y="3" width="5" height="18" rx="0.75"/></svg>
+      </button>
+    </div>
+  </div>
 
   <nav class="sb-nav" id="nav-layers">
     <button class="nav-btn" onclick="navigate('grammar')">
@@ -919,27 +945,18 @@ body {
 
   <nav class="sb-nav" id="nav-stages" style="display:none">
     <button class="nav-btn" onclick="navigate('stage-sharon')">
-      <svg class="nb-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>Sales
+      <svg class="nb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><g transform="translate(5,8) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>Sales
     </button>
     <button class="nav-btn" onclick="navigate('stage-emilie')">
-      <svg class="nb-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/></svg>Planning
+      <svg class="nb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><g transform="translate(6,8) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>Planning
     </button>
     <button class="nav-btn" onclick="navigate('stage-owen')">
-      <svg class="nb-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/></svg>Operations
+      <svg class="nb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><g transform="translate(6,6) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>Operations
     </button>
     <button class="nav-btn" onclick="navigate('stage-e3')">
-      <svg class="nb-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 1.5 1.5L15 12"/></svg>End-to-End
+      <svg class="nb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><g transform="translate(6,10) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>End-to-End
     </button>
   </nav>
-
-  <div class="view-switcher" style="margin-top:8px">
-    <button class="vs-btn active" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
-    </button>
-    <button class="vs-btn" data-view="stages" data-tip="Stages View" onclick="switchToView('stages')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="3" width="5" height="18" rx="0.75"/><rect x="9.5" y="3" width="5" height="18" rx="0.75"/><rect x="17" y="3" width="5" height="18" rx="0.75"/></svg>
-    </button>
-  </div>
 
   <div class="sb-legend">
     <div class="sb-legend-label">Map key</div>
@@ -959,13 +976,11 @@ body {
      SECTION 1: OVERVIEW
      ──────────────────────────────────────────────── -->
 <section id="sec-overview" class="section active">
-  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:4px">
-    <div>
-      <div class="page-eyebrow">Momentus Technologies · Strategic Alignment Tool</div>
-      <div class="page-title">Event Lifecycle Map</div>
-      <div class="page-sub" style="margin-bottom:0">A human-centered, product-agnostic view of the full event lifecycle — who does what, why it matters, and where Momentus creates value.</div>
-    </div>
-    <div class="view-switcher" style="margin-top:32px;flex-shrink:0">
+  <div class="page-eyebrow">Momentus Technologies · Strategic Alignment Tool</div>
+  <div class="page-title">Event Lifecycle Map</div>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Layers View</div>
+    <div class="view-switcher">
       <button class="vs-btn active" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
       </button>
@@ -974,6 +989,8 @@ body {
       </button>
     </div>
   </div>
+  <div class="page-sub">A human-centered, product-agnostic view of the full event lifecycle — who does what, why it matters, and where Momentus creates value.</div>
+  <div style="border-left:2px solid var(--bhi);padding-left:14px;margin:14px 0 28px;font-family:var(--f-disp);font-size:13px;color:var(--text-d);font-style:italic;line-height:1.5">"We make it Momentus layer by layer."</div>
 
   <div class="lm-wrap">
     <div class="lm-stack">
@@ -1778,13 +1795,11 @@ body {
 <!-- ── STAGES VIEW ── -->
 
 <section id="sec-stages-overview" class="section">
-  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:4px">
-    <div>
-      <div class="page-eyebrow">Momentus Technologies · Strategic Alignment Tool</div>
-      <div class="page-title">Event Lifecycle Stages</div>
-      <div class="page-sub" style="margin-bottom:0">The event lifecycle through the lens of each product stage — Sales, Planning, Operations, and the End-to-End experience.</div>
-    </div>
-    <div class="view-switcher" style="margin-top:32px;flex-shrink:0">
+  <div class="page-eyebrow">Momentus Technologies · Strategic Alignment Tool</div>
+  <div class="page-title">Event Lifecycle Map</div>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Stages View</div>
+    <div class="view-switcher">
       <button class="vs-btn" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
       </button>
@@ -1793,6 +1808,8 @@ body {
       </button>
     </div>
   </div>
+  <div class="page-sub">The event lifecycle through the lens of each product stage — Sales, Planning, Operations, and the End-to-End experience.</div>
+  <div style="border-left:2px solid var(--bhi);padding-left:14px;margin:14px 0 36px;font-family:var(--f-disp);font-size:13px;color:var(--text-d);font-style:italic;line-height:1.5">"We make it Momentus at every stage of the lifecycle."</div>
   <div id="stages-overview-diagram"><!-- built by JS --></div>
   <div class="page-footer">
     <span>Momentus Event Lifecycle Map · Strategic Alignment Portal</span>
@@ -2592,49 +2609,52 @@ function renderStagesOverview() {
   if (!el || el.dataset.built) return;
   el.dataset.built = '1';
 
-  const stages = [
-    { pId:'sharon', abbr:'MB', name:'Sales',      color:'var(--sharon)', b:'var(--sharon-b)', role:'Sales Manager',         obj:'Event Booking',  action:'Secure Event Booking',  target:'stage-sharon' },
-    { pId:'emilie', abbr:'MP', name:'Planning',   color:'var(--emilie)', b:'var(--emilie-b)', role:'Event Coordinator',     obj:'Event Plan',     action:'Detail Event Plan',     target:'stage-emilie' },
-    { pId:'owen',   abbr:'MJ', name:'Operations', color:'var(--owen)',   b:'var(--owen-b)',   role:'Operations Supervisor', obj:'Event Job',      action:'Execute Event Job',     target:'stage-owen'   },
+  const sparkle = `M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z`;
+  const icons = {
+    sharon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><g transform="translate(5,8) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
+    emilie: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><g transform="translate(6,8) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
+    owen:   `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><g transform="translate(6,6) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
+    e3:     `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><g transform="translate(6,10) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
+  };
+
+  const trio = [
+    { pId:'sharon', num:'01', abbr:'MB', name:'Sales',      fw:'Momentus Bookings',  action:'Secure Event Booking',  bg:'linear-gradient(135deg,#092115 0%,#123020 100%)', border:'rgba(52,211,153,0.22)',  target:'stage-sharon' },
+    { pId:'emilie', num:'02', abbr:'MP', name:'Planning',   fw:'Momentus Plans',     action:'Detail Event Plan',     bg:'linear-gradient(135deg,#060e22 0%,#0d1e3c 100%)', border:'rgba(96,165,250,0.22)',  target:'stage-emilie' },
+    { pId:'owen',   num:'03', abbr:'MJ', name:'Operations', fw:'Momentus Jobs',      action:'Execute Event Job',     bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', border:'rgba(249,115,22,0.22)',  target:'stage-owen'   },
   ];
 
-  let html = '<div class="lm-stages-flow">';
+  const trioHTML = trio.map(s => `
+    <div class="st-card" style="--st-bg:${s.bg};--st-border:${s.border}" role="button" tabindex="0"
+         onclick="navigate('${s.target}')" onkeydown="if(event.key==='Enter'||event.key===' '){navigate('${s.target}');}">
+      <div class="st-card-num">${s.num} · ${s.abbr}</div>
+      <div class="st-card-icon">${icons[s.pId]}</div>
+      <div class="st-card-name">${s.name}</div>
+      <div class="st-card-fw">${s.fw}</div>
+      <div class="st-card-action">${s.action}</div>
+      <div class="st-card-hint">View stage →</div>
+    </div>`).join('');
 
-  // Trio row
-  html += '<div class="lm-stages-trio">';
-  stages.forEach((s, i) => {
-    html += `<div class="lm-stage-card" style="border-top:3px solid ${s.color}" role="button" tabindex="0" onclick="navigate('${s.target}')" onkeydown="if(event.key==='Enter'||event.key===' '){navigate('${s.target}');}">
-      <div class="lm-stage-abbr" style="color:${s.color}">${s.abbr} · ${s.name} Product Area</div>
-      <div class="lm-stage-name">${s.name}</div>
-      <div class="lm-stage-role">${s.role}</div>
-      <div class="lm-stage-obj">Primary Object: ${s.obj}</div>
-      <div class="lm-stage-action">${s.action}</div>
-      <div class="lm-stage-hint">View stage →</div>
+  const e2eHTML = `
+    <div class="st-card" style="--st-bg:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);--st-border:rgba(178,102,228,0.22)"
+         role="button" tabindex="0" onclick="navigate('stage-e3')" onkeydown="if(event.key==='Enter'||event.key===' '){navigate('stage-e3');}">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px">
+        <div>
+          <div class="st-card-num">04 · ME</div>
+          <div class="st-card-name">End-to-End</div>
+          <div class="st-card-fw">Momentus Events</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-shrink:0;padding-top:2px">
+          <span style="font-family:var(--f-mono);font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(52,211,153,0.35);color:rgba(52,211,153,0.7)">Sales</span>
+          <span style="font-family:var(--f-mono);font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(96,165,250,0.35);color:rgba(96,165,250,0.7)">Planning</span>
+          <span style="font-family:var(--f-mono);font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid rgba(249,115,22,0.35);color:rgba(249,115,22,0.7)">Operations</span>
+        </div>
+      </div>
+      <div class="st-card-action" style="margin-top:10px">The complete lifecycle of an event — from inquiry to close — delivered as one unified platform experience.</div>
+      <div class="st-card-hint">View end-to-end stage →</div>
+      <div class="st-card-icon" style="top:18px;right:22px">${icons.e3}</div>
     </div>`;
-    if (i < 2) html += `<div class="lm-stages-arrow">→</div>`;
-  });
-  html += '</div>';
 
-  // End-to-End spanning card
-  html += `<div class="lm-stage-card" style="border-top:3px solid var(--e3)" role="button" tabindex="0" onclick="navigate('stage-e3')" onkeydown="if(event.key==='Enter'||event.key===' '){navigate('stage-e3');}">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-      <div>
-        <div class="lm-stage-abbr" style="color:var(--e3)">ME · End-to-End · Momentus Events</div>
-        <div class="lm-stage-name">End-to-End</div>
-        <div class="lm-stage-role">Sales · Planning · Operations — unified</div>
-      </div>
-      <div style="display:flex;gap:8px;flex-shrink:0">
-        <span style="font-family:var(--f-mono);font-size:10px;padding:4px 10px;border-radius:4px;border:1px solid var(--sharon-b);color:var(--sharon)">Sales</span>
-        <span style="font-family:var(--f-mono);font-size:10px;padding:4px 10px;border-radius:4px;border:1px solid var(--emilie-b);color:var(--emilie)">Planning</span>
-        <span style="font-family:var(--f-mono);font-size:10px;padding:4px 10px;border-radius:4px;border:1px solid var(--owen-b);color:var(--owen)">Operations</span>
-      </div>
-    </div>
-    <div class="lm-stage-action" style="margin-top:10px">The complete lifecycle of an event — from inquiry to close — delivered as one unified experience.</div>
-    <div class="lm-stage-hint">View end-to-end stage →</div>
-  </div>`;
-
-  html += '</div>';
-  el.innerHTML = html;
+  el.innerHTML = `<div class="st-flow"><div class="st-trio">${trioHTML}</div>${e2eHTML}</div>`;
 }
 
 function renderStagePage(pId) {
