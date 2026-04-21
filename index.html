@@ -2268,29 +2268,30 @@ function renderJTBDDetail(pId, sId) {
     <div class="jd-panel" style="border-color:${b};padding:0;overflow:hidden">
       <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};display:flex;align-items:flex-start;gap:20px">
         <div style="flex:1;min-width:0">
+          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:5px">${s.num} · Step</div>
+          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:4px;display:flex;align-items:center;gap:8px">${STAGE_ICONS[s.id]}${s.label}</div>
+          <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
+        </div>
+        <div style="width:1px;background:${b};align-self:stretch;flex-shrink:0"></div>
+        <div style="min-width:160px;flex-shrink:0">
           <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Primary Job</div>
-          <div style="font-family:var(--f-disp);font-size:18px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:10px;display:flex;align-items:center;gap:8px">${_ico(18,PERSONA_PATHS[pId])}${p.mainAction}</div>
-          <div style="display:flex;gap:14px;flex-wrap:wrap">
-            <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-family:var(--f-disp);font-size:14px;font-weight:700;color:var(--text-s);line-height:1.3;margin-bottom:8px;display:flex;align-items:center;gap:6px">${_ico(14,PERSONA_PATHS[pId])}${p.mainAction}</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;flex-direction:column;gap:3px">
               <span class="jpl-obj-lbl">Primary Object:</span>
               <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${p.objId}',event)">${CHIP_OBJECT_ICONS[p.objId]}${p.object}</span>
             </div>
-            <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="display:flex;flex-direction:column;gap:3px">
               <span class="jpl-obj-lbl">Primary Persona:</span>
               <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Persona" onclick="goToPersona('${pId}');event.stopPropagation()">${CHIP_PERSONA_ICONS[pId]}${p.role}</span>
             </div>
           </div>
         </div>
-        <div style="width:1px;background:${b};align-self:stretch;flex-shrink:0"></div>
-        <div style="min-width:130px;flex-shrink:0">
-          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:5px">${s.num} · Step</div>
-          <div style="font-family:var(--f-disp);font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px;display:flex;align-items:center;gap:5px">${STAGE_ICONS[s.id]}${s.label}</div>
-          <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
-        </div>
         <button class="jd-close" onclick="closeJTBDModal()" style="flex-shrink:0">✕</button>
       </div>
       <div style="padding:16px 20px 20px">
-        <div class="jd-step" style="margin-bottom:12px">${d.step}</div>
+        <div class="jd-step" style="margin-bottom:5px">${d.step}</div>
+        <div class="jd-job" style="margin-bottom:14px">Functional job: <span style="color:var(--text-d)">${p.job}</span></div>
         <div class="jd-odi-label">Desired outcome statements — ODI format · 5 of ~50–150 · Ulwick (2018) p.94</div>
         <div class="jd-outcomes">${outcomesHTML}</div>
         <div class="jd-legend">
