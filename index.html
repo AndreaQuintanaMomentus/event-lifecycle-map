@@ -410,7 +410,8 @@ body {
 .ph-stage.ph-s-c { color: var(--sharon); }
 .ph-stage.ph-p-c { color: var(--emilie); }
 .ph-stage.ph-o-c { color: var(--owen);   }
-.ph-object { font-family: var(--f-disp); font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.ph-object { font-family: var(--f-disp); font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+.ph-object svg { flex-shrink: 0; opacity: 0.85; }
 .ph-persona { font-size: 13px; color: var(--text-s); }
 .ph-persona strong { color: var(--text); cursor: pointer; }
 .ph-persona strong:hover { color: var(--e3); }
@@ -979,9 +980,9 @@ body {
       <div class="star-metric">Momentus Bookings <span class="star-abbr">(MB)</span></div>
       <div class="star-def">The number of event bookings that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM, email thread, or paper contract. A booking counts only when the entire intake-to-contract workflow completes inside the platform.</div>
       <div class="ov-badges">
-        <span class="chip-label">Feeds E3 intake stage</span>
+        <span class="chip-label">Feeds ME intake stage</span>
         <span class="chip-label">Closes the CRM fallback gap</span>
-        <span class="chip-label">First link in the E3 chain</span>
+        <span class="chip-label">First link in the ME chain</span>
       </div>
     </div>
 
@@ -1135,7 +1136,7 @@ body {
         <div class="zo-tagline">"They make sure it actually happens."</div>
         <div class="jpl-obj-wrap">
           <span class="jpl-obj-lbl">Primary Object:</span>
-          <span class="jpl-obj" style="color:var(--owen);border-color:var(--owen-b)" title="Go to Primary Object" onclick="goToPrimaryObject('operations', event)">Event Task</span>
+          <span class="jpl-obj" style="color:var(--owen);border-color:var(--owen-b)" title="Go to Primary Object" onclick="goToPrimaryObject('operations', event)">Event Job</span>
         </div>
         <div class="zo-hint">expand ↗</div>
       </div>
@@ -1281,7 +1282,7 @@ body {
       <div class="zi-grammar">
         <div class="zi-grammar-label">Interaction grammar</div>
         <div class="zi-grammar-pills">
-          <span class="g-pill">Event Task</span><span class="g-sep">·</span>
+          <span class="g-pill">Event Job</span><span class="g-sep">·</span>
           <span class="g-pill">Product</span><span class="g-sep">·</span>
           <span class="g-pill">Create</span>
         </div>
@@ -1322,7 +1323,7 @@ body {
     <div class="ph ph-s" role="button" tabindex="0" aria-label="Expand Event Booking object detail" onclick="openObjectModal('booking')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('booking');}">
       <div>
         <div class="ph-stage ph-s-c">Sales</div>
-        <div class="ph-object">Event Booking</div>
+        <div class="ph-object"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>Event Booking</div>
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
@@ -1382,7 +1383,7 @@ body {
     <div class="ph ph-p" role="button" tabindex="0" aria-label="Expand Event Plan object detail" onclick="openObjectModal('planning')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('planning');}">
       <div>
         <div class="ph-stage ph-p-c">Planning</div>
-        <div class="ph-object">Event Plan</div>
+        <div class="ph-object"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>Event Plan</div>
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
@@ -1438,10 +1439,10 @@ body {
   <div class="zo-arrow" style="align-self:center">→</div>
   <!-- PRODUCT 3: EVENT OPERATIONS -->
   <div class="product-block" id="pb-operations">
-    <div class="ph ph-o" role="button" tabindex="0" aria-label="Expand Event Task object detail" onclick="openObjectModal('operations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('operations');}">
+    <div class="ph ph-o" role="button" tabindex="0" aria-label="Expand Event Job object detail" onclick="openObjectModal('operations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('operations');}">
       <div>
         <div class="ph-stage ph-o-c">Operations</div>
-        <div class="ph-object">Event Task</div>
+        <div class="ph-object"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Event Job</div>
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
@@ -1484,9 +1485,9 @@ body {
       <div class="act-top">
         <div class="actions-lbl">Actions</div>
         <div class="act-chips">
-        <span class="act-chip act-secondary act-os" data-desc="Brings a new Event Task into existence within the system — defining the work to be completed, the crew responsible, and the execution window." onclick="selectObjectAction(this)">Create</span>
-        <span class="act-chip act-secondary act-os" data-desc="Modifies the attributes of an existing Event Task — such as its status, priority, assigned crew, completion progress, or incident notes — as execution unfolds." onclick="selectObjectAction(this)">Update</span>
-        <span class="act-chip act-secondary act-os" data-desc="Permanently removes an Event Task from the system, erasing the work order and its associated records." onclick="selectObjectAction(this)">Delete</span>
+        <span class="act-chip act-secondary act-os" data-desc="Brings a new Event Job into existence within the system — defining the work to be completed, the crew responsible, and the execution window." onclick="selectObjectAction(this)">Create</span>
+        <span class="act-chip act-secondary act-os" data-desc="Modifies the attributes of an existing Event Job — such as its status, priority, assigned crew, completion progress, or incident notes — as execution unfolds." onclick="selectObjectAction(this)">Update</span>
+        <span class="act-chip act-secondary act-os" data-desc="Permanently removes an Event Job from the system, erasing the work order and its associated records." onclick="selectObjectAction(this)">Delete</span>
         </div>
       </div>
       <div class="act-desc"></div>
@@ -1499,7 +1500,7 @@ body {
     <div class="ph ph-e3" role="button" tabindex="0" aria-label="Expand Event object detail" onclick="openObjectModal('event')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('event');}">
       <div>
         <div class="ph-stage ph-e3-c">Momentus End-to-End</div>
-        <div class="ph-object">Event</div>
+        <div class="ph-object"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M7 15h4M7 19h10"/></svg>Event</div>
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
@@ -1520,7 +1521,7 @@ body {
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Overall Status</div><div class="attr-note">Prospect → Booked → Planning → Confirmed → Executing → Closed</div></li>
           <li class="attr-item"><div class="attr-name">Coverage Completeness</div><div class="attr-note">% of lifecycle managed in-platform</div></li>
-          <li class="attr-item"><div class="attr-name">E3 Progress</div><div class="attr-note">Booking ✓ · Plan ✓ · Tasks ✓</div></li>
+          <li class="attr-item"><div class="attr-name">ME Progress</div><div class="attr-note">Booking ✓ · Plan ✓ · Tasks ✓</div></li>
           <li class="attr-item"><div class="attr-name">Revenue Realization</div><div class="attr-note">actuals vs. contracted value</div></li>
           <li class="attr-item"><div class="attr-name">Execution Health</div><div class="attr-note">On Track / At Risk / Escalated</div></li>
           <li class="attr-item"><div class="attr-name">Client Approval State</div><div class="attr-note">Pending → Approved → Change Requested</div></li>
@@ -1532,7 +1533,7 @@ body {
           <li class="attr-item"><div class="attr-name">Event Master Record ID</div><div class="attr-note">top-level system identifier</div></li>
           <li class="attr-item"><div class="attr-name">Linked Booking Record(s)</div><div class="attr-note">all associated Event Booking objects</div></li>
           <li class="attr-item"><div class="attr-name">Linked Event Plan(s)</div><div class="attr-note">all associated BEO / function plans</div></li>
-          <li class="attr-item"><div class="attr-name">Linked Event Task(s)</div><div class="attr-note">all operational work orders</div></li>
+          <li class="attr-item"><div class="attr-name">Linked Event Job(s)</div><div class="attr-note">all operational work orders</div></li>
           <li class="attr-item"><div class="attr-name">Primary Account Owner</div><div class="attr-note">lead responsible across lifecycle</div></li>
           <li class="attr-item"><div class="attr-name">Created Date</div><div class="attr-note">first capture timestamp</div></li>
         </ul>
@@ -1663,7 +1664,7 @@ const PERSONAS_DETAIL = {
     role: 'Jordan Olsen \u00b7 Operations Supervisor',
     quote: '\u201cThey make sure it actually happens.\u201d',
     quoteSrc: 'Jordan Olsen \u00b7 Convention Center Operations',
-    object: 'Event Task', objId: 'operations', objClass: 'obj-owen',
+    object: 'Event Job', objId: 'operations', objClass: 'obj-owen',
     fixed: [
       'Execution-driven, calm under pressure, crew-focused',
       'Background in facilities management, hospitality operations, or event logistics',
@@ -1679,7 +1680,7 @@ const PERSONAS_DETAIL = {
       'Authority over the event floor: the final decision-maker on execution day',
       'The last mile between the platform\u2019s promise and the client\u2019s experience'
     ],
-    grammarPills: ['Event Task', 'Product', 'Create'],
+    grammarPills: ['Event Job', 'Product', 'Create'],
     interaction: 'Execute and close a task'
   }
 };
@@ -1913,7 +1914,7 @@ const STAGES = [
 const PERSONAS_J = [
   { id:'sharon',  name:'Alex Smith',   role:'Sales Manager',         mainAction:'Secure Event Booking', archetype:'The Dream Catcher',  product:'Event Sales',      object:'Event Booking', objId:'booking',    job:'Book high-value events that maximize revenue and calendar utilization for the venue',                                            jtbd:{ when:'a high-value lead enters my pipeline',              want:'evaluate, propose, and contract the booking entirely inside Momentus',           soCan:'maximize revenue and calendar utilization without losing deals to slower, fragmented workflows' },             color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
   { id:'emilie',  name:'Sam Evans',   role:'Event Coordinator',      mainAction:'Detail Event Plan',    archetype:'The Promise Keeper', product:'Event Planning',   object:'Event Plan',   objId:'planning',   job:'Plan and coordinate every detail of a committed event so it can be delivered as promised',                                        jtbd:{ when:'a confirmed booking is handed off from sales',       want:'detail, approve, and distribute a complete BEO inside Momentus',               soCan:'ensure every department has exactly what they need to deliver the event as promised' },                       color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
-  { id:'owen',    name:'Jordan Olsen', role:'Operations Supervisor',  mainAction:'Execute Event Task',   archetype:'The Moment Maker',   product:'Event Operations', object:'Event Task',   objId:'operations', job:'Execute all operational tasks required to set up and run an event flawlessly on the day',                                        jtbd:{ when:'the finalized BEO arrives',                          want:'assign, track, and close all operational tasks inside Momentus',                soCan:'run a flawless event without relying on radio calls, paper work orders, or verbal handoffs' },                color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
+  { id:'owen',    name:'Jordan Olsen', role:'Operations Supervisor',  mainAction:'Execute Event Job',   archetype:'The Moment Maker',   product:'Event Operations', object:'Event Job',   objId:'operations', job:'Execute all operational tasks required to set up and run an event flawlessly on the day',                                        jtbd:{ when:'the finalized BEO arrives',                          want:'assign, track, and close all operational tasks inside Momentus',                soCan:'run a flawless event without relying on radio calls, paper work orders, or verbal handoffs' },                color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
 ];
 
 const SHORT = {
@@ -2042,7 +2043,7 @@ const MAP = {
   owen:{
     define:{ step:'Scope the full set of operational tasks required to execute an Event Plan from setup to teardown', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'identify all setup, execution, and teardown tasks required for an Event Plan',when:'receiving the finalized BEO from the planning team and beginning operational task planning'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an Event Task being omitted from the pre-event work order',when:'scoping a complex multi-department event plan with interdependent setup sequences'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an Event Job being omitted from the pre-event work order',when:'scoping a complex multi-department event plan with interdependent setup sequences'},
       {dir:'Maximize',metric:'the completeness of',obj:'the initial operational task list for an Event Plan',when:'planning setup for an event with non-standard configurations, external vendors, or time-critical dependencies'},
       {dir:'Maximize',metric:'the accuracy of',obj:'the pre-event staffing plan based on the scope of work orders',when:'scheduling crew for a complex event with multiple concurrent setup tracks and time-sensitive sequencing'},
       {dir:'Minimize',metric:'the likelihood of',obj:'discovering a missing task dependency after setup has already begun',when:'reviewing the operational task list for an event with non-standard space configurations or external vendor integrations'}
@@ -2055,14 +2056,14 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'access event-specific floor plans, room diagrams, and equipment specs alongside the BEO',when:'building work orders for a non-standard setup that requires visual reference materials to assign tasks correctly'}
     ]},
     prepare:{ step:'Assign all operational tasks to crew members, departments, and equipment, with timing and location details', outcomes:[
-      {dir:'Minimize',metric:'the time it takes to',obj:'assign all Event Tasks to the appropriate crew members and departments',when:'building work orders for a multi-function event with concurrent setup tracks across multiple venue spaces'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an Event Task being unassigned or assigned to the wrong crew member',when:'distributing work orders across multiple departments with different staffing levels on event day'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'assign all Event Jobs to the appropriate crew members and departments',when:'building work orders for a multi-function event with concurrent setup tracks across multiple venue spaces'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an Event Job being unassigned or assigned to the wrong crew member',when:'distributing work orders across multiple departments with different staffing levels on event day'},
       {dir:'Minimize',metric:'the effort required to',obj:'replicate a standard task assignment template from a prior similar event',when:'preparing work orders for a recurring event type with a consistent setup configuration'},
       {dir:'Maximize',metric:'the accuracy of',obj:'task timing assignments relative to the overall event timeline',when:'building work orders where setup sequences are interdependent and crew from different departments must coordinate arrivals'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving a task assignment without sufficient detail to complete it independently',when:'assigning work orders to staff who were not involved in the pre-event planning discussion'}
     ]},
     confirm:{ step:'Validate all assignments, run a pre-event readiness check, and confirm crew is on-schedule before the event begins', outcomes:[
-      {dir:'Minimize',metric:'the time it takes to',obj:'verify that all Event Tasks are assigned, acknowledged, and on-schedule',when:'conducting a pre-event readiness check in the final hours before setup begins'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'verify that all Event Jobs are assigned, acknowledged, and on-schedule',when:'conducting a pre-event readiness check in the final hours before setup begins'},
       {dir:'Minimize',metric:'the likelihood of',obj:'discovering an unassigned or unacknowledged task during the pre-event check',when:'supervising a multi-team setup with staff distributed across several venue spaces'},
       {dir:'Maximize',metric:'the confidence in',obj:'crew readiness and task assignment completeness before the event window opens',when:'overseeing a high-stakes event where setup delays directly impact the client experience'},
       {dir:'Maximize',metric:'the speed of',obj:'resolving a missing assignment or resource gap identified during the pre-event readiness check',when:'completing final preparation for an event that begins within two hours and requires immediate corrective action'},
@@ -2070,31 +2071,31 @@ const MAP = {
     ]},
     execute:{ step:'Supervise live task execution across all crew and spaces during the event window', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'begin executing setup tasks',when:'the operations crew arrives on site at the start of the event window'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an Event Task being performed incorrectly',when:'crew members reference their assignments from a mobile device in the field during active execution'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an Event Job being performed incorrectly',when:'crew members reference their assignments from a mobile device in the field during active execution'},
       {dir:'Minimize',metric:'the disruption to the event timeline caused by',obj:'a setup discrepancy during live execution',when:'the operations team must resolve the issue without stopping the event flow'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a real-time task update or priority change to crew in the field',when:'a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue'},
       {dir:'Minimize',metric:'the effort required to',obj:'confirm task completion in real time without interrupting crew during active execution',when:'supervising multiple concurrent setup tracks that are progressing simultaneously across the venue'}
     ]},
     monitor:{ step:'Track task completion, crew location, and incident status in real time during the event', outcomes:[
-      {dir:'Minimize',metric:'the time it takes to',obj:'verify the completion status of all Event Tasks',when:'supervising a multi-team, multi-space event in real time'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an operational incident going unaddressed',when:'monitoring Event Task activity across concurrent functions running simultaneously in the venue'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'verify the completion status of all Event Jobs',when:'supervising a multi-team, multi-space event in real time'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an operational incident going unaddressed',when:'monitoring Event Job activity across concurrent functions running simultaneously in the venue'},
       {dir:'Minimize',metric:'the effort required to',obj:'maintain visibility into crew location and task progress',when:'supervising a complex event with staff distributed across multiple venue spaces'},
       {dir:'Maximize',metric:'the speed of',obj:'routing an operational incident to the correct crew member for immediate resolution',when:'an issue is reported during an active event and the closest available staff member must be identified and dispatched'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an operational gap going undetected until it escalates into a client-visible failure',when:'monitoring task status across a large-scale event with multiple functions running concurrently in different venue spaces'}
     ]},
     modify:{ step:'Reassign or update tasks when changes are communicated from the planning team during execution', outcomes:[
-      {dir:'Minimize',metric:'the time it takes to',obj:'reassign or update an Event Task',when:'a last-minute change is communicated by the event coordinator during live execution'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'reassign or update an Event Job',when:'a last-minute change is communicated by the event coordinator during live execution'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a change request being missed by crew in the field',when:'a modification arrives while staff are actively executing tasks across multiple venue spaces'},
       {dir:'Minimize',metric:'the disruption to the operational sequence caused by',obj:'an unexpected task re-sequencing or emergency resource reallocation',when:'a client change requires immediate adjustment during a live event'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a change request from the event coordinator to the affected crew member',when:'a client modification arrives mid-event and requires immediate reassignment of resources already deployed in the field'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a task conflict arising from a mid-event reassignment',when:'reallocating crew or equipment from one function to another while both are actively executing in the venue'}
     ]},
     conclude:{ step:'Log task completion, document all actuals and incidents, and close the work order record', outcomes:[
-      {dir:'Minimize',metric:'the time it takes to',obj:'log completion of all Event Tasks and document operational actuals',when:'the event has concluded and teardown is complete'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'log completion of all Event Jobs and document operational actuals',when:'the event has concluded and teardown is complete'},
       {dir:'Minimize',metric:'the likelihood of',obj:'incomplete or inaccurate incident records',when:'concluding the operational log for a complex multi-department event'},
-      {dir:'Maximize',metric:'the accuracy of',obj:'resource, labor, and material actuals captured',when:'closing out all Event Tasks to support post-event financial reconciliation with the planning team'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'resource, labor, and material actuals captured',when:'closing out all Event Jobs to support post-event financial reconciliation with the planning team'},
       {dir:'Maximize',metric:'the completeness of',obj:'incident and deviation records captured at event conclusion',when:'closing out a work order for an event where multiple unplanned operational issues required real-time resolution during execution'},
-      {dir:'Minimize',metric:'the effort required to',obj:'confirm all Event Task completions and submit the closed work order to the planning team',when:'wrapping up teardown for a late-running event while crew are still on site and pending their next assignment'}
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm all Event Job completions and submit the closed work order to the planning team',when:'wrapping up teardown for a late-running event while crew are still on site and pending their next assignment'}
     ]}
   }
 };
