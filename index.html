@@ -253,13 +253,13 @@ body {
   padding: 22px 24px; margin-bottom: 20px; position: relative; overflow: hidden;
 }
 .star-card::before { content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; }
-.sc-e3     { border: 1px solid var(--e3-b); }
+.sc-e3     { border: 1px solid var(--e3-b);     border-left: 3px solid var(--e3);     }
 .sc-e3::before     { background: radial-gradient(ellipse at 10% 70%, rgba(178,102,228,0.12) 0%, transparent 60%); }
-.sc-sharon { border: 1px solid var(--sharon-b); }
+.sc-sharon { border: 1px solid var(--sharon-b); border-left: 3px solid var(--sharon); }
 .sc-sharon::before { background: radial-gradient(ellipse at 10% 70%, rgba(52,211,153,0.1) 0%, transparent 60%); }
-.sc-emilie { border: 1px solid var(--emilie-b); }
+.sc-emilie { border: 1px solid var(--emilie-b); border-left: 3px solid var(--emilie); }
 .sc-emilie::before { background: radial-gradient(ellipse at 10% 70%, rgba(96,165,250,0.1) 0%, transparent 60%); }
-.sc-owen   { border: 1px solid var(--owen-b); }
+.sc-owen   { border: 1px solid var(--owen-b);   border-left: 3px solid var(--owen);   }
 .sc-owen::before   { background: radial-gradient(ellipse at 10% 70%, rgba(249,115,22,0.1) 0%, transparent 60%); }
 
 .star-eyebrow { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
@@ -283,6 +283,11 @@ body {
 .inputs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-bottom: 20px; }
 .ic { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px 14px; transition: border-color 0.15s; }
 .ic:hover { border-color: var(--bhi); }
+.ic:has(.d-adopt)  { border-left: 3px solid var(--c-adopt);  }
+.ic:has(.d-engage) { border-left: 3px solid var(--c-engage); }
+.ic:has(.d-retain) { border-left: 3px solid var(--c-retain); }
+.ic:has(.d-effic)  { border-left: 3px solid var(--c-effic);  }
+.ic:has(.d-effect) { border-left: 3px solid var(--c-effect); }
 .ic-dim { font-family: var(--f-mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; font-weight: 600; }
 .ic-name { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
 .ic-def  { font-size: 13px; color: var(--text-s); line-height: 1.6; }
@@ -307,7 +312,7 @@ body {
 .chain-val  { font-size: 13px; font-weight: 600; }
 .chain-dot  { width: 24px; flex-shrink: 0; text-align: center; color: var(--text-d); }
 
-.rationale { padding: 12px 14px; border-left: 2px solid var(--border); margin-bottom: 8px; transition: border-color 0.2s; }
+.rationale { padding: 12px 14px; border-left: 3px solid var(--border); margin-bottom: 8px; transition: border-color 0.2s; }
 .rationale:hover { border-left-color: var(--e3); }
 .rat-q { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
 .rat-a { font-size: 13px; color: var(--text-s); line-height: 1.65; }
@@ -329,10 +334,13 @@ body {
 .zo-chain { display: flex; align-items: center; gap: 0; overflow-x: auto; margin-bottom: 14px; }
 .zo-persona {
   flex: 1; min-width: 140px;
-  border: 1px solid; border-radius: var(--r-sm); padding: 14px;
+  border: 1px solid; border-radius: var(--r); padding: 16px 20px;
   cursor: pointer; transition: opacity 0.15s;
 }
 .zo-persona:hover { opacity: 0.85; }
+.zo-persona.zp-sharon { border: 1px solid var(--sharon-b); border-left: 3px solid var(--sharon); background: var(--sharon-bg); }
+.zo-persona.zp-emilie { border: 1px solid var(--emilie-b); border-left: 3px solid var(--emilie); background: var(--emilie-bg); }
+.zo-persona.zp-owen   { border: 1px solid var(--owen-b);   border-left: 3px solid var(--owen);   background: var(--owen-bg);   }
 .zo-num { font-family: var(--f-mono); font-size: 10px; letter-spacing: 2px; color: var(--text-d); margin-bottom: 5px; }
 .zo-archetype { font-family: var(--f-disp); font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 3px; }
 .zo-role { font-size: 12px; color: var(--text-s); margin-bottom: 9px; }
@@ -368,7 +376,7 @@ body {
 .zi-attr-label.lbl-struct  { color: var(--struct-c);  }
 .zi-attr-item { font-size: 13px; color: var(--text-s); line-height: 1.6; padding-left: 12px; position: relative; margin-bottom: 2px; }
 .zi-attr-item::before { content: '—'; position: absolute; left: 0; font-size: 12px; color: var(--text-d); }
-.zi-grammar { padding: 12px 16px; border-top: 1px solid var(--border); background: var(--surface2); }
+.zi-grammar { padding: 0; }
 .zi-grammar-label { font-family: var(--f-mono); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-d); margin-bottom: 7px; }
 .zi-grammar-pills { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; margin-bottom: 6px; }
 .g-pill { font-family: var(--f-mono); font-size: 12px; padding: 2px 8px; border-radius: 20px; border: 1px solid var(--bhi); color: var(--text-s); background: var(--surface); }
@@ -435,20 +443,20 @@ body {
 .attr-name { font-size: 13px; color: var(--text); font-weight: 500; }
 .attr-note { font-size: 12px; color: var(--text-s); font-style: italic; }
 
-.actions-row { padding: 14px 20px; background: var(--surface2); display: none; flex-direction: column; gap: 12px; }
-.act-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.actions-row { padding: 8px 20px 14px; background: var(--surface); display: none; flex-direction: column; gap: 12px; }
+.act-top { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.act-chips { display: flex; gap: 10px; flex-wrap: wrap; }
 .act-desc { font-size: 13px; color: var(--text-s); line-height: 1.6; display: none; padding: 10px 14px; background: var(--surface); border-radius: var(--r-sm); border: 1px solid var(--border); }
 .act-desc.visible { display: block; }
 .act-chip.act-selected { box-shadow: 0 0 0 2px currentColor; opacity: 1; }
-.act-destroy { border-color: #f87171; color: #f87171; background: rgba(248,113,113,0.06); }
-.act-destroy.act-selected { background: #f87171; color: var(--bg); border-color: #f87171; }
+.act-destroy { border-color: rgba(248,113,113,0.10); color: #f87171; background: rgba(248,113,113,0.02); }
 .ph-hint { visibility: hidden; font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; letter-spacing: 1px; }
 .ph:hover .ph-hint { visibility: visible; }
 .object-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
 .object-modal-overlay.open { display: flex; }
 .object-modal-box { max-width: 900px; width: 100%; max-height: 86vh; overflow-y: auto; border-radius: var(--r); }
-.actions-lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-d); min-width: 55px; flex-shrink: 0; }
-.act-chip { font-family: var(--f-mono); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: var(--r-sm); border: 1px solid; letter-spacing: 0.3px; }
+.actions-lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-d); min-width: 55px; flex-shrink: 0; margin-bottom: 2px; }
+.act-chip { font-family: var(--f-mono); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: var(--r-sm); border: 1px solid; letter-spacing: 0.3px; cursor: pointer; }
 .act-primary { color: var(--bg); }
 .act-secondary { background: rgba(255,255,255,0.02); }
 .act-sp { background: var(--sharon); border-color: var(--sharon); }
@@ -473,7 +481,7 @@ body {
    JTBD MAP SECTION
    ═══════════════════════════════════════════════ */
 #jtbd-wrap { overflow-x: auto; margin-bottom: 12px; }
-#jtbd-grid { min-width: 996px; }
+#jtbd-grid { min-width: 1040px; }
 #jtbd-detail { border-radius: var(--r); overflow: hidden; }
 .jtbd-modal-overlay {
   display: none;
@@ -487,9 +495,9 @@ body {
 }
 .jtbd-modal-overlay.open { display: flex; }
 .jtbd-modal-box {
-  max-width: 700px;
+  max-width: 900px;
   width: 100%;
-  max-height: 82vh;
+  max-height: 86vh;
   overflow-y: auto;
   border-radius: var(--r);
 }
@@ -505,12 +513,24 @@ body {
 }
 .persona-modal-overlay.open { display: flex; }
 .persona-modal-box {
-  max-width: 520px;
+  max-width: 900px;
   width: 100%;
   max-height: 86vh;
   overflow-y: auto;
   border-radius: var(--r);
 }
+.main-job-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.main-job-modal-overlay.open { display: flex; }
+.main-job-modal-box { max-width: 620px; width: 100%; max-height: 86vh; overflow-y: auto; border-radius: var(--r); }
 .zo-hint { visibility: hidden; font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; letter-spacing: 1px; }
 .zo-persona:hover .zo-hint { visibility: visible; }
 .jtbd-stage-header {
@@ -527,22 +547,23 @@ body {
 
 .jtbd-persona-row {
   display: grid;
-  grid-template-columns: 200px repeat(8, minmax(0,1fr));
+  grid-template-columns: 240px repeat(8, minmax(0,1fr));
   gap: 5px; margin-bottom: 5px;
 }
 .jtbd-persona-label {
-  border-radius: var(--r-sm); padding: 12px 10px; border: 1px solid;
+  border-radius: var(--r); padding: 12px 14px; border: 1px solid;
   cursor: pointer; transition: opacity 0.15s;
   align-self: start;
 }
 .jtbd-persona-label:hover { opacity: 0.85; }
 .jpl-archetype { font-family: var(--f-mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; margin-bottom: 0; }
-.jpl-name { font-family: var(--f-disp); font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-.jpl-role { font-size: 11px; color: var(--text-d); margin-bottom: 4px; }
+.jpl-name { font-family: var(--f-sans); font-size: 14px; font-weight: 400; color: var(--text-s); margin-bottom: 6px; }
+.jpl-role { font-family: var(--f-disp); font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 4px; line-height: 1.2; }
 .jpl-area { font-family: var(--f-mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-d); margin-bottom: 5px; }
-.jpl-obj-wrap { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.jpl-obj-wrap { display: flex; align-items: center; gap: 6px; margin-top: 6px; white-space: nowrap; }
 .jpl-obj-lbl { font-size: 11px; color: var(--text-d); }
-.jpl-obj { display: inline-block; font-family: var(--f-mono); font-size: 10px; border: 1px solid; border-radius: 4px; padding: 2px 7px; }
+.jpl-obj { display: inline-block; font-family: var(--f-mono); font-size: 10px; border: 1px solid; border-radius: 4px; padding: 2px 7px; cursor: pointer; transition: opacity 0.15s; }
+.jpl-obj:hover { opacity: 0.75; }
 
 .jtbd-cell {
   background: var(--surface); border: 1px solid var(--border);
@@ -797,7 +818,7 @@ body {
         </div>
         <div class="lm-content-lower">
           <div class="lm-content-name">Semantic Layer</div>
-          <div class="lm-content-fw">Semantic Interaction Design</div>
+          <div class="lm-content-fw">Semantic Interaction Design + Ontological Object Definition</div>
           <div class="lm-content-desc">Let's start with the basic concepts.<br>What even is an event?<br>The underlying grammar: objects — actions — attributes.</div>
         </div>
       </div>
@@ -896,15 +917,7 @@ body {
   <div class="page-title">Strategy Layer</div>
   <div class="page-sub">North Star Framework</div>
 
-  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">A North Star metric is a single leading indicator that connects revenue increase with trackable user behavior that proves the customer is getting the core value from the product.
-
-<br><br>
-
-Momentus delivers value across three main lifecycle product areas, so we define one end-to-end metric that proves the platform is working as a whole, and one product area-level metric per stage that shows each link in the chain is carrying its weight.
-
-<br><br>
-
-If any product area isn't aligned to its North Star, the end-to-end metric drops — making alignment both a strategic compass and an early warning system.</div>
+  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">A North Star metric is a single leading indicator that connects revenue increase with trackable user behavior that proves the customer is getting the core value from the product.<br><br>Momentus delivers value across three main lifecycle product areas, so we define one end-to-end metric that proves the platform is working as a whole, and one product area-level metric per stage that shows each link in the chain is carrying its weight. If any product area isn't aligned to its North Star, the end-to-end metric drops — making alignment both a strategic compass and an early warning system.</div>
 
   <div class="sl" style="padding-top:20px;margin-bottom:10px">The Momentus Stars Align — explore the North Stars</div>
   <div class="chain" style="margin-bottom:28px;padding-bottom:20px" role="tablist" aria-label="North Star views">
@@ -1084,53 +1097,45 @@ If any product area isn't aligned to its North Star, the end-to-end metric drops
   <div class="page-title">Human Layer</div>
   <div class="page-sub">Ontological Persona Definition</div>
 
-  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">An ontological persona is not a demographic profile — it is a philosophical definition of who a person fundamentally is: the fixed conditions they carry, the dynamic states they move through, and the structural role they occupy within an organization.
-
-<br><br>
-
-Momentus serves three distinct people across the event lifecycle — a sales manager, an event coordinator, and an operations supervisor. Each one brings a different relationship to the event, a different definition of success, and a different set of jobs to be done.
-
-<br><br>
-
-Understanding who they are at this depth is what allows us to design for their reality, not just their workflow — making Momentus feel like it was built for them, not just used by them.</div>
+  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">An ontological persona definition is not a demographic profile — it is a philosophical breakdown of who a person fundamentally is: the fixed conditions that make up their identity, the dynamic states they move through, and the structural status or role they occupy within an organization.<br><br>Momentus serves three distinct people across the event lifecycle — a sales manager, an event coordinator, and an operations supervisor. Each one brings a different relationship to the event, a different definition of success, and a different set of jobs to be done. Understanding who they are at this depth is what allows us to design for their reality, not just their workflow — making Momentus feel like it was built for them, not just used by them.</div>
 
   <!-- OPERATIONAL CHAIN -->
   <div class="zo-chain">
-      <div class="zo-persona" id="zo-sharon" role="button" tabindex="0" aria-label="View Alex Smith persona detail" onclick="openPersonaModal('sharon')" style="background:var(--sharon-bg);border-color:var(--sharon-b)">
-        <div class="jpl-area">Sales</div>
-        <div class="jpl-name">Alex Smith</div>
+      <div class="zo-persona zp-sharon" id="zo-sharon" role="button" tabindex="0" aria-label="View Alex Smith persona detail" onclick="openPersonaModal('sharon')">
+        <div class="jpl-area" style="color:var(--sharon)">Sales</div>
         <div class="jpl-role">Sales Manager</div>
+        <div class="jpl-name">Alex Smith</div>
         <div class="jpl-archetype" style="color:var(--sharon)">The Dream Catcher</div>
         <div class="zo-tagline">"They decide what's worth making."</div>
         <div class="jpl-obj-wrap">
-          <span class="jpl-obj-lbl">main object:</span>
-          <span class="jpl-obj" style="color:var(--sharon);border-color:var(--sharon-b)">Event Booking</span>
+          <span class="jpl-obj-lbl">Primary Object:</span>
+          <span class="jpl-obj" style="color:var(--sharon);border-color:var(--sharon-b)" title="Go to Primary Object" onclick="goToPrimaryObject('booking', event)">Event Booking</span>
         </div>
         <div class="zo-hint">expand ↗</div>
       </div>
       <div class="zo-arrow">→</div>
-      <div class="zo-persona" id="zo-emilie" role="button" tabindex="0" aria-label="View Sam Evans persona detail" onclick="openPersonaModal('emilie')" style="background:var(--emilie-bg);border-color:var(--emilie-b)">
-        <div class="jpl-area">Planning</div>
-        <div class="jpl-name">Sam Evans</div>
+      <div class="zo-persona zp-emilie" id="zo-emilie" role="button" tabindex="0" aria-label="View Sam Evans persona detail" onclick="openPersonaModal('emilie')">
+        <div class="jpl-area" style="color:var(--emilie)">Planning</div>
         <div class="jpl-role">Event Coordinator</div>
+        <div class="jpl-name">Sam Evans</div>
         <div class="jpl-archetype" style="color:var(--emilie)">The Promise Keeper</div>
         <div class="zo-tagline">"They turn intent into instruction."</div>
         <div class="jpl-obj-wrap">
-          <span class="jpl-obj-lbl">main object:</span>
-          <span class="jpl-obj" style="color:var(--emilie);border-color:var(--emilie-b)">Event Plan</span>
+          <span class="jpl-obj-lbl">Primary Object:</span>
+          <span class="jpl-obj" style="color:var(--emilie);border-color:var(--emilie-b)" title="Go to Primary Object" onclick="goToPrimaryObject('planning', event)">Event Plan</span>
         </div>
         <div class="zo-hint">expand ↗</div>
       </div>
       <div class="zo-arrow">→</div>
-      <div class="zo-persona" id="zo-owen" role="button" tabindex="0" aria-label="View Jordan Olsen persona detail" onclick="openPersonaModal('owen')" style="background:var(--owen-bg);border-color:var(--owen-b)">
-        <div class="jpl-area">Operations</div>
-        <div class="jpl-name">Jordan Olsen</div>
+      <div class="zo-persona zp-owen" id="zo-owen" role="button" tabindex="0" aria-label="View Jordan Olsen persona detail" onclick="openPersonaModal('owen')">
+        <div class="jpl-area" style="color:var(--owen)">Operations</div>
         <div class="jpl-role">Operations Supervisor</div>
+        <div class="jpl-name">Jordan Olsen</div>
         <div class="jpl-archetype" style="color:var(--owen)">The Moment Maker</div>
         <div class="zo-tagline">"They make sure it actually happens."</div>
         <div class="jpl-obj-wrap">
-          <span class="jpl-obj-lbl">main object:</span>
-          <span class="jpl-obj" style="color:var(--owen);border-color:var(--owen-b)">Event Task</span>
+          <span class="jpl-obj-lbl">Primary Object:</span>
+          <span class="jpl-obj" style="color:var(--owen);border-color:var(--owen-b)" title="Go to Primary Object" onclick="goToPrimaryObject('operations', event)">Event Task</span>
         </div>
         <div class="zo-hint">expand ↗</div>
       </div>
@@ -1306,39 +1311,24 @@ Understanding who they are at this depth is what allows us to design for their r
 <section id="sec-grammar" class="section">
   <div class="page-eyebrow">Event Lifecycle Map</div>
   <div class="page-title">Semantic Layer</div>
-  <div class="page-sub">Semantic Interaction Design</div>
+  <div class="page-sub">Semantic Interaction Design + Ontological Object Definition</div>
 
-  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">Semantic interaction design is the practice of grounding a product's interface in the real-world concepts of its domain — defining the primary objects, the actions that can be performed on them, and the attributes that describe their state, before a single screen is designed.
+  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">Semantic interaction design is the practice of grounding a product's interface in the real-world concepts of its domain — defining the primary objects, the actions that can be performed on them, and the attributes that describe their state, before a single screen is designed.<br><br>Momentus operates across sales, planning, and operations — three product areas that share a common subject: the event. Establishing a shared conceptual grammar across these areas ensures that language, structure, and behavior are consistent, reducing cognitive load and integration friction for every persona. Without this foundation, each product area risks developing its own vocabulary and logic — creating silos that contradict each other and make the platform harder to learn, harder to use, and harder to build.</div>
 
-<br><br>
-
-Momentus operates across sales, planning, and operations — three product areas that share a common subject: the event. Establishing a shared conceptual grammar across these areas ensures that language, structure, and behavior are consistent, reducing cognitive load and integration friction for every persona.
-
-<br><br>
-
-Without this foundation, each product area risks developing its own vocabulary and logic — creating silos that contradict each other and make the platform harder to learn, harder to use, and harder to build.</div>
-
-  <!-- Attribute type legend -->
+  <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px">Event Lifecycle Primary Objects</div>
   <div class="product-row">
   <!-- PRODUCT 1: EVENT SALES -->
   <div class="product-block" id="pb-booking">
     <div class="ph ph-s" role="button" tabindex="0" aria-label="Expand Event Booking object detail" onclick="openObjectModal('booking')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('booking');}">
       <div>
-        <div class="ph-stage ph-s-c">Sales Primary Object</div>
+        <div class="ph-stage ph-s-c">Sales</div>
         <div class="ph-object">Event Booking</div>
-        <div class="grammar-line">
-          <span>noun</span><span class="sep">·</span><span class="val-s">Event Booking</span>
-          <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-s">Create</span>
-          <span class="sep">→</span><span class="dim">Product type</span>
-        </div>
-      </div>
-      <div class="ph-right">
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
       <div class="attr-col fixed-col">
-        <div class="attr-header fixed-h">Fixed <span class="sub">— identity, never changes</span></div>
+        <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Client / Account</div><div class="attr-note">who the booking belongs to</div></li>
           <li class="attr-item"><div class="attr-name">Event Type</div><div class="attr-note">conference, gala, meeting, concert…</div></li>
@@ -1350,7 +1340,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col dynamic-col">
-        <div class="attr-header dynamic-h">Dynamic <span class="sub">— state, changes through lifecycle</span></div>
+        <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Status</div><div class="attr-note">Inquiry → Tentative → Definite → Closed</div></li>
           <li class="attr-item"><div class="attr-name">Hold Priority</div><div class="attr-note">Tentative 1 / 2 / 3 — calendar rank</div></li>
@@ -1362,7 +1352,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col structural-col">
-        <div class="attr-header structural-h">Structural <span class="sub">— system position, authority</span></div>
+        <div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Assigned Sales Rep / Owner</div><div class="attr-note">accountable team member</div></li>
           <li class="attr-item"><div class="attr-name">Booking / Record ID</div><div class="attr-note">system-generated identifier</div></li>
@@ -1376,33 +1366,29 @@ Without this foundation, each product area risks developing its own vocabulary a
     <div class="actions-row">
       <div class="act-top">
         <div class="actions-lbl">Actions</div>
+        <div class="act-chips">
         <span class="act-chip act-secondary act-ss" data-desc="Brings a new Event Booking into existence within the system — capturing the client, dates, requested spaces, and revenue potential that define a sales opportunity." onclick="selectObjectAction(this)">Create</span>
         <span class="act-chip act-secondary act-ss" data-desc="Modifies the attributes of an existing Event Booking — such as its status, hold priority, contract state, deposit status, or estimated attendance — as the opportunity evolves." onclick="selectObjectAction(this)">Update</span>
-        <span class="act-chip act-destroy" data-desc="Permanently removes an Event Booking from the system, erasing the record and all of its associated history." onclick="selectObjectAction(this)">Delete</span>
+        <span class="act-chip act-secondary act-ss" data-desc="Permanently removes an Event Booking from the system, erasing the record and all of its associated history." onclick="selectObjectAction(this)">Delete</span>
+        </div>
       </div>
       <div class="act-desc"></div>
     </div>
   </div>
 
+  <div class="zo-arrow" style="align-self:center">→</div>
   <!-- PRODUCT 2: EVENT PLANNING -->
   <div class="product-block" id="pb-planning">
     <div class="ph ph-p" role="button" tabindex="0" aria-label="Expand Event Plan object detail" onclick="openObjectModal('planning')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('planning');}">
       <div>
-        <div class="ph-stage ph-p-c">Planning Primary Object</div>
+        <div class="ph-stage ph-p-c">Planning</div>
         <div class="ph-object">Event Plan</div>
-        <div class="grammar-line">
-          <span>noun</span><span class="sep">·</span><span class="val-p">Event Plan</span>
-          <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-p">Create</span>
-          <span class="sep">→</span><span class="dim">Product type</span>
-        </div>
-      </div>
-      <div class="ph-right">
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
       <div class="attr-col fixed-col">
-        <div class="attr-header fixed-h">Fixed <span class="sub">— identity, never changes</span></div>
+        <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Function Name / Type</div><div class="attr-note">breakfast, session, cocktail hour…</div></li>
           <li class="attr-item"><div class="attr-name">Parent Booking</div><div class="attr-note">the confirmed event this belongs to</div></li>
@@ -1413,7 +1399,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col dynamic-col">
-        <div class="attr-header dynamic-h">Dynamic <span class="sub">— state, changes through lifecycle</span></div>
+        <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Status</div><div class="attr-note">Draft → Detailed → Finalized → Ready → Closed</div></li>
           <li class="attr-item"><div class="attr-name">Detail Completion</div><div class="attr-note">F&amp;B, AV, layout, instructions — % done</div></li>
@@ -1425,7 +1411,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col structural-col">
-        <div class="attr-header structural-h">Structural <span class="sub">— system position, authority</span></div>
+        <div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Assigned Event Coordinator</div><div class="attr-note">responsible for detailing this function</div></li>
           <li class="attr-item"><div class="attr-name">BEO Number / Document ID</div><div class="attr-note">unique sequential identifier</div></li>
@@ -1439,33 +1425,29 @@ Without this foundation, each product area risks developing its own vocabulary a
     <div class="actions-row">
       <div class="act-top">
         <div class="actions-lbl">Actions</div>
+        <div class="act-chips">
         <span class="act-chip act-secondary act-ps" data-desc="Brings a new Event Plan into existence within the system — establishing the function details, room assignment, timeline, and setup requirements that will guide event delivery." onclick="selectObjectAction(this)">Create</span>
         <span class="act-chip act-secondary act-ps" data-desc="Modifies the attributes of an existing Event Plan — such as setup type, guaranteed covers, BEO publication status, or client approval state — as the event date approaches." onclick="selectObjectAction(this)">Update</span>
-        <span class="act-chip act-destroy" data-desc="Permanently removes an Event Plan from the system, erasing the function record and its distribution history." onclick="selectObjectAction(this)">Delete</span>
+        <span class="act-chip act-secondary act-ps" data-desc="Permanently removes an Event Plan from the system, erasing the function record and its distribution history." onclick="selectObjectAction(this)">Delete</span>
+        </div>
       </div>
       <div class="act-desc"></div>
     </div>
   </div>
 
+  <div class="zo-arrow" style="align-self:center">→</div>
   <!-- PRODUCT 3: EVENT OPERATIONS -->
   <div class="product-block" id="pb-operations">
     <div class="ph ph-o" role="button" tabindex="0" aria-label="Expand Event Task object detail" onclick="openObjectModal('operations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('operations');}">
       <div>
-        <div class="ph-stage ph-o-c">Operations Primary Object</div>
+        <div class="ph-stage ph-o-c">Operations</div>
         <div class="ph-object">Event Task</div>
-        <div class="grammar-line">
-          <span>noun</span><span class="sep">·</span><span class="val-o">Event Task</span>
-          <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-o">Create</span>
-          <span class="sep">→</span><span class="dim">Product type</span>
-        </div>
-      </div>
-      <div class="ph-right">
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
       <div class="attr-col fixed-col">
-        <div class="attr-header fixed-h">Fixed <span class="sub">— identity, never changes</span></div>
+        <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Task Name / Type</div><div class="attr-note">Setup, Breakdown, F&amp;B, AV, Security…</div></li>
           <li class="attr-item"><div class="attr-name">Linked Function / Booking</div><div class="attr-note">the event this task belongs to</div></li>
@@ -1476,7 +1458,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col dynamic-col">
-        <div class="attr-header dynamic-h">Dynamic <span class="sub">— state, changes through lifecycle</span></div>
+        <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Status</div><div class="attr-note">Pending → Assigned → In Progress → Complete → Verified</div></li>
           <li class="attr-item"><div class="attr-name">Priority</div><div class="attr-note">Urgent / High / Normal / Low</div></li>
@@ -1487,7 +1469,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col structural-col">
-        <div class="attr-header structural-h">Structural <span class="sub">— system position, authority</span></div>
+        <div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Assigned Crew / Staff</div><div class="attr-note">who is executing the task</div></li>
           <li class="attr-item"><div class="attr-name">Supervising Supervisor</div><div class="attr-note">accountable operations role</div></li>
@@ -1501,33 +1483,29 @@ Without this foundation, each product area risks developing its own vocabulary a
     <div class="actions-row">
       <div class="act-top">
         <div class="actions-lbl">Actions</div>
+        <div class="act-chips">
         <span class="act-chip act-secondary act-os" data-desc="Brings a new Event Task into existence within the system — defining the work to be completed, the crew responsible, and the execution window." onclick="selectObjectAction(this)">Create</span>
         <span class="act-chip act-secondary act-os" data-desc="Modifies the attributes of an existing Event Task — such as its status, priority, assigned crew, completion progress, or incident notes — as execution unfolds." onclick="selectObjectAction(this)">Update</span>
-        <span class="act-chip act-destroy" data-desc="Permanently removes an Event Task from the system, erasing the work order and its associated records." onclick="selectObjectAction(this)">Delete</span>
+        <span class="act-chip act-secondary act-os" data-desc="Permanently removes an Event Task from the system, erasing the work order and its associated records." onclick="selectObjectAction(this)">Delete</span>
+        </div>
       </div>
       <div class="act-desc"></div>
     </div>
   </div>
 
+  <div class="zo-arrow" style="align-self:center">→</div>
   <!-- PRODUCT 4: E3 EVENT (END-TO-END) -->
   <div class="product-block" id="pb-event">
     <div class="ph ph-e3" role="button" tabindex="0" aria-label="Expand Event object detail" onclick="openObjectModal('event')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('event');}">
       <div>
-        <div class="ph-stage ph-e3-c">Momentus End-to-End Primary Object</div>
+        <div class="ph-stage ph-e3-c">Momentus End-to-End</div>
         <div class="ph-object">Event</div>
-        <div class="grammar-line">
-          <span>noun</span><span class="sep">·</span><span class="val-e3">Event</span>
-          <span class="sep">→</span><span>verb</span><span class="sep">·</span><span class="val-e3">Execute</span>
-          <span class="sep">→</span><span class="dim">E3 type</span>
-        </div>
-      </div>
-      <div class="ph-right">
         <div class="ph-hint">expand ↗</div>
       </div>
     </div>
     <div class="attr-grid">
       <div class="attr-col fixed-col">
-        <div class="attr-header fixed-h">Fixed <span class="sub">— identity, never changes</span></div>
+        <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Client / Account</div><div class="attr-note">the organization hosting the event</div></li>
           <li class="attr-item"><div class="attr-name">Event Type</div><div class="attr-note">conference, gala, concert, meeting…</div></li>
@@ -1538,7 +1516,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col dynamic-col">
-        <div class="attr-header dynamic-h">Dynamic <span class="sub">— state, changes through lifecycle</span></div>
+        <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Overall Status</div><div class="attr-note">Prospect → Booked → Planning → Confirmed → Executing → Closed</div></li>
           <li class="attr-item"><div class="attr-name">Coverage Completeness</div><div class="attr-note">% of lifecycle managed in-platform</div></li>
@@ -1549,7 +1527,7 @@ Without this foundation, each product area risks developing its own vocabulary a
         </ul>
       </div>
       <div class="attr-col structural-col">
-        <div class="attr-header structural-h">Structural <span class="sub">— system position, authority</span></div>
+        <div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Event Master Record ID</div><div class="attr-note">top-level system identifier</div></li>
           <li class="attr-item"><div class="attr-name">Linked Booking Record(s)</div><div class="attr-note">all associated Event Booking objects</div></li>
@@ -1563,25 +1541,17 @@ Without this foundation, each product area risks developing its own vocabulary a
     <div class="actions-row">
       <div class="act-top">
         <div class="actions-lbl">Actions</div>
+        <div class="act-chips">
         <span class="act-chip act-secondary act-es" data-desc="Brings a new Event into existence within the system — establishing the top-level record that unifies all bookings, plans, and tasks under a single event lifecycle." onclick="selectObjectAction(this)">Create</span>
         <span class="act-chip act-secondary act-es" data-desc="Modifies the attributes of an existing Event — such as its overall status, execution health, revenue realization, or coverage completeness — as it moves through its lifecycle." onclick="selectObjectAction(this)">Update</span>
-        <span class="act-chip act-destroy" data-desc="Permanently removes an Event from the system, along with all linked booking, planning, and operations records." onclick="selectObjectAction(this)">Delete</span>
+        <span class="act-chip act-secondary act-es" data-desc="Permanently removes an Event from the system, along with all linked booking, planning, and operations records." onclick="selectObjectAction(this)">Delete</span>
+        </div>
       </div>
       <div class="act-desc"></div>
     </div>
   </div>
 
   </div><!-- /product-row -->
-
-  <!-- Principles -->
-  <div class="gt-principles">
-    <div class="gt-principles-header">Grammar Principles Applied — Rosenberg Semantic IxD + OPD</div>
-    <div class="gt-principles-grid">
-      <div class="gt-principle"><strong>Consistent Object Type.</strong> All three operational primary objects are Product type — the irreducible unit each product creates. Not People, not Money, not Institution. Per OPD Checkpoint 2, money is a lagging indicator; the object must be the leading signal closest to the human motivation.</div>
-      <div class="gt-principle"><strong>Consistent Core Action.</strong> Create is the primary action across all three operational products. This is the E3 structural insight: the North Star only completes when all three creation events happen inside Momentus. If a booking is logged outside the platform, a plan is detailed in Word, or work orders are printed — E3 fails at that link.</div>
-      <div class="gt-principle"><strong>Attribute Taxonomy follows OPD.</strong> Fixed / Dynamic / Structural mirrors the three-layer persona attribute structure grounded in Guarino's ontological commitment (fixed conditions), computational ontology (dynamic states), and Barry Smith's categories of being (structural status). Applied here to objects, not personas.</div>
-    </div>
-  </div>
 
   <div class="page-footer">
     <span>Momentus Event Lifecycle Map · Interaction Grammar</span>
@@ -1597,15 +1567,7 @@ Without this foundation, each product area risks developing its own vocabulary a
   <div class="page-title">Innovation Layer</div>
   <div class="page-sub">Jobs to Be Done Framework</div>
 
-  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">A job to be done is the underlying goal a person is trying to achieve in a given situation — not the feature they use, but the outcome they need. It is defined by the functional result they're after, the emotional state they want to reach, and the social signal they want to send.
-
-<br><br>
-
-Mapping the jobs of Momentus users reveals where the platform creates real value, where it falls short, and where the most meaningful innovation opportunities lie. Each job has phases, desired outcomes, and metrics that make it measurable — turning user needs into a structured foundation for product decisions.
-
-<br><br>
-
-Features built without a job to be done are guesses. Features built against a validated job are investments — and this layer is what separates one from the other.</div>
+  <div class="ov-hero-body" style="max-width:100%;margin-bottom:27px">A job to be done is the underlying goal a person is trying to achieve in a given situation — not the feature they use, but the outcome they need. It is defined by the functional result they're after, the emotional state they want to reach, and the social signal they want to send.<br><br>Mapping the jobs of Momentus users reveals where the platform creates real value, where it falls short, and where the most meaningful innovation opportunities lie. Each job has phases, desired outcomes, and metrics that make it measurable — turning user needs into a structured foundation for product decisions. Features built without a job to be done are guesses. Features built against a validated job are investments — and this layer is what separates one from the other.</div>
 
   <div id="jtbd-wrap">
     <div id="jtbd-grid"><!-- built by JS --></div>
@@ -1647,9 +1609,9 @@ const PERSONAS_DETAIL = {
     product: 'Event Sales',
     archetype: 'The Dream Catcher',
     role: 'Alex Smith \u00b7 Sales Manager',
-    quote: '\u201cAre we meeting the trend? Beating it? Behind it?\u201d',
+    quote: '\u201cThey decide what\u2019s worth making.\u201d',
     quoteSrc: 'Alex Smith \u00b7 Convention Center',
-    object: 'Event Booking', objClass: 'obj-sharon',
+    object: 'Event Booking', objId: 'booking', objClass: 'obj-sharon',
     fixed: [
       'Analytical, competitive, and relationship-driven',
       'Background in hospitality, sales, or event industry',
@@ -1673,9 +1635,9 @@ const PERSONAS_DETAIL = {
     product: 'Event Planning',
     archetype: 'The Promise Keeper',
     role: 'Sam Evans \u00b7 Event Coordinator',
-    quote: '\u201cI need to make sure every detail is confirmed before I send out the BEO.\u201d',
+    quote: '\u201cThey turn intent into instruction.\u201d',
     quoteSrc: 'Sam Evans \u00b7 Hotel Convention Team',
-    object: 'Event Plan', objClass: 'obj-emilie',
+    object: 'Event Plan', objId: 'planning', objClass: 'obj-emilie',
     fixed: [
       'Detail-oriented, methodical, and client-focused',
       'Background in event coordination, hospitality, or F&amp;B management',
@@ -1699,9 +1661,9 @@ const PERSONAS_DETAIL = {
     product: 'Event Operations',
     archetype: 'The Moment Maker',
     role: 'Jordan Olsen \u00b7 Operations Supervisor',
-    quote: '\u201cWe don\u2019t really have a section where people tick off that they have done the event set up.\u201d',
+    quote: '\u201cThey make sure it actually happens.\u201d',
     quoteSrc: 'Jordan Olsen \u00b7 Convention Center Operations',
-    object: 'Event Task', objClass: 'obj-owen',
+    object: 'Event Task', objId: 'operations', objClass: 'obj-owen',
     fixed: [
       'Execution-driven, calm under pressure, crew-focused',
       'Background in facilities management, hospitality operations, or event logistics',
@@ -1729,46 +1691,57 @@ function openPersonaModal(pId) {
   const b = `var(${d.border})`;
 
   const order = ['sharon','emilie','owen'];
+  const stageLabels = { sharon: 'Sales', emilie: 'Planning', owen: 'Operations' };
   const dots = order.map((id, i) => {
     const dotColor = id === pId ? `var(${PERSONAS_DETAIL[id].color})` : 'var(--border)';
-    return `<div class="zi-ch-dot" style="background:${dotColor}"></div>${i < 2 ? '<div class="zi-ch-line"></div>' : ''}`;
-  }).join('') + `<svg width="10" height="10" viewBox="0 0 36 36" fill="none" style="flex-shrink:0" aria-hidden="true" focusable="false"><defs><linearGradient id="mgpmod" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#b266e4"/><stop offset="100%" stop-color="#674ee7"/></linearGradient></defs><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6" transform="rotate(60 18 18)"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6" transform="rotate(120 18 18)"/><rect x="13" y="13" width="10" height="10" rx="1.5" fill="#0d0f14"/></svg>`;
+    const labelColor = id === pId ? `var(${PERSONAS_DETAIL[id].color})` : 'var(--text-d)';
+    const node = `<div style="display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0">
+      <div class="zi-ch-dot" style="background:${dotColor}"></div>
+      <div style="font-family:var(--f-mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:${labelColor}">${stageLabels[id]}</div>
+    </div>`;
+    return node + (i < 2 ? '<div class="zi-ch-line" style="margin-top:3px"></div>' : '');
+  }).join('') + `<div style="display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0;padding-left:8px"><svg width="10" height="10" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false"><defs><linearGradient id="mgpmod" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#b266e4"/><stop offset="100%" stop-color="#674ee7"/></linearGradient></defs><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6" transform="rotate(60 18 18)"/><rect x="16" y="2" width="4" height="32" rx="2" fill="url(#mgpmod)" opacity="0.6" transform="rotate(120 18 18)"/><rect x="13" y="13" width="10" height="10" rx="1.5" fill="#0d0f14"/></svg></div>`;
+
+  const area = d.product.replace('Event ', '');
+  const [personaName, jobTitle] = d.role.split(' \u00b7 ');
 
   document.getElementById('persona-modal').classList.add('open');
   document.getElementById('persona-detail').innerHTML = `
-    <div class="zi-card" style="border-color:${b};position:relative">
-      <div class="zi-bar" style="background:${c}"></div>
-      <button class="jd-close" onclick="closePersonaModal()" style="position:absolute;top:14px;right:14px;z-index:1">\u2715</button>
-      <div class="zi-top">
-        <div class="zi-product">${d.product}</div>
-        <div class="zi-archetype">${d.archetype}</div>
-        <div class="zi-role">${d.role}</div>
-      </div>
-      <div class="zi-quote">
-        <div class="zi-quote-text">${d.quote}</div>
-        <div class="zi-quote-src">${d.quoteSrc}</div>
-      </div>
-      <div class="zi-attrs">
-        <div class="zi-attr-block">
-          <div class="zi-attr-label lbl-fixed">Fixed Conditions</div>
-          ${d.fixed.map(x => `<div class="zi-attr-item">${x}</div>`).join('')}
+    <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid ${b}">
+      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+        <div>
+          <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Main Persona</div>
+          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px">${jobTitle}</div>
+          <div style="font-size:13px;color:var(--text-s)">${personaName} \u2014 ${d.archetype}</div>
         </div>
-        <div class="zi-attr-block">
-          <div class="zi-attr-label lbl-dynamic">Dynamic States</div>
-          ${d.dynamic.map(x => `<div class="zi-attr-item">${x}</div>`).join('')}
-        </div>
-        <div class="zi-attr-block">
-          <div class="zi-attr-label lbl-struct">Structural Status</div>
-          ${d.structural.map(x => `<div class="zi-attr-item">${x}</div>`).join('')}
+        <button class="jd-close" onclick="closePersonaModal()">\u2715</button>
+      </div>
+      <div style="padding:14px 20px;border-top:1px solid var(--border);font-size:14px;font-style:italic;color:var(--text-s)">${d.quote}</div>
+      <div style="padding:12px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);border-top:1px solid var(--border)">Persona Attributes</div>
+      <div style="padding:0 20px 8px">
+        <div class="attr-grid" style="display:grid">
+          <div class="attr-col fixed-col">
+            <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
+            <ul class="attr-list">${d.fixed.map(x => `<li class="attr-item"><div class="attr-name">${x}</div></li>`).join('')}</ul>
+          </div>
+          <div class="attr-col dynamic-col">
+            <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
+            <ul class="attr-list">${d.dynamic.map(x => `<li class="attr-item"><div class="attr-name">${x}</div></li>`).join('')}</ul>
+          </div>
+          <div class="attr-col structural-col">
+            <div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div>
+            <ul class="attr-list">${d.structural.map(x => `<li class="attr-item"><div class="attr-name">${x}</div></li>`).join('')}</ul>
+          </div>
         </div>
       </div>
       <div class="zi-grammar">
-        <div class="zi-grammar-label">Interaction grammar</div>
-        <div class="zi-grammar-pills">
-          ${d.grammarPills.map((p, i) => `<span class="g-pill">${p}</span>${i < d.grammarPills.length - 1 ? '<span class="g-sep">\u00b7</span>' : ''}`).join('')}
+        <div style="padding:12px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Semantic Layer</div>
+        <div class="jpl-obj-wrap" style="padding:0 20px 14px">
+          <span class="jpl-obj-lbl">Primary Object:</span>
+          <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${d.objId}', event)">${d.object}</span>
         </div>
-        <div class="zi-interaction">${d.interaction}</div>
-        <div class="zi-chain-track" style="margin-top:10px">${dots}</div>
+        <div style="padding:12px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Event Lifecycle Stage</div>
+        <div class="zi-chain-track" style="align-items:flex-start;padding:12px 20px 18px">${dots}</div>
       </div>
     </div>`;
 }
@@ -1782,6 +1755,55 @@ function goToPersona(personaId) {
   const isOnPersonas = document.getElementById('sec-personas').classList.contains('active');
   navigate('personas');
   setTimeout(() => openPersonaModal(personaId), isOnPersonas ? 0 : 50);
+}
+
+function goToPrimaryObject(objId, event) {
+  event.stopPropagation();
+  closePersonaModal();
+  const isOnGrammar = document.getElementById('sec-grammar').classList.contains('active');
+  navigate('grammar');
+  setTimeout(() => openObjectModal(objId), isOnGrammar ? 0 : 50);
+}
+
+/* ── MAIN JOB MODAL (JTBD Map) ── */
+function openMainJobModal(pId) {
+  const p = PERSONAS_J.find(x => x.id === pId);
+  const c = `var(${p.color})`;
+  const bg = `var(${p.bgColor})`;
+  const b = `var(${p.border})`;
+  const area = p.product.replace('Event ', '');
+  document.getElementById('main-job-modal').classList.add('open');
+  document.getElementById('main-job-detail').innerHTML = `
+    <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid ${b}">
+      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+        <div>
+          <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Main Job</div>
+          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px">${p.mainAction}</div>
+          <div style="font-size:13px;color:var(--text-s)">${p.name} \u00b7 ${p.role}</div>
+        </div>
+        <button class="jd-close" onclick="closeMainJobModal()">\u2715</button>
+      </div>
+      <div style="padding:12px 20px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Jobs to Be Done Statement</div>
+      <div style="padding:0 20px 20px;display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px">
+          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:6px">When</div>
+          <div style="font-size:14px;color:var(--text);line-height:1.65">${p.jtbd.when}</div>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px">
+          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:6px">I want to</div>
+          <div style="font-size:14px;color:var(--text);line-height:1.65">${p.jtbd.want}</div>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px">
+          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:6px">So I can</div>
+          <div style="font-size:14px;color:var(--text);line-height:1.65">${p.jtbd.soCan}</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function closeMainJobModal() {
+  document.getElementById('main-job-modal').classList.remove('open');
+  document.getElementById('main-job-detail').innerHTML = '';
 }
 
 /* ── OBJECT MODAL (Semantic Layer) ── */
@@ -1798,6 +1820,8 @@ function openObjectModal(objId) {
   ph.style.cursor = 'default';
   const hint = ph.querySelector('.ph-hint');
   if (hint) hint.remove();
+  const stage = ph.querySelector('.ph-stage');
+  if (stage) stage.textContent = stage.textContent + ' Primary Object';
 
   const closeBtn = document.createElement('button');
   closeBtn.className = 'jd-close';
@@ -1810,25 +1834,26 @@ function openObjectModal(objId) {
   grid.style.display = 'grid';
   actions.style.display = 'flex';
 
-  const legend = document.createElement('div');
-  legend.className = 'gt-legend';
-  legend.style.cssText = 'padding:12px 20px;border-top:1px solid var(--border);flex-direction:column;gap:8px';
-  legend.innerHTML = `
-    <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:10px">Ontological Attribute Definition</div>
-    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--fixed-c)"></div><span><strong style="color:var(--fixed-c)">Fixed Conditions</strong> — Identity descriptors. Set once, never changed.</span></div>
-    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--dynamic-c)"></div><span><strong style="color:var(--dynamic-c)">Dynamic States</strong> — State descriptors. Change through the object lifecycle.</span></div>
-    <div class="gt-legend-item"><div class="gt-legend-dot" style="background:var(--struct-c)"></div><span><strong style="color:var(--struct-c)">Structural Status</strong> — System position. Authority, assignment, record identity.</span></div>`;
+  const attrHeader = document.createElement('div');
+  attrHeader.style.cssText = 'padding:12px 20px 12px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);border-top:1px solid var(--border)';
+  attrHeader.textContent = 'Object Attributes';
+
+  const gridWrapper = document.createElement('div');
+  gridWrapper.style.cssText = 'padding:0 20px 8px';
+  gridWrapper.appendChild(grid);
 
   const wrap = document.createElement('div');
   wrap.style.cssText = 'border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--border)';
   wrap.appendChild(ph);
-  wrap.appendChild(grid);
-  wrap.appendChild(legend);
+  wrap.appendChild(attrHeader);
+  wrap.appendChild(gridWrapper);
   wrap.appendChild(actions);
 
   const detail = document.getElementById('object-detail');
   detail.innerHTML = '';
   detail.appendChild(wrap);
+  const firstChip = wrap.querySelector('.act-chip');
+  if (firstChip) selectObjectAction(firstChip);
   document.getElementById('object-modal').classList.add('open');
 }
 
@@ -1886,9 +1911,9 @@ const STAGES = [
 ];
 
 const PERSONAS_J = [
-  { id:'sharon',  name:'Alex Smith',    role:'Sales Manager',                    archetype:'The Dream Catcher', product:'Event Sales',       object:'Event Booking',       job:'Book high-value events that maximize revenue and calendar utilization for the venue', color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
-  { id:'emilie',  name:'Sam Evans',    role:'Event Coordinator',                archetype:'The Promise Keeper',    product:'Event Planning',     object:'Event Plan',      job:'Plan and coordinate every detail of a committed event so it can be delivered as promised', color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
-  { id:'owen',    name:'Jordan Olsen',      role:'Operations Supervisor',            archetype:'The Moment Maker',      product:'Event Operations',   object:'Event Task',          job:'Execute all operational tasks required to set up and run an event flawlessly on the day', color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
+  { id:'sharon',  name:'Alex Smith',   role:'Sales Manager',         mainAction:'Secure Event Booking', archetype:'The Dream Catcher',  product:'Event Sales',      object:'Event Booking', objId:'booking',    job:'Book high-value events that maximize revenue and calendar utilization for the venue',                                            jtbd:{ when:'a high-value lead enters my pipeline',              want:'evaluate, propose, and contract the booking entirely inside Momentus',           soCan:'maximize revenue and calendar utilization without losing deals to slower, fragmented workflows' },             color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
+  { id:'emilie',  name:'Sam Evans',   role:'Event Coordinator',      mainAction:'Detail Event Plan',    archetype:'The Promise Keeper', product:'Event Planning',   object:'Event Plan',   objId:'planning',   job:'Plan and coordinate every detail of a committed event so it can be delivered as promised',                                        jtbd:{ when:'a confirmed booking is handed off from sales',       want:'detail, approve, and distribute a complete BEO inside Momentus',               soCan:'ensure every department has exactly what they need to deliver the event as promised' },                       color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
+  { id:'owen',    name:'Jordan Olsen', role:'Operations Supervisor',  mainAction:'Execute Event Task',   archetype:'The Moment Maker',   product:'Event Operations', object:'Event Task',   objId:'operations', job:'Execute all operational tasks required to set up and run an event flawlessly on the day',                                        jtbd:{ when:'the finalized BEO arrives',                          want:'assign, track, and close all operational tasks inside Momentus',                soCan:'run a flawless event without relying on radio calls, paper work orders, or verbal handoffs' },                color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
 ];
 
 const SHORT = {
@@ -2079,13 +2104,13 @@ let jtbdSelected = null;
 
 function buildJTBDGrid() {
   const grid = document.getElementById('jtbd-grid');
-  const colTemplate = '200px repeat(8, minmax(0,1fr))';
+  const colTemplate = '240px repeat(8, minmax(0,1fr))';
 
   let html = '';
 
   /* Stage header row */
   html += `<div style="display:grid;grid-template-columns:${colTemplate};gap:5px;margin-bottom:5px">`;
-  html += `<div class="jtbd-corner"><span class="jtbd-corner-lbl">persona / stage</span></div>`;
+  html += `<div class="jtbd-corner"><span class="jtbd-corner-lbl">Main Job / Steps</span></div>`;
   STAGES.forEach(s => {
     html += `<div class="jtbd-stage-cell">
       <div class="stage-num">${s.num}</div>
@@ -2103,14 +2128,16 @@ function buildJTBDGrid() {
     html += `<div style="display:grid;grid-template-columns:${colTemplate};gap:5px;margin-bottom:5px">`;
 
     /* Persona label cell */
-    html += `<div class="jtbd-persona-label" role="button" tabindex="0" aria-label="View ${p.archetype} persona" style="background:${bg};border-color:${b}" onclick="goToPersona('${p.id}')">
-      <div class="jpl-area">${p.product.replace('Event ', '')}</div>
-      <div class="jpl-name">${p.name}</div>
-      <div class="jpl-role">${p.role}</div>
-      <div class="jpl-archetype" style="color:${c}">${p.archetype}</div>
+    html += `<div class="jtbd-persona-label" role="button" tabindex="0" aria-label="View main job: ${p.mainAction}" style="background:${bg};border:1px solid ${b};border-left:3px solid ${c}" onclick="openMainJobModal('${p.id}')">
+      <div class="jpl-area" style="color:${c}">${p.product.replace('Event ', '')}</div>
+      <div class="jpl-role">${p.mainAction}</div>
       <div class="jpl-obj-wrap">
-        <span class="jpl-obj-lbl">main object:</span>
-        <span class="jpl-obj" style="color:${c};border-color:${b}">${p.object}</span>
+        <span class="jpl-obj-lbl">Main Persona:</span>
+        <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Persona" onclick="goToPersona('${p.id}');event.stopPropagation()">${p.role}</span>
+      </div>
+      <div class="jpl-obj-wrap">
+        <span class="jpl-obj-lbl">Primary Object:</span>
+        <span class="jpl-obj" style="color:${c};border-color:${b}" title="Go to Primary Object" onclick="goToPrimaryObject('${p.objId}', event)">${p.object}</span>
       </div>
     </div>`;
 
@@ -2256,6 +2283,12 @@ buildJTBDGrid();
 <div id="persona-modal" class="persona-modal-overlay" role="dialog" aria-modal="true" aria-label="Persona detail" onclick="closePersonaModal()">
   <div class="persona-modal-box" onclick="event.stopPropagation()">
     <div id="persona-detail"></div>
+  </div>
+</div>
+
+<div id="main-job-modal" class="main-job-modal-overlay" role="dialog" aria-modal="true" aria-label="Main job detail" onclick="closeMainJobModal()">
+  <div class="main-job-modal-box" onclick="event.stopPropagation()">
+    <div id="main-job-detail"></div>
   </div>
 </div>
 </body>
