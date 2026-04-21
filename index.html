@@ -785,15 +785,35 @@ body {
 /* Suppress focus ring on mouse click, keep for keyboard */
 :focus:not(:focus-visible) { outline: none; }
 
-/* ── VIEW TOGGLE ── */
-.view-toggle-btn {
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-  width: 100%; margin-top: 8px; background: none; border: 1px solid var(--border);
-  border-radius: var(--r-sm); color: var(--text-d); cursor: pointer;
-  padding: 7px 10px; font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.5px;
-  transition: border-color 0.15s, color 0.15s;
+/* ── VIEW SWITCHER ── */
+.view-switcher {
+  display: inline-flex;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: 3px; gap: 2px;
 }
-.view-toggle-btn:hover { border-color: var(--bhi); color: var(--text-s); }
+.vs-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 30px; height: 26px; border-radius: 4px; border: none;
+  cursor: pointer; background: none; color: var(--text-d);
+  transition: background 0.15s, color 0.15s; position: relative;
+}
+.vs-btn:hover { color: var(--text-s); }
+.vs-btn.active {
+  background: var(--surface2); color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.vs-btn::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 7px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface2); border: 1px solid var(--bhi);
+  border-radius: 4px; padding: 4px 9px;
+  font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.3px;
+  color: var(--text-s); white-space: nowrap;
+  pointer-events: none; opacity: 0;
+  transition: opacity 0.15s; z-index: 200;
+}
+.vs-btn:hover::after { opacity: 1; }
 
 /* ── STAGES OVERVIEW DIAGRAM ── */
 .lm-stages-flow { max-width: 820px; }
@@ -912,10 +932,14 @@ body {
     </button>
   </nav>
 
-  <button class="view-toggle-btn" id="view-toggle-btn" onclick="toggleView()">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4-4 4 4M7 5v14M21 15l-4 4-4-4m4 4V5"/></svg>
-    Stages View
-  </button>
+  <div class="view-switcher" style="margin-top:8px">
+    <button class="vs-btn active" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
+    </button>
+    <button class="vs-btn" data-view="stages" data-tip="Stages View" onclick="switchToView('stages')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="3" width="5" height="18" rx="0.75"/><rect x="9.5" y="3" width="5" height="18" rx="0.75"/><rect x="17" y="3" width="5" height="18" rx="0.75"/></svg>
+    </button>
+  </div>
 
   <div class="sb-legend">
     <div class="sb-legend-label">Map key</div>
@@ -941,10 +965,14 @@ body {
       <div class="page-title">Event Lifecycle Map</div>
       <div class="page-sub" style="margin-bottom:0">A human-centered, product-agnostic view of the full event lifecycle — who does what, why it matters, and where Momentus creates value.</div>
     </div>
-    <button class="view-toggle-btn" style="width:auto;margin-top:32px;flex-shrink:0" onclick="toggleView()">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4-4 4 4M7 5v14M21 15l-4 4-4-4m4 4V5"/></svg>
-      Stages View
-    </button>
+    <div class="view-switcher" style="margin-top:32px;flex-shrink:0">
+      <button class="vs-btn active" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
+      </button>
+      <button class="vs-btn" data-view="stages" data-tip="Stages View" onclick="switchToView('stages')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="3" width="5" height="18" rx="0.75"/><rect x="9.5" y="3" width="5" height="18" rx="0.75"/><rect x="17" y="3" width="5" height="18" rx="0.75"/></svg>
+      </button>
+    </div>
   </div>
 
   <div class="lm-wrap">
@@ -1756,10 +1784,14 @@ body {
       <div class="page-title">Event Lifecycle Stages</div>
       <div class="page-sub" style="margin-bottom:0">The event lifecycle through the lens of each product stage — Sales, Planning, Operations, and the End-to-End experience.</div>
     </div>
-    <button class="view-toggle-btn" style="width:auto;margin-top:32px;flex-shrink:0" onclick="toggleView()">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4-4 4 4M7 5v14M21 15l-4 4-4-4m4 4V5"/></svg>
-      Layers View
-    </button>
+    <div class="view-switcher" style="margin-top:32px;flex-shrink:0">
+      <button class="vs-btn" data-view="layers" data-tip="Layers View" onclick="switchToView('layers')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="4" width="20" height="3.5" rx="0.75"/><rect x="2" y="10.25" width="20" height="3.5" rx="0.75"/><rect x="2" y="16.5" width="20" height="3.5" rx="0.75"/></svg>
+      </button>
+      <button class="vs-btn active" data-view="stages" data-tip="Stages View" onclick="switchToView('stages')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2" y="3" width="5" height="18" rx="0.75"/><rect x="9.5" y="3" width="5" height="18" rx="0.75"/><rect x="17" y="3" width="5" height="18" rx="0.75"/></svg>
+      </button>
+    </div>
   </div>
   <div id="stages-overview-diagram"><!-- built by JS --></div>
   <div class="page-footer">
@@ -1813,19 +1845,20 @@ function goHome() {
   navigate(currentView === 'layers' ? 'overview' : 'stages-overview');
 }
 
-function toggleView() {
-  currentView = currentView === 'layers' ? 'stages' : 'layers';
+function switchToView(view) {
+  if (currentView === view) return;
+  currentView = view;
   const isLayers = currentView === 'layers';
   document.getElementById('nav-layers').style.display = isLayers ? '' : 'none';
   document.getElementById('nav-stages').style.display = isLayers ? 'none' : '';
   document.getElementById('sb-view-label').textContent = isLayers ? 'Layers' : 'Stages';
-  const toggleLabel = isLayers ? 'Stages View' : 'Layers View';
-  const toggleSVG = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l4-4 4 4M7 5v14M21 15l-4 4-4-4m4 4V5"/></svg>`;
-  document.querySelectorAll('.view-toggle-btn').forEach(btn => {
-    btn.innerHTML = toggleSVG + ' ' + toggleLabel;
+  document.querySelectorAll('.vs-btn[data-view]').forEach(b => {
+    b.classList.toggle('active', b.dataset.view === currentView);
   });
   navigate(isLayers ? 'overview' : 'stages-overview');
 }
+
+function toggleView() { switchToView(currentView === 'layers' ? 'stages' : 'layers'); }
 
 /* ── NAVIGATION ── */
 function navigate(sectionId) {
