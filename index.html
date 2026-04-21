@@ -2285,16 +2285,20 @@ function renderJTBDDetail(pId, sId) {
             </div>
           </div>
         </div>
-        <!-- Bottom row: step details vertical -->
-        <div style="border-top:1px solid ${b};padding-top:10px">
-          <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:4px">${s.num} · Step</div>
-          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:3px;display:flex;align-items:center;gap:8px">${_ico(18,STAGE_PATHS[sId])}${s.label}</div>
-          <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
+        <!-- Bottom row: step name left + descriptions right -->
+        <div style="border-top:1px solid ${b};padding-top:10px;display:flex;align-items:flex-start;gap:20px">
+          <div style="flex-shrink:0">
+            <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:4px">${s.num} · Step</div>
+            <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:3px;display:flex;align-items:center;gap:8px">${_ico(18,STAGE_PATHS[sId])}${s.label}</div>
+            <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
+          </div>
+          <div style="flex:1;min-width:0;border-left:1px solid ${b};padding-left:16px">
+            <div class="jd-step" style="margin-bottom:5px">${d.step}</div>
+            <div class="jd-job">Functional job: <span style="color:var(--text-d)">${p.job}</span></div>
+          </div>
         </div>
       </div>
       <div style="padding:16px 20px 20px">
-        <div class="jd-step" style="margin-bottom:5px">${d.step}</div>
-        <div class="jd-job" style="margin-bottom:14px">Functional job: <span style="color:var(--text-d)">${p.job}</span></div>
         <div class="jd-odi-label">Desired outcome statements — ODI format · 5 of ~50–150 · Ulwick (2018) p.94</div>
         <div class="jd-outcomes">${outcomesHTML}</div>
         <div class="jd-legend">
