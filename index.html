@@ -2733,11 +2733,11 @@ function renderStagePage(pId) {
 
   const g = STAGE_GRADS[pId];
 
-  const _lbl = 'font-family:var(--f-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:5px';
-  const _val = `font-family:var(--f-disp);font-size:18px;font-weight:800;color:${c};line-height:1.2;display:block`;
+  const _lbl = 'font-family:var(--f-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);display:block;margin-bottom:4px';
+  const _val = `font-size:13px;color:${c};display:block;line-height:1.5`;
 
   const semanticDesc = `<span style="${_lbl}">${area} Primary Object:</span><span style="${_val}">${pd.object}</span>`;
-  const humanDesc    = `<span style="${_lbl}">${area} Primary Persona:</span><span style="${_val}">${jobTitle}</span><span style="display:block;font-size:12px;color:rgba(255,255,255,0.55);margin-top:3px">${personaName} · ${pd.archetype}</span><span style="display:block;font-size:12px;font-style:italic;color:rgba(255,255,255,0.5);border-left:2px solid ${c};padding-left:8px;margin-top:8px;line-height:1.5">${pd.quote}</span>`;
+  const humanDesc    = `<span style="${_lbl}">${area} Primary Persona:</span><span style="${_val}">${jobTitle}</span><span style="display:block;font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px">${personaName} · ${pd.archetype}</span><span style="display:block;font-size:12px;font-style:italic;color:rgba(255,255,255,0.45);border-left:2px solid ${c};padding-left:8px;margin-top:8px;line-height:1.5">${pd.quote}</span>`;
   const innovDesc    = `<span style="${_lbl}">${area} Primary Job:</span><span style="${_val}">${pj.mainAction}</span>`;
   const stratDesc    = `<span style="${_lbl}">${area} North Star:</span><span style="${_val}">${nsName || '—'}</span>`;
 
@@ -2771,12 +2771,11 @@ function renderStageE2E(el) {
   const nsName = nsMetricEl ? nsMetricEl.textContent.replace(nsAbbr,'').trim() : '';
   const nsDef  = sc ? (sc.querySelector('.star-def') ? sc.querySelector('.star-def').textContent.trim() : '') : '';
 
-  const _lbl = 'font-family:var(--f-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:5px';
-  const _val = `font-family:var(--f-disp);font-size:18px;font-weight:800;color:${c};line-height:1.2;display:block`;
-  const _val3 = 'font-family:var(--f-disp);font-size:15px;font-weight:800;line-height:1.3';
+  const _lbl = 'font-family:var(--f-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);display:block;margin-bottom:4px';
+  const _val = `font-size:13px;color:${c};display:block;line-height:1.5`;
 
   const semanticDesc = `<span style="${_lbl}">End-to-End Primary Object:</span><span style="${_val}">Event</span>`;
-  const humanDesc    = `<span style="${_lbl}">End-to-End Personas:</span><span style="display:flex;gap:8px;flex-wrap:wrap;align-items:baseline"><span style="${_val3};color:var(--sharon)">Sales Manager</span><span style="color:rgba(255,255,255,0.25)">·</span><span style="${_val3};color:var(--emilie)">Event Coordinator</span><span style="color:rgba(255,255,255,0.25)">·</span><span style="${_val3};color:var(--owen)">Operations Supervisor</span></span>`;
+  const humanDesc    = `<span style="${_lbl}">End-to-End Personas:</span><span style="font-size:13px;line-height:1.6;display:block"><span style="color:var(--sharon)">Sales Manager</span><span style="color:rgba(255,255,255,0.25)"> · </span><span style="color:var(--emilie)">Event Coordinator</span><span style="color:rgba(255,255,255,0.25)"> · </span><span style="color:var(--owen)">Operations Supervisor</span></span>`;
   const innovDesc    = `<span style="${_lbl}">End-to-End Job Map:</span><span style="${_val}">3 Personas × 8 Lifecycle Steps</span>`;
   const stratDesc    = `<span style="${_lbl}">End-to-End North Star:</span><span style="${_val}">${nsName || '—'}</span>`;
 
