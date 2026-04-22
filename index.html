@@ -2657,7 +2657,7 @@ function renderStagesOverview() {
 }
 
 /* ── STAGE PAGE LAYER ROW BUILDER ── */
-function buildLmRow(num, bg, depth, icon, name, fw, desc, onclick) {
+function buildLmRow(num, bg, depth, icon, name, fw, desc, onclick, showDepth = false) {
   return `<div class="lm-row" style="--lp-bg:${bg};--lp-depth:${depth};--lp-w:295px;--lp-h:72px"
     role="button" tabindex="0"
     aria-label="Open ${name}"
@@ -2666,7 +2666,7 @@ function buildLmRow(num, bg, depth, icon, name, fw, desc, onclick) {
     <div class="lm-content-num">${num}</div>
     <div class="lm-slab-wrap">
       <div class="lm-slab">${icon}</div>
-      <div class="lm-slab-depth"></div>
+      ${showDepth ? '<div class="lm-slab-depth"></div>' : ''}
     </div>
     <div class="lm-content-lower">
       <div class="lm-content-name">${name}</div>
@@ -2750,10 +2750,10 @@ function renderStagePage(pId) {
   </div>`;
 
   const stackHTML = [
-    buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, `openObjectModal('${pd.objId}')`),
-    buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition',                              humanDesc,    `openPersonaModal('${pId}')`),
-    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework',                                   innovDesc,    `openMainJobModal('${pId}')`),
-    buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    `openNsModal('${pId}')`),
+    buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, `openObjectModal('${pd.objId}')`,  false),
+    buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition',                              humanDesc,    `openPersonaModal('${pId}')`,       false),
+    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework',                                   innovDesc,    `openMainJobModal('${pId}')`,       false),
+    buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    `openNsModal('${pId}')`,            true),
   ].join('');
 
   el.innerHTML = `<div class="lm-wrap" style="margin-top:0"><div class="lm-stack">${stackHTML}</div>${specHTML}</div>`;
@@ -2788,10 +2788,10 @@ function renderStageE2E(el) {
   </div>`;
 
   const stackHTML = [
-    buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, "openObjectModal('event')"),
-    buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition · Three Roles',                humanDesc,    "navigate('personas')"),
-    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework · All Three Personas',              innovDesc,    "navigate('jtbd')"),
-    buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    "openNsModal('e3')"),
+    buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, "openObjectModal('event')",  false),
+    buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition · Three Roles',                humanDesc,    "navigate('personas')",      false),
+    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework · All Three Personas',              innovDesc,    "navigate('jtbd')",          false),
+    buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    "openNsModal('e3')",         true),
   ].join('');
 
   el.innerHTML = `<div class="lm-wrap" style="margin-top:0"><div class="lm-stack">${stackHTML}</div>${specHTML}</div>`;
