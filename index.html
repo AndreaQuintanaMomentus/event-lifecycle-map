@@ -2841,7 +2841,7 @@ function buildJTBDGrid() {
     html += `<div style="display:grid;grid-template-columns:${colTemplate};gap:5px;margin-bottom:5px">`;
 
     /* Persona label cell */
-    html += `<div class="jtbd-persona-label" role="button" tabindex="0" aria-label="View primary job: ${p.mainAction}" style="background:${bg};border:1px solid ${b};border-left:3px solid ${c}" onclick="openMainJobModal('${p.id}')">
+    html += `<div class="jtbd-persona-label" role="button" tabindex="0" aria-label="View primary job: ${p.mainAction}" style="background:${bg};border:1px solid ${b};border-left:3px solid ${c}" onclick="openJobTimelineModal('${p.id}')">
       <div class="jpl-area" style="color:${c}">${p.product.replace('Event ', '')}</div>
       <div class="jpl-role">${p.mainAction}</div>
     </div>`;
@@ -2850,7 +2850,7 @@ function buildJTBDGrid() {
     STAGES.forEach(s => {
       html += `<div class="jtbd-cell" id="jc-${p.id}-${s.id}"
         role="button" tabindex="0" aria-label="${p.archetype}: ${SHORT[p.id][s.id]} — ${s.label} stage"
-        onclick="toggleJTBD('${p.id}','${s.id}')"
+        onclick="openJobTimelineModal('${p.id}','${s.id}')"
         onmouseenter="this.querySelector('.cell-hint').style.display='block'"
         onmouseleave="this.querySelector('.cell-hint').style.display='none'"
         onfocus="this.querySelector('.cell-hint').style.display='block'"
