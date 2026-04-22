@@ -900,6 +900,20 @@ body {
 .sv-e2e-grid { display: flex; flex-direction: column; gap: 5px; }
 .sv-e2e-prow { display: grid; grid-template-columns: 76px repeat(8, 1fr); gap: 5px; align-items: start; }
 .sv-e2e-plbl { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 6px; display: flex; align-items: center; height: 100%; border-radius: var(--r-sm); }
+
+/* ── JOB TIMELINE MODAL ── */
+.job-tl-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 24px; }
+.job-tl-overlay.open { display: flex; }
+.job-tl-box { max-width: 860px; width: 100%; max-height: 86vh; overflow-y: auto; border-radius: var(--r); background: var(--surface); border: 1px solid var(--border); }
+.job-tl-rail { display: flex; border-bottom: 1px solid var(--border); background: var(--bg); overflow-x: auto; scrollbar-width: none; }
+.job-tl-rail::-webkit-scrollbar { display: none; }
+.job-tl-tab { flex: 1; flex-shrink: 0; min-width: 68px; padding: 9px 8px 7px; cursor: pointer; border-right: 1px solid var(--border); border-bottom: 2px solid transparent; transition: background 0.15s, border-color 0.15s; text-align: center; }
+.job-tl-tab:last-child { border-right: none; }
+.job-tl-tab:hover { background: var(--surface); }
+.job-tl-tab.active { background: var(--surface); border-bottom-color: var(--job-tl-c, var(--bhi)); }
+.job-tl-tab.active .job-tl-tab-label { color: var(--job-tl-c, var(--text)); }
+.job-tl-tab-num { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1.5px; color: var(--text-d); margin-bottom: 2px; }
+.job-tl-tab-label { font-family: var(--f-disp); font-size: 11px; font-weight: 700; color: var(--text); line-height: 1.2; }
 </style>
 </head>
 <body>
@@ -2752,7 +2766,7 @@ function renderStagePage(pId) {
   const stackHTML = [
     buildLmRow('01', g[0].bg, g[0].depth, LAYER_SLAB_ICONS.semantic, 'Semantic Layer',  'Semantic Interaction Design · Ontological Object Definition', semanticDesc, `openObjectModal('${pd.objId}')`,  false),
     buildLmRow('02', g[1].bg, g[1].depth, LAYER_SLAB_ICONS.human,    'Human Layer',     'Ontological Persona Definition',                              humanDesc,    `openPersonaModal('${pId}')`,       false),
-    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework',                                   innovDesc,    `openMainJobModal('${pId}')`,       false),
+    buildLmRow('03', g[2].bg, g[2].depth, LAYER_SLAB_ICONS.innov,    'Innovation Layer','Jobs to Be Done Framework',                                   innovDesc,    `openJobTimelineModal('${pId}')`,   false),
     buildLmRow('04', g[3].bg, g[3].depth, LAYER_SLAB_ICONS.strat,    'Strategy Layer',  'North Star Framework',                                        stratDesc,    `openNsModal('${pId}')`,            true),
   ].join('');
 
@@ -3006,9 +3020,119 @@ function renderJTBDDetail(pId, sId) {
   `;
 }
 
+/* ── JOB TIMELINE MODAL (Stages View Innovation Layer) ── */
+let jobTlState = { pId: null, tabId: 'primary' };
+
+function openJobTimelineModal(pId, tabId) {
+  tabId = tabId || 'primary';
+  jobTlState = { pId, tabId };
+  const p  = PERSONAS_J.find(x => x.id === pId);
+  const c  = `var(${p.color})`;
+  const bg = `var(${p.bgColor})`;
+  const b  = `var(${p.border})`;
+  const area = p.product.replace('Event ', '');
+
+  const el  = document.getElementById('job-tl-modal');
+  const box = el.querySelector('.job-tl-box');
+  box.style.setProperty('--job-tl-c', `var(${p.color})`);
+  box.style.borderColor = b;
+
+  const tabs = [{ id:'primary', num:'\u25C6', label:'Primary Job' }, ...STAGES.map(s => ({ id:s.id, num:s.num, label:s.label }))]
+    .map(t => `<div class="job-tl-tab${t.id===tabId?' active':''}" data-tab="${t.id}" onclick="switchJobTab('${t.id}')"><div class="job-tl-tab-num">${t.num}</div><div class="job-tl-tab-label">${t.label}</div></div>`).join('');
+
+  box.innerHTML = `
+    <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};position:relative">
+      <button class="jd-close" onclick="closeJobTimelineModal()" style="position:absolute;top:14px;right:14px">\u2715</button>
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-right:40px">
+        <div>
+          <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Primary Job</div>
+          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px;line-height:1.2">${p.mainAction}</div>
+          <div style="font-size:13px;color:var(--text-s)">${p.name} \u00b7 ${p.role}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;align-self:flex-end">
+          <div style="display:flex;align-items:center;gap:5px"><span class="jpl-obj-lbl">Primary Object:</span><span class="jpl-obj" style="color:${c};border-color:${b}" onclick="goToPrimaryObject('${p.objId}',event)">${CHIP_OBJECT_ICONS[p.objId]}${p.object}</span></div>
+          <div style="display:flex;align-items:center;gap:5px"><span class="jpl-obj-lbl">Primary Persona:</span><span class="jpl-obj" style="color:${c};border-color:${b}" onclick="goToPersona('${p.id}');event.stopPropagation()">${CHIP_PERSONA_ICONS[p.id]}${p.role}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="job-tl-rail" id="job-tl-rail">${tabs}</div>
+    <div id="job-tl-content"></div>`;
+
+  el.classList.add('open');
+  renderJobTabContent(pId, tabId);
+}
+
+function switchJobTab(tabId) {
+  jobTlState.tabId = tabId;
+  document.querySelectorAll('#job-tl-rail .job-tl-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tabId));
+  renderJobTabContent(jobTlState.pId, tabId);
+}
+
+function renderJobTabContent(pId, tabId) {
+  const contentEl = document.getElementById('job-tl-content');
+  if (!contentEl) return;
+  const p = PERSONAS_J.find(x => x.id === pId);
+  const c = `var(${p.color})`;
+  const b = `var(${p.border})`;
+
+  if (tabId === 'primary') {
+    contentEl.innerHTML = `
+      <div style="padding:16px 20px 20px">
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px">Jobs to Be Done Statement</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px"><div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:6px">When</div><div style="font-size:14px;color:var(--text);line-height:1.65">${p.jtbd.when}</div></div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px"><div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:6px">I want to</div><div style="font-size:14px;color:var(--text);line-height:1.65">${p.jtbd.want}</div></div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px"><div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:6px">So I can</div><div style="font-size:14px;color:var(--text);line-height:1.65">${p.jtbd.soCan}</div></div>
+        </div>
+      </div>`;
+  } else {
+    const s = STAGES.find(x => x.id === tabId);
+    const d = MAP[pId][tabId];
+    const renderOutcome = (o, i) => `<div class="jd-outcome"><div class="jd-outcome-num">${String(i+1).padStart(2,'0')}</div><div class="jd-outcome-text"><span class="${o.dir==='Minimize'?'odi-dir-min':'odi-dir-max'}">${o.dir}</span><span class="odi-metric"> ${o.metric} </span><span class="odi-obj">${o.obj}</span><span class="odi-when"> when </span><span class="odi-ctx">${o.when}</span></div></div>`;
+    const visible  = d.outcomes.slice(0, 5);
+    const hidden   = d.outcomes.slice(5);
+    const moreId   = `tl-more-${pId}-${tabId}`;
+    const toggleId = `tl-toggle-${pId}-${tabId}`;
+    contentEl.innerHTML = `
+      <div style="padding:16px 20px">
+        <div style="display:flex;align-items:stretch;gap:20px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border)">
+          <div style="flex-shrink:0">
+            <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:4px">${s.num} \u00b7 Step</div>
+            <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:3px;display:flex;align-items:center;gap:8px">${_ico(18,STAGE_PATHS[tabId])}${s.label} ${p.object}</div>
+            <div style="font-family:var(--f-mono);font-size:11px;color:${c};margin-bottom:4px">${SHORT[pId][tabId]}</div>
+            <div style="font-family:var(--f-mono);font-size:10px;color:var(--text-d)">${s.verbs}</div>
+          </div>
+          <div style="flex:1;min-width:0;border-left:1px solid ${b};padding-left:16px">
+            <div class="jd-step" style="margin-bottom:5px">${d.step}</div>
+            <div class="jd-job">Functional job: <span style="color:var(--text-d)">${p.job}</span></div>
+          </div>
+        </div>
+        <div class="jd-odi-label">Desired Outcomes</div>
+        <div class="jd-outcomes">${visible.map((o,i)=>renderOutcome(o,i)).join('')}${hidden.length>0?`<div id="${moreId}" style="display:none">${hidden.map((o,i)=>renderOutcome(o,i+5)).join('')}</div>`:''}</div>
+        ${hidden.length>0?`<button id="${toggleId}" onclick="toggleTlOutcomes('${pId}','${tabId}')" style="margin-top:10px;background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 12px;font-family:var(--f-mono);font-size:10px;color:var(--text-d);cursor:pointer;transition:border-color 0.15s,color 0.15s" onmouseover="this.style.borderColor='var(--bhi)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-d)'">Show ${hidden.length} more</button>`:''}
+      </div>`;
+  }
+}
+
+function toggleTlOutcomes(pId, tabId) {
+  const moreDiv = document.getElementById(`tl-more-${pId}-${tabId}`);
+  const btn     = document.getElementById(`tl-toggle-${pId}-${tabId}`);
+  const isHidden = moreDiv.style.display === 'none';
+  moreDiv.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? 'Show less' : `Show ${moreDiv.querySelectorAll('.jd-outcome').length} more`;
+}
+
+function closeJobTimelineModal() {
+  const el = document.getElementById('job-tl-modal');
+  el.classList.remove('open');
+  el.querySelector('.job-tl-box').innerHTML = '';
+  jobTlState = { pId: null, tabId: 'primary' };
+}
+
 /* ── KEYBOARD SUPPORT FOR role="button" ELEMENTS (WCAG 2.1.1) ── */
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
+    if (document.getElementById('job-tl-modal').classList.contains('open')) closeJobTimelineModal();
     if (document.getElementById('ns-modal').classList.contains('open')) closeNsModal();
     if (document.getElementById('jtbd-modal').classList.contains('open')) closeJTBDModal();
     if (document.getElementById('persona-modal').classList.contains('open')) closePersonaModal();
@@ -3048,6 +3172,10 @@ buildJTBDGrid();
   <div class="main-job-modal-box" onclick="event.stopPropagation()">
     <div id="main-job-detail"></div>
   </div>
+</div>
+
+<div id="job-tl-modal" class="job-tl-overlay" role="dialog" aria-modal="true" aria-label="Primary job and steps" onclick="closeJobTimelineModal()">
+  <div class="job-tl-box" onclick="event.stopPropagation()"></div>
 </div>
 
 <div id="ns-modal" class="ns-modal-overlay" role="dialog" aria-modal="true" aria-label="North Star detail" onclick="closeNsModal()">
