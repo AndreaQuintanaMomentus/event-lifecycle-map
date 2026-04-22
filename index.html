@@ -2733,12 +2733,13 @@ function renderStagePage(pId) {
 
   const g = STAGE_GRADS[pId];
 
-  const semanticDesc = `The <strong style="color:${c}">${pd.object}</strong> — its fixed conditions, dynamic states, and structural statuses that form the ontological core of the ${area} lifecycle. Primary interaction: ${pd.interaction}.`;
-  const humanDesc    = `<strong style="color:${c}">${personaName}</strong>, ${jobTitle} — <em>${pd.archetype}</em>. ${pd.fixed[0]}. ${pd.dynamic[0]}.`;
-  const innovDesc    = `Primary job: <em>${pj.mainAction}</em>. ${pj.job}. Mapped across 8 lifecycle steps — from ${STAGES[0].label} to ${STAGES[STAGES.length-1].label}.`;
-  const stratDesc    = nsDef
-    ? `<strong style="color:${c}">${nsName}</strong> <span style="opacity:0.6">${nsAbbr}</span> — ${nsDef} Tracked through five input metrics: adoption, engagement, retention, efficiency, and effectiveness.`
-    : `North Star metric for the ${area} product area.`;
+  const _lbl = 'font-family:var(--f-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:5px';
+  const _val = `font-family:var(--f-disp);font-size:18px;font-weight:800;color:${c};line-height:1.2;display:block`;
+
+  const semanticDesc = `<span style="${_lbl}">${area} Primary Object:</span><span style="${_val}">${pd.object}</span>`;
+  const humanDesc    = `<span style="${_lbl}">${area} Primary Persona:</span><span style="${_val}">${jobTitle}</span><span style="display:block;font-size:12px;color:rgba(255,255,255,0.55);margin-top:3px">${personaName} · ${pd.archetype}</span><span style="display:block;font-size:12px;font-style:italic;color:rgba(255,255,255,0.5);border-left:2px solid ${c};padding-left:8px;margin-top:8px;line-height:1.5">${pd.quote}</span>`;
+  const innovDesc    = `<span style="${_lbl}">${area} Primary Job:</span><span style="${_val}">${pj.mainAction}</span>`;
+  const stratDesc    = `<span style="${_lbl}">${area} North Star:</span><span style="${_val}">${nsName || '—'}</span>`;
 
   const specHTML = `<div class="lm-spec">
     <div class="lm-spec-lbl lm-spec-lbl-top">Regular</div>
@@ -2770,12 +2771,14 @@ function renderStageE2E(el) {
   const nsName = nsMetricEl ? nsMetricEl.textContent.replace(nsAbbr,'').trim() : '';
   const nsDef  = sc ? (sc.querySelector('.star-def') ? sc.querySelector('.star-def').textContent.trim() : '') : '';
 
-  const semanticDesc = `The unified <strong style="color:${c}">Event</strong> — the lifecycle object spanning all stages from booking intake to post-event close, across all three product areas.`;
-  const humanDesc    = `<strong style="color:var(--sharon)">Sales Manager</strong>, <strong style="color:var(--emilie)">Event Coordinator</strong>, and <strong style="color:var(--owen)">Operations Supervisor</strong> — three personas, one seamless end-to-end lifecycle.`;
-  const innovDesc    = `The complete job matrix — 3 personas × 8 lifecycle stages, from ${STAGES[0].label} to ${STAGES[STAGES.length-1].label}. Each role, every step, the full event journey.`;
-  const stratDesc    = nsDef
-    ? `<strong style="color:${c}">${nsName}</strong> <span style="opacity:0.6">${nsAbbr}</span> — ${nsDef} Unified across five input metrics: adoption, engagement, retention, efficiency, and effectiveness.`
-    : `North Star metric for the unified End-to-End product area.`;
+  const _lbl = 'font-family:var(--f-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:5px';
+  const _val = `font-family:var(--f-disp);font-size:18px;font-weight:800;color:${c};line-height:1.2;display:block`;
+  const _val3 = 'font-family:var(--f-disp);font-size:15px;font-weight:800;line-height:1.3';
+
+  const semanticDesc = `<span style="${_lbl}">End-to-End Primary Object:</span><span style="${_val}">Event</span>`;
+  const humanDesc    = `<span style="${_lbl}">End-to-End Personas:</span><span style="display:flex;gap:8px;flex-wrap:wrap;align-items:baseline"><span style="${_val3};color:var(--sharon)">Sales Manager</span><span style="color:rgba(255,255,255,0.25)">·</span><span style="${_val3};color:var(--emilie)">Event Coordinator</span><span style="color:rgba(255,255,255,0.25)">·</span><span style="${_val3};color:var(--owen)">Operations Supervisor</span></span>`;
+  const innovDesc    = `<span style="${_lbl}">End-to-End Job Map:</span><span style="${_val}">3 Personas × 8 Lifecycle Steps</span>`;
+  const stratDesc    = `<span style="${_lbl}">End-to-End North Star:</span><span style="${_val}">${nsName || '—'}</span>`;
 
   const specHTML = `<div class="lm-spec">
     <div class="lm-spec-lbl lm-spec-lbl-top">Regular</div>
