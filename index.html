@@ -4509,7 +4509,7 @@ function getOppOutcome(pId, stageId, src) {
 
 function renderOppOutcome(o) {
   if (!o) return '';
-  return `<div style="margin-top:6px;font-size:11px;color:var(--text-d)"><span class="${o.dir==='Minimize'?'odi-dir-min':'odi-dir-max'}">${o.dir}</span><span class="odi-metric"> ${o.metric} </span><span class="odi-obj">${o.obj}</span></div>`;
+  return `<div style="margin-top:8px;padding-top:7px;border-top:1px solid var(--border)"><div style="font-family:var(--f-mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:3px">Targeted Desired Outcome</div><div style="font-size:11px;color:var(--text-d)"><span class="${o.dir==='Minimize'?'odi-dir-min':'odi-dir-max'}">${o.dir}</span><span class="odi-metric"> ${o.metric} </span><span class="odi-obj">${o.obj}</span></div></div>`;
 }
 
 function extractAction(text) {
@@ -4557,7 +4557,6 @@ function renderJobTabContent(pId, tabId) {
             style="cursor:pointer;background:var(--bg);border:1px solid var(--border);border-left:3px solid ${o.color};border-radius:var(--r-sm);padding:9px 12px;transition:background 0.15s">
             <div style="font-family:var(--f-mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:3px">${o.num} · ${o.label} · ${o.src}</div>
             <div style="font-size:13px;color:var(--text-s);line-height:1.5">${o.action}</div>
-            ${renderOppOutcome(o.outcome)}
           </div>`).join('')}
         </div>
       </div>` : '';
