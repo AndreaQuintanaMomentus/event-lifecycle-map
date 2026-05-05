@@ -4397,7 +4397,7 @@ function renderJTBDDetail(pId, sId) {
         <div class="jd-odi-label">Desired Outcomes</div>
         <div class="jd-outcomes">${visibleHTML}${hidden.length > 0 ? `<div id="${moreId}" style="display:none">${hiddenHTML}</div>` : ''}</div>
         ${hidden.length > 0 ? `<button id="${toggleId}" onclick="toggleOutcomes('${pId}','${sId}')" style="margin-top:10px;background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 12px;font-family:var(--f-mono);font-size:10px;color:var(--text-d);cursor:pointer;transition:border-color 0.15s,color 0.15s" onmouseover="this.style.borderColor='var(--bhi)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-d)'">Show ${hidden.length} more</button>` : ''}
-        ${(gapNote || researchOpps || productDocOpps) ? `<div class="jd-odi-label" style="margin-top:16px;display:flex;align-items:center;gap:5px">${WARN_ICON_SVG}Identified Value Delivery Opportunities</div>${gapNote ? `<div class="jd-gap-note"><div class="jd-gap-source">Source: Stakeholder Interviews</div><span class="jd-gap-action">${extractAction(gapNote)}</span>: ${gapNote}</div>` : ''}${researchOpps ? `<div class="jd-gap-note-research"><div class="jd-gap-source">Source: Verticals UX Research</div><span class="jd-gap-action">${extractAction(researchOpps)}</span>: ${researchOpps}</div>` : ''}${productDocOpps ? `<div class="jd-gap-note-productdoc"><div class="jd-gap-source">Source: Product Documentation</div><span class="jd-gap-action">${extractAction(productDocOpps)}</span>: ${productDocOpps}</div>` : ''}` : ''}
+        ${(gapNote || researchOpps || productDocOpps) ? `<div class="jd-odi-label" style="margin-top:16px;display:flex;align-items:center;gap:5px">${WARN_ICON_SVG}Identified Value Delivery Opportunities</div>${gapNote ? `<div class="jd-gap-note"><div class="jd-gap-source">Source: Stakeholder Interviews</div><span class="jd-gap-action">${getOppAction(pId, sId, 'gap', gapNote)}</span>: ${gapNote}</div>` : ''}${researchOpps ? `<div class="jd-gap-note-research"><div class="jd-gap-source">Source: Verticals UX Research</div><span class="jd-gap-action">${getOppAction(pId, sId, 'research', researchOpps)}</span>: ${researchOpps}</div>` : ''}${productDocOpps ? `<div class="jd-gap-note-productdoc"><div class="jd-gap-source">Source: Product Documentation</div><span class="jd-gap-action">${getOppAction(pId, sId, 'productdoc', productDocOpps)}</span>: ${productDocOpps}</div>` : ''}` : ''}
       </div>
     </div>
   `;
@@ -4455,6 +4455,51 @@ function switchJobTab(tabId) {
   renderJobTabContent(jobTlState.pId, tabId);
 }
 
+const OPPS_ACTIONS = {
+  sharon: {
+    define:   { gap: 'Automate lead qualification with engagement scoring',                    research: 'Build native lead intake with auto-deduplication' },
+    locate:   { research: 'Add global calendar view with real-time booking gaps' },
+    prepare:  { gap: 'Add standardized proposal templates with guided pricing',               research: 'Enable client-ready proposal output directly in-platform' },
+    confirm:  { gap: 'Add AI-generated close recommendations to pipeline view' },
+    execute:  { research: 'Eliminate duplicate data entry from lead to confirmed booking' },
+    monitor:  { gap: 'Add real-time revenue quota tracking in-platform',                       research: 'Replace Excel PACE exports with live in-platform analytics',          productdoc: 'Expose time-to-status booking metrics in list views' },
+    modify:   { research: 'Enable mass-update for high-volume space configurations' },
+    conclude: { research: 'Enable online payment collection at contract close' }
+  },
+  emilie: {
+    define:   { research: 'Add structured sales-to-planning handoff intake template' },
+    locate:   { research: 'Automate handoff readiness checklist and task generation' },
+    prepare:  { gap: 'Add standardized BEO templates with guided detailing workflow',         research: 'Add bulk BEO entry tools and inline field validation' },
+    confirm:  { gap: 'Automate simple client approvals with smart routing' },
+    execute:  { research: 'Automate BEO distribution with department-specific formatting' },
+    monitor:  { research: 'Add planning milestone alerts and centralize client communication', productdoc: 'Add audit log for all Event Plan field changes' },
+    modify:   { gap: 'Auto-route and triage incoming change orders by impact',                research: 'Enable one-edit propagation across all affected functions',             productdoc: 'Track exhibitor booth assignments in Change Tracking' },
+    conclude: { research: 'Enable in-platform invoicing and payment at event close' }
+  },
+  owen: {
+    define:   { gap: 'Move crew assignment notifications in-platform',                        research: 'Add operations intake view with staffing and resource visibility' },
+    locate:   { research: 'Add crew-filtered work order view with real-time inventory',       productdoc: 'Make room diagrams accessible directly from MWO' },
+    prepare:  { research: 'Add field-ready work order format for on-site use',               productdoc: 'Allow contract staff MWO access without full platform licenses' },
+    execute:  { gap: 'Replace radio and paper coordination with real-time task updates',      research: 'Enable login-free mobile MWO access for field crews',                  productdoc: 'Add on-site signature and photo capture per work order item' },
+    monitor:  { research: 'Add real-time event manifest with auto-push crew notifications',   productdoc: 'Add venue-level Change Tracking filter for multi-space oversight' },
+    modify:   { research: 'Push change order updates instantly to field crew work orders' },
+    conclude: { gap: 'Enable mobile-first actuals capture at work order completion',          research: 'Log and invoice actuals directly from mobile MWO',                     productdoc: 'Surface cost breakdowns and bill-to context in MWO actuals' }
+  },
+  e3: {
+    define:   { research: 'Add configurable governance templates with cross-team calendar visibility' },
+    locate:   { research: 'Build unified pipeline health view across all departments' },
+    prepare:  { gap: 'Add native in-system P&L with integrated cost data',                   research: 'Add pre-event alignment view with risk flags and readiness gaps' },
+    execute:  { research: 'Add concurrent event oversight view with live crew and incident status' },
+    monitor:  { gap: 'Build consolidated performance view with predictive analytics',         research: 'Add out-of-the-box financial and operational performance reports',      productdoc: 'Add venue-level Change Tracking filter with full audit log' },
+    modify:   { research: 'Standardize cross-department change management workflow' },
+    conclude: { gap: 'Close post-event feedback loop to improve future planning',             research: 'Automate post-event summaries with financial system integration' }
+  }
+};
+
+function getOppAction(pId, stageId, src, text) {
+  return (OPPS_ACTIONS[pId]?.[stageId]?.[src]) || extractAction(text);
+}
+
 function extractAction(text) {
   if (!text) return '';
   const emdash = text.indexOf(' — ');
@@ -4482,9 +4527,9 @@ function renderJobTabContent(pId, tabId) {
       if (!d) return;
       const stepParts = d.step.split(' — ');
       const gapNote = stepParts.length > 1 ? stepParts.slice(1).join(' — ') : null;
-      if (gapNote)        stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: extractAction(gapNote),        color: srcColors.gap,       src: 'Stakeholder Interviews' });
-      if (d.researchOpps)  stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: extractAction(d.researchOpps),  color: srcColors.research,  src: 'UX Research' });
-      if (d.productDocOpps) stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: extractAction(d.productDocOpps), color: srcColors.productdoc, src: 'Product Docs' });
+      if (gapNote)        stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: getOppAction(pId, stage.id, 'gap',        gapNote),        color: srcColors.gap,       src: 'Stakeholder Interviews' });
+      if (d.researchOpps)  stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: getOppAction(pId, stage.id, 'research',   d.researchOpps),  color: srcColors.research,  src: 'UX Research' });
+      if (d.productDocOpps) stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: getOppAction(pId, stage.id, 'productdoc', d.productDocOpps), color: srcColors.productdoc, src: 'Product Docs' });
     });
     const oppsSummaryHTML = stageOpps.length > 0 ? `
       <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
@@ -4543,7 +4588,7 @@ function renderJobTabContent(pId, tabId) {
         <div class="jd-odi-label">Desired Outcomes</div>
         <div class="jd-outcomes">${visible.map((o,i)=>renderOutcome(o,i)).join('')}${hidden.length>0?`<div id="${moreId}" style="display:none">${hidden.map((o,i)=>renderOutcome(o,i+5)).join('')}</div>`:''}</div>
         ${hidden.length>0?`<button id="${toggleId}" onclick="toggleTlOutcomes('${pId}','${tabId}')" style="margin-top:10px;background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 12px;font-family:var(--f-mono);font-size:10px;color:var(--text-d);cursor:pointer;transition:border-color 0.15s,color 0.15s" onmouseover="this.style.borderColor='var(--bhi)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-d)'">Show ${hidden.length} more</button>`:''}
-        ${(tlGapNote || tlResearchOpps || tlProductDocOpps) ? `<div class="jd-odi-label" style="margin-top:16px;display:flex;align-items:center;gap:5px">${WARN_ICON_SVG}Identified Value Delivery Opportunities</div>${tlGapNote ? `<div class="jd-gap-note"><div class="jd-gap-source">Source: Stakeholder Interviews</div><span class="jd-gap-action">${extractAction(tlGapNote)}</span>: ${tlGapNote}</div>` : ''}${tlResearchOpps ? `<div class="jd-gap-note-research"><div class="jd-gap-source">Source: Verticals UX Research</div><span class="jd-gap-action">${extractAction(tlResearchOpps)}</span>: ${tlResearchOpps}</div>` : ''}${tlProductDocOpps ? `<div class="jd-gap-note-productdoc"><div class="jd-gap-source">Source: Product Documentation</div><span class="jd-gap-action">${extractAction(tlProductDocOpps)}</span>: ${tlProductDocOpps}</div>` : ''}` : ''}
+        ${(tlGapNote || tlResearchOpps || tlProductDocOpps) ? `<div class="jd-odi-label" style="margin-top:16px;display:flex;align-items:center;gap:5px">${WARN_ICON_SVG}Identified Value Delivery Opportunities</div>${tlGapNote ? `<div class="jd-gap-note"><div class="jd-gap-source">Source: Stakeholder Interviews</div><span class="jd-gap-action">${getOppAction(pId, tabId, 'gap', tlGapNote)}</span>: ${tlGapNote}</div>` : ''}${tlResearchOpps ? `<div class="jd-gap-note-research"><div class="jd-gap-source">Source: Verticals UX Research</div><span class="jd-gap-action">${getOppAction(pId, tabId, 'research', tlResearchOpps)}</span>: ${tlResearchOpps}</div>` : ''}${tlProductDocOpps ? `<div class="jd-gap-note-productdoc"><div class="jd-gap-source">Source: Product Documentation</div><span class="jd-gap-action">${getOppAction(pId, tabId, 'productdoc', tlProductDocOpps)}</span>: ${tlProductDocOpps}</div>` : ''}` : ''}
       </div>`;
   }
 }
