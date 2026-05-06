@@ -4223,7 +4223,8 @@ function buildJTBDGrid() {
 
     /* Stage cells */
     STAGES.forEach(s => {
-      const hasGap = MAP[p.id] && MAP[p.id][s.id] && MAP[p.id][s.id].step.includes(' — ');
+      const d = MAP[p.id] && MAP[p.id][s.id];
+      const hasOpps = d && (d.step.includes(' — ') || d.researchOpps || d.productDocOpps);
       html += `<div class="jtbd-cell" id="jc-${p.id}-${s.id}"
         role="button" tabindex="0" aria-label="${p.archetype}: ${SHORT[p.id][s.id]} — ${s.label} stage"
         onclick="openJobTimelineModal('${p.id}','${s.id}')"
@@ -4232,7 +4233,7 @@ function buildJTBDGrid() {
         onfocus="this.querySelector('.cell-hint').style.display='block'"
         onblur="this.querySelector('.cell-hint').style.display='none'"
         style="border-color:${b};background:${bg};position:relative">
-        ${hasGap ? `<div style="position:absolute;top:5px;right:5px;line-height:0;opacity:0.8" title="Identified value delivery opportunity">${WARN_ICON_SVG}</div>` : ''}
+        ${hasOpps ? `<div style="position:absolute;top:4px;right:6px;font-family:var(--f-mono);font-size:13px;font-weight:700;color:${c};line-height:1" title="Contains value delivery opportunities">*</div>` : ''}
         <div>
           <div class="cell-label">${s.label} ${p.object}</div>
           <div class="cell-short" style="color:${c}">${SHORT[p.id][s.id]}</div>
