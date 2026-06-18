@@ -825,13 +825,13 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 .jtbd-cell {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--r-sm); padding: 9px 8px;
-  cursor: pointer; transition: background 0.12s, border-color 0.12s;
+  cursor: pointer; transition: filter 0.12s, border-color 0.12s;
   display: flex; flex-direction: column; justify-content: space-between;
   min-height: 62px;
 }
+.jtbd-cell:hover { filter: brightness(1.35); }
 .cell-label { font-size: 11px; color: var(--text-d); margin-bottom: 3px; }
 .cell-short { font-family: var(--f-disp); font-size: 12px; font-weight: 600; color: var(--text-s); line-height: 1.4; }
-.cell-hint  { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 5px; letter-spacing: 1px; }
 
 .jtbd-instruction { text-align: center; font-family: var(--f-mono); font-size: 10px; color: var(--text-d); letter-spacing: 2px; text-transform: uppercase; margin: 8px 0; }
 
@@ -4227,16 +4227,11 @@ function buildJTBDGrid() {
       html += `<div class="jtbd-cell" id="jc-${p.id}-${s.id}"
         role="button" tabindex="0" aria-label="${p.archetype}: ${SHORT[p.id][s.id]} — ${s.label} stage"
         onclick="openJobTimelineModal('${p.id}','${s.id}')"
-        onmouseenter="this.querySelector('.cell-hint').style.display='block'"
-        onmouseleave="this.querySelector('.cell-hint').style.display='none'"
-        onfocus="this.querySelector('.cell-hint').style.display='block'"
-        onblur="this.querySelector('.cell-hint').style.display='none'"
         style="border-color:${b};background:${bg};position:relative">
         <div>
           <div class="cell-label">${s.label} ${p.object}</div>
           <div class="cell-short" style="color:${c}">${SHORT[p.id][s.id]}</div>
         </div>
-        <div class="cell-hint" style="display:none;font-family:var(--f-mono);font-size:10px;color:var(--text-d);margin-top:5px;letter-spacing:1px">expand ↗</div>
       </div>`;
     });
 
