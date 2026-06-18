@@ -4224,7 +4224,6 @@ function buildJTBDGrid() {
     /* Stage cells */
     STAGES.forEach(s => {
       const d = MAP[p.id] && MAP[p.id][s.id];
-      const hasOpps = d && (d.step.includes(' — ') || d.researchOpps || d.productDocOpps);
       html += `<div class="jtbd-cell" id="jc-${p.id}-${s.id}"
         role="button" tabindex="0" aria-label="${p.archetype}: ${SHORT[p.id][s.id]} — ${s.label} stage"
         onclick="openJobTimelineModal('${p.id}','${s.id}')"
@@ -4233,7 +4232,6 @@ function buildJTBDGrid() {
         onfocus="this.querySelector('.cell-hint').style.display='block'"
         onblur="this.querySelector('.cell-hint').style.display='none'"
         style="border-color:${b};background:${bg};position:relative">
-        ${hasOpps ? `<div style="position:absolute;top:4px;right:6px;font-family:var(--f-mono);font-size:13px;font-weight:700;color:${c};line-height:1" title="Contains value delivery opportunities">*</div>` : ''}
         <div>
           <div class="cell-label">${s.label} ${p.object}</div>
           <div class="cell-short" style="color:${c}">${SHORT[p.id][s.id]}</div>
@@ -4398,7 +4396,6 @@ function renderJTBDDetail(pId, sId) {
         <div class="jd-odi-label">Desired Outcomes</div>
         <div class="jd-outcomes">${visibleHTML}${hidden.length > 0 ? `<div id="${moreId}" style="display:none">${hiddenHTML}</div>` : ''}</div>
         ${hidden.length > 0 ? `<button id="${toggleId}" onclick="toggleOutcomes('${pId}','${sId}')" style="margin-top:10px;background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 12px;font-family:var(--f-mono);font-size:10px;color:var(--text-d);cursor:pointer;transition:border-color 0.15s,color 0.15s" onmouseover="this.style.borderColor='var(--bhi)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-d)'">Show ${hidden.length} more</button>` : ''}
-        ${(gapNote || researchOpps || productDocOpps) ? `<div class="jd-odi-label" style="margin-top:16px;display:flex;align-items:center;gap:5px">${WARN_ICON_SVG}Identified Value Delivery Opportunities</div>${gapNote ? `<div class="jd-gap-note"><div class="jd-gap-source">Source: Stakeholder Interviews</div><span class="jd-gap-action">${getOppAction(pId, sId, 'gap', gapNote)}</span>: ${gapNote}${renderOppOutcome(getOppOutcome(pId, sId, 'gap'))}</div>` : ''}${researchOpps ? `<div class="jd-gap-note-research"><div class="jd-gap-source">Source: Verticals UX Research</div><span class="jd-gap-action">${getOppAction(pId, sId, 'research', researchOpps)}</span>: ${researchOpps}${renderOppOutcome(getOppOutcome(pId, sId, 'research'))}</div>` : ''}${productDocOpps ? `<div class="jd-gap-note-productdoc"><div class="jd-gap-source">Source: Product Documentation</div><span class="jd-gap-action">${getOppAction(pId, sId, 'productdoc', productDocOpps)}</span>: ${productDocOpps}${renderOppOutcome(getOppOutcome(pId, sId, 'productdoc'))}</div>` : ''}` : ''}
       </div>
     </div>
   `;
@@ -4424,8 +4421,7 @@ function openJobTimelineModal(pId, tabId) {
   const tabs = [{ id:'primary', num:'\u25C6', label:'Primary Job' }, ...STAGES.map(s => ({ id:s.id, num:s.num, label:s.label }))]
     .map(t => {
       const d = t.id !== 'primary' && MAP[pId] && MAP[pId][t.id];
-      const hasOpps = d && (d.step.includes(' \u2014 ') || d.researchOpps || d.productDocOpps);
-      return `<div class="job-tl-tab${t.id===tabId?' active':''}" data-tab="${t.id}" onclick="switchJobTab('${t.id}')"><div class="job-tl-tab-num">${t.num}</div><div class="job-tl-tab-label">${t.label}${hasOpps ? `\u2009${WARN_ICON_SVG}` : ''}</div></div>`;
+      return `<div class="job-tl-tab${t.id===tabId?' active':''}" data-tab="${t.id}" onclick="switchJobTab('${t.id}')"><div class="job-tl-tab-num">${t.num}</div><div class="job-tl-tab-label">${t.label}</div></div>`;
     }).join('');
 
   box.innerHTML = `
@@ -4534,33 +4530,7 @@ function renderJobTabContent(pId, tabId) {
 
   if (tabId === 'primary') {
     const srcColors = { gap: '#a78bfa', research: '#38bdf8', productdoc: '#f59e0b' };
-    const stageOpps = [];
-    STAGES.forEach(stage => {
-      const d = MAP[pId] && MAP[pId][stage.id];
-      if (!d) return;
-      const stepParts = d.step.split(' — ');
-      const gapNote = stepParts.length > 1 ? stepParts.slice(1).join(' — ') : null;
-      if (gapNote)        stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: getOppAction(pId, stage.id, 'gap',        gapNote),        color: srcColors.gap,        src: 'Stakeholder Interviews', outcome: getOppOutcome(pId, stage.id, 'gap') });
-      if (d.researchOpps)  stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: getOppAction(pId, stage.id, 'research',   d.researchOpps),  color: srcColors.research,   src: 'UX Research',             outcome: getOppOutcome(pId, stage.id, 'research') });
-      if (d.productDocOpps) stageOpps.push({ stageId: stage.id, num: stage.num, label: stage.label, action: getOppAction(pId, stage.id, 'productdoc', d.productDocOpps), color: srcColors.productdoc, src: 'Product Docs',             outcome: getOppOutcome(pId, stage.id, 'productdoc') });
-    });
-    const oppsSummaryHTML = stageOpps.length > 0 ? `
-      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
-        <div class="jd-odi-label" style="display:flex;align-items:center;gap:5px;margin-bottom:10px">${WARN_ICON_SVG}Identified Value Delivery Opportunities Summary</div>
-        <div style="display:flex;flex-direction:column;gap:5px">
-          ${stageOpps.map(o => `<div
-            title="Read more"
-            tabindex="0" role="button"
-            onclick="switchJobTab('${o.stageId}')"
-            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchJobTab('${o.stageId}');}"
-            onmouseover="this.style.background='var(--surface2)'"
-            onmouseout="this.style.background='var(--bg)'"
-            style="cursor:pointer;background:var(--bg);border:1px solid var(--border);border-left:3px solid ${o.color};border-radius:var(--r-sm);padding:9px 12px;transition:background 0.15s">
-            <div style="font-family:var(--f-mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-d);margin-bottom:3px">${o.num} · ${o.label} · ${o.src}</div>
-            <div style="font-size:13px;color:var(--text-s);line-height:1.5">${o.action}</div>
-          </div>`).join('')}
-        </div>
-      </div>` : '';
+    const oppsSummaryHTML = '';
     contentEl.innerHTML = `
       <div style="padding:16px 20px 20px">
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px">Jobs to Be Done Statement</div>
@@ -4601,7 +4571,6 @@ function renderJobTabContent(pId, tabId) {
         <div class="jd-odi-label">Desired Outcomes</div>
         <div class="jd-outcomes">${visible.map((o,i)=>renderOutcome(o,i)).join('')}${hidden.length>0?`<div id="${moreId}" style="display:none">${hidden.map((o,i)=>renderOutcome(o,i+5)).join('')}</div>`:''}</div>
         ${hidden.length>0?`<button id="${toggleId}" onclick="toggleTlOutcomes('${pId}','${tabId}')" style="margin-top:10px;background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 12px;font-family:var(--f-mono);font-size:10px;color:var(--text-d);cursor:pointer;transition:border-color 0.15s,color 0.15s" onmouseover="this.style.borderColor='var(--bhi)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-d)'">Show ${hidden.length} more</button>`:''}
-        ${(tlGapNote || tlResearchOpps || tlProductDocOpps) ? `<div class="jd-odi-label" style="margin-top:16px;display:flex;align-items:center;gap:5px">${WARN_ICON_SVG}Identified Value Delivery Opportunities</div>${tlGapNote ? `<div class="jd-gap-note"><div class="jd-gap-source">Source: Stakeholder Interviews</div><span class="jd-gap-action">${getOppAction(pId, tabId, 'gap', tlGapNote)}</span>: ${tlGapNote}${renderOppOutcome(getOppOutcome(pId, tabId, 'gap'))}</div>` : ''}${tlResearchOpps ? `<div class="jd-gap-note-research"><div class="jd-gap-source">Source: Verticals UX Research</div><span class="jd-gap-action">${getOppAction(pId, tabId, 'research', tlResearchOpps)}</span>: ${tlResearchOpps}${renderOppOutcome(getOppOutcome(pId, tabId, 'research'))}</div>` : ''}${tlProductDocOpps ? `<div class="jd-gap-note-productdoc"><div class="jd-gap-source">Source: Product Documentation</div><span class="jd-gap-action">${getOppAction(pId, tabId, 'productdoc', tlProductDocOpps)}</span>: ${tlProductDocOpps}${renderOppOutcome(getOppOutcome(pId, tabId, 'productdoc'))}</div>` : ''}` : ''}
       </div>`;
   }
 }
