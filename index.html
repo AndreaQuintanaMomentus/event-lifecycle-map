@@ -34,11 +34,17 @@
   --sharon:   #34d399; --sharon-bg: rgba(52,211,153,0.07);  --sharon-b: rgba(52,211,153,0.25);
   --emilie:   #60a5fa; --emilie-bg: rgba(96,165,250,0.07);  --emilie-b: rgba(96,165,250,0.25);
   --owen:     #f97316; --owen-bg:   rgba(249,115,22,0.07);   --owen-b:   rgba(249,115,22,0.25);
+  --dana:     #eab308; --dana-bg:   rgba(234,179,8,0.07);    --dana-b:   rgba(234,179,8,0.25);
   --e3:       #b266e4; --e3-bg:     rgba(178,102,228,0.07);  --e3-b:     rgba(178,102,228,0.25);
   /* ── Attribute type colors (OPD attribute semantics) ── */
   --fixed-c:   #fbbf24; /* Fixed Conditions — amber */
   --dynamic-c: #2dd4bf; /* Dynamic States — teal */
   --struct-c:  #fb7185; /* Structural Status — rose */
+
+  /* ── Historic Context category colors ── */
+  --hist-industry:    #ef4444; --hist-industry-bg: rgba(239,68,68,0.07);  --hist-industry-b: rgba(239,68,68,0.25);
+  --hist-customer:    #84cc16; --hist-customer-bg: rgba(132,204,22,0.07); --hist-customer-b: rgba(132,204,22,0.25);
+  --hist-product:     #6366f1; --hist-product-bg:  rgba(99,102,241,0.07); --hist-product-b:  rgba(99,102,241,0.25);
 
   /* ── Input metric dimension colors (North Star) ── */
   --c-adopt:  #4ade80;
@@ -74,11 +80,16 @@
   --sharon:   #0a7a50;  --sharon-bg: rgba(10,122,80,0.07);   --sharon-b: rgba(10,122,80,0.22);
   --emilie:   #1558c0;  --emilie-bg: rgba(21,88,192,0.07);   --emilie-b: rgba(21,88,192,0.22);
   --owen:     #b83c0a;  --owen-bg:   rgba(184,60,10,0.07);   --owen-b:   rgba(184,60,10,0.22);
+  --dana:     #a16207;  --dana-bg:   rgba(161,98,7,0.07);    --dana-b:   rgba(161,98,7,0.22);
   --e3:       #6d28d9;  --e3-bg:     rgba(109,40,217,0.07);  --e3-b:     rgba(109,40,217,0.22);
 
   --fixed-c:   #b45309;
   --dynamic-c: #0f766e;
   --struct-c:  #be123c;
+
+  --hist-industry:    #b91c1c; --hist-industry-bg: rgba(185,28,28,0.07);  --hist-industry-b: rgba(185,28,28,0.22);
+  --hist-customer:    #4d7c0f; --hist-customer-bg: rgba(77,124,15,0.07);  --hist-customer-b: rgba(77,124,15,0.22);
+  --hist-product:     #4338ca; --hist-product-bg:  rgba(67,56,202,0.07);  --hist-product-b:  rgba(67,56,202,0.22);
 
   --c-adopt:  #0a6b3f;
   --c-engage: #0369a1;
@@ -162,6 +173,7 @@
 [data-theme="light"] .st-card.st-sharon { background: var(--sharon-bg) !important; border-color: var(--sharon-b) !important; }
 [data-theme="light"] .st-card.st-emilie { background: var(--emilie-bg) !important; border-color: var(--emilie-b) !important; }
 [data-theme="light"] .st-card.st-owen   { background: var(--owen-bg)   !important; border-color: var(--owen-b)   !important; }
+[data-theme="light"] .st-card.st-dana   { background: var(--dana-bg)   !important; border-color: var(--dana-b)   !important; }
 [data-theme="light"] .st-card.st-e3     { background: var(--e3-bg)     !important; border-color: var(--e3-b)     !important; }
 [data-theme="light"] .st-card-name   { color: var(--text); }
 [data-theme="light"] .st-card-fw     { color: var(--text-s); }
@@ -173,6 +185,7 @@
 [data-theme="light"] .stage-tab[aria-label*="Sales"]      { background: var(--sharon-bg) !important; border-color: var(--sharon-b) !important; }
 [data-theme="light"] .stage-tab[aria-label*="Planning"]   { background: var(--emilie-bg) !important; border-color: var(--emilie-b) !important; }
 [data-theme="light"] .stage-tab[aria-label*="Operations"] { background: var(--owen-bg)   !important; border-color: var(--owen-b)   !important; }
+[data-theme="light"] .stage-tab[aria-label*="Financial"]  { background: var(--dana-bg)   !important; border-color: var(--dana-b)   !important; }
 [data-theme="light"] .stage-tab[aria-label*="End-to-End"] { background: var(--e3-bg)     !important; border-color: var(--e3-b)     !important; }
 
 /* ── Light mode hover state fixes ── */
@@ -393,6 +406,8 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 .xlink-emilie:hover { border-bottom-color: var(--emilie); color: var(--emilie); }
 .xlink-owen { border-bottom-color: rgba(249,115,22,0.3); }
 .xlink-owen:hover { border-bottom-color: var(--owen); color: var(--owen); }
+.xlink-dana { border-bottom-color: rgba(234,179,8,0.3); }
+.xlink-dana:hover { border-bottom-color: var(--dana); color: var(--dana); }
 
 /* ═══════════════════════════════════════════════
    OVERVIEW SECTION
@@ -476,6 +491,8 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 .sc-emilie::before { background: radial-gradient(ellipse at 10% 70%, rgba(96,165,250,0.1) 0%, transparent 60%); }
 .sc-owen   { border: 1px solid var(--owen-b);   border-left: 3px solid var(--owen);   }
 .sc-owen::before   { background: radial-gradient(ellipse at 10% 70%, rgba(249,115,22,0.1) 0%, transparent 60%); }
+.sc-dana   { border: 1px solid var(--dana-b);   border-left: 3px solid var(--dana);   }
+.sc-dana::before   { background: radial-gradient(ellipse at 10% 70%, rgba(234,179,8,0.1) 0%, transparent 60%); }
 
 .star-eyebrow { font-family: var(--f-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
 .star-metric { font-family: var(--f-disp); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
@@ -1160,6 +1177,27 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 .job-tl-tab.active .job-tl-tab-label { color: var(--job-tl-c, var(--text)); }
 .job-tl-tab-num { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1.5px; color: var(--text-d); margin-bottom: 2px; }
 .job-tl-tab-label { font-family: var(--f-disp); font-size: 11px; font-weight: 700; color: var(--text); line-height: 1.2; }
+
+/* ── Historic Context timeline (Strategy Layer) ── */
+.hc-filter-row { display: flex; gap: 8px; flex-wrap: wrap; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg); }
+.hc-chip { font-family: var(--f-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); color: var(--text-s); cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+.hc-chip:hover { background: var(--surface2); }
+.hc-chip.active { border-color: var(--hc-c, var(--bhi)); color: var(--hc-c, var(--text)); background: var(--hc-c-bg, var(--surface2)); }
+.hc-timeline { padding: 20px 24px 4px; max-height: 52vh; overflow-y: auto; }
+.hc-tl-item { display: flex; gap: 14px; }
+.hc-tl-rail { display: flex; flex-direction: column; align-items: center; width: 10px; flex-shrink: 0; }
+.hc-tl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; box-shadow: 0 0 0 3px var(--surface); }
+.hc-tl-line { width: 2px; flex: 1; background: var(--border); margin-top: 2px; }
+.hc-tl-item:last-child .hc-tl-line { display: none; }
+.hc-tl-main { flex: 1; min-width: 0; padding-bottom: 22px; }
+.hc-tl-date { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.5px; color: var(--text-d); margin-bottom: 4px; }
+.hc-tl-cat { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 3px; }
+.hc-tl-title { font-family: var(--f-disp); font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; line-height: 1.3; }
+.hc-tl-desc { font-size: 12px; color: var(--text-s); line-height: 1.55; }
+.hc-tl-source { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; }
+.hc-tl-source a { color: var(--text-d); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+.hc-tl-source a:hover { color: var(--text-s); text-decoration-color: var(--text-d); }
+.hc-tl-empty { padding: 24px 4px; text-align: center; color: var(--text-d); font-size: 12px; }
 </style>
 </head>
 <body>
@@ -1370,7 +1408,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div style="width:10px;height:10px;border-radius:50%;background:var(--emilie);flex-shrink:0;box-shadow:0 0 6px var(--emilie)"></div>
     <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--emilie),var(--owen))"></div>
     <div style="width:10px;height:10px;border-radius:50%;background:var(--owen);flex-shrink:0;box-shadow:0 0 6px var(--owen)"></div>
-    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--owen),var(--e3))"></div>
+    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--owen),var(--dana))"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:var(--dana);flex-shrink:0;box-shadow:0 0 6px var(--dana)"></div>
+    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--dana),var(--e3))"></div>
     <img src="momentus_logo.png" width="18" height="18" alt="" style="flex-shrink:0;filter:drop-shadow(0 0 5px var(--e3));opacity:0.9">
     <div style="flex:1"></div>
   </div>
@@ -1414,6 +1454,19 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
         <div class="st-card-fw">Product Area North Star</div>
       </div>
     </div>
+    <div class="product-block" id="nspb-dana"
+         style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.22);">
+      <div role="button" tabindex="0" aria-label="View Financial North Star detail"
+           onclick="openNsModal('dana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openNsModal('dana');}"
+           style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><g transform="translate(6,6) scale(0.5)"><path stroke-width="3" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.937A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></g></svg>
+        </div>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dana);margin-bottom:14px">Financial</div>
+        <div class="st-card-name">Momentus Financials</div>
+        <div class="st-card-fw">Product Area North Star</div>
+      </div>
+    </div>
     <div class="product-block" id="nspb-e3"
          style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);">
       <div role="button" tabindex="0" aria-label="View End-to-End North Star detail"
@@ -1425,6 +1478,77 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--e3);margin-bottom:14px">End-to-End</div>
         <div class="st-card-name">Momentus Events</div>
         <div class="st-card-fw">End-to-End North Star</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px;padding-top:8px">Historic Context</div>
+  <div style="margin-bottom:28px">
+  <div class="product-row">
+    <div class="product-block" id="hcpb-sharon"
+         style="background:linear-gradient(135deg,#092115 0%,#123020 100%);border:1px solid rgba(52,211,153,0.22);">
+      <div role="button" tabindex="0" aria-label="View Sales Historic Context"
+           onclick="openHcModal('sharon')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('sharon');}"
+           style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><g transform="translate(5,8) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+        </div>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--sharon);margin-bottom:14px">Sales</div>
+        <div class="st-card-name">Sales at Momentus</div>
+        <div class="st-card-fw">Momentus Technologies' History</div>
+      </div>
+    </div>
+    <div class="product-block" id="hcpb-emilie"
+         style="background:linear-gradient(135deg,#060e22 0%,#0d1e3c 100%);border:1px solid rgba(96,165,250,0.22);">
+      <div role="button" tabindex="0" aria-label="View Planning Historic Context"
+           onclick="openHcModal('emilie')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('emilie');}"
+           style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><g transform="translate(6,8) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+        </div>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--emilie);margin-bottom:14px">Planning</div>
+        <div class="st-card-name">Planning at Momentus</div>
+        <div class="st-card-fw">Momentus Technologies' History</div>
+      </div>
+    </div>
+    <div class="product-block" id="hcpb-owen"
+         style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.22);">
+      <div role="button" tabindex="0" aria-label="View Operations Historic Context"
+           onclick="openHcModal('owen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('owen');}"
+           style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><g transform="translate(6,6) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+        </div>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--owen);margin-bottom:14px">Operations</div>
+        <div class="st-card-name">Operations at Momentus</div>
+        <div class="st-card-fw">Momentus Technologies' History</div>
+      </div>
+    </div>
+    <div class="product-block" id="hcpb-dana"
+         style="background:linear-gradient(135deg,#221904 0%,#3a2b08 100%);border:1px solid rgba(234,179,8,0.22);">
+      <div role="button" tabindex="0" aria-label="View Financial Historic Context"
+           onclick="openHcModal('dana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('dana');}"
+           style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><g transform="translate(6,6) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+        </div>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dana);margin-bottom:14px">Financial</div>
+        <div class="st-card-name">Financial at Momentus</div>
+        <div class="st-card-fw">Momentus Technologies' History</div>
+      </div>
+    </div>
+    <div class="product-block" id="hcpb-e3"
+         style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);">
+      <div role="button" tabindex="0" aria-label="View End-to-End Historic Context"
+           onclick="openHcModal('e3')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('e3');}"
+           style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><g transform="translate(6,10) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+        </div>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--e3);margin-bottom:14px">End-to-End</div>
+        <div class="st-card-name">Momentus Technologies' History</div>
+        <div class="st-card-fw">End-to-End History</div>
       </div>
     </div>
   </div>
@@ -1465,7 +1589,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div class="star-card sc-sharon">
       <div class="star-eyebrow" style="color:var(--sharon)">◆ North Star · Sales Product Area</div>
       <div class="star-metric">Momentus Opportunities <span class="star-abbr">(MO)</span></div>
-      <div class="star-def">The number of event opportunities that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM, email thread, or paper contract. An opportunity counts only when the entire intake-to-contract workflow completes inside the platform.</div>
+      <div class="star-def">The number of event opportunities that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM, email thread, or paper contract — combined with the velocity of that conversion: the elapsed time from qualified inquiry to signed contract. An opportunity counts only when the entire intake-to-contract workflow completes inside the platform, and faster inquiry-to-signature time is tracked as a core signal of sales health alongside volume.</div>
       <div class="ov-badges">
         <span class="chip-label">Feeds ME intake stage</span>
         <span class="chip-label">Closes the CRM fallback gap</span>
@@ -1573,6 +1697,45 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div class="rationale"><div class="rat-q">Why the Planning-to-Ops handoff is the highest-stakes moment</div><div class="rat-a">Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on Jordan's team without a safety net. MW rises when that handoff is clean, written, and inside Momentus.</div></div>
   </div>
 
+  <!-- DANA / EVENT FINANCIALS VIEW -->
+  <div class="tab-view" id="ns-dana" role="tabpanel" aria-labelledby="tab-ns-dana">
+    <div class="star-card sc-dana">
+      <div class="star-eyebrow" style="color:var(--dana)">◆ North Star · Financial Product Area</div>
+      <div class="star-metric">Momentus Financials <span class="star-abbr">(MF)</span></div>
+      <div class="star-def">The number of events whose full financial closeout — budget reconciliation, GL matching, invoice generation and approval — is completed entirely inside Momentus during a rolling 30-day window, without falling back to a separate ERP (e.g. PeopleSoft), spreadsheet, or manual cross-system reconciliation.</div>
+      <div class="ov-badges">
+        <span class="chip-label">Peer metric alongside MO / MP / MW</span>
+        <span class="chip-label">Closes the multi-system reconciliation gap</span>
+        <span class="chip-label">Direct measure of financial value realization</span>
+      </div>
+    </div>
+
+    <div class="persona-strip">
+      <div class="dot" style="background:var(--dana)"></div>
+      <span class="pname"><a class="xlink xlink-dana" href="#" onclick="goToPersona('dana'); return false;">Casey Lindgren</a></span>
+      <span class="prole">— Finance Director · "The Financial Steward"</span>
+      <span class="ptag">Primary Persona · Event Finance</span>
+    </div>
+
+    <div class="sl">Key input metrics</div>
+    <div class="arrow-row"><span>↓ MF key input metrics drive</span><strong>Momentus Financials</strong><span>which confirms →</span><strong>real financial value from MO, MP, and MW</strong></div>
+    <div class="inputs-grid">
+      <div class="ic"><div class="ic-dim d-adopt">Adoption · Active user</div><div class="ic-name">Active Finance users reconciling events in Momentus</div><div class="ic-def">Number of Finance/Controller users who created or updated at least one event financial record inside Momentus — not PeopleSoft or a spreadsheet — in the past 30 days.</div></div>
+      <div class="ic"><div class="ic-dim d-engage">Engagement · Feature usage</div><div class="ic-name">Avg. GL/invoice actions completed per closeout inside Momentus</div><div class="ic-def">Average number of reconciliation, GL, and invoice actions completed per event inside the platform vs. handled in an outside ERP.</div></div>
+      <div class="ic"><div class="ic-dim d-retain">Retention · Return rate</div><div class="ic-name">Month-over-month Finance user return rate</div><div class="ic-def">Percentage of active Finance users in a given month who were also active the prior month — matches Finance's monthly close cadence.</div></div>
+      <div class="ic"><div class="ic-dim d-effic">Efficiency · Time to value</div><div class="ic-name">Avg. days from event end to fully reconciled close</div><div class="ic-def">Median calendar days from event close to a fully reconciled, invoiced, and approved financial record. Directly named as a KPI in the research: "Days to event close."</div></div>
+      <div class="ic"><div class="ic-dim d-effect">Effectiveness · Task success</div><div class="ic-name">% of events reaching full reconciliation without manual cross-system correction</div><div class="ic-def">Percentage of events that close without Finance needing to pull data from PeopleSoft, payroll, or another outside system to complete it.</div></div>
+    </div>
+
+    <hr class="section-divider">
+    <div class="sl" style="margin-bottom:12px">Why MF — grounded in the research</div>
+    <div class="rationale"><div class="rat-q">The core failure MF addresses</div><div class="rat-a">Finance today assembles a financial picture by hand from PeopleSoft, Enterprise, payroll, ticketing, and contractor invoices — "it takes three different reports from PeopleSoft and an Enterprise report, then I combine the data." MF rises only when that full picture is built inside Momentus — it cannot be gamed by creating a budget and never reconciling actuals against it.</div></div>
+    <div class="rationale"><div class="rat-q">Why MF is hard to achieve</div><div class="rat-a">The financial lifecycle of an event routinely outlives the event itself: contractor invoices arrive weeks or months late — one venue reported "an unexpected $20K invoice... four months after the event closed" — and end-of-month close is unpredictable depending on when they post. MF measures whether that tail is shrinking.</div></div>
+    <div class="rationale"><div class="rat-q">How MF relates to MO, MP, and MW</div><div class="rat-a">MF doesn't replace or complete the ME chain — it's a parallel confirmation that what Sales, Planning, and Operations produced actually reconciles to real dollars. An event can be a full MO → MP → MW success and still be a financial mess if it isn't reconciled cleanly.</div></div>
+    <div class="rationale"><div class="rat-q">Why public/institutional venues make this harder</div><div class="rat-a">City-owned and public assembly venues route vendor and budget decisions through formal procurement and government approval channels, adding friction that private venues don't face. MF-supporting features need to respect that constraint, not assume fast, flexible vendor relationships.</div></div>
+    <div class="rationale"><div class="rat-q">What MF unlocks beyond a single event's close</div><div class="rat-a">Clean, timely reconciliation is what makes self-serve department P&L, trend/what-if budget modeling, and stakeholder-ready economic impact reporting possible. Finance can't build any of that on data that's still being manually stitched together.</div></div>
+  </div>
+
     </div>
   </div>
   <div class="page-footer">
@@ -1625,7 +1788,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div style="width:10px;height:10px;border-radius:50%;background:var(--emilie);flex-shrink:0;box-shadow:0 0 6px var(--emilie)"></div>
     <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--emilie),var(--owen))"></div>
     <div style="width:10px;height:10px;border-radius:50%;background:var(--owen);flex-shrink:0;box-shadow:0 0 6px var(--owen)"></div>
-    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--owen),var(--e3))"></div>
+    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--owen),var(--dana))"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:var(--dana);flex-shrink:0;box-shadow:0 0 6px var(--dana)"></div>
+    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--dana),var(--e3))"></div>
     <img src="momentus_logo.png" width="18" height="18" alt="" style="flex-shrink:0;filter:drop-shadow(0 0 5px var(--e3));opacity:0.9">
     <div style="flex:1"></div>
   </div>
@@ -1672,6 +1837,20 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="st-card-name">Jordan Olsen</div>
       <div class="st-card-fw">Operations Primary Persona · Operations Supervisor</div>
     </div>
+    <div class="product-block" id="pb-persona-dana"
+         style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
+         role="button" tabindex="0" aria-label="View Dana persona detail"
+         onclick="openPersonaModal('dana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPersonaModal('dana');}">
+      <div style="position:absolute;top:18px;right:18px;opacity:0.2">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/>
+          <circle cx="18" cy="16" r="5.5"/><path d="M18 13v6M16.3 17.2c0 .9.9 1.4 1.7 1.4s1.7-.5 1.7-1.3c0-1.8-3.4-1.1-3.4-2.9 0-.8.8-1.3 1.7-1.3s1.7.5 1.7 1.2"/>
+        </svg>
+      </div>
+      <div class="st-card-num">04</div>
+      <div class="st-card-name">Casey Lindgren</div>
+      <div class="st-card-fw">Financial Primary Persona · Finance Director</div>
+    </div>
     <div class="product-block" id="pb-persona-e3"
          style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
          role="button" tabindex="0" aria-label="View E3 persona detail"
@@ -1682,7 +1861,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
           <rect x="13.5" y="12" width="8.5" height="7" rx="1"/><path d="M13.5 15.5h8.5"/><path d="M16.5 10.5v3M19.5 10.5v3"/>
         </svg>
       </div>
-      <div class="st-card-num">04</div>
+      <div class="st-card-num">05</div>
       <div class="st-card-name">Morgan Rivera</div>
       <div class="st-card-fw">End-to-End Primary Persona · Venue Director</div>
     </div>
@@ -1901,7 +2080,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div style="width:10px;height:10px;border-radius:50%;background:var(--emilie);flex-shrink:0;box-shadow:0 0 6px var(--emilie)"></div>
     <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--emilie),var(--owen))"></div>
     <div style="width:10px;height:10px;border-radius:50%;background:var(--owen);flex-shrink:0;box-shadow:0 0 6px var(--owen)"></div>
-    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--owen),var(--e3))"></div>
+    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--owen),var(--dana))"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:var(--dana);flex-shrink:0;box-shadow:0 0 6px var(--dana)"></div>
+    <div style="flex:2;height:1px;background:linear-gradient(90deg,var(--dana),var(--e3))"></div>
     <img src="momentus_logo.png" width="18" height="18" alt="" style="flex-shrink:0;filter:drop-shadow(0 0 5px var(--e3));opacity:0.9">
     <div style="flex:1"></div>
   </div>
@@ -2100,7 +2281,70 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div class="sec-attrs-wrap" id="sec-obj-attrs-operations" style="display:none"></div>
   </div>
 
-  <!-- PRODUCT 4: E3 EVENT (END-TO-END) -->
+  <!-- PRODUCT 4: DANA EVENT FINANCIALS (FINANCIAL) -->
+  <div class="product-block" id="pb-financials" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.22);">
+    <div role="button" tabindex="0" aria-label="Expand Event Financials object detail"
+         onclick="openObjectModal('financials')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('financials');}"
+         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;border-bottom:1px solid rgba(234,179,8,0.12);">
+      <div style="position:absolute;top:14px;right:14px;opacity:0.2">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
+      </div>
+      <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dana);margin-bottom:14px">Financial</div>
+      <div class="st-card-name">Event Financials</div>
+      <div class="st-card-fw">Primary Object</div>
+    </div>
+    <div class="attr-grid">
+      <div class="attr-col fixed-col">
+        <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
+        <ul class="attr-list">
+          <li class="attr-item"><div class="attr-name">Event / Booking Reference</div><div class="attr-note">the event this financial record belongs to</div></li>
+          <li class="attr-item"><div class="attr-name">Budget Line / GL Code</div><div class="attr-note">the ledger account revenue and costs post to</div></li>
+          <li class="attr-item"><div class="attr-name">Price List Applied</div><div class="attr-note">the rate schedule governing billable items</div></li>
+          <li class="attr-item"><div class="attr-name">Contracted Revenue</div><div class="attr-note">the agreed booking value from the signed contract</div></li>
+          <li class="attr-item"><div class="attr-name">Cost Center / Department Allocation</div><div class="attr-note">which department(s) share in this event's P&amp;L</div></li>
+          <li class="attr-item"><div class="attr-name">Fiscal Period</div><div class="attr-note">the reporting period this event's activity falls into</div></li>
+        </ul>
+      </div>
+      <div class="attr-col dynamic-col">
+        <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
+        <ul class="attr-list">
+          <li class="attr-item"><div class="attr-name">Status</div><div class="attr-note">Budgeted → In Progress → Pending Invoices → Reconciled → Closed</div></li>
+          <li class="attr-item"><div class="attr-name">Actual vs. Budgeted Revenue</div><div class="attr-note">real-time variance as actuals post</div></li>
+          <li class="attr-item"><div class="attr-name">Actual vs. Budgeted Costs</div><div class="attr-note">labor, contractor, F&amp;B, overhead</div></li>
+          <li class="attr-item"><div class="attr-name">Outstanding Contractor Invoices</div><div class="attr-note">count / amount not yet received</div></li>
+          <li class="attr-item"><div class="attr-name">Variance Flags</div><div class="attr-note">line items exceeding threshold, requiring explanation</div></li>
+          <li class="attr-item"><div class="attr-name">Invoice Approval Stage</div><div class="attr-note">drafted → event manager review → exec director approval → sent to customer</div></li>
+        </ul>
+      </div>
+      <div class="attr-col structural-col">
+        <div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div>
+        <ul class="attr-list">
+          <li class="attr-item"><div class="attr-name">Assigned Finance Owner</div><div class="attr-note">who is reconciling this event</div></li>
+          <li class="attr-item"><div class="attr-name">Approval Authority</div><div class="attr-note">event manager, exec director, or city CFO sign-off</div></li>
+          <li class="attr-item"><div class="attr-name">Financial Record ID</div><div class="attr-note">system-generated identifier</div></li>
+          <li class="attr-item"><div class="attr-name">Linked SO/WO References</div><div class="attr-note">traceability back to Event Plan and Event Work</div></li>
+          <li class="attr-item"><div class="attr-name">Audit Trail</div><div class="attr-note">procurement / compliance record for public-entity requirements</div></li>
+          <li class="attr-item"><div class="attr-name">Reporting Rollup</div><div class="attr-note">which monthly / department P&amp;L this feeds</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="actions-row">
+      <div class="act-top">
+        <div class="actions-lbl">Actions</div>
+        <div class="act-chips">
+        <span class="act-chip act-secondary act-os" data-desc="Brings a new Event Financials record into existence — establishing the budget, GL code, and price list an event will operate within, before the event executes." onclick="selectObjectAction(this)">Create</span>
+        <span class="act-chip act-secondary act-os" data-desc="Modifies the attributes of an existing Event Financials record — recording actuals, flagging variances, advancing invoice approval stage — as the event moves from budget through closeout." onclick="selectObjectAction(this)">Update</span>
+        <span class="act-chip act-secondary act-os" data-desc="Permanently removes an Event Financials record from the system, erasing the budget, actuals, and reconciliation history for that event." onclick="selectObjectAction(this)">Delete</span>
+        </div>
+      </div>
+      <div class="act-desc"></div>
+    </div>
+    <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Objects</div>
+    <div class="sec-card-row" id="sec-objs-financials"></div>
+    <div class="sec-attrs-wrap" id="sec-obj-attrs-financials" style="display:none"></div>
+  </div>
+
+  <!-- PRODUCT 5: E3 EVENT (END-TO-END) -->
   <div class="product-block" id="pb-event" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);">
     <div role="button" tabindex="0" aria-label="Expand Event object detail"
          onclick="openObjectModal('event')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('event');}"
@@ -2237,10 +2481,11 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 <section id="sec-stage-sharon" class="section">
   <div class="section-header stage-header">
     <div aria-hidden="true" style="display:flex;justify-content:space-between;align-items:center;position:relative">
-      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 33%,var(--owen) 66%,var(--e3));transform:translateY(-50%)"></div>
+      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 25%,var(--owen) 50%,var(--dana) 75%,var(--e3));transform:translateY(-50%)"></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--sharon);box-shadow:0 0 5px var(--sharon)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--emilie);box-shadow:0 0 5px var(--emilie)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--owen);box-shadow:0 0 5px var(--owen)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--dana);box-shadow:0 0 5px var(--dana)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><img src="momentus_logo.png" width="14" height="14" alt="" style="filter:drop-shadow(0 0 4px var(--e3));opacity:0.9"></div>
     </div>
     <div class="stage-tabs-row">
@@ -2259,6 +2504,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <button class="stage-tab" onclick="navigate('stage-owen')" aria-label="Operations Stage" style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.3);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--owen)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
       </button>
+      <button class="stage-tab" onclick="navigate('stage-dana')" aria-label="Financial Stage" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--dana)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
+      </button>
       <button class="stage-tab" onclick="navigate('stage-e3')" aria-label="End-to-End Stage" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.3);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--e3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       </button>
@@ -2271,10 +2519,11 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 <section id="sec-stage-emilie" class="section">
   <div class="section-header stage-header">
     <div aria-hidden="true" style="display:flex;justify-content:space-between;align-items:center;position:relative">
-      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 33%,var(--owen) 66%,var(--e3));transform:translateY(-50%)"></div>
+      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 25%,var(--owen) 50%,var(--dana) 75%,var(--e3));transform:translateY(-50%)"></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--sharon);box-shadow:0 0 5px var(--sharon)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--emilie);box-shadow:0 0 5px var(--emilie)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--owen);box-shadow:0 0 5px var(--owen)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--dana);box-shadow:0 0 5px var(--dana)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><img src="momentus_logo.png" width="14" height="14" alt="" style="filter:drop-shadow(0 0 4px var(--e3));opacity:0.9"></div>
     </div>
     <div class="stage-tabs-row">
@@ -2293,6 +2542,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <button class="stage-tab" onclick="navigate('stage-owen')" aria-label="Operations Stage" style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.3);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--owen)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
       </button>
+      <button class="stage-tab" onclick="navigate('stage-dana')" aria-label="Financial Stage" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--dana)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
+      </button>
       <button class="stage-tab" onclick="navigate('stage-e3')" aria-label="End-to-End Stage" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.3);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--e3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       </button>
@@ -2305,10 +2557,11 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 <section id="sec-stage-owen" class="section">
   <div class="section-header stage-header">
     <div aria-hidden="true" style="display:flex;justify-content:space-between;align-items:center;position:relative">
-      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 33%,var(--owen) 66%,var(--e3));transform:translateY(-50%)"></div>
+      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 25%,var(--owen) 50%,var(--dana) 75%,var(--e3));transform:translateY(-50%)"></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--sharon);box-shadow:0 0 5px var(--sharon)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--emilie);box-shadow:0 0 5px var(--emilie)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--owen);box-shadow:0 0 5px var(--owen)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--dana);box-shadow:0 0 5px var(--dana)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><img src="momentus_logo.png" width="14" height="14" alt="" style="filter:drop-shadow(0 0 4px var(--e3));opacity:0.9"></div>
     </div>
     <div class="stage-tabs-row">
@@ -2327,6 +2580,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
           <div class="page-sub">Make Operations Momentus layer by layer.</div>
         </div>
       </div>
+      <button class="stage-tab" onclick="navigate('stage-dana')" aria-label="Financial Stage" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--dana)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
+      </button>
       <button class="stage-tab" onclick="navigate('stage-e3')" aria-label="End-to-End Stage" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.3);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--e3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       </button>
@@ -2336,13 +2592,14 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Operations Stage</span></div>
 </section>
 
-<section id="sec-stage-e3" class="section">
+<section id="sec-stage-dana" class="section">
   <div class="section-header stage-header">
     <div aria-hidden="true" style="display:flex;justify-content:space-between;align-items:center;position:relative">
-      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 33%,var(--owen) 66%,var(--e3));transform:translateY(-50%)"></div>
+      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 25%,var(--owen) 50%,var(--dana) 75%,var(--e3));transform:translateY(-50%)"></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--sharon);box-shadow:0 0 5px var(--sharon)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--emilie);box-shadow:0 0 5px var(--emilie)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--owen);box-shadow:0 0 5px var(--owen)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--dana);box-shadow:0 0 5px var(--dana)"></div></div>
       <div style="width:40px;display:flex;justify-content:center;position:relative"><img src="momentus_logo.png" width="14" height="14" alt="" style="filter:drop-shadow(0 0 4px var(--e3));opacity:0.9"></div>
     </div>
     <div class="stage-tabs-row">
@@ -2354,6 +2611,47 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </button>
       <button class="stage-tab" onclick="navigate('stage-owen')" aria-label="Operations Stage" style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.3);">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--owen)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+      </button>
+      <div style="width:40px;position:relative">
+        <div class="stage-tab active" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.55);" aria-label="Financial Stage — current">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--dana)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
+        </div>
+        <div class="section-header-text" style="position:absolute;left:48px;top:50%;transform:translateY(-50%);white-space:nowrap">
+          <div class="section-title">Financial Stage</div>
+          <div class="page-sub">Make Financial Momentus layer by layer.</div>
+        </div>
+      </div>
+      <button class="stage-tab" onclick="navigate('stage-e3')" aria-label="End-to-End Stage" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--e3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="sv-layers" id="sv-dana"><!-- built by JS --></div>
+  <div class="page-footer"><span>Momentus Event Lifecycle Map</span><span>Financial Stage</span></div>
+</section>
+
+<section id="sec-stage-e3" class="section">
+  <div class="section-header stage-header">
+    <div aria-hidden="true" style="display:flex;justify-content:space-between;align-items:center;position:relative">
+      <div style="position:absolute;top:50%;left:20px;right:20px;height:1px;background:linear-gradient(90deg,var(--sharon),var(--emilie) 25%,var(--owen) 50%,var(--dana) 75%,var(--e3));transform:translateY(-50%)"></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--sharon);box-shadow:0 0 5px var(--sharon)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--emilie);box-shadow:0 0 5px var(--emilie)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--owen);box-shadow:0 0 5px var(--owen)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><div style="width:8px;height:8px;border-radius:50%;background:var(--dana);box-shadow:0 0 5px var(--dana)"></div></div>
+      <div style="width:40px;display:flex;justify-content:center;position:relative"><img src="momentus_logo.png" width="14" height="14" alt="" style="filter:drop-shadow(0 0 4px var(--e3));opacity:0.9"></div>
+    </div>
+    <div class="stage-tabs-row">
+      <button class="stage-tab" onclick="navigate('stage-sharon')" aria-label="Sales Stage" style="background:linear-gradient(135deg,#092115 0%,#123020 100%);border:1px solid rgba(52,211,153,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sharon)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+      </button>
+      <button class="stage-tab" onclick="navigate('stage-emilie')" aria-label="Planning Stage" style="background:linear-gradient(135deg,#060e22 0%,#0d1e3c 100%);border:1px solid rgba(96,165,250,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emilie)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+      </button>
+      <button class="stage-tab" onclick="navigate('stage-owen')" aria-label="Operations Stage" style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--owen)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+      </button>
+      <button class="stage-tab" onclick="navigate('stage-dana')" aria-label="Financial Stage" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.3);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--dana)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
       </button>
       <div style="width:40px;position:relative">
         <div class="stage-tab active" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.55);" aria-label="End-to-End Stage — current">
@@ -2519,6 +2817,33 @@ const PERSONAS_DETAIL = {
     ],
     grammarPills: ['Event Work', 'Product', 'Create'],
     interaction: 'Execute and close a work order'
+  },
+  dana: {
+    color: '--dana', bgColor: '--dana-bg', border: '--dana-b',
+    product: 'Event Finance',
+    archetype: 'The Financial Steward',
+    role: 'Casey Lindgren · Finance Director',
+    quote: '“They make sure the numbers can be trusted.”',
+    quoteSrc: 'Casey Lindgren',
+    object: 'Event Financials', objId: 'financials', objClass: 'obj-dana',
+    fixed: [
+      'Their personality is detail-oriented and integrity-driven, focused on financial accuracy and translating operational activity into numbers stakeholders can trust',
+      'They have a background in venue finance, accounting, or public-sector financial management — often navigating both hospitality operations and municipal/institutional compliance',
+      'They are skilled in budget reconciliation, variance analysis, GL management, and translating financial data into stakeholder-ready reporting'
+    ],
+    dynamic: [
+      'From stitching together PeopleSoft, Enterprise, payroll, and contractor systems by hand → to one consolidated, live view of event and venue financial performance',
+      'From discovering budget variances at month-end, when it’s too late to act → to surfacing variances early enough to correct course',
+      'From chasing contractor invoices for weeks or months after an event closes → to proactive, predictable invoice timing and a fast, clean close'
+    ],
+    structural: [
+      'Receives the operational handoff from planning and operations — accountable for reconciling every dollar of an event after execution is complete',
+      'Financial gatekeeper at a public/institutional venue: procurement, vendor approval, and budget decisions route through formal government or municipal channels',
+      'The de facto data-integrity function for the entire venue — depends on event planners, operations, contractors, and payroll to enter their data correctly, and absorbs every gap as their own problem to resolve',
+      'Responsible for monthly financial reporting to executive directors, department heads, and — at public venues — a city CFO or government board'
+    ],
+    grammarPills: ['Event Financials', 'Product', 'Reconcile'],
+    interaction: 'Reconcile and close event financials'
   },
   e3: {
     color: '--e3', bgColor: '--e3-bg', border: '--e3-b',
@@ -2792,19 +3117,19 @@ const VERTICAL_ATTRS = {
     'Stadiums & Arenas': {
       persona: 'Owen Olsen · Operations Supervisor', archetype: 'The Moment Maker',
       fixed: [
-        'Their personality is adaptable and decisive under pressure, managing the broadest operational scope of any vertical across private events and game day simultaneously',
-        'They have a background in sports venue operations, where last-minute changes and game-day surprises are part of every event cycle',
-        'They are skilled in physical event execution and crew coordination, though currently limited by mobile capability gaps that restrict real-time digital responsiveness in the field'
+        'Their personality is hands-on and decisive under pressure, executing private rental and sponsorship events where scheduling is complicated by shifting sports-season and playoff timing',
+        'They have a background in stadium/arena operations focused on private events — rentals, sponsorships, internal use — a distinct track from the venue\'s separate public game-day/concert operations',
+        'They are skilled in physical event execution and crew coordination via printed work orders and daily team briefings, though currently limited by the lack of an in-app editing or mobile workflow'
       ],
       dynamic: [
-        'From the game manifest as a static, emailed PDF that goes out of date immediately → to a living, role-tailored document with real-time change tracking',
-        'From verbal/email change communication during live events → to mobile work order updates that propagate in real time across the team',
-        'From manual actuals entry at the end of the day → to progressive completion tracking throughout event execution'
+        'From translating event needs into work orders entirely by hand → to automated event detailing that generates functions, orders, and notes directly from the event outline',
+        'From documenting real-time changes on printed work orders and re-entering them into Momentus at end of day → to in-app editing with immediate change tracking',
+        'From constant manual checking for changes and deadlines → to role-based notifications that alert ops automatically'
       ],
       structural: [
-        'Manages the full operations crew for both private events and public events including setup, housekeeping, security, and logistics',
-        'Change tracking is a core accountability — must maintain a clear log of what changed when across the full operations crew',
-        'Interfaces with third-party catering companies and external vendors who operate outside the Momentus platform'
+        'Owns the Private Events track (rentals, sponsorships, internal events) — hosts daily briefings, assigns tasks, and closes out work orders and actuals at day\'s end',
+        'Public/game-day operations (the game manifest, satellite catering, suites, control room) are owned by a separate Building Operations role, not Owen — the two tracks run side by side but aren\'t the same job',
+        'Accountable for translating client/event needs into executable work orders — currently a fully manual step with no system support'
       ]
     }
   },
@@ -3020,7 +3345,7 @@ const SECONDARY_PERSONAS = {
         'From disconnected risk, planning, operations, and incident workflows → to an integrated loop where incidents feed back into future risk assessments'
       ],
       structural: [
-        'Works across event management (Paige), operations (Owen), and control room (Carrie) — risk spans all three functions and requires active participation from each',
+        'Works across event management (Paige), the separate building-operations/game-day role, and control room (Carrie) — risk spans all these functions and requires active participation from each',
         'Responsible for risk assessments, mitigation coordination, audit trails, and regulatory reporting; has one chance to get non-risk teams to engage before losing them',
         'Uses WeTrack (not Momentus) for incident management — the gap between incident data and the event record represents a critical integration opportunity'
       ]
@@ -3195,6 +3520,7 @@ function openPersonaModal(pId) {
     sharon: `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>`,
     emilie: `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/></svg>`,
     owen:   `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/></svg>`,
+    dana:   `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><circle cx="18" cy="16" r="4"/><path d="M18 14v4M16.5 17.2c0 .7.7 1.1 1.5 1.1s1.5-.4 1.5-1c0-1.4-3-.8-3-2.2 0-.6.7-1 1.5-1s1.5.4 1.5.9"/></svg>`,
     e3:     `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M19 14c0 4-3 6.5-3 6.5S13 18 13 14a3 3 0 0 1 6 0z"/><circle cx="16" cy="14" r="1"/></svg>`
   };
   const personaIcon = PERSONA_ICONS[pId] || '';
@@ -3212,14 +3538,14 @@ function openPersonaModal(pId) {
   }
 
   const secPersonas = SECONDARY_PERSONAS[pId] || [];
-  const secCardsHTML = secPersonas.map((sp, i) => {
+  const secCardsHTML = secPersonas.length ? secPersonas.map((sp, i) => {
     return `<div class="sec-card" data-si="${i}" onclick="toggleSecCard(this,'${pId}',${i})" style="--sec-accent:${c};--sec-bg:${bg}">
       <div class="sec-card-role">${sp.role}</div>
       <div class="sec-card-name">${sp.name}</div>
       <div class="sec-card-arch">${sp.archetype}</div>
       <div class="sec-card-rel">${sp.relationship}</div>
     </div>`;
-  }).join('');
+  }).join('') : `<div style="border:1px dashed var(--border);border-radius:var(--r);padding:12px 14px;flex:1 1 100%;font-size:13px;color:var(--text-d)">No secondary personas documented yet — not yet covered by validation interviews.</div>`;
 
   const tabsHTML = vertNames.map(v => {
     const safeV = v.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
@@ -3237,7 +3563,8 @@ function openPersonaModal(pId) {
         </div>
         <button class="jd-close" aria-label="Close dialog" onclick="closePersonaModal()">✕</button>
       </div>
-      <div style="padding:14px 20px;border-top:1px solid var(--border);font-size:14px;font-style:italic;color:var(--text-s)">${d.quote}</div>
+      <div style="padding:14px 20px 6px;border-top:1px solid var(--border);font-size:14px;font-style:italic;color:var(--text-s)">${d.quote}</div>
+      <div style="padding:0 20px 12px;font-family:var(--f-mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-d)">Composite voice — synthesized across validated interviews, not a direct quote</div>
       <div class="ptab-bar" id="ptab-bar-${pId}" style="--ptab-c:${c}">
         <div class="ptab active" data-tab="unified" onclick="switchPersonaTab(this,'${pId}','unified')">Unified Persona Attributes</div>
         ${tabsHTML}
@@ -3304,6 +3631,7 @@ function openNsModal(id) {
     sharon: { c:'var(--sharon)', bg:'var(--sharon-bg)', b:'var(--sharon-b)' },
     emilie: { c:'var(--emilie)', bg:'var(--emilie-bg)', b:'var(--emilie-b)' },
     owen:   { c:'var(--owen)',   bg:'var(--owen-bg)',   b:'var(--owen-b)'   },
+    dana:   { c:'var(--dana)',   bg:'var(--dana-bg)',   b:'var(--dana-b)'   },
   };
   const { c, bg, b } = colorMap[id] || colorMap.e3;
 
@@ -3312,6 +3640,7 @@ function openNsModal(id) {
     sharon: { pId:'sharon', pRole:'Sales Manager',          objId:'booking',    objName:'Event Opportunity'   },
     emilie: { pId:'emilie', pRole:'Event Planner',      objId:'planning',   objName:'Event Plan'      },
     owen:   { pId:'owen',   pRole:'Operations Supervisor',  objId:'operations', objName:'Event Work'       },
+    dana:   { pId:'dana',   pRole:'Finance Director',       objId:'financials', objName:'Event Financials' },
     e3:     { pId:null,     pRole:null,                     objId:'event',      objName:'Momentus Events' },
   };
   const meta = nsMeta[id] || nsMeta.e3;
@@ -3393,6 +3722,122 @@ function closeNsModal() {
   document.getElementById('ns-modal-detail').innerHTML = '';
 }
 
+/* ── HISTORIC CONTEXT (Strategy Layer) ──
+   Living, growing dataset — append new entries as Andrea supplies more source
+   material. Each entry: sort (YYYY-MM, for chronological ordering only),
+   dateLabel (what's actually shown — honest about uncertainty), category
+   (industry | customer | product), area (sales | planning | operations |
+   universal — universal entries surface on every card; sales/planning/
+   operations entries surface only on their card plus the End-to-End card). */
+const HISTORIC_CONTEXT = [
+  { sort:'1985-01', dateLabel:'1985', category:'product', area:'universal', title:'Ungerboeck Systems Inc. founded', desc:'Catherine and Dieter Ungerboeck found the company in Chesterfield, Missouri, building custom software for process manufacturing — the root of what becomes Momentus Technologies.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'1989-01', dateLabel:'1989', category:'product', area:'universal', title:'First venue & event management system built', desc:'After requests from the St. Louis and Los Angeles Convention & Visitors Bureaus, the company builds its first purpose-built venue/event system: EBMS (Event Business Management Software).', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'1997-01', dateLabel:'1997', category:'customer', area:'universal', title:'Duke University — first Higher Ed customer', desc:"Duke becomes the company's first and longest-active university customer, anchoring what is now the Higher Education vertical.", source:'PMO-Enterprise for Education - Product Strategy.pdf', sourceUrl:null },
+  { sort:'1998-01', dateLabel:'1998', category:'customer', area:'universal', title:'Northern Illinois University signs on', desc:'An early follow-on Higher Ed customer win, extending the university foothold established with Duke the year before.', source:'PMO-Enterprise for Education - Product Strategy.pdf', sourceUrl:null },
+  { sort:'2012-01', dateLabel:'2012', category:'product', area:'universal', title:'Browser-based Version 20 released; rebrand to Ungerboeck Software International', desc:'EBMS moves to a browser-based architecture, improving accessibility and scalability, alongside a rebrand emphasizing the shift.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2019-01', dateLabel:'2019', category:'product', area:'universal', title:'Rebrand to "Ungerboeck"', desc:'The company simplifies its name and refocuses development on mobility, agility, and connectivity.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2021-05', dateLabel:'May 2021', category:'product', area:'sales', title:'Merger with EventBooking', desc:"Ungerboeck merges with EventBooking to integrate event marketing, booking workflows, and operational data — an early step toward a unified sales/booking product.", source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2021-11', dateLabel:'Nov 2021', category:'product', area:'universal', title:'Acquires ShoWorks and Priava', desc:"ShoWorks adds exhibits & competition-entry management; Priava adds strong representation in Australia, New Zealand, and the United Kingdom.", source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2021-12', dateLabel:'Late 2021', category:'customer', area:'operations', title:'WeTrack launches its Sustainability module, wins ASM Global', desc:'Following considerable discovery work, WeTrack (later acquired by Momentus) ships its sustainability-tracking module and lands its first major venue-market client, ASM Global.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
+  { sort:'2022-01', dateLabel:'2022', category:'product', area:'operations', title:'Acquires RiskSense101 and VRM360', desc:'Acquired from risk-management agency Reliance Risk, adding risk-assessment tooling into the EBMS workflow ecosystem.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2022-06', dateLabel:'2022', category:'industry', area:'universal', title:'Live-events industry valued at $652.6B', desc:"Allied Market Research values the global live-events industry at $652.6 billion in 2022, projecting growth to $1.2 trillion by 2032 — macro context cited in Momentus's own strategy work.", source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
+  { sort:'2023-01', dateLabel:'Jan 2023', category:'product', area:'universal', title:'Rebrands to "Momentus Technologies"', desc:"Unifies Ungerboeck's growing portfolio of acquired products under one connected brand and platform.", source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2023-04', dateLabel:'Apr 2023', category:'product', area:'operations', title:'Acquires WeTrack', desc:'Momentus acquires the London-based WeTrack, adding sustainability, incident-tracking, and control-room software to the portfolio.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
+  { sort:'2023-06', dateLabel:'2023', category:'industry', area:'universal', title:'Global accounting-software market at ~$16.8B', desc:"Cited context for the Enterprise Accounting & Financials strategy: the global accounting-software market, growing ~9.2% CAGR, that Momentus Enterprise's finance suite competes within.", source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
+  { sort:'2023-06', dateLabel:'2023', category:'product', area:'operations', title:'"Change tracking" feature launched for operations', desc:'Momentus releases a change-tracking feature giving operations teams configurable alert windows for late changes, built directly in response to heavy paper- and radio-based coordination — especially among AMER customers.', source:'Stakeholder Interviews Data Dump.docx', sourceUrl:null },
+  { sort:'2023-07', dateLabel:'Jul 2023', category:'product', area:'sales', title:'Formal Corporate market product review', desc:'Momentus conducts a dedicated Corporate-segment product review, positioning Enterprise against an aging EMS as the market\'s declining incumbent.', source:'PMO-Product strategy - Corporate Market.pdf', sourceUrl:null },
+  { sort:'2023-07', dateLabel:'Jul 2023', category:'customer', area:'universal', title:'New Higher Ed logos: Brown, Colby, UC Berkeley', desc:"Brown University, Colby College, and UC Berkeley (Cal Performances) sign on, alongside a snapshot of the broader Higher Ed pipeline — including notable competitive losses to EMS and CourseDog.", source:'PMO-Enterprise for Education - Product Strategy.pdf', sourceUrl:null },
+  { sort:'2023-07', dateLabel:'Jul 2023', category:'customer', area:'operations', title:"WeTrack ARR snapshot by vertical", desc:'Post-acquisition, WeTrack\'s ARR splits: Event Organiser 58.8%, Venue 35.0%, Event Supplier 3.6%, Corporate 2.5% — with named key clients FIFA, ICC, World Rugby, Arsenal FC, and Ascot Racecourse.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
+  { sort:'2023-08', dateLabel:'Aug 2023', category:'product', area:'operations', title:'WeTrack ships multi-language BETA', desc:'French, Italian, Spanish, German, and Arabic translations released as WeTrack integrates into the Momentus product family.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
+  { sort:'2023-09', dateLabel:'Sep 2023', category:'customer', area:'universal', title:'Convention Center vertical: 237 customers, ~$22M ARR', desc:'A vertical snapshot shows 237 customers across 32 countries (AMER 40%, EMEA 44%, APAC 16%, 91% hosted) — the base the company later builds on to win the Las Vegas Convention Center.', source:'PMO-Enterprise Convention Centers - Product Strategy.pdf', sourceUrl:null },
+  { sort:'2023-11', dateLabel:'Nov 2023', category:'product', area:'operations', title:'WeTrack regional licensing & Momentus brand alignment', desc:'Licensing for regional clusters, theming/navigation updates, and analytics integration (Smartlook + Pendo) ship as WeTrack adopts Momentus branding.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
+  { sort:'2023-11', dateLabel:'Nov 15, 2023', category:'industry', area:'universal', title:'Finalist, Event Technology Awards 2023', desc:"Momentus is named a finalist in Best Venue Booking Solution and Best Sustainable Solution (plus a People's Choice nomination) at the awards ceremony in ExCeL London.", source:'Momentus blog: Event Technology Awards 2023 finalist', sourceUrl:'https://gomomentus.com/blog/momentus-technologies-named-finalist-in-two-categories-at-the-event-technology-awards-2023' },
+  { sort:'2023-12', dateLabel:'Dec 2023', category:'product', area:'planning', title:'WeTrack Planning module (Gantt) expanded for FIFA', desc:"WeTrack's Planning workflow gets Gantt-chart updates driven directly by FIFA's expanding planning/risk needs, alongside new integration pulling Enterprise/Elite event data into WeTrack.", source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
+  { sort:'2024-01', dateLabel:'Ongoing', category:'customer', area:'sales', title:'Sales lead intake identified as highly manual', desc:'Customer research surfaces manual lead intake/qualification, no centralized funnel view, and inconsistent proposal formatting as a recurring sales pain point across venues.', source:'Event Lifecycle & Verticals.pptx', sourceUrl:null },
+  { sort:'2024-01', dateLabel:'Ongoing', category:'customer', area:'planning', title:'Planning collaboration flagged as disjointed', desc:'Customers describe wanting a "Google Doc experience" for shared event-detail editing with planners, plus automatic payment-status notifications — capabilities not yet delivered.', source:'Event Lifecycle & Verticals.pptx', sourceUrl:null },
+  { sort:'2024-03', dateLabel:'End of Mar 2024', category:'product', area:'operations', title:'Risk Manager discontinued, folded into WeTrack', desc:'Momentus stops selling standalone Risk Manager, consolidating its functionality into WeTrack rather than maintaining two overlapping risk products.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
+  { sort:'2024-06', dateLabel:'~2024', category:'customer', area:'sales', title:'Jaarbeurs migrates CRM to Salesforce', desc:'Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years."', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
+  { sort:'2025-03', dateLabel:'Mar 2025', category:'product', area:'sales', title:'Group Room Control launches for Walt Disney World', desc:'Completion of this hotel group-booking feature becomes the trigger for a strategic push into the underrepresented Hotels, Casinos & Resorts vertical.', source:'PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf', sourceUrl:null },
+  { sort:'2025-06', dateLabel:'2025', category:'industry', area:'universal', title:'Industry shift toward "entertainment districts"', desc:'Stadiums & arenas (e.g. Atlanta Braves, Kansas City Power & Light) increasingly diversify revenue beyond gameday, reshaping what venue customers need from Momentus.', source:'Event Lifecycle & Verticals.pptx', sourceUrl:null },
+  { sort:'2025-09', dateLabel:'2025', category:'customer', area:'universal', title:'Wins Las Vegas Convention Center', desc:'Momentus becomes the software of choice for the top 16 U.S. convention centers by square footage.', source:'PMO-Enterprise Convention Centers - Product Strategy.pdf', sourceUrl:null },
+  { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'universal', title:'First global Executive Advisory Board meeting', desc:'Momentus holds its first-ever global EAB virtual meeting, formally chartering a customer advisory forum capped at 50 members worldwide across segments and products.', source:'EAB March 2026 - Internal Agenda and Run of Show.docx', sourceUrl:null },
+  { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'universal', title:'EAB survey: efficiency is the #1 shared priority', desc:'69% of surveyed customers name operational efficiency/reducing manual work as their top priority for 2026; AI-powered automation (63%) and BI/Reporting (56%) are the top tool categories being evaluated.', source:'EAB_Customer_Agenda_2.docx', sourceUrl:null },
+  { sort:'2026-03', dateLabel:'Mar 2026', category:'product', area:'sales', title:'Sales AI CRM roadmap announced', desc:'Momentus frames its AI strategy as evolving from "System of Record" to "System of Action," starting with an agentic Sales CRM (targeted Q3 2026) as the first of a four-agent product journey.', source:'EAB_RunOfShow_v2.docx', sourceUrl:null },
+  { sort:'2026-03', dateLabel:'Mar 2026', category:'industry', area:'universal', title:'GDPR gates European ambient-listening AI features', desc:'GDPR and works-council consent requirements (Germany, France, Austria) are identified as a deployment prerequisite — not an afterthought — for AI features that listen in on meetings/calls in Europe.', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
+  { sort:'2024-04', dateLabel:'Apr 2024', category:'customer', area:'financial', title:'Enterprise Accounting: adoption climbs with NPS by module', desc:'746 customers use Enterprise Accounting (45% Core Receivables/GL, 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory.', source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
+  { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'financial', title:'EAB session: "We do not know how much we\'re worth"', desc:'The first global EAB session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event.', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
+  { sort:'2026-07', dateLabel:'Jul 2026', category:'product', area:'financial', title:'AI-Powered Opportunities strategy defined for Financial persona', desc:'Product strategy identifies 5 AI opportunity areas mapped to the persona\'s top pain points: vendor invoice intelligence, a consolidated P&L dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling.', source:'financials_ai_opportunities.docx', sourceUrl:null },
+];
+
+const HC_CARD_META = {
+  sharon: { areas:['sales'],      eyebrow:'Sales',       label:'Sales at Momentus',       color:'var(--sharon)' },
+  emilie: { areas:['planning'],   eyebrow:'Planning',    label:'Planning at Momentus',     color:'var(--emilie)' },
+  owen:   { areas:['operations'], eyebrow:'Operations',  label:'Operations at Momentus',   color:'var(--owen)' },
+  dana:   { areas:['financial'],  eyebrow:'Financial',   label:'Financial at Momentus',    color:'var(--dana)' },
+  e3:     { areas:null,                       eyebrow:'End-to-End',  label:"Momentus Technologies' History", color:'var(--e3)' },
+};
+const HC_CAT_META = {
+  industry: { label:'Industry / Market History', color:'var(--hist-industry)', bg:'var(--hist-industry-bg)' },
+  customer: { label:'Customer History',          color:'var(--hist-customer)', bg:'var(--hist-customer-bg)' },
+  product:  { label:'Product History',           color:'var(--hist-product)',  bg:'var(--hist-product-bg)' },
+};
+let hcCurrentId = null, hcCurrentCat = 'all';
+
+function openHcModal(id) {
+  hcCurrentId = id;
+  hcCurrentCat = 'all';
+  renderHcModal();
+  _modalOpen('hc-modal');
+}
+function closeHcModal() {
+  _modalClose('hc-modal');
+  document.getElementById('hc-modal-detail').innerHTML = '';
+}
+function hcFilter(cat) {
+  hcCurrentCat = cat;
+  renderHcModal();
+}
+function renderHcModal() {
+  const meta = HC_CARD_META[hcCurrentId];
+  const items = HISTORIC_CONTEXT
+    .filter(e => !meta.areas || meta.areas.includes(e.area))
+    .filter(e => hcCurrentCat === 'all' || e.category === hcCurrentCat)
+    .slice()
+    .sort((a, b) => b.sort.localeCompare(a.sort));
+
+  const chipsHTML = ['all', 'industry', 'customer', 'product'].map(cat => {
+    const active = hcCurrentCat === cat ? 'active' : '';
+    const label = cat === 'all' ? 'All' : HC_CAT_META[cat].label;
+    const styleAttr = cat === 'all' ? '' : ` style="--hc-c:${HC_CAT_META[cat].color};--hc-c-bg:${HC_CAT_META[cat].bg}"`;
+    return `<button class="hc-chip ${active}"${styleAttr} onclick="hcFilter('${cat}')">${label}</button>`;
+  }).join('');
+
+  const itemsHTML = items.map(e => {
+    const cat = HC_CAT_META[e.category];
+    return `<div class="hc-tl-item">
+      <div class="hc-tl-rail"><div class="hc-tl-dot" style="background:${cat.color}"></div><div class="hc-tl-line"></div></div>
+      <div class="hc-tl-main">
+        <div class="hc-tl-date">${e.dateLabel}</div>
+        <div class="hc-tl-cat" style="color:${cat.color}">${cat.label}</div>
+        <div class="hc-tl-title">${e.title}</div>
+        <div class="hc-tl-desc">${e.desc}</div>
+        <div class="hc-tl-source">${e.sourceUrl ? `<a href="${e.sourceUrl}" target="_blank" rel="noopener">${e.source} ↗</a>` : `Source: ${e.source}`}</div>
+      </div>
+    </div>`;
+  }).join('') || `<div class="hc-tl-empty">No entries yet in this category for this area — more will land here as Andrea adds sources.</div>`;
+
+  document.getElementById('hc-modal-detail').innerHTML = `
+    <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--border)">
+      <div style="padding:16px 20px;border-left:3px solid ${meta.color};position:relative">
+        <button class="jd-close" aria-label="Close dialog" onclick="closeHcModal()" style="position:absolute;top:14px;right:14px">✕</button>
+        <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${meta.color};margin-bottom:5px">${meta.eyebrow}</div>
+        <div style="font-family:var(--f-disp);font-size:22px;font-weight:800;color:var(--text);line-height:1.15">${meta.label}</div>
+      </div>
+      <div class="hc-filter-row">${chipsHTML}</div>
+      <div class="hc-timeline">${itemsHTML}</div>
+    </div>`;
+}
+
 function goToPersona(personaId) {
   if (document.getElementById('ns-modal').classList.contains('open')) closeNsModal();
   if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
@@ -3470,6 +3915,7 @@ function openObjectModal(objId) {
     booking:    { c:'var(--sharon)', bg:'var(--sharon-bg)', b:'var(--sharon-b)', stage:'Sales',      label:'Event Opportunity', iconPath:'<path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10.4 19.5-2.4.5.5-2.4 5-5c.33-.33.86-.33 1.2 0l.7.7a.848.848 0 0 1 0 1.2z"/>' },
     planning:   { c:'var(--emilie)', bg:'var(--emilie-bg)', b:'var(--emilie-b)', stage:'Planning',   label:'Event Plan',    iconPath:'<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>' },
     operations: { c:'var(--owen)',   bg:'var(--owen-bg)',   b:'var(--owen-b)',   stage:'Operations', label:'Event Work',     iconPath:'<polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>' },
+    financials: { c:'var(--dana)',   bg:'var(--dana-bg)',   b:'var(--dana-b)',   stage:'Financial',  label:'Event Financials', iconPath:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/>' },
     event:      { c:'var(--e3)',     bg:'var(--e3-bg)',     b:'var(--e3-b)',     stage:'End-to-End', label:'Event',         iconPath:'<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/>' },
   };
   const m = objMeta[objId] || objMeta.booking;
@@ -3573,6 +4019,7 @@ const PERSONAS_J = [
   { id:'sharon',  name:'Alex Smith',   role:'Sales Manager',         mainAction:'Secure Event Opportunity', archetype:'The Dream Catcher',  product:'Event Sales',      object:'Event Opportunity', objId:'booking',    job:'Book high-value events that maximize revenue and calendar utilization for the venue',                                            jtbd:{ when:'a new inquiry or lead enters my pipeline',              want:'evaluate, propose, and contract the booking entirely inside Momentus',           soCan:'maximize revenue and calendar utilization without losing deals to slower, fragmented workflows' },             color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
   { id:'emilie',  name:'Sam Evans',   role:'Event Planner',      mainAction:'Detail Event Plan',    archetype:'The Promise Keeper', product:'Event Planning',   object:'Event Plan',   objId:'planning',   job:'Gather, confirm, and communicate every detail of a committed event so operations can execute it exactly as the client expects',                                        jtbd:{ when:'a confirmed booking lands in my queue from sales',       want:'detail, approve, and distribute a complete BEO inside Momentus',               soCan:'ensure every department has exactly what they need to execute without questions — and without surprises for the client on the invoice' },                       color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
   { id:'owen',    name:'Jordan Olsen', role:'Operations Supervisor',  mainAction:'Execute Event Work',   archetype:'The Moment Maker',   product:'Event Operations', object:'Event Work',   objId:'operations', job:'Execute all work orders required to set up, run, and tear down an event — deploying crew and resources efficiently across multiple simultaneous events',                                        jtbd:{ when:'the finalized event plan and work orders arrive from planning',                          want:'assign, track, and close all work orders inside Momentus',                soCan:'run a flawless event — with every crew member knowing exactly where to be and when, without paper, radio guesswork, or last-minute scrambles' },                color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
+  { id:'dana',    name:'Casey Lindgren', role:'Finance Director',      mainAction:'Reconcile Event Financials', archetype:'The Financial Steward', product:'Event Finance', object:'Event Financials', objId:'financials', job:'Reconcile event and venue-level financial performance — from budget through final closeout — so every dollar is accounted for and the venue’s financial story holds up to scrutiny', jtbd:{ when:'an event has executed and needs to move from operational activity to a reconciled financial record', want:'consolidate budget, actuals, and invoices into one accurate financial close entirely inside Momentus', soCan:'reconcile events cleanly, catch variances before they become problems, and report the venue’s financial story confidently to executives, department heads, and government stakeholders' }, color:'--dana', bgColor:'--dana-bg', border:'--dana-b' },
   { id:'e3',     name:'Morgan Rivera', role:'Venue Director',         mainAction:'Manage Event',         archetype:'The Orchestrator',   product:'Momentus Events',  object:'Event',       objId:'event',      job:'Oversee the full event lifecycle — from booking through execution — to deliver consistently exceptional experiences and sustainable business outcomes', jtbd:{ when:'a new event enters the pipeline',                    want:'maintain real-time visibility and control across sales, planning, and operations in a single connected system — most of this today is an innovation opportunity, not yet a solved workflow', soCan:'make faster, more confident decisions — and ensure every team is aligned, with handoffs tracked and performance visible across the full lifecycle' }, color:'--e3', bgColor:'--e3-bg', border:'--e3-b' },
 ];
 
@@ -3580,6 +4027,7 @@ const SHORT = {
   sharon: { define:'Qualify event fit & feasibility',       locate:'Optimize space selection & revenue',   prepare:'Price & build proposals',      confirm:'Manage space holds strategically',  execute:'Close deals & secure commitments',       monitor:'Forecast revenue accurately',      modify:'Update terms',         conclude:'Transition to operations' },
   emilie: { define:'Scope requirements',     locate:'Review booking & scope functions',       prepare:'Build the event plan',       confirm:'Confirm functions & orders',        execute:'Distribute event order',       monitor:'Track completion',    modify:'Update & notify',      conclude:'Ensure completion' },
   owen:   { define:'Scope work orders',         locate:'Access work orders',      prepare:'Forecast & publish orders',    confirm:'Confirm no last-minute changes',      execute:'Run the event',        monitor:'Real-time track',     modify:'Handle change orders',       conclude:'Capture actuals & close' },
+  dana:   { define:'Set the budget baseline',   locate:'Pull event financial setup', prepare:'Review vendors & allocate costs', confirm:'Lock budget & billables', execute:'Monitor spend & payroll', monitor:'Catch variances early', modify:'Resolve disputes & reallocate', conclude:'Reconcile & close the books' },
   e3:     { define:'Set the strategy',       locate:'Assess the pipeline',  prepare:'Align departments',   confirm:'Authorize the event',  execute:'Oversee event execution',    monitor:'Track performance',   modify:'Direct adjustments',   conclude:'Review outcomes' },
 };
 
@@ -3854,6 +4302,68 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'an unresolved incident remaining open after the work order is submitted as complete',when:'concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented'}
     ]}
   },
+  dana:{
+    define:{ step:'Create the long-horizon budget and price list an event will be measured against, and ensure all billable items are set up in the system before the event is sold — Budget creation happens up to a year or more in advance, and procurement rules for vendor and contract selection are often set at this stage.', researchOpps:'AI can surface spend patterns across past events and project the impact of a reallocation before committing — turning budget creation from a static, historical exercise into a forward-modeled one.', outcomes:[
+      {dir:'Minimize',metric:'the time it takes to',obj:'build and submit a venue or event budget for approval',when:'creating a long-horizon annual or capital-project budget under municipal or institutional review timelines'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the initial price list and billable item setup for a new fiscal year or event type',when:'preparing pricing ahead of peak booking season'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a billable item being missing from the system at the point an event is sold',when:'finance has not yet synced new service or space offerings into the price list before sales begins booking them'},
+      {dir:'Minimize',metric:'the effort required to',obj:'route a vendor or contract decision through required procurement and approval channels',when:'operating under municipal or public-entity purchasing rules that apply even to routine repairs or services'},
+      {dir:'Maximize',metric:'the confidence in',obj:'the budget baseline an event will later be measured against',when:'submitting a multi-year or capital-project-adjacent budget for executive and government approval'}
+    ]},
+    locate:{ step:'Retrieve the budget line, price list, and contract terms relevant to a specific event — currently pulled from multiple disconnected systems (PeopleSoft for budget/payables, Enterprise for GL and event cost data).', outcomes:[
+      {dir:'Minimize',metric:'the time it takes to',obj:'locate the budget line and price list that apply to a specific event',when:'preparing to review or approve costs for an upcoming or in-progress event'},
+      {dir:'Minimize',metric:'the effort required to',obj:'cross-reference vendor contract terms against the system of record',when:'verifying that a contractor’s invoiced rate matches what was originally contracted'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'needing to pull data from more than one system to answer a basic event-financial question',when:'a department head or executive asks for a quick read on an event’s financial position'},
+      {dir:'Maximize',metric:'the speed of',obj:'accessing GL inquiry detail for a specific event',when:'investigating a reported cost or revenue discrepancy'}
+    ]},
+    prepare:{ step:'Review vendor and contractor terms, allocate costs to the correct departments and cost centers, and confirm procurement approvals are complete before the event executes.', outcomes:[
+      {dir:'Minimize',metric:'the effort required to',obj:'allocate an event’s projected costs across the correct departments and cost centers',when:'multiple departments share responsibility for a single event’s budget'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'complete vendor and contract review through required procurement channels',when:'a contractor or vendor relationship must be approved before work can begin'},
+      {dir:'Maximize',metric:'the clarity of',obj:'which department owns which line item in an event’s budget',when:'preparing for a multi-department event where cost ownership has historically been ambiguous'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a contracted rate being entered incorrectly before the event begins',when:'setting up contractor and vendor terms that will later be checked against invoices'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the pre-event cost allocation plan',when:'preparing budgets for events with a history of departments not tracking their own spend'}
+    ]},
+    confirm:{ step:'Confirm the budget, price list, and billable item setup are finalized and locked before the event window opens.', outcomes:[
+      {dir:'Maximize',metric:'the confidence in',obj:'the budget and price list being finalized before an event begins',when:'an event with non-standard pricing or vendor terms is about to move into execution'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a budget or price list change occurring after the event has already begun',when:'late pricing or vendor decisions are still being finalized close to the event date'},
+      {dir:'Minimize',metric:'the effort required to',obj:'verify that every billable item planned for an event has been correctly entered in the system',when:'preparing for an event with a large or non-standard list of chargeable services'},
+      {dir:'Maximize',metric:'the speed of',obj:'resolving a missing budget line before the event window opens',when:'a last-minute change to event scope requires a corresponding budget adjustment'}
+    ]},
+    execute:{ step:'Monitor event spend and vouchers as they post, check GL entries for variance throughout the event, and verify labor costs against payroll — while confirming operations and planning are entering data correctly in real time.', outcomes:[
+      {dir:'Minimize',metric:'the time it takes to',obj:'identify a GL variance while an event is still in progress',when:'reviewing GL entries throughout a live, multi-day event'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a labor cost discrepancy going unnoticed until after payroll runs',when:'verifying contracted and in-house labor actuals against event-day staffing'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'data entered by event planners and operations into service orders and work orders',when:'an event’s post-event reconciliation depends on that data being correct at the source'},
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm that billable vouchers are being recorded correctly as the event unfolds',when:'monitoring spend across a multi-department, multi-day event'},
+      {dir:'Maximize',metric:'the speed of',obj:'flagging a cost that is tracking meaningfully over budget while the event is still running',when:'there is still time to intervene before the event concludes'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'contractor costs going untracked during the event because the invoice hasn’t arrived yet',when:'third-party vendors are on-site but bill separately and later'},
+      {dir:'Maximize',metric:'the confidence in',obj:'the real-time financial picture of an in-progress event',when:'an executive or department head asks how an event is tracking against budget before it has closed'}
+    ]},
+    monitor:{ step:'Track budget-vs-actual variance on an ongoing basis and forecast the likely month-end financial position — rather than discovering shortfalls only when the books close.', researchOpps:'ML forecasts month-end position from mid-month signals — unposted vouchers, labor actuals, open work orders — alerting Finance weeks before a surprise hits, e.g. "Based on current trajectory, you’re likely to close 7% over budget on labor."', outcomes:[
+      {dir:'Minimize',metric:'the time it takes to',obj:'detect that an event or department is trending over budget',when:'reviewing spend partway through a month with many concurrent or overlapping events'},
+      {dir:'Maximize',metric:'the visibility into',obj:'a forecasted month-end financial position based on mid-month signals',when:'unposted vouchers, labor actuals, and open work orders have not yet been finalized'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a revenue shortfall between an event’s budget and its actual performance going unnoticed until month-end close',when:'individual event budgets don’t automatically roll up into an aggregate view'},
+      {dir:'Maximize',metric:'the speed of',obj:'alerting the responsible department head to a developing variance',when:'there is still enough time in the month to take corrective action'},
+      {dir:'Minimize',metric:'the effort required to',obj:'determine which events are driving an emerging budget variance',when:'a department’s aggregate numbers look off but the specific cause isn’t yet clear'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the monthly close forecast communicated to senior leadership',when:'preparing department heads and executives for an upcoming financial reporting cycle'}
+    ]},
+    modify:{ step:'Investigate and resolve contested costs, correct GL coding errors, and reallocate budget between line items or departments as circumstances change.', productDocOpps:'The AI learns commonly miscoded line items and auto-suggests GL corrections pre-close.', outcomes:[
+      {dir:'Minimize',metric:'the time it takes to',obj:'resolve a contested or disputed contractor cost',when:'a vendor’s invoiced amount doesn’t match the originally contracted rate'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify and correct a GL miscoding before period close',when:'a line item has been posted to the wrong cost center or account'},
+      {dir:'Maximize',metric:'the confidence in',obj:'a proposed budget reallocation between line items or departments',when:'moving funds requires understanding the downstream impact on margin'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'the same GL coding error recurring across multiple events',when:'a department consistently miscodes the same type of expense'},
+      {dir:'Minimize',metric:'the effort required to',obj:'document the reason and approval for a budget change',when:'a change must be traceable for audit or government reporting purposes'}
+    ]},
+    conclude:{ step:'Verify service orders and work orders were entered correctly, reconcile the GL, generate and route the invoice through multi-step approval, chase any outstanding contractor invoices, and share the final balance with the customer — closing the financial record for the event. — The financial lifecycle of an event routinely extends weeks or months past the event itself while contractor invoices remain outstanding.', researchOpps:'Predict invoice timing and auto-match line items to work orders via NLP — Finance reviews exceptions only, not every invoice.', productDocOpps:'A consolidated P&L dashboard across ERP, payroll, ticketing, and contractor systems, with natural-language query on top ("Why did F&B margin drop in March?"); AI-generated plain-language variance digests pushed to department heads automatically after each event closes.', outcomes:[
+      {dir:'Minimize',metric:'the time it takes to',obj:'verify that all service orders and work orders were entered correctly before starting reconciliation',when:'beginning post-event closeout for a multi-department event'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an event remaining unreconciled because a contractor invoice hasn’t arrived',when:'third-party vendors routinely submit invoices weeks or months after an event closes'},
+      {dir:'Maximize',metric:'the speed of',obj:'generating and routing a customer invoice through its full approval chain',when:'an invoice must be reviewed by the event manager and approved by the executive director before it reaches the customer'},
+      {dir:'Minimize',metric:'the effort required to',obj:'assemble a consolidated profit-and-loss view for a single event',when:'P&L data currently must be pulled from separate ERP, payroll, ticketing, and contractor systems and combined by hand'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the final reconciled balance shared with the customer',when:'outstanding charges, credits, or contractor costs are still being confirmed at close'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an unexpected cost surfacing months after an event is considered closed',when:'a large number of third parties were involved and their invoices arrive on inconsistent timelines'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'produce a department-level or venue-level monthly P&L',when:'department heads and executives expect regular, on-time financial reporting'},
+      {dir:'Maximize',metric:'the completeness of',obj:'the economic impact and stakeholder financial report for a closed event',when:'reporting the venue’s value to a city CFO, board, or other government stakeholder'}
+    ]}
+  },
   e3:{
     define:{ step:'Set the strategic criteria for which events to pursue and how the venue prioritizes its pipeline across sales, planning, and operations', researchOpps:'Configurable event type templates and governance rules that encode best practices into the platform — ensuring every team follows a consistent process without requiring a manual playbook. Cross-departmental calendar visibility from the strategy layer would surface conflicts and resource constraints before events are committed, rather than surfacing them at execution.', outcomes:[
       {dir:'Maximize',metric:'the clarity of',obj:'event-type prioritization criteria communicated to the sales team',when:'setting quarterly targets and defining which event categories the venue will actively pursue'},
@@ -3944,12 +4454,14 @@ const PERSONA_PATHS = {
   sharon: `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/>`,
   emilie: `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/>`,
   owen:   `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/>`,
+  dana:   `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><circle cx="18" cy="16" r="4"/><path d="M18 14v4M16.5 17.2c0 .7.7 1.1 1.5 1.1s1.5-.4 1.5-1c0-1.4-3-.8-3-2.2 0-.6.7-1 1.5-1s1.5.4 1.5.9"/>`,
   e3:     `<path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M19 14c0 4-3 6.5-3 6.5S13 18 13 14a3 3 0 0 1 6 0z"/><circle cx="16" cy="14" r="1"/>`
 };
 const OBJECT_PATHS = {
   booking:    `<path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10.4 19.5-2.4.5.5-2.4 5-5c.33-.33.86-.33 1.2 0l.7.7a.848.848 0 0 1 0 1.2z"/>`,
   planning:   `<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>`,
   operations: `<polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>`,
+  financials: `<circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/>`,
   event:      `<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/>`
 };
 const STAGE_PATHS = {
@@ -3980,6 +4492,7 @@ function renderStagesOverview() {
     sharon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><g transform="translate(5,8) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
     emilie: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><g transform="translate(6,8) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
     owen:   `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><g transform="translate(6,6) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
+    dana:   `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/><g transform="translate(6,6) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
     e3:     `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><g transform="translate(6,10) scale(0.5)"><path stroke-width="3" d="${sparkle}"/></g></svg>`,
   };
 
@@ -3987,14 +4500,16 @@ function renderStagesOverview() {
     { pId:'sharon', num:'01', name:'Sales',       fw:'Momentus Opportunities', action:'Sales managers secure event opportunities.',           bg:'linear-gradient(135deg,#092115 0%,#123020 100%)', border:'rgba(52,211,153,0.22)',  dot:'var(--sharon)', target:'stage-sharon' },
     { pId:'emilie', num:'02', name:'Planning',    fw:'Momentus Plans',    action:'Event planners detail event plans.',          bg:'linear-gradient(135deg,#060e22 0%,#0d1e3c 100%)', border:'rgba(96,165,250,0.22)',  dot:'var(--emilie)', target:'stage-emilie' },
     { pId:'owen',   num:'03', name:'Operations',  fw:'Momentus Work',     action:'Operations supervisors execute event jobs.',      bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', border:'rgba(249,115,22,0.22)', dot:'var(--owen)',   target:'stage-owen'   },
-    { pId:'e3',     num:'04', name:'End-to-End',  fw:'Momentus Events',   action:'They work together to make it Momentus!',        bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', border:'rgba(178,102,228,0.22)', dot:'var(--e3)', target:'stage-e3' },
+    { pId:'dana',   num:'04', name:'Financial',   fw:'Momentus Financials', action:'Finance directors reconcile event financials.', bg:'linear-gradient(135deg,#3d3005 0%,#5c4a08 100%)', border:'rgba(234,179,8,0.22)', dot:'var(--dana)', target:'stage-dana' },
+    { pId:'e3',     num:'05', name:'End-to-End',  fw:'Momentus Events',   action:'They work together to make it Momentus!',        bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', border:'rgba(178,102,228,0.22)', dot:'var(--e3)', target:'stage-e3' },
   ];
 
   // Timeline rail: dots centered over each card column using flex 1:2:2:2:1 ratio
   const connGradients = [
     'linear-gradient(90deg,var(--sharon),var(--emilie))',
     'linear-gradient(90deg,var(--emilie),var(--owen))',
-    'linear-gradient(90deg,var(--owen),var(--e3))',
+    'linear-gradient(90deg,var(--owen),var(--dana))',
+    'linear-gradient(90deg,var(--dana),var(--e3))',
   ];
   let railHTML = `<div style="display:flex;align-items:center;margin-bottom:12px">`;
   railHTML += `<div style="flex:1"></div>`;
@@ -4069,6 +4584,12 @@ const STAGE_GRADS = {
     { bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', depth:'#120802', outline:'rgba(249,115,22,0.2)' },
     { bg:'linear-gradient(135deg,#301808 0%,#4e2410 100%)', depth:'#1c0e06', outline:'rgba(249,115,22,0.2)' },
     { bg:'linear-gradient(135deg,#4e2410 0%,#7a3818 100%)', depth:'#2a1408', outline:'rgba(249,115,22,0.2)' },
+  ],
+  dana: [
+    { bg:'linear-gradient(135deg,#241c02 0%,#3d3005 100%)', depth:'#140f01', outline:'rgba(234,179,8,0.2)' },
+    { bg:'linear-gradient(135deg,#3d3005 0%,#5c4a08 100%)', depth:'#241c02', outline:'rgba(234,179,8,0.2)' },
+    { bg:'linear-gradient(135deg,#5c4a08 0%,#8a7010 100%)', depth:'#3d3005', outline:'rgba(234,179,8,0.2)' },
+    { bg:'linear-gradient(135deg,#8a7010 0%,#c9a818 100%)', depth:'#5c4a08', outline:'rgba(234,179,8,0.2)' },
   ],
   e3: [
     { bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', depth:'#0e0822', outline:'rgba(178,102,228,0.2)' },
@@ -4198,7 +4719,7 @@ function buildJTBDGrid() {
     html += `<div style="display:grid;grid-template-columns:${colTemplate};gap:5px;margin-bottom:5px">`;
 
     /* Timeline column cell */
-    const tlColors = ['var(--sharon)','var(--emilie)','var(--owen)','var(--e3)'];
+    const tlColors = ['var(--sharon)','var(--emilie)','var(--owen)','var(--dana)','var(--e3)'];
     const isFirst = pIdx === 0;
     const isLast  = pIdx === PERSONAS_J.length - 1;
     html += `<div style="display:flex;flex-direction:column;align-items:center;padding:4px 0">
@@ -4214,6 +4735,7 @@ function buildJTBDGrid() {
       sharon: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><path d="M14.5 14l4 4-3.5 3.5H11.5V18z"/><path d="M17.5 11.5l2.5 2.5"/></svg>`,
       emilie: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><line x1="14" y1="11" x2="22" y2="11"/><line x1="14" y1="15" x2="22" y2="15"/><line x1="14" y1="19" x2="19" y2="19"/></svg>`,
       owen:   `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><polyline points="14 15 17.5 19.5 23 11"/></svg>`,
+      dana:   `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><circle cx="18" cy="16" r="4.5"/><path d="M18 13.5v5M16.5 17.3c0 .8.8 1.2 1.5 1.2s1.5-.4 1.5-1.1c0-1.6-3-.9-3-2.5 0-.7.7-1.1 1.5-1.1s1.5.4 1.5 1"/></svg>`,
       e3:     `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><rect x="13.5" y="12" width="8.5" height="7" rx="1"/><path d="M13.5 15.5h8.5"/><path d="M16.5 10.5v3M19.5 10.5v3"/></svg>`,
     };
     html += `<div class="jtbd-persona-label" role="button" tabindex="0" aria-label="View primary job: ${p.mainAction}" style="background:${bg};border:1px solid ${b};border-left:3px solid ${c}" onclick="openJobTimelineModal('${p.id}')">
@@ -4624,6 +5146,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     if      (document.getElementById('job-tl-modal').classList.contains('open'))  closeJobTimelineModal();
     else if (document.getElementById('ns-modal').classList.contains('open'))       closeNsModal();
+    else if (document.getElementById('hc-modal').classList.contains('open'))       closeHcModal();
     else if (document.getElementById('jtbd-modal').classList.contains('open'))     closeJTBDModal();
     else if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
     else if (document.getElementById('persona-modal').classList.contains('open'))  closePersonaModal();
@@ -4644,6 +5167,7 @@ function buildPersonaCards() {
     { id:'sharon', bg:'linear-gradient(135deg,#092115 0%,#123020 100%)', border:'rgba(52,211,153,0.22)',  ghostPath:'<circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><path d="M14.5 14l4 4-3.5 3.5H11.5V18z"/><path d="M17.5 11.5l2.5 2.5"/>' },
     { id:'emilie', bg:'linear-gradient(135deg,#060e22 0%,#0d1e3c 100%)', border:'rgba(96,165,250,0.22)',  ghostPath:'<circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><line x1="14" y1="11" x2="22" y2="11"/><line x1="14" y1="15" x2="22" y2="15"/><line x1="14" y1="19" x2="19" y2="19"/>' },
     { id:'owen',   bg:'linear-gradient(135deg,#1c0c02 0%,#301808 100%)', border:'rgba(249,115,22,0.22)',  ghostPath:'<circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><polyline points="14 15 17.5 19.5 23 11"/>' },
+    { id:'dana',   bg:'linear-gradient(135deg,#3d3005 0%,#5c4a08 100%)', border:'rgba(234,179,8,0.22)',   ghostPath:'<circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><circle cx="18" cy="16" r="5.5"/><path d="M18 13v6M16.3 17.2c0 .9.9 1.4 1.7 1.4s1.7-.5 1.7-1.3c0-1.8-3.4-1.1-3.4-2.9 0-.8.8-1.3 1.7-1.3s1.7.5 1.7 1.2"/>' },
     { id:'e3',     bg:'linear-gradient(135deg,#190e38 0%,#2d1b62 100%)', border:'rgba(178,102,228,0.22)', ghostPath:'<circle cx="9" cy="7" r="3.5"/><path d="M1.5 19.5C1.5 16 4.8 13 9 13"/><rect x="13.5" y="12" width="8.5" height="7" rx="1"/><path d="M13.5 15.5h8.5"/><path d="M16.5 10.5v3M19.5 10.5v3"/>' },
   ];
   cfg.forEach(({ id: pId, bg, border, ghostPath }) => {
@@ -4766,6 +5290,12 @@ document.addEventListener('click', function(e) {
 <div id="ns-modal" class="ns-modal-overlay" role="dialog" aria-modal="true" aria-label="North Star detail" onclick="closeNsModal()">
   <div class="ns-modal-box" onclick="event.stopPropagation()">
     <div id="ns-modal-detail"></div>
+  </div>
+</div>
+
+<div id="hc-modal" class="ns-modal-overlay" role="dialog" aria-modal="true" aria-label="Historic Context detail" onclick="closeHcModal()">
+  <div class="ns-modal-box" onclick="event.stopPropagation()">
+    <div id="hc-modal-detail"></div>
   </div>
 </div>
 </body>
