@@ -1,0 +1,11 @@
+{
+  "name": "elm-content-tools",
+  "private": true,
+  "description": "Maintenance scripts for the Event Lifecycle Map. Not part of the shipped site.",
+  "scripts": {
+    "extract": "node extract-content.js"
+  },
+  "dependencies": {
+    "jsdom": "^29.1.1"
+  }
+}
