@@ -871,16 +871,22 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 .ptab { font-family: var(--f-mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-d); padding: 10px 14px 9px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.15s, border-color 0.15s; margin-bottom: -1px; flex-shrink: 0; }
 .ptab:hover { color: var(--text-s); }
 .ptab.active { color: var(--ptab-c); border-bottom-color: var(--ptab-c); }
-/* ── PERSONA MODAL: SECONDARY PERSONA CARDS ── */
+/* ── SECONDARY OBJECTS PLACEHOLDER (Semantic Layer, unwired — see ARCHITECTURE.md) ── */
 .sec-card-row { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 20px 16px; }
-.sec-card { padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--r); cursor: pointer; background: rgba(255,255,255,0.02); transition: border-color 0.15s, background 0.15s; flex: 1 1 200px; max-width: 320px; }
-.sec-card:hover { border-color: var(--bhi); }
-.sec-card.sec-active { border-color: var(--sec-accent); background: var(--sec-bg); }
-.sec-card-role { font-family: var(--f-mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-d); margin-bottom: 4px; }
-.sec-card-name { font-family: var(--f-disp); font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-.sec-card-arch { font-size: 12px; color: var(--text-s); font-style: italic; margin-bottom: 6px; }
-.sec-card-rel { font-size: 12px; color: var(--text-s); line-height: 1.5; }
 .sec-attrs-wrap { padding: 0 20px 8px; }
+/* ── PRIMARY PERSONAS: PER-AREA COLUMN (primary card + secondary persona tiles) ── */
+.persona-col { display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+.persona-col > .product-block { flex: none; }
+.sec-persona-list { display: flex; flex-direction: column; gap: 8px; }
+.sec-persona-tile { position: relative; padding: 10px 13px 9px 15px; border: 1px solid var(--border); border-radius: var(--r-sm); cursor: pointer; background: rgba(255,255,255,0.02); transition: border-color 0.15s, transform 0.15s; }
+.sec-persona-tile:hover { border-color: var(--bhi); transform: translateY(-1px); }
+.sec-persona-tile::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--sec-tile-accent); border-radius: var(--r-sm) 0 0 var(--r-sm); }
+.sec-persona-tile-role { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-d); margin-bottom: 3px; }
+.sec-persona-tile-name { font-family: var(--f-disp); font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+.sec-persona-tile-arch { font-size: 11px; color: var(--text-s); font-style: italic; }
+.sec-persona-empty { border: 1px dashed var(--border); border-radius: var(--r-sm); padding: 10px 13px; font-size: 12px; color: var(--text-d); }
+/* ── SECONDARY PERSONA MODAL (opened from a .sec-persona-tile) ── */
+.sec-persona-tag { display: inline-block; font-family: var(--f-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-d); border: 1px solid var(--border); border-radius: 20px; padding: 2px 9px; margin-top: 6px; }
 .jd-gap-note { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid #a78bfa; border-radius: var(--r-sm); padding: 11px 14px; font-size: 13px; line-height: 1.65; color: var(--text-s); }
 .jd-gap-note-research { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid #38bdf8; border-radius: var(--r-sm); padding: 11px 14px; font-size: 13px; line-height: 1.65; color: var(--text-s); margin-top: 8px; }
 .jd-gap-note-productdoc { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid #f59e0b; border-radius: var(--r-sm); padding: 11px 14px; font-size: 13px; line-height: 1.65; color: var(--text-s); margin-top: 8px; }
@@ -1695,6 +1701,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div class="rationale"><div class="rat-q">How MW completes ME</div><div class="rat-a">MW is the final link. MO hands off a contracted booking. MP hands off a detailed plan. MW completes the loop by executing that plan inside the platform. An event that passes MO → MP → MW is a ME event. Jordan is the last mile.</div></div>
     <div class="rationale"><div class="rat-q">What MW unlocks beyond single-event execution</div><div class="rat-a">MW's value compounds when venues run multiple concurrent events. Operations teams that execute inside Momentus gain the ability to think holistically — balancing load in and load out across events, deploying crew efficiently, and avoiding redundant labor. A venue running on paper can only optimize one event at a time. MW measures whether operations has the platform foundation to think bigger.</div></div>
     <div class="rationale"><div class="rat-q">Why the Planning-to-Ops handoff is the highest-stakes moment</div><div class="rat-a">Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on Jordan's team without a safety net. MW rises when that handoff is clean, written, and inside Momentus.</div></div>
+    <div class="rationale"><div class="rat-q">What does the gap look like at its most extreme?</div><div class="rat-a">One convention center supervisor described it plainly: "technology stops at the supervisor." Front-line crew work from a printed assignment and a radio — no device, no login — so every completion, delay, and incident is relayed verbally and then reconstructed from memory into a manual end-of-day report emailed to other departments. MW only reflects reality once that hand-translation step disappears, not just once a work order exists somewhere in the platform.</div></div>
   </div>
 
   <!-- DANA / EVENT FINANCIALS VIEW -->
@@ -1794,7 +1801,8 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <img src="momentus_logo.png" width="18" height="18" alt="" style="flex-shrink:0;filter:drop-shadow(0 0 5px var(--e3));opacity:0.9">
     <div style="flex:1"></div>
   </div>
-  <div class="product-row">
+  <div class="product-row" style="align-items:flex-start">
+    <div class="persona-col">
     <div class="product-block" id="pb-persona-sharon"
          style="background:linear-gradient(135deg,#092115 0%,#123020 100%);border:1px solid rgba(52,211,153,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
          role="button" tabindex="0" aria-label="View Sharon persona detail"
@@ -1809,6 +1817,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="st-card-name">Alex Smith</div>
       <div class="st-card-fw">Sales Primary Persona · Sales Manager</div>
     </div>
+    <div class="sec-persona-list" id="sec-tiles-sharon"></div>
+    </div>
+    <div class="persona-col">
     <div class="product-block" id="pb-persona-emilie"
          style="background:linear-gradient(135deg,#060e22 0%,#0d1e3c 100%);border:1px solid rgba(96,165,250,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
          role="button" tabindex="0" aria-label="View Emilie persona detail"
@@ -1823,6 +1834,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="st-card-name">Sam Evans</div>
       <div class="st-card-fw">Planning Primary Persona · Event Planner</div>
     </div>
+    <div class="sec-persona-list" id="sec-tiles-emilie"></div>
+    </div>
+    <div class="persona-col">
     <div class="product-block" id="pb-persona-owen"
          style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
          role="button" tabindex="0" aria-label="View Owen persona detail"
@@ -1837,6 +1851,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="st-card-name">Jordan Olsen</div>
       <div class="st-card-fw">Operations Primary Persona · Operations Supervisor</div>
     </div>
+    <div class="sec-persona-list" id="sec-tiles-owen"></div>
+    </div>
+    <div class="persona-col">
     <div class="product-block" id="pb-persona-dana"
          style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
          role="button" tabindex="0" aria-label="View Dana persona detail"
@@ -1851,6 +1868,9 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="st-card-name">Casey Lindgren</div>
       <div class="st-card-fw">Financial Primary Persona · Finance Director</div>
     </div>
+    <div class="sec-persona-list" id="sec-tiles-dana"></div>
+    </div>
+    <div class="persona-col">
     <div class="product-block" id="pb-persona-e3"
          style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);min-height:180px;position:relative;overflow:hidden;padding:22px 24px 20px;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end"
          role="button" tabindex="0" aria-label="View E3 persona detail"
@@ -1864,6 +1884,8 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="st-card-num">05</div>
       <div class="st-card-name">Morgan Rivera</div>
       <div class="st-card-fw">End-to-End Primary Persona · Venue Director</div>
+    </div>
+    <div class="sec-persona-list" id="sec-tiles-e3"></div>
     </div>
   </div>
   </div>
@@ -2091,7 +2113,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   <div class="product-block" id="pb-booking" style="background:linear-gradient(135deg,#092115 0%,#123020 100%);border:1px solid rgba(52,211,153,0.22);">
     <div role="button" tabindex="0" aria-label="Expand Event Opportunity object detail"
          onclick="openObjectModal('booking')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('booking');}"
-         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;border-bottom:1px solid rgba(52,211,153,0.12);">
+         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;">
       <div style="position:absolute;top:14px;right:14px;opacity:0.2">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10.4 19.5-2.4.5.5-2.4 5-5c.33-.33.86-.33 1.2 0l.7.7a.848.848 0 0 1 0 1.2z"/></svg>
       </div>
@@ -2116,12 +2138,11 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
         <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Status</div><div class="attr-note">Inquiry → Tentative → Definite → Closed</div></li>
-          <li class="attr-item"><div class="attr-name">Hold Priority</div><div class="attr-note">Tentative 1 / 2 / 3 — calendar rank</div></li>
           <li class="attr-item"><div class="attr-name">Proposal Version</div><div class="attr-note">current draft iteration</div></li>
           <li class="attr-item"><div class="attr-name">Contract Status</div><div class="attr-note">Draft → Sent → Signed → Executed</div></li>
           <li class="attr-item"><div class="attr-name">Deposit Status</div><div class="attr-note">Pending → Partially Paid → Received</div></li>
           <li class="attr-item"><div class="attr-name">Calendar Availability</div><div class="attr-note">real-time space conflict flag</div></li>
-          <li class="attr-item"><div class="attr-name">Opportunity Score</div><div class="attr-note">revenue + space fit, AI-ranked</div></li>
+          <li class="attr-item"><div class="attr-name">Pipeline Stage</div><div class="attr-note">position in the sales funnel</div></li>
         </ul>
       </div>
       <div class="attr-col structural-col">
@@ -2130,9 +2151,10 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
           <li class="attr-item"><div class="attr-name">Assigned Sales Rep / Owner</div><div class="attr-note">accountable team member</div></li>
           <li class="attr-item"><div class="attr-name">Booking / Record ID</div><div class="attr-note">system-generated identifier</div></li>
           <li class="attr-item"><div class="attr-name">Created Date</div><div class="attr-note">first capture timestamp</div></li>
-          <li class="attr-item"><div class="attr-name">Pipeline Stage</div><div class="attr-note">position in the sales funnel</div></li>
           <li class="attr-item"><div class="attr-name">Linked Account Record</div><div class="attr-note">connects to CRM account object</div></li>
           <li class="attr-item"><div class="attr-name">Sales Team / Department</div><div class="attr-note">which team owns this booking</div></li>
+          <li class="attr-item"><div class="attr-name">Hold Priority</div><div class="attr-note">Tentative 1 / 2 / 3 — calendar rank</div></li>
+          <li class="attr-item"><div class="attr-name">Opportunity Score</div><div class="attr-note">revenue + space fit, AI-ranked</div></li>
         </ul>
       </div>
     </div>
@@ -2147,7 +2169,6 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </div>
       <div class="act-desc"></div>
     </div>
-    <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Objects</div>
     <div class="sec-card-row" id="sec-objs-booking"></div>
     <div class="sec-attrs-wrap" id="sec-obj-attrs-booking" style="display:none"></div>
   </div>
@@ -2156,7 +2177,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   <div class="product-block" id="pb-planning" style="background:linear-gradient(135deg,#060e22 0%,#0d1e3c 100%);border:1px solid rgba(96,165,250,0.22);">
     <div role="button" tabindex="0" aria-label="Expand Event Plan object detail"
          onclick="openObjectModal('planning')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('planning');}"
-         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;border-bottom:1px solid rgba(96,165,250,0.12);">
+         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;">
       <div style="position:absolute;top:14px;right:14px;opacity:0.2">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
       </div>
@@ -2188,6 +2209,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
           <li class="attr-item"><div class="attr-name">Finalized Flag</div><div class="attr-note">gating state between planning and ops</div></li>
           <li class="attr-item"><div class="attr-name">Service Orders Status</div><div class="attr-note">F&amp;B, AV, setup, labor — draft → confirmed → distributed</div></li>
           <li class="attr-item"><div class="attr-name">Supporting Documents</div><div class="attr-note">diagrams, layout drawings, notes, and attachments</div></li>
+          <li class="attr-item"><div class="attr-name">Distribution Status</div><div class="attr-note">Not Sent → Partially Sent → Fully Distributed — whether assigned departments have received the BEO</div></li>
         </ul>
       </div>
       <div class="attr-col structural-col">
@@ -2197,7 +2219,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
           <li class="attr-item"><div class="attr-name">BEO Number / Document ID</div><div class="attr-note">unique sequential identifier</div></li>
           <li class="attr-item"><div class="attr-name">Department Owner</div><div class="attr-note">Catering, AV, Facilities, Security</div></li>
           <li class="attr-item"><div class="attr-name">Linked Booking ID</div><div class="attr-note">parent event record reference</div></li>
-          <li class="attr-item"><div class="attr-name">Distribution Status</div><div class="attr-note">which departments received the BEO</div></li>
+          <li class="attr-item"><div class="attr-name">Departmental Distribution</div><div class="attr-note">which departments are assigned to receive this BEO</div></li>
           <li class="attr-item"><div class="attr-name">Last Modified Timestamp</div><div class="attr-note">change tracking anchor</div></li>
         </ul>
       </div>
@@ -2213,7 +2235,6 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </div>
       <div class="act-desc"></div>
     </div>
-    <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Objects</div>
     <div class="sec-card-row" id="sec-objs-planning"></div>
     <div class="sec-attrs-wrap" id="sec-obj-attrs-planning" style="display:none"></div>
   </div>
@@ -2222,7 +2243,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   <div class="product-block" id="pb-operations" style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.22);">
     <div role="button" tabindex="0" aria-label="Expand Event Work object detail"
          onclick="openObjectModal('operations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('operations');}"
-         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;border-bottom:1px solid rgba(249,115,22,0.12);">
+         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;">
       <div style="position:absolute;top:14px;right:14px;opacity:0.2">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
       </div>
@@ -2234,7 +2255,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       <div class="attr-col fixed-col">
         <div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div>
         <ul class="attr-list">
-          <li class="attr-item"><div class="attr-name">Work Order / Type</div><div class="attr-note">Setup, Breakdown, F&amp;B, AV, Security…</div></li>
+          <li class="attr-item"><div class="attr-name">Work Order Type</div><div class="attr-note">Setup, Breakdown, F&amp;B, AV, Security…</div></li>
           <li class="attr-item"><div class="attr-name">Linked Function / Booking</div><div class="attr-note">the event this work order belongs to</div></li>
           <li class="attr-item"><div class="attr-name">Space / Location</div><div class="attr-note">where the work order must be executed</div></li>
           <li class="attr-item"><div class="attr-name">Required Start / Due Time</div><div class="attr-note">scheduled execution window</div></li>
@@ -2246,11 +2267,10 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
         <div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div>
         <ul class="attr-list">
           <li class="attr-item"><div class="attr-name">Status</div><div class="attr-note">Pending → Assigned → In Progress → Complete → Verified</div></li>
-          <li class="attr-item"><div class="attr-name">Priority</div><div class="attr-note">Urgent / High / Normal / Low</div></li>
           <li class="attr-item"><div class="attr-name">Completion Progress</div><div class="attr-note">real-time % or checklist completion</div></li>
           <li class="attr-item"><div class="attr-name">Incidents Logged</div><div class="attr-note">count of deviations or issues flagged</div></li>
           <li class="attr-item"><div class="attr-name">Support Material / Change Log</div><div class="attr-note">instructions, diagrams, and real-time crew notes</div></li>
-          <li class="attr-item"><div class="attr-name">Actual vs. Scheduled Time</div><div class="attr-note">execution deviation from BEO timeline</div></li>
+          <li class="attr-item"><div class="attr-name">Actuals vs Expected</div><div class="attr-note">execution deviation from plan</div></li>
         </ul>
       </div>
       <div class="attr-col structural-col">
@@ -2262,6 +2282,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
           <li class="attr-item"><div class="attr-name">Work Order # / Task ID</div><div class="attr-note">system-generated identifier</div></li>
           <li class="attr-item"><div class="attr-name">BEO Reference</div><div class="attr-note">traceability back to Event Plan</div></li>
           <li class="attr-item"><div class="attr-name">Verification Authority</div><div class="attr-note">who can mark Verified / sign off</div></li>
+          <li class="attr-item"><div class="attr-name">Priority</div><div class="attr-note">Urgent / High / Normal / Low</div></li>
         </ul>
       </div>
     </div>
@@ -2276,7 +2297,6 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </div>
       <div class="act-desc"></div>
     </div>
-    <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Objects</div>
     <div class="sec-card-row" id="sec-objs-operations"></div>
     <div class="sec-attrs-wrap" id="sec-obj-attrs-operations" style="display:none"></div>
   </div>
@@ -2285,7 +2305,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   <div class="product-block" id="pb-financials" style="background:linear-gradient(135deg,#3d3005 0%,#5c4a08 100%);border:1px solid rgba(234,179,8,0.22);">
     <div role="button" tabindex="0" aria-label="Expand Event Financials object detail"
          onclick="openObjectModal('financials')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('financials');}"
-         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;border-bottom:1px solid rgba(234,179,8,0.12);">
+         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;">
       <div style="position:absolute;top:14px;right:14px;opacity:0.2">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.8c0-1.3-1.4-2.3-3-2.3s-3 .9-3 2.1c0 2.7 6 1.3 6 4 0 1.2-1.4 2.1-3 2.1s-3-1-3-2.3"/></svg>
       </div>
@@ -2339,7 +2359,6 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </div>
       <div class="act-desc"></div>
     </div>
-    <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Objects</div>
     <div class="sec-card-row" id="sec-objs-financials"></div>
     <div class="sec-attrs-wrap" id="sec-obj-attrs-financials" style="display:none"></div>
   </div>
@@ -2348,7 +2367,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   <div class="product-block" id="pb-event" style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);">
     <div role="button" tabindex="0" aria-label="Expand Event object detail"
          onclick="openObjectModal('event')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openObjectModal('event');}"
-         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;border-bottom:1px solid rgba(178,102,228,0.12);">
+         style="padding:22px 24px 16px;cursor:pointer;position:relative;overflow:hidden;">
       <div style="position:absolute;top:14px;right:14px;opacity:0.2">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
       </div>
@@ -2402,7 +2421,6 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </div>
       <div class="act-desc"></div>
     </div>
-    <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Objects</div>
     <div class="sec-card-row" id="sec-objs-event"></div>
     <div class="sec-attrs-wrap" id="sec-obj-attrs-event" style="display:none"></div>
   </div>
@@ -3333,9 +3351,47 @@ const SECONDARY_PERSONAS = {
         'Manages BEO distribution to kitchen staff (Carole) who has no Momentus access — the last-mile gap in the data chain from event plan to food delivery',
         'Responsible for updating actuals and closing catering work orders after events; this step is often delayed because it requires returning to a desk'
       ]
+    },
+    {
+      name: 'Tanner Tate', role: 'Catering Sales Coordinator', archetype: 'The Dot Connector', vertical: 'Convention Centers',
+      relationship: 'Builds functions and service orders from client F&B requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.',
+      fixed: [
+        'Their personality is pragmatic and process-minded, having worked both the operations execution side and the catering sales input side of the same venue',
+        'They have a background in convention center catering and event operations, having transferred from an operations execution role into catering sales input',
+        'They are skilled in translating unstructured client specs — spreadsheets, whiteboards, verbal requests, PDFs in no consistent format — into structured functions and service orders'
+      ],
+      dynamic: [
+        'From maintaining a shadow Excel spreadsheet for at-a-glance status, minimum spends, and deadlines → to Momentus surfacing that same "what needs my attention" view natively',
+        'From cutting and pasting client menus and specs that lose their formatting — bullets and dashes turning into stray characters → to structured import that preserves formatting',
+        'From emailing distribution groups and manually re-flagging note-only changes the system’s change log doesn’t capture → to a change log that reliably surfaces every update, not just resource and function edits'
+      ],
+      structural: [
+        'Sits between the event manager/sales side and the F&B kitchen/operations side — often the same client relationship split into a separate F&B contact and logistics contact',
+        'Builds recurring functions early but holds off scripting full service orders until requirements are locked, since input in Momentus is flow-driven step by step — financials, bookings, and functions before service orders',
+        'Accountable for translating vague, F&B-only contract language (a single estimate line at signing) into the fully detailed function and service-order structure operations will execute against'
+      ]
     }
   ],
   owen: [
+    {
+      name: 'Orlando Olive', role: 'Operations Crew', archetype: 'The Hands On The Ground', vertical: 'Stadiums & Arenas',
+      relationship: 'Executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.',
+      fixed: [
+        'Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks',
+        'They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Supervisor',
+        'They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests'
+      ],
+      dynamic: [
+        'From a massive, everything-for-everyone manifest → to a filtered, role-specific task list that shows only what Orlando needs to do, in sequence',
+        'From finding out about real-time changes too late → to push notifications for changes that affect his specific tasks',
+        'From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field'
+      ],
+      structural: [
+        'Receives assignments from Operations Supervisor (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor',
+        'Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting',
+        'The final link in the operational data chain: if field staff can\'t log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete'
+      ]
+    },
     {
       name: 'Hank Henry', role: 'Health, Safety & Risk Manager', archetype: 'The Risk Manager', vertical: 'Stadiums & Arenas',
       relationship: 'Manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.',
@@ -3413,22 +3469,22 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      name: 'Orlando Olive', role: 'Operations Crew', archetype: 'The Hands On The Ground', vertical: 'Stadiums & Arenas',
-      relationship: 'Executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.',
+      name: 'Freddie Ford', role: 'Meeting Services Crew', archetype: 'The Analog Anchor', vertical: 'Convention Centers',
+      relationship: 'Executes setup, changeover, and breakdown work under the Meeting Services Supervisor\'s direction — the front-line role where, in the supervisor\'s own words, "technology stops."',
       fixed: [
-        'Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks',
-        'They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Supervisor',
-        'They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests'
+        'Their personality is task-focused and constantly moving — coordinating setup, changeover, and breakdown across rooms entirely by radio',
+        'They have a background in convention center meeting services and banquet setup, working from a printed work order handed out at the morning briefing rather than any device of their own',
+        'They are skilled in fast physical changeover work — reading a room diagram, executing the setup, and reporting status back verbally — with no system access of their own'
       ],
       dynamic: [
-        'From a massive, everything-for-everyone manifest → to a filtered, role-specific task list that shows only what Orlando needs to do, in sequence',
-        'From finding out about real-time changes too late → to push notifications for changes that affect his specific tasks',
-        'From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field'
+        'From a legacy mobile tool a few crew members used to log progress before switching platforms → to no digital tool at all today, reporting status back to the supervisor by radio only',
+        'From carrying a printed work order for the day → to a simple, no-login way to view and confirm today\'s tasks from the floor',
+        'From changes relayed room to room by word of mouth → to a push notification that reaches crew directly when a change affects their space'
       ],
       structural: [
-        'Receives assignments from Operations Supervisor (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor',
-        'Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting',
-        'The final link in the operational data chain: if field staff can\'t log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete'
+        'Receives daily assignments and printed work orders from the Meeting Services Supervisor at the morning briefing — the last link in the chain from event plan to physical setup',
+        'Has no direct system access — every status update, completion, and incident is relayed verbally or by radio and re-entered into the system by the supervisor at day\'s end',
+        'The point where the operational data chain currently goes fully manual — closing the same last-mile gap other front-line crew roles represent elsewhere, but with even less digital access (radio only, no mobile tool)'
       ]
     }
   ],
@@ -3512,6 +3568,24 @@ const SECONDARY_PERSONAS = {
   ]
 };
 
+const svgBase = 'width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85"';
+const PERSONA_ICONS = {
+  sharon: `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>`,
+  emilie: `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/></svg>`,
+  owen:   `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/></svg>`,
+  dana:   `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><circle cx="18" cy="16" r="4"/><path d="M18 14v4M16.5 17.2c0 .7.7 1.1 1.5 1.1s1.5-.4 1.5-1c0-1.4-3-.8-3-2.2 0-.6.7-1 1.5-1s1.5.4 1.5.9"/></svg>`,
+  e3:     `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M19 14c0 4-3 6.5-3 6.5S13 18 13 14a3 3 0 0 1 6 0z"/><circle cx="16" cy="14" r="1"/></svg>`
+};
+
+function _attrGrid(fixed, dynamic, structural) {
+  const li = arr => arr.map(x => `<li class="attr-item"><div class="attr-name">${x}</div></li>`).join('');
+  return `<div class="attr-grid" style="display:grid">
+    <div class="attr-col fixed-col"><div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div><ul class="attr-list">${li(fixed)}</ul></div>
+    <div class="attr-col dynamic-col"><div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div><ul class="attr-list">${li(dynamic)}</ul></div>
+    <div class="attr-col structural-col"><div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div><ul class="attr-list">${li(structural)}</ul></div>
+  </div>`;
+}
+
 function openPersonaModal(pId) {
   const d = PERSONAS_DETAIL[pId];
   const c = `var(${d.color})`;
@@ -3520,37 +3594,10 @@ function openPersonaModal(pId) {
 
   const area = pId === 'e3' ? 'End-to-End' : d.product.replace('Event ', '');
   const [personaName, jobTitle] = d.role.split(' · ');
-  const svgBase = 'width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:0.85"';
-  const PERSONA_ICONS = {
-    sharon: `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg>`,
-    emilie: `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><line x1="13" y1="14" x2="22" y2="14"/><line x1="13" y1="17" x2="22" y2="17"/><line x1="13" y1="20" x2="20" y2="20"/></svg>`,
-    owen:   `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M15 19l2 2L22 14"/></svg>`,
-    dana:   `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><circle cx="18" cy="16" r="4"/><path d="M18 14v4M16.5 17.2c0 .7.7 1.1 1.5 1.1s1.5-.4 1.5-1c0-1.4-3-.8-3-2.2 0-.6.7-1 1.5-1s1.5.4 1.5.9"/></svg>`,
-    e3:     `<svg ${svgBase}><path d="M11.5 15H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M19 14c0 4-3 6.5-3 6.5S13 18 13 14a3 3 0 0 1 6 0z"/><circle cx="16" cy="14" r="1"/></svg>`
-  };
   const personaIcon = PERSONA_ICONS[pId] || '';
 
   const vertData = VERTICAL_ATTRS[pId] || {};
   const vertNames = Object.keys(vertData);
-
-  function _attrGrid(fixed, dynamic, structural) {
-    const li = arr => arr.map(x => `<li class="attr-item"><div class="attr-name">${x}</div></li>`).join('');
-    return `<div class="attr-grid" style="display:grid">
-      <div class="attr-col fixed-col"><div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors. Set once, never changed.</span></div><ul class="attr-list">${li(fixed)}</ul></div>
-      <div class="attr-col dynamic-col"><div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors. Change through the object lifecycle.</span></div><ul class="attr-list">${li(dynamic)}</ul></div>
-      <div class="attr-col structural-col"><div class="attr-header structural-h">Structural Status <span class="sub">— System position. Authority, assignment, record identity.</span></div><ul class="attr-list">${li(structural)}</ul></div>
-    </div>`;
-  }
-
-  const secPersonas = SECONDARY_PERSONAS[pId] || [];
-  const secCardsHTML = secPersonas.length ? secPersonas.map((sp, i) => {
-    return `<div class="sec-card" data-si="${i}" onclick="toggleSecCard(this,'${pId}',${i})" style="--sec-accent:${c};--sec-bg:${bg}">
-      <div class="sec-card-role">${sp.role}</div>
-      <div class="sec-card-name">${sp.name}</div>
-      <div class="sec-card-arch">${sp.archetype}</div>
-      <div class="sec-card-rel">${sp.relationship}</div>
-    </div>`;
-  }).join('') : `<div style="border:1px dashed var(--border);border-radius:var(--r);padding:12px 14px;flex:1 1 100%;font-size:13px;color:var(--text-d)">No secondary personas documented yet — not yet covered by validation interviews.</div>`;
 
   const tabsHTML = vertNames.map(v => {
     const safeV = v.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
@@ -3574,12 +3621,9 @@ function openPersonaModal(pId) {
         <div class="ptab active" data-tab="unified" onclick="switchPersonaTab(this,'${pId}','unified')">Unified Persona Attributes</div>
         ${tabsHTML}
       </div>
-      <div id="ptab-content-${pId}" style="padding:0 20px 8px">
+      <div id="ptab-content-${pId}" style="padding:0 20px 16px">
         ${_attrGrid(d.fixed, d.dynamic, d.structural)}
       </div>
-      <div style="padding:12px 20px 8px;font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d)">Secondary Personas</div>
-      <div class="sec-card-row" id="sec-cards-${pId}">${secCardsHTML}</div>
-      <div class="sec-attrs-wrap" id="sec-attrs-${pId}" style="display:none"></div>
     </div>`;
 }
 
@@ -3614,22 +3658,55 @@ function switchPersonaTab(tabEl, pId, tabKey) {
   </div>`;
 }
 
-function toggleSecCard(cardEl, pId, idx) {
-  const cards = document.querySelectorAll('#sec-cards-' + pId + ' .sec-card');
-  const attrsWrap = document.getElementById('sec-attrs-' + pId);
-  const isActive = cardEl.classList.contains('sec-active');
-  cards.forEach(c => c.classList.remove('sec-active'));
-  if (isActive) { attrsWrap.style.display = 'none'; attrsWrap.innerHTML = ''; return; }
-  cardEl.classList.add('sec-active');
+function buildSecondaryPersonaTiles() {
+  ['sharon', 'emilie', 'owen', 'dana', 'e3'].forEach(pId => {
+    const container = document.getElementById('sec-tiles-' + pId);
+    if (!container) return;
+    const d = PERSONAS_DETAIL[pId];
+    const secPersonas = SECONDARY_PERSONAS[pId] || [];
+    if (!secPersonas.length) {
+      container.innerHTML = `<div class="sec-persona-empty">No secondary personas documented yet — not yet covered by validation interviews.</div>`;
+      return;
+    }
+    container.innerHTML = secPersonas.map((sp, i) => `
+      <div class="sec-persona-tile" style="--sec-tile-accent:var(${d.color})"
+           role="button" tabindex="0" aria-label="View ${sp.name} secondary persona detail"
+           onclick="openSecondaryPersonaModal('${pId}',${i})"
+           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSecondaryPersonaModal('${pId}',${i});}">
+        <div class="sec-persona-tile-role">Secondary Persona</div>
+        <div class="sec-persona-tile-name">${sp.role}</div>
+        <div class="sec-persona-tile-arch">${sp.vertical}</div>
+      </div>`).join('');
+  });
+}
+
+function openSecondaryPersonaModal(pId, idx) {
   const sp = (SECONDARY_PERSONAS[pId] || [])[idx];
   if (!sp) return;
-  const li = arr => arr.map(x => `<li class="attr-item"><div class="attr-name">${x}</div></li>`).join('');
-  attrsWrap.style.display = 'block';
-  attrsWrap.innerHTML = `<div class="attr-grid" style="display:grid">
-    <div class="attr-col fixed-col"><div class="attr-header fixed-h">Fixed Conditions <span class="sub">— Identity descriptors.</span></div><ul class="attr-list">${li(sp.fixed)}</ul></div>
-    <div class="attr-col dynamic-col"><div class="attr-header dynamic-h">Dynamic States <span class="sub">— State descriptors.</span></div><ul class="attr-list">${li(sp.dynamic)}</ul></div>
-    <div class="attr-col structural-col"><div class="attr-header structural-h">Structural Status <span class="sub">— System position.</span></div><ul class="attr-list">${li(sp.structural)}</ul></div>
-  </div>`;
+  const d = PERSONAS_DETAIL[pId];
+  const c = `var(${d.color})`;
+  const bg = `var(${d.bgColor})`;
+  const b = `var(${d.border})`;
+  const area = pId === 'e3' ? 'End-to-End' : d.product.replace('Event ', '');
+  const personaIcon = PERSONA_ICONS[pId] || '';
+
+  _modalOpen('persona-modal');
+  document.getElementById('persona-detail').innerHTML = `
+    <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid ${b}">
+      <div style="padding:16px 20px;border-left:3px solid ${c};background:${bg};display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+        <div>
+          <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Secondary Persona</div>
+          <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:8px">${personaIcon}${sp.role}</div>
+          <div style="font-size:13px;color:var(--text-s)">${sp.name} — ${sp.archetype}</div>
+          <div class="sec-persona-tag">${sp.vertical}</div>
+        </div>
+        <button class="jd-close" aria-label="Close dialog" onclick="closePersonaModal()">✕</button>
+      </div>
+      <div style="padding:14px 20px 6px;border-top:1px solid var(--border);font-size:13px;line-height:1.6;color:var(--text-s)">${sp.relationship}</div>
+      <div style="padding:14px 20px 16px">
+        ${_attrGrid(sp.fixed, sp.dynamic, sp.structural)}
+      </div>
+    </div>`;
 }
 
 function openNsModal(id) {
@@ -3777,6 +3854,7 @@ const HISTORIC_CONTEXT = [
   { sort:'2024-04', dateLabel:'Apr 2024', category:'customer', area:'financial', title:'Enterprise Accounting: adoption climbs with NPS by module', desc:'746 customers use Enterprise Accounting (45% Core Receivables/GL, 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory.', source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
   { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'financial', title:'EAB session: "We do not know how much we\'re worth"', desc:'The first global EAB session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event.', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
   { sort:'2026-07', dateLabel:'Jul 2026', category:'product', area:'financial', title:'AI-Powered Opportunities strategy defined for Financial persona', desc:'Product strategy identifies 5 AI opportunity areas mapped to the persona\'s top pain points: vendor invoice intelligence, a consolidated P&L dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling.', source:'financials_ai_opportunities.docx', sourceUrl:null },
+  { sort:'2024-07', dateLabel:'Jul 2024', category:'customer', area:'operations', title:'Convention Center interview cautions against self-service-as-storefront', desc:'A PavCo/Vancouver Convention Centre catering coordinator interview surfaces a live cautionary example: the venue\'s existing self-service exhibitor ordering system (VCCI) increased transcription workload and produced double-bookings and missed next-day deliveries — reinforcing that the "collaboration portal" concept (flagged Jan 2024) should be a task/communication tool between staff and client, not an e-commerce ordering storefront.', source:'UX- Operational - banquet orders_catering-20240718_130314-Meeting Recording-en-US.docx', sourceUrl:null },
 ];
 
 const HC_CARD_META = {
@@ -4054,7 +4132,9 @@ const MAP = {
       {dir:'Minimize',metric:'the risk of',obj:'pursuing a lead that conflicts with strategic displacement rules or exclusion periods',when:'evaluating an incoming inquiry against existing high-value holds or contracted exclusivity windows'},
       {dir:'Maximize',metric:'the accuracy of',obj:'account history and prior revenue captured before making a qualification decision',when:'evaluating a returning client from a competitor property with limited history in the current system'},
       {dir:'Minimize',metric:'the effort required to',obj:'route a disqualified lead to an alternative contact or venue partner',when:'an inbound inquiry does not meet minimum revenue or fit requirements for the property'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a qualified lead going stale without an initial response',when:'the sales team receives a high volume of inbound inquiries during peak season and response capacity is limited'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a qualified lead going stale without an initial response',when:'the sales team receives a high volume of inbound inquiries during peak season and response capacity is limited'},
+      {dir:'Minimize',metric:'the effort required to',obj:'track a preliminary inquiry that lacks enough detail to justify a formal calendar hold',when:'a cold call or vague inquiry doesn\'t yet warrant creating and then immediately cancelling a hold'},
+      {dir:'Minimize',metric:'the effort required to',obj:'log a lost-business reason at the point a lead is disqualified',when:'time pressure discourages recording why an opportunity did not convert'}
     ]},
     locate:{ step:'Gather available spaces, dates, and client history to assess whether a booking can be made', researchOpps:'A global calendar view with booking gap visibility — surfacing under-utilized dates alongside confirmed holds — would let sales managers proactively identify and fill revenue gaps without exporting to Excel. Accurate hold layering across public events, private events, and entertainment tentatives would eliminate the silo where a sales manager discovers a date conflict only after presenting it to a client.', outcomes:[
       {dir:'Minimize',metric:'the time to',obj:'create event proposals that include venue space, hotel room blocks, and event requirements',when:'responding to a prospective client who expects a comprehensive offer within 24–48 hours of inquiry'},
@@ -4067,7 +4147,8 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'presenting availability to a client that is superseded by a hold placed by another sales manager',when:'multiple team members are working simultaneous leads with overlapping space requirements'},
       {dir:'Maximize',metric:'the accuracy of',obj:'availability information presented to a prospect',when:'a specific space has pending holds, maintenance windows, or setup constraints not yet reflected in the system'},
       {dir:'Minimize',metric:'the effort required to',obj:'identify alternative configurations that meet the client\'s stated requirements',when:'the preferred space is unavailable and a non-standard room combination would satisfy the event\'s functional needs'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'committing to availability contingent on a pending cancellation not yet confirmed',when:'a desirable date has an existing hold in a late follow-up stage'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'committing to availability contingent on a pending cancellation not yet confirmed',when:'a desirable date has an existing hold in a late follow-up stage'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify which specific event is causing a double-booking conflict',when:'the system flags an overlap but does not surface which other booking it conflicts with'}
     ]},
     prepare:{ step:'Assemble the proposal, pricing structure, and hold configuration needed to present an offer — Standardized proposal templates with guided pricing would reduce preparation time and remove reliance on individual intuition. Bringing negotiation in-system with tracked revision history would reduce email cycles and create an auditable offer record. Native pre-event P&L calculation would give sales teams profitability visibility before committing, enabling faster and more confident go/no-go decisions.', researchOpps:'Client-ready proposal output with modern formatting — eliminating the need to re-create Momentus proposals in external tools before sending. An in-system offer management workflow for entertainment bookings would replace the spreadsheet-based deal process, capturing offer terms, counteroffers, and settlement estimates within the same event record.', outcomes:[
       {dir:'Minimize',metric:'the risk of',obj:'underpricing due to overlooked requirements or hidden costs',when:'building a price estimate for an event with non-standard service dependencies not captured in the initial inquiry'},
@@ -4083,7 +4164,8 @@ const MAP = {
       {dir:'Minimize',metric:'the number of manual inputs required to',obj:'populate a new proposal from an existing template or prior event record',when:'preparing a renewal offer for a returning client with consistent annual requirements'},
       {dir:'Maximize',metric:'the accuracy of',obj:'catering minimums and contracted service inclusions shown in a proposal',when:'presenting a price estimate that will form the basis of a formal offer and displacement decision'},
       {dir:'Minimize',metric:'the effort required to',obj:'customize proposal content to match the client\'s stated priorities and event type',when:'preparing a proposal for a corporate event that requires a branded template different from the venue default'},
-      {dir:'Minimize',metric:'the time it takes to',obj:'get pricing approval from revenue management before sending a proposal',when:'the booking requires a below-standard rate that must be authorized before the offer is extended'}
+      {dir:'Minimize',metric:'the time it takes to',obj:'get pricing approval from revenue management before sending a proposal',when:'the booking requires a below-standard rate that must be authorized before the offer is extended'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'obtain multi-party sign-off on a discretionary incentive or opportunity-fund allocation',when:'a booking requires approval spanning sales leadership, finance, and executive leadership before an incentive can be extended'}
     ]},
     confirm:{ step:'Decide which lead to convert, prioritizing against competing holds and pipeline health — Actionable pipeline intelligence and system-generated close recommendations could reduce reliance on individual judgment and help managers consistently prioritize the highest-probability opportunities.', outcomes:[
       {dir:'Minimize',metric:'revenue lost from',obj:'holds that expire without converting to contracts',when:'managing a large pipeline of active holds at different follow-up stages across the sales team'},
@@ -4096,7 +4178,9 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'losing a confirmed booking because the hold expired before the client was contacted',when:'managing a large pipeline of active holds at different stages of follow-up'},
       {dir:'Maximize',metric:'the speed of',obj:'moving a tentative hold to a definite booking status once verbal agreement is reached',when:'the client has committed verbally but contract paperwork has not yet been signed'},
       {dir:'Minimize',metric:'the effort required to',obj:'document the rationale behind a displacement decision for internal audit',when:'choosing to advance a lower-revenue booking over a higher-value hold that was still in negotiation'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a hold conversion triggering a notification gap to a competing client whose hold was displaced',when:'the venue policy requires courtesy notification when a hold is superseded by a confirmed booking'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a hold conversion triggering a notification gap to a competing client whose hold was displaced',when:'the venue policy requires courtesy notification when a hold is superseded by a confirmed booking'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'align an internal hold-prioritization decision with external bureau or hotel partners',when:'the choice of which lead to advance requires consensus beyond the sales team itself'},
+      {dir:'Minimize',metric:'the risk of',obj:'losing negotiation context and rationale on a long-lead-time licensing agreement',when:'a contract signed years in advance outlives the tenure of the salesperson who negotiated it'}
     ]},
     execute:{ step:'Create the confirmed Event Opportunity and initiate the contract within Momentus', researchOpps:'A direct pipeline from lead qualification to confirmed booking record — eliminating the duplicative data entry that currently spans Simple View, web forms, and the platform. System-generated confirmation and cancellation emails at booking creation would remove the manual step of communicating status changes to clients.', outcomes:[
       {dir:'Minimize',metric:'the time from',obj:'proposal acceptance to fully executed contract',when:"converting a verbal agreement to a signed contract before the client's decision window closes"},
@@ -4109,7 +4193,9 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'creating a booking record with incomplete or misconfigured data fields',when:'converting a proposal to a confirmed Event Opportunity under time pressure at period end'},
       {dir:'Maximize',metric:'the completeness of',obj:'the initial Event Opportunity record at the time of creation',when:'entering a booking whose full requirements were negotiated verbally and not fully captured in the lead record'},
       {dir:'Minimize',metric:'the effort required to',obj:'generate and format contract attachments for signature',when:'the booking requires non-standard addenda or custom clauses that were negotiated during the proposal stage'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a booking creation error propagating to downstream planning and finance systems',when:'creating a high-volume booking where errors in the initial record would require retroactive correction across multiple departments'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a booking creation error propagating to downstream planning and finance systems',when:'creating a high-volume booking where errors in the initial record would require retroactive correction across multiple departments'},
+      {dir:'Minimize',metric:'the total time and manual entry required to',obj:'fully build out a large, complex Event Opportunity record',when:'a single high-complexity booking can require up to 90 hours of manual data entry'},
+      {dir:'Minimize',metric:'the effort required to',obj:'reassign an entire portfolio of active Event Opportunities to a new sales owner',when:'a manager departs and accounts must be reassigned one-by-one because bulk reassignment isn\'t supported'}
     ]},
     monitor:{ step:'Track the pipeline, PACE report, and follow-up activity across all active Event Opportunities — A real-time in-system quota view would give managers continuous visibility into their revenue position against target, eliminating the need for manual exports and external tracking tools.', researchOpps:'Analytics that surface pipeline health, space utilization, and revenue variance without requiring Excel exports — moving PACE reporting from a quarterly manual exercise to a live view of sales performance. Cancellation and hold-change notifications with context — reason, source, and replacement — would give sales managers the intelligence to respond to losses before they impact period targets.', productDocOpps:'Audit log status-change timestamps available as a Summary Field Subject for Event Opportunities — enabling sales managers to automatically surface time-to-status metrics (lead response time, hold duration, time-to-contract) in list views without manual data entry into custom user fields.', outcomes:[
       {dir:'Increase',metric:'the accuracy of',obj:'monthly and quarterly booking forecasts by event type',when:'preparing a pipeline report for venue leadership ahead of a revenue review'},
@@ -4122,7 +4208,9 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'forecast close probability across all active leads',when:'preparing an end-of-period revenue outlook for venue leadership'},
       {dir:'Maximize',metric:'the clarity of',obj:'individual sales manager performance against target in the shared pipeline view',when:'reviewing team contribution to period revenue goals in advance of a monthly performance meeting'},
       {dir:'Minimize',metric:'the effort required to',obj:'identify which active holds are at risk of expiring without a follow-up',when:'reviewing a large pipeline during a high-volume season where follow-up cadence has fallen behind'},
-      {dir:'Maximize',metric:'the speed of',obj:'generating a period-end revenue summary from confirmed bookings',when:'the venue director requests an updated PACE report with less than 24 hours notice before a leadership review'}
+      {dir:'Maximize',metric:'the speed of',obj:'generating a period-end revenue summary from confirmed bookings',when:'the venue director requests an updated PACE report with less than 24 hours notice before a leadership review'},
+      {dir:'Increase',metric:'the visibility into',obj:'individual sales activity volume — calls, emails, touchpoints — logged against each lead',when:'assessing sales productivity and diagnosing where deals stall in the pipeline'},
+      {dir:'Increase',metric:'the accuracy of',obj:'win-rate and conversion calculations for opportunities carrying multiple candidate dates',when:'a single Event Opportunity has several possible dates and only one converts to a booking'}
     ]},
     modify:{ step:'Update booking terms, holds, or contract details in response to client requests or internal changes', researchOpps:'Mass-update capability for high-volume space configurations — when premium spaces change dozens of times a day, individual record updates create unmanageable overhead. Batch change tools with automated client notifications would make it feasible to manage dynamic inventories like hospitality suites and exhibition halls within Momentus rather than outside it.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'apply a requested change to an active Event Opportunity',when:'the client modifies space requirements, date, or attendance after the initial hold is placed'},
@@ -4132,7 +4220,9 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a contract discrepancy between the original signed document and the amended Event Opportunity record',when:'processing a change that affects contracted rates, spaces, or minimum spend commitments'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a modification to an Event Opportunity creating a revenue variance that is not tracked',when:'adjusting contracted minimums, space configurations, or headcount after the original contract has been signed'},
       {dir:'Maximize',metric:'the accuracy of',obj:'the amendment documentation sent to the client',when:'processing a change that affects pricing or contract terms and requires the client\'s written acknowledgment'},
-      {dir:'Minimize',metric:'the effort required to',obj:'coordinate the impact of a booking modification with the operations and finance teams',when:'a change involves both a space reassignment and a revision to the contracted catering minimum'}
+      {dir:'Minimize',metric:'the effort required to',obj:'coordinate the impact of a booking modification with the operations and finance teams',when:'a change involves both a space reassignment and a revision to the contracted catering minimum'},
+      {dir:'Minimize',metric:'the loss of',obj:'booking history and audit trail when applying a significant change to an existing Event Opportunity',when:'the only way to change certain details is to copy the event and cancel the original'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a copied or rebooked event falsely appearing as changed to operations',when:'copied functions default into an editable pre-confirmed state that trips the change-management tracker even though nothing has actually changed'}
     ]},
     conclude:{ step:'Close the booking, transfer it to planning, and archive the sales record for reporting', researchOpps:'Online payment collection at contract close — replacing mailed check workflows with in-platform payment processing to remove the friction that delays final booking confirmation and creates a revenue recognition gap between verbal close and cash receipt.', outcomes:[
       {dir:'Minimize',metric:'critical information lost during',obj:'the sales-to-operations handoff',when:'transferring a confirmed booking to the planning team after all contract terms have been finalized'},
@@ -4145,7 +4235,8 @@ const MAP = {
       {dir:'Minimize',metric:'the time it takes to',obj:'complete the post-close handoff documentation required by the planning team',when:'transitioning a complex multi-function Event Opportunity from sales to planning ownership'},
       {dir:'Maximize',metric:'the confidence in',obj:'the final commission calculation at booking close',when:'the event included multiple amendments that each modified the contracted revenue basis for commission purposes'},
       {dir:'Minimize',metric:'the likelihood of',obj:'the planning team beginning work from a booking record that has not been formally signed off',when:'closing and handing off an Event Opportunity before the client has returned the final counter-signed contract'},
-      {dir:'Maximize',metric:'the accuracy of',obj:'displacement outcome records archived at booking close',when:'reconciling whether the original displacement decision resulted in the forecasted revenue outcome for performance review'}
+      {dir:'Maximize',metric:'the accuracy of',obj:'displacement outcome records archived at booking close',when:'reconciling whether the original displacement decision resulted in the forecasted revenue outcome for performance review'},
+      {dir:'Maximize',metric:'the speed of',obj:'initiating a rebooking conversation with a client',when:'the event has just closed successfully and goodwill is highest for securing next year\'s business before a competing venue does'}
     ]}
   },
   emilie:{
@@ -4157,7 +4248,9 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a scope discrepancy surfacing during the execution phase',when:'finalizing the function plan for an event whose requirements were established months before the event date'},
       {dir:'Minimize',metric:'the effort required to',obj:'translate verbal client expectations into a structured function scope',when:'the sales handoff included high-level client notes but no formal requirement documentation'},
       {dir:'Maximize',metric:'the clarity of',obj:'department-specific requirements identified during initial scoping',when:'beginning to plan a multi-function event that involves catering, AV, facilities, and external vendors simultaneously'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'misinterpreting a sales-stage commitment as a fixed requirement during scope definition',when:'reviewing a sales proposal where certain service inclusions were offered conditionally but are now being treated as confirmed by the client'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'misinterpreting a sales-stage commitment as a fixed requirement during scope definition',when:'reviewing a sales proposal where certain service inclusions were offered conditionally but are now being treated as confirmed by the client'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'being unable to reassign a planner to an Event Plan once the initial activity checklist has been generated',when:'a staffing change or workload rebalance requires reassigning ownership of an already-detailed event'},
+      {dir:'Minimize',metric:'the effort required to',obj:'identify confirmed upcoming events that have not yet been assigned a planner',when:'leadership reviews the pipeline of bookings over the next 24 months to distribute planning workload'}
     ]},
     locate:{ step:'Access the confirmed Event Opportunity record and all prior client information needed to begin detailing', researchOpps:'A standardized sales-to-planning handoff workflow — triggering a readiness checklist at booking transfer and alerting the event coordinator only when the record is complete. Automated task generation based on event type at handoff would replace the manual checklist setup that currently happens from scratch for every event.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'access the full Event Opportunity record and associated client history',when:'beginning the detailing process for a newly assigned event'},
@@ -4169,7 +4262,7 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'identify and import applicable templates from prior similar events',when:'beginning the BEO detail process for a returning client whose prior event requirements are archived in the system'},
       {dir:'Minimize',metric:'the likelihood of',obj:'beginning detail work on an Event Opportunity still subject to contract changes by the sales team',when:'a booking was recently converted from hold to confirmed and the contract amendment process has not yet been finalized'}
     ]},
-    prepare:{ step:'Build the complete BEO/event order for each function, including space, F&B, AV, exhibitors, registration, setup, and timing — Standardized event resume and BEO templates would eliminate the per-event customization overhead that currently falls on every planner. Automated workflow generation based on event type and customer profile could replace manual checklist creation from scratch. A guided, templatized registration setup flow would reduce configuration from hours to minutes. An in-system recommendation engine surfacing relevant add-ons and upsells based on client history would unlock revenue opportunities that are currently invisible at the planning stage.', researchOpps:'Mass data entry tools — bulk function import, copy-paste with configuration preservation, and template-based function sets — would reduce the 90+ hours of manual BEO setup that planners spend on large multi-day events. Inline spell check and field-level validation within the detailing interface would catch quality issues at input rather than when documents are sent to clients. A searchable, filterable content catalog would replace the infinite-scroll browsing that makes program content selection exhausting.', outcomes:[
+    prepare:{ step:'Build the complete BEO/event order for each function, including space, F&B, AV, exhibitors, registration, setup, and timing — Standardized event resume and BEO templates would eliminate the per-event customization overhead that currently falls on every planner. Automated workflow generation based on event type and customer profile could replace manual checklist creation from scratch. A guided, templatized registration setup flow would reduce configuration from hours to minutes. An in-system recommendation engine surfacing relevant add-ons and upsells based on client history would unlock revenue opportunities that are currently invisible at the planning stage.', researchOpps:'Mass data entry tools — bulk function import, copy-paste with configuration preservation, and template-based function sets — would reduce the 90+ hours of manual BEO setup that planners spend on large multi-day events. Inline spell check and field-level validation within the detailing interface would catch quality issues at input rather than when documents are sent to clients. A searchable, filterable content catalog would replace the infinite-scroll browsing that makes program content selection exhausting. Preserving list formatting — bullets and line breaks — when pasting client menus and specs would eliminate the stray characters and broken structure that currently require manual cleanup after every paste. Because clients rarely send finalized specs, a staged import — negotiating details in a lightweight external format first, then bulk-loading only once requirements are locked — would match how detailing actually happens today, rather than assuming specs arrive ready to load.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'complete all function-level detail fields for a single Event Plan',when:'building the BEO for a multi-function event with concurrent F&B, AV, and setup requirements'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an incomplete or internally inconsistent BEO',when:'coordinating multiple departments in the detailing of a complex Event Plan with interdependent requirements'},
       {dir:'Minimize',metric:'the number of communication exchanges required to',obj:'finalize all function details with the client',when:'preparing an Event Plan for internal review and distribution to operations'},
@@ -4177,7 +4270,10 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'coordinate department-specific detail across catering, AV, and facilities in a single Event Plan record',when:'building a BEO that requires separate inputs from three or more internal service departments'},
       {dir:'Maximize',metric:'the accuracy of',obj:'event timelines and space transition sequences captured in the BEO',when:'preparing function orders for a multi-day event with back-to-back functions requiring setup and teardown coordination between sessions'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a service requirement being omitted from the BEO because it was communicated verbally between the client and a department head',when:'building an event order where the client has a direct relationship with the F&B or AV department lead outside the formal planning channel'},
-      {dir:'Minimize',metric:'the effort required to',obj:'resolve conflicting specifications between client-provided event details and the venue\'s operational constraints',when:'building the BEO for an event where the client is requesting a non-standard setup that requires coordination with engineering or facilities'}
+      {dir:'Minimize',metric:'the effort required to',obj:'resolve conflicting specifications between client-provided event details and the venue\'s operational constraints',when:'building the BEO for an event where the client is requesting a non-standard setup that requires coordination with engineering or facilities'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'inconsistent event-detail documentation style across different planners on the same team',when:'multiple event managers are each building BEOs independently using their own individual habits and confidence level'},
+      {dir:'Minimize',metric:'the effort required to',obj:'prepare and activate exhibitor service coordination as part of the Event Plan',when:'an event includes exhibitors and requires handing off exhibitor service ordering to a separate department'},
+      {dir:'Minimize',metric:'the effort required to',obj:'prepare diagrams, timelines, and status updates for the recurring cross-department production meeting',when:'facilities, catering, AV, and security need a shared weekly view of upcoming events before they occur'}
     ]},
     confirm:{ step:'Obtain client approval and internal sign-off on the complete function detail before distribution — Smarter communication routing could reduce high-volume back-and-forth by handling simple approvals automatically and surfacing only the items that genuinely need planner attention. A self-serve resolution path for exhibitor and attendee inquiries would deflect routine questions away from venue staff entirely. Reducing data entry friction in planning fields would improve record completion rates and protect the data quality that downstream reporting depends on.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'obtain client approval on the finalized BEO',when:'the event date is approaching and operations needs the confirmed detail to begin preparation'},
@@ -4197,7 +4293,10 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a department beginning preparation from an incorrect or non-final version of the BEO',when:'a finalized plan is distributed while a parallel revision is still being processed in the system'},
       {dir:'Minimize',metric:'the effort required to',obj:'confirm receipt and acknowledgment of the BEO by each receiving department',when:'distributing a time-sensitive function order in the days leading up to an event where preparation windows are short'},
       {dir:'Maximize',metric:'the completeness of',obj:'vendor-specific instructions included in the BEO portions sent to external service providers',when:'the event relies on off-property catering, contracted AV, or third-party entertainment who must also receive function detail'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a department receiving an incomplete BEO because only their relevant section was extracted for distribution',when:'the event plan was built as a single document and requires manual extraction of department-specific sections before distribution'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a department receiving an incomplete BEO because only their relevant section was extracted for distribution',when:'the event plan was built as a single document and requires manual extraction of department-specific sections before distribution'},
+      {dir:'Maximize',metric:'the professional, polished appearance of',obj:'the BEO or event schedule distributed to the client and operations',when:'the system-generated document does not meet the visual standard the planner needs to present externally'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'operations working from an outdated event diagram',when:'a revised diagram is uploaded to the Event Plan after the original has already been referenced or printed by operations'},
+      {dir:'Minimize',metric:'the number of separate documents that must be',obj:'compiled and distributed to operations for a single event',when:'work orders and diagrams are generated as individual files rather than one consolidated package'}
     ]},
     monitor:{ step:"Track BEO completion, client changes, and department acknowledgment across all active events in the planner's portfolio", researchOpps:'Role-based notification triggers tied to planning milestones — alerting planners when approvals are pending, deadlines are approaching, or client responses are overdue, without requiring daily manual status checks. Centralizing client communication within the event record would replace the fragmented email, mail, and phone threads that currently make it impossible to audit the client relationship history for a given event.', productDocOpps:'A complete audit log for Event Plan records capturing all critical field changes — account, name, attendance, anchor venue, date, time, and category — with attribution of who changed what and when, so planners can maintain data integrity and resolve post-event disputes about what was agreed and distributed.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:"understand the completion status of all active Event Plans in the planner's current portfolio",when:'managing multiple events simultaneously at different stages of the detailing process'},
@@ -4207,9 +4306,10 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'confirm that all departments have acknowledged and accepted the BEO for an upcoming event',when:'conducting a pre-event check in the 48 hours before an event with multiple service dependencies'},
       {dir:'Maximize',metric:'the clarity of',obj:'the current state of each active event in the portfolio at a glance',when:'managing five or more concurrent events at different stages of the detailing and confirmation process'},
       {dir:'Minimize',metric:'the effort required to',obj:'track client-initiated changes across multiple active events simultaneously',when:'managing a portfolio where several clients are making concurrent modifications to their pending function orders'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an approaching distribution deadline going unnoticed',when:'balancing detail work across upcoming events while simultaneously responding to client change requests on already-distributed plans'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'an approaching distribution deadline going unnoticed',when:'balancing detail work across upcoming events while simultaneously responding to client change requests on already-distributed plans'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a payment or deposit deadline going unnoticed',when:'managing multiple active events with different payment plan schedules and no system-generated reminder'}
     ]},
-    modify:{ step:'Update function details and notify impacted departments when client changes arrive after initial BEO distribution — Auto-routing change orders directly to the affected function — with intelligent triage that approves simple updates automatically and flags complex ones for review — would significantly reduce manual effort and the risk of missed or misapplied changes.', researchOpps:'Mass editing across functions and orders — applying a change once and propagating it to all affected records — would replace the line-by-line re-entry that makes change management so time-consuming for large multi-function events. In-flight document editing with version tracking would enable planners to update a distributed BEO without having to re-export and redistribute it manually.', productDocOpps:'Exhibitor booth number changes captured and visible in Change Tracking — ensuring planners and operations teams always have accurate stand information without relying on manual communication when booth assignments shift during active event management.', outcomes:[
+    modify:{ step:'Update function details and notify impacted departments when client changes arrive after initial BEO distribution — Auto-routing change orders directly to the affected function — with intelligent triage that approves simple updates automatically and flags complex ones for review — would significantly reduce manual effort and the risk of missed or misapplied changes.', researchOpps:'Mass editing across functions and orders — applying a change once and propagating it to all affected records — would replace the line-by-line re-entry that makes change management so time-consuming for large multi-function events. In-flight document editing with version tracking would enable planners to update a distributed BEO without having to re-export and redistribute it manually.', productDocOpps:'Exhibitor booth number changes captured and visible in Change Tracking — ensuring planners and operations teams always have accurate stand information without relying on manual communication when booth assignments shift during active event management. Change Tracking capturing note-only edits, not just changes to resources and functions, would remove the need for catering coordinators to separately email-flag note updates that the system otherwise misses — a real gap that currently undermines confidence in the log as a complete record of what changed.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'update an Event Plan record and re-distribute the revised BEO to all impacted departments',when:'a client change is received after the initial BEO has been shared with operations'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an operations team executing against an outdated version of the BEO',when:'multiple revisions are made to an Event Plan in the days leading up to the event'},
       {dir:'Minimize',metric:'the disruption caused by',obj:'a last-minute function change to the operations team',when:'the modification requires a re-scoping of space setup, catering quantities, or AV configuration'},
@@ -4217,7 +4317,8 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a department acting on a superseded version of the BEO',when:'issuing a revision to an active event plan after the original has already been acknowledged by one or more departments'},
       {dir:'Maximize',metric:'the speed of',obj:'issuing a revised BEO and confirming re-acknowledgment by all affected departments',when:'a client change arrives within 48 hours of the event and requires same-day redistribution to operations'},
       {dir:'Minimize',metric:'the effort required to',obj:'identify which portions of the BEO were affected by a client change and which can remain as distributed',when:'a single-function modification is received for an event with multiple concurrent functions already in execution preparation'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a post-modification version conflict causing two departments to execute against different versions of the same function plan',when:'a revision is issued while one department has already printed and begun preparation from the prior approved BEO'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a post-modification version conflict causing two departments to execute against different versions of the same function plan',when:'a revision is issued while one department has already printed and begun preparation from the prior approved BEO'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a copied or repeat event\'s functions falsely registering as a change on the operations change-tracker',when:'a planner copies function details from a prior instance of a recurring event and must move them out of a read-only pre-confirmed state to edit them'}
     ]},
     conclude:{ step:'Ensure all function records are closed and complete, confirm post-event customer satisfaction, and initiate outreach for renewals and next-year bookings', researchOpps:'In-platform invoice and payment collection at event close — eliminating the offline payment workflow and the manual reconciliation step between Momentus and external financial systems. Automated post-event financial summary generation would replace the manual Excel work currently required to close out invoicing and reconcile actuals.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'capture and record post-event actuals against each Event Plan',when:'the event has concluded and the planner is reconciling actual attendance, consumption, and service delivery against the BEO'},
@@ -4227,7 +4328,8 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'compile and submit all post-event information required by the finance team for invoice finalization',when:'closing out a multi-function event with complex billing across food, beverage, AV, and external vendor services'},
       {dir:'Minimize',metric:'the effort required to',obj:'reconcile final attendance and consumption actuals against each function line in the BEO',when:'concluding a multi-function event where actual guest counts, F&B consumption, and setup usage varied significantly from the plan'},
       {dir:'Maximize',metric:'the completeness of',obj:'documentation supporting any unbilled overages or service additions',when:'closing out an event where client-requested additions during execution were not captured in the original BEO'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a discrepancy between the closed BEO and the finance invoice going undetected before billing',when:'finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a discrepancy between the closed BEO and the finance invoice going undetected before billing',when:'finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours'},
+      {dir:'Maximize',metric:'the completion rate of',obj:'post-event summary documentation across the planning team',when:'the department wants to analyze the closed-event portfolio to identify commonalities and improve future planning'}
     ]}
   },
   owen:{
@@ -4241,7 +4343,7 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'decompose a BEO into individual actionable work units',when:'receiving a complex multi-function event plan that has not previously been broken down into crew-level task assignments'},
       {dir:'Minimize',metric:'the likelihood of',obj:'over-staffing or under-staffing an event',when:'estimating crew size from a BEO where headcount and timing information is incomplete or non-standard'}
     ]},
-    locate:{ step:'Access the finalized BEO and all supporting documentation needed to build and assign work orders', researchOpps:'An operations-ready event view — filtering and presenting only the work orders, spaces, and timing relevant to a given crew member’s scope, rather than exposing the full event record. Real-time inventory availability visible at work order assignment would eliminate the parallel spreadsheet tracking that operations managers currently maintain to know what resources are in use.', productDocOpps:'Room diagrams accessible directly from MWO — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans.', outcomes:[
+    locate:{ step:'Access the finalized BEO and all supporting documentation needed to build and assign work orders', researchOpps:'An operations-ready event view — filtering and presenting only the work orders, spaces, and timing relevant to a given crew member’s scope, rather than exposing the full event record. Real-time inventory availability visible at work order assignment would eliminate the parallel spreadsheet tracking that operations managers currently maintain to know what resources are in use.', productDocOpps:'Room diagrams accessible directly from MWO — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans. Today, floor plans and dietary lists are filed at the full-event level rather than to the specific function or work order — extending document association down to the work order itself, not just improving how MWO displays what already exists, would let crew find only what is relevant to their assignment instead of sorting through an entire event’s paperwork.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'access the finalized BEO and associated function details for a scheduled event',when:'beginning task assignment for a function whose BEO has just been distributed by the planning team'},
       {dir:'Minimize',metric:'the likelihood of',obj:'building a work order from an outdated or unfinalized version of the BEO',when:'the event planner is still making changes to the Event Plan while the operations team is beginning preparation'},
       {dir:'Minimize',metric:'the effort required to',obj:'locate all space, equipment, and resource specifications needed to build a complete work order',when:'accessing function detail for an event with non-standard AV, catering, or setup configurations'},
@@ -4249,7 +4351,9 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'access event-specific floor plans, room diagrams, and equipment specs alongside the BEO',when:'building work orders for a non-standard setup that requires visual reference materials to assign work orders correctly'},
       {dir:'Minimize',metric:'the effort required to',obj:'confirm the BEO is fully approved and authorized before beginning work order creation',when:'the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system'},
       {dir:'Maximize',metric:'the accuracy of',obj:'all floor plan and space layout details available at the time of work order creation',when:'building operational task assignments for an event using a non-standard room configuration that requires custom layout reference materials'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'beginning work order creation from a BEO that the planning team is still revising',when:'the event planner and operations team are working on parallel timelines and the final detail has not been formally locked'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'beginning work order creation from a BEO that the planning team is still revising',when:'the event planner and operations team are working on parallel timelines and the final detail has not been formally locked'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a just-uploaded diagram failing to render and requiring a manual re-upload before crew can reference it on site',when:'building a work order immediately after the planning team distributes a new floor plan or diagram'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a space or inventory item appearing available for another use before setup or teardown time has been accounted for',when:'the venue calendar reflects only the contracted event hours and not the surrounding turnover window operations needs'}
     ]},
     prepare:{ step:'Assign all operational tasks to crew members, departments, and equipment, with timing and location details', researchOpps:'Field-ready work order output — formatted for legibility in operational settings, not back-office screens — would reduce the paper-printing workaround that crews currently rely on when digital displays are impractical. Automated staffing assignment based on event type, crew skills, and availability would replace the manual scheduling process that currently requires cross-referencing multiple systems.', productDocOpps:'Temporary and contract staff able to access and be assigned work in MWO without requiring full user accounts — enabling operations teams to scale their workforce for peak periods without provisioning full platform licenses. Work order items assignable to multiple people with specific dates, times, and contact details would support coordinated pre-event delivery scheduling. Configurable default filters, searchable dropdowns, and custom item status visibility would let operations managers tailor the MWO experience for their teams, reducing clutter and speeding up task navigation for field staff.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'assign all Event Works to the appropriate crew members and departments',when:'building work orders for a multi-function event with concurrent setup tracks across multiple venue spaces'},
@@ -4259,7 +4363,10 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving a task assignment without sufficient detail to complete it independently',when:'assigning work orders to staff who were not involved in the pre-event planning discussion'},
       {dir:'Maximize',metric:'the clarity of',obj:'task priority and sequencing communicated to each crew member',when:'assigning interdependent setup tasks where the completion of one job must precede the start of another'},
       {dir:'Minimize',metric:'the effort required to',obj:'build a complete crew schedule from a work order template for a recurring event type',when:'preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a time conflict between two assignments given to the same crew member',when:'scheduling staff who are assigned to multiple sequential functions within the same event window'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a time conflict between two assignments given to the same crew member',when:'scheduling staff who are assigned to multiple sequential functions within the same event window'},
+      {dir:'Minimize',metric:'the effort required to',obj:'generate accurate physical labels for booth-specific equipment such as power cords and utility drops',when:'preparing hundreds of individually labeled items for a large exhibition event'},
+      {dir:'Minimize',metric:'the effort required to',obj:'produce a single, field-legible packet combining work orders and room diagrams',when:'distributing daily assignments to an operations team that primarily works from print rather than devices'},
+      {dir:'Maximize',metric:'the speed at which',obj:'open or available shifts generated by a staffing-need change are broadcast to eligible crew',when:'a BEO or resume update triggers new labor requirements across departments'}
     ]},
     confirm:{ step:'Validate all assignments, run a pre-event readiness check, and confirm crew is on-schedule before the event begins', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'verify that all Event Works are assigned, acknowledged, and on-schedule',when:'conducting a pre-event readiness check in the final hours before setup begins'},
@@ -4279,7 +4386,10 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'confirm task completion in real time without interrupting crew during active execution',when:'supervising multiple concurrent setup tracks that are progressing simultaneously across the venue'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a crew member executing an Event Work against an outdated task specification',when:'a modification was issued by the planning team after the crew was dispatched with printed task assignments'},
       {dir:'Maximize',metric:'the clarity of',obj:'real-time task status visible to the operations lead',when:'supervising crew distributed across multiple concurrent event spaces during peak execution'},
-      {dir:'Minimize',metric:'the effort required to',obj:'reallocate crew from a lower-priority task to address an urgent execution gap',when:'an issue is identified during live execution that requires pulling resources away from non-critical setup work'}
+      {dir:'Minimize',metric:'the effort required to',obj:'reallocate crew from a lower-priority task to address an urgent execution gap',when:'an issue is identified during live execution that requires pulling resources away from non-critical setup work'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'an inaccurate item quantity or spec going undetected during setup',when:'crew reference only the visual room diagram and do not cross-check the itemized work order quantities'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'losing in-progress mobile work order entries due to application performance failures such as crashes, logouts, or slow diagram loads',when:'low-tech-savvy field crew are completing setup tasks on a mobile device in real time'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a work order item being marked complete by someone other than the authorized supervisor or coordinator',when:'a maintenance or install crew member can update status but only a designated coordinator should verify and close the item'}
     ]},
     monitor:{ step:'Track work order completion, crew location, and incident status in real time during the event', researchOpps:'A living event manifest that updates in real time as changes are made — replacing the static PDF export that becomes outdated the moment it is distributed. System-pushed notifications to crew when a work order changes would eliminate the need for supervisors to manually relay updates over radio or messaging apps, closing the gap between what was planned and what crew knows in the field.', productDocOpps:'Venue-level filtering in Change Tracking for a consolidated view of all changes per location — enabling operations supervisors to monitor activity across multi-venue environments without manually selecting individual spaces. Granular resource filtering by group and resource type would surface relevant operational changes without sifting through unrelated data. Exhibitor booth number changes captured in Change Tracking would keep operations and logistics teams aligned without relying on manual communication when stand assignments shift. Extending the Operations Change Log to capture changes up to a full year out would give supervisors a complete longitudinal record of operational decisions for events booked far in advance.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'verify the completion status of all Event Works',when:'supervising a multi-team, multi-space event in real time'},
@@ -4289,7 +4399,9 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'an operational gap going undetected until it escalates into a client-visible failure',when:'monitoring task status across a large-scale event with multiple functions running concurrently in different venue spaces'},
       {dir:'Maximize',metric:'the speed of',obj:'identifying a task that is falling behind schedule during live execution',when:'monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event'},
       {dir:'Minimize',metric:'the effort required to',obj:'document an operational incident in real time',when:'managing an active event and a client-visible issue requires immediate logging without stopping the operations supervisor from coordinating the resolution'},
-      {dir:'Maximize',metric:'the accuracy of',obj:'the real-time status view of all active Event Works',when:'a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team'}
+      {dir:'Maximize',metric:'the accuracy of',obj:'the real-time status view of all active Event Works',when:'a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team'},
+      {dir:'Minimize',metric:'the cognitive effort required to',obj:'parse a shared dashboard view for only the work orders and spaces relevant to a specific supervisor',when:'using a shared, unfiltered view that surfaces every department\'s activity instead of just the supervisor\'s own scope'},
+      {dir:'Maximize',metric:'the traceability of',obj:'an individual Event Work item\'s status history from installed to verified to flagged for repair',when:'a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record'}
     ]},
     modify:{ step:'Reassign or update work orders when changes are communicated from the planning team during execution', researchOpps:'In-event change order propagation — updates made in Momentus immediately reflected in the work orders visible to crew in the field, without requiring a manual re-export or radio broadcast. Change acknowledgment tracking would give supervisors confidence that a modification has been received and actioned by the right crew member, not just sent.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'reassign or update an Event Work',when:'a last-minute change is communicated by the event planner during live execution'},
@@ -4299,9 +4411,11 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a task conflict arising from a mid-event reassignment',when:'reallocating crew or equipment from one function to another while both are actively executing in the venue'},
       {dir:'Maximize',metric:'the speed of',obj:'acknowledging a change request from the planning team and confirming the correct crew member has been notified',when:'a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update'},
       {dir:'Minimize',metric:'the effort required to',obj:'document the reason for a task reassignment and the time it was actioned',when:'a mid-event change is made that may need to be referenced during post-event billing or incident review'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving conflicting instructions from both the original assignment and a verbal update',when:'a task modification is communicated directly by the event planner to an individual crew member without updating the formal work order record'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving conflicting instructions from both the original assignment and a verbal update',when:'a task modification is communicated directly by the event planner to an individual crew member without updating the formal work order record'},
+      {dir:'Minimize',metric:'the effort required to',obj:'confirm that a change reported through operations was actually applied by the planning team',when:'a customer relays a change to operations directly, and operations has no visibility into whether or when the planning team updated the record'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'receive event-manager approval or denial for a change that operations identifies on-site',when:'a customer requests a modification during setup and operations must wait for a yes or no before proceeding'}
     ]},
-    conclude:{ step:'Log work order completion, document all actuals and incidents, close the work order record, and hand off to the finance team for post-event invoicing and billing — A mobile-first actuals capture flow would replace paper-based and verbal recording at the venue, enabling real-time quantity logging and more accurate post-event records for billing and reporting.', researchOpps:'Actuals capture within the work order at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close.', productDocOpps:'Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off.', outcomes:[
+    conclude:{ step:'Log work order completion, document all actuals and incidents, close the work order record, and hand off to the finance team for post-event invoicing and billing — A mobile-first actuals capture flow would replace paper-based and verbal recording at the venue, enabling real-time quantity logging and more accurate post-event records for billing and reporting.', researchOpps:'Actuals capture within the work order at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close.', productDocOpps:'Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a work order right away instead of holding the entire record open until final counts are in.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'log completion of all Event Works and document operational actuals',when:'the event has concluded and teardown is complete'},
       {dir:'Minimize',metric:'the likelihood of',obj:'incomplete or inaccurate incident records',when:'concluding the operational log for a complex multi-department event'},
       {dir:'Maximize',metric:'the accuracy of',obj:'resource, labor, and material actuals captured',when:'closing out all Event Works to support post-event financial reconciliation with the planning team'},
@@ -4309,7 +4423,11 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'confirm all Event Work completions and submit the closed work order to the planning team',when:'wrapping up teardown for a late-running event while crew are still on site and pending their next assignment'},
       {dir:'Minimize',metric:'the effort required to',obj:'collect and consolidate completion confirmations from all crew members after teardown',when:'wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times'},
       {dir:'Maximize',metric:'the accuracy of',obj:'equipment return and inventory counts submitted at event close',when:'concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an unresolved incident remaining open after the work order is submitted as complete',when:'concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'an unresolved incident remaining open after the work order is submitted as complete',when:'concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented'},
+      {dir:'Minimize',metric:'the reliance on',obj:'memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building',when:'producing an end-of-day report for other departments without a system-generated summary of work order status'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'being blocked from closing a completed work order because unrelated child service order items remain open',when:'only a subset of an event\'s service orders are complete at the time of the on-site check'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'losing entered completion or actuals data due to an application save failure',when:'a supervisor is logging quantities and labor actuals on a tablet immediately after teardown'},
+      {dir:'Maximize',metric:'the ability of',obj:'the operations team to independently verify and close a work order upon room check',when:'the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection'}
     ]}
   },
   dana:{
@@ -4318,26 +4436,33 @@ const MAP = {
       {dir:'Maximize',metric:'the accuracy of',obj:'the initial price list and billable item setup for a new fiscal year or event type',when:'preparing pricing ahead of peak booking season'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a billable item being missing from the system at the point an event is sold',when:'finance has not yet synced new service or space offerings into the price list before sales begins booking them'},
       {dir:'Minimize',metric:'the effort required to',obj:'route a vendor or contract decision through required procurement and approval channels',when:'operating under municipal or public-entity purchasing rules that apply even to routine repairs or services'},
-      {dir:'Maximize',metric:'the confidence in',obj:'the budget baseline an event will later be measured against',when:'submitting a multi-year or capital-project-adjacent budget for executive and government approval'}
+      {dir:'Maximize',metric:'the confidence in',obj:'the budget baseline an event will later be measured against',when:'submitting a multi-year or capital-project-adjacent budget for executive and government approval'},
+      {dir:'Minimize',metric:'the effort required to',obj:'establish a single payment plan spanning a multi-year or multi-event contract',when:'a customer’s booking spans multiple linked events that finance intends to bill as one financial obligation'}
     ]},
     locate:{ step:'Retrieve the budget line, price list, and contract terms relevant to a specific event — currently pulled from multiple disconnected systems (PeopleSoft for budget/payables, Enterprise for GL and event cost data).', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'locate the budget line and price list that apply to a specific event',when:'preparing to review or approve costs for an upcoming or in-progress event'},
       {dir:'Minimize',metric:'the effort required to',obj:'cross-reference vendor contract terms against the system of record',when:'verifying that a contractor’s invoiced rate matches what was originally contracted'},
       {dir:'Minimize',metric:'the likelihood of',obj:'needing to pull data from more than one system to answer a basic event-financial question',when:'a department head or executive asks for a quick read on an event’s financial position'},
-      {dir:'Maximize',metric:'the speed of',obj:'accessing GL inquiry detail for a specific event',when:'investigating a reported cost or revenue discrepancy'}
+      {dir:'Maximize',metric:'the speed of',obj:'accessing GL inquiry detail for a specific event',when:'investigating a reported cost or revenue discrepancy'},
+      {dir:'Minimize',metric:'the effort required to',obj:'obtain a detailed cost and revenue breakdown from a third-party partner operator such as food and beverage',when:'that data must be manually requested and compiled rather than being visible in the system'}
     ]},
     prepare:{ step:'Review vendor and contractor terms, allocate costs to the correct departments and cost centers, and confirm procurement approvals are complete before the event executes.', outcomes:[
       {dir:'Minimize',metric:'the effort required to',obj:'allocate an event’s projected costs across the correct departments and cost centers',when:'multiple departments share responsibility for a single event’s budget'},
       {dir:'Minimize',metric:'the time it takes to',obj:'complete vendor and contract review through required procurement channels',when:'a contractor or vendor relationship must be approved before work can begin'},
       {dir:'Maximize',metric:'the clarity of',obj:'which department owns which line item in an event’s budget',when:'preparing for a multi-department event where cost ownership has historically been ambiguous'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a contracted rate being entered incorrectly before the event begins',when:'setting up contractor and vendor terms that will later be checked against invoices'},
-      {dir:'Maximize',metric:'the accuracy of',obj:'the pre-event cost allocation plan',when:'preparing budgets for events with a history of departments not tracking their own spend'}
+      {dir:'Maximize',metric:'the accuracy of',obj:'the pre-event cost allocation plan',when:'preparing budgets for events with a history of departments not tracking their own spend'},
+      {dir:'Minimize',metric:'the effort required to',obj:'separate an in-house partner’s internal costs from customer-billable costs',when:'the partner, such as an in-house caterer, operates in the same system and costs must be manually flagged and un-flagged as internal at the event level'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a percentage-based discount being miscalculated or lost when reconciled against the contracted rate',when:'handling non-standard discounts such as a percentage off booth or space cost'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'losing institutional knowledge about a licensing agreement’s terms or approvals',when:'contracts are signed two to five years before the event and the original signee has since left or moved on'}
     ]},
     confirm:{ step:'Confirm the budget, price list, and billable item setup are finalized and locked before the event window opens.', outcomes:[
       {dir:'Maximize',metric:'the confidence in',obj:'the budget and price list being finalized before an event begins',when:'an event with non-standard pricing or vendor terms is about to move into execution'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a budget or price list change occurring after the event has already begun',when:'late pricing or vendor decisions are still being finalized close to the event date'},
       {dir:'Minimize',metric:'the effort required to',obj:'verify that every billable item planned for an event has been correctly entered in the system',when:'preparing for an event with a large or non-standard list of chargeable services'},
-      {dir:'Maximize',metric:'the speed of',obj:'resolving a missing budget line before the event window opens',when:'a last-minute change to event scope requires a corresponding budget adjustment'}
+      {dir:'Maximize',metric:'the speed of',obj:'resolving a missing budget line before the event window opens',when:'a last-minute change to event scope requires a corresponding budget adjustment'},
+      {dir:'Minimize',metric:'the effort required to',obj:'record a customer deposit',when:'payments are collected by check or in person rather than through an integrated payment portal'},
+      {dir:'Maximize',metric:'the speed of',obj:'being alerted that a deposit is due, has been made, or is past due',when:'finance currently relies on manually pulling or checking reports for deposit status'}
     ]},
     execute:{ step:'Monitor event spend and vouchers as they post, check GL entries for variance throughout the event, and verify labor costs against payroll — while confirming operations and planning are entering data correctly in real time.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'identify a GL variance while an event is still in progress',when:'reviewing GL entries throughout a live, multi-day event'},
@@ -4346,7 +4471,8 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'confirm that billable vouchers are being recorded correctly as the event unfolds',when:'monitoring spend across a multi-department, multi-day event'},
       {dir:'Maximize',metric:'the speed of',obj:'flagging a cost that is tracking meaningfully over budget while the event is still running',when:'there is still time to intervene before the event concludes'},
       {dir:'Minimize',metric:'the likelihood of',obj:'contractor costs going untracked during the event because the invoice hasn’t arrived yet',when:'third-party vendors are on-site but bill separately and later'},
-      {dir:'Maximize',metric:'the confidence in',obj:'the real-time financial picture of an in-progress event',when:'an executive or department head asks how an event is tracking against budget before it has closed'}
+      {dir:'Maximize',metric:'the confidence in',obj:'the real-time financial picture of an in-progress event',when:'an executive or department head asks how an event is tracking against budget before it has closed'},
+      {dir:'Minimize',metric:'the likelihood of',obj:'a service or work order being closed to process an invoice payment before the associated labor has actually occurred',when:'the system requires orders to be closed in order to invoice a credit-card payment'}
     ]},
     monitor:{ step:'Track budget-vs-actual variance on an ongoing basis and forecast the likely month-end financial position — rather than discovering shortfalls only when the books close.', researchOpps:'ML forecasts month-end position from mid-month signals — unposted vouchers, labor actuals, open work orders — alerting Finance weeks before a surprise hits, e.g. "Based on current trajectory, you’re likely to close 7% over budget on labor."', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'detect that an event or department is trending over budget',when:'reviewing spend partway through a month with many concurrent or overlapping events'},
@@ -4354,14 +4480,21 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'a revenue shortfall between an event’s budget and its actual performance going unnoticed until month-end close',when:'individual event budgets don’t automatically roll up into an aggregate view'},
       {dir:'Maximize',metric:'the speed of',obj:'alerting the responsible department head to a developing variance',when:'there is still enough time in the month to take corrective action'},
       {dir:'Minimize',metric:'the effort required to',obj:'determine which events are driving an emerging budget variance',when:'a department’s aggregate numbers look off but the specific cause isn’t yet clear'},
-      {dir:'Maximize',metric:'the accuracy of',obj:'the monthly close forecast communicated to senior leadership',when:'preparing department heads and executives for an upcoming financial reporting cycle'}
+      {dir:'Maximize',metric:'the accuracy of',obj:'the monthly close forecast communicated to senior leadership',when:'preparing department heads and executives for an upcoming financial reporting cycle'},
+      {dir:'Minimize',metric:'the manual data entry required to',obj:'populate a revenue forecast report',when:'forecast and budget figures must be manually typed into a report tab rather than auto-populating from actuals'},
+      {dir:'Minimize',metric:'the technical expertise required to',obj:'produce an ad hoc financial report requested by a city or government stakeholder',when:'fulfilling the request currently requires custom database querying rather than a built-in reporting tool'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'venue financial data manually transcribed into a corporate reporting spreadsheet',when:'a parent management company requires manual spreadsheet submission for consolidated reporting'},
+      {dir:'Minimize',metric:'the effort required to',obj:'reconcile a partner’s commission report against invoicing and revenue data',when:'commission reporting is generated in a separate partner-owned system with no integration into the event management system'},
+      {dir:'Minimize',metric:'the effort required to',obj:'export clean, usable general ledger data for downstream reporting or reconciliation',when:'exports currently require manual spreadsheet rework due to data issues'}
     ]},
     modify:{ step:'Investigate and resolve contested costs, correct GL coding errors, and reallocate budget between line items or departments as circumstances change.', productDocOpps:'The AI learns commonly miscoded line items and auto-suggests GL corrections pre-close.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'resolve a contested or disputed contractor cost',when:'a vendor’s invoiced amount doesn’t match the originally contracted rate'},
       {dir:'Minimize',metric:'the effort required to',obj:'identify and correct a GL miscoding before period close',when:'a line item has been posted to the wrong cost center or account'},
       {dir:'Maximize',metric:'the confidence in',obj:'a proposed budget reallocation between line items or departments',when:'moving funds requires understanding the downstream impact on margin'},
       {dir:'Minimize',metric:'the likelihood of',obj:'the same GL coding error recurring across multiple events',when:'a department consistently miscodes the same type of expense'},
-      {dir:'Minimize',metric:'the effort required to',obj:'document the reason and approval for a budget change',when:'a change must be traceable for audit or government reporting purposes'}
+      {dir:'Minimize',metric:'the effort required to',obj:'document the reason and approval for a budget change',when:'a change must be traceable for audit or government reporting purposes'},
+      {dir:'Minimize',metric:'the effort required to',obj:'correct or update actuals on an invoice after it has posted to the external ERP or GL',when:'integration constraints with an external general ledger system prevent updating actuals post-invoice'},
+      {dir:'Minimize',metric:'the effort required to',obj:'route a discretionary-fund or special-discount allocation through a multi-executive approval chain',when:'the approval chain of VPs, finance, and executive leadership currently requires a printed document to be physically signed and hand-carried'}
     ]},
     conclude:{ step:'Verify service orders and work orders were entered correctly, reconcile the GL, generate and route the invoice through multi-step approval, chase any outstanding contractor invoices, and share the final balance with the customer — closing the financial record for the event. — The financial lifecycle of an event routinely extends weeks or months past the event itself while contractor invoices remain outstanding.', researchOpps:'Predict invoice timing and auto-match line items to work orders via NLP — Finance reviews exceptions only, not every invoice.', productDocOpps:'A consolidated P&L dashboard across ERP, payroll, ticketing, and contractor systems, with natural-language query on top ("Why did F&B margin drop in March?"); AI-generated plain-language variance digests pushed to department heads automatically after each event closes.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'verify that all service orders and work orders were entered correctly before starting reconciliation',when:'beginning post-event closeout for a multi-department event'},
@@ -4371,7 +4504,10 @@ const MAP = {
       {dir:'Maximize',metric:'the accuracy of',obj:'the final reconciled balance shared with the customer',when:'outstanding charges, credits, or contractor costs are still being confirmed at close'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an unexpected cost surfacing months after an event is considered closed',when:'a large number of third parties were involved and their invoices arrive on inconsistent timelines'},
       {dir:'Minimize',metric:'the time it takes to',obj:'produce a department-level or venue-level monthly P&L',when:'department heads and executives expect regular, on-time financial reporting'},
-      {dir:'Maximize',metric:'the completeness of',obj:'the economic impact and stakeholder financial report for a closed event',when:'reporting the venue’s value to a city CFO, board, or other government stakeholder'}
+      {dir:'Maximize',metric:'the completeness of',obj:'the economic impact and stakeholder financial report for a closed event',when:'reporting the venue’s value to a city CFO, board, or other government stakeholder'},
+      {dir:'Minimize',metric:'the duplicative effort required to',obj:'re-enter or recreate financial and invoice data in a separate municipally-mandated finance system',when:'city or municipal IT policy prohibits direct system integration'},
+      {dir:'Minimize',metric:'the effort required to',obj:'re-key invoice data into an external accounting system to generate the final, official customer invoice',when:'the accounting system of record for final invoicing is separate from the event management system'},
+      {dir:'Maximize',metric:'the consolidation of',obj:'exhibitor-service and show-level charges into a single customer invoice',when:'exhibitor and show billing currently must be tracked and invoiced separately, requiring manual bulk-number reconciliation'}
     ]}
   },
   e3:{
@@ -4383,7 +4519,8 @@ const MAP = {
       {dir:'Maximize',metric:'the alignment between',obj:'individual team targets and the venue\'s overall PACE and utilization goals',when:'cascading strategic priorities to sales, planning, and operations leads at period start'},
       {dir:'Minimize',metric:'the likelihood of',obj:'resource overcommitment caused by failing to establish capacity thresholds during strategy setting',when:'planning for a high-volume season where all three departments will be running events simultaneously'},
       {dir:'Maximize',metric:'the speed of',obj:'establishing performance benchmarks for each event type and client segment',when:'setting expectations for the team before the pipeline opens for a new booking cycle'},
-      {dir:'Minimize',metric:'the risk of',obj:'strategic drift caused by ad hoc booking decisions made without reference to defined priorities',when:'managing a large team where individual managers have discretion over which leads to pursue'}
+      {dir:'Minimize',metric:'the risk of',obj:'strategic drift caused by ad hoc booking decisions made without reference to defined priorities',when:'managing a large team where individual managers have discretion over which leads to pursue'},
+      {dir:'Maximize',metric:'the confidence that',obj:'event-type prioritization and capacity decisions reflect proven industry practices',when:'the venue has no access to comparative benchmarking data from peer convention centers'}
     ]},
     locate:{ step:'Review the current pipeline, capacity, and resource availability to understand the venue\'s full booking position across all departments', researchOpps:'A pipeline health view aggregating bookings, plans in progress, and operations status across all active events — giving venue directors a real-time read on the business without requiring manual assembly from department-level reports. Cross-vertical calendar context showing which dates are sold, in planning, or at risk would replace the fragmented picture that currently requires multiple conversations to assemble.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'get an accurate view of the current pipeline state across all stages and departments',when:'conducting a daily or weekly leadership review'},
@@ -4393,7 +4530,8 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'assess combined pipeline health across all three departments in a single view',when:'preparing for a stakeholder review that requires an integrated picture of sales, planning, and operations status'},
       {dir:'Maximize',metric:'the clarity of',obj:'which events are at risk of cancellation or displacement in the current pipeline',when:'reviewing pipeline health to determine whether contingency action is required before period close'},
       {dir:'Minimize',metric:'the likelihood of',obj:'resource allocation errors caused by incomplete visibility across simultaneous events',when:'multiple high-complexity events are running in the same period with overlapping staff and space requirements'},
-      {dir:'Maximize',metric:'the accuracy of',obj:'the capacity and availability picture presented to stakeholders during business reviews',when:'reporting to ownership or executive leadership on the venue\'s forward-looking event load'}
+      {dir:'Maximize',metric:'the accuracy of',obj:'the capacity and availability picture presented to stakeholders during business reviews',when:'reporting to ownership or executive leadership on the venue\'s forward-looking event load'},
+      {dir:'Maximize',metric:'the clarity of',obj:'event and space status across every venue in a multi-venue portfolio',when:'leadership oversees a stadium, convention center, and performing arts venue that each maintain separate operational views'}
     ]},
     prepare:{ step:'Ensure all departments are aligned, resourced, and ready before an event advances to the confirmed stage — Integrating cost data from adjacent systems into a native in-system P&L would give leadership profitability visibility before and during events, eliminating manual aggregation and enabling faster, better-informed confirmation decisions.', researchOpps:'A pre-event alignment view consolidating pending approvals, resource conflicts, and department readiness gaps across all functions of an upcoming event — replacing the email-thread and meeting-based coordination that currently precedes complex events. Surfacing risk flags — security notes, operational constraints, unconfirmed vendor commitments — at the department alignment stage would move risk management upstream, before it becomes a day-of problem.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'identify cross-departmental resource gaps before an event is confirmed',when:'reviewing a high-value prospect that involves significant F&B, AV, and staffing commitments'},
@@ -4433,7 +4571,11 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'missing a revenue risk signal because it is buried in siloed departmental reports',when:'each team maintains its own tracking system and there is no integrated view of combined performance'},
       {dir:'Maximize',metric:'the accuracy of',obj:'forward-looking revenue projections based on current pipeline and conversion data',when:'projecting end-of-period performance for a leadership review where budget decisions depend on the forecast'},
       {dir:'Minimize',metric:'the effort required to',obj:'reconcile actual utilization against budgeted capacity on a rolling basis',when:'tracking space and staff utilization across a high-volume season where multiple events overlap in the same period'},
-      {dir:'Maximize',metric:'the clarity of',obj:'each department\'s contribution to venue-wide revenue and operational performance',when:'conducting a cross-functional performance review to inform staffing, investment, and strategy decisions'}
+      {dir:'Maximize',metric:'the clarity of',obj:'each department\'s contribution to venue-wide revenue and operational performance',when:'conducting a cross-functional performance review to inform staffing, investment, and strategy decisions'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the economic impact figure reported to city and board stakeholders',when:'the calculation depends on manually aggregated data from sales, hotel partners, and third-party calculators that produce inconsistent results'},
+      {dir:'Maximize',metric:'the completeness of',obj:'sustainability data captured across departments and vendor partners',when:'compiling a sustainability report for city, board, or customer stakeholders and the underlying data lives in disconnected vendor reports and manual estimates'},
+      {dir:'Minimize',metric:'the effort required to',obj:'reconcile event data between the event management system and connected CRM or financial systems',when:'sales, finance, and bureau partners each maintain a separate record of the same event and totals must match before reporting'},
+      {dir:'Maximize',metric:'the completeness of',obj:'the audit trail identifying who changed which event details and when',when:'investigating a discrepancy in cost, space assignment, or contract terms after multiple team members have edited the same event record'}
     ]},
     modify:{ step:'Authorize and direct changes to in-progress events, ensuring every affected team is updated and the impact is tracked', researchOpps:'A change management workflow that standardizes how modifications are directed, tracked, and acknowledged across departments — replacing the ad-hoc email and messaging chain that currently makes it unclear whether a change directive has reached every affected team. Embedded approval routing for changes that cross department boundaries would give directors control over what gets amended without requiring them to be in the communication chain for every update.', outcomes:[
       {dir:'Minimize',metric:'the time it takes to',obj:'authorize and communicate a material change to an in-progress event',when:'a client requests a modification that affects contracted terms and requires leadership sign-off before the team can proceed'},
@@ -4443,7 +4585,8 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'assess the revenue impact of a modification to a contracted event',when:'a change to the booking\'s space, headcount, or service level affects both the contracted minimum and the operational cost'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a contract amendment creating an untracked financial exposure',when:'a change is approved verbally and the formal amendment process is not initiated before the modified services are delivered'},
       {dir:'Maximize',metric:'the accuracy of',obj:'change documentation captured in the event record for audit and reporting purposes',when:'processing a modification that will affect commission calculations, financial reconciliation, or client billing'},
-      {dir:'Minimize',metric:'the disruption caused by',obj:'a last-minute event modification to the client experience and operational execution',when:'a significant change is approved close to the event date and the operations team has limited time to adjust'}
+      {dir:'Minimize',metric:'the disruption caused by',obj:'a last-minute event modification to the client experience and operational execution',when:'a significant change is approved close to the event date and the operations team has limited time to adjust'},
+      {dir:'Minimize',metric:'the effort required to',obj:'learn that a relevant event detail has changed',when:'departments must manually check reports or emails rather than receiving an automatic notification of status changes like deposits, confirmations, or event detail edits'}
     ]},
     conclude:{ step:'Close all event records, review performance outcomes, and apply learnings to improve the venue\'s operations going forward — Closing the feedback loop between post-event actuals and future planning cycles would allow execution data to inform smarter preparation over time, turning every completed event into a learning asset for the next.', researchOpps:'Automated post-event performance summaries — capturing revenue actuals, execution quality, and variance from plan — would replace the manual close-out process and enable directors to run retrospective analysis without exporting raw data. End-to-end financial integration with institutional systems would eliminate the data gap between event completion and financial reconciliation.', outcomes:[
       {dir:'Maximize',metric:'the accuracy of',obj:'post-event revenue actuals captured across all departments before the record is archived',when:'closing out a high-value event where sales commissions, planning costs, and operations actuals all feed into the final P&L'},
@@ -5227,6 +5370,7 @@ function buildPersonaCards() {
 /* ── INIT ── */
 buildPersonaCards();
 buildJTBDGrid();
+buildSecondaryPersonaTiles();
 
 /* ── LAYER INFO POPOVER ── */
 const LAYER_INFO = {

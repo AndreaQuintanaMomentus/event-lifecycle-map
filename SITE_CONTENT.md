@@ -381,6 +381,25 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Manages BEO distribution to kitchen staff (Carole) who has no Momentus access — the last-mile gap in the data chain from event plan to food delivery
 - Responsible for updating actuals and closing catering work orders after events; this step is often delayed because it requires returning to a desk
 
+##### Tanner Tate — Catering Sales Coordinator (Convention Centers) · "The Dot Connector"
+
+**Relationship to Sam Evans:** Builds functions and service orders from client F&B requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.
+
+**Fixed Conditions**
+- Their personality is pragmatic and process-minded, having worked both the operations execution side and the catering sales input side of the same venue
+- They have a background in convention center catering and event operations, having transferred from an operations execution role into catering sales input
+- They are skilled in translating unstructured client specs — spreadsheets, whiteboards, verbal requests, PDFs in no consistent format — into structured functions and service orders
+
+**Dynamic States**
+- From maintaining a shadow Excel spreadsheet for at-a-glance status, minimum spends, and deadlines → to Momentus surfacing that same "what needs my attention" view natively
+- From cutting and pasting client menus and specs that lose their formatting — bullets and dashes turning into stray characters → to structured import that preserves formatting
+- From emailing distribution groups and manually re-flagging note-only changes the system’s change log doesn’t capture → to a change log that reliably surfaces every update, not just resource and function edits
+
+**Structural Status**
+- Sits between the event manager/sales side and the F&B kitchen/operations side — often the same client relationship split into a separate F&B contact and logistics contact
+- Builds recurring functions early but holds off scripting full service orders until requirements are locked, since input in Momentus is flow-driven step by step — financials, bookings, and functions before service orders
+- Accountable for translating vague, F&B-only contract language (a single estimate line at signing) into the fully detailed function and service-order structure operations will execute against
+
 ### Jordan Olsen — Operations Supervisor ("The Moment Maker")
 
 **Product area:** Event Operations  
@@ -483,6 +502,25 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 #### Secondary / adjacent personas around Jordan Olsen
 
+##### Orlando Olive — Operations Crew (Stadiums & Arenas) · "The Hands On The Ground"
+
+**Relationship to Jordan Olsen:** Executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
+
+**Fixed Conditions**
+- Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks
+- They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Supervisor
+- They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests
+
+**Dynamic States**
+- From a massive, everything-for-everyone manifest → to a filtered, role-specific task list that shows only what Orlando needs to do, in sequence
+- From finding out about real-time changes too late → to push notifications for changes that affect his specific tasks
+- From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field
+
+**Structural Status**
+- Receives assignments from Operations Supervisor (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor
+- Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting
+- The final link in the operational data chain: if field staff can't log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete
+
 ##### Hank Henry — Health, Safety & Risk Manager (Stadiums & Arenas) · "The Risk Manager"
 
 **Relationship to Jordan Olsen:** Manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.
@@ -559,24 +597,24 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Uses WeTrack, not Momentus — the gap between incident logs and the event record represents the most critical data integration gap in the S&A vertical
 - Operating 24/7 on event days means zero tolerance for system downtime or usability friction; reliability and speed are non-negotiable requirements
 
-##### Orlando Olive — Operations Crew (Stadiums & Arenas) · "The Hands On The Ground"
+##### Freddie Ford — Meeting Services Crew (Convention Centers) · "The Analog Anchor"
 
-**Relationship to Jordan Olsen:** Executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
+**Relationship to Jordan Olsen:** Executes setup, changeover, and breakdown work under the Meeting Services Supervisor's direction — the front-line role where, in the supervisor's own words, "technology stops."
 
 **Fixed Conditions**
-- Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks
-- They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Supervisor
-- They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests
+- Their personality is task-focused and constantly moving — coordinating setup, changeover, and breakdown across rooms entirely by radio
+- They have a background in convention center meeting services and banquet setup, working from a printed work order handed out at the morning briefing rather than any device of their own
+- They are skilled in fast physical changeover work — reading a room diagram, executing the setup, and reporting status back verbally — with no system access of their own
 
 **Dynamic States**
-- From a massive, everything-for-everyone manifest → to a filtered, role-specific task list that shows only what Orlando needs to do, in sequence
-- From finding out about real-time changes too late → to push notifications for changes that affect his specific tasks
-- From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field
+- From a legacy mobile tool a few crew members used to log progress before switching platforms → to no digital tool at all today, reporting status back to the supervisor by radio only
+- From carrying a printed work order for the day → to a simple, no-login way to view and confirm today's tasks from the floor
+- From changes relayed room to room by word of mouth → to a push notification that reaches crew directly when a change affects their space
 
 **Structural Status**
-- Receives assignments from Operations Supervisor (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor
-- Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting
-- The final link in the operational data chain: if field staff can't log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete
+- Receives daily assignments and printed work orders from the Meeting Services Supervisor at the morning briefing — the last link in the chain from event plan to physical setup
+- Has no direct system access — every status update, completion, and incident is relayed verbally or by radio and re-entered into the system by the supervisor at day's end
+- The point where the operational data chain currently goes fully manual — closing the same last-mile gap other front-line crew roles represent elsewhere, but with even less digital access (radio only, no mobile tool)
 
 ### Casey Lindgren — Finance Director ("The Financial Steward")
 
@@ -779,21 +817,21 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 #### Dynamic States — State descriptors. Change through the object lifecycle.
 
 - **Status** — Inquiry → Tentative → Definite → Closed
-- **Hold Priority** — Tentative 1 / 2 / 3 — calendar rank
 - **Proposal Version** — current draft iteration
 - **Contract Status** — Draft → Sent → Signed → Executed
 - **Deposit Status** — Pending → Partially Paid → Received
 - **Calendar Availability** — real-time space conflict flag
-- **Opportunity Score** — revenue + space fit, AI-ranked
+- **Pipeline Stage** — position in the sales funnel
 
 #### Structural Status — System position. Authority, assignment, record identity.
 
 - **Assigned Sales Rep / Owner** — accountable team member
 - **Booking / Record ID** — system-generated identifier
 - **Created Date** — first capture timestamp
-- **Pipeline Stage** — position in the sales funnel
 - **Linked Account Record** — connects to CRM account object
 - **Sales Team / Department** — which team owns this booking
+- **Hold Priority** — Tentative 1 / 2 / 3 — calendar rank
+- **Opportunity Score** — revenue + space fit, AI-ranked
 
 #### Actions
 
@@ -823,6 +861,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 - **Finalized Flag** — gating state between planning and ops
 - **Service Orders Status** — F&B, AV, setup, labor — draft → confirmed → distributed
 - **Supporting Documents** — diagrams, layout drawings, notes, and attachments
+- **Distribution Status** — Not Sent → Partially Sent → Fully Distributed — whether assigned departments have received the BEO
 
 #### Structural Status — System position. Authority, assignment, record identity.
 
@@ -830,7 +869,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 - **BEO Number / Document ID** — unique sequential identifier
 - **Department Owner** — Catering, AV, Facilities, Security
 - **Linked Booking ID** — parent event record reference
-- **Distribution Status** — which departments received the BEO
+- **Departmental Distribution** — which departments are assigned to receive this BEO
 - **Last Modified Timestamp** — change tracking anchor
 
 #### Actions
@@ -843,7 +882,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 
 #### Fixed Conditions — Identity descriptors. Set once, never changed.
 
-- **Work Order / Type** — Setup, Breakdown, F&B, AV, Security…
+- **Work Order Type** — Setup, Breakdown, F&B, AV, Security…
 - **Linked Function / Booking** — the event this work order belongs to
 - **Space / Location** — where the work order must be executed
 - **Required Start / Due Time** — scheduled execution window
@@ -853,11 +892,10 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 #### Dynamic States — State descriptors. Change through the object lifecycle.
 
 - **Status** — Pending → Assigned → In Progress → Complete → Verified
-- **Priority** — Urgent / High / Normal / Low
 - **Completion Progress** — real-time % or checklist completion
 - **Incidents Logged** — count of deviations or issues flagged
 - **Support Material / Change Log** — instructions, diagrams, and real-time crew notes
-- **Actual vs. Scheduled Time** — execution deviation from BEO timeline
+- **Actuals vs Expected** — execution deviation from plan
 
 #### Structural Status — System position. Authority, assignment, record identity.
 
@@ -867,6 +905,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 - **Work Order # / Task ID** — system-generated identifier
 - **BEO Reference** — traceability back to Event Plan
 - **Verification Authority** — who can mark Verified / sign off
+- **Priority** — Urgent / High / Normal / Low
 
 #### Actions
 
@@ -1096,6 +1135,9 @@ MW's value compounds when venues run multiple concurrent events. Operations team
 **Why the Planning-to-Ops handoff is the highest-stakes moment**  
 Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on Jordan's team without a safety net. MW rises when that handoff is clean, written, and inside Momentus.
 
+**What does the gap look like at its most extreme?**  
+One convention center supervisor described it plainly: "technology stops at the supervisor." Front-line crew work from a printed assignment and a radio — no device, no login — so every completion, delay, and incident is relayed verbally and then reconstructed from memory into a manual end-of-day report emailed to other departments. MW only reflects reality once that hand-translation step disappears, not just once a work order exists somewhere in the platform.
+
 ### Momentus Financials (MF)
 
 The number of events whose full financial closeout — budget reconciliation, GL matching, invoice generation and approval — is completed entirely inside Momentus during a rolling 30-day window, without falling back to a separate ERP (e.g. PeopleSoft), spreadsheet, or manual cross-system reconciliation.
@@ -1158,6 +1200,7 @@ Company/product/customer history timeline. Each area card below shows only entri
 
 ### Operations at Momentus (Operations)
 
+- **Jul 2024** [customer] Convention Center interview cautions against self-service-as-storefront — A PavCo/Vancouver Convention Centre catering coordinator interview surfaces a live cautionary example: the venue's existing self-service exhibitor ordering system (VCCI) increased transcription workload and produced double-bookings and missed next-day deliveries — reinforcing that the "collaboration portal" concept (flagged Jan 2024) should be a task/communication tool between staff and client, not an e-commerce ordering storefront. _(source: UX- Operational - banquet orders_catering-20240718_130314-Meeting Recording-en-US.docx)_
 - **End of Mar 2024** [product] Risk Manager discontinued, folded into WeTrack — Momentus stops selling standalone Risk Manager, consolidating its functionality into WeTrack rather than maintaining two overlapping risk products. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Nov 2023** [product] WeTrack regional licensing & Momentus brand alignment — Licensing for regional clusters, theming/navigation updates, and analytics integration (Smartlook + Pendo) ship as WeTrack adopts Momentus branding. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Aug 2023** [product] WeTrack ships multi-language BETA — French, Italian, Spanish, German, and Arabic translations released as WeTrack integrates into the Momentus product family. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
@@ -1184,6 +1227,7 @@ Company/product/customer history timeline. Each area card below shows only entri
 - **2025** [customer] Wins Las Vegas Convention Center — Momentus becomes the software of choice for the top 16 U.S. convention centers by square footage. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
 - **2025** [industry] Industry shift toward "entertainment districts" — Stadiums & arenas (e.g. Atlanta Braves, Kansas City Power & Light) increasingly diversify revenue beyond gameday, reshaping what venue customers need from Momentus. _(source: Event Lifecycle & Verticals.pptx)_
 - **Mar 2025** [product] Group Room Control launches for Walt Disney World — Completion of this hotel group-booking feature becomes the trigger for a strategic push into the underrepresented Hotels, Casinos & Resorts vertical. _(source: PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
+- **Jul 2024** [customer] Convention Center interview cautions against self-service-as-storefront — A PavCo/Vancouver Convention Centre catering coordinator interview surfaces a live cautionary example: the venue's existing self-service exhibitor ordering system (VCCI) increased transcription workload and produced double-bookings and missed next-day deliveries — reinforcing that the "collaboration portal" concept (flagged Jan 2024) should be a task/communication tool between staff and client, not an e-commerce ordering storefront. _(source: UX- Operational - banquet orders_catering-20240718_130314-Meeting Recording-en-US.docx)_
 - **~2024** [customer] Jaarbeurs migrates CRM to Salesforce — Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years." _(source: illuminate_2026_internal_synthesis_1.docx)_
 - **Apr 2024** [customer] Enterprise Accounting: adoption climbs with NPS by module — 746 customers use Enterprise Accounting (45% Core Receivables/GL, 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
 - **End of Mar 2024** [product] Risk Manager discontinued, folded into WeTrack — Momentus stops selling standalone Risk Manager, consolidating its functionality into WeTrack rather than maintaining two overlapping risk products. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
@@ -1256,6 +1300,8 @@ Determine which incoming leads and calendar opportunities are worth pursuing as 
 9. Maximize the accuracy of account history and prior revenue captured before making a qualification decision — when evaluating a returning client from a competitor property with limited history in the current system
 10. Minimize the effort required to route a disqualified lead to an alternative contact or venue partner — when an inbound inquiry does not meet minimum revenue or fit requirements for the property
 11. Minimize the likelihood of a qualified lead going stale without an initial response — when the sales team receives a high volume of inbound inquiries during peak season and response capacity is limited
+12. Minimize the effort required to track a preliminary inquiry that lacks enough detail to justify a formal calendar hold — when a cold call or vague inquiry doesn't yet warrant creating and then immediately cancelling a hold
+13. Minimize the effort required to log a lost-business reason at the point a lead is disqualified — when time pressure discourages recording why an opportunity did not convert
 
 #### 02 · Locate — Optimize space selection & revenue
 
@@ -1278,6 +1324,7 @@ Gather available spaces, dates, and client history to assess whether a booking c
 9. Maximize the accuracy of availability information presented to a prospect — when a specific space has pending holds, maintenance windows, or setup constraints not yet reflected in the system
 10. Minimize the effort required to identify alternative configurations that meet the client's stated requirements — when the preferred space is unavailable and a non-standard room combination would satisfy the event's functional needs
 11. Minimize the likelihood of committing to availability contingent on a pending cancellation not yet confirmed — when a desirable date has an existing hold in a late follow-up stage
+12. Minimize the effort required to identify which specific event is causing a double-booking conflict — when the system flags an overlap but does not surface which other booking it conflicts with
 
 #### 03 · Prepare — Price & build proposals
 
@@ -1303,6 +1350,7 @@ Assemble the proposal, pricing structure, and hold configuration needed to prese
 12. Maximize the accuracy of catering minimums and contracted service inclusions shown in a proposal — when presenting a price estimate that will form the basis of a formal offer and displacement decision
 13. Minimize the effort required to customize proposal content to match the client's stated priorities and event type — when preparing a proposal for a corporate event that requires a branded template different from the venue default
 14. Minimize the time it takes to get pricing approval from revenue management before sending a proposal — when the booking requires a below-standard rate that must be authorized before the offer is extended
+15. Minimize the time it takes to obtain multi-party sign-off on a discretionary incentive or opportunity-fund allocation — when a booking requires approval spanning sales leadership, finance, and executive leadership before an incentive can be extended
 
 #### 04 · Confirm — Manage space holds strategically
 
@@ -1323,6 +1371,8 @@ Decide which lead to convert, prioritizing against competing holds and pipeline 
 9. Maximize the speed of moving a tentative hold to a definite booking status once verbal agreement is reached — when the client has committed verbally but contract paperwork has not yet been signed
 10. Minimize the effort required to document the rationale behind a displacement decision for internal audit — when choosing to advance a lower-revenue booking over a higher-value hold that was still in negotiation
 11. Minimize the likelihood of a hold conversion triggering a notification gap to a competing client whose hold was displaced — when the venue policy requires courtesy notification when a hold is superseded by a confirmed booking
+12. Minimize the time it takes to align an internal hold-prioritization decision with external bureau or hotel partners — when the choice of which lead to advance requires consensus beyond the sales team itself
+13. Minimize the risk of losing negotiation context and rationale on a long-lead-time licensing agreement — when a contract signed years in advance outlives the tenure of the salesperson who negotiated it
 
 #### 05 · Execute — Close deals & secure commitments
 
@@ -1345,6 +1395,8 @@ Create the confirmed Event Opportunity and initiate the contract within Momentus
 9. Maximize the completeness of the initial Event Opportunity record at the time of creation — when entering a booking whose full requirements were negotiated verbally and not fully captured in the lead record
 10. Minimize the effort required to generate and format contract attachments for signature — when the booking requires non-standard addenda or custom clauses that were negotiated during the proposal stage
 11. Minimize the likelihood of a booking creation error propagating to downstream planning and finance systems — when creating a high-volume booking where errors in the initial record would require retroactive correction across multiple departments
+12. Minimize the total time and manual entry required to fully build out a large, complex Event Opportunity record — when a single high-complexity booking can require up to 90 hours of manual data entry
+13. Minimize the effort required to reassign an entire portfolio of active Event Opportunities to a new sales owner — when a manager departs and accounts must be reassigned one-by-one because bulk reassignment isn't supported
 
 #### 06 · Monitor — Forecast revenue accurately
 
@@ -1369,6 +1421,8 @@ Track the pipeline, PACE report, and follow-up activity across all active Event 
 9. Maximize the clarity of individual sales manager performance against target in the shared pipeline view — when reviewing team contribution to period revenue goals in advance of a monthly performance meeting
 10. Minimize the effort required to identify which active holds are at risk of expiring without a follow-up — when reviewing a large pipeline during a high-volume season where follow-up cadence has fallen behind
 11. Maximize the speed of generating a period-end revenue summary from confirmed bookings — when the venue director requests an updated PACE report with less than 24 hours notice before a leadership review
+12. Increase the visibility into individual sales activity volume — calls, emails, touchpoints — logged against each lead — when assessing sales productivity and diagnosing where deals stall in the pipeline
+13. Increase the accuracy of win-rate and conversion calculations for opportunities carrying multiple candidate dates — when a single Event Opportunity has several possible dates and only one converts to a booking
 
 #### 07 · Modify — Update terms
 
@@ -1388,6 +1442,8 @@ Update booking terms, holds, or contract details in response to client requests 
 6. Minimize the likelihood of a modification to an Event Opportunity creating a revenue variance that is not tracked — when adjusting contracted minimums, space configurations, or headcount after the original contract has been signed
 7. Maximize the accuracy of the amendment documentation sent to the client — when processing a change that affects pricing or contract terms and requires the client's written acknowledgment
 8. Minimize the effort required to coordinate the impact of a booking modification with the operations and finance teams — when a change involves both a space reassignment and a revision to the contracted catering minimum
+9. Minimize the loss of booking history and audit trail when applying a significant change to an existing Event Opportunity — when the only way to change certain details is to copy the event and cancel the original
+10. Minimize the likelihood of a copied or rebooked event falsely appearing as changed to operations — when copied functions default into an editable pre-confirmed state that trips the change-management tracker even though nothing has actually changed
 
 #### 08 · Conclude — Transition to operations
 
@@ -1410,6 +1466,7 @@ Close the booking, transfer it to planning, and archive the sales record for rep
 9. Maximize the confidence in the final commission calculation at booking close — when the event included multiple amendments that each modified the contracted revenue basis for commission purposes
 10. Minimize the likelihood of the planning team beginning work from a booking record that has not been formally signed off — when closing and handing off an Event Opportunity before the client has returned the final counter-signed contract
 11. Maximize the accuracy of displacement outcome records archived at booking close — when reconciling whether the original displacement decision resulted in the forecasted revenue outcome for performance review
+12. Maximize the speed of initiating a rebooking conversation with a client — when the event has just closed successfully and goodwill is highest for securing next year's business before a competing venue does
 
 ### Detail Event Plan — Sam Evans, Event Planner ("The Promise Keeper")
 
@@ -1436,6 +1493,8 @@ Scope the full set of functional requirements for a committed Event Opportunity
 6. Minimize the effort required to translate verbal client expectations into a structured function scope — when the sales handoff included high-level client notes but no formal requirement documentation
 7. Maximize the clarity of department-specific requirements identified during initial scoping — when beginning to plan a multi-function event that involves catering, AV, facilities, and external vendors simultaneously
 8. Minimize the likelihood of misinterpreting a sales-stage commitment as a fixed requirement during scope definition — when reviewing a sales proposal where certain service inclusions were offered conditionally but are now being treated as confirmed by the client
+9. Minimize the likelihood of being unable to reassign a planner to an Event Plan once the initial activity checklist has been generated — when a staffing change or workload rebalance requires reassigning ownership of an already-detailed event
+10. Minimize the effort required to identify confirmed upcoming events that have not yet been assigned a planner — when leadership reviews the pipeline of bookings over the next 24 months to distribute planning workload
 
 #### 02 · Locate — Review booking & scope functions
 
@@ -1462,7 +1521,7 @@ Access the confirmed Event Opportunity record and all prior client information n
 
 Build the complete BEO/event order for each function, including space, F&B, AV, exhibitors, registration, setup, and timing — Standardized event resume and BEO templates would eliminate the per-event customization overhead that currently falls on every planner. Automated workflow generation based on event type and customer profile could replace manual checklist creation from scratch. A guided, templatized registration setup flow would reduce configuration from hours to minutes. An in-system recommendation engine surfacing relevant add-ons and upsells based on client history would unlock revenue opportunities that are currently invisible at the planning stage.
 
-**Research opportunity:** Mass data entry tools — bulk function import, copy-paste with configuration preservation, and template-based function sets — would reduce the 90+ hours of manual BEO setup that planners spend on large multi-day events. Inline spell check and field-level validation within the detailing interface would catch quality issues at input rather than when documents are sent to clients. A searchable, filterable content catalog would replace the infinite-scroll browsing that makes program content selection exhausting.
+**Research opportunity:** Mass data entry tools — bulk function import, copy-paste with configuration preservation, and template-based function sets — would reduce the 90+ hours of manual BEO setup that planners spend on large multi-day events. Inline spell check and field-level validation within the detailing interface would catch quality issues at input rather than when documents are sent to clients. A searchable, filterable content catalog would replace the infinite-scroll browsing that makes program content selection exhausting. Preserving list formatting — bullets and line breaks — when pasting client menus and specs would eliminate the stray characters and broken structure that currently require manual cleanup after every paste. Because clients rarely send finalized specs, a staged import — negotiating details in a lightweight external format first, then bulk-loading only once requirements are locked — would match how detailing actually happens today, rather than assuming specs arrive ready to load.
 
 **Desired outcomes:**
 
@@ -1474,6 +1533,9 @@ Build the complete BEO/event order for each function, including space, F&B, AV, 
 6. Maximize the accuracy of event timelines and space transition sequences captured in the BEO — when preparing function orders for a multi-day event with back-to-back functions requiring setup and teardown coordination between sessions
 7. Minimize the likelihood of a service requirement being omitted from the BEO because it was communicated verbally between the client and a department head — when building an event order where the client has a direct relationship with the F&B or AV department lead outside the formal planning channel
 8. Minimize the effort required to resolve conflicting specifications between client-provided event details and the venue's operational constraints — when building the BEO for an event where the client is requesting a non-standard setup that requires coordination with engineering or facilities
+9. Minimize the likelihood of inconsistent event-detail documentation style across different planners on the same team — when multiple event managers are each building BEOs independently using their own individual habits and confidence level
+10. Minimize the effort required to prepare and activate exhibitor service coordination as part of the Event Plan — when an event includes exhibitors and requires handing off exhibitor service ordering to a separate department
+11. Minimize the effort required to prepare diagrams, timelines, and status updates for the recurring cross-department production meeting — when facilities, catering, AV, and security need a shared weekly view of upcoming events before they occur
 
 #### 04 · Confirm — Confirm functions & orders
 
@@ -1510,6 +1572,9 @@ Distribute the finalized BEO to all relevant operations departments inside Momen
 6. Minimize the effort required to confirm receipt and acknowledgment of the BEO by each receiving department — when distributing a time-sensitive function order in the days leading up to an event where preparation windows are short
 7. Maximize the completeness of vendor-specific instructions included in the BEO portions sent to external service providers — when the event relies on off-property catering, contracted AV, or third-party entertainment who must also receive function detail
 8. Minimize the likelihood of a department receiving an incomplete BEO because only their relevant section was extracted for distribution — when the event plan was built as a single document and requires manual extraction of department-specific sections before distribution
+9. Maximize the professional, polished appearance of the BEO or event schedule distributed to the client and operations — when the system-generated document does not meet the visual standard the planner needs to present externally
+10. Minimize the likelihood of operations working from an outdated event diagram — when a revised diagram is uploaded to the Event Plan after the original has already been referenced or printed by operations
+11. Minimize the number of separate documents that must be compiled and distributed to operations for a single event — when work orders and diagrams are generated as individual files rather than one consolidated package
 
 #### 06 · Monitor — Track completion
 
@@ -1531,6 +1596,7 @@ Track BEO completion, client changes, and department acknowledgment across all a
 6. Maximize the clarity of the current state of each active event in the portfolio at a glance — when managing five or more concurrent events at different stages of the detailing and confirmation process
 7. Minimize the effort required to track client-initiated changes across multiple active events simultaneously — when managing a portfolio where several clients are making concurrent modifications to their pending function orders
 8. Minimize the likelihood of an approaching distribution deadline going unnoticed — when balancing detail work across upcoming events while simultaneously responding to client change requests on already-distributed plans
+9. Minimize the likelihood of a payment or deposit deadline going unnoticed — when managing multiple active events with different payment plan schedules and no system-generated reminder
 
 #### 07 · Modify — Update & notify
 
@@ -1540,7 +1606,7 @@ Update function details and notify impacted departments when client changes arri
 
 **Research opportunity:** Mass editing across functions and orders — applying a change once and propagating it to all affected records — would replace the line-by-line re-entry that makes change management so time-consuming for large multi-function events. In-flight document editing with version tracking would enable planners to update a distributed BEO without having to re-export and redistribute it manually.
 
-**Product documentation opportunity:** Exhibitor booth number changes captured and visible in Change Tracking — ensuring planners and operations teams always have accurate stand information without relying on manual communication when booth assignments shift during active event management.
+**Product documentation opportunity:** Exhibitor booth number changes captured and visible in Change Tracking — ensuring planners and operations teams always have accurate stand information without relying on manual communication when booth assignments shift during active event management. Change Tracking capturing note-only edits, not just changes to resources and functions, would remove the need for catering coordinators to separately email-flag note updates that the system otherwise misses — a real gap that currently undermines confidence in the log as a complete record of what changed.
 
 **Desired outcomes:**
 
@@ -1552,6 +1618,7 @@ Update function details and notify impacted departments when client changes arri
 6. Maximize the speed of issuing a revised BEO and confirming re-acknowledgment by all affected departments — when a client change arrives within 48 hours of the event and requires same-day redistribution to operations
 7. Minimize the effort required to identify which portions of the BEO were affected by a client change and which can remain as distributed — when a single-function modification is received for an event with multiple concurrent functions already in execution preparation
 8. Minimize the likelihood of a post-modification version conflict causing two departments to execute against different versions of the same function plan — when a revision is issued while one department has already printed and begun preparation from the prior approved BEO
+9. Minimize the likelihood of a copied or repeat event's functions falsely registering as a change on the operations change-tracker — when a planner copies function details from a prior instance of a recurring event and must move them out of a read-only pre-confirmed state to edit them
 
 #### 08 · Conclude — Ensure completion
 
@@ -1571,6 +1638,7 @@ Ensure all function records are closed and complete, confirm post-event customer
 6. Minimize the effort required to reconcile final attendance and consumption actuals against each function line in the BEO — when concluding a multi-function event where actual guest counts, F&B consumption, and setup usage varied significantly from the plan
 7. Maximize the completeness of documentation supporting any unbilled overages or service additions — when closing out an event where client-requested additions during execution were not captured in the original BEO
 8. Minimize the likelihood of a discrepancy between the closed BEO and the finance invoice going undetected before billing — when finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours
+9. Maximize the completion rate of post-event summary documentation across the planning team — when the department wants to analyze the closed-event portfolio to identify commonalities and improve future planning
 
 ### Execute Event Work — Jordan Olsen, Operations Supervisor ("The Moment Maker")
 
@@ -1606,7 +1674,7 @@ Access the finalized BEO and all supporting documentation needed to build and as
 
 **Research opportunity:** An operations-ready event view — filtering and presenting only the work orders, spaces, and timing relevant to a given crew member’s scope, rather than exposing the full event record. Real-time inventory availability visible at work order assignment would eliminate the parallel spreadsheet tracking that operations managers currently maintain to know what resources are in use.
 
-**Product documentation opportunity:** Room diagrams accessible directly from MWO — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans.
+**Product documentation opportunity:** Room diagrams accessible directly from MWO — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans. Today, floor plans and dietary lists are filed at the full-event level rather than to the specific function or work order — extending document association down to the work order itself, not just improving how MWO displays what already exists, would let crew find only what is relevant to their assignment instead of sorting through an entire event’s paperwork.
 
 **Desired outcomes:**
 
@@ -1618,6 +1686,8 @@ Access the finalized BEO and all supporting documentation needed to build and as
 6. Minimize the effort required to confirm the BEO is fully approved and authorized before beginning work order creation — when the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system
 7. Maximize the accuracy of all floor plan and space layout details available at the time of work order creation — when building operational task assignments for an event using a non-standard room configuration that requires custom layout reference materials
 8. Minimize the likelihood of beginning work order creation from a BEO that the planning team is still revising — when the event planner and operations team are working on parallel timelines and the final detail has not been formally locked
+9. Minimize the likelihood of a just-uploaded diagram failing to render and requiring a manual re-upload before crew can reference it on site — when building a work order immediately after the planning team distributes a new floor plan or diagram
+10. Minimize the likelihood of a space or inventory item appearing available for another use before setup or teardown time has been accounted for — when the venue calendar reflects only the contracted event hours and not the surrounding turnover window operations needs
 
 #### 03 · Prepare — Forecast & publish orders
 
@@ -1639,6 +1709,9 @@ Assign all operational tasks to crew members, departments, and equipment, with t
 6. Maximize the clarity of task priority and sequencing communicated to each crew member — when assigning interdependent setup tasks where the completion of one job must precede the start of another
 7. Minimize the effort required to build a complete crew schedule from a work order template for a recurring event type — when preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before
 8. Minimize the likelihood of a time conflict between two assignments given to the same crew member — when scheduling staff who are assigned to multiple sequential functions within the same event window
+9. Minimize the effort required to generate accurate physical labels for booth-specific equipment such as power cords and utility drops — when preparing hundreds of individually labeled items for a large exhibition event
+10. Minimize the effort required to produce a single, field-legible packet combining work orders and room diagrams — when distributing daily assignments to an operations team that primarily works from print rather than devices
+11. Maximize the speed at which open or available shifts generated by a staffing-need change are broadcast to eligible crew — when a BEO or resume update triggers new labor requirements across departments
 
 #### 04 · Confirm — Confirm no last-minute changes
 
@@ -1677,6 +1750,9 @@ Supervise live work order execution across all crew and spaces during the event 
 6. Minimize the likelihood of a crew member executing an Event Work against an outdated task specification — when a modification was issued by the planning team after the crew was dispatched with printed task assignments
 7. Maximize the clarity of real-time task status visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
 8. Minimize the effort required to reallocate crew from a lower-priority task to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
+9. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized work order quantities
+10. Minimize the likelihood of losing in-progress mobile work order entries due to application performance failures such as crashes, logouts, or slow diagram loads — when low-tech-savvy field crew are completing setup tasks on a mobile device in real time
+11. Minimize the likelihood of a work order item being marked complete by someone other than the authorized supervisor or coordinator — when a maintenance or install crew member can update status but only a designated coordinator should verify and close the item
 
 #### 06 · Monitor — Real-time track
 
@@ -1698,6 +1774,8 @@ Track work order completion, crew location, and incident status in real time dur
 6. Maximize the speed of identifying a task that is falling behind schedule during live execution — when monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event
 7. Minimize the effort required to document an operational incident in real time — when managing an active event and a client-visible issue requires immediate logging without stopping the operations supervisor from coordinating the resolution
 8. Maximize the accuracy of the real-time status view of all active Event Works — when a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team
+9. Minimize the cognitive effort required to parse a shared dashboard view for only the work orders and spaces relevant to a specific supervisor — when using a shared, unfiltered view that surfaces every department's activity instead of just the supervisor's own scope
+10. Maximize the traceability of an individual Event Work item's status history from installed to verified to flagged for repair — when a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record
 
 #### 07 · Modify — Handle change orders
 
@@ -1717,6 +1795,8 @@ Reassign or update work orders when changes are communicated from the planning t
 6. Maximize the speed of acknowledging a change request from the planning team and confirming the correct crew member has been notified — when a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update
 7. Minimize the effort required to document the reason for a task reassignment and the time it was actioned — when a mid-event change is made that may need to be referenced during post-event billing or incident review
 8. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a task modification is communicated directly by the event planner to an individual crew member without updating the formal work order record
+9. Minimize the effort required to confirm that a change reported through operations was actually applied by the planning team — when a customer relays a change to operations directly, and operations has no visibility into whether or when the planning team updated the record
+10. Minimize the time it takes to receive event-manager approval or denial for a change that operations identifies on-site — when a customer requests a modification during setup and operations must wait for a yes or no before proceeding
 
 #### 08 · Conclude — Capture actuals & close
 
@@ -1726,7 +1806,7 @@ Log work order completion, document all actuals and incidents, close the work or
 
 **Research opportunity:** Actuals capture within the work order at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close.
 
-**Product documentation opportunity:** Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off.
+**Product documentation opportunity:** Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a work order right away instead of holding the entire record open until final counts are in.
 
 **Desired outcomes:**
 
@@ -1738,6 +1818,10 @@ Log work order completion, document all actuals and incidents, close the work or
 6. Minimize the effort required to collect and consolidate completion confirmations from all crew members after teardown — when wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times
 7. Maximize the accuracy of equipment return and inventory counts submitted at event close — when concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest
 8. Minimize the likelihood of an unresolved incident remaining open after the work order is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
+9. Minimize the reliance on memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building — when producing an end-of-day report for other departments without a system-generated summary of work order status
+10. Minimize the likelihood of being blocked from closing a completed work order because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
+11. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
+12. Maximize the ability of the operations team to independently verify and close a work order upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
 
 ### Reconcile Event Financials — Casey Lindgren, Finance Director ("The Financial Steward")
 
@@ -1761,6 +1845,7 @@ Create the long-horizon budget and price list an event will be measured against,
 3. Minimize the likelihood of a billable item being missing from the system at the point an event is sold — when finance has not yet synced new service or space offerings into the price list before sales begins booking them
 4. Minimize the effort required to route a vendor or contract decision through required procurement and approval channels — when operating under municipal or public-entity purchasing rules that apply even to routine repairs or services
 5. Maximize the confidence in the budget baseline an event will later be measured against — when submitting a multi-year or capital-project-adjacent budget for executive and government approval
+6. Minimize the effort required to establish a single payment plan spanning a multi-year or multi-event contract — when a customer’s booking spans multiple linked events that finance intends to bill as one financial obligation
 
 #### 02 · Locate — Pull event financial setup
 
@@ -1774,6 +1859,7 @@ Retrieve the budget line, price list, and contract terms relevant to a specific 
 2. Minimize the effort required to cross-reference vendor contract terms against the system of record — when verifying that a contractor’s invoiced rate matches what was originally contracted
 3. Minimize the likelihood of needing to pull data from more than one system to answer a basic event-financial question — when a department head or executive asks for a quick read on an event’s financial position
 4. Maximize the speed of accessing GL inquiry detail for a specific event — when investigating a reported cost or revenue discrepancy
+5. Minimize the effort required to obtain a detailed cost and revenue breakdown from a third-party partner operator such as food and beverage — when that data must be manually requested and compiled rather than being visible in the system
 
 #### 03 · Prepare — Review vendors & allocate costs
 
@@ -1788,6 +1874,9 @@ Review vendor and contractor terms, allocate costs to the correct departments an
 3. Maximize the clarity of which department owns which line item in an event’s budget — when preparing for a multi-department event where cost ownership has historically been ambiguous
 4. Minimize the likelihood of a contracted rate being entered incorrectly before the event begins — when setting up contractor and vendor terms that will later be checked against invoices
 5. Maximize the accuracy of the pre-event cost allocation plan — when preparing budgets for events with a history of departments not tracking their own spend
+6. Minimize the effort required to separate an in-house partner’s internal costs from customer-billable costs — when the partner, such as an in-house caterer, operates in the same system and costs must be manually flagged and un-flagged as internal at the event level
+7. Minimize the likelihood of a percentage-based discount being miscalculated or lost when reconciled against the contracted rate — when handling non-standard discounts such as a percentage off booth or space cost
+8. Minimize the likelihood of losing institutional knowledge about a licensing agreement’s terms or approvals — when contracts are signed two to five years before the event and the original signee has since left or moved on
 
 #### 04 · Confirm — Lock budget & billables
 
@@ -1801,6 +1890,8 @@ Confirm the budget, price list, and billable item setup are finalized and locked
 2. Minimize the likelihood of a budget or price list change occurring after the event has already begun — when late pricing or vendor decisions are still being finalized close to the event date
 3. Minimize the effort required to verify that every billable item planned for an event has been correctly entered in the system — when preparing for an event with a large or non-standard list of chargeable services
 4. Maximize the speed of resolving a missing budget line before the event window opens — when a last-minute change to event scope requires a corresponding budget adjustment
+5. Minimize the effort required to record a customer deposit — when payments are collected by check or in person rather than through an integrated payment portal
+6. Maximize the speed of being alerted that a deposit is due, has been made, or is past due — when finance currently relies on manually pulling or checking reports for deposit status
 
 #### 05 · Execute — Monitor spend & payroll
 
@@ -1817,6 +1908,7 @@ Monitor event spend and vouchers as they post, check GL entries for variance thr
 5. Maximize the speed of flagging a cost that is tracking meaningfully over budget while the event is still running — when there is still time to intervene before the event concludes
 6. Minimize the likelihood of contractor costs going untracked during the event because the invoice hasn’t arrived yet — when third-party vendors are on-site but bill separately and later
 7. Maximize the confidence in the real-time financial picture of an in-progress event — when an executive or department head asks how an event is tracking against budget before it has closed
+8. Minimize the likelihood of a service or work order being closed to process an invoice payment before the associated labor has actually occurred — when the system requires orders to be closed in order to invoice a credit-card payment
 
 #### 06 · Monitor — Catch variances early
 
@@ -1834,6 +1926,11 @@ Track budget-vs-actual variance on an ongoing basis and forecast the likely mont
 4. Maximize the speed of alerting the responsible department head to a developing variance — when there is still enough time in the month to take corrective action
 5. Minimize the effort required to determine which events are driving an emerging budget variance — when a department’s aggregate numbers look off but the specific cause isn’t yet clear
 6. Maximize the accuracy of the monthly close forecast communicated to senior leadership — when preparing department heads and executives for an upcoming financial reporting cycle
+7. Minimize the manual data entry required to populate a revenue forecast report — when forecast and budget figures must be manually typed into a report tab rather than auto-populating from actuals
+8. Minimize the technical expertise required to produce an ad hoc financial report requested by a city or government stakeholder — when fulfilling the request currently requires custom database querying rather than a built-in reporting tool
+9. Maximize the accuracy of venue financial data manually transcribed into a corporate reporting spreadsheet — when a parent management company requires manual spreadsheet submission for consolidated reporting
+10. Minimize the effort required to reconcile a partner’s commission report against invoicing and revenue data — when commission reporting is generated in a separate partner-owned system with no integration into the event management system
+11. Minimize the effort required to export clean, usable general ledger data for downstream reporting or reconciliation — when exports currently require manual spreadsheet rework due to data issues
 
 #### 07 · Modify — Resolve disputes & reallocate
 
@@ -1850,6 +1947,8 @@ Investigate and resolve contested costs, correct GL coding errors, and reallocat
 3. Maximize the confidence in a proposed budget reallocation between line items or departments — when moving funds requires understanding the downstream impact on margin
 4. Minimize the likelihood of the same GL coding error recurring across multiple events — when a department consistently miscodes the same type of expense
 5. Minimize the effort required to document the reason and approval for a budget change — when a change must be traceable for audit or government reporting purposes
+6. Minimize the effort required to correct or update actuals on an invoice after it has posted to the external ERP or GL — when integration constraints with an external general ledger system prevent updating actuals post-invoice
+7. Minimize the effort required to route a discretionary-fund or special-discount allocation through a multi-executive approval chain — when the approval chain of VPs, finance, and executive leadership currently requires a printed document to be physically signed and hand-carried
 
 #### 08 · Conclude — Reconcile & close the books
 
@@ -1871,6 +1970,9 @@ Verify service orders and work orders were entered correctly, reconcile the GL, 
 6. Minimize the likelihood of an unexpected cost surfacing months after an event is considered closed — when a large number of third parties were involved and their invoices arrive on inconsistent timelines
 7. Minimize the time it takes to produce a department-level or venue-level monthly P&L — when department heads and executives expect regular, on-time financial reporting
 8. Maximize the completeness of the economic impact and stakeholder financial report for a closed event — when reporting the venue’s value to a city CFO, board, or other government stakeholder
+9. Minimize the duplicative effort required to re-enter or recreate financial and invoice data in a separate municipally-mandated finance system — when city or municipal IT policy prohibits direct system integration
+10. Minimize the effort required to re-key invoice data into an external accounting system to generate the final, official customer invoice — when the accounting system of record for final invoicing is separate from the event management system
+11. Maximize the consolidation of exhibitor-service and show-level charges into a single customer invoice — when exhibitor and show billing currently must be tracked and invoiced separately, requiring manual bulk-number reconciliation
 
 ### Manage Event — Morgan Rivera, Venue Director ("The Orchestrator")
 
@@ -1897,6 +1999,7 @@ Set the strategic criteria for which events to pursue and how the venue prioriti
 6. Minimize the likelihood of resource overcommitment caused by failing to establish capacity thresholds during strategy setting — when planning for a high-volume season where all three departments will be running events simultaneously
 7. Maximize the speed of establishing performance benchmarks for each event type and client segment — when setting expectations for the team before the pipeline opens for a new booking cycle
 8. Minimize the risk of strategic drift caused by ad hoc booking decisions made without reference to defined priorities — when managing a large team where individual managers have discretion over which leads to pursue
+9. Maximize the confidence that event-type prioritization and capacity decisions reflect proven industry practices — when the venue has no access to comparative benchmarking data from peer convention centers
 
 #### 02 · Locate — Assess the pipeline
 
@@ -1916,6 +2019,7 @@ Review the current pipeline, capacity, and resource availability to understand t
 6. Maximize the clarity of which events are at risk of cancellation or displacement in the current pipeline — when reviewing pipeline health to determine whether contingency action is required before period close
 7. Minimize the likelihood of resource allocation errors caused by incomplete visibility across simultaneous events — when multiple high-complexity events are running in the same period with overlapping staff and space requirements
 8. Maximize the accuracy of the capacity and availability picture presented to stakeholders during business reviews — when reporting to ownership or executive leadership on the venue's forward-looking event load
+9. Maximize the clarity of event and space status across every venue in a multi-venue portfolio — when leadership oversees a stadium, convention center, and performing arts venue that each maintain separate operational views
 
 #### 03 · Prepare — Align departments
 
@@ -1992,6 +2096,10 @@ Track revenue performance, capacity utilization, and team effectiveness across a
 6. Maximize the accuracy of forward-looking revenue projections based on current pipeline and conversion data — when projecting end-of-period performance for a leadership review where budget decisions depend on the forecast
 7. Minimize the effort required to reconcile actual utilization against budgeted capacity on a rolling basis — when tracking space and staff utilization across a high-volume season where multiple events overlap in the same period
 8. Maximize the clarity of each department's contribution to venue-wide revenue and operational performance — when conducting a cross-functional performance review to inform staffing, investment, and strategy decisions
+9. Maximize the accuracy of the economic impact figure reported to city and board stakeholders — when the calculation depends on manually aggregated data from sales, hotel partners, and third-party calculators that produce inconsistent results
+10. Maximize the completeness of sustainability data captured across departments and vendor partners — when compiling a sustainability report for city, board, or customer stakeholders and the underlying data lives in disconnected vendor reports and manual estimates
+11. Minimize the effort required to reconcile event data between the event management system and connected CRM or financial systems — when sales, finance, and bureau partners each maintain a separate record of the same event and totals must match before reporting
+12. Maximize the completeness of the audit trail identifying who changed which event details and when — when investigating a discrepancy in cost, space assignment, or contract terms after multiple team members have edited the same event record
 
 #### 07 · Modify — Direct adjustments
 
@@ -2011,6 +2119,7 @@ Authorize and direct changes to in-progress events, ensuring every affected team
 6. Minimize the likelihood of a contract amendment creating an untracked financial exposure — when a change is approved verbally and the formal amendment process is not initiated before the modified services are delivered
 7. Maximize the accuracy of change documentation captured in the event record for audit and reporting purposes — when processing a modification that will affect commission calculations, financial reconciliation, or client billing
 8. Minimize the disruption caused by a last-minute event modification to the client experience and operational execution — when a significant change is approved close to the event date and the operations team has limited time to adjust
+9. Minimize the effort required to learn that a relevant event detail has changed — when departments must manually check reports or emails rather than receiving an automatic notification of status changes like deposits, confirmations, or event detail edits
 
 #### 08 · Conclude — Review outcomes
 
