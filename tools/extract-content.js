@@ -21,7 +21,7 @@ const ROOT = path.join(__dirname, '..');
 const SRC = path.join(ROOT, 'index.html');
 const OUT = path.join(ROOT, 'SITE_CONTENT.md');
 
-const PERSONA_ORDER = ['sharon', 'emilie', 'owen', 'dana', 'e3'];
+const PERSONA_ORDER = ['sharon', 'emilie', 'owen', 'dana', 'me'];
 const OBJECT_ORDER = ['booking', 'planning', 'operations', 'financials', 'event'];
 const STAGE_LABEL_BY_OBJ = { booking: 'Sales', planning: 'Planning', operations: 'Operations', financials: 'Financial', event: 'End-to-End' };
 
@@ -146,7 +146,7 @@ function extractStaticContent(rawHtml) {
   }
 
   return {
-    northStars: Object.fromEntries(['e3', ...PERSONA_ORDER.filter((p) => p !== 'e3')].map((id) => [id, northStar(id)])),
+    northStars: Object.fromEntries(['me', ...PERSONA_ORDER.filter((p) => p !== 'me')].map((id) => [id, northStar(id)])),
     primaryObjects: Object.fromEntries(OBJECT_ORDER.map((id) => [id, primaryObject(id)])),
   };
 }
@@ -236,7 +236,7 @@ function render(data, staticContent) {
 
   // ── North Star ──
   h(2, 'North Star Framework (Strategy Layer)');
-  for (const pid of ['e3', ...PERSONA_ORDER.filter((x) => x !== 'e3')]) {
+  for (const pid of ['me', ...PERSONA_ORDER.filter((x) => x !== 'me')]) {
     const ns = staticContent.northStars[pid];
     h(3, `${ns.metricName} ${ns.abbr}`);
     p(ns.def);

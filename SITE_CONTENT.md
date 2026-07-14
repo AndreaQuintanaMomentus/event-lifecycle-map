@@ -10,11 +10,11 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 **Semantic Layer**: Built on Rosenberg's Semantic Interaction Design and Barry Smith's formal ontology. Defines the primary objects in the system — Booking, Plan, Task, and Event — using three attribute types: *Fixed Conditions* (permanent properties), *Dynamic States* (mutable while in use), and *Structural Status* (role and position in the system). Each object is described through the CRUD actions it supports.
 
-**Human Layer**: Built on the Ontological Persona Definition (OPD) framework. Defines three personas — Sharon (Sales), Emilie (Planning), Owen (Operations) — through their relationship to domain objects, not demographics. Each persona is mapped to the same Fixed / Dynamic / Structural attribute axes as the objects they act on.
+**Human Layer**: Built on the Ontological Persona Definition framework. Defines three personas — Sharon (Sales), Emilie (Planning), Owen (Operations) — through their relationship to domain objects, not demographics. Each persona is mapped to the same Fixed / Dynamic / Structural attribute axes as the objects they act on.
 
 **Innovation Layer**: Built on Ulwick's Jobs to Be Done (JTBD) and Outcome-Driven Innovation (ODI) frameworks. Maps primary jobs across 8 lifecycle stages for each persona. Each cell contains 3 desired outcome statements structured as: Direction + Metric + Object + Contextual Clarifier — identifying where value is being delivered or left on the table.
 
-**Strategy Layer**: Built on the Amplitude North Star Playbook. Defines a North Star Metric for each product area — MO (Opportunities), MP (Plans), MW (Work), ME (Events) — and maps five input metrics: *active user metric* (Adoption), *feature usage metric* (Engagement), *return rate metric* (Retention), *time to value metric* (Efficiency), and *task success metric* (Effectiveness).
+**Strategy Layer**: Built on the Amplitude North Star Playbook. Defines a North Star Metric for each product area — Momentus Opportunities (MO), Momentus Plans (MP), Momentus Work (MW), Momentus Events (ME) — and maps five input metrics: *active user metric* (Adoption), *feature usage metric* (Engagement), *return rate metric* (Retention), *time to value metric* (Efficiency), and *task success metric* (Effectiveness).
 
 ## Personas (Human Layer)
 
@@ -68,7 +68,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 **Fixed Conditions**
 - Their personality is highly analytical and results-driven, with deep hospitality sales expertise and an industry leader mindset
 - They have a background in convention center sales, working with city bureau partners and hotel room block management within a multi-stakeholder ecosystem
-- They are skilled in PACE reporting and pipeline management, though frustrated by the manual effort required to extract usable insights from the platform
+- They are skilled in PACE reporting — comparing revenue booked so far this fiscal year against the same point last year to gauge booking momentum — and pipeline management, though frustrated by the manual effort required to extract usable insights from the platform
 
 **Dynamic States**
 - From hours of manual Excel manipulation for sales reporting → to automated PACE, utilization, and pipeline dashboards
@@ -85,7 +85,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 **Fixed Conditions**
 - Their personality is energetic and social, early-career, treating every booking as a space-optimization puzzle rather than a revenue target
 - They have a background in corporate services or administrative coordination, primarily serving internal employees rather than external paying customers
-- They are skilled in managing multiple intake channels simultaneously — OSB self-service, intake forms, and ad hoc email coordination
+- They are skilled in managing multiple intake channels simultaneously — OSB (Online Space Booking) self-service, intake forms, and ad hoc email coordination
 
 **Dynamic States**
 - From juggling disconnected intake channels → to a centralized, automated intake workflow
@@ -102,12 +102,12 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 **Fixed Conditions**
 - Their personality is organized, proactive, and collaborative, with moderate industry and Momentus experience
 - They have a background in campus event coordination, managing competing priorities across both internal departments and external clients
-- They are skilled in coordinating event schedules around academic calendars and campus constraints, including working across systems like Banner and SIS
+- They are skilled in coordinating event schedules around academic calendars and campus constraints, including working across systems like Banner and a SIS (Student Information System)
 
 **Dynamic States**
 - From calendar blind spots caused by missing academic scheduling integration → to a unified campus-wide calendar view
 - From manual approval routing with campus safety and security → to structured, system-driven approval workflows
-- From self-service gaps that push simple bookings back to the events team → to smart OSB with dynamic questions and real-time availability
+- From self-service gaps that push simple bookings back to the events team → to smart OSB (Online Space Booking) with dynamic questions and real-time availability
 
 **Structural Status**
 - Connective tissue between external clients, internal departments, and the broader campus community
@@ -250,7 +250,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 **Structural Status**
 - Manages exhibitor service centers for conventions — a distinct layer of complexity not present in other verticals
 - Accountable for invoice creation and payment collection post-event — this role owns the financial close in this vertical
-- Coordinates with partner catering company, internal AV, and security — more external vendor relationships than any other vertical
+- Coordinates with partner catering company, internal AV (Audio/Visual), and security — more external vendor relationships than any other vertical
 
 ##### Corporate: Elliott Ellington · Event Manager ("The Client Collaborator")
 
@@ -266,7 +266,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 **Structural Status**
 - Receives events from Bookings Manager after initial intake — not responsible for lead intake or contracting
-- Coordinates F&B, AV, and Facilities as separate departmentalized teams — more siloed than in other verticals
+- Coordinates F&B (Food & Beverage), AV (Audio/Visual), and Facilities as separate departmentalized teams — more siloed than in other verticals
 - Reports up to Event Management Lead who tracks team utilization and performance analytics
 
 ##### Higher Ed: Ernie Eden · Event Coordinator ("The Client Collaborator")
@@ -274,7 +274,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 **Fixed Conditions**
 - Their personality is communication-first — they spend more time coordinating people across teams than building event details
 - They have a background in higher education event coordination, managing both internal campus events and external client events within a dual-constituency environment
-- They are skilled in managing structured handoff workflows — coordinating upstream with Booking and downstream with Operations and Finance within a CES team structure
+- They are skilled in managing structured handoff workflows — coordinating upstream with Booking and downstream with Operations and Finance within a CES (Conference & Event Services) team structure
 
 **Dynamic States**
 - From endless email chains to gather approvals and coordinate internal teams → to automated notifications and task triggers
@@ -300,7 +300,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 **Structural Status**
 - Must coordinate with Operations Supervisor who manually translates event details into work orders — a translation gap not addressed in-system
-- Contracts with third-party catering companies (e.g., Legends) rather than internal F&B — a vendor layer absent in other verticals
+- Contracts with third-party catering companies (e.g., Legends) rather than internal F&B (Food & Beverage) — a vendor layer absent in other verticals
 - Bridges private events and game day operations — aspires to eventually migrate game day workflow into Momentus
 
 #### Secondary / adjacent personas around Sam Evans
@@ -349,7 +349,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 **Fixed Conditions**
 - Their personality is detail-oriented, client-focused, and process-driven, with moderate industry and Momentus experience
-- They have a background in conference registration management within higher education, working in a CES context where clients expect real-time data access
+- They have a background in conference registration management within higher education, working in a CES (Conference & Event Services) context where clients expect real-time data access
 - They are skilled in end-to-end registration workflows — managing capacity control, waitlists, payments, scholarship tracking, and attendee communication in parallel with event planning
 
 **Dynamic States**
@@ -364,7 +364,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 ##### Carl Crowe — Catering Sales Manager (Corporate) · "The Creative Foodie"
 
-**Relationship to Sam Evans:** Manages F&B intake and BEO distribution — a parallel planning workflow that runs alongside event coordination and must stay in sync through constant changes.
+**Relationship to Sam Evans:** Manages F&B (Food & Beverage) intake and BEO distribution — a parallel planning workflow that runs alongside event coordination and must stay in sync through constant changes.
 
 **Fixed Conditions**
 - Their personality is creative, adaptable, and detail-oriented, managing both client-facing catering intake and kitchen-facing execution as two connected but distinct workflows
@@ -383,7 +383,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 ##### Tanner Tate — Catering Sales Coordinator (Convention Centers) · "The Dot Connector"
 
-**Relationship to Sam Evans:** Builds functions and service orders from client F&B requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.
+**Relationship to Sam Evans:** Builds functions and service orders from client F&B (Food & Beverage) requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.
 
 **Fixed Conditions**
 - Their personality is pragmatic and process-minded, having worked both the operations execution side and the catering sales input side of the same venue
@@ -425,6 +425,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Authority over the event floor: responsible for delegating work orders across departments — both front of house (customer-facing) and back of house (facilities, setup, logistics)
 - The last mile between the platform’s promise and the client’s experience — where data quality determines delivery quality
 - Responsible for operational actuals reporting; in larger venues, a dedicated person may aggregate across departments
+- Resource and inventory accountability sometimes sits outside the operations function itself — creating a mismatch between who experiences a tracking problem day-to-day and who owns the tool meant to solve it
 
 #### Vertical-specific variants of Jordan Olsen
 
@@ -465,7 +466,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 ##### Corporate: Oliver Otto · Operations Lead ("The Operations Oversight")
 
 **Fixed Conditions**
-- Their personality is structured and resilient, built to manage multiple operations sub-teams simultaneously across AV, Facilities, Event Services, Security, and Guest Services
+- Their personality is structured and resilient, built to manage multiple operations sub-teams simultaneously across AV (Audio/Visual), Facilities, Event Services, Security, and Guest Services
 - They have a background in multi-department hospitality or facility operations, managing the broadest stakeholder surface of any operations role in the vertical
 - They are skilled in workforce coordination and cross-team operational logistics, though currently managing staffing entirely outside the platform through Outlook
 
@@ -499,6 +500,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Owns the Private Events track (rentals, sponsorships, internal events) — hosts daily briefings, assigns tasks, and closes out work orders and actuals at day's end
 - Public/game-day operations (the game manifest, satellite catering, suites, control room) are owned by a separate Building Operations role, not Owen — the two tracks run side by side but aren't the same job
 - Accountable for translating client/event needs into executable work orders — currently a fully manual step with no system support
+- Views granular inventory tracking as low-value overhead — this vertical works off a fixed pool of standard equipment, unlike Convention Centers managing dozens of concurrent room configurations
 
 #### Secondary / adjacent personas around Jordan Olsen
 
@@ -534,11 +536,14 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - From manually training reluctant non-risk teams on risk identification → to simple, intuitive risk workflows that make flagging a risk the path of least resistance
 - From difficulty making risk data usable (time-consuming reporting) → to analytics and reporting tools that surface risk insights for leadership, compliance, and strategy
 - From disconnected risk, planning, operations, and incident workflows → to an integrated loop where incidents feed back into future risk assessments
+- From anyone with system access being able to escalate or downgrade a risk's severity → to permissioned risk workflows where only accountable owners can change a risk's status
 
 **Structural Status**
 - Works across event management (Paige), the separate building-operations/game-day role, and control room (Carrie) — risk spans all these functions and requires active participation from each
 - Responsible for risk assessments, mitigation coordination, audit trails, and regulatory reporting; has one chance to get non-risk teams to engage before losing them
 - Uses WeTrack (not Momentus) for incident management — the gap between incident data and the event record represents a critical integration opportunity
+- The people who actually own and budget for risk and safety tooling are often a different audience than the event and booking relationship Momentus typically holds — closing this gap requires an organizational bridge, not just a technical one
+- At smaller organizations, this role can also extend to injury and workers'-compensation case management — medical certificates, return-to-work plans, and claim records — which needs tighter, privacy-restricted access than general incident and risk data
 
 ##### Paige Pepper — Public Events Manager (Stadiums & Arenas) · "The Logistics Queen"
 
@@ -561,7 +566,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 ##### Anna Adams — AV Technician (Corporate) · "The Technical Help"
 
-**Relationship to Jordan Olsen:** Executes AV setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
+**Relationship to Jordan Olsen:** Executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
 
 **Fixed Conditions**
 - Their personality is technical, organized, and detail-oriented, focused on precise execution of AV setup, live operation, troubleshooting, and equipment maintenance
@@ -596,6 +601,9 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Coordinates between operations crew (Orlando), external agencies (police, ambulance, fire), and venue management — the nerve center of real-time event response
 - Uses WeTrack, not Momentus — the gap between incident logs and the event record represents the most critical data integration gap in the S&A vertical
 - Operating 24/7 on event days means zero tolerance for system downtime or usability friction; reliability and speed are non-negotiable requirements
+- A digital incident log serves as the system-of-record documenting what happened — even in well-adopted deployments, real-time dispatch and coordination still happens by radio or phone, not through the log itself
+- When an incident also meets a venue's own separate safety threshold, logging it twice — once in the venue's own system, once in the event record — is common and accepted today, not treated as an edge case
+- Incident records carry confidentiality tiers by type — medical and security details are restricted to those who need them, not visible to the entire organization by default
 
 ##### Freddie Ford — Meeting Services Crew (Convention Centers) · "The Analog Anchor"
 
@@ -627,7 +635,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 - Their personality is detail-oriented and integrity-driven, focused on financial accuracy and translating operational activity into numbers stakeholders can trust
 - They have a background in venue finance, accounting, or public-sector financial management — often navigating both hospitality operations and municipal/institutional compliance
-- They are skilled in budget reconciliation, variance analysis, GL management, and translating financial data into stakeholder-ready reporting
+- They are skilled in budget reconciliation, variance analysis, GL (General Ledger) management, and translating financial data into stakeholder-ready reporting
 
 #### Dynamic States
 
@@ -640,7 +648,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Receives the operational handoff from planning and operations — accountable for reconciling every dollar of an event after execution is complete
 - Financial gatekeeper at a public/institutional venue: procurement, vendor approval, and budget decisions route through formal government or municipal channels
 - The de facto data-integrity function for the entire venue — depends on event planners, operations, contractors, and payroll to enter their data correctly, and absorbs every gap as their own problem to resolve
-- Responsible for monthly financial reporting to executive directors, department heads, and — at public venues — a city CFO or government board
+- Responsible for monthly financial reporting to executive directors, department heads, and — at public venues — a city CFO (Chief Financial Officer) or government board
 
 ### Morgan Rivera — Venue Director ("The Orchestrator")
 
@@ -653,7 +661,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 - Their personality is strategic, decisive, and focused on the big picture across all lifecycle stages
 - They have a background in venue management, hospitality leadership, or multi-department operations
-- They are skilled in cross-functional leadership, P&L management, and navigating revenue-driven and mission-driven organizational priorities
+- They are skilled in cross-functional leadership, P&L (profit and loss) management, and navigating revenue-driven and mission-driven organizational priorities
 
 #### Dynamic States
 
@@ -699,7 +707,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - From self-service that employees route around → to a portal that actually works for people with no events background
 
 **Structural Status**
-- P&L accountable for the campus events program — must demonstrate ROI of Momentus investment to corporate leadership
+- P&L (profit and loss) accountable for the campus events program — must demonstrate ROI (Return on Investment) of Momentus investment to corporate leadership
 - Manages a multi-campus deployment goal — success at the current campus unlocks potential global rollout
 - Works above Event Management Lead (Eden) for performance data; relies on Bookings Manager (Bettie) for intake and calendar operations
 
@@ -713,11 +721,11 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 **Dynamic States**
 - From 40+ hours of manual Excel work to calculate profit reports → to out-of-the-box financial reporting comparing costs to revenue by event and type
 - From broken Banner/PeopleSoft integrations forcing manual reconciliation → to reliable, automated financial system integration
-- From proving CES value through revenue alone → to demonstrating broader impact including branding, campus loyalty, and engagement
+- From proving CES (Conference & Event Services) value through revenue alone → to demonstrating broader impact including branding, campus loyalty, and engagement
 
 **Structural Status**
-- Responsible for payment generation, internal charge-backs, and revenue vs. cost tracking across all CES events
-- Strategic link between CES operations and university administration — must translate event data into institutional financial language
+- Responsible for payment generation, internal charge-backs, and revenue vs. cost tracking across all CES (Conference & Event Services) events
+- Strategic link between CES (Conference & Event Services) operations and university administration — must translate event data into institutional financial language
 - Works above Booking Coordinator (Barb) and Event Coordinator (Ernie) — oversees both intake performance and execution quality
 
 #### Secondary / adjacent personas around Morgan Rivera
@@ -748,7 +756,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 **Fixed Conditions**
 - Their personality is outgoing, analytical, strategic, and client-centric, bringing extensive hotel and corporate events experience and a competitive evaluation mindset to platform decisions
 - They have a background in hotel and corporate event management, now leading a campus events program that must serve both the corporate company and the employees who attend
-- They are skilled in enterprise technology evaluation, ROI-based decision-making, and managing platform deployments with global scalability as a defining success criterion
+- They are skilled in enterprise technology evaluation, ROI (Return on Investment)-based decision-making, and managing platform deployments with global scalability as a defining success criterion
 
 **Dynamic States**
 - From counting event performance on paper sheets → to real-time, centralized event data across all campus locations
@@ -756,7 +764,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - From self-service that employees route around → to a portal employees actually use, reducing team workload and enabling white-glove hospitality at scale
 
 **Structural Status**
-- P&L accountable for the campus events program — must demonstrate ROI of Momentus to corporate leadership to justify continued investment and global expansion
+- P&L (profit and loss) accountable for the campus events program — must demonstrate ROI of Momentus to corporate leadership to justify continued investment and global expansion
 - Works closely with Event Management Lead (Eden) for performance data and Bookings Manager (Bettie) for calendar operations; low personal system usage
 - Manages a multi-campus deployment ambition — standardization and replicability are as important as functionality at the current campus
 
@@ -777,7 +785,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 **Structural Status**
 - Accountable for white-glove hospitality experience, space utilization, and staff satisfaction simultaneously — a three-way performance requirement that creates competing priorities
 - Drives team adoption — his buy-in is necessary but insufficient; the team (Eden, Elliott, Bettie) must also adopt the platform for the investment to pay off
-- Reports to corporate client company on events performance and ROI; must quantify and communicate the value of the events program in business terms
+- Reports to corporate client company on events performance and ROI (Return on Investment); must quantify and communicate the value of the events program in business terms
 
 ##### Derek Delgado — Director, Special Events (Arts & Culture) · "The Space Maximizer"
 
@@ -875,7 +883,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 #### Actions
 
 - **Create**: Brings a new Event Plan into existence within the system — establishing the function details, room assignment, timeline, and setup requirements that will guide event delivery.
-- **Update**: Modifies the attributes of an existing Event Plan — such as setup type, guaranteed covers, BEO publication status, or client approval state — as the event date approaches.
+- **Update**: Modifies the attributes of an existing Event Plan — such as setup type, guaranteed covers, BEO (Banquet Event Order) publication status, or client approval state — as the event date approaches.
 - **Delete**: Permanently removes an Event Plan from the system, erasing the function record and its distribution history.
 
 ### Event Work (Operations)
@@ -944,7 +952,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 
 #### Actions
 
-- **Create**: Brings a new Event Financials record into existence — establishing the budget, GL code, and price list an event will operate within, before the event executes.
+- **Create**: Brings a new Event Financials record into existence — establishing the budget, GL (General Ledger) code, and price list an event will operate within, before the event executes.
 - **Update**: Modifies the attributes of an existing Event Financials record — recording actuals, flagging variances, advancing invoice approval stage — as the event moves from budget through closeout.
 - **Delete**: Permanently removes an Event Financials record from the system, erasing the budget, actuals, and reconciliation history for that event.
 
@@ -996,13 +1004,13 @@ The number of events that progress through at least three lifecycle stages — i
 #### Key Input Metrics
 
 **Adoption · Active user — Active ME accounts**  
-Number of accounts with at least one ME event in the past 30 days. Measures how many venues are realizing core platform value.
+Number of accounts with at least one event counted toward Momentus Events in the past 30 days. Measures how many venues are realizing core platform value.
 
 **Engagement · Feature usage — Avg. workflow stages per event**  
 Average number of platform modules used per event (sales, planning, operations, catering, finance). Measures how deeply venues rely on Momentus as one source of truth — and how well aligned teams are across the full handoff chain.
 
 **Retention · Return rate — Year-over-year ME account retention**  
-Percentage of accounts with at least one ME event in a given year who also had at least one the prior year. Losing ME accounts is an early warning before revenue churn.
+Percentage of accounts with at least one event counted toward Momentus Events in a given year who also had at least one the prior year. Losing these accounts is an early warning before revenue churn.
 
 **Efficiency · Time to value — Avg. time from intake to execution start**  
 Median calendar days from first event record creation to first operational task execution, measured entirely inside Momentus. Shrinking time means platform friction is reducing.
@@ -1013,17 +1021,17 @@ Percentage of events that successfully move through all three stages (booking, p
 #### Rationale
 
 **Why not revenue or bookings?**  
-Revenue is a lagging indicator. Bookings only measure Alex's success. ME measures whether the entire promise — book it, plan it, execute it — is delivered inside Momentus. It's the only metric that captures all three products working together.
+Revenue is a lagging indicator. Bookings only measure Alex's success. Momentus Events measures whether the entire promise — book it, plan it, execute it — is delivered inside Momentus. It's the only metric that captures all three products working together.
 
-**What does ME tell us that ARR doesn't?**  
-ARR tells you what customers paid. ME tells you whether they got what they paid for. An account that pays for all three products but executes operations on paper hasn't realized the platform's value — and is at high churn risk.
+**What does Momentus Events tell us that Annual Recurring Revenue (ARR) doesn't?**  
+Annual Recurring Revenue tells you what customers paid. Momentus Events tells you whether they got what they paid for. An account that pays for all three products but executes operations on paper hasn't realized the platform's value — and is at high churn risk.
 
-**How does ME align PM, Engineering, and Design?**  
-Any feature that doesn't move ME is a distraction. Any friction that breaks the MO → MP → MW chain is a product failure. ME gives every team a shared definition of what "done" means for a venue.
+**How does Momentus Events align Product Management, Engineering, and Design?**  
+Any feature that doesn't move Momentus Events is a distraction. Any friction that breaks the Momentus Opportunities → Momentus Plans → Momentus Work chain is a product failure. Momentus Events gives every team a shared definition of what "done" means for a venue.
 
 ### Momentus Opportunities (MO)
 
-The number of event opportunities that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM, email thread, or paper contract — combined with the velocity of that conversion: the elapsed time from qualified inquiry to signed contract. An opportunity counts only when the entire intake-to-contract workflow completes inside the platform, and faster inquiry-to-signature time is tracked as a core signal of sales health alongside volume.
+The number of event opportunities that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM (Customer Relationship Management) tool, email thread, or paper contract — combined with the velocity of that conversion: the elapsed time from qualified inquiry to signed contract. An opportunity counts only when the entire intake-to-contract workflow completes inside the platform, and faster inquiry-to-signature time is tracked as a core signal of sales health alongside volume.
 
 `Feeds ME intake stage`  `Closes the CRM fallback gap`  `First link in the ME chain`
 
@@ -1044,22 +1052,22 @@ Percentage of active sales users in a given month who were also active the prior
 Median hours from first lead record creation to an opportunity status of "Definite" inside Momentus. A decreasing cycle time signals friction reduction in the qualification-to-close workflow.
 
 **Effectiveness · Task success — % opportunities with signed contract in-platform**  
-Percentage of confirmed opportunities where the contract was generated, sent, and signed entirely inside Momentus — without fallback to Word, DocuSign, or email attachment. The direct measure of whether MO counts.
+Percentage of confirmed opportunities where the contract was generated, sent, and signed entirely inside Momentus — without fallback to Word, DocuSign, or email attachment. The direct measure of whether Momentus Opportunities counts.
 
 #### Rationale
 
-**The core failure MO addresses**  
-The vertical research found that many venues use Momentus to track opportunities but complete the actual contracting in email, Word, or separate CRMs. MO only counts when the full intake-to-contract workflow completes inside the platform — it cannot be gamed by logging an opportunity that was really done elsewhere.
+**The core failure Momentus Opportunities addresses**  
+The vertical research found that many venues use Momentus to track opportunities but complete the actual contracting in email, Word, or a separate Customer Relationship Management (CRM) tool. Momentus Opportunities only counts when the full intake-to-contract workflow completes inside the platform — it cannot be gamed by logging an opportunity that was really done elsewhere.
 
 **Why not total opportunities created?**  
-Total opportunities is gameable: a sales rep can log an opportunity after the fact, or log it inside Momentus while doing the real work in Salesforce. MO requires the process — lead qualification, availability check, proposal, contract — to happen inside Momentus. That's the signal that the platform replaced the external tool.
+Total opportunities is gameable: a sales rep can log an opportunity after the fact, or log it inside Momentus while doing the real work in Salesforce. Momentus Opportunities requires the process — lead qualification, availability check, proposal, contract — to happen inside Momentus. That's the signal that the platform replaced the external tool.
 
-**How MO starts the ME chain**  
-MO is the handoff trigger. When the Sales Manager closes an opportunity in-platform, the Event Planner has something to pick up inside Momentus. If the opportunity is logged after the fact — after closing it in a CRM or email — the handoff is broken and ME cannot start cleanly. MO measures whether sales gave planning a clean baton.
+**How Momentus Opportunities starts the Momentus Events chain**  
+Momentus Opportunities is the handoff trigger. When the Sales Manager closes an opportunity in-platform, the Event Planner has something to pick up inside Momentus. If the opportunity is logged after the fact — after closing it in a CRM or email — the handoff is broken and Momentus Events cannot start cleanly. Momentus Opportunities measures whether sales gave planning a clean baton.
 
 ### Momentus Plans (MP)
 
-The number of events with complete, approved function detail — the full what, when, where, and how — authored, approved, and distributed to operations inside Momentus in a rolling 30-day window. An event counts only when the full BEO/event order is created and shared without leaving the platform.
+The number of events with complete, approved function detail — the full what, when, where, and how — authored, approved, and distributed to operations inside Momentus in a rolling 30-day window. An event counts only when the full BEO (Banquet Event Order) / event order is created and shared without leaving the platform.
 
 `Feeds ME planning stage`  `Closes the Word/Excel leakage gap`  `Enables downstream ops execution`
 
@@ -1071,7 +1079,7 @@ The number of events with complete, approved function detail — the full what, 
 Number of event planners who created at least one event plan or detail record inside Momentus — not Word or Excel — in the past 30 days.
 
 **Engagement · Feature usage — Avg. function details completed per event**  
-Average number of function-level detail fields (space, F&B, AV, setup, timing) completed per event. Measures the depth of event documentation inside the platform vs. externally.
+Average number of function-level detail fields (space, F&B (Food & Beverage), AV (Audio/Visual), setup, timing) completed per event. Measures the depth of event documentation inside the platform vs. externally.
 
 **Retention · Return rate — Month-over-month planner return rate**  
 Percentage of active planners in a given month who were also active the prior month for detailing tasks. Consistent return signals Momentus has replaced Word and Excel as the detailing tool.
@@ -1084,14 +1092,14 @@ Percentage of events where function detail is marked complete and approved insid
 
 #### Rationale
 
-**The core failure MP addresses**  
-The vertical research explicitly states: "Elite customers tend to detail and share event needs in Word/Excel. Downstream this makes ops more manual." MP only counts when Sam documents and distributes the full plan inside Momentus — triggering a clean handoff to Jordan.
+**The core failure Momentus Plans addresses**  
+The vertical research explicitly states: "Elite customers tend to detail and share event needs in Word/Excel. Downstream this makes ops more manual." Momentus Plans only counts when Sam documents and distributes the full plan inside Momentus — triggering a clean handoff to Jordan.
 
 **Why not events created or functions added?**  
-Creating a function record doesn't mean the plan is complete or shared. MP requires both completion (all detail fields populated) and distribution (shared to ops inside the platform). A half-finished BEO sent via email is a failure state for ME.
+Creating a function record doesn't mean the plan is complete or shared. Momentus Plans requires both completion (all detail fields populated) and distribution (shared to ops inside the platform). A half-finished event order sent via email is a failure state for Momentus Events.
 
-**How MP connects to ME**  
-MP is the middle link. If the Event Planner's detail lives in Word, operations has nothing to execute from inside Momentus, and ME cannot complete. Every MP event is one operations can pick up in-platform — the bridge between sales and execution.
+**How Momentus Plans connects to Momentus Events**  
+Momentus Plans is the middle link. If the Event Planner's detail lives in Word, operations has nothing to execute from inside Momentus, and Momentus Events cannot complete. Every event counted toward Momentus Plans is one operations can pick up in-platform — the bridge between sales and execution.
 
 ### Momentus Work (MW)
 
@@ -1116,31 +1124,31 @@ Percentage of active operations users in a given month who were also active the 
 Median hours from task creation to closure inside Momentus per event. A decreasing cycle time signals the platform is accelerating execution, not just recording it after the fact.
 
 **Effectiveness · Task success — Work order completion rate before or during event**  
-Percentage of assigned work orders marked complete before or during the event. The research finding — "we don't really have a section where people tick off that they have done the event set up" — is exactly what MW closes.
+Percentage of assigned work orders marked complete before or during the event. The research finding — "we don't really have a section where people tick off that they have done the event set up" — is exactly what Momentus Work closes.
 
 #### Rationale
 
-**The core failure MW addresses**  
-The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Jordan's execution currently happens on printed sheets, radio, and email follow-up. MW rises only when that execution moves inside the platform — it cannot be gamed by creating work orders and never updating them.
+**The core failure Momentus Work addresses**  
+The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Jordan's execution currently happens on printed sheets, radio, and email follow-up. Momentus Work rises only when that execution moves inside the platform — it cannot be gamed by creating work orders and never updating them.
 
-**Why MW is the hardest and most valuable metric**  
-The value realization gap is largest in operations. Enterprise customers range "from using customized reports to MWO to no ops in Momentus due to usability, cost, and learning curve." MW directly measures whether that gap is closing — and it's the gap the convention center research identified as most underserved.
+**Why Momentus Work is the hardest and most valuable metric**  
+The value realization gap is largest in operations. Enterprise customers range "from using customized reports to MWO (Mobile Work Orders) to no ops in Momentus due to usability, cost, and learning curve." Momentus Work directly measures whether that gap is closing — and it's the gap the convention center research identified as most underserved.
 
-**How MW completes ME**  
-MW is the final link. MO hands off a contracted booking. MP hands off a detailed plan. MW completes the loop by executing that plan inside the platform. An event that passes MO → MP → MW is a ME event. Jordan is the last mile.
+**How Momentus Work completes Momentus Events**  
+Momentus Work is the final link. Momentus Opportunities hands off a contracted booking. Momentus Plans hands off a detailed plan. Momentus Work completes the loop by executing that plan inside the platform. An event that passes through Momentus Opportunities, Momentus Plans, and Momentus Work counts toward Momentus Events. Jordan is the last mile.
 
-**What MW unlocks beyond single-event execution**  
-MW's value compounds when venues run multiple concurrent events. Operations teams that execute inside Momentus gain the ability to think holistically — balancing load in and load out across events, deploying crew efficiently, and avoiding redundant labor. A venue running on paper can only optimize one event at a time. MW measures whether operations has the platform foundation to think bigger.
+**What Momentus Work unlocks beyond single-event execution**  
+Momentus Work's value compounds when venues run multiple concurrent events. Operations teams that execute inside Momentus gain the ability to think holistically — balancing load in and load out across events, deploying crew efficiently, and avoiding redundant labor. A venue running on paper can only optimize one event at a time. Momentus Work measures whether operations has the platform foundation to think bigger.
 
 **Why the Planning-to-Ops handoff is the highest-stakes moment**  
-Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on Jordan's team without a safety net. MW rises when that handoff is clean, written, and inside Momentus.
+Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on Jordan's team without a safety net. Momentus Work rises when that handoff is clean, written, and inside Momentus.
 
 **What does the gap look like at its most extreme?**  
-One convention center supervisor described it plainly: "technology stops at the supervisor." Front-line crew work from a printed assignment and a radio — no device, no login — so every completion, delay, and incident is relayed verbally and then reconstructed from memory into a manual end-of-day report emailed to other departments. MW only reflects reality once that hand-translation step disappears, not just once a work order exists somewhere in the platform.
+One convention center supervisor described it plainly: "technology stops at the supervisor." Front-line crew work from a printed assignment and a radio — no device, no login — so every completion, delay, and incident is relayed verbally and then reconstructed from memory into a manual end-of-day report emailed to other departments. Momentus Work only reflects reality once that hand-translation step disappears, not just once a work order exists somewhere in the platform.
 
 ### Momentus Financials (MF)
 
-The number of events whose full financial closeout — budget reconciliation, GL matching, invoice generation and approval — is completed entirely inside Momentus during a rolling 30-day window, without falling back to a separate ERP (e.g. PeopleSoft), spreadsheet, or manual cross-system reconciliation.
+The number of events whose full financial closeout — budget reconciliation, GL (General Ledger) matching, invoice generation and approval — is completed entirely inside Momentus during a rolling 30-day window, without falling back to a separate ERP (Enterprise Resource Planning) system (e.g. PeopleSoft), spreadsheet, or manual cross-system reconciliation.
 
 `Peer metric alongside MO / MP / MW`  `Closes the multi-system reconciliation gap`  `Direct measure of financial value realization`
 
@@ -1158,27 +1166,27 @@ Average number of reconciliation, GL, and invoice actions completed per event in
 Percentage of active Finance users in a given month who were also active the prior month — matches Finance's monthly close cadence.
 
 **Efficiency · Time to value — Avg. days from event end to fully reconciled close**  
-Median calendar days from event close to a fully reconciled, invoiced, and approved financial record. Directly named as a KPI in the research: "Days to event close."
+Median calendar days from event close to a fully reconciled, invoiced, and approved financial record. Directly named as a KPI (Key Performance Indicator) in the research: "Days to event close."
 
 **Effectiveness · Task success — % of events reaching full reconciliation without manual cross-system correction**  
 Percentage of events that close without Finance needing to pull data from PeopleSoft, payroll, or another outside system to complete it.
 
 #### Rationale
 
-**The core failure MF addresses**  
-Finance today assembles a financial picture by hand from PeopleSoft, Enterprise, payroll, ticketing, and contractor invoices — "it takes three different reports from PeopleSoft and an Enterprise report, then I combine the data." MF rises only when that full picture is built inside Momentus — it cannot be gamed by creating a budget and never reconciling actuals against it.
+**The core failure Momentus Financials addresses**  
+Finance today assembles a financial picture by hand from PeopleSoft, Enterprise, payroll, ticketing, and contractor invoices — "it takes three different reports from PeopleSoft and an Enterprise report, then I combine the data." Momentus Financials rises only when that full picture is built inside Momentus — it cannot be gamed by creating a budget and never reconciling actuals against it.
 
-**Why MF is hard to achieve**  
-The financial lifecycle of an event routinely outlives the event itself: contractor invoices arrive weeks or months late — one venue reported "an unexpected $20K invoice... four months after the event closed" — and end-of-month close is unpredictable depending on when they post. MF measures whether that tail is shrinking.
+**Why Momentus Financials is hard to achieve**  
+The financial lifecycle of an event routinely outlives the event itself: contractor invoices arrive weeks or months late — one venue reported "an unexpected $20K invoice... four months after the event closed" — and end-of-month close is unpredictable depending on when they post. Momentus Financials measures whether that tail is shrinking.
 
-**How MF relates to MO, MP, and MW**  
-MF doesn't replace or complete the ME chain — it's a parallel confirmation that what Sales, Planning, and Operations produced actually reconciles to real dollars. An event can be a full MO → MP → MW success and still be a financial mess if it isn't reconciled cleanly.
+**How Momentus Financials relates to Momentus Opportunities, Momentus Plans, and Momentus Work**  
+Momentus Financials doesn't replace or complete the Momentus Events chain — it's a parallel confirmation that what Sales, Planning, and Operations produced actually reconciles to real dollars. An event can be a full success across Momentus Opportunities, Momentus Plans, and Momentus Work and still be a financial mess if it isn't reconciled cleanly.
 
 **Why public/institutional venues make this harder**  
-City-owned and public assembly venues route vendor and budget decisions through formal procurement and government approval channels, adding friction that private venues don't face. MF-supporting features need to respect that constraint, not assume fast, flexible vendor relationships.
+City-owned and public assembly venues route vendor and budget decisions through formal procurement and government approval channels, adding friction that private venues don't face. Features supporting Momentus Financials need to respect that constraint, not assume fast, flexible vendor relationships.
 
-**What MF unlocks beyond a single event's close**  
-Clean, timely reconciliation is what makes self-serve department P&L, trend/what-if budget modeling, and stakeholder-ready economic impact reporting possible. Finance can't build any of that on data that's still being manually stitched together.
+**What Momentus Financials unlocks beyond a single event's close**  
+Clean, timely reconciliation is what makes self-serve department profit-and-loss (P&L) reporting, trend/what-if budget modeling, and stakeholder-ready economic impact reporting possible. Finance can't build any of that on data that's still being manually stitched together.
 
 ## Historic Context (Strategy Layer)
 
@@ -1186,11 +1194,11 @@ Company/product/customer history timeline. Each area card below shows only entri
 
 ### Sales at Momentus (Sales)
 
-- **Mar 2026** [product] Sales AI CRM roadmap announced — Momentus frames its AI strategy as evolving from "System of Record" to "System of Action," starting with an agentic Sales CRM (targeted Q3 2026) as the first of a four-agent product journey. _(source: EAB_RunOfShow_v2.docx)_
+- **Mar 2026** [product] Sales AI (Artificial Intelligence) CRM (Customer Relationship Management) roadmap announced — Momentus frames its AI strategy as evolving from "System of Record" to "System of Action," starting with an agentic Sales CRM (targeted Q3 2026) as the first of a four-agent product journey. _(source: EAB_RunOfShow_v2.docx)_
 - **Mar 2025** [product] Group Room Control launches for Walt Disney World — Completion of this hotel group-booking feature becomes the trigger for a strategic push into the underrepresented Hotels, Casinos & Resorts vertical. _(source: PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
-- **~2024** [customer] Jaarbeurs migrates CRM to Salesforce — Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years." _(source: illuminate_2026_internal_synthesis_1.docx)_
+- **~2024** [customer] Jaarbeurs migrates CRM (Customer Relationship Management) to Salesforce — Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years." _(source: illuminate_2026_internal_synthesis_1.docx)_
 - **Ongoing** [customer] Sales lead intake identified as highly manual — Customer research surfaces manual lead intake/qualification, no centralized funnel view, and inconsistent proposal formatting as a recurring sales pain point across venues. _(source: Event Lifecycle & Verticals.pptx)_
-- **Jul 2023** [product] Formal Corporate market product review — Momentus conducts a dedicated Corporate-segment product review, positioning Enterprise against an aging EMS as the market's declining incumbent. _(source: PMO-Product strategy - Corporate Market.pdf)_
+- **Jul 2023** [product] Formal Corporate market product review — Momentus conducts a dedicated Corporate-segment product review, positioning Enterprise against an aging EMS (Event Management System) as the market's declining incumbent. _(source: PMO-Product strategy - Corporate Market.pdf)_
 - **May 2021** [product] Merger with EventBooking — Ungerboeck merges with EventBooking to integrate event marketing, booking workflows, and operational data — an early step toward a unified sales/booking product. _(source: gomomentus.com/ungerboeck)_
 
 ### Planning at Momentus (Planning)
@@ -1200,11 +1208,13 @@ Company/product/customer history timeline. Each area card below shows only entri
 
 ### Operations at Momentus (Operations)
 
+- **2025** [product] WeTrack-Enterprise integration gap identified as organizational, not just technical — Internal account-manager and solutions-engineering interviews describe the WeTrack/Momentus integration gap as much an organizational mismatch as a technical one — Momentus's existing customer relationships sit with event and booking contacts, while WeTrack's actual buyers (security, risk, and safety leadership) are a different audience on a separate budget, with no established relationship. An early-stage internal concept ("Operations Hub") to flow event-outline data into WeTrack Jobs for field execution exists only as a wireframe. _(source: Dovetail — WeTrack Risk & Incident AM/SE interviews (2025))_
+- **2025** [product] A separate "Jobs" object exists for internal, non-event work — long since deprioritized — Enterprise Operations includes a distinct "Jobs" object, originally built by duplicating the Event data model, used internally for facility-maintenance and capital-project tracking so those costs stay out of event revenue reporting — not a customer-facing event-work tool. It has seen no further product investment in over a decade and is no longer sold to new customers. A separate, unrelated "Jobs" checklist feature also exists inside WeTrack, and the naming overlap is a recurring source of internal confusion between the two. _(source: Dovetail — Enterprise Operations Feature Deep Dive interviews (2025))_
 - **Jul 2024** [customer] Convention Center interview cautions against self-service-as-storefront — A PavCo/Vancouver Convention Centre catering coordinator interview surfaces a live cautionary example: the venue's existing self-service exhibitor ordering system (VCCI) increased transcription workload and produced double-bookings and missed next-day deliveries — reinforcing that the "collaboration portal" concept (flagged Jan 2024) should be a task/communication tool between staff and client, not an e-commerce ordering storefront. _(source: UX- Operational - banquet orders_catering-20240718_130314-Meeting Recording-en-US.docx)_
 - **End of Mar 2024** [product] Risk Manager discontinued, folded into WeTrack — Momentus stops selling standalone Risk Manager, consolidating its functionality into WeTrack rather than maintaining two overlapping risk products. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Nov 2023** [product] WeTrack regional licensing & Momentus brand alignment — Licensing for regional clusters, theming/navigation updates, and analytics integration (Smartlook + Pendo) ship as WeTrack adopts Momentus branding. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Aug 2023** [product] WeTrack ships multi-language BETA — French, Italian, Spanish, German, and Arabic translations released as WeTrack integrates into the Momentus product family. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
-- **Jul 2023** [customer] WeTrack ARR snapshot by vertical — Post-acquisition, WeTrack's ARR splits: Event Organiser 58.8%, Venue 35.0%, Event Supplier 3.6%, Corporate 2.5% — with named key clients FIFA, ICC, World Rugby, Arsenal FC, and Ascot Racecourse. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
+- **Jul 2023** [customer] WeTrack ARR (Annual Recurring Revenue) snapshot by vertical — Post-acquisition, WeTrack's ARR splits: Event Organiser 58.8%, Venue 35.0%, Event Supplier 3.6%, Corporate 2.5% — with named key clients FIFA, ICC, World Rugby, Arsenal FC, and Ascot Racecourse. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **2023** [product] "Change tracking" feature launched for operations — Momentus releases a change-tracking feature giving operations teams configurable alert windows for late changes, built directly in response to heavy paper- and radio-based coordination — especially among AMER customers. _(source: Stakeholder Interviews Data Dump.docx)_
 - **Apr 2023** [product] Acquires WeTrack — Momentus acquires the London-based WeTrack, adding sustainability, incident-tracking, and control-room software to the portfolio. _(source: gomomentus.com/ungerboeck)_
 - **2022** [product] Acquires RiskSense101 and VRM360 — Acquired from risk-management agency Reliance Risk, adding risk-assessment tooling into the EBMS workflow ecosystem. _(source: gomomentus.com/ungerboeck)_
@@ -1212,36 +1222,38 @@ Company/product/customer history timeline. Each area card below shows only entri
 
 ### Financial at Momentus (Financial)
 
-- **Jul 2026** [product] AI-Powered Opportunities strategy defined for Financial persona — Product strategy identifies 5 AI opportunity areas mapped to the persona's top pain points: vendor invoice intelligence, a consolidated P&L dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling. _(source: financials_ai_opportunities.docx)_
-- **Mar 2026** [customer] EAB session: "We do not know how much we're worth" — The first global EAB session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event. _(source: illuminate_2026_internal_synthesis_1.docx)_
-- **Apr 2024** [customer] Enterprise Accounting: adoption climbs with NPS by module — 746 customers use Enterprise Accounting (45% Core Receivables/GL, 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
+- **Jul 2026** [product] AI (Artificial Intelligence)-Powered Opportunities strategy defined for Financial persona — Product strategy identifies 5 AI opportunity areas mapped to the persona's top pain points: vendor invoice intelligence, a consolidated P&L (profit and loss) dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling. _(source: financials_ai_opportunities.docx)_
+- **Mar 2026** [customer] Executive Advisory Board session: "We do not know how much we're worth" — The first global Executive Advisory Board session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L (profit and loss) workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event. _(source: illuminate_2026_internal_synthesis_1.docx)_
+- **Apr 2024** [customer] Enterprise Accounting: adoption climbs with NPS (Net Promoter Score) by module — 746 customers use Enterprise Accounting (45% Core Receivables/GL (General Ledger), 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
 
 ### Momentus Technologies' History (End-to-End)
 
-- **Jul 2026** [product] AI-Powered Opportunities strategy defined for Financial persona — Product strategy identifies 5 AI opportunity areas mapped to the persona's top pain points: vendor invoice intelligence, a consolidated P&L dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling. _(source: financials_ai_opportunities.docx)_
-- **Mar 2026** [customer] First global Executive Advisory Board meeting — Momentus holds its first-ever global EAB virtual meeting, formally chartering a customer advisory forum capped at 50 members worldwide across segments and products. _(source: EAB March 2026 - Internal Agenda and Run of Show.docx)_
-- **Mar 2026** [customer] EAB survey: efficiency is the #1 shared priority — 69% of surveyed customers name operational efficiency/reducing manual work as their top priority for 2026; AI-powered automation (63%) and BI/Reporting (56%) are the top tool categories being evaluated. _(source: EAB_Customer_Agenda_2.docx)_
-- **Mar 2026** [product] Sales AI CRM roadmap announced — Momentus frames its AI strategy as evolving from "System of Record" to "System of Action," starting with an agentic Sales CRM (targeted Q3 2026) as the first of a four-agent product journey. _(source: EAB_RunOfShow_v2.docx)_
-- **Mar 2026** [industry] GDPR gates European ambient-listening AI features — GDPR and works-council consent requirements (Germany, France, Austria) are identified as a deployment prerequisite — not an afterthought — for AI features that listen in on meetings/calls in Europe. _(source: illuminate_2026_internal_synthesis_1.docx)_
-- **Mar 2026** [customer] EAB session: "We do not know how much we're worth" — The first global EAB session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event. _(source: illuminate_2026_internal_synthesis_1.docx)_
+- **Jul 2026** [product] AI (Artificial Intelligence)-Powered Opportunities strategy defined for Financial persona — Product strategy identifies 5 AI opportunity areas mapped to the persona's top pain points: vendor invoice intelligence, a consolidated P&L (profit and loss) dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling. _(source: financials_ai_opportunities.docx)_
+- **Mar 2026** [customer] First global Executive Advisory Board meeting — Momentus holds its first-ever global Executive Advisory Board virtual meeting, formally chartering a customer advisory forum capped at 50 members worldwide across segments and products. _(source: EAB March 2026 - Internal Agenda and Run of Show.docx)_
+- **Mar 2026** [customer] Executive Advisory Board survey: efficiency is the #1 shared priority — 69% of surveyed customers name operational efficiency/reducing manual work as their top priority for 2026; AI (Artificial Intelligence)-powered automation (63%) and BI (Business Intelligence)/Reporting (56%) are the top tool categories being evaluated. _(source: EAB_Customer_Agenda_2.docx)_
+- **Mar 2026** [product] Sales AI (Artificial Intelligence) CRM (Customer Relationship Management) roadmap announced — Momentus frames its AI strategy as evolving from "System of Record" to "System of Action," starting with an agentic Sales CRM (targeted Q3 2026) as the first of a four-agent product journey. _(source: EAB_RunOfShow_v2.docx)_
+- **Mar 2026** [industry] GDPR (General Data Protection Regulation) gates European ambient-listening AI (Artificial Intelligence) features — GDPR and works-council consent requirements (Germany, France, Austria) are identified as a deployment prerequisite — not an afterthought — for AI features that listen in on meetings/calls in Europe. _(source: illuminate_2026_internal_synthesis_1.docx)_
+- **Mar 2026** [customer] Executive Advisory Board session: "We do not know how much we're worth" — The first global Executive Advisory Board session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L (profit and loss) workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event. _(source: illuminate_2026_internal_synthesis_1.docx)_
 - **2025** [customer] Wins Las Vegas Convention Center — Momentus becomes the software of choice for the top 16 U.S. convention centers by square footage. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
 - **2025** [industry] Industry shift toward "entertainment districts" — Stadiums & arenas (e.g. Atlanta Braves, Kansas City Power & Light) increasingly diversify revenue beyond gameday, reshaping what venue customers need from Momentus. _(source: Event Lifecycle & Verticals.pptx)_
+- **2025** [product] WeTrack-Enterprise integration gap identified as organizational, not just technical — Internal account-manager and solutions-engineering interviews describe the WeTrack/Momentus integration gap as much an organizational mismatch as a technical one — Momentus's existing customer relationships sit with event and booking contacts, while WeTrack's actual buyers (security, risk, and safety leadership) are a different audience on a separate budget, with no established relationship. An early-stage internal concept ("Operations Hub") to flow event-outline data into WeTrack Jobs for field execution exists only as a wireframe. _(source: Dovetail — WeTrack Risk & Incident AM/SE interviews (2025))_
+- **2025** [product] A separate "Jobs" object exists for internal, non-event work — long since deprioritized — Enterprise Operations includes a distinct "Jobs" object, originally built by duplicating the Event data model, used internally for facility-maintenance and capital-project tracking so those costs stay out of event revenue reporting — not a customer-facing event-work tool. It has seen no further product investment in over a decade and is no longer sold to new customers. A separate, unrelated "Jobs" checklist feature also exists inside WeTrack, and the naming overlap is a recurring source of internal confusion between the two. _(source: Dovetail — Enterprise Operations Feature Deep Dive interviews (2025))_
 - **Mar 2025** [product] Group Room Control launches for Walt Disney World — Completion of this hotel group-booking feature becomes the trigger for a strategic push into the underrepresented Hotels, Casinos & Resorts vertical. _(source: PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
 - **Jul 2024** [customer] Convention Center interview cautions against self-service-as-storefront — A PavCo/Vancouver Convention Centre catering coordinator interview surfaces a live cautionary example: the venue's existing self-service exhibitor ordering system (VCCI) increased transcription workload and produced double-bookings and missed next-day deliveries — reinforcing that the "collaboration portal" concept (flagged Jan 2024) should be a task/communication tool between staff and client, not an e-commerce ordering storefront. _(source: UX- Operational - banquet orders_catering-20240718_130314-Meeting Recording-en-US.docx)_
-- **~2024** [customer] Jaarbeurs migrates CRM to Salesforce — Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years." _(source: illuminate_2026_internal_synthesis_1.docx)_
-- **Apr 2024** [customer] Enterprise Accounting: adoption climbs with NPS by module — 746 customers use Enterprise Accounting (45% Core Receivables/GL, 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
+- **~2024** [customer] Jaarbeurs migrates CRM (Customer Relationship Management) to Salesforce — Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years." _(source: illuminate_2026_internal_synthesis_1.docx)_
+- **Apr 2024** [customer] Enterprise Accounting: adoption climbs with NPS (Net Promoter Score) by module — 746 customers use Enterprise Accounting (45% Core Receivables/GL (General Ledger), 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
 - **End of Mar 2024** [product] Risk Manager discontinued, folded into WeTrack — Momentus stops selling standalone Risk Manager, consolidating its functionality into WeTrack rather than maintaining two overlapping risk products. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Ongoing** [customer] Sales lead intake identified as highly manual — Customer research surfaces manual lead intake/qualification, no centralized funnel view, and inconsistent proposal formatting as a recurring sales pain point across venues. _(source: Event Lifecycle & Verticals.pptx)_
 - **Ongoing** [customer] Planning collaboration flagged as disjointed — Customers describe wanting a "Google Doc experience" for shared event-detail editing with planners, plus automatic payment-status notifications — capabilities not yet delivered. _(source: Event Lifecycle & Verticals.pptx)_
 - **Dec 2023** [product] WeTrack Planning module (Gantt) expanded for FIFA — WeTrack's Planning workflow gets Gantt-chart updates driven directly by FIFA's expanding planning/risk needs, alongside new integration pulling Enterprise/Elite event data into WeTrack. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Nov 2023** [product] WeTrack regional licensing & Momentus brand alignment — Licensing for regional clusters, theming/navigation updates, and analytics integration (Smartlook + Pendo) ship as WeTrack adopts Momentus branding. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
 - **Nov 15, 2023** [industry] Finalist, Event Technology Awards 2023 — Momentus is named a finalist in Best Venue Booking Solution and Best Sustainable Solution (plus a People's Choice nomination) at the awards ceremony in ExCeL London. _(source: Momentus blog: Event Technology Awards 2023 finalist)_
-- **Sep 2023** [customer] Convention Center vertical: 237 customers, ~$22M ARR — A vertical snapshot shows 237 customers across 32 countries (AMER 40%, EMEA 44%, APAC 16%, 91% hosted) — the base the company later builds on to win the Las Vegas Convention Center. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
+- **Sep 2023** [customer] Convention Center vertical: 237 customers, ~$22M ARR (Annual Recurring Revenue) — A vertical snapshot shows 237 customers across 32 countries (AMER 40%, EMEA 44%, APAC 16%, 91% hosted) — the base the company later builds on to win the Las Vegas Convention Center. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
 - **Aug 2023** [product] WeTrack ships multi-language BETA — French, Italian, Spanish, German, and Arabic translations released as WeTrack integrates into the Momentus product family. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
-- **Jul 2023** [product] Formal Corporate market product review — Momentus conducts a dedicated Corporate-segment product review, positioning Enterprise against an aging EMS as the market's declining incumbent. _(source: PMO-Product strategy - Corporate Market.pdf)_
-- **Jul 2023** [customer] New Higher Ed logos: Brown, Colby, UC Berkeley — Brown University, Colby College, and UC Berkeley (Cal Performances) sign on, alongside a snapshot of the broader Higher Ed pipeline — including notable competitive losses to EMS and CourseDog. _(source: PMO-Enterprise for Education - Product Strategy.pdf)_
-- **Jul 2023** [customer] WeTrack ARR snapshot by vertical — Post-acquisition, WeTrack's ARR splits: Event Organiser 58.8%, Venue 35.0%, Event Supplier 3.6%, Corporate 2.5% — with named key clients FIFA, ICC, World Rugby, Arsenal FC, and Ascot Racecourse. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
-- **2023** [industry] Global accounting-software market at ~$16.8B — Cited context for the Enterprise Accounting & Financials strategy: the global accounting-software market, growing ~9.2% CAGR, that Momentus Enterprise's finance suite competes within. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
+- **Jul 2023** [product] Formal Corporate market product review — Momentus conducts a dedicated Corporate-segment product review, positioning Enterprise against an aging EMS (Event Management System) as the market's declining incumbent. _(source: PMO-Product strategy - Corporate Market.pdf)_
+- **Jul 2023** [customer] New Higher Ed logos: Brown, Colby, UC Berkeley — Brown University, Colby College, and UC Berkeley (Cal Performances) sign on, alongside a snapshot of the broader Higher Ed pipeline — including notable competitive losses to EMS (Event Management System) providers and CourseDog. _(source: PMO-Enterprise for Education - Product Strategy.pdf)_
+- **Jul 2023** [customer] WeTrack ARR (Annual Recurring Revenue) snapshot by vertical — Post-acquisition, WeTrack's ARR splits: Event Organiser 58.8%, Venue 35.0%, Event Supplier 3.6%, Corporate 2.5% — with named key clients FIFA, ICC, World Rugby, Arsenal FC, and Ascot Racecourse. _(source: PMO-WeTrack Product Strategy 2024-2025.pdf)_
+- **2023** [industry] Global accounting-software market at ~$16.8B — Cited context for the Enterprise Accounting & Financials strategy: the global accounting-software market, growing ~9.2% CAGR (Compound Annual Growth Rate), that Momentus Enterprise's finance suite competes within. _(source: PMO-Enterprise Accounting & Financials - Product strategy.pdf)_
 - **2023** [product] "Change tracking" feature launched for operations — Momentus releases a change-tracking feature giving operations teams configurable alert windows for late changes, built directly in response to heavy paper- and radio-based coordination — especially among AMER customers. _(source: Stakeholder Interviews Data Dump.docx)_
 - **Apr 2023** [product] Acquires WeTrack — Momentus acquires the London-based WeTrack, adding sustainability, incident-tracking, and control-room software to the portfolio. _(source: gomomentus.com/ungerboeck)_
 - **Jan 2023** [product] Rebrands to "Momentus Technologies" — Unifies Ungerboeck's growing portfolio of acquired products under one connected brand and platform. _(source: gomomentus.com/ungerboeck)_
@@ -1330,7 +1342,7 @@ Gather available spaces, dates, and client history to assess whether a booking c
 
 *Verbs: Set Up · Organize · Examine*
 
-Assemble the proposal, pricing structure, and hold configuration needed to present an offer — Standardized proposal templates with guided pricing would reduce preparation time and remove reliance on individual intuition. Bringing negotiation in-system with tracked revision history would reduce email cycles and create an auditable offer record. Native pre-event P&L calculation would give sales teams profitability visibility before committing, enabling faster and more confident go/no-go decisions.
+Assemble the proposal, pricing structure, and hold configuration needed to present an offer — Standardized proposal templates with guided pricing would reduce preparation time and remove reliance on individual intuition. Bringing negotiation in-system with tracked revision history would reduce email cycles and create an auditable offer record. Native pre-event P&L (profit and loss) calculation would give sales teams profitability visibility before committing, enabling faster and more confident go/no-go decisions.
 
 **Research opportunity:** Client-ready proposal output with modern formatting — eliminating the need to re-create Momentus proposals in external tools before sending. An in-system offer management workflow for entertainment bookings would replace the spreadsheet-based deal process, capturing offer terms, counteroffers, and settlement estimates within the same event record.
 
@@ -1338,7 +1350,7 @@ Assemble the proposal, pricing structure, and hold configuration needed to prese
 
 1. Minimize the risk of underpricing due to overlooked requirements or hidden costs — when building a price estimate for an event with non-standard service dependencies not captured in the initial inquiry
 2. Increase confidence that pricing covers all direct operational costs — labor, utilities, services — when setting a final price for an event where labor, utilities, and third-party services contribute significantly to delivery cost
-3. Increase accuracy in forecasting ancillary revenue — F&B, A/V, parking, labor, exhibitor services — when projecting total event value for a booking that includes F&B minimums, A/V packages, and exhibitor services alongside space rental
+3. Increase accuracy in forecasting ancillary revenue — F&B (Food & Beverage), A/V (Audio/Visual), parking, labor, exhibitor services — when projecting total event value for a booking that includes F&B minimums, A/V packages, and exhibitor services alongside space rental
 4. Minimize the time to generate a complete, professional proposal from initial inquiry — when competing for a piece of business where the client has requested proposals from multiple venues simultaneously
 5. Minimize errors in dates, pricing, space specifications, and technical requirements — when preparing a proposal under time pressure for a client with complex multi-day requirements
 6. Increase the amount of relevant, customized content addressing the prospect's specific needs — when tailoring an offer for a client whose event type or organizational profile differs from the venue's standard proposal template
@@ -1491,7 +1503,7 @@ Scope the full set of functional requirements for a committed Event Opportunity
 4. Maximize the clarity of the client's priority requirements and non-negotiables — when scoping an Event Opportunity where multiple contacts have provided conflicting or incomplete instructions during sales
 5. Minimize the likelihood of a scope discrepancy surfacing during the execution phase — when finalizing the function plan for an event whose requirements were established months before the event date
 6. Minimize the effort required to translate verbal client expectations into a structured function scope — when the sales handoff included high-level client notes but no formal requirement documentation
-7. Maximize the clarity of department-specific requirements identified during initial scoping — when beginning to plan a multi-function event that involves catering, AV, facilities, and external vendors simultaneously
+7. Maximize the clarity of department-specific requirements identified during initial scoping — when beginning to plan a multi-function event that involves catering, AV (Audio/Visual), facilities, and external vendors simultaneously
 8. Minimize the likelihood of misinterpreting a sales-stage commitment as a fixed requirement during scope definition — when reviewing a sales proposal where certain service inclusions were offered conditionally but are now being treated as confirmed by the client
 9. Minimize the likelihood of being unable to reassign a planner to an Event Plan once the initial activity checklist has been generated — when a staffing change or workload rebalance requires reassigning ownership of an already-detailed event
 10. Minimize the effort required to identify confirmed upcoming events that have not yet been assigned a planner — when leadership reviews the pipeline of bookings over the next 24 months to distribute planning workload
@@ -1519,7 +1531,7 @@ Access the confirmed Event Opportunity record and all prior client information n
 
 *Verbs: Set Up · Organize · Examine*
 
-Build the complete BEO/event order for each function, including space, F&B, AV, exhibitors, registration, setup, and timing — Standardized event resume and BEO templates would eliminate the per-event customization overhead that currently falls on every planner. Automated workflow generation based on event type and customer profile could replace manual checklist creation from scratch. A guided, templatized registration setup flow would reduce configuration from hours to minutes. An in-system recommendation engine surfacing relevant add-ons and upsells based on client history would unlock revenue opportunities that are currently invisible at the planning stage.
+Build the complete BEO (Banquet Event Order) / event order for each function, including space, F&B (Food & Beverage), AV (Audio/Visual), exhibitors, registration, setup, and timing — Standardized event resume and BEO templates would eliminate the per-event customization overhead that currently falls on every planner. Automated workflow generation based on event type and customer profile could replace manual checklist creation from scratch. A guided, templatized registration setup flow would reduce configuration from hours to minutes. An in-system recommendation engine surfacing relevant add-ons and upsells based on client history would unlock revenue opportunities that are currently invisible at the planning stage.
 
 **Research opportunity:** Mass data entry tools — bulk function import, copy-paste with configuration preservation, and template-based function sets — would reduce the 90+ hours of manual BEO setup that planners spend on large multi-day events. Inline spell check and field-level validation within the detailing interface would catch quality issues at input rather than when documents are sent to clients. A searchable, filterable content catalog would replace the infinite-scroll browsing that makes program content selection exhausting. Preserving list formatting — bullets and line breaks — when pasting client menus and specs would eliminate the stray characters and broken structure that currently require manual cleanup after every paste. Because clients rarely send finalized specs, a staged import — negotiating details in a lightweight external format first, then bulk-loading only once requirements are locked — would match how detailing actually happens today, rather than assuming specs arrive ready to load.
 
@@ -1545,7 +1557,7 @@ Obtain client approval and internal sign-off on the complete function detail bef
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to obtain client approval on the finalized BEO — when the event date is approaching and operations needs the confirmed detail to begin preparation
+1. Minimize the time it takes to obtain client approval on the finalized BEO (Banquet Event Order) — when the event date is approaching and operations needs the confirmed detail to begin preparation
 2. Minimize the likelihood of distributing a BEO that requires a revision after operations has begun preparation — when finalizing function details with a client who is still making changes close to the event date
 3. Maximize the confidence that all required approvals are captured before BEO distribution — when the event involves multiple client contacts or departments with separate sign-off authority
 4. Maximize the speed of resolving open questions from the client that are blocking BEO finalization — when the event is approaching and multiple outstanding details remain unconfirmed by the client
@@ -1558,7 +1570,7 @@ Obtain client approval and internal sign-off on the complete function detail bef
 
 *Verbs: Perform · Transact · Administer*
 
-Distribute the finalized BEO to all relevant operations departments inside Momentus
+Distribute the finalized BEO (Banquet Event Order) to all relevant operations departments inside Momentus
 
 **Research opportunity:** Client-ready and operations-ready document output — replacing the re-formatting step that planners currently perform in Word before distributing BEOs. Automated distribution triggered by function status change would eliminate the manual step of emailing exports to operations, with configurable templates for each department’s format preferences.
 
@@ -1566,7 +1578,7 @@ Distribute the finalized BEO to all relevant operations departments inside Momen
 
 1. Minimize the time it takes to distribute the finalized BEO to all relevant departments — when the event is approaching and operations teams need the confirmed plan to begin their preparation
 2. Minimize the likelihood of a department not receiving the BEO or receiving an outdated version — when distributing to multiple internal teams with different communication preferences or platform access levels
-3. Minimize the number of manual steps required to complete BEO distribution to all departments — when the event involves catering, AV, facilities, security, and external vendors who each need specific detail
+3. Minimize the number of manual steps required to complete BEO distribution to all departments — when the event involves catering, AV (Audio/Visual), facilities, security, and external vendors who each need specific detail
 4. Maximize the confidence that all external vendors and third-party service providers have received the information they need to execute their scope — when the event includes off-property catering, external AV, or contracted entertainment that requires separate coordination
 5. Minimize the likelihood of a department beginning preparation from an incorrect or non-final version of the BEO — when a finalized plan is distributed while a parallel revision is still being processed in the system
 6. Minimize the effort required to confirm receipt and acknowledgment of the BEO by each receiving department — when distributing a time-sensitive function order in the days leading up to an event where preparation windows are short
@@ -1580,7 +1592,7 @@ Distribute the finalized BEO to all relevant operations departments inside Momen
 
 *Verbs: Verify · Track · Check*
 
-Track BEO completion, client changes, and department acknowledgment across all active events in the planner's portfolio
+Track BEO (Banquet Event Order) completion, client changes, and department acknowledgment across all active events in the planner's portfolio
 
 **Research opportunity:** Role-based notification triggers tied to planning milestones — alerting planners when approvals are pending, deadlines are approaching, or client responses are overdue, without requiring daily manual status checks. Centralizing client communication within the event record would replace the fragmented email, mail, and phone threads that currently make it impossible to audit the client relationship history for a given event.
 
@@ -1602,7 +1614,7 @@ Track BEO completion, client changes, and department acknowledgment across all a
 
 *Verbs: Update · Adjust · Maintain*
 
-Update function details and notify impacted departments when client changes arrive after initial BEO distribution — Auto-routing change orders directly to the affected function — with intelligent triage that approves simple updates automatically and flags complex ones for review — would significantly reduce manual effort and the risk of missed or misapplied changes.
+Update function details and notify impacted departments when client changes arrive after initial BEO (Banquet Event Order) distribution — Auto-routing change orders directly to the affected function — with intelligent triage that approves simple updates automatically and flags complex ones for review — would significantly reduce manual effort and the risk of missed or misapplied changes.
 
 **Research opportunity:** Mass editing across functions and orders — applying a change once and propagating it to all affected records — would replace the line-by-line re-entry that makes change management so time-consuming for large multi-function events. In-flight document editing with version tracking would enable planners to update a distributed BEO without having to re-export and redistribute it manually.
 
@@ -1612,7 +1624,7 @@ Update function details and notify impacted departments when client changes arri
 
 1. Minimize the time it takes to update an Event Plan record and re-distribute the revised BEO to all impacted departments — when a client change is received after the initial BEO has been shared with operations
 2. Minimize the likelihood of an operations team executing against an outdated version of the BEO — when multiple revisions are made to an Event Plan in the days leading up to the event
-3. Minimize the disruption caused by a last-minute function change to the operations team — when the modification requires a re-scoping of space setup, catering quantities, or AV configuration
+3. Minimize the disruption caused by a last-minute function change to the operations team — when the modification requires a re-scoping of space setup, catering quantities, or AV (Audio/Visual) configuration
 4. Maximize the accuracy of the revised BEO re-issued to all affected departments — when a last-minute client change affects multiple function details that were previously confirmed and distributed
 5. Minimize the likelihood of a department acting on a superseded version of the BEO — when issuing a revision to an active event plan after the original has already been acknowledged by one or more departments
 6. Maximize the speed of issuing a revised BEO and confirming re-acknowledgment by all affected departments — when a client change arrives within 48 hours of the event and requires same-day redistribution to operations
@@ -1630,12 +1642,12 @@ Ensure all function records are closed and complete, confirm post-event customer
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to capture and record post-event actuals against each Event Plan — when the event has concluded and the planner is reconciling actual attendance, consumption, and service delivery against the BEO
+1. Minimize the time it takes to capture and record post-event actuals against each Event Plan — when the event has concluded and the planner is reconciling actual attendance, consumption, and service delivery against the BEO (Banquet Event Order)
 2. Minimize the likelihood of missing or inaccurate actuals in the closed Event Plan record — when closing out a multi-function event where actual vs. planned quantities vary significantly across departments
 3. Maximize the accuracy of final billing data captured from closed Event Plans — when preparing the post-event invoice reconciliation with the client and finance team
 4. Maximize the completeness of variance documentation between the planned and actual Event Plan — when closing an event where significant deviations from the BEO occurred due to last-minute client changes or operational issues
-5. Minimize the effort required to compile and submit all post-event information required by the finance team for invoice finalization — when closing out a multi-function event with complex billing across food, beverage, AV, and external vendor services
-6. Minimize the effort required to reconcile final attendance and consumption actuals against each function line in the BEO — when concluding a multi-function event where actual guest counts, F&B consumption, and setup usage varied significantly from the plan
+5. Minimize the effort required to compile and submit all post-event information required by the finance team for invoice finalization — when closing out a multi-function event with complex billing across food, beverage, AV (Audio/Visual), and external vendor services
+6. Minimize the effort required to reconcile final attendance and consumption actuals against each function line in the BEO — when concluding a multi-function event where actual guest counts, F&B (Food & Beverage) consumption, and setup usage varied significantly from the plan
 7. Maximize the completeness of documentation supporting any unbilled overages or service additions — when closing out an event where client-requested additions during execution were not captured in the original BEO
 8. Minimize the likelihood of a discrepancy between the closed BEO and the finance invoice going undetected before billing — when finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours
 9. Maximize the completion rate of post-event summary documentation across the planning team — when the department wants to analyze the closed-event portfolio to identify commonalities and improve future planning
@@ -1670,17 +1682,17 @@ Scope the full set of operational tasks required to execute an Event Plan from s
 
 *Verbs: Gather · Access · Retrieve*
 
-Access the finalized BEO and all supporting documentation needed to build and assign work orders
+Access the finalized BEO (Banquet Event Order) and all supporting documentation needed to build and assign work orders
 
 **Research opportunity:** An operations-ready event view — filtering and presenting only the work orders, spaces, and timing relevant to a given crew member’s scope, rather than exposing the full event record. Real-time inventory availability visible at work order assignment would eliminate the parallel spreadsheet tracking that operations managers currently maintain to know what resources are in use.
 
-**Product documentation opportunity:** Room diagrams accessible directly from MWO — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans. Today, floor plans and dietary lists are filed at the full-event level rather than to the specific function or work order — extending document association down to the work order itself, not just improving how MWO displays what already exists, would let crew find only what is relevant to their assignment instead of sorting through an entire event’s paperwork.
+**Product documentation opportunity:** Room diagrams accessible directly from MWO (Mobile Work Orders) — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans. Today, floor plans and dietary lists are filed at the full-event level rather than to the specific function or work order — extending document association down to the work order itself, not just improving how MWO displays what already exists, would let crew find only what is relevant to their assignment instead of sorting through an entire event’s paperwork.
 
 **Desired outcomes:**
 
 1. Minimize the time it takes to access the finalized BEO and associated function details for a scheduled event — when beginning task assignment for a function whose BEO has just been distributed by the planning team
 2. Minimize the likelihood of building a work order from an outdated or unfinalized version of the BEO — when the event planner is still making changes to the Event Plan while the operations team is beginning preparation
-3. Minimize the effort required to locate all space, equipment, and resource specifications needed to build a complete work order — when accessing function detail for an event with non-standard AV, catering, or setup configurations
+3. Minimize the effort required to locate all space, equipment, and resource specifications needed to build a complete work order — when accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations
 4. Maximize the speed of confirming that the BEO accessed is the most current approved version — when starting work order creation for an event where recent changes may have been submitted by the planning team
 5. Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO — when building work orders for a non-standard setup that requires visual reference materials to assign work orders correctly
 6. Minimize the effort required to confirm the BEO is fully approved and authorized before beginning work order creation — when the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system
@@ -1697,7 +1709,7 @@ Assign all operational tasks to crew members, departments, and equipment, with t
 
 **Research opportunity:** Field-ready work order output — formatted for legibility in operational settings, not back-office screens — would reduce the paper-printing workaround that crews currently rely on when digital displays are impractical. Automated staffing assignment based on event type, crew skills, and availability would replace the manual scheduling process that currently requires cross-referencing multiple systems.
 
-**Product documentation opportunity:** Temporary and contract staff able to access and be assigned work in MWO without requiring full user accounts — enabling operations teams to scale their workforce for peak periods without provisioning full platform licenses. Work order items assignable to multiple people with specific dates, times, and contact details would support coordinated pre-event delivery scheduling. Configurable default filters, searchable dropdowns, and custom item status visibility would let operations managers tailor the MWO experience for their teams, reducing clutter and speeding up task navigation for field staff.
+**Product documentation opportunity:** Temporary and contract staff able to access and be assigned work in MWO (Mobile Work Orders) without requiring full user accounts — enabling operations teams to scale their workforce for peak periods without provisioning full platform licenses. Work order items assignable to multiple people with specific dates, times, and contact details would support coordinated pre-event delivery scheduling. Configurable default filters, searchable dropdowns, and custom item status visibility would let operations managers tailor the MWO experience for their teams, reducing clutter and speeding up task navigation for field staff.
 
 **Desired outcomes:**
 
@@ -1712,6 +1724,11 @@ Assign all operational tasks to crew members, departments, and equipment, with t
 9. Minimize the effort required to generate accurate physical labels for booth-specific equipment such as power cords and utility drops — when preparing hundreds of individually labeled items for a large exhibition event
 10. Minimize the effort required to produce a single, field-legible packet combining work orders and room diagrams — when distributing daily assignments to an operations team that primarily works from print rather than devices
 11. Maximize the speed at which open or available shifts generated by a staffing-need change are broadcast to eligible crew — when a BEO or resume update triggers new labor requirements across departments
+12. Minimize the effort required to translate a bundled service package into individual crew-actionable tasks — when preparing an order that combines multiple sub-items under a single package line
+13. Minimize the effort required to assign a task to whichever available crew member holds the right role or department, rather than a specific named person — when the assigning supervisor only cares that the right department covers the task, not who specifically does it
+14. Minimize the effort required to re-enter start and end dates and times for every individual item, instruction, or package — when applying a template to a recurring event where the overall schedule shifts but the relative timing between items does not
+15. Maximize the clarity of a timeline view of all functions and tasks across every department — when coordinating a multi-department event where interdependent tasks need to be sequenced and milestones tracked visually rather than in an external spreadsheet
+16. Maximize the usability of the same task and dashboard interface — when the operation scales from a small crew handling a few dozen tasks to a large crew handling over a thousand
 
 #### 04 · Confirm — Confirm no last-minute changes
 
@@ -1734,11 +1751,11 @@ Validate all assignments, run a pre-event readiness check, and confirm crew is o
 
 *Verbs: Perform · Transact · Administer*
 
-Supervise live work order execution across all crew and spaces during the event window — In-system real-time task updates could replace ad hoc radio and paper coordination, giving operations a live view of execution across every crew and space. A purpose-built mobile work order experience would drive field adoption and close the gap between what is planned and what is actually logged. Surfacing operations constraints such as load-in windows and labor limits to sales and planning during booking would prevent commitments that operations cannot deliver. A cross-event labor view would allow crews to optimize deployment across adjacent events and eliminate redundant setup and teardown cycles.
+Supervise live work order execution across all crew and spaces during the event window, from setup to teardown — In-system real-time task updates could replace ad hoc radio and paper coordination, giving operations a live view of execution across every crew and space. A purpose-built mobile work order experience would drive field adoption and close the gap between what is planned and what is actually logged. Surfacing operations constraints such as load-in windows and labor limits to sales and planning during booking would prevent commitments that operations cannot deliver. A cross-event labor view would allow crews to optimize deployment across adjacent events and eliminate redundant setup and teardown cycles.
 
 **Research opportunity:** Reliable mobile work order access for field crews — without requiring a Momentus login — would replace the printed manifest and radio-driven workflows that make real-time status tracking impossible. A live event-day dashboard consolidating all active work orders, crew assignments, and space statuses would give supervisors the situational awareness currently assembled from radio calls and printed sheets.
 
-**Product documentation opportunity:** Capture client signatures and photo evidence per work order item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on work orders would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO would surface the full setup-teardown lifecycle of each work order. Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.
+**Product documentation opportunity:** Capture client signatures and photo evidence per work order item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on work orders would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each work order. Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.
 
 **Desired outcomes:**
 
@@ -1748,11 +1765,12 @@ Supervise live work order execution across all crew and spaces during the event 
 4. Maximize the speed of communicating a real-time task update or priority change to crew in the field — when a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue
 5. Minimize the effort required to confirm task completion in real time without interrupting crew during active execution — when supervising multiple concurrent setup tracks that are progressing simultaneously across the venue
 6. Minimize the likelihood of a crew member executing an Event Work against an outdated task specification — when a modification was issued by the planning team after the crew was dispatched with printed task assignments
-7. Maximize the clarity of real-time task status visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
+7. Maximize the clarity of real-time task status, from setup to teardown, visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
 8. Minimize the effort required to reallocate crew from a lower-priority task to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
 9. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized work order quantities
 10. Minimize the likelihood of losing in-progress mobile work order entries due to application performance failures such as crashes, logouts, or slow diagram loads — when low-tech-savvy field crew are completing setup tasks on a mobile device in real time
 11. Minimize the likelihood of a work order item being marked complete by someone other than the authorized supervisor or coordinator — when a maintenance or install crew member can update status but only a designated coordinator should verify and close the item
+12. Minimize the likelihood of an unplanned on-site request going unfulfilled or unbilled — when a need falls outside the original scope of work and must be routed back through another team before it can be addressed
 
 #### 06 · Monitor — Real-time track
 
@@ -1776,6 +1794,10 @@ Track work order completion, crew location, and incident status in real time dur
 8. Maximize the accuracy of the real-time status view of all active Event Works — when a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team
 9. Minimize the cognitive effort required to parse a shared dashboard view for only the work orders and spaces relevant to a specific supervisor — when using a shared, unfiltered view that surfaces every department's activity instead of just the supervisor's own scope
 10. Maximize the traceability of an individual Event Work item's status history from installed to verified to flagged for repair — when a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record
+11. Maximize the accessibility of real-time status indicators for crew and supervisors with different visual abilities — when monitoring incident or risk status across a mixed-ability team during an active event
+12. Maximize the degree to which a resolved incident informs future risk identification — when closing out an incident that reveals a previously unassessed risk
+13. Minimize the effort required to confirm event floor status without physically returning to a desk or device — when supervising active work from the floor and needing an update in the moment
+14. Maximize the flexibility of switching between a single-event view and a consolidated view spanning every concurrent event — when different roles on the same team need different scopes — one overseeing one event in depth, another overseeing the full portfolio running that day
 
 #### 07 · Modify — Handle change orders
 
@@ -1797,6 +1819,7 @@ Reassign or update work orders when changes are communicated from the planning t
 8. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a task modification is communicated directly by the event planner to an individual crew member without updating the formal work order record
 9. Minimize the effort required to confirm that a change reported through operations was actually applied by the planning team — when a customer relays a change to operations directly, and operations has no visibility into whether or when the planning team updated the record
 10. Minimize the time it takes to receive event-manager approval or denial for a change that operations identifies on-site — when a customer requests a modification during setup and operations must wait for a yes or no before proceeding
+11. Maximize the completeness of change detection during live execution — when a modification is communicated through unstructured notes rather than a structured field update
 
 #### 08 · Conclude — Capture actuals & close
 
@@ -1806,7 +1829,7 @@ Log work order completion, document all actuals and incidents, close the work or
 
 **Research opportunity:** Actuals capture within the work order at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close.
 
-**Product documentation opportunity:** Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a work order right away instead of holding the entire record open until final counts are in.
+**Product documentation opportunity:** Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO (Mobile Work Orders) — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a work order right away instead of holding the entire record open until final counts are in.
 
 **Desired outcomes:**
 
@@ -1822,6 +1845,7 @@ Log work order completion, document all actuals and incidents, close the work or
 10. Minimize the likelihood of being blocked from closing a completed work order because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
 11. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
 12. Maximize the ability of the operations team to independently verify and close a work order upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
+13. Maximize the accuracy of distinguishing consumable resources from reusable equipment in actuals reporting — when quantities delivered on-site differ from quantities originally ordered and must be reconciled at close
 
 ### Reconcile Event Financials — Casey Lindgren, Finance Director ("The Financial Steward")
 
@@ -1836,7 +1860,7 @@ Log work order completion, document all actuals and incidents, close the work or
 
 Create the long-horizon budget and price list an event will be measured against, and ensure all billable items are set up in the system before the event is sold — Budget creation happens up to a year or more in advance, and procurement rules for vendor and contract selection are often set at this stage.
 
-**Research opportunity:** AI can surface spend patterns across past events and project the impact of a reallocation before committing — turning budget creation from a static, historical exercise into a forward-modeled one.
+**Research opportunity:** AI (Artificial Intelligence) can surface spend patterns across past events and project the impact of a reallocation before committing — turning budget creation from a static, historical exercise into a forward-modeled one.
 
 **Desired outcomes:**
 
@@ -1851,7 +1875,7 @@ Create the long-horizon budget and price list an event will be measured against,
 
 *Verbs: Gather · Access · Retrieve*
 
-Retrieve the budget line, price list, and contract terms relevant to a specific event — currently pulled from multiple disconnected systems (PeopleSoft for budget/payables, Enterprise for GL and event cost data).
+Retrieve the budget line, price list, and contract terms relevant to a specific event — currently pulled from multiple disconnected systems (PeopleSoft for budget/payables, Enterprise for GL (General Ledger) and event cost data).
 
 **Desired outcomes:**
 
@@ -1897,7 +1921,7 @@ Confirm the budget, price list, and billable item setup are finalized and locked
 
 *Verbs: Perform · Transact · Administer*
 
-Monitor event spend and vouchers as they post, check GL entries for variance throughout the event, and verify labor costs against payroll — while confirming operations and planning are entering data correctly in real time.
+Monitor event spend and vouchers as they post, check GL (General Ledger) entries for variance throughout the event, and verify labor costs against payroll — while confirming operations and planning are entering data correctly in real time.
 
 **Desired outcomes:**
 
@@ -1916,7 +1940,7 @@ Monitor event spend and vouchers as they post, check GL entries for variance thr
 
 Track budget-vs-actual variance on an ongoing basis and forecast the likely month-end financial position — rather than discovering shortfalls only when the books close.
 
-**Research opportunity:** ML forecasts month-end position from mid-month signals — unposted vouchers, labor actuals, open work orders — alerting Finance weeks before a surprise hits, e.g. "Based on current trajectory, you’re likely to close 7% over budget on labor."
+**Research opportunity:** ML (Machine Learning) forecasts month-end position from mid-month signals — unposted vouchers, labor actuals, open work orders — alerting Finance weeks before a surprise hits, e.g. "Based on current trajectory, you’re likely to close 7% over budget on labor."
 
 **Desired outcomes:**
 
@@ -1936,9 +1960,9 @@ Track budget-vs-actual variance on an ongoing basis and forecast the likely mont
 
 *Verbs: Update · Adjust · Maintain*
 
-Investigate and resolve contested costs, correct GL coding errors, and reallocate budget between line items or departments as circumstances change.
+Investigate and resolve contested costs, correct GL (General Ledger) coding errors, and reallocate budget between line items or departments as circumstances change.
 
-**Product documentation opportunity:** The AI learns commonly miscoded line items and auto-suggests GL corrections pre-close.
+**Product documentation opportunity:** The AI (Artificial Intelligence) learns commonly miscoded line items and auto-suggests GL corrections pre-close.
 
 **Desired outcomes:**
 
@@ -1947,18 +1971,18 @@ Investigate and resolve contested costs, correct GL coding errors, and reallocat
 3. Maximize the confidence in a proposed budget reallocation between line items or departments — when moving funds requires understanding the downstream impact on margin
 4. Minimize the likelihood of the same GL coding error recurring across multiple events — when a department consistently miscodes the same type of expense
 5. Minimize the effort required to document the reason and approval for a budget change — when a change must be traceable for audit or government reporting purposes
-6. Minimize the effort required to correct or update actuals on an invoice after it has posted to the external ERP or GL — when integration constraints with an external general ledger system prevent updating actuals post-invoice
+6. Minimize the effort required to correct or update actuals on an invoice after it has posted to the external ERP (Enterprise Resource Planning) system or GL — when integration constraints with an external general ledger system prevent updating actuals post-invoice
 7. Minimize the effort required to route a discretionary-fund or special-discount allocation through a multi-executive approval chain — when the approval chain of VPs, finance, and executive leadership currently requires a printed document to be physically signed and hand-carried
 
 #### 08 · Conclude — Reconcile & close the books
 
 *Verbs: Store · Finish · Close*
 
-Verify service orders and work orders were entered correctly, reconcile the GL, generate and route the invoice through multi-step approval, chase any outstanding contractor invoices, and share the final balance with the customer — closing the financial record for the event. — The financial lifecycle of an event routinely extends weeks or months past the event itself while contractor invoices remain outstanding.
+Verify service orders and work orders were entered correctly, reconcile the GL (General Ledger), generate and route the invoice through multi-step approval, chase any outstanding contractor invoices, and share the final balance with the customer — closing the financial record for the event. — The financial lifecycle of an event routinely extends weeks or months past the event itself while contractor invoices remain outstanding.
 
-**Research opportunity:** Predict invoice timing and auto-match line items to work orders via NLP — Finance reviews exceptions only, not every invoice.
+**Research opportunity:** Predict invoice timing and auto-match line items to work orders via NLP (Natural Language Processing) — Finance reviews exceptions only, not every invoice.
 
-**Product documentation opportunity:** A consolidated P&L dashboard across ERP, payroll, ticketing, and contractor systems, with natural-language query on top ("Why did F&B margin drop in March?"); AI-generated plain-language variance digests pushed to department heads automatically after each event closes.
+**Product documentation opportunity:** A consolidated P&L (profit and loss) dashboard across ERP (Enterprise Resource Planning), payroll, ticketing, and contractor systems, with natural-language query on top ("Why did F&B (Food & Beverage) margin drop in March?"); AI (Artificial Intelligence)-generated plain-language variance digests pushed to department heads automatically after each event closes.
 
 **Desired outcomes:**
 
@@ -1969,7 +1993,7 @@ Verify service orders and work orders were entered correctly, reconcile the GL, 
 5. Maximize the accuracy of the final reconciled balance shared with the customer — when outstanding charges, credits, or contractor costs are still being confirmed at close
 6. Minimize the likelihood of an unexpected cost surfacing months after an event is considered closed — when a large number of third parties were involved and their invoices arrive on inconsistent timelines
 7. Minimize the time it takes to produce a department-level or venue-level monthly P&L — when department heads and executives expect regular, on-time financial reporting
-8. Maximize the completeness of the economic impact and stakeholder financial report for a closed event — when reporting the venue’s value to a city CFO, board, or other government stakeholder
+8. Maximize the completeness of the economic impact and stakeholder financial report for a closed event — when reporting the venue’s value to a city CFO (Chief Financial Officer), board, or other government stakeholder
 9. Minimize the duplicative effort required to re-enter or recreate financial and invoice data in a separate municipally-mandated finance system — when city or municipal IT policy prohibits direct system integration
 10. Minimize the effort required to re-key invoice data into an external accounting system to generate the final, official customer invoice — when the accounting system of record for final invoicing is separate from the event management system
 11. Maximize the consolidation of exhibitor-service and show-level charges into a single customer invoice — when exhibitor and show billing currently must be tracked and invoiced separately, requiring manual bulk-number reconciliation
@@ -2025,13 +2049,13 @@ Review the current pipeline, capacity, and resource availability to understand t
 
 *Verbs: Set Up · Organize · Examine*
 
-Ensure all departments are aligned, resourced, and ready before an event advances to the confirmed stage — Integrating cost data from adjacent systems into a native in-system P&L would give leadership profitability visibility before and during events, eliminating manual aggregation and enabling faster, better-informed confirmation decisions.
+Ensure all departments are aligned, resourced, and ready before an event advances to the confirmed stage — Integrating cost data from adjacent systems into a native in-system P&L (profit and loss) would give leadership profitability visibility before and during events, eliminating manual aggregation and enabling faster, better-informed confirmation decisions.
 
 **Research opportunity:** A pre-event alignment view consolidating pending approvals, resource conflicts, and department readiness gaps across all functions of an upcoming event — replacing the email-thread and meeting-based coordination that currently precedes complex events. Surfacing risk flags — security notes, operational constraints, unconfirmed vendor commitments — at the department alignment stage would move risk management upstream, before it becomes a day-of problem.
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to identify cross-departmental resource gaps before an event is confirmed — when reviewing a high-value prospect that involves significant F&B, AV, and staffing commitments
+1. Minimize the time it takes to identify cross-departmental resource gaps before an event is confirmed — when reviewing a high-value prospect that involves significant F&B (Food & Beverage), AV (Audio/Visual), and staffing commitments
 2. Minimize the likelihood of a confirmed event revealing planning or operations constraints that should have been surfaced during the sales stage — when advancing a complex multi-function event through the pipeline without a pre-confirmation cross-team check
 3. Maximize the completeness of pre-confirmation checks across sales, planning, and operations for high-value events — when authorizing a flagship event that requires coordinated readiness from all three departments
 4. Maximize the speed of resolving cross-functional blockers that risk delaying an event's progression to confirmed status — when a high-priority booking is ready to confirm but a planning or operations dependency has not been cleared
@@ -2098,7 +2122,7 @@ Track revenue performance, capacity utilization, and team effectiveness across a
 8. Maximize the clarity of each department's contribution to venue-wide revenue and operational performance — when conducting a cross-functional performance review to inform staffing, investment, and strategy decisions
 9. Maximize the accuracy of the economic impact figure reported to city and board stakeholders — when the calculation depends on manually aggregated data from sales, hotel partners, and third-party calculators that produce inconsistent results
 10. Maximize the completeness of sustainability data captured across departments and vendor partners — when compiling a sustainability report for city, board, or customer stakeholders and the underlying data lives in disconnected vendor reports and manual estimates
-11. Minimize the effort required to reconcile event data between the event management system and connected CRM or financial systems — when sales, finance, and bureau partners each maintain a separate record of the same event and totals must match before reporting
+11. Minimize the effort required to reconcile event data between the event management system and connected CRM (Customer Relationship Management) or financial systems — when sales, finance, and bureau partners each maintain a separate record of the same event and totals must match before reporting
 12. Maximize the completeness of the audit trail identifying who changed which event details and when — when investigating a discrepancy in cost, space assignment, or contract terms after multiple team members have edited the same event record
 
 #### 07 · Modify — Direct adjustments
@@ -2131,7 +2155,7 @@ Close all event records, review performance outcomes, and apply learnings to imp
 
 **Desired outcomes:**
 
-1. Maximize the accuracy of post-event revenue actuals captured across all departments before the record is archived — when closing out a high-value event where sales commissions, planning costs, and operations actuals all feed into the final P&L
+1. Maximize the accuracy of post-event revenue actuals captured across all departments before the record is archived — when closing out a high-value event where sales commissions, planning costs, and operations actuals all feed into the final P&L (profit and loss)
 2. Minimize the time it takes to produce a complete post-event performance summary for stakeholder review — when a leadership debrief is scheduled within 48 hours of the event and a full cross-departmental summary is expected
 3. Maximize the completeness of client satisfaction data captured at event close — when concluding a relationship with a high-value client whose repeat business depends on how the post-event debrief is handled
 4. Minimize the likelihood of an incomplete or inaccurate post-event record creating errors in commission, reporting, or forecasting — when closing out a complex event where multiple amendments were processed and the final contracted figures differ from the original booking
@@ -2139,6 +2163,7 @@ Close all event records, review performance outcomes, and apply learnings to imp
 6. Minimize the effort required to identify which events contributed most and least to the period's revenue target — when preparing a post-period analysis for ownership or executive leadership that requires performance ranking across all completed events
 7. Maximize the speed of extracting actionable learnings from completed events to improve the team's approach going forward — when closing out a period in which several events surfaced recurring process failures or client dissatisfaction patterns
 8. Minimize the likelihood of a repeat event launching without incorporating improvements identified at the previous event's close — when a recurring client event is re-entering the pipeline and the post-event record from the prior year has not been reviewed
+9. Maximize the completeness of all booking, planning, operations, and risk documentation consolidated automatically into a single event record — when a liability or legal inquiry arises months after the event and every relevant document needs to be found in one place without manually searching across departments
 
 ## Curated Opportunity Actions (reference data)
 
@@ -2180,7 +2205,7 @@ _This data (`OPPS_ACTIONS` in index.html) maps each persona/stage to short, cura
 
 - **prepare / research:** Add bulk BEO entry tools and inline field validation — _targets:_ Minimize the likelihood of an incomplete or internally inconsistent BEO
 
-- **confirm / gap:** Automate simple client approvals with smart routing — _targets:_ Minimize the time it takes to obtain client approval on the finalized BEO
+- **confirm / gap:** Automate simple client approvals with smart routing — _targets:_ Minimize the time it takes to obtain client approval on the finalized BEO (Banquet Event Order)
 
 - **execute / research:** Automate BEO distribution with department-specific formatting — _targets:_ Minimize the number of manual steps required to complete BEO distribution to all departments
 
@@ -2230,7 +2255,7 @@ _This data (`OPPS_ACTIONS` in index.html) maps each persona/stage to short, cura
 
 ### dana
 
-### e3
+### me
 
 - **define / research:** Add configurable governance templates with cross-team calendar visibility — _targets:_ Minimize the likelihood of resource overcommitment caused by failing to establish capacity thresholds during strategy setting
 
