@@ -43,10 +43,11 @@
   --dynamic-c: #2dd4bf; /* Dynamic States — teal */
   --struct-c:  #fb7185; /* Structural Status — rose */
 
-  /* ── Historic Context category colors ── */
-  --hist-industry:    #ef4444; --hist-industry-bg: rgba(239,68,68,0.07);  --hist-industry-b: rgba(239,68,68,0.25);
-  --hist-customer:    #84cc16; --hist-customer-bg: rgba(132,204,22,0.07); --hist-customer-b: rgba(132,204,22,0.25);
-  --hist-product:     #6366f1; --hist-product-bg:  rgba(99,102,241,0.07); --hist-product-b:  rgba(99,102,241,0.25);
+  /* ── Momentus Offering product colors ── */
+  --prod-enterprise: #6366f1; --prod-enterprise-bg: rgba(99,102,241,0.07); --prod-enterprise-b: rgba(99,102,241,0.25);
+  --prod-elite:       #ec4899; --prod-elite-bg:       rgba(236,72,153,0.07); --prod-elite-b:       rgba(236,72,153,0.25);
+  --prod-wetrack:     #22d3ee; --prod-wetrack-bg:     rgba(34,211,238,0.07); --prod-wetrack-b:     rgba(34,211,238,0.25);
+  --prod-platform:    #94a3b8; --prod-platform-bg:    rgba(148,163,184,0.07); --prod-platform-b:   rgba(148,163,184,0.25);
 
   /* ── Input metric dimension colors (North Star) ── */
   --c-adopt:  #4ade80;
@@ -90,9 +91,10 @@
   --dynamic-c: #0f766e;
   --struct-c:  #be123c;
 
-  --hist-industry:    #b91c1c; --hist-industry-bg: rgba(185,28,28,0.07);  --hist-industry-b: rgba(185,28,28,0.22);
-  --hist-customer:    #4d7c0f; --hist-customer-bg: rgba(77,124,15,0.07);  --hist-customer-b: rgba(77,124,15,0.22);
-  --hist-product:     #4338ca; --hist-product-bg:  rgba(67,56,202,0.07);  --hist-product-b:  rgba(67,56,202,0.22);
+  --prod-enterprise: #4338ca; --prod-enterprise-bg: rgba(67,56,202,0.07);  --prod-enterprise-b: rgba(67,56,202,0.22);
+  --prod-elite:       #be185c; --prod-elite-bg:       rgba(190,24,92,0.07);  --prod-elite-b:       rgba(190,24,92,0.22);
+  --prod-wetrack:     #0e7490; --prod-wetrack-bg:     rgba(14,116,144,0.07); --prod-wetrack-b:     rgba(14,116,144,0.22);
+  --prod-platform:    #475569; --prod-platform-bg:    rgba(71,85,105,0.07);  --prod-platform-b:    rgba(71,85,105,0.22);
 
   --c-adopt:  #0a6b3f;
   --c-engage: #0369a1;
@@ -1205,26 +1207,26 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
 .job-tl-tab-num { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1.5px; color: var(--text-d); margin-bottom: 2px; }
 .job-tl-tab-label { font-family: var(--f-disp); font-size: 11px; font-weight: 700; color: var(--text); line-height: 1.2; }
 
-/* ── Historic Context timeline (Strategy Layer) ── */
-.hc-filter-row { display: flex; gap: 8px; flex-wrap: wrap; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg); }
-.hc-chip { font-family: var(--f-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); color: var(--text-s); cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
-.hc-chip:hover { background: var(--surface2); }
-.hc-chip.active { border-color: var(--hc-c, var(--bhi)); color: var(--hc-c, var(--text)); background: var(--hc-c-bg, var(--surface2)); }
-.hc-timeline { padding: 20px 24px 4px; max-height: 52vh; overflow-y: auto; }
-.hc-tl-item { display: flex; gap: 14px; }
-.hc-tl-rail { display: flex; flex-direction: column; align-items: center; width: 10px; flex-shrink: 0; }
-.hc-tl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; box-shadow: 0 0 0 3px var(--surface); }
-.hc-tl-line { width: 2px; flex: 1; background: var(--border); margin-top: 2px; }
-.hc-tl-item:last-child .hc-tl-line { display: none; }
-.hc-tl-main { flex: 1; min-width: 0; padding-bottom: 22px; }
-.hc-tl-date { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.5px; color: var(--text-d); margin-bottom: 4px; }
-.hc-tl-cat { font-family: var(--f-mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 3px; }
-.hc-tl-title { font-family: var(--f-disp); font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; line-height: 1.3; }
-.hc-tl-desc { font-size: 12px; color: var(--text-s); line-height: 1.55; }
-.hc-tl-source { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; }
-.hc-tl-source a { color: var(--text-d); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
-.hc-tl-source a:hover { color: var(--text-s); text-decoration-color: var(--text-d); }
-.hc-tl-empty { padding: 24px 4px; text-align: center; color: var(--text-d); font-size: 12px; }
+/* ── Momentus Offering (Strategy Layer) ── */
+.off-list { padding: 12px 24px 20px; max-height: 60vh; overflow-y: auto; }
+.off-group { border-bottom: 1px solid var(--border); }
+.off-group:last-child { border-bottom: none; }
+.off-group-head { display: flex; align-items: center; gap: 10px; width: 100%; padding: 14px 4px; background: none; border: none; cursor: pointer; text-align: left; }
+.off-group-chevron { flex-shrink: 0; color: var(--text-d); transition: transform 0.15s; }
+.off-group-chevron.open { transform: rotate(90deg); }
+.off-group-label { font-family: var(--f-disp); font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+.off-group-count { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); border: 1px solid var(--border); border-radius: 20px; padding: 1px 8px; }
+.off-group-body { padding: 0 4px 16px; }
+.off-item { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+.off-item:last-child { border-bottom: none; }
+.off-item-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 5px; }
+.off-item-module { font-family: var(--f-disp); font-size: 13px; font-weight: 700; color: var(--text); }
+.off-inferred-badge { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.5px; color: var(--text-d); border: 1px dashed var(--border); border-radius: 20px; padding: 1px 8px; cursor: help; }
+.off-item-desc { font-size: 12px; color: var(--text-s); line-height: 1.55; }
+.off-item-source { font-family: var(--f-mono); font-size: 10px; color: var(--text-d); margin-top: 6px; }
+.off-item-source a { color: var(--text-d); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+.off-item-source a:hover { color: var(--text-s); text-decoration-color: var(--text-d); }
+.off-empty { padding: 24px 4px; text-align: center; color: var(--text-d); font-size: 12px; }
 </style>
 </head>
 <body>
@@ -1515,72 +1517,72 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
   </div>
   </div>
 
-  <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px;padding-top:8px">Historic Context</div>
+  <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-d);margin-bottom:14px;padding-top:8px">Momentus Offering</div>
   <div style="margin-bottom:28px">
   <div class="product-row">
-    <div class="product-block" id="hcpb-sharon"
+    <div class="product-block" id="offpb-sharon"
          style="background:linear-gradient(135deg,#092115 0%,#123020 100%);border:1px solid rgba(52,211,153,0.22);">
-      <div role="button" tabindex="0" aria-label="View Sales Historic Context"
-           onclick="openHcModal('sharon')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('sharon');}"
+      <div role="button" tabindex="0" aria-label="View Momentus Offering for Sales"
+           onclick="openOfferModal('sharon')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openOfferModal('sharon');}"
            style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:absolute;top:18px;right:18px;opacity:0.2">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><g transform="translate(5,8) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 9 9 4"/><path d="M21 9 15 4"/><g transform="translate(6.5,9.5) scale(0.45)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></g></svg>
         </div>
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--sharon);margin-bottom:14px">Sales</div>
-        <div class="st-card-name">Sales at Momentus</div>
-        <div class="st-card-fw">Momentus Technologies' History</div>
+        <div class="st-card-name">Momentus for Sales</div>
+        <div class="st-card-fw">Products &amp; Pieces by Stage</div>
       </div>
     </div>
-    <div class="product-block" id="hcpb-emilie"
+    <div class="product-block" id="offpb-emilie"
          style="background:linear-gradient(135deg,#060e22 0%,#0d1e3c 100%);border:1px solid rgba(96,165,250,0.22);">
-      <div role="button" tabindex="0" aria-label="View Planning Historic Context"
-           onclick="openHcModal('emilie')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('emilie');}"
+      <div role="button" tabindex="0" aria-label="View Momentus Offering for Planning"
+           onclick="openOfferModal('emilie')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openOfferModal('emilie');}"
            style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:absolute;top:18px;right:18px;opacity:0.2">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><g transform="translate(6,8) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 9 9 4"/><path d="M21 9 15 4"/><g transform="translate(6.5,9.5) scale(0.45)"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></g></svg>
         </div>
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--emilie);margin-bottom:14px">Planning</div>
-        <div class="st-card-name">Planning at Momentus</div>
-        <div class="st-card-fw">Momentus Technologies' History</div>
+        <div class="st-card-name">Momentus for Planning</div>
+        <div class="st-card-fw">Products &amp; Pieces by Stage</div>
       </div>
     </div>
-    <div class="product-block" id="hcpb-owen"
+    <div class="product-block" id="offpb-owen"
          style="background:linear-gradient(135deg,#1c0c02 0%,#301808 100%);border:1px solid rgba(249,115,22,0.22);">
-      <div role="button" tabindex="0" aria-label="View Operations Historic Context"
-           onclick="openHcModal('owen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('owen');}"
+      <div role="button" tabindex="0" aria-label="View Momentus Offering for Operations"
+           onclick="openOfferModal('owen')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openOfferModal('owen');}"
            style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:absolute;top:18px;right:18px;opacity:0.2">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><g transform="translate(6,6) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 9 9 4"/><path d="M21 9 15 4"/><g transform="translate(6.5,9.5) scale(0.45)"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 12l3.5 3.5L17 8"/></g></svg>
         </div>
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--owen);margin-bottom:14px">Operations</div>
-        <div class="st-card-name">Operations at Momentus</div>
-        <div class="st-card-fw">Momentus Technologies' History</div>
+        <div class="st-card-name">Momentus for Operations</div>
+        <div class="st-card-fw">Products &amp; Pieces by Stage</div>
       </div>
     </div>
-    <div class="product-block" id="hcpb-dana"
+    <div class="product-block" id="offpb-dana"
          style="background:linear-gradient(135deg,#221904 0%,#3a2b08 100%);border:1px solid rgba(234,179,8,0.22);">
-      <div role="button" tabindex="0" aria-label="View Financial Historic Context"
-           onclick="openHcModal('dana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('dana');}"
+      <div role="button" tabindex="0" aria-label="View Momentus Offering for Financial"
+           onclick="openOfferModal('dana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openOfferModal('dana');}"
            style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:absolute;top:18px;right:18px;opacity:0.2">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><g transform="translate(6,6) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 9 9 4"/><path d="M21 9 15 4"/><g transform="translate(6.5,9.5) scale(0.45)"><circle cx="12" cy="12" r="9"/><g transform="translate(12,12) scale(0.55) translate(-12,-12)"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></g></g></svg>
         </div>
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dana);margin-bottom:14px">Financial</div>
-        <div class="st-card-name">Financial at Momentus</div>
-        <div class="st-card-fw">Momentus Technologies' History</div>
+        <div class="st-card-name">Momentus for Financial</div>
+        <div class="st-card-fw">Products &amp; Pieces by Stage</div>
       </div>
     </div>
-    <div class="product-block" id="hcpb-me"
+    <div class="product-block" id="offpb-me"
          style="background:linear-gradient(135deg,#190e38 0%,#2d1b62 100%);border:1px solid rgba(178,102,228,0.22);">
-      <div role="button" tabindex="0" aria-label="View End-to-End Historic Context"
-           onclick="openHcModal('me')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openHcModal('me');}"
+      <div role="button" tabindex="0" aria-label="View The Momentus Offering, End-to-End"
+           onclick="openOfferModal('me')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openOfferModal('me');}"
            style="padding:22px 24px 22px;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:absolute;top:18px;right:18px;opacity:0.2">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><g transform="translate(6,10) scale(0.5)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></g></svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 9 9 4"/><path d="M21 9 15 4"/><g transform="translate(6.5,9.5) scale(0.45)"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></svg>
         </div>
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--me);margin-bottom:14px">End-to-End</div>
-        <div class="st-card-name">Momentus Technologies' History</div>
-        <div class="st-card-fw">End-to-End History</div>
+        <div class="st-card-name">The Momentus Offering</div>
+        <div class="st-card-fw">Every Product, Every Stage</div>
       </div>
     </div>
   </div>
@@ -3955,122 +3957,189 @@ function closeNsModal() {
   document.getElementById('ns-modal-detail').innerHTML = '';
 }
 
-/* ── HISTORIC CONTEXT (Strategy Layer) ──
-   Living, growing dataset — append new entries as Andrea supplies more source
-   material. Each entry: sort (YYYY-MM, for chronological ordering only),
-   dateLabel (what's actually shown — honest about uncertainty), category
-   (industry | customer | product), area (sales | planning | operations |
+/* ── MOMENTUS OFFERING (Strategy Layer) ──
+   Living, growing dataset. "Stage" here means one of the map's 5 area cards
+   (Sales/Planning/Operations/Financial/End-to-End) — NOT the 8 JTBD stages
+   used elsewhere on the site. Each entry: product (enterprise | elite |
+   wetrack | platform — see PRODUCT_ORDER), module (the specific
+   piece/capability name), area (sales | planning | operations | financial |
    universal — universal entries surface on every card; sales/planning/
-   operations entries surface only on their card plus the End-to-End card). */
-const HISTORIC_CONTEXT = [
-  { sort:'1985-01', dateLabel:'1985', category:'product', area:'universal', title:'Ungerboeck Systems Inc. founded', desc:'Catherine and Dieter Ungerboeck found the company in Chesterfield, Missouri, building custom software for process manufacturing — the root of what becomes Momentus Technologies.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'1989-01', dateLabel:'1989', category:'product', area:'universal', title:'First venue & event management system built', desc:'After requests from the St. Louis and Los Angeles Convention & Visitors Bureaus, the company builds its first purpose-built venue/event system: EBMS (Event Business Management Software).', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'1997-01', dateLabel:'1997', category:'customer', area:'universal', title:'Duke University — first Higher Ed customer', desc:"Duke becomes the company's first and longest-active university customer, anchoring what is now the Higher Education vertical.", source:'PMO-Enterprise for Education - Product Strategy.pdf', sourceUrl:null },
-  { sort:'1998-01', dateLabel:'1998', category:'customer', area:'universal', title:'Northern Illinois University signs on', desc:'An early follow-on Higher Ed customer win, extending the university foothold established with Duke the year before.', source:'PMO-Enterprise for Education - Product Strategy.pdf', sourceUrl:null },
-  { sort:'2012-01', dateLabel:'2012', category:'product', area:'universal', title:'Browser-based Version 20 released; rebrand to Ungerboeck Software International', desc:'EBMS moves to a browser-based architecture, improving accessibility and scalability, alongside a rebrand emphasizing the shift.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2019-01', dateLabel:'2019', category:'product', area:'universal', title:'Rebrand to "Ungerboeck"', desc:'The company simplifies its name and refocuses development on mobility, agility, and connectivity.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2021-05', dateLabel:'May 2021', category:'product', area:'sales', title:'Merger with EventBooking', desc:"Ungerboeck merges with EventBooking to integrate event marketing, booking workflows, and operational data — an early step toward a unified sales/booking product.", source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2021-11', dateLabel:'Nov 2021', category:'product', area:'universal', title:'Acquires ShoWorks and Priava', desc:"ShoWorks adds exhibits & competition-entry management; Priava adds strong representation in Australia, New Zealand, and the United Kingdom.", source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2021-12', dateLabel:'Late 2021', category:'customer', area:'operations', title:'WeTrack launches its Sustainability module, wins ASM Global', desc:'Following considerable discovery work, WeTrack (later acquired by Momentus) ships its sustainability-tracking module and lands its first major venue-market client, ASM Global.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
-  { sort:'2022-01', dateLabel:'2022', category:'product', area:'operations', title:'Acquires RiskSense101 and VRM360', desc:'Acquired from risk-management agency Reliance Risk, adding risk-assessment tooling into the EBMS workflow ecosystem.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2022-06', dateLabel:'2022', category:'industry', area:'universal', title:'Live-events industry valued at $652.6B', desc:"Allied Market Research values the global live-events industry at $652.6 billion in 2022, projecting growth to $1.2 trillion by 2032 — macro context cited in Momentus's own strategy work.", source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
-  { sort:'2023-01', dateLabel:'Jan 2023', category:'product', area:'universal', title:'Rebrands to "Momentus Technologies"', desc:"Unifies Ungerboeck's growing portfolio of acquired products under one connected brand and platform.", source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2023-04', dateLabel:'Apr 2023', category:'product', area:'operations', title:'Acquires WeTrack', desc:'Momentus acquires the London-based WeTrack, adding sustainability, incident-tracking, and control-room software to the portfolio.', source:'gomomentus.com/ungerboeck', sourceUrl:'https://gomomentus.com/ungerboeck' },
-  { sort:'2023-06', dateLabel:'2023', category:'industry', area:'universal', title:'Global accounting-software market at ~$16.8B', desc:"Cited context for the Enterprise Accounting & Financials strategy: the global accounting-software market, growing ~9.2% CAGR (Compound Annual Growth Rate), that Momentus Enterprise's finance suite competes within.", source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
-  { sort:'2023-06', dateLabel:'2023', category:'product', area:'operations', title:'"Change tracking" feature launched for operations', desc:'Momentus releases a change-tracking feature giving operations teams configurable alert windows for late changes, built directly in response to heavy paper- and radio-based coordination — especially among AMER customers.', source:'Stakeholder Interviews Data Dump.docx', sourceUrl:null },
-  { sort:'2023-07', dateLabel:'Jul 2023', category:'product', area:'sales', title:'Formal Corporate market product review', desc:'Momentus conducts a dedicated Corporate-segment product review, positioning Enterprise against an aging EMS (Event Management System) as the market\'s declining incumbent.', source:'PMO-Product strategy - Corporate Market.pdf', sourceUrl:null },
-  { sort:'2023-07', dateLabel:'Jul 2023', category:'customer', area:'universal', title:'New Higher Ed logos: Brown, Colby, UC Berkeley', desc:"Brown University, Colby College, and UC Berkeley (Cal Performances) sign on, alongside a snapshot of the broader Higher Ed pipeline — including notable competitive losses to EMS (Event Management System) providers and CourseDog.", source:'PMO-Enterprise for Education - Product Strategy.pdf', sourceUrl:null },
-  { sort:'2023-07', dateLabel:'Jul 2023', category:'customer', area:'operations', title:"WeTrack ARR (Annual Recurring Revenue) snapshot by vertical", desc:'Post-acquisition, WeTrack\'s ARR splits: Event Organiser 58.8%, Venue 35.0%, Event Supplier 3.6%, Corporate 2.5% — with named key clients FIFA, ICC, World Rugby, Arsenal FC, and Ascot Racecourse.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
-  { sort:'2023-08', dateLabel:'Aug 2023', category:'product', area:'operations', title:'WeTrack ships multi-language BETA', desc:'French, Italian, Spanish, German, and Arabic translations released as WeTrack integrates into the Momentus product family.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
-  { sort:'2023-09', dateLabel:'Sep 2023', category:'customer', area:'universal', title:'Convention Center vertical: 237 customers, ~$22M ARR (Annual Recurring Revenue)', desc:'A vertical snapshot shows 237 customers across 32 countries (AMER 40%, EMEA 44%, APAC 16%, 91% hosted) — the base the company later builds on to win the Las Vegas Convention Center.', source:'PMO-Enterprise Convention Centers - Product Strategy.pdf', sourceUrl:null },
-  { sort:'2023-11', dateLabel:'Nov 2023', category:'product', area:'operations', title:'WeTrack regional licensing & Momentus brand alignment', desc:'Licensing for regional clusters, theming/navigation updates, and analytics integration (Smartlook + Pendo) ship as WeTrack adopts Momentus branding.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
-  { sort:'2023-11', dateLabel:'Nov 15, 2023', category:'industry', area:'universal', title:'Finalist, Event Technology Awards 2023', desc:"Momentus is named a finalist in Best Venue Booking Solution and Best Sustainable Solution (plus a People's Choice nomination) at the awards ceremony in ExCeL London.", source:'Momentus blog: Event Technology Awards 2023 finalist', sourceUrl:'https://gomomentus.com/blog/momentus-technologies-named-finalist-in-two-categories-at-the-event-technology-awards-2023' },
-  { sort:'2023-12', dateLabel:'Dec 2023', category:'product', area:'planning', title:'WeTrack Planning module (Gantt) expanded for FIFA', desc:"WeTrack's Planning workflow gets Gantt-chart updates driven directly by FIFA's expanding planning/risk needs, alongside new integration pulling Enterprise/Elite event data into WeTrack.", source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
-  { sort:'2024-01', dateLabel:'Ongoing', category:'customer', area:'sales', title:'Sales lead intake identified as highly manual', desc:'Customer research surfaces manual lead intake/qualification, no centralized funnel view, and inconsistent proposal formatting as a recurring sales pain point across venues.', source:'Event Lifecycle & Verticals.pptx', sourceUrl:null },
-  { sort:'2024-01', dateLabel:'Ongoing', category:'customer', area:'planning', title:'Planning collaboration flagged as disjointed', desc:'Customers describe wanting a "Google Doc experience" for shared event-detail editing with planners, plus automatic payment-status notifications — capabilities not yet delivered.', source:'Event Lifecycle & Verticals.pptx', sourceUrl:null },
-  { sort:'2024-03', dateLabel:'End of Mar 2024', category:'product', area:'operations', title:'Risk Manager discontinued, folded into WeTrack', desc:'Momentus stops selling standalone Risk Manager, consolidating its functionality into WeTrack rather than maintaining two overlapping risk products.', source:'PMO-WeTrack Product Strategy 2024-2025.pdf', sourceUrl:null },
-  { sort:'2024-06', dateLabel:'~2024', category:'customer', area:'sales', title:'Jaarbeurs migrates CRM (Customer Relationship Management) to Salesforce', desc:'Venue customer Jaarbeurs moves its CRM off Momentus, citing inadequate management analytics/dashboarding — an internally flagged signal that "Momentus CRM has been underinvested for years."', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
-  { sort:'2025-03', dateLabel:'Mar 2025', category:'product', area:'sales', title:'Group Room Control launches for Walt Disney World', desc:'Completion of this hotel group-booking feature becomes the trigger for a strategic push into the underrepresented Hotels, Casinos & Resorts vertical.', source:'PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf', sourceUrl:null },
-  { sort:'2025-06', dateLabel:'2025', category:'industry', area:'universal', title:'Industry shift toward "entertainment districts"', desc:'Stadiums & arenas (e.g. Atlanta Braves, Kansas City Power & Light) increasingly diversify revenue beyond gameday, reshaping what venue customers need from Momentus.', source:'Event Lifecycle & Verticals.pptx', sourceUrl:null },
-  { sort:'2025-09', dateLabel:'2025', category:'customer', area:'universal', title:'Wins Las Vegas Convention Center', desc:'Momentus becomes the software of choice for the top 16 U.S. convention centers by square footage.', source:'PMO-Enterprise Convention Centers - Product Strategy.pdf', sourceUrl:null },
-  { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'universal', title:'First global Executive Advisory Board meeting', desc:'Momentus holds its first-ever global Executive Advisory Board virtual meeting, formally chartering a customer advisory forum capped at 50 members worldwide across segments and products.', source:'EAB March 2026 - Internal Agenda and Run of Show.docx', sourceUrl:null },
-  { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'universal', title:'Executive Advisory Board survey: efficiency is the #1 shared priority', desc:'69% of surveyed customers name operational efficiency/reducing manual work as their top priority for 2026; AI (Artificial Intelligence)-powered automation (63%) and BI (Business Intelligence)/Reporting (56%) are the top tool categories being evaluated.', source:'EAB_Customer_Agenda_2.docx', sourceUrl:null },
-  { sort:'2026-03', dateLabel:'Mar 2026', category:'product', area:'sales', title:'Sales AI (Artificial Intelligence) CRM (Customer Relationship Management) roadmap announced', desc:'Momentus frames its AI strategy as evolving from "System of Record" to "System of Action," starting with an agentic Sales CRM (targeted Q3 2026) as the first of a four-agent product journey.', source:'EAB_RunOfShow_v2.docx', sourceUrl:null },
-  { sort:'2026-03', dateLabel:'Mar 2026', category:'industry', area:'universal', title:'GDPR (General Data Protection Regulation) gates European ambient-listening AI (Artificial Intelligence) features', desc:'GDPR and works-council consent requirements (Germany, France, Austria) are identified as a deployment prerequisite — not an afterthought — for AI features that listen in on meetings/calls in Europe.', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
-  { sort:'2024-04', dateLabel:'Apr 2024', category:'customer', area:'financial', title:'Enterprise Accounting: adoption climbs with NPS (Net Promoter Score) by module', desc:'746 customers use Enterprise Accounting (45% Core Receivables/GL (General Ledger), 27% AR Premium, 28% Full Financials); NPS rises the same ladder — Core scores -16, AR Premium -4, and Full Financials +4, the only module in positive territory.', source:'PMO-Enterprise Accounting & Financials - Product strategy.pdf', sourceUrl:null },
-  { sort:'2026-03', dateLabel:'Mar 2026', category:'customer', area:'financial', title:'Executive Advisory Board session: "We do not know how much we\'re worth"', desc:'The first global Executive Advisory Board session surfaces "True Event Profitability" as a top theme — venues track revenue but not margin. Barry Keogh (CCD Dublin) has built an event-level P&L (profit and loss) workaround outside Momentus; Allan W. (KKL Luzern) is bolting on a separate timesheet tool just to attribute fixed-salary labor cost per event.', source:'illuminate_2026_internal_synthesis_1.docx', sourceUrl:null },
-  { sort:'2026-07', dateLabel:'Jul 2026', category:'product', area:'financial', title:'AI (Artificial Intelligence)-Powered Opportunities strategy defined for Financial persona', desc:'Product strategy identifies 5 AI opportunity areas mapped to the persona\'s top pain points: vendor invoice intelligence, a consolidated P&L (profit and loss) dashboard with natural-language query, AI-generated variance narratives for department heads, predictive variance modeling, and trend/what-if budget modeling.', source:'financials_ai_opportunities.docx', sourceUrl:null },
-  { sort:'2024-07', dateLabel:'Jul 2024', category:'customer', area:'operations', title:'Convention Center interview cautions against self-service-as-storefront', desc:'A PavCo/Vancouver Convention Centre catering coordinator interview surfaces a live cautionary example: the venue\'s existing self-service exhibitor ordering system (VCCI) increased transcription workload and produced double-bookings and missed next-day deliveries — reinforcing that the "collaboration portal" concept (flagged Jan 2024) should be a task/communication tool between staff and client, not an e-commerce ordering storefront.', source:'UX- Operational - banquet orders_catering-20240718_130314-Meeting Recording-en-US.docx', sourceUrl:null },
-  { sort:'2025-06', dateLabel:'2025', category:'product', area:'operations', title:'WeTrack-Enterprise integration gap identified as organizational, not just technical', desc:'Internal account-manager and solutions-engineering interviews describe the WeTrack/Momentus integration gap as much an organizational mismatch as a technical one — Momentus\'s existing customer relationships sit with event and booking contacts, while WeTrack\'s actual buyers (security, risk, and safety leadership) are a different audience on a separate budget, with no established relationship. An early-stage internal concept ("Operations Hub") to flow event-outline data into WeTrack Jobs for field execution exists only as a wireframe.', source:'Dovetail — WeTrack Risk & Incident AM/SE interviews (2025)', sourceUrl:null },
-  { sort:'2025-04', dateLabel:'2025', category:'product', area:'operations', title:'A separate "Jobs" object exists for internal, non-event work — long since deprioritized', desc:'Enterprise Operations includes a distinct "Jobs" object, originally built by duplicating the Event data model, used internally for facility-maintenance and capital-project tracking so those costs stay out of event revenue reporting — not a customer-facing event-work tool. It has seen no further product investment in over a decade and is no longer sold to new customers. A separate, unrelated "Jobs" checklist feature also exists inside WeTrack, and the naming overlap is a recurring source of internal confusion between the two.', source:'Dovetail — Enterprise Operations Feature Deep Dive interviews (2025)', sourceUrl:null },
+   operations/financial entries surface only on their card plus the
+   End-to-End card), inferred (true when this specific piece-to-area
+   assignment is this map's own judgment call — e.g. splitting a product's
+   flat capability list across areas — rather than a literal per-capability
+   statement in the source), desc, source, sourceUrl.
+   Primary reference (2026-07-14): the real Momentus Support Center / Elite
+   Support Center / WeTrack Support Center / Momentus Connect help-center
+   articles Andrea added under "Support Center Knowledge Base" — the
+   authoritative, real product documentation, with real sourceUrls linking
+   to the live articles. A couple of Enterprise entries still cite internal
+   PMO strategy PDFs for forward-looking/roadmap items not yet in the live
+   docs (clearly labeled as such in their desc). Momentus_Product_Catalog_Exact.docx
+   is no longer cited anywhere in this dataset (removed 2026-07-15, at
+   Andrea's request, along with the risk/exhibition/salesai product buckets
+   that existed solely to reflect that doc's commercial framing — see the
+   2026-07-15 session log entry in CLAUDE.md for why). */
+const MOMENTUS_OFFERING = [
+  { product:'enterprise', module:'Accounts & Contacts', area:'sales', inferred:true, desc:'Manages Account (company/organization) and Contact (person) records with affiliations, designations/statuses, relationships (incl. bill-to), duplicate checking, and CSV/XLSX/XML import.', source:'Enterprise Accounts & Contacts – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710078-Accounts-Contacts' },
+  { product:'enterprise', module:'Accounts Payable', area:'financial', inferred:false, desc:'Handles supplier/vendor vouchers (invoices), 1099-MISC/NEC statements, EFT/check exports, remittance advices, AP Automation invoice scanning, and prepayment tracking.', source:'Enterprise Accounts Payable – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/204422488-Accounts-Payable' },
+  { product:'enterprise', module:'Accounts Receivable', area:'financial', inferred:false, desc:'Covers AR Demographics, credit ratings/limits, dunning and customer statements, tax exemption, account hold/warn status, and the Receivable Ledger for payment/invoice history.', source:'Enterprise Accounts Receivable – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/201139558-Accounts-Receivable' },
+  { product:'enterprise', module:'Campaigns', area:'sales', inferred:true, desc:'Gathers accounts/contacts meeting defined criteria for mass communication efforts; campaigns can be copied, edited, and worked via email or phone outreach steps.', source:'Enterprise Campaigns – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710238-Campaigns' },
+  { product:'enterprise', module:'Cash Book', area:'financial', inferred:false, desc:'Manages bank reconciliation, bank statement imports, cash forecasts based on open AR invoices and payment plans, and foreign currency translation for bank accounts.', source:'Enterprise Cash Book – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710038-Cash-Book' },
+  { product:'enterprise', module:'Contracts', area:'sales', inferred:true, desc:'Generates the space rental agreement for an event, bundling bookings/service/housing orders, contract addendums, clauses, and revision history tracking.', source:'Enterprise Contracts – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710068-Contracts' },
+  { product:'enterprise', module:'Event Opportunities', area:'sales', inferred:false, desc:'Tracks a specific possibility of business with an account, usually used at the beginning of a sale, including Room Flow hotel forecasting, economic impact figures, and Group Profiles for recurring events.', source:'Enterprise Event Opportunities – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710088-Event-Opportunities' },
+  { product:'enterprise', module:'Event Portal', area:'operations', inferred:true, desc:'A licensed public-facing portal where external users complete Event Portal Tasks (reviewing contracts, approving items) while internal staff manage Operations Tasks and portal messages/documents.', source:'Enterprise Event Portal – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/32128680955927-Event-Portal' },
+  { product:'enterprise', module:'Events', area:'universal', inferred:true, desc:'The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views.', source:'Enterprise Events – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710098-Events' },
+  { product:'enterprise', module:'Exhibition Management', area:'sales', inferred:true, desc:'Manages Exhibitors as CRM extensions, exhibitor sales pipelines, booth proposals, co-exhibitors, automatic booth-space charging, and exhibitor invoicing — described in-product as a full suite to plan, sell, and deliver exhibits.', source:'Enterprise Exhibition Management – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710118-Exhibition-Management' },
+  { product:'enterprise', module:'Facility Booking', area:'sales', inferred:true, desc:'Reserves and sells space via Bookings, with a Booking Calendar/Agenda, Availability Report, recurring bookings search, and booking-order auto-generation for space rental charges.', source:'Enterprise Facility Booking – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710058-Facility-Booking' },
+  { product:'enterprise', module:'Fixed Assets', area:'financial', inferred:false, desc:'Tracks the Asset Register, depreciation forecasts/allocations (periodic vs. daily), CIP cost accounts for assets in progress, and linking purchase order items to assets.', source:'Enterprise Fixed Assets – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/115000986633-Fixed-Assets' },
+  { product:'enterprise', module:'Floor Plan (Exhibition Floor Plan)', area:'operations', inferred:true, desc:'Interactive AutoCAD-based floor plan tool to sell/manage booth space, highlight booths by availability/status, place exhibitors, and process onsite booth renewals.', source:'Enterprise Floor Plan – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/360002094254-Floor-Plan' },
+  { product:'enterprise', module:'Functions', area:'planning', inferred:true, desc:'Sub-activities of an event with their own date/time/space; supports Function Requirements, presenters, Topics & Tracks for conferences, Function Scripting, and Smart Import.', source:'Enterprise Functions – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710258-Functions' },
+  { product:'enterprise', module:'General Ledger', area:'financial', inferred:false, desc:'Core GL accounting: journal entries (incl. recurring and tax-aware), GL/entity budgeting, Sales Tax (VAT/GST) report templates, and GL/Transaction Inquiry screens.', source:'Enterprise General Ledger – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/204422508-General-Ledger' },
+  { product:'enterprise', module:'General Registration', area:'planning', inferred:true, desc:'Back-office registration order management: promo codes, waitlists, registrant types, seating chart auto-fill, session swapping, and Continuing Education Credit tracking.', source:'Enterprise General Registration – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/360000703414-General-Registration' },
+  { product:'enterprise', module:'Inventory', area:'operations', inferred:true, desc:'Maintains available quantities for equipment/consumables tied to resources, with cost synchronization, physical count batches, inventory valuation, and Excel-based import.', source:'Enterprise Inventory – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710018-Inventory' },
+  { product:'enterprise', module:'Invoicing', area:'financial', inferred:false, desc:'Generates Proforma/Preliminary/final invoices from service or registration orders, with invoice document headings/subheadings, multi-event invoice consolidation, and void/credit workflows.', source:'Enterprise Invoicing – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/201151408-Invoicing' },
+  { product:'enterprise', module:'Job Management (Facility Maintenance)', area:'operations', inferred:true, desc:'Schedules facility maintenance and other facility work, reserving space and creating service orders; supports Job Profiles as templates and linking jobs to fixed assets.', source:'Enterprise Job Management – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710158-Job-Management' },
+  { product:'enterprise', module:'Legacy Membership', area:'sales', inferred:true, desc:'Pre-v30.97 membership functionality (demographics, orders, standing orders) retained for continuity after Membership was rewritten.', source:'Enterprise Legacy Membership – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710048-Legacy-Membership' },
+  { product:'enterprise', module:'Membership', area:'sales', inferred:true, desc:'Creates, renews, and administers members via membership types/statuses; supports prospective members and individual or group membership additions.', source:'Enterprise Membership – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/1500002325962-Membership' },
+  { product:'enterprise', module:'Mobile Inventory', area:'operations', inferred:true, desc:'Mobile app within the Enterprise Operations Suite letting staff search items and create inventory transactions from the floor.', source:'Enterprise Mobile Inventory – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/4404728772247-Mobile-Inventory' },
+  { product:'enterprise', module:'Mobile Work Orders', area:'operations', inferred:true, desc:'Mobile app allowing users to view current work order information and complete item deliveries from a mobile device.', source:'Enterprise Mobile Work Orders – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/360004230013-Mobile-Work-Orders' },
+  { product:'enterprise', module:'Opportunities', area:'sales', inferred:false, desc:'Non-event sales pipeline feature, distinct from Event Opportunities which is used specifically for potential events.', source:'Enterprise Opportunities – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/27312310568983-Opportunities' },
+  { product:'enterprise', module:'Payment Plans', area:'financial', inferred:false, desc:'Configures installment schedules across multiple orders, with memo payment plan calculations and final-invoice/step crediting.', source:'Enterprise Payment Plans – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/201151428-Payment-Plans' },
+  { product:'enterprise', module:'Payments', area:'financial', inferred:false, desc:'Applies payments to orders/invoices/accounts, including Charge Now for saved credit cards, NSF check handling, refunds, and payment transfers/moves.', source:'Enterprise Payments – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/201151418-Payments' },
+  { product:'enterprise', module:'Personnel Management', area:'operations', inferred:true, desc:'Licensed module assigning personnel to work order items/skilled labor, tracking availability, and creating service-order actuals from posted timesheet entries.', source:'Enterprise Personnel Management – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710278-Personnel-Management' },
+  { product:'enterprise', module:'Purchasing', area:'financial', inferred:true, desc:'Manages Purchase Orders and Requisitions, PO contracts, approval routing/email notifications, AP Automation invoice scanning, and Fill From Stock.', source:'Enterprise Purchasing – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/202771588-Purchasing' },
+  { product:'enterprise', module:'Registration Check-In (RCI) & Badges', area:'operations', inferred:false, desc:'Checks registrants in/out via mobile (iOS app), self-service kiosk, or back office; includes badge templates, barcode/QR scanning, and Function Check-In.', source:'Enterprise Registration Check-In (RCI) & Badges – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200995767-Registration-Check-In-RCI-Badges' },
+  { product:'enterprise', module:'Registration', area:'planning', inferred:true, desc:'Public-facing online registration configuration: registrant profile fields, multi-language/multi-page registration, guest and group registration, dictionaries, and PayPal Express Checkout.', source:'Enterprise Registration – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200709998-Registration' },
+  { product:'enterprise', module:'Room Diagrams', area:'planning', inferred:true, desc:'Space-specific room layout diagramming with layer management, a shape library/common symbols, hotkeys, and direct service-order creation from a diagram. Still live and documented today alongside the newer EventDraw connector below — not fully retired as an earlier PMO strategy doc suggested.', source:'Enterprise Room Diagrams – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/4411134211863-Room-Diagrams' },
+  { product:'enterprise', module:'Sales', area:'sales', inferred:false, desc:'Account Leads (pre-qualification), Probable Revenue calculation (potential revenue × win probability), Sales Goals tracking, and the Group Room Calendar.', source:'Enterprise Sales – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710198-Sales' },
+  { product:'enterprise', module:'Service Orders', area:'operations', inferred:true, desc:'Lists items/labor/fees for an event across Forecast, Revised Forecast, and Ordered/Actual phases; supports commission orders, discounts/surcharges, and BEO-style Event Order reports.', source:'Enterprise Service Orders – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200710228-Service-Orders' },
+  { product:'enterprise', module:'Session Proposals', area:'planning', inferred:false, desc:'Collects, evaluates, and manages speaker/abstract proposals for conferences, with evaluator scoring criteria, submission forms, and Topics for conference tracks. Not available in Elite, per the Elite/Enterprise Glossary.', source:'Enterprise Session Proposals – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/360003812074-Session-Proposals' },
+  { product:'enterprise', module:'Ungerboeck Spreadsheet', area:'financial', inferred:true, desc:'Excel-based reporting tool for exporting retrievals and building settlement reports for costs/revenues (e.g. for Performing Arts Centers) not captured as standard booking/order charges.', source:'Enterprise Ungerboeck Spreadsheet – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/200709988-Ungerboeck-Spreadsheet' },
+  { product:'enterprise', module:'Work Orders', area:'operations', inferred:true, desc:'Department-level delivery instructions generated from service orders; tracks item completion/covers (catering headcounts), Rush processing, and work order actuals.', source:'Enterprise Work Orders – Momentus Support Center', sourceUrl:'https://supportcenter.ungerboeck.com/hc/en-us/sections/202196917-Work-Orders' },
+  { product:'enterprise', module:'Event Diagramming powered by EventDraw', area:'planning', inferred:true, desc:'2026.2 SSO-integrated diagramming connector: a new EventDraw Diagrams tab alongside Room Diagrams, admin-mapped space/template and shape/resource mapping, and direct service-order creation/updates from a diagram. Room diagramming only — exhibitor floor plan isn’t included.', source:'Enterprise About Event Diagramming powered by EventDraw – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/41088697723799-About-Event-Diagramming-powered-by-EventDraw' },
+  { product:'enterprise', module:'E-Invoicing (Enterprise)', area:'financial', inferred:false, desc:'Sends/receives e-invoices (incl. credit notes and payment-plan/quick invoices) via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden; requires the A/R module to send and A/P module to receive.', source:'About E-Invoicing in Enterprise – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/38023876014487-About-E-Invoicing-in-Enterprise' },
+  { product:'enterprise', module:'Registration powered by InvitePeople', area:'planning', inferred:true, desc:'Connects Enterprise to InvitePeople, a white-label registration/form-building platform, via SSO; event configuration (functions, price lists, promo codes, payment plans) syncs from Enterprise, and all orders/payments record back to Enterprise as the system of record.', source:'About Registration powered by InvitePeople – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/40890813951255-About-Registration-powered-by-InvitePeople' },
+  { product:'enterprise', module:'Operations Change Log', area:'operations', inferred:false, desc:'Operational reporting on changes made to an event after confirmation — targeted for release 25.2 per internal PMO strategy docs. Not yet documented in the live Support Center, so likely still unreleased or newly released.', source:'PMO-Enterprise Convention Centers - Product Strategy.pdf', sourceUrl:null },
+  { product:'enterprise', module:'Banquet Event Order (BEO), native builder', area:'planning', inferred:false, desc:'An in-system Banquet Event Order builder — proof-of-concept targeted for release 25.3, first built for Disney, per internal PMO strategy docs. Service Orders already produce BEO-style Event Order reports today; this would be a dedicated native builder.', source:'PMO-Enterprise Convention Centers - Product Strategy.pdf / PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf', sourceUrl:null },
+  { product:'elite', module:'Venues & Rooms', area:'planning', inferred:true, desc:'Configures venues, rooms, and Combo Rooms (e.g. a ballroom splittable into Ballroom A+B, B+C, etc.) for booking; combos of combos aren’t supported.', source:'Elite Venues & Rooms – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17115709317911-Venues-Rooms' },
+  { product:'elite', module:'Accounts & Contacts', area:'sales', inferred:true, desc:'Manages Account/Contact records, tags, hierarchies, groups, and duplicate merging, plus each contact’s Booking Portal account.', source:'Elite Accounts & Contacts – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116693722135-Accounts-Contacts' },
+  { product:'elite', module:'Booking Events', area:'sales', inferred:true, desc:'Books events or holds with statuses (prospect/tentative/definite), conflict checking, blackouts/internal events, and Manage Holds by Day.', source:'Elite Booking Events – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116721776407-Booking-Events' },
+  { product:'elite', module:'Calendar', area:'planning', inferred:true, desc:'Event and Function Calendar views (color-coded, filterable, exportable to PDF), custom Avails headers, and publishing to Apple/Google/Outlook calendars.', source:'Elite Calendar – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116666826775-Calendar' },
+  { product:'elite', module:'Detailing Events', area:'planning', inferred:true, desc:'Adds items, instruction sets, packages, price schedules, discounts, and rental rates to event functions; supports mass edit/add and Event Order creation.', source:'Elite Detailing Events – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116637762583-Detailing-Events' },
+  { product:'elite', module:'Email', area:'universal', inferred:true, desc:'Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates.', source:'Elite Email – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17563422430615-Email' },
+  { product:'elite', module:'Event Financials', area:'financial', inferred:false, desc:'Handles invoices/invoice schedules, payment/credit allocation, ad hoc deposits and credits, estimated revenue on inquiries/prospects, and event-level discounts/adjustments.', source:'Elite Event Financials – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116622980503-Event-Financials' },
+  { product:'elite', module:'Event Schedule & Functions', area:'planning', inferred:true, desc:'Creates and batch-edits Functions (event-wide vs. regular), with a Function Mass Editor and cancel/uncancel workflows.', source:'Elite Event Schedule & Functions – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116536500759-Event-Schedule-Functions' },
+  { product:'elite', module:'Events', area:'universal', inferred:true, desc:'Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication.', source:'Elite Events – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116645104535-Events' },
+  { product:'elite', module:'Exhibitor Ordering', area:'sales', inferred:true, desc:'Configures events for exhibitor orders, runs an online Exhibitor Store (with instructions/item images), creates/refunds exhibitor invoices, and downloads exhibitor service orders.', source:'Elite Exhibitor Ordering – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116511384343-Exhibitor-Ordering' },
+  { product:'elite', module:'Insights (Reports & Dashboards)', area:'universal', inferred:true, desc:'Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary.', source:'Elite Insights Reports & Dashboards – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116384486423-Insights-Reports-Dashboards' },
+  { product:'elite', module:'Integrations', area:'universal', inferred:true, desc:'Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API.', source:'Elite Integrations – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17115819656855-Integrations' },
+  { product:'elite', module:'Inventory & Prices', area:'planning', inferred:true, desc:'Manages inventory items/categories/departments, price schedules, packages, and Instruction Sets, with bulk cost/price/GL-code adjustment and multi-language translation.', source:'Elite Inventory & Prices – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116183270039-Inventory-Prices' },
+  { product:'elite', module:'Live Entertainment', area:'sales', inferred:true, desc:'Booking workflow for artists/performances with Avails views, house holds, announce/on-sale/pre-sale date management, and post-show settlement/ticket-scaling reports.', source:'Elite Live Entertainment – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116027634327-Live-Entertainment' },
+  { product:'elite', module:'Mobile', area:'operations', inferred:true, desc:'Mobile access to Elite via home-screen icon, Mobile Avails, Mobile Calendar, and Google Calendar sync on Android.', source:'Elite Mobile – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116002611095-Mobile' },
+  { product:'elite', module:'Operations Hub', area:'operations', inferred:false, desc:'Streamlines complex event operations from planning to execution: an Event List/Dashboard (with a Gantt chart of functions), block-based Event Outlines (Elite’s BEO equivalent, with reusable templates and version control), and Jobs (Management to create/assign checklists, Fulfillment for teams to claim/complete jobs on mobile). Also includes a Daily View, event-order downloading, and custom saved views. An add-on for Elite Premier users.', source:'Elite Operations Hub Overview – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/articles/37969640359575-Operations-Hub-Overview' },
+  { product:'elite', module:'Postponed, Canceled, and Lost Holds and Events', area:'sales', inferred:true, desc:'Best-practice workflows for canceling or marking events/holds as Lost vs. Cancel, restoring them, and tracking lost business.', source:'Elite Postponed, Canceled, and Lost Holds and Events – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17116688510359-Postponed-Canceled-and-Lost-Holds-and-Events' },
+  { product:'elite', module:'Sales', area:'sales', inferred:false, desc:'Manages Inquiries (with rental rates, economic impact, estimated revenue), proposal/contract creation and revisions, probability-of-closing updates, and the contract approval workflow.', source:'Elite Sales – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17115945594391-Sales' },
+  { product:'elite', module:'Series', area:'planning', inferred:true, desc:'Groups related recurring events into a Series for bulk editing, adding existing events, and shared series-level notes/documents.', source:'Elite Series – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17115883341719-Series' },
+  { product:'elite', module:'System Admin Info & Account-Wide Settings', area:'universal', inferred:true, desc:'Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization.', source:'Elite System Admin Info & Account-Wide Settings – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17115877277847-System-Admin-Info-Account-Wide-Settings' },
+  { product:'elite', module:'Tasks & Task Templates', area:'universal', inferred:true, desc:'Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows.', source:'Elite Tasks & Task Templates – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/sections/17115874472599-Tasks-Task-Templates' },
+  { product:'elite', module:'Track Changes to Event Details', area:'operations', inferred:true, desc:'Once a function status is set to Ready, tracks changes to functions/items/instructions so operations staff can see late edits on the Daily View and function change log; must be enabled by System Admin.', source:'Elite Track Changes to Event Details – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/articles/17443879714327-Track-Changes-to-Event-Details' },
+  { product:'elite', module:'User Role Permissions', area:'universal', inferred:true, desc:'Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier.', source:'Elite User Role Permissions – Momentus Support Center', sourceUrl:'https://elitesupportcenter.ungerboeck.com/hc/en-us/articles/17444080836503-User-Role-Permissions' },
+  { product:'elite', module:'E-Invoicing (Elite)', area:'financial', inferred:false, desc:'Sends e-invoices and credit notes from Elite via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden, requiring tax/account configuration prerequisites in Elite.', source:'About E-Invoicing in Elite – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/40102232701975-About-E-Invoicing-in-Elite' },
+  { product:'elite', module:'Xero + Elite Integration', area:'financial', inferred:true, desc:'Syncs invoices created in Elite (line items, taxes, GL-code mapping, credits/deposits) with Xero accounting software; payments allocated in either system sync to the other. No dedicated Elite support article describes a native GL/accounting module the way Enterprise has one — this Xero integration appears to be Elite’s primary path to real bookkeeping today, though that absence isn’t explicitly stated as a design decision in the docs.', source:'Use the Xero+Elite Integration – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/38117513556887-Use-the-Xero-Elite-Integration' },
+  { product:'wetrack', module:'Events (WeTrack)', area:'universal', inferred:true, desc:'Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event.', source:'WeTrack About Events in WeTrack – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224303206295-About-Events-in-WeTrack' },
+  { product:'wetrack', module:'Projects', area:'planning', inferred:true, desc:'Organizational containers with an Owner, Lead Department, tags, and Open/Confidential privacy; RAG status and percent-complete are auto-calculated from constituent tasks.', source:'WeTrack About Projects – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224328733719-About-Projects' },
+  { product:'wetrack', module:'Tasks & Milestones', area:'planning', inferred:true, desc:'Tasks are units of work with owners, departments/user groups, baseline dates, and dependencies; Milestones are zero-duration tasks categorized Gold/Silver/Bronze for reporting; tasks can be broken into sub-tasks and grouped into Task Groups/Sub-Projects.', source:'WeTrack About Tasks and Sub-Tasks – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224298663447-About-Tasks-and-Sub-Tasks' },
+  { product:'wetrack', module:'The Gantt Chart', area:'planning', inferred:true, desc:'Visual timeline of all projects/tasks with dependency arrows and milestone diamonds; a Gantt tab exists on every project’s details page (not available on tablet/mobile).', source:'WeTrack About the Gantt Chart – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224290283415-About-the-Gantt-Chart' },
+  { product:'wetrack', module:'Planning Module & Dashboard', area:'planning', inferred:false, desc:'The Planning module (Projects > Tasks > optional Task Groups/Sub-Tasks) uses Kanban boards and RAG color indicators; the Planning Dashboard offers configurable widgets like Momentum, Department Task RAG Breakdown, and a Leaderboard of on-time milestone completion.', source:'WeTrack Introduction to Planning – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224289792919-Introduction-to-Planning' },
+  { product:'wetrack', module:'Risk, Issue & Opportunity Management', area:'planning', inferred:true, desc:'An optional module tracking Risks (might happen), Issues (currently happening), and Opportunities using five-point impact/probability scales and seven strategies (Avoid, Exploit, Mitigate, Insure, Share, Contingency, Accept). This is a native WeTrack module per its own docs, not a separate product — see the Risk & Incident Management entry below for how this squares with Momentus’s commercial product catalog.', source:'WeTrack Introduction to Risks, Issues and Opportunities – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224312568855-Introduction-to-Risks-Issues-and-Opportunities' },
+  { product:'wetrack', module:'Incident Management', area:'operations', inferred:false, desc:'The Incident/Issue tracking system operations teams switch to at or just before event time, with geolocation to a precise site location, 1–5 severity grading, action-owner assignment, and Confidential incident visibility. Also a native WeTrack module, same terminology note as Risk above.', source:'WeTrack Introduction to Incidents – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224291024279-Introduction-to-Incidents' },
+  { product:'wetrack', module:'Jobs (Control)', area:'operations', inferred:false, desc:'Located within the Control module, tracks maintenance issues (e.g. a broken chair in a specific row) and venue/stadium checks across live events — distinct from WeTrack’s Planning-side Tasks.', source:'WeTrack Introduction to Jobs – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224299739799-Introduction-to-Jobs' },
+  { product:'wetrack', module:'Sustainability', area:'universal', inferred:true, desc:'Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports.', source:'WeTrack Introduction to Sustainability – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224299932823-Introduction-to-Sustainability' },
+  { product:'wetrack', module:'Integrations', area:'universal', inferred:true, desc:'Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI.', source:'WeTrack Integrations – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/sections/32224334454551-Integrations' },
+  { product:'wetrack', module:'RAG Status System', area:'universal', inferred:true, desc:'The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance.', source:'WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack', sourceUrl:'https://wetracksupportcenter.ungerboeck.com/hc/en-us/articles/32224302933655-The-RAG-Red-Amber-Green-System-Basic-Principles' },
+  { product:'platform', module:'Ask Mo', area:'universal', inferred:false, desc:'Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts.', source:'About Ask Mo and Ask Mo Support – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35293115366551-About-Ask-Mo-and-Ask-Mo-Support' },
+  { product:'platform', module:'Momentus Connect Marketplace & Administration', area:'universal', inferred:true, desc:'A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps.', source:'Momentus Connect About Momentus Connect – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/33792634817815-About-Momentus-Connect' },
+  { product:'platform', module:'APIs & Webhooks', area:'universal', inferred:true, desc:'The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface.', source:'General – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/sections/38773439114391-General' },
+  { product:'platform', module:'Momentus Analytics', area:'universal', inferred:false, desc:'Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally.', source:'About Momentus Analytics – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/37806053694743-About-Momentus-Analytics' },
+  { product:'platform', module:'Momentus Workflow Builder', area:'universal', inferred:false, desc:'A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+.', source:'About Momentus Workflow Builder – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/38744268102423-About-Momentus-Workflow-Builder' },
+  { product:'platform', module:'Momentus Payments Platform', area:'financial', inferred:false, desc:'Merchant payment processing with Batches, Billing, Disputes, Transactions, and a Unified Checkout experience; supports Enterprise Automated Reconciliation (auto-creates Cash Book deposit transactions) and third-party gateway credentials.', source:'Momentus Payments Platform – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/sections/33406214181655-Momentus-Payments-Platform' },
+  { product:'platform', module:'OneView', area:'universal', inferred:false, desc:'A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders.', source:'OneView – Momentus Connect', sourceUrl:'https://connectsupportcenter.ungerboeck.com/hc/en-us/categories/33406201621911-OneView' },
 ];
 
-const HC_CARD_META = {
-  sharon: { areas:['sales'],      eyebrow:'Sales',       label:'Sales at Momentus',       color:'var(--sharon)' },
-  emilie: { areas:['planning'],   eyebrow:'Planning',    label:'Planning at Momentus',     color:'var(--emilie)' },
-  owen:   { areas:['operations'], eyebrow:'Operations',  label:'Operations at Momentus',   color:'var(--owen)' },
-  dana:   { areas:['financial'],  eyebrow:'Financial',   label:'Financial at Momentus',    color:'var(--dana)' },
-  me:     { areas:null,                       eyebrow:'End-to-End',  label:"Momentus Technologies' History", color:'var(--me)' },
+const OFFER_CARD_META = {
+  sharon: { areas:['sales'],      eyebrow:'Sales',       label:'Momentus for Sales',       color:'var(--sharon)' },
+  emilie: { areas:['planning'],   eyebrow:'Planning',    label:'Momentus for Planning',    color:'var(--emilie)' },
+  owen:   { areas:['operations'], eyebrow:'Operations',  label:'Momentus for Operations',  color:'var(--owen)' },
+  dana:   { areas:['financial'],  eyebrow:'Financial',   label:'Momentus for Financial',   color:'var(--dana)' },
+  me:     { areas:null,                       eyebrow:'End-to-End',  label:'The Momentus Offering',    color:'var(--me)' },
 };
-const HC_CAT_META = {
-  industry: { label:'Industry / Market History', color:'var(--hist-industry)', bg:'var(--hist-industry-bg)' },
-  customer: { label:'Customer History',          color:'var(--hist-customer)', bg:'var(--hist-customer-bg)' },
-  product:  { label:'Product History',           color:'var(--hist-product)',  bg:'var(--hist-product-bg)' },
+const PRODUCT_ORDER = ['enterprise', 'elite', 'wetrack', 'platform'];
+const PRODUCT_META = {
+  enterprise: { label:'Enterprise',       color:'var(--prod-enterprise)', bg:'var(--prod-enterprise-bg)' },
+  elite:      { label:'Elite',            color:'var(--prod-elite)',      bg:'var(--prod-elite-bg)' },
+  wetrack:    { label:'WeTrack',          color:'var(--prod-wetrack)',    bg:'var(--prod-wetrack-bg)' },
+  platform:   { label:'Platform',         color:'var(--prod-platform)',   bg:'var(--prod-platform-bg)' },
 };
-let hcCurrentId = null, hcCurrentCat = 'all';
+let offCurrentId = null;
 
-function openHcModal(id) {
-  hcCurrentId = id;
-  hcCurrentCat = 'all';
-  renderHcModal();
-  _modalOpen('hc-modal');
+function openOfferModal(id) {
+  offCurrentId = id;
+  renderOfferModal();
+  _modalOpen('offer-modal');
 }
-function closeHcModal() {
-  _modalClose('hc-modal');
-  document.getElementById('hc-modal-detail').innerHTML = '';
+function closeOfferModal() {
+  _modalClose('offer-modal');
+  document.getElementById('offer-modal-detail').innerHTML = '';
 }
-function hcFilter(cat) {
-  hcCurrentCat = cat;
-  renderHcModal();
+function toggleOfferGroup(p) {
+  const body = document.getElementById(`off-body-${p}`);
+  const chevron = document.getElementById(`off-chevron-${p}`);
+  const isOpening = body.style.display === 'none';
+  body.style.display = isOpening ? 'block' : 'none';
+  chevron.classList.toggle('open', isOpening);
 }
-function renderHcModal() {
-  const meta = HC_CARD_META[hcCurrentId];
-  const items = HISTORIC_CONTEXT
-    .filter(e => !meta.areas || meta.areas.includes(e.area))
-    .filter(e => hcCurrentCat === 'all' || e.category === hcCurrentCat)
-    .slice()
-    .sort((a, b) => b.sort.localeCompare(a.sort));
+function renderOfferModal() {
+  const meta = OFFER_CARD_META[offCurrentId];
+  const items = MOMENTUS_OFFERING.filter(e => !meta.areas || e.area === 'universal' || meta.areas.includes(e.area));
 
-  const chipsHTML = ['all', 'industry', 'customer', 'product'].map(cat => {
-    const active = hcCurrentCat === cat ? 'active' : '';
-    const label = cat === 'all' ? 'All' : HC_CAT_META[cat].label;
-    const styleAttr = cat === 'all' ? '' : ` style="--hc-c:${HC_CAT_META[cat].color};--hc-c-bg:${HC_CAT_META[cat].bg}"`;
-    return `<button class="hc-chip ${active}"${styleAttr} onclick="hcFilter('${cat}')">${label}</button>`;
-  }).join('');
+  function itemBlock(e) {
+    const inferredBadge = e.inferred ? `<span class="off-inferred-badge" title="This piece-to-stage assignment is this map's own judgment call, not a literal statement in the source document.">Inferred</span>` : '';
+    return `<div class="off-item">
+      <div class="off-item-head">
+        <span class="off-item-module">${e.module}</span>
+        ${inferredBadge}
+      </div>
+      <div class="off-item-desc">${e.desc}</div>
+      <div class="off-item-source">${e.sourceUrl ? `<a href="${e.sourceUrl}" target="_blank" rel="noopener">${e.source} ↗</a>` : `Source: ${e.source}`}</div>
+    </div>`;
+  }
 
-  const itemsHTML = items.map(e => {
-    const cat = HC_CAT_META[e.category];
-    return `<div class="hc-tl-item">
-      <div class="hc-tl-rail"><div class="hc-tl-dot" style="background:${cat.color}"></div><div class="hc-tl-line"></div></div>
-      <div class="hc-tl-main">
-        <div class="hc-tl-date">${e.dateLabel}</div>
-        <div class="hc-tl-cat" style="color:${cat.color}">${cat.label}</div>
-        <div class="hc-tl-title">${e.title}</div>
-        <div class="hc-tl-desc">${e.desc}</div>
-        <div class="hc-tl-source">${e.sourceUrl ? `<a href="${e.sourceUrl}" target="_blank" rel="noopener">${e.source} ↗</a>` : `Source: ${e.source}`}</div>
+  const groupsHTML = PRODUCT_ORDER.map(p => {
+    const pItems = items.filter(e => e.product === p);
+    if (!pItems.length) return '';
+    return `<div class="off-group">
+      <button class="off-group-head" onclick="toggleOfferGroup('${p}')" aria-expanded="false" aria-controls="off-body-${p}">
+        <svg id="off-chevron-${p}" class="off-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        <span class="off-group-label">${PRODUCT_META[p].label}</span>
+        <span class="off-group-count">${pItems.length}</span>
+      </button>
+      <div class="off-group-body" id="off-body-${p}" style="display:none">
+        ${pItems.map(itemBlock).join('')}
       </div>
     </div>`;
-  }).join('') || `<div class="hc-tl-empty">No entries yet in this category for this area — more will land here as Andrea adds sources.</div>`;
+  }).join('');
 
-  document.getElementById('hc-modal-detail').innerHTML = `
+  const bodyHTML = groupsHTML || `<div class="off-empty">No offerings mapped yet for this stage — more will land here as Andrea adds sources.</div>`;
+
+  document.getElementById('offer-modal-detail').innerHTML = `
     <div style="border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--border)">
       <div style="padding:16px 20px;border-left:3px solid ${meta.color};position:relative">
-        <button class="jd-close" aria-label="Close dialog" onclick="closeHcModal()" style="position:absolute;top:14px;right:14px">✕</button>
+        <button class="jd-close" aria-label="Close dialog" onclick="closeOfferModal()" style="position:absolute;top:14px;right:14px">✕</button>
         <div style="font-family:var(--f-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:${meta.color};margin-bottom:5px">${meta.eyebrow}</div>
         <div style="font-family:var(--f-disp);font-size:22px;font-weight:800;color:var(--text);line-height:1.15">${meta.label}</div>
       </div>
-      <div class="hc-filter-row">${chipsHTML}</div>
-      <div class="hc-timeline">${itemsHTML}</div>
+      <div class="off-list">${bodyHTML}</div>
     </div>`;
 }
 
@@ -5460,7 +5529,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     if      (document.getElementById('job-tl-modal').classList.contains('open'))  closeJobTimelineModal();
     else if (document.getElementById('ns-modal').classList.contains('open'))       closeNsModal();
-    else if (document.getElementById('hc-modal').classList.contains('open'))       closeHcModal();
+    else if (document.getElementById('offer-modal').classList.contains('open'))    closeOfferModal();
     else if (document.getElementById('jtbd-modal').classList.contains('open'))     closeJTBDModal();
     else if (document.getElementById('main-job-modal').classList.contains('open')) closeMainJobModal();
     else if (document.getElementById('persona-modal').classList.contains('open'))  closePersonaModal();
@@ -5633,9 +5702,9 @@ document.addEventListener('click', function(e) {
   </div>
 </div>
 
-<div id="hc-modal" class="ns-modal-overlay" role="dialog" aria-modal="true" aria-label="Historic Context detail" onclick="closeHcModal()">
+<div id="offer-modal" class="ns-modal-overlay" role="dialog" aria-modal="true" aria-label="Momentus Offering detail" onclick="closeOfferModal()">
   <div class="ns-modal-box" onclick="event.stopPropagation()">
-    <div id="hc-modal-detail"></div>
+    <div id="offer-modal-detail"></div>
   </div>
 </div>
 </body>

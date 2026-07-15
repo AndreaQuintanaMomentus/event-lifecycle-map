@@ -38,7 +38,7 @@ function extractDataObjects(rawHtml) {
   const names = [
     'PERSONAS_DETAIL', 'VERTICAL_ATTRS', 'SECONDARY_PERSONAS',
     'STAGES', 'PERSONAS_J', 'SHORT', 'MAP', 'OPPS_ACTIONS', 'LAYER_INFO',
-    'HISTORIC_CONTEXT', 'HC_CARD_META',
+    'MOMENTUS_OFFERING', 'OFFER_CARD_META', 'PRODUCT_META', 'PRODUCT_ORDER',
   ];
   const trailer = `\nvar __DATA__ = {${names.join(',')}};\n`;
 
@@ -250,21 +250,24 @@ function render(data, staticContent) {
     }
   }
 
-  // ── Historic Context ──
-  h(2, 'Historic Context (Strategy Layer)');
-  p('Company/product/customer history timeline. Each area card below shows only entries tagged to that area; the End-to-End card shows every entry, including universal (company-wide) ones.');
+  // ── Momentus Offering ──
+  h(2, 'Momentus Offering (Strategy Layer)');
+  p('Which Momentus products serve each stage of the event lifecycle — "stage" here means Sales/Planning/Operations/Financial/End-to-End, not the 8 JTBD stages used elsewhere on this site. Each area card below shows only entries tagged to that area; the End-to-End card shows every entry, including universal (cross-area) ones. "Inferred" flags a piece-to-stage assignment that is this map\'s own judgment call rather than a literal statement in the source.');
   for (const pid of PERSONA_ORDER) {
-    const meta = data.HC_CARD_META[pid];
-    const items = data.HISTORIC_CONTEXT
-      .filter((e) => !meta.areas || meta.areas.includes(e.area))
-      .slice()
-      .sort((a, b) => b.sort.localeCompare(a.sort));
+    const meta = data.OFFER_CARD_META[pid];
+    const items = data.MOMENTUS_OFFERING
+      .filter((e) => !meta.areas || e.area === 'universal' || meta.areas.includes(e.area));
     h(3, `${meta.label} (${meta.eyebrow})`);
     if (!items.length) {
-      p('_No entries yet for this area._');
+      p('_No offerings mapped yet for this area._');
       continue;
     }
-    p(items.map((e) => `- **${e.dateLabel}** [${e.category}] ${e.title} — ${e.desc} _(source: ${e.source})_`).join('\n'));
+    for (const product of data.PRODUCT_ORDER) {
+      const pItems = items.filter((e) => e.product === product);
+      if (!pItems.length) continue;
+      h(4, data.PRODUCT_META[product].label);
+      p(pItems.map((e) => `- **${e.module}** — ${e.desc}${e.inferred ? ' _(inferred)_' : ''} _(source: ${e.source})_`).join('\n'));
+    }
   }
 
   // ── JTBD Map ──
