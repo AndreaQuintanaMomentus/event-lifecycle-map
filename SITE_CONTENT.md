@@ -400,7 +400,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Builds recurring functions early but holds off scripting full service orders until requirements are locked, since input in Momentus is flow-driven step by step — financials, bookings, and functions before service orders
 - Accountable for translating vague, F&B-only contract language (a single estimate line at signing) into the fully detailed function and service-order structure operations will execute against
 
-### Jordan Olsen — Operations Supervisor ("The Moment Maker")
+### Jordan Olsen — Operations Director ("The Moment Maker")
 
 **Product area:** Event Operations  
 **Primary object:** Event Work  
@@ -422,7 +422,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 #### Structural Status
 
 - Receives the plan baton from planning — accountable for executing it through the team
-- Authority over the event floor: responsible for delegating work orders across departments — both front of house (customer-facing) and back of house (facilities, setup, logistics)
+- Sits above two department heads rather than delegating directly to every crew — one for front-of-house (ticketing, customer-facing staff), one for back-of-house (AV, catering, security) — though at many organizations those two heads report to separate leadership rather than a single shared director like Jordan; "front of house or back of house" is the first question to ask about any operations stakeholder
 - The last mile between the platform’s promise and the client’s experience — where data quality determines delivery quality
 - Responsible for operational actuals reporting; in larger venues, a dedicated person may aggregate across departments
 - Resource and inventory accountability sometimes sits outside the operations function itself — creating a mismatch between who experiences a tracking problem day-to-day and who owns the tool meant to solve it
@@ -506,11 +506,11 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 ##### Orlando Olive — Operations Crew (Stadiums & Arenas) · "The Hands On The Ground"
 
-**Relationship to Jordan Olsen:** Executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
+**Relationship to Jordan Olsen:** Back-of-house: executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
 
 **Fixed Conditions**
 - Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks
-- They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Supervisor
+- They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Director
 - They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests
 
 **Dynamic States**
@@ -519,13 +519,13 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field
 
 **Structural Status**
-- Receives assignments from Operations Supervisor (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor
+- Receives assignments from Operations Director (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor
 - Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting
 - The final link in the operational data chain: if field staff can't log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete
 
 ##### Hank Henry — Health, Safety & Risk Manager (Stadiums & Arenas) · "The Risk Manager"
 
-**Relationship to Jordan Olsen:** Manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.
+**Relationship to Jordan Olsen:** Spans both front-of-house and back-of-house: manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.
 
 **Fixed Conditions**
 - Their personality is accountable, safety-focused, and detail-oriented, driven by public safety and regulatory compliance across 10+ years in risk management
@@ -547,7 +547,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 ##### Paige Pepper — Public Events Manager (Stadiums & Arenas) · "The Logistics Queen"
 
-**Relationship to Jordan Olsen:** Coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).
+**Relationship to Jordan Olsen:** Spans both front-of-house and back-of-house: coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).
 
 **Fixed Conditions**
 - Their personality is investigative, organized, and communicative, having transitioned from corporate events into a stadium environment where the scale and complexity required significant adjustment
@@ -566,7 +566,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 ##### Anna Adams — AV Technician (Corporate) · "The Technical Help"
 
-**Relationship to Jordan Olsen:** Executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
+**Relationship to Jordan Olsen:** Back-of-house: executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
 
 **Fixed Conditions**
 - Their personality is technical, organized, and detail-oriented, focused on precise execution of AV setup, live operation, troubleshooting, and equipment maintenance
@@ -585,7 +585,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 ##### Carrie Carol — Control Room Operator (Stadiums & Arenas) · "The Incident Response"
 
-**Relationship to Jordan Olsen:** Runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.
+**Relationship to Jordan Olsen:** Back-of-house: runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.
 
 **Fixed Conditions**
 - Their personality is calm under pressure, responsive, and organized, managing the control room through the full intensity of game days and major events
@@ -607,7 +607,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 ##### Freddie Ford — Meeting Services Crew (Convention Centers) · "The Analog Anchor"
 
-**Relationship to Jordan Olsen:** Executes setup, changeover, and breakdown work under the Meeting Services Supervisor's direction — the front-line role where, in the supervisor's own words, "technology stops."
+**Relationship to Jordan Olsen:** Back-of-house: executes setup, changeover, and breakdown work under the Meeting Services Supervisor's direction — the front-line role where, in the supervisor's own words, "technology stops."
 
 **Fixed Conditions**
 - Their personality is task-focused and constantly moving — coordinating setup, changeover, and breakdown across rooms entirely by radio
@@ -1107,7 +1107,7 @@ The number of events where all assigned work orders — setup, execution, teardo
 
 `Completes the ME chain`  `Closes the paper/radio execution gap`  `Direct measure of operational value realization`
 
-**Primary persona:** Jordan Olsen — Operations Supervisor · "The Moment Maker"
+**Primary persona:** Jordan Olsen — Operations Director · "The Moment Maker"
 
 #### Key Input Metrics
 
@@ -1867,7 +1867,7 @@ Ensure all function records are closed and complete, confirm post-event customer
 8. Minimize the likelihood of a discrepancy between the closed BEO and the finance invoice going undetected before billing — when finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours
 9. Maximize the completion rate of post-event summary documentation across the planning team — when the department wants to analyze the closed-event portfolio to identify commonalities and improve future planning
 
-### Execute Event Work — Jordan Olsen, Operations Supervisor ("The Moment Maker")
+### Execute Event Work — Jordan Olsen, Operations Director ("The Moment Maker")
 
 **Product area:** Event Operations · **Primary object:** Event Work  
 **Functional job:** Execute all work orders required to set up, run, and tear down an event — deploying crew and resources efficiently across multiple simultaneous events

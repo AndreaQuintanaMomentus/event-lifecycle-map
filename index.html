@@ -1708,7 +1708,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
     <div class="persona-strip">
       <div class="dot" style="background:var(--owen)"></div>
       <span class="pname"><a class="xlink xlink-owen" href="#" onclick="goToPersona('owen'); return false;">Jordan Olsen</a></span>
-      <span class="prole">— Operations Supervisor · "The Moment Maker"</span>
+      <span class="prole">— Operations Director · "The Moment Maker"</span>
       <span class="ptag">Primary Persona · Event Operations</span>
     </div>
 
@@ -1877,7 +1877,7 @@ button.stage-tab:hover { opacity: 0.75; filter: brightness(1.2); }
       </div>
       <div class="st-card-num">03</div>
       <div class="st-card-name">Jordan Olsen</div>
-      <div class="st-card-fw">Operations Primary Persona · Operations Supervisor</div>
+      <div class="st-card-fw">Operations Primary Persona · Operations Director</div>
     </div>
     <div class="sec-persona-list" id="sec-tiles-owen"></div>
     </div>
@@ -2953,7 +2953,7 @@ const PERSONAS_DETAIL = {
     color: '--owen', bgColor: '--owen-bg', border: '--owen-b',
     product: 'Event Operations',
     archetype: 'The Moment Maker',
-    role: 'Jordan Olsen \u00b7 Operations Supervisor',
+    role: 'Jordan Olsen \u00b7 Operations Director',
     quote: '\u201cThey make sure it actually happens.\u201d',
     quoteSrc: 'Jordan Olsen',
     object: 'Event Work', objId: 'operations', objClass: 'obj-owen',
@@ -2969,7 +2969,7 @@ const PERSONAS_DETAIL = {
     ],
     structural: [
       'Receives the plan baton from planning \u2014 accountable for executing it through the team',
-      'Authority over the event floor: responsible for delegating work orders across departments — both front of house (customer-facing) and back of house (facilities, setup, logistics)',
+      'Sits above two department heads rather than delegating directly to every crew — one for front-of-house (ticketing, customer-facing staff), one for back-of-house (AV, catering, security) — though at many organizations those two heads report to separate leadership rather than a single shared director like Jordan; "front of house or back of house" is the first question to ask about any operations stakeholder',
       'The last mile between the platform\u2019s promise and the client\u2019s experience \u2014 where data quality determines delivery quality',
       'Responsible for operational actuals reporting; in larger venues, a dedicated person may aggregate across departments',
       'Resource and inventory accountability sometimes sits outside the operations function itself \u2014 creating a mismatch between who experiences a tracking problem day-to-day and who owns the tool meant to solve it'
@@ -3517,10 +3517,10 @@ const SECONDARY_PERSONAS = {
   owen: [
     {
       name: 'Orlando Olive', role: 'Operations Crew', archetype: 'The Hands On The Ground', vertical: 'Stadiums & Arenas',
-      relationship: 'Executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.',
+      relationship: 'Back-of-house: executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.',
       fixed: [
         'Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks',
-        'They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Supervisor',
+        'They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Director',
         'They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests'
       ],
       dynamic: [
@@ -3529,14 +3529,14 @@ const SECONDARY_PERSONAS = {
         'From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field'
       ],
       structural: [
-        'Receives assignments from Operations Supervisor (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor',
+        'Receives assignments from Operations Director (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor',
         'Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting',
         'The final link in the operational data chain: if field staff can\'t log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete'
       ]
     },
     {
       name: 'Hank Henry', role: 'Health, Safety & Risk Manager', archetype: 'The Risk Manager', vertical: 'Stadiums & Arenas',
-      relationship: 'Manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.',
+      relationship: 'Spans both front-of-house and back-of-house: manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.',
       fixed: [
         'Their personality is accountable, safety-focused, and detail-oriented, driven by public safety and regulatory compliance across 10+ years in risk management',
         'They have a background in health, safety, and risk management across large-scale venues and organizations, with a focus on building cultures where proactive risk identification becomes the norm',
@@ -3558,7 +3558,7 @@ const SECONDARY_PERSONAS = {
     },
     {
       name: 'Paige Pepper', role: 'Public Events Manager', archetype: 'The Logistics Queen', vertical: 'Stadiums & Arenas',
-      relationship: 'Coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).',
+      relationship: 'Spans both front-of-house and back-of-house: coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).',
       fixed: [
         'Their personality is investigative, organized, and communicative, having transitioned from corporate events into a stadium environment where the scale and complexity required significant adjustment',
         'They have a background in corporate and public event operations, now managing game days and concerts as the main event with dozens of simultaneous satellite events running underneath',
@@ -3577,7 +3577,7 @@ const SECONDARY_PERSONAS = {
     },
     {
       name: 'Anna Adams', role: 'AV Technician', archetype: 'The Technical Help', vertical: 'Corporate',
-      relationship: 'Executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.',
+      relationship: 'Back-of-house: executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.',
       fixed: [
         'Their personality is technical, organized, and detail-oriented, focused on precise execution of AV setup, live operation, troubleshooting, and equipment maintenance',
         'They have a background in AV technology and campus event production, executing specialized technical work orders under the direction of the Operations Lead',
@@ -3596,7 +3596,7 @@ const SECONDARY_PERSONAS = {
     },
     {
       name: 'Carrie Carol', role: 'Control Room Operator', archetype: 'The Incident Response', vertical: 'Stadiums & Arenas',
-      relationship: 'Runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.',
+      relationship: 'Back-of-house: runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.',
       fixed: [
         'Their personality is calm under pressure, responsive, and organized, managing the control room through the full intensity of game days and major events',
         'They have a background in operations control room management and incident response coordination, working across digital systems, radio dispatch, and paper log backups',
@@ -3618,7 +3618,7 @@ const SECONDARY_PERSONAS = {
     },
     {
       name: 'Freddie Ford', role: 'Meeting Services Crew', archetype: 'The Analog Anchor', vertical: 'Convention Centers',
-      relationship: 'Executes setup, changeover, and breakdown work under the Meeting Services Supervisor\'s direction — the front-line role where, in the supervisor\'s own words, "technology stops."',
+      relationship: 'Back-of-house: executes setup, changeover, and breakdown work under the Meeting Services Supervisor\'s direction — the front-line role where, in the supervisor\'s own words, "technology stops."',
       fixed: [
         'Their personality is task-focused and constantly moving — coordinating setup, changeover, and breakdown across rooms entirely by radio',
         'They have a background in convention center meeting services and banquet setup, working from a printed work order handed out at the morning briefing rather than any device of their own',
@@ -3874,7 +3874,7 @@ function openNsModal(id) {
   const nsMeta = {
     sharon: { pId:'sharon', pRole:'Sales Manager',          objId:'booking',    objName:'Event Opportunity'   },
     emilie: { pId:'emilie', pRole:'Event Planner',      objId:'planning',   objName:'Event Plan'      },
-    owen:   { pId:'owen',   pRole:'Operations Supervisor',  objId:'operations', objName:'Event Work'       },
+    owen:   { pId:'owen',   pRole:'Operations Director',    objId:'operations', objName:'Event Work'       },
     dana:   { pId:'dana',   pRole:'Finance Director',       objId:'financials', objName:'Event Financials' },
     me:     { pId:null,     pRole:null,                     objId:'event',      objName:'Momentus Events' },
   };
@@ -4323,7 +4323,7 @@ const STAGES = [
 const PERSONAS_J = [
   { id:'sharon',  name:'Alex Smith',   role:'Sales Manager',         mainAction:'Secure Event Opportunity', archetype:'The Dream Catcher',  product:'Event Sales',      object:'Event Opportunity', objId:'booking',    job:'Book high-value events that maximize revenue and calendar utilization for the venue',                                            jtbd:{ when:'a new inquiry or lead enters my pipeline',              want:'evaluate, propose, and contract the booking entirely inside Momentus',           soCan:'maximize revenue and calendar utilization without losing deals to slower, fragmented workflows' },             color:'--sharon', bgColor:'--sharon-bg', border:'--sharon-b' },
   { id:'emilie',  name:'Sam Evans',   role:'Event Planner',      mainAction:'Detail Event Plan',    archetype:'The Promise Keeper', product:'Event Planning',   object:'Event Plan',   objId:'planning',   job:'Gather, confirm, and communicate every detail of a committed event so operations can execute it exactly as the client expects',                                        jtbd:{ when:'a confirmed booking lands in my queue from sales',       want:'detail, approve, and distribute a complete BEO inside Momentus',               soCan:'ensure every department has exactly what they need to execute without questions — and without surprises for the client on the invoice' },                       color:'--emilie', bgColor:'--emilie-bg', border:'--emilie-b' },
-  { id:'owen',    name:'Jordan Olsen', role:'Operations Supervisor',  mainAction:'Execute Event Work',   archetype:'The Moment Maker',   product:'Event Operations', object:'Event Work',   objId:'operations', job:'Execute all work orders required to set up, run, and tear down an event — deploying crew and resources efficiently across multiple simultaneous events',                                        jtbd:{ when:'the finalized event plan and work orders arrive from planning',                          want:'assign, track, and close all work orders inside Momentus',                soCan:'run a flawless event — with every crew member knowing exactly where to be and when, without paper, radio guesswork, or last-minute scrambles' },                color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
+  { id:'owen',    name:'Jordan Olsen', role:'Operations Director',    mainAction:'Execute Event Work',   archetype:'The Moment Maker',   product:'Event Operations', object:'Event Work',   objId:'operations', job:'Execute all work orders required to set up, run, and tear down an event — deploying crew and resources efficiently across multiple simultaneous events',                                        jtbd:{ when:'the finalized event plan and work orders arrive from planning',                          want:'assign, track, and close all work orders inside Momentus',                soCan:'run a flawless event — with every crew member knowing exactly where to be and when, without paper, radio guesswork, or last-minute scrambles' },                color:'--owen', bgColor:'--owen-bg', border:'--owen-b' },
   { id:'dana',    name:'Casey Lindgren', role:'Finance Director',      mainAction:'Reconcile Event Financials', archetype:'The Financial Steward', product:'Event Finance', object:'Event Financials', objId:'financials', job:'Reconcile event and venue-level financial performance — from budget through final closeout — so every dollar is accounted for and the venue’s financial story holds up to scrutiny', jtbd:{ when:'an event has executed and needs to move from operational activity to a reconciled financial record', want:'consolidate budget, actuals, and invoices into one accurate financial close entirely inside Momentus', soCan:'reconcile events cleanly, catch variances before they become problems, and report the venue’s financial story confidently to executives, department heads, and government stakeholders' }, color:'--dana', bgColor:'--dana-bg', border:'--dana-b' },
   { id:'me',     name:'Morgan Rivera', role:'Venue Director',         mainAction:'Manage Event',         archetype:'The Orchestrator',   product:'Momentus Events',  object:'Event',       objId:'event',      job:'Oversee the full event lifecycle — from booking through execution — to deliver consistently exceptional experiences and sustainable business outcomes', jtbd:{ when:'a new event enters the pipeline',                    want:'maintain real-time visibility and control across sales, planning, and operations in a single connected system — most of this today is an innovation opportunity, not yet a solved workflow', soCan:'make faster, more confident decisions — and ensure every team is aligned, with handoffs tracked and performance visible across the full lifecycle' }, color:'--me', bgColor:'--me-bg', border:'--me-b' },
 ];
