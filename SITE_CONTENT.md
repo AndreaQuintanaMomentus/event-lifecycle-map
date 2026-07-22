@@ -8,9 +8,9 @@ This document is a complete, plain-text mirror of every piece of content in the 
 
 The map has four layers, always in this order: Semantic → Human → Innovation → Strategy.
 
-**Semantic Layer**: Built on Rosenberg's Semantic Interaction Design and Barry Smith's formal ontology. Defines the primary objects in the system — Booking, Plan, Task, and Event — using three attribute types: *Fixed Conditions* (permanent properties), *Dynamic States* (mutable while in use), and *Structural Status* (role and position in the system). Each object is described through the CRUD actions it supports.
+**Semantic Layer**: Built on Rosenberg's Semantic Interaction Design and Barry Smith's formal ontology. Defines the primary objects in the system — Booking, Plan, Event Work, and Event — using three attribute types: *Fixed Conditions* (permanent properties), *Dynamic States* (mutable while in use), and *Structural Status* (role and position in the system). Each object is described through the CRUD actions it supports.
 
-**Human Layer**: Built on the Ontological Persona Definition framework. Defines three personas — Sharon (Sales), Emilie (Planning), Owen (Operations) — through their relationship to domain objects, not demographics. Each persona is mapped to the same Fixed / Dynamic / Structural attribute axes as the objects they act on.
+**Human Layer**: Built on the Ontological Persona Definition framework. Defines three personas — the Sales Manager, the Event Planner, the Operations Director — through their relationship to domain objects, not demographics. Each persona is mapped to the same Fixed / Dynamic / Structural attribute axes as the objects they act on.
 
 **Innovation Layer**: Built on Ulwick's Jobs to Be Done (JTBD) and Outcome-Driven Innovation (ODI) frameworks. Maps primary jobs across 8 lifecycle stages for each persona. Each cell contains 3 desired outcome statements structured as: Direction + Metric + Object + Contextual Clarifier — identifying where value is being delivered or left on the table.
 
@@ -18,11 +18,11 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 ## Personas (Human Layer)
 
-### Alex Smith — Sales Manager ("The Dream Catcher")
+### Sales Manager ("The Dream Catcher")
 
 **Product area:** Event Sales  
 **Primary object:** Event Opportunity  
-**Quote:** "They decide what’s worth making." — Alex Smith  
+**Quote:** "They decide what’s worth making."  
 **Interaction grammar:** Event Opportunity · Product · Create — *Secure a booking*
 
 #### Fixed Conditions
@@ -44,9 +44,9 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Sets space rental rates to maximize revenue without losing the deal — the venue’s primary interface with the outside market
 - Responsible for their own sales performance reporting; in larger venues, a dedicated analyst may own this
 
-#### Vertical-specific variants of Alex Smith
+#### Vertical-specific variants of Sales Manager
 
-##### Arts & Culture: Ryan Reich · Rentals Sales Coordinator ("The Revenue Generator")
+##### Arts & Culture: Rentals Sales Coordinator ("The Revenue Generator")
 
 **Fixed Conditions**
 - Their personality is mission-aligned and relationship-driven — they balance revenue targets with institutional values, ensuring events fit the cultural identity of the venue
@@ -63,7 +63,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Calendar is shared with internal programming and education teams — does not have sole authority over availability
 - Responsible for managing the client relationship through contract signing, then hands off to the Event Manager
 
-##### Convention Centers: Sharon Smith · Sales Manager ("The Revenue Generator")
+##### Convention Centers: Sales Manager ("The Revenue Generator")
 
 **Fixed Conditions**
 - Their personality is highly analytical and results-driven, with deep hospitality sales expertise and an industry leader mindset
@@ -80,7 +80,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Accountable for PACE reporting, economic impact, and utilization targets; exports to Excel quarterly for executive review
 - Coordinates hotel room blocks and third-party hotel pricing as part of the convention sales package
 
-##### Corporate: Bettie Bennett · Bookings Manager ("The Calendar Holder")
+##### Corporate: Bookings Manager ("The Calendar Holder")
 
 **Fixed Conditions**
 - Their personality is energetic and social, early-career, treating every booking as a space-optimization puzzle rather than a revenue target
@@ -97,7 +97,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Not responsible for full event execution — hands off to Event Manager after the initial booking is confirmed
 - Accountable for calendar accuracy and space utilization; reports on booking volume metrics, not revenue
 
-##### Higher Ed: Barb Bennington · Booking Coordinator ("The Calendar Maximizer")
+##### Higher Ed: Booking Coordinator ("The Calendar Maximizer")
 
 **Fixed Conditions**
 - Their personality is organized, proactive, and collaborative, with moderate industry and Momentus experience
@@ -114,7 +114,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Must coordinate event approvals with campus safety and security for compliance — a structural step absent in other verticals
 - Calendar decisions must account for the academic calendar and class scheduling, not purely event-demand driven
 
-##### Stadiums & Arenas: Peter Piper · Private Event Sales Manager ("The Venue Maximizer")
+##### Stadiums & Arenas: Private Event Sales Manager ("The Venue Maximizer")
 
 **Fixed Conditions**
 - Their personality is deeply passionate about the venue and brand, with a sports-first mindset and high industry and Momentus experience
@@ -131,11 +131,11 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Ancillary revenue is growing in strategic importance as venues pursue 365-day-per-year operations; accountable to that target
 - Sports holds are tentative by nature — must place many holds for few confirmed dates, complicating pipeline reporting
 
-#### Secondary / adjacent personas around Alex Smith
+#### Secondary / adjacent personas around Sales Manager
 
-##### Barby Bates — Booking Manager (Arts & Culture) · "The Booking Boss"
+##### Booking Manager (Arts & Culture) · "The Booking Boss"
 
-**Relationship to Alex Smith:** Manages artist and performer bookings for presented content — a parallel booking function that operates on mission and artistic merit, not space availability.
+**Relationship to Sales Manager:** Manages artist and performer bookings for presented content — a parallel booking function that operates on mission and artistic merit, not space availability.
 
 **Fixed Conditions**
 - Their personality is passionate, mission-driven, and detail-oriented, with deep arts advocacy as a former dancer and a commitment to balancing institutional mission with revenue
@@ -148,13 +148,13 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - From ad hoc coordination with Finance and Operations → to a connected season-level view that links bookings to production and settlement
 
 **Structural Status**
-- Works alongside the Rental Sales Coordinator (Ryan) — manages presented content bookings while Ryan handles rentals; separate intake streams, shared calendar
+- Works alongside the Rental Sales Coordinator — manages presented content bookings while that role handles rentals; separate intake streams, shared calendar
 - Accountable to Executive Director for mission alignment; every booking must justify itself on both artistic and financial terms
 - Triggers the post-show settlement process alongside Finance — a financial close step unique to presented arts that venue rental sales does not have
 
-##### Eddy Erickson — Entertainment Booking Director (Stadiums & Arenas) · "The Main Event Booker"
+##### Entertainment Booking Director (Stadiums & Arenas) · "The Main Event Booker"
 
-**Relationship to Alex Smith:** Manages the public event calendar (concerts, shows) whose holds directly constrain the calendar gaps that private event sales can fill.
+**Relationship to Sales Manager:** Manages the public event calendar (concerts, shows) whose holds directly constrain the calendar gaps that private event sales can fill.
 
 **Fixed Conditions**
 - Their personality is experienced, relationship-focused, and analytical, driven by promoter partnerships and the deal-making side of entertainment booking
@@ -171,9 +171,9 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - His decisions about which dates to hold for entertainment directly determine how many calendar gaps exist for private event revenue
 - Settlement is the final step of every show — currently done entirely in Excel outside Momentus; represents a major product gap
 
-##### Hannah Hilton — Hospitality Sales Manager (Stadiums & Arenas) · "The Revenue Generator"
+##### Hospitality Sales Manager (Stadiums & Arenas) · "The Revenue Generator"
 
-**Relationship to Alex Smith:** Sells premium spaces (suites, boxes, clubs) by event, season, or multi-year package — an adjacent revenue stream that runs alongside private event sales.
+**Relationship to Sales Manager:** Sells premium spaces (suites, boxes, clubs) by event, season, or multi-year package — an adjacent revenue stream that runs alongside private event sales.
 
 **Fixed Conditions**
 - Their personality is communicative, charismatic, and customer-focused, with a flair for selling premium hospitality experiences rather than just event space
@@ -190,11 +190,11 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Primary driver of catering revenue on game day — satellite catering for suites and boxes is a major revenue source that must be coordinated with Catering and Ops teams
 - Accounts can span hundreds of thousands of dollars over multi-year suite contracts — requires white-glove relationship management that self-service cannot fully replace
 
-### Sam Evans — Event Planner ("The Promise Keeper")
+### Event Planner ("The Promise Keeper")
 
 **Product area:** Event Planning  
 **Primary object:** Event Plan  
-**Quote:** "They turn intent into instruction." — Sam Evans  
+**Quote:** "They turn intent into instruction."  
 **Interaction grammar:** Event Plan · Product · Create — *Detail and distribute a function*
 
 #### Fixed Conditions
@@ -216,9 +216,9 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - The critical translator between client vision and operational instruction — preventing lost-in-translation failures on event day
 - Responsible for their own event reporting; in larger venues, a dedicated person may handle report generation
 
-#### Vertical-specific variants of Sam Evans
+#### Vertical-specific variants of Event Planner
 
-##### Arts & Culture: Remy Reynolds · Event Manager ("The Dedicated Detailer")
+##### Arts & Culture: Event Manager ("The Dedicated Detailer")
 
 **Fixed Conditions**
 - Their personality is community-relationship driven, motivated by turning today’s rental clients into future supporters and donors of the institution
@@ -235,7 +235,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Must coordinate with Marketing, Finance, and Operations across three teams that are largely outside the system
 - Manages both day-of execution AND post-event client follow-up — relationship continuity for repeat business is part of the role
 
-##### Convention Centers: Emilie Evans · Event Coordinator ("The Dedicated Detailer")
+##### Convention Centers: Event Coordinator ("The Dedicated Detailer")
 
 **Fixed Conditions**
 - Their personality is adaptive and detail-oriented, a rapid learner navigating a high-complexity convention environment early in their career
@@ -252,7 +252,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Accountable for invoice creation and payment collection post-event — this role owns the financial close in this vertical
 - Coordinates with partner catering company, internal AV (Audio/Visual), and security — more external vendor relationships than any other vertical
 
-##### Corporate: Elliott Ellington · Event Manager ("The Client Collaborator")
+##### Corporate: Event Manager ("The Client Collaborator")
 
 **Fixed Conditions**
 - Their personality is detail-oriented and hospitality-focused, with 5 years of experience delivering white-glove service to internal corporate employees
@@ -269,7 +269,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Coordinates F&B (Food & Beverage), AV (Audio/Visual), and Facilities as separate departmentalized teams — more siloed than in other verticals
 - Reports up to Event Management Lead who tracks team utilization and performance analytics
 
-##### Higher Ed: Ernie Eden · Event Coordinator ("The Client Collaborator")
+##### Higher Ed: Event Coordinator ("The Client Collaborator")
 
 **Fixed Conditions**
 - Their personality is communication-first — they spend more time coordinating people across teams than building event details
@@ -286,7 +286,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Accountable for tracking and reporting on the event including financial actuals and post-event reconciliation
 - Works upstream from Registration Manager for events with attendee registration — a distinct dependency not present in other verticals
 
-##### Stadiums & Arenas: Penny Pennington · Special Events Manager ("The Client Collaborator")
+##### Stadiums & Arenas: Special Events Manager ("The Client Collaborator")
 
 **Fixed Conditions**
 - Their personality is Type A — high-energy and detail-driven, with 7 years of sports and hospitality experience and the deepest Momentus fluency in the vertical
@@ -299,15 +299,15 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - From coordinating with third-party catering outside the system → to integrated partner coordination in-platform
 
 **Structural Status**
-- Must coordinate with Operations Supervisor who manually translates event details into work orders — a translation gap not addressed in-system
+- Must coordinate with Operations Supervisor who manually translates event details into Event Work — a translation gap not addressed in-system
 - Contracts with third-party catering companies (e.g., Legends) rather than internal F&B (Food & Beverage) — a vendor layer absent in other verticals
 - Bridges private events and game day operations — aspires to eventually migrate game day workflow into Momentus
 
-#### Secondary / adjacent personas around Sam Evans
+#### Secondary / adjacent personas around Event Planner
 
-##### Piper Penny — Program Coordinator (Arts & Culture) · "The Content Curator"
+##### Program Coordinator (Arts & Culture) · "The Content Curator"
 
-**Relationship to Sam Evans:** Plans and produces season content — programs, artists, and performances — rather than managing venue bookings; a content-first planning role that parallels event management.
+**Relationship to Event Planner:** Plans and produces season content — programs, artists, and performances — rather than managing venue bookings; a content-first planning role that parallels event management.
 
 **Fixed Conditions**
 - Their personality is mission-driven and creative, a multi-hat wearer who views themselves as a content curator rather than an event planner
@@ -320,13 +320,13 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - From building program collateral (artist bios, show notes, 400+ scrolling options in Elite) manually → to a streamlined content production workflow with better search and filtering
 
 **Structural Status**
-- Partners with Booking Manager (Barby) for season planning and Venue Manager for space logistics — sits at the intersection of content and operations
+- Partners with the Booking Manager for season planning and Venue Manager for space logistics — sits at the intersection of content and operations
 - Responsible for artist contracts, program collateral, and execution of show content during the run — a content accountability layer absent in other verticals
 - Manages cross-functional coordination for Marketing and Operations without being able to bring them into the system; relies on email and ad hoc meetings
 
-##### Eden Ernie — Event Management Lead (Corporate) · "The Events Oversight"
+##### Event Management Lead (Corporate) · "The Events Oversight"
 
-**Relationship to Sam Evans:** Manages the event management team and tracks performance — adds a team leadership and analytics layer above the individual event coordinator role.
+**Relationship to Event Planner:** Manages the event management team and tracks performance — adds a team leadership and analytics layer above the individual event coordinator role.
 
 **Fixed Conditions**
 - Their personality is analytical and strategic, bringing 10+ years of hotel and corporate events experience to a team leadership role focused on performance rather than individual event delivery
@@ -339,13 +339,13 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - From reactive management of team workload → to a centralized calendar view of team assignments and capacity
 
 **Structural Status**
-- Manages the event management team (including coordinators like Elliott) — her assignment decisions directly affect how events are handled and at what quality level
-- Reports to the Director of Events Experience (Dani) — she is the conduit between individual event execution and strategic program reporting
+- Manages the event management team — her assignment decisions directly affect how events are handled and at what quality level
+- Reports to the Director of Events Experience — that role is the conduit between individual event execution and strategic program reporting
 - Accountable for utilization, attendee counts, event breakdowns, and budget forecasts across all events on campus
 
-##### Ruby Russell — Registration Manager (Higher Ed) · "The Registration Rockstar"
+##### Registration Manager (Higher Ed) · "The Registration Rockstar"
 
-**Relationship to Sam Evans:** Manages the full conference registration lifecycle — a parallel planning workflow that runs alongside event coordination for any event with attendee sign-up.
+**Relationship to Event Planner:** Manages the full conference registration lifecycle — a parallel planning workflow that runs alongside event coordination for any event with attendee sign-up.
 
 **Fixed Conditions**
 - Their personality is detail-oriented, client-focused, and process-driven, with moderate industry and Momentus experience
@@ -358,13 +358,13 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - From using third-party tools (Cvent) to fill gaps → to a full-service registration platform built into the event workflow
 
 **Structural Status**
-- Works alongside Event Coordinator (Ernie) for any event with registration — both must coordinate to ensure the event plan and registration setup are aligned and timed correctly
+- Works alongside the Event Coordinator for any event with registration — both must coordinate to ensure the event plan and registration setup are aligned and timed correctly
 - Owns the full attendee communication stream: confirmation emails, changes, waitlist management, and post-event survey distribution
 - Accountable for payment collection and scholarship tracking; financial actuals from registration feed into the Senior Manager's profit reporting
 
-##### Carl Crowe — Catering Sales Manager (Corporate) · "The Creative Foodie"
+##### Catering Sales Manager (Corporate) · "The Creative Foodie"
 
-**Relationship to Sam Evans:** Manages F&B (Food & Beverage) intake and BEO distribution — a parallel planning workflow that runs alongside event coordination and must stay in sync through constant changes.
+**Relationship to Event Planner:** Manages F&B (Food & Beverage) intake and BEO distribution — a parallel planning workflow that runs alongside event coordination and must stay in sync through constant changes.
 
 **Fixed Conditions**
 - Their personality is creative, adaptable, and detail-oriented, managing both client-facing catering intake and kitchen-facing execution as two connected but distinct workflows
@@ -378,12 +378,12 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 **Structural Status**
 - Interfaces between Event Manager and kitchen staff — both sides send him changes; he is the information bottleneck between digital planning and physical food preparation
-- Manages BEO distribution to kitchen staff (Carole) who has no Momentus access — the last-mile gap in the data chain from event plan to food delivery
-- Responsible for updating actuals and closing catering work orders after events; this step is often delayed because it requires returning to a desk
+- Manages BEO distribution to kitchen staff who have no Momentus access — the last-mile gap in the data chain from event plan to food delivery
+- Responsible for updating actuals and closing catering Event Work after events; this step is often delayed because it requires returning to a desk
 
-##### Tanner Tate — Catering Sales Coordinator (Convention Centers) · "The Dot Connector"
+##### Catering Sales Coordinator (Convention Centers) · "The Dot Connector"
 
-**Relationship to Sam Evans:** Builds functions and service orders from client F&B (Food & Beverage) requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.
+**Relationship to Event Planner:** Builds functions and service orders from client F&B (Food & Beverage) requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.
 
 **Fixed Conditions**
 - Their personality is pragmatic and process-minded, having worked both the operations execution side and the catering sales input side of the same venue
@@ -400,36 +400,41 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Builds recurring functions early but holds off scripting full service orders until requirements are locked, since input in Momentus is flow-driven step by step — financials, bookings, and functions before service orders
 - Accountable for translating vague, F&B-only contract language (a single estimate line at signing) into the fully detailed function and service-order structure operations will execute against
 
-### Jordan Olsen — Operations Director ("The Moment Maker")
+### Operations Director ("The Moment Maker")
 
 **Product area:** Event Operations  
 **Primary object:** Event Work  
-**Quote:** "They make sure it actually happens." — Jordan Olsen  
-**Interaction grammar:** Event Work · Product · Create — *Execute and close a work order*
+**Quote:** "They make sure it actually happens."  
+**Interaction grammar:** Event Work · Product · Create — *Execute and close a piece of Event Work*
 
 #### Fixed Conditions
 
 - Their personality is execution-driven, focused on timing, and responsible for making the plan actually happen
 - They have a background in hospitality operations, event logistics, or facilities management
-- They are skilled in work order management, resource deployment, real-time coordination, and incident response
+- They are skilled in Event Work management, resource deployment, real-time coordination, and incident response
 
 #### Dynamic States
 
-- From printed work orders and radio calls → to platform-based work order management
+- From printed rosters and radio calls → to platform-based Event Work management
 - From reactive execution → to proactive, load-balanced crew deployment across concurrent events
 - From informal verbal handoffs → to documented completion with a clear audit trail back to the event plan
+- From inconsistent communication channels across different operations teams during event execution → to standardized channels matched to each stage of the process, the type of information, and the operating department or team
 
 #### Structural Status
 
 - Receives the plan baton from planning — accountable for executing it through the team
-- Sits above two department heads rather than delegating directly to every crew — one for front-of-house (ticketing, customer-facing staff), one for back-of-house (AV, catering, security) — though at many organizations those two heads report to separate leadership rather than a single shared director like Jordan; "front of house or back of house" is the first question to ask about any operations stakeholder
+- Sits above two types of department heads — one for front-of-house (ticketing, customer-facing staff), one for back-of-house (AV, catering, security) — though at many organizations those two types of department heads report to separate leadership rather than a single shared director.
+- Front-of-house means customer- or attendee-facing roles (e.g. ticketing, guest services, box office); back-of-house means roles that support the event without direct public contact (e.g. AV, catering, security, custodial) — the lens used throughout this map to classify any operations-adjacent role
+- Back-of-house departments — culinary, security, AV, custodial — carry dual scope: event-specific duties plus ongoing venue-maintenance duties independent of any single event, unlike planners/coordinators, who are event-scoped only
 - The last mile between the platform’s promise and the client’s experience — where data quality determines delivery quality
 - Responsible for operational actuals reporting; in larger venues, a dedicated person may aggregate across departments
 - Resource and inventory accountability sometimes sits outside the operations function itself — creating a mismatch between who experiences a tracking problem day-to-day and who owns the tool meant to solve it
+- Holds the platform’s buying and decision-making relationship for operations — crew and staff (modeled as secondary personas) are not buyers or independent system stakeholders; they matter to this map specifically for two things this role depends on them for: Event Work execution, and the data entry that feeds reporting and decision-making
+- Responsible for tracking how planned staffing, resourcing, and timing compare to what actually happened on each event within their own operations area — building an operational memory that improves how similar future events are staffed and resourced
 
-#### Vertical-specific variants of Jordan Olsen
+#### Vertical-specific variants of Operations Director
 
-##### Arts & Culture: Oliver O’Connell · Operations Manager ("The Production Prodigy")
+##### Arts & Culture: Operations Manager ("The Production Prodigy")
 
 **Fixed Conditions**
 - Their personality is production-focused and technically precise, with deep expertise in staging, lighting, sound, and live performance logistics
@@ -446,7 +451,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Coordinates financial settlement post-show alongside Finance — a cross-functional accountability unique to the performing arts context
 - Works closely with both the Booking Manager and Program Coordinator throughout the season — a more cross-functional ops role than in other verticals
 
-##### Convention Centers: Owen Olsen · Operations Supervisor ("The Event Executer")
+##### Convention Centers: Operations Supervisor ("The Event Executer")
 
 **Fixed Conditions**
 - Their personality is hands-on and empathetic as a team leader, open to digital tools only when they genuinely save time rather than adding to it
@@ -454,16 +459,16 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - They are skilled in traditional operations execution — managing crews, changeover logistics, and inventory — though still developing comfort with digital workflow tools
 
 **Dynamic States**
-- From printed work orders and radio as the primary coordination method → to iPad-based digital work order management
+- From printed Event Work and radio as the primary coordination method → to iPad-based digital Event Work management
 - From inaccurate system data causing wrong budget forecasts → to real-time actuals that feed accurate operational planning
 - From no analytics for staffing and budget prediction → to operational dashboards with forecasting capability
 
 **Structural Status**
-- Bridges event coordinator and operations crew; accountable for daily briefings, task assignment, and end-of-day actuals
+- Bridges event coordinator and operations crew; accountable for daily briefings, Event Work assignment, and end-of-day actuals
 - Manages inventory and staffing for multi-day conventions — scale and complexity exceeds most other verticals
 - Forecasting is a key responsibility: budget and staffing predictions directly impact performance during convention week
 
-##### Corporate: Oliver Otto · Operations Lead ("The Operations Oversight")
+##### Corporate: Operations Lead ("The Operations Oversight")
 
 **Fixed Conditions**
 - Their personality is structured and resilient, built to manage multiple operations sub-teams simultaneously across AV (Audio/Visual), Facilities, Event Services, Security, and Guest Services
@@ -471,8 +476,8 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - They are skilled in workforce coordination and cross-team operational logistics, though currently managing staffing entirely outside the platform through Outlook
 
 **Dynamic States**
-- From Outlook-based staffing with no connection to work orders or event data → to integrated staffing against events in-platform
-- From printed work orders for all teams with no real-time update capability → to role-based digital work order access across departments
+- From Outlook-based staffing with no connection to Event Work or event data → to integrated staffing against events in-platform
+- From printed Event Work for all teams with no real-time update capability → to role-based digital Event Work access across departments
 - From reactive inventory updates (added too infrequently to be trusted) → to proactive inventory management with availability checks
 
 **Structural Status**
@@ -484,48 +489,51 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 No distinct Operations persona documented yet for Higher Ed — not yet covered by validation interviews.
 
-##### Stadiums & Arenas: Owen Olsen · Operations Supervisor ("The Moment Maker")
+##### Stadiums & Arenas: Operations Supervisor ("The Moment Maker")
 
 **Fixed Conditions**
 - Their personality is hands-on and decisive under pressure, executing private rental and sponsorship events where scheduling is complicated by shifting sports-season and playoff timing
 - They have a background in stadium/arena operations focused on private events — rentals, sponsorships, internal use — a distinct track from the venue's separate public game-day/concert operations
-- They are skilled in physical event execution and crew coordination via printed work orders and daily team briefings, though currently limited by the lack of an in-app editing or mobile workflow
+- They are skilled in physical event execution and crew coordination via printed Event Work and daily team briefings, though currently limited by the lack of an in-app editing or mobile workflow
 
 **Dynamic States**
-- From translating event needs into work orders entirely by hand → to automated event detailing that generates functions, orders, and notes directly from the event outline
-- From documenting real-time changes on printed work orders and re-entering them into Momentus at end of day → to in-app editing with immediate change tracking
+- From translating event needs into Event Work entirely by hand → to automated event detailing that generates functions, orders, and notes directly from the event outline
+- From documenting real-time changes on printed Event Work and re-entering them into Momentus at end of day → to in-app editing with immediate change tracking
 - From constant manual checking for changes and deadlines → to role-based notifications that alert ops automatically
 
 **Structural Status**
-- Owns the Private Events track (rentals, sponsorships, internal events) — hosts daily briefings, assigns tasks, and closes out work orders and actuals at day's end
-- Public/game-day operations (the game manifest, satellite catering, suites, control room) are owned by a separate Building Operations role, not Owen — the two tracks run side by side but aren't the same job
-- Accountable for translating client/event needs into executable work orders — currently a fully manual step with no system support
+- Owns the Private Events track (rentals, sponsorships, internal events) — hosts daily briefings, assigns Event Work, and closes out actuals at day's end
+- Public/game-day operations (the game manifest, satellite catering, suites, control room) are owned by a separate Building Operations role, not the Operations Director — the two tracks run side by side but aren't the same job
+- Accountable for translating client/event needs into executable Event Work — currently a fully manual step with no system support
 - Views granular inventory tracking as low-value overhead — this vertical works off a fixed pool of standard equipment, unlike Convention Centers managing dozens of concurrent room configurations
 
-#### Secondary / adjacent personas around Jordan Olsen
+#### Secondary / adjacent personas around Operations Director
 
-##### Orlando Olive — Operations Crew (Stadiums & Arenas) · "The Hands On The Ground"
+##### Operations Crew (Stadiums & Arenas) · "The Hands On The Ground"
 
-**Relationship to Jordan Olsen:** Back-of-house: executes setup, teardown, and all in-event operational tasks on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
+**Relationship to Operations Director:** Back-of-house: executes setup, teardown, and all in-event Event Work on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
 
 **Fixed Conditions**
-- Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event operational tasks
+- Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event Event Work
 - They have a background in stadium and arena floor operations, executing physical setup and teardown as part of a larger crew under the direction of the Operations Director
-- They are skilled in efficient physical task execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests
+- They are skilled in efficient physical Event Work execution and real-time adaptation on the event floor, but require simple, role-tailored digital tools to transition away from printed manifests
+- Not naturally tech-savvy or tech-oriented — comfort with digital tools is earned through repeated, reliable payoff, not assumed from the start
+- Because the job is physical and constantly moving between locations, adopting new technology is difficult whenever that technology becomes an obstacle or slows the work down rather than removing friction from it
+- Carries significant ritual and tacit knowledge built from experience on the floor — the kind of know-how that resists being fully captured or encoded into a digital tool
 
 **Dynamic States**
-- From a massive, everything-for-everyone manifest → to a filtered, role-specific task list that shows only what Orlando needs to do, in sequence
-- From finding out about real-time changes too late → to push notifications for changes that affect his specific tasks
-- From no easy way to mark tasks complete without navigating a full system → to simple, no-login task completion from the field
+- From a massive, everything-for-everyone manifest → to a filtered, role-specific list of Event Work that shows only what this role needs to do, in sequence
+- From finding out about real-time changes too late → to push notifications for changes that affect his specific Event Work
+- From no easy way to mark Event Work complete without navigating a full system → to simple, no-login completion from the field
 
 **Structural Status**
-- Receives assignments from Operations Director (Owen) — executes what Owen plans, completing the chain from event plan to physical reality on the venue floor
-- Responsible for logging task status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting
+- Receives assignments from the Operations Director — executes what that role plans, completing the chain from event plan to physical reality on the venue floor
+- Responsible for logging Event Work status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting
 - The final link in the operational data chain: if field staff can't log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete
 
-##### Hank Henry — Health, Safety & Risk Manager (Stadiums & Arenas) · "The Risk Manager"
+##### Health, Safety & Risk Manager (Stadiums & Arenas) · "The Risk Manager"
 
-**Relationship to Jordan Olsen:** Spans both front-of-house and back-of-house: manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.
+**Relationship to Operations Director:** Spans both front-of-house and back-of-house: manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.
 
 **Fixed Conditions**
 - Their personality is accountable, safety-focused, and detail-oriented, driven by public safety and regulatory compliance across 10+ years in risk management
@@ -539,15 +547,15 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - From anyone with system access being able to escalate or downgrade a risk's severity → to permissioned risk workflows where only accountable owners can change a risk's status
 
 **Structural Status**
-- Works across event management (Paige), the separate building-operations/game-day role, and control room (Carrie) — risk spans all these functions and requires active participation from each
+- Works across event management, the separate building-operations/game-day role, and the control room — risk spans all these functions and requires active participation from each
 - Responsible for risk assessments, mitigation coordination, audit trails, and regulatory reporting; has one chance to get non-risk teams to engage before losing them
 - Uses WeTrack (not Momentus) for incident management — the gap between incident data and the event record represents a critical integration opportunity
 - The people who actually own and budget for risk and safety tooling are often a different audience than the event and booking relationship Momentus typically holds — closing this gap requires an organizational bridge, not just a technical one
 - At smaller organizations, this role can also extend to injury and workers'-compensation case management — medical certificates, return-to-work plans, and claim records — which needs tighter, privacy-restricted access than general incident and risk data
 
-##### Paige Pepper — Public Events Manager (Stadiums & Arenas) · "The Logistics Queen"
+##### Public Events Manager (Stadiums & Arenas) · "The Logistics Queen"
 
-**Relationship to Jordan Olsen:** Spans both front-of-house and back-of-house: coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).
+**Relationship to Operations Director:** Spans both front-of-house and back-of-house: coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).
 
 **Fixed Conditions**
 - Their personality is investigative, organized, and communicative, having transitioned from corporate events into a stadium environment where the scale and complexity required significant adjustment
@@ -561,31 +569,31 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 **Structural Status**
 - Centralizes information from all departments for game day — if an event is on the field, she must coordinate with groundskeepers; if it's in the parking lot, she must redirect fans
-- Interfaces simultaneously with sales (Hannah), operations (Owen/Bennett), risk (Hank), and control room (Carrie) — the most cross-functional coordination role in the vertical
+- Interfaces simultaneously with sales, operations, risk, and the control room — the most cross-functional coordination role in the vertical
 - Lots of redundancy in game day operations: most details are the same event-to-event; only the mini-events change — a strong case for templates and copy workflows
 
-##### Anna Adams — AV Technician (Corporate) · "The Technical Help"
+##### AV Technician (Corporate) · "The Technical Help"
 
-**Relationship to Jordan Olsen:** Back-of-house: executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
+**Relationship to Operations Director:** Back-of-house: executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
 
 **Fixed Conditions**
 - Their personality is technical, organized, and detail-oriented, focused on precise execution of AV setup, live operation, troubleshooting, and equipment maintenance
-- They have a background in AV technology and campus event production, executing specialized technical work orders under the direction of the Operations Lead
+- They have a background in AV technology and campus event production, executing specialized technical Event Work under the direction of the Operations Lead
 - They are skilled in AV operations across a range of event types and technical configurations, and open to adopting digital tools when they perform reliably in a field environment
 
 **Dynamic States**
-- From printed work orders with no real-time change propagation → to digital, mobile work orders that update instantly when changes occur
+- From printed Event Work with no real-time change propagation → to digital, mobile Event Work that updates instantly when changes occur
 - From needing to return to a desk to update progress or log changes → to field-based completion tracking directly from a mobile device
 - From discovering last-minute changes via physical relay → to push notifications for changes that affect her specific AV assignments
 
 **Structural Status**
-- Works within Oliver's operations team alongside Facilities (Fred) and Event Services (Ella) — receives assignments from Oliver, executes them, and reports completion
+- Works within the Operations Lead's operations team alongside Facilities and Event Services — receives assignments from the Operations Lead, executes them, and reports completion
 - Responsible for post-event AV equipment retrieval and maintenance — a closure step that must be coordinated with event schedule and other teams
 - One of multiple specialized operations sub-roles that collectively make up the ops function; no Momentus access by default — depends on printed orders
 
-##### Carrie Carol — Control Room Operator (Stadiums & Arenas) · "The Incident Response"
+##### Control Room Operator (Stadiums & Arenas) · "The Incident Response"
 
-**Relationship to Jordan Olsen:** Back-of-house: runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.
+**Relationship to Operations Director:** Back-of-house: runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.
 
 **Fixed Conditions**
 - Their personality is calm under pressure, responsive, and organized, managing the control room through the full intensity of game days and major events
@@ -598,37 +606,38 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - From non-technical staff reluctant to submit incidents digitally → to no-login incident intake that removes the barrier for field staff
 
 **Structural Status**
-- Coordinates between operations crew (Orlando), external agencies (police, ambulance, fire), and venue management — the nerve center of real-time event response
+- Coordinates between operations crew, external agencies (police, ambulance, fire), and venue management — the nerve center of real-time event response
 - Uses WeTrack, not Momentus — the gap between incident logs and the event record represents the most critical data integration gap in the S&A vertical
 - Operating 24/7 on event days means zero tolerance for system downtime or usability friction; reliability and speed are non-negotiable requirements
 - A digital incident log serves as the system-of-record documenting what happened — even in well-adopted deployments, real-time dispatch and coordination still happens by radio or phone, not through the log itself
 - When an incident also meets a venue's own separate safety threshold, logging it twice — once in the venue's own system, once in the event record — is common and accepted today, not treated as an edge case
 - Incident records carry confidentiality tiers by type — medical and security details are restricted to those who need them, not visible to the entire organization by default
+- Operates within a three-tier information flow — individual contributors on the ground log what's happening, this role consolidates and decides what needs escalating, and only escalation-worthy items reach director/executive-level dashboards
 
-##### Freddie Ford — Meeting Services Crew (Convention Centers) · "The Analog Anchor"
+##### Meeting Services Crew (Convention Centers) · "The Analog Anchor"
 
-**Relationship to Jordan Olsen:** Back-of-house: executes setup, changeover, and breakdown work under the Meeting Services Supervisor's direction — the front-line role where, in the supervisor's own words, "technology stops."
+**Relationship to Operations Director:** Back-of-house: executes setup, changeover, and breakdown work under the Meeting Services Supervisor's direction — the front-line role where, in the supervisor's own words, "technology stops."
 
 **Fixed Conditions**
 - Their personality is task-focused and constantly moving — coordinating setup, changeover, and breakdown across rooms entirely by radio
-- They have a background in convention center meeting services and banquet setup, working from a printed work order handed out at the morning briefing rather than any device of their own
+- They have a background in convention center meeting services and banquet setup, working from printed Event Work handed out at the morning briefing rather than any device of their own
 - They are skilled in fast physical changeover work — reading a room diagram, executing the setup, and reporting status back verbally — with no system access of their own
 
 **Dynamic States**
 - From a legacy mobile tool a few crew members used to log progress before switching platforms → to no digital tool at all today, reporting status back to the supervisor by radio only
-- From carrying a printed work order for the day → to a simple, no-login way to view and confirm today's tasks from the floor
+- From carrying printed Event Work for the day → to a simple, no-login way to view and confirm today's Event Work from the floor
 - From changes relayed room to room by word of mouth → to a push notification that reaches crew directly when a change affects their space
 
 **Structural Status**
-- Receives daily assignments and printed work orders from the Meeting Services Supervisor at the morning briefing — the last link in the chain from event plan to physical setup
+- Receives daily assignments and printed Event Work from the Meeting Services Supervisor at the morning briefing — the last link in the chain from event plan to physical setup
 - Has no direct system access — every status update, completion, and incident is relayed verbally or by radio and re-entered into the system by the supervisor at day's end
 - The point where the operational data chain currently goes fully manual — closing the same last-mile gap other front-line crew roles represent elsewhere, but with even less digital access (radio only, no mobile tool)
 
-### Casey Lindgren — Finance Director ("The Financial Steward")
+### Finance Director ("The Financial Steward")
 
 **Product area:** Event Finance  
 **Primary object:** Event Financials  
-**Quote:** "They make sure the numbers can be trusted." — Casey Lindgren  
+**Quote:** "They make sure the numbers can be trusted."  
 **Interaction grammar:** Event Financials · Product · Reconcile — *Reconcile and close event financials*
 
 #### Fixed Conditions
@@ -650,12 +659,12 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - The de facto data-integrity function for the entire venue — depends on event planners, operations, contractors, and payroll to enter their data correctly, and absorbs every gap as their own problem to resolve
 - Responsible for monthly financial reporting to executive directors, department heads, and — at public venues — a city CFO (Chief Financial Officer) or government board
 
-### Morgan Rivera — Venue Director ("The Orchestrator")
+### Venue Director ("The Orchestrator")
 
 **Product area:** Momentus Events  
-**Primary object:** Event  
-**Quote:** "They hold the whole performance together." — Morgan Rivera · Venue Director  
-**Interaction grammar:** Event · Product · Manage — *Manage the full event lifecycle*
+**Primary object:** Event Intelligence  
+**Quote:** "They hold the whole performance together."  
+**Interaction grammar:** Event Intelligence · Product · Synthesize — *Synthesize Event Intelligence across the full event lifecycle*
 
 #### Fixed Conditions
 
@@ -674,10 +683,11 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Authority over sales, planning, and operations — the full event lifecycle
 - P&L accountable — ultimately responsible for the venue’s commercial performance
 - The strategic link between what the venue promises and what it delivers
+- Responsible for tracking the full estimated → planned → actual chain across sales, planning, and operations — surfacing where and why delivery diverged from the original estimate, and feeding that back into how similar events are sold and planned next time
 
-#### Vertical-specific variants of Morgan Rivera
+#### Vertical-specific variants of Venue Director
 
-##### Arts & Culture: Eliza Everett · Executive Director ("The Momentus Buyer")
+##### Arts & Culture: Executive Director ("The Momentus Buyer")
 
 **Fixed Conditions**
 - Their personality is mission-driven with deep institutional loyalty, measuring success by community impact as much as revenue
@@ -694,7 +704,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Must balance earned revenue (rentals, tickets) with contributed revenue (donor support, grants) — a financial model unique to this vertical
 - Holds final say on whether the venue pursues presented content vs. rentals-only — a strategic fork that defines the product complexity
 
-##### Corporate: Dani Deter · Director, Events Experience ("The Momentus Buyer")
+##### Corporate: Director, Events Experience ("The Momentus Buyer")
 
 **Fixed Conditions**
 - Their personality is analytical and client-centric, bringing extensive hotel and corporate events experience and a competitive evaluation mindset to technology decisions
@@ -709,9 +719,9 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 **Structural Status**
 - P&L (profit and loss) accountable for the campus events program — must demonstrate ROI (Return on Investment) of Momentus investment to corporate leadership
 - Manages a multi-campus deployment goal — success at the current campus unlocks potential global rollout
-- Works above Event Management Lead (Eden) for performance data; relies on Bookings Manager (Bettie) for intake and calendar operations
+- Works above the Event Management Lead for performance data; relies on the Bookings Manager for intake and calendar operations
 
-##### Higher Ed: Sally Sanders · Sr. Manager, Event Services ("The Strategic Thinker")
+##### Higher Ed: Sr. Manager, Event Services ("The Strategic Thinker")
 
 **Fixed Conditions**
 - Their personality is analytically rigorous and institutionally minded, comfortable at the intersection of event operations and university finance
@@ -726,13 +736,13 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 **Structural Status**
 - Responsible for payment generation, internal charge-backs, and revenue vs. cost tracking across all CES (Conference & Event Services) events
 - Strategic link between CES (Conference & Event Services) operations and university administration — must translate event data into institutional financial language
-- Works above Booking Coordinator (Barb) and Event Coordinator (Ernie) — oversees both intake performance and execution quality
+- Works above the Booking Coordinator and the Event Coordinator — oversees both intake performance and execution quality
 
-#### Secondary / adjacent personas around Morgan Rivera
+#### Secondary / adjacent personas around Venue Director
 
-##### Eliza Everett — Executive Director (Arts & Culture) · "The Momentus Buyer"
+##### Executive Director (Arts & Culture) · "The Momentus Buyer"
 
-**Relationship to Morgan Rivera:** Mission-driven executive leader who balances community impact with financial sustainability — a different decision-making framework than revenue-first venue management.
+**Relationship to Venue Director:** Mission-driven executive leader who balances community impact with financial sustainability — a different decision-making framework than revenue-first venue management.
 
 **Fixed Conditions**
 - Their personality is caring, artistic, and community-oriented — a former performer who is deeply mission-driven but pragmatic about the bottom line
@@ -749,9 +759,9 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Must balance earned revenue (rentals, ticket sales) with contributed revenue (donor support, grants) — a financial model unique to cultural institutions
 - Holds final say on whether the venue pursues presented content — this strategic choice determines the full scope of operational complexity the team must manage
 
-##### Dani Deter — Director, Events Experience (Corporate) · "The Momentus Buyer"
+##### Director, Events Experience (Corporate) · "The Momentus Buyer"
 
-**Relationship to Morgan Rivera:** Drives the corporate campus events technology purchase and oversees global rollout — success at one campus determines whether Momentus scales to all locations worldwide.
+**Relationship to Venue Director:** Drives the corporate campus events technology purchase and oversees global rollout — success at one campus determines whether Momentus scales to all locations worldwide.
 
 **Fixed Conditions**
 - Their personality is outgoing, analytical, strategic, and client-centric, bringing extensive hotel and corporate events experience and a competitive evaluation mindset to platform decisions
@@ -765,12 +775,12 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 **Structural Status**
 - P&L (profit and loss) accountable for the campus events program — must demonstrate ROI of Momentus to corporate leadership to justify continued investment and global expansion
-- Works closely with Event Management Lead (Eden) for performance data and Bookings Manager (Bettie) for calendar operations; low personal system usage
+- Works closely with the Event Management Lead for performance data and the Bookings Manager for calendar operations; low personal system usage
 - Manages a multi-campus deployment ambition — standardization and replicability are as important as functionality at the current campus
 
-##### Matt Michaels — Manager, Workplace Experience (Corporate) · "The Partner Buyer"
+##### Manager, Workplace Experience (Corporate) · "The Partner Buyer"
 
-**Relationship to Morgan Rivera:** Proposed and drives Momentus adoption on campus — manages both the corporate company relationship and the employee hospitality experience simultaneously.
+**Relationship to Venue Director:** Proposed and drives Momentus adoption on campus — manages both the corporate company relationship and the employee hospitality experience simultaneously.
 
 **Fixed Conditions**
 - Their personality is decisive, organized, approachable, proactive, and empathetic — the internal champion who proposed Momentus as the centralized platform for the campus
@@ -784,12 +794,12 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 **Structural Status**
 - Accountable for white-glove hospitality experience, space utilization, and staff satisfaction simultaneously — a three-way performance requirement that creates competing priorities
-- Drives team adoption — his buy-in is necessary but insufficient; the team (Eden, Elliott, Bettie) must also adopt the platform for the investment to pay off
+- Drives team adoption — his buy-in is necessary but insufficient; the team must also adopt the platform for the investment to pay off
 - Reports to corporate client company on events performance and ROI (Return on Investment); must quantify and communicate the value of the events program in business terms
 
-##### Derek Delgado — Director, Special Events (Arts & Culture) · "The Space Maximizer"
+##### Director, Special Events (Arts & Culture) · "The Space Maximizer"
 
-**Relationship to Morgan Rivera:** Oversees venue rentals, internal programming, donor events, and regular tours — a mid-level director who drove the Momentus purchase decision and manages multiple event types simultaneously.
+**Relationship to Venue Director:** Oversees venue rentals, internal programming, donor events, and regular tours — a mid-level director who drove the Momentus purchase decision and manages multiple event types simultaneously.
 
 **Fixed Conditions**
 - Their personality is knowledgeable, strategic, visionary, and considerate — a lifelong cultural institution advocate who drives community engagement through diverse event programming
@@ -803,7 +813,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 **Structural Status**
 - Oversees a combination of venue rentals, recurring programming, donor and membership events — a portfolio breadth that no other single director in any other vertical manages
-- Consults on mission + revenue go/no-go decisions for rental inquiries alongside Rental Sales Coordinator (Ryan) — approves which events serve the institution's interests
+- Consults on mission + revenue go/no-go decisions for rental inquiries alongside the Rental Sales Coordinator — approves which events serve the institution's interests
 - Platform language that defaults to rental-centric concepts (contracts, customers) creates friction for programming and exhibition use cases unique to the A&C vertical
 
 ## Primary Objects (Semantic Layer)
@@ -890,12 +900,12 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 
 #### Fixed Conditions — Identity descriptors. Set once, never changed.
 
-- **Work Order Type** — Setup, Breakdown, F&B, AV, Security…
-- **Linked Function / Booking** — the event this work order belongs to
-- **Space / Location** — where the work order must be executed
+- **Event Work Type** — Setup, Breakdown, F&B, AV, Security…
+- **Linked Function / Booking** — the event this Event Work belongs to
+- **Space / Location** — where the Event Work must be executed
 - **Required Start / Due Time** — scheduled execution window
 - **Resource Requirements** — equipment, inventory, materials needed
-- **Generated From** — BEO reference / work order source
+- **Generated From** — BEO reference / Event Work source
 
 #### Dynamic States — State descriptors. Change through the object lifecycle.
 
@@ -907,19 +917,20 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 
 #### Structural Status — System position. Authority, assignment, record identity.
 
-- **Assigned Crew / Staff** — who is executing the work order
+- **Assigned Crew / Staff** — who is executing the Event Work
 - **Supervising Supervisor** — accountable operations role
 - **Department Owner** — Facilities, F&B, AV, Security
-- **Work Order # / Task ID** — system-generated identifier
+- **Event Work ID** — system-generated identifier
 - **BEO Reference** — traceability back to Event Plan
 - **Verification Authority** — who can mark Verified / sign off
 - **Priority** — Urgent / High / Normal / Low
+- **Department Naming** — varies by venue — e.g. the same function may be called "Catering" at one venue and "Concessions" at another; no canonical taxonomy across customers
 
 #### Actions
 
 - **Create**: Brings a new Event Work into existence within the system — defining the work to be completed, the crew responsible, and the execution window.
 - **Update**: Modifies the attributes of an existing Event Work — such as its status, priority, assigned crew, completion progress, or incident notes — as execution unfolds.
-- **Delete**: Permanently removes an Event Work from the system, erasing the work order and its associated records.
+- **Delete**: Permanently removes an Event Work from the system, erasing it and its associated records.
 
 ### Event Financials (Financial)
 
@@ -956,6 +967,41 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 - **Update**: Modifies the attributes of an existing Event Financials record — recording actuals, flagging variances, advancing invoice approval stage — as the event moves from budget through closeout.
 - **Delete**: Permanently removes an Event Financials record from the system, erasing the budget, actuals, and reconciliation history for that event.
 
+### Event Intelligence (Leadership)
+
+#### Fixed Conditions — Identity descriptors. Set once, never changed.
+
+- **Event Reference** — the Event this intelligence view is synthesized for
+- **Data Sources** — Sales, Planning, Operations, and Finance — the four functions it draws from
+- **Aggregation Scope** — single event, account, or multi-venue portfolio
+- **Metrics Framework** — the North Star and input metrics each function's story rolls up through
+- **Reporting Cadence** — real-time vs. rolling-window view
+- **Created Date** — first synthesis run timestamp
+
+#### Dynamic States — State descriptors. Change through the object lifecycle.
+
+- **Story Coherence** — Fragmented → Partially Connected → Fully Synthesized
+- **Coverage Completeness** — % of the event's data actually captured across all four functions
+- **Cross-Functional Alignment** — Diverging → Aligning → Aligned
+- **Leading Signal Status** — On Track / At Risk / Escalated — rolled up from Sales, Planning, Operations, and Finance signals
+- **Insight Freshness** — Stale / Current / Real-Time
+- **Last Synthesized** — timestamp of most recent recompute
+
+#### Structural Status — System position. Authority, assignment, record identity.
+
+- **Linked Event Opportunity(s)** — source Sales signal
+- **Linked Event Plan(s)** — source Planning signal
+- **Linked Event Work(s)** — source Operations signal
+- **Linked Event Financials** — source Finance signal
+- **Primary Consumer** — Venue Director / Leadership team
+- **Intelligence Record ID** — top-level identifier
+
+#### Actions
+
+- **Create**: Synthesizes a new Event Intelligence view — pulling live signals from Sales, Planning, Operations, and Finance into a single cross-functional story for Leadership.
+- **Update**: Refreshes Event Intelligence as new signals arrive from any of the four functions — keeping the leadership view current without manual reassembly.
+- **Delete**: Removes an Event Intelligence view, without affecting the underlying Event Opportunity, Plan, Work, or Financials records it was synthesized from.
+
 ### Event (End-to-End)
 
 #### Fixed Conditions — Identity descriptors. Set once, never changed.
@@ -971,7 +1017,7 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 
 - **Overall Status** — Prospect → Booked → Planning → Confirmed → Executing → Closed
 - **Coverage Completeness** — % of lifecycle managed in-platform
-- **ME Progress** — Booking ✓ · Plan ✓ · Tasks ✓
+- **ME Progress** — Booking ✓ · Plan ✓ · Event Work ✓
 - **Revenue Realization** — actuals vs. contracted value
 - **Execution Health** — On Track / At Risk / Escalated
 - **Client Approval State** — Pending → Approved → Change Requested
@@ -981,61 +1027,61 @@ Each object is defined by three attribute types (Fixed Conditions, Dynamic State
 - **Event Master Record ID** — top-level system identifier
 - **Linked Booking Record(s)** — all associated Event Opportunity objects
 - **Linked Event Plan(s)** — all associated BEO / function plans
-- **Linked Event Work(s)** — all operational work orders
+- **Linked Event Work(s)** — all associated Event Work
 - **Primary Account Owner** — lead responsible across lifecycle
 - **Created Date** — first capture timestamp
 
 #### Actions
 
-- **Create**: Brings a new Event into existence within the system — establishing the top-level record that unifies all bookings, plans, and work orders under a single event lifecycle.
+- **Create**: Brings a new Event into existence within the system — establishing the top-level record that unifies all bookings, plans, and Event Work under a single event lifecycle.
 - **Update**: Modifies the attributes of an existing Event — such as its overall status, execution health, revenue realization, or coverage completeness — as it moves through its lifecycle.
 - **Delete**: Permanently removes an Event from the system, along with all linked booking, planning, and operations records.
 
 _Note: each object card also has a "Secondary Objects" slot in the UI (`sec-objs-*`) that is currently an empty placeholder — not yet wired to data. See ARCHITECTURE.md._
 
-## North Star Framework (Strategy Layer)
+## Strategy and North Stars (Strategy Layer)
 
-### Momentus Events (ME)
+**Vision** — "Momentus keeps the data clean and current: the manual effort handled, the risks caught, recommendations surfaced when they help. With their expertise amplified by data and insights instead of guesswork, venue and event management professionals trust themselves to focus their judgment on what matters most: the deal, the plan, the crew, the close. The result is more bookings won, less time lost to administration, and every space and date working as hard as it can."
 
-The number of events that progress through at least three lifecycle stages — intake, planning, and execution — entirely within the Momentus platform during a rolling 30-day window, across all active accounts.
+**Vision Slogan** — Clean the data. Amplify the expertise. Measure the result.
 
-`Not a vanity metric`  `Expresses customer value`  `Leading indicator of revenue`
+**Why We Do It** — "Because we believe event and venue management professionals already hold the expertise. They know what's worth chasing, what the plan requires, what the floor needs, and what the numbers mean. They shouldn't have to burn the day digging for it, apologizing for the gap, putting off fires, or waiting for the truth to arrive too late to shape what happens next."
 
-#### Key Input Metrics
+**Why We Do It Slogan** — They hold the expertise, we amplify it.
 
-**Adoption · Active user — Active ME accounts**  
-Number of accounts with at least one event counted toward Momentus Events in the past 30 days. Measures how many venues are realizing core platform value.
+Each product area is headed "Momentus <Area>" — its Primary Object/Persona/Job, then its own Mission, Vision, and Why We Do It, then the North Star metric that proves the strategy is working, then Key Input Metrics. A Golden Circle (Why/How/What) read of the product org's 3-year vision. Finance has no supporting GTM deck yet, unlike Sales/Planning/Operations/Events — its Why/Mission/Vision are grounded only in Event Lifecycle Map research, a known gap. See `MOMENTUS_GOLDEN_CIRCLE_PROJECT_BRIEF.md` for full sourcing and the style rules behind this copy.
 
-**Engagement · Feature usage — Avg. workflow stages per event**  
-Average number of platform modules used per event (sales, planning, operations, catering, finance). Measures how deeply venues rely on Momentus as one source of truth — and how well aligned teams are across the full handoff chain.
+### Momentus Events North Star
 
-**Retention · Return rate — Year-over-year ME account retention**  
-Percentage of accounts with at least one event counted toward Momentus Events in a given year who also had at least one the prior year. Losing these accounts is an early warning before revenue churn.
+**Event and venue management professionals' expertise amplified**
 
-**Efficiency · Time to value — Avg. time from intake to execution start**  
-Median calendar days from first event record creation to first operational task execution, measured entirely inside Momentus. Shrinking time means platform friction is reducing.
+Momentus Events core value is delivered to event and venue management professionals when their expertise is amplified. Built from five teams working as one — Sales, Planning, Operations, Finance, and Leadership — Momentus Events signals that the entire journey, from first opportunity through final reconciliation, completes end to end, entirely inside the platform, without falling back to outside tools at any handoff. When the key input metrics below are all moving in the right direction, it means the full event lifecycle is delivering its value inside Momentus, start to finish.
 
-**Effectiveness · Task success — % of events completing all three ME stages**  
-Percentage of events that successfully move through all three stages (booking, planning, execution) inside Momentus within the rolling 30-day window. The North Star itself, as a rate.
+### Momentus Sales
 
-#### Rationale
+The strategic approach Momentus has chosen for Sales. The mission and vision driving it, the product area North Star metric that proves it's working, and the specific signals tracked to measure progress. This North Star ladders up into Momentus Events (ME), the company-wide measure of the full event lifecycle.
 
-**Why not revenue or bookings?**  
-Revenue is a lagging indicator. Bookings only measure Alex's success. Momentus Events measures whether the entire promise — book it, plan it, execute it — is delivered inside Momentus. It's the only metric that captures all three products working together.
+**Primary object:** Event Opportunity
 
-**What does Momentus Events tell us that Annual Recurring Revenue (ARR) doesn't?**  
-Annual Recurring Revenue tells you what customers paid. Momentus Events tells you whether they got what they paid for. An account that pays for all three products but executes operations on paper hasn't realized the platform's value — and is at high churn risk.
+**Primary persona:** Sales Manager — "The Dream Catcher"
 
-**How does Momentus Events align Product Management, Engineering, and Design?**  
-Any feature that doesn't move Momentus Events is a distraction. Any friction that breaks the Momentus Opportunities → Momentus Plans → Momentus Work chain is a product failure. Momentus Events gives every team a shared definition of what "done" means for a venue.
+**Primary job:** Secure Event Opportunity
 
-### Momentus Opportunities (MO)
+**Mission:** We make Sales Momentus by illuminating opportunities to help sales teams chart course through the future.
 
-The number of event opportunities that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM (Customer Relationship Management) tool, email thread, or paper contract — combined with the velocity of that conversion: the elapsed time from qualified inquiry to signed contract. An opportunity counts only when the entire intake-to-contract workflow completes inside the platform, and faster inquiry-to-signature time is tracked as a core signal of sales health alongside volume.
+**Vision:** Momentus keeps every account's history clean and handy, the pipeline and calendar visible in real time, and revenue potential illuminated by amplified expertise and data insights. With reliable account and pipeline history, manual proposal work handled, conflicting holds caught before they reach a client, and the next best opportunity surfaced right when it's needed. So sales managers can focus their judgment on what matters most to make every event Momentus.
+
+**Why We Do It:** Because we believe sales teams know exactly what's worth chasing and they don't have to burn their whole day digging for it.
+
+#### Product Area North Star Metric — Momentus Opportunities (MO) (core value)
+
+**Sales Manager's expertise amplified**
+
+Momentus Sales core value is delivered to the Sales Manager when their expertise is amplified. Momentus Opportunities signals that we are delivering on that promise — that the right opportunity is being surfaced and closed in real time, not chased down manually. When the key input metrics below are all moving in the right direction, it means sales managers are spending their judgment on deciding what to chase, not digging to find it.
+
+_Full metric definition:_ The number of event opportunities that are created, contracted, and signed entirely inside Momentus during a rolling 30-day window — without the process falling back to a separate CRM (Customer Relationship Management) tool, email thread, or paper contract — combined with the velocity of that conversion: the elapsed time from qualified inquiry to signed contract. An opportunity counts only when the entire intake-to-contract workflow completes inside the platform, and faster inquiry-to-signature time is tracked as a core signal of sales health alongside volume. MO is the proof point for Sales's strategic bet: that illuminating the right opportunity — not just recording that one existed — is what lets sales managers chart a course through the future instead of digging for it every day.
 
 `Feeds ME intake stage`  `Closes the CRM fallback gap`  `First link in the ME chain`
-
-**Primary persona:** Alex Smith — Sales Manager · "The Dream Catcher"
 
 #### Key Input Metrics
 
@@ -1065,13 +1111,31 @@ Total opportunities is gameable: a sales rep can log an opportunity after the fa
 **How Momentus Opportunities starts the Momentus Events chain**  
 Momentus Opportunities is the handoff trigger. When the Sales Manager closes an opportunity in-platform, the Event Planner has something to pick up inside Momentus. If the opportunity is logged after the fact — after closing it in a CRM or email — the handoff is broken and Momentus Events cannot start cleanly. Momentus Opportunities measures whether sales gave planning a clean baton.
 
-### Momentus Plans (MP)
+### Momentus Planning
 
-The number of events with complete, approved function detail — the full what, when, where, and how — authored, approved, and distributed to operations inside Momentus in a rolling 30-day window. An event counts only when the full BEO (Banquet Event Order) / event order is created and shared without leaving the platform.
+The strategic approach Momentus has chosen for Planning. The mission and vision driving it, the product area North Star metric that proves it's working, and the specific signals tracked to measure progress. This North Star ladders up into Momentus Events (ME), the company-wide measure of the full event lifecycle.
+
+**Primary object:** Event Plan
+
+**Primary persona:** Event Planner — "The Promise Keeper"
+
+**Primary job:** Detail Event Plan
+
+**Mission:** We make Planning Momentus by grounding details to help planning teams navigate complexity with insight.
+
+**Vision:** Momentus keeps every event's plan clean and handy, function and detail status visible in real time, and downstream impact illuminated by amplified expertise and data insights. With reliable handoffs from sales, manual BEO assembly handled, missing details caught before they reach operations, and the next required action surfaced right when it's needed. So event planners can focus their judgment on what matters most to make every event Momentus.
+
+**Why We Do It:** Because we believe planning teams' experience is rich in insights they don't want to miss and have to be the ones apologizing for a gap between the plan and the floor.
+
+#### Product Area North Star Metric — Momentus Plans (MP) (core value)
+
+**Event Planner's expertise amplified**
+
+Momentus Planning core value is delivered to the Event Planner when their expertise is amplified. Momentus Plans signals that we are delivering on that promise — that every detail is grounded and visible before it reaches operations, not discovered missing on the floor. When the key input metrics below are all moving in the right direction, it means planners are navigating complexity with insight instead of apologizing for the gap between the plan and what actually happens.
+
+_Full metric definition:_ The number of events with complete, approved function detail — the full what, when, where, and how — authored, approved, and distributed to operations inside Momentus in a rolling 30-day window. An event counts only when the full BEO (Banquet Event Order) / event order is created and shared without leaving the platform. MP measures whether Momentus is actually grounding that detail for planners, rather than leaving them to navigate the complexity — and the floor — on their own.
 
 `Feeds ME planning stage`  `Closes the Word/Excel leakage gap`  `Enables downstream ops execution`
-
-**Primary persona:** Sam Evans — Event Planner · "The Promise Keeper"
 
 #### Key Input Metrics
 
@@ -1088,12 +1152,12 @@ Percentage of active planners in a given month who were also active the prior mo
 Median hours from event opportunity handoff from sales to complete function detail distribution to operations, measured entirely inside the platform. Shrinking time signals friction reduction in the detailing workflow.
 
 **Effectiveness · Task success — % events with approved detail before event date**  
-Percentage of events where function detail is marked complete and approved inside Momentus before the event execution date. Direct measure of whether the product enables Sam to keep their promise to ops.
+Percentage of events where function detail is marked complete and approved inside Momentus before the event execution date. Direct measure of whether the product enables the Event Planner to keep their promise to ops.
 
 #### Rationale
 
 **The core failure Momentus Plans addresses**  
-The vertical research explicitly states: "Elite customers tend to detail and share event needs in Word/Excel. Downstream this makes ops more manual." Momentus Plans only counts when Sam documents and distributes the full plan inside Momentus — triggering a clean handoff to Jordan.
+The vertical research explicitly states: "Elite customers tend to detail and share event needs in Word/Excel. Downstream this makes ops more manual." Momentus Plans only counts when the Event Planner documents and distributes the full plan inside Momentus — triggering a clean handoff to the Operations Director.
 
 **Why not events created or functions added?**  
 Creating a function record doesn't mean the plan is complete or shared. Momentus Plans requires both completion (all detail fields populated) and distribution (shared to ops inside the platform). A half-finished event order sent via email is a failure state for Momentus Events.
@@ -1101,58 +1165,94 @@ Creating a function record doesn't mean the plan is complete or shared. Momentus
 **How Momentus Plans connects to Momentus Events**  
 Momentus Plans is the middle link. If the Event Planner's detail lives in Word, operations has nothing to execute from inside Momentus, and Momentus Events cannot complete. Every event counted toward Momentus Plans is one operations can pick up in-platform — the bridge between sales and execution.
 
-### Momentus Work (MW)
+### Momentus Operations
 
-The number of events where all assigned work orders — setup, execution, teardown, incident response — are created, tracked, and closed inside Momentus during the event execution window (pre-event, day-of, post-event) in a rolling 30-day window. An event counts only when execution does not fall back to paper, radio, or email.
+The strategic approach Momentus has chosen for Operations. The mission and vision driving it, the product area North Star metric that proves it's working, and the specific signals tracked to measure progress. This North Star ladders up into Momentus Events (ME), the company-wide measure of the full event lifecycle.
+
+**Primary object:** Event Work
+
+**Primary persona:** Operations Director — "The Moment Maker"
+
+**Primary job:** Orchestrate Event Work
+
+**Mission:** We make Operations Momentus by surfacing work to help operations teams make the vision unfold.
+
+**Vision:** Momentus keeps every event's work clean and handy, crew status and incident activity visible in real time, and staffing and resource needs illuminated by amplified expertise and data insights. With reliable handoffs from planning, manual dispatch and reporting handled, risks and escalation-worthy incidents caught before they become client-visible failures, and the next required action surfaced right when it's needed. So operations directors can focus their judgment on what matters most to make every event Momentus.
+
+**Why We Do It:** Because we believe operations teams want to see the whole shift coming and they don't want to be stuck reacting to whatever fire hits first.
+
+#### Product Area North Star Metric — Momentus Work (MW) (core value)
+
+**Operations Director's expertise amplified**
+
+Momentus Operations core value is delivered to the Operations Director when their expertise is amplified. Momentus Work signals that we are delivering on that promise — that the crew is working from real-time truth, not paper and radio reconstructed after the fact. When the key input metrics below are all moving in the right direction, it means operations directors are seeing the whole shift coming instead of reacting to whatever fire hits first.
+
+_Full metric definition:_ The number of events where all assigned Event Work — setup, execution, teardown, incident response — is received, tracked, and closed inside Momentus during the event execution window (pre-event, day-of, post-event) in a rolling 30-day window. An event counts only when execution does not fall back to paper, radio, or email. MW is where that promise gets tested hardest: it only counts when the crew is working from real-time truth instead of reconstructing what happened after the fact — the difference between seeing the whole shift coming and reacting to whatever fire hits first.
 
 `Completes the ME chain`  `Closes the paper/radio execution gap`  `Direct measure of operational value realization`
 
-**Primary persona:** Jordan Olsen — Operations Director · "The Moment Maker"
-
 #### Key Input Metrics
 
-**Adoption · Active user — Active ops supervisors creating work orders**  
-Number of operations supervisors who created or updated at least one work order inside Momentus — not on paper or printed sheets — in the past 30 days.
+**Adoption · Active user — Active Operations Directors/department heads managing Event Work**  
+Number of Operations Directors or department heads who received and updated at least one piece of Event Work inside Momentus — not on paper or printed sheets — in the past 30 days. Event Work is generated automatically from the service order; the signal here is whether operations manages it inside the platform, not whether it exists.
 
-**Engagement · Feature usage — Avg. work orders created and tracked per event**  
-Average number of work orders assigned and updated per event inside the platform. Measures how deeply the operations workflow executes inside Momentus vs. managed via radio calls, paper work orders, or manual check-ins.
+**Engagement · Feature usage — Events with actively managed Event Work, by operations department**  
+Number of events where operations actively engages with (views, updates, or completes) the received Event Work inside Momentus, broken out by operations department (e.g. Facilities, F&B, AV, Security) — a breadth measure of how widely departments manage their work through the platform rather than defaulting to printed sheets or room diagrams alone, and rather than a per-event average that can look healthy while whole departments never engage at all.
 
-**Retention · Return rate — Month-over-month ops user return rate**  
-Percentage of active operations users in a given month who were also active the prior month. Consistent return signals the platform has embedded into their execution rhythm, not just their setup routine.
+**Retention · Return rate — Month-over-month return rate, Director/department-head tier**  
+Percentage of active Operations Directors and department heads in a given month who were also active the prior month — scoped to the management tier specifically, since crew and staff are frequently no-login users and wouldn't be a meaningful retention signal. Consistent return signals the platform has embedded into how the Director orchestrates, not just initial setup.
 
-**Efficiency · Time to value — Avg. task assignment-to-completion time**  
-Median hours from task creation to closure inside Momentus per event. A decreasing cycle time signals the platform is accelerating execution, not just recording it after the fact.
+**Efficiency · Time to value — Time for a Director's team to reach full orchestration inside Momentus**  
+Time from when an Operations Director begins directing work through Momentus for a given capability to the point their team is running that orchestration fully inside the platform — without configuration blockers or falling back to outside tools. A shrinking time-to-value signals the platform delivers on its promise quickly, not just eventually.
 
-**Effectiveness · Task success — Work order completion rate before or during event**  
-Percentage of assigned work orders marked complete before or during the event. The research finding — "we don't really have a section where people tick off that they have done the event set up" — is exactly what Momentus Work closes.
+**Effectiveness · Task success — % of events fully orchestrated end-to-end inside Momentus**  
+Percentage of events where the Operations Director successfully orchestrated all Event Work end-to-end inside Momentus — every department's Event Work received, tracked, and closed — without an unresolved incident or a manual reconciliation step required afterward. Measures whether the whole event's operations were successfully directed, not whether any single piece of Event Work got checked off.
 
 #### Rationale
 
 **The core failure Momentus Work addresses**  
-The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Jordan's execution currently happens on printed sheets, radio, and email follow-up. Momentus Work rises only when that execution moves inside the platform — it cannot be gamed by creating work orders and never updating them.
+The vertical research is explicit: "AMER customers use more paper-based manual process for job assignment and communication." Execution on the ground currently happens on printed sheets, radio, and email follow-up, leaving the Operations Director to coordinate and reconstruct status manually. Momentus Work rises only when that execution moves inside the platform — it cannot be gamed by a piece of Event Work sitting in the system and never being acted on.
 
 **Why Momentus Work is the hardest and most valuable metric**  
 The value realization gap is largest in operations. Enterprise customers range "from using customized reports to MWO (Mobile Work Orders) to no ops in Momentus due to usability, cost, and learning curve." Momentus Work directly measures whether that gap is closing — and it's the gap the convention center research identified as most underserved.
 
 **How Momentus Work completes Momentus Events**  
-Momentus Work is the final link. Momentus Opportunities hands off a contracted booking. Momentus Plans hands off a detailed plan. Momentus Work completes the loop by executing that plan inside the platform. An event that passes through Momentus Opportunities, Momentus Plans, and Momentus Work counts toward Momentus Events. Jordan is the last mile.
+Momentus Work is the final link. Momentus Opportunities hands off a contracted booking. Momentus Plans hands off a detailed plan. Momentus Work completes the loop by executing that plan inside the platform. An event that passes through Momentus Opportunities, Momentus Plans, and Momentus Work counts toward Momentus Events. The Operations Director is the last mile.
 
 **What Momentus Work unlocks beyond single-event execution**  
 Momentus Work's value compounds when venues run multiple concurrent events. Operations teams that execute inside Momentus gain the ability to think holistically — balancing load in and load out across events, deploying crew efficiently, and avoiding redundant labor. A venue running on paper can only optimize one event at a time. Momentus Work measures whether operations has the platform foundation to think bigger.
 
 **Why the Planning-to-Ops handoff is the highest-stakes moment**  
-Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on Jordan's team without a safety net. Momentus Work rises when that handoff is clean, written, and inside Momentus.
+Planning to Operations is the critical line of value delivery — it's where the client finally experiences what the venue promised. Every detail that stays in an email, a Word doc, or a verbal briefing instead of the platform is a risk that lands on the Operations Director's team without a safety net. Momentus Work rises when that handoff is clean, written, and inside Momentus.
 
 **What does the gap look like at its most extreme?**  
-One convention center supervisor described it plainly: "technology stops at the supervisor." Front-line crew work from a printed assignment and a radio — no device, no login — so every completion, delay, and incident is relayed verbally and then reconstructed from memory into a manual end-of-day report emailed to other departments. Momentus Work only reflects reality once that hand-translation step disappears, not just once a work order exists somewhere in the platform.
+One convention center supervisor described it plainly: "technology stops at the supervisor." Front-line crew work from a printed assignment and a radio — no device, no login — so every completion, delay, and incident is relayed verbally and then reconstructed from memory into a manual end-of-day report emailed to other departments. Momentus Work only reflects reality once that hand-translation step disappears, not just once a piece of Event Work exists somewhere in the platform.
 
-### Momentus Financials (MF)
+### Momentus Financial
 
-The number of events whose full financial closeout — budget reconciliation, GL (General Ledger) matching, invoice generation and approval — is completed entirely inside Momentus during a rolling 30-day window, without falling back to a separate ERP (Enterprise Resource Planning) system (e.g. PeopleSoft), spreadsheet, or manual cross-system reconciliation.
+The strategic approach Momentus has chosen for Financial. The mission and vision driving it, the product area North Star metric that proves it's working, and the specific signals tracked to measure progress. This North Star ladders up into Momentus Events (ME), the company-wide measure of the full event lifecycle.
+
+**Primary object:** Event Financials
+
+**Primary persona:** Finance Director — "The Financial Steward"
+
+**Primary job:** Reconcile Event Financials
+
+**Mission:** We make Finance Momentus by consolidating records to help financial teams set truth as north star.
+
+**Vision:** Momentus keeps every event's financial record clean and handy, budget-to-actual variance visible in real time, and month-end position illuminated by amplified expertise and data insights. With reliable data entered at the source, manual reconciliation handled, variances and disputes caught before they reach the close, and corrective action surfaced right when it's needed. So finance directors can focus their judgment on what matters most to make every event Momentus.
+
+**Why We Do It:** Because we believe financial teams hold the truth every other team depends on and they don't want that truth to arrive too late to shape what happens next.
+
+#### Product Area North Star Metric — Momentus Financials (MF) (core value)
+
+**Finance Director's expertise amplified**
+
+Momentus Financial core value is delivered to the Finance Director when their expertise is amplified. Momentus Financials signals that we are delivering on that promise — that the numbers every other team depends on are trustworthy in real time, not accurate three weeks after close. When the key input metrics below are all moving in the right direction, it means finance directors are shaping what happens next instead of only explaining what already happened.
+
+_Full metric definition:_ The number of events whose full financial closeout — budget reconciliation, GL (General Ledger) matching, invoice generation and approval — is completed entirely inside Momentus during a rolling 30-day window, without falling back to a separate ERP (Enterprise Resource Planning) system (e.g. PeopleSoft), spreadsheet, or manual cross-system reconciliation. MF measures whether that truth is available in real time, not just accurate three weeks after close — the difference between a financial record that shapes decisions and one that only explains them afterward.
 
 `Peer metric alongside MO / MP / MW`  `Closes the multi-system reconciliation gap`  `Direct measure of financial value realization`
-
-**Primary persona:** Casey Lindgren — Finance Director · "The Financial Steward"
 
 #### Key Input Metrics
 
@@ -1188,301 +1288,912 @@ City-owned and public assembly venues route vendor and budget decisions through 
 **What Momentus Financials unlocks beyond a single event's close**  
 Clean, timely reconciliation is what makes self-serve department profit-and-loss (P&L) reporting, trend/what-if budget modeling, and stakeholder-ready economic impact reporting possible. Finance can't build any of that on data that's still being manually stitched together.
 
+### Momentus Leadership
+
+The strategic approach Momentus has chosen for Leadership. The mission and vision driving it, the product area North Star metric that proves it's working, and the specific signals tracked to measure progress. This North Star ladders up into Momentus Events (ME), the company-wide measure of the full event lifecycle.
+
+**Primary object:** Event Intelligence
+
+**Primary job:** Synthesize Event Intelligence
+
+**Mission:** We make Events Momentus by synthesizing events to help leadership teams steer with a clear vision.
+
+**Vision:** Momentus keeps every event's full record clean and handy, performance across sales, planning, and operations visible in real time, and next-event decisions illuminated by amplified expertise and data insights. With reliable visibility across every team, manual cross-department reporting handled, gaps between estimate and delivery caught before they repeat, and the next opportunity to improve surfaced right when it's needed. So venue directors can focus their judgment on what matters most to make every event Momentus.
+
+**Why We Do It:** Because we believe leadership teams have the drive to succeed but need help managing the complexity of organizations this size, not another patchwork of reports pieced together after the fact.
+
+#### Product Area North Star Metric — Momentus Intelligence (MI) (core value)
+
+**Venue Director's expertise amplified**
+
+Momentus Leadership core value is delivered to the Venue Director when their expertise is amplified. Momentus Intelligence signals that we are delivering on that promise — that every team is performing as one connected story, not a patchwork of reports pieced together after the fact. When the key input metrics below are all moving in the right direction, it means venue directors are steering with a clear vision instead of assembling one from five different departments.
+
+_Full metric definition:_ The number of events where the signals from Sales, Planning, Operations, and Finance are fully synthesized into a single connected story — visible to leadership entirely inside Momentus, in real time, during a rolling 30-day window — without being manually assembled from four separate departments. MI is the proof point for Leadership's strategic bet: that steering a venue requires seeing the whole picture as one story, not reconstructing it from five disconnected reports after the fact.
+
+`Not a vanity metric`  `Expresses customer value`  `Leading indicator of revenue`
+
+#### Key Input Metrics
+
+**Adoption · Active user — Active venue directors viewing Event Intelligence**  
+Number of venue directors or other leadership users who opened an Event Intelligence view inside Momentus in the past 30 days. Measures how many leaders get their cross-functional picture from Momentus instead of assembling it themselves.
+
+**Engagement · Feature usage — Avg. functions represented per Event Intelligence view**  
+Average number of the four functions — Sales, Planning, Operations, Finance — with live data represented in a given Event Intelligence view. Measures how complete the connected story is, not just whether a view exists.
+
+**Retention · Return rate — Week-over-week Event Intelligence return rate**  
+Percentage of leadership users who returned to an Event Intelligence view in a given week who also did the week before. A leader who stops returning is falling back to manually assembled reporting.
+
+**Efficiency · Time to value — Avg. time from signal change to leadership visibility**  
+Median time between a change in an underlying Sales, Planning, Operations, or Finance signal and that change appearing in Event Intelligence. Shrinking time means the story stays current instead of going stale.
+
+**Effectiveness · Task success — % of events with a fully synthesized story**  
+Percentage of events where all four functions' signals are represented and current in Event Intelligence, with no gaps. The North Star itself, as a rate.
+
+#### Rationale
+
+**Why not just give leadership a dashboard?**  
+A dashboard still requires someone to build and maintain the connections between Sales, Planning, Operations, and Finance data. Momentus Intelligence measures whether that connection already exists inside the platform — automatically — not whether a report happened to be built well.
+
+**What does Momentus Intelligence tell us that Momentus Events doesn't?**  
+Momentus Events measures whether the full lifecycle completed inside Momentus. Momentus Intelligence measures whether leadership can actually see that lifecycle as one story while it's happening. Completion and visibility are different problems — a venue can have one without the other.
+
+**How does Momentus Intelligence align Product Management, Engineering, and Design?**  
+Any feature that fragments the leadership view — a report that only covers one function, a metric that requires manual reconciliation — is a product failure. Momentus Intelligence gives every team a shared definition of what "visible" means for a venue's leadership.
+
 ## Momentus Offering (Strategy Layer)
 
-Which Momentus products serve each stage of the event lifecycle — "stage" here means Sales/Planning/Operations/Financial/End-to-End, not the 8 JTBD stages used elsewhere on this site. Each area card below shows only entries tagged to that area; the End-to-End card shows every entry, including universal (cross-area) ones. "Inferred" flags a piece-to-stage assignment that is this map's own judgment call rather than a literal statement in the source.
+A capability matrix showing which Momentus products serve each stage of the event lifecycle — "stage" here means Sales/Planning/Operations/Financial/Leadership, not the 8 JTBD stages used elsewhere on this site. Rows are generic capability names, ordered from broadest (found across the most products) to narrowest (product-specific). Each area section below shows only capabilities tagged to that area, plus universal (cross-area) ones; the Leadership section shows every capability. "Inferred" flags a piece-to-capability assignment that is this map's own judgment call rather than a literal statement in the source. A "Third-Party" line lists non-Momentus tools customers use for that capability where known.
 
 ### Momentus for Sales (Sales)
 
-#### Enterprise
+#### Core Event Record (3/4 products)
 
-- **Accounts & Contacts** — Manages Account (company/organization) and Contact (person) records with affiliations, designations/statuses, relationships (incl. bill-to), duplicate checking, and CSV/XLSX/XML import. _(inferred)_ _(source: Enterprise Accounts & Contacts – Momentus Support Center)_
-- **Campaigns** — Gathers accounts/contacts meeting defined criteria for mass communication efforts; campaigns can be copied, edited, and worked via email or phone outreach steps. _(inferred)_ _(source: Enterprise Campaigns – Momentus Support Center)_
-- **Contracts** — Generates the space rental agreement for an event, bundling bookings/service/housing orders, contract addendums, clauses, and revision history tracking. _(inferred)_ _(source: Enterprise Contracts – Momentus Support Center)_
-- **Event Opportunities** — Tracks a specific possibility of business with an account, usually used at the beginning of a sale, including Room Flow hotel forecasting, economic impact figures, and Group Profiles for recurring events. _(source: Enterprise Event Opportunities – Momentus Support Center)_
-- **Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
-- **Exhibition Management** — Manages Exhibitors as CRM extensions, exhibitor sales pipelines, booth proposals, co-exhibitors, automatic booth-space charging, and exhibitor invoicing — described in-product as a full suite to plan, sell, and deliver exhibits. _(inferred)_ _(source: Enterprise Exhibition Management – Momentus Support Center)_
-- **Facility Booking** — Reserves and sells space via Bookings, with a Booking Calendar/Agenda, Availability Report, recurring bookings search, and booking-order auto-generation for space rental charges. _(inferred)_ _(source: Enterprise Facility Booking – Momentus Support Center)_
-- **Legacy Membership** — Pre-v30.97 membership functionality (demographics, orders, standing orders) retained for continuity after Membership was rewritten. _(inferred)_ _(source: Enterprise Legacy Membership – Momentus Support Center)_
-- **Membership** — Creates, renews, and administers members via membership types/statuses; supports prospective members and individual or group membership additions. _(inferred)_ _(source: Enterprise Membership – Momentus Support Center)_
-- **Opportunities** — Non-event sales pipeline feature, distinct from Event Opportunities which is used specifically for potential events. _(source: Enterprise Opportunities – Momentus Support Center)_
-- **Sales** — Account Leads (pre-qualification), Probable Revenue calculation (potential revenue × win probability), Sales Goals tracking, and the Group Room Calendar. _(source: Enterprise Sales – Momentus Support Center)_
+_How the Sales Manager uses this: Creates this record the moment a lead becomes worth tracking — everything else attaches to it._
 
-#### Elite
+- **Enterprise — Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
+- **Elite — Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
+- **WeTrack — Events** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
 
-- **Accounts & Contacts** — Manages Account/Contact records, tags, hierarchies, groups, and duplicate merging, plus each contact’s Booking Portal account. _(inferred)_ _(source: Elite Accounts & Contacts – Momentus Support Center)_
-- **Booking Events** — Books events or holds with statuses (prospect/tentative/definite), conflict checking, blackouts/internal events, and Manage Holds by Day. _(inferred)_ _(source: Elite Booking Events – Momentus Support Center)_
-- **Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
-- **Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
-- **Exhibitor Ordering** — Configures events for exhibitor orders, runs an online Exhibitor Store (with instructions/item images), creates/refunds exhibitor invoices, and downloads exhibitor service orders. _(inferred)_ _(source: Elite Exhibitor Ordering – Momentus Support Center)_
-- **Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
-- **Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
-- **Live Entertainment** — Booking workflow for artists/performances with Avails views, house holds, announce/on-sale/pre-sale date management, and post-show settlement/ticket-scaling reports. _(inferred)_ _(source: Elite Live Entertainment – Momentus Support Center)_
-- **Postponed, Canceled, and Lost Holds and Events** — Best-practice workflows for canceling or marking events/holds as Lost vs. Cancel, restoring them, and tracking lost business. _(inferred)_ _(source: Elite Postponed, Canceled, and Lost Holds and Events – Momentus Support Center)_
-- **Sales** — Manages Inquiries (with rental rates, economic impact, estimated revenue), proposal/contract creation and revisions, probability-of-closing updates, and the contract approval workflow. _(source: Elite Sales – Momentus Support Center)_
-- **System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
-- **Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
-- **User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
+#### Accounts & Contacts Management (2/4 products)
 
-#### WeTrack
+_How the Sales Manager uses this: Looks up an account's full relationship history before a call so they're not starting cold._
 
-- **Events (WeTrack)** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
-- **Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
-- **Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
-- **RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+- **Enterprise — Accounts & Contacts** — Manages Account (company/organization) and Contact (person) records with affiliations, designations/statuses, relationships (incl. bill-to), duplicate checking, and CSV/XLSX/XML import. _(inferred)_ _(source: Enterprise Accounts & Contacts – Momentus Support Center)_
+- **Elite — Accounts & Contacts** — Manages Account/Contact records, tags, hierarchies, groups, and duplicate merging, plus each contact’s Booking Portal account. _(inferred)_ _(source: Elite Accounts & Contacts – Momentus Support Center)_
 
-#### Platform
+#### Contract Generation & Approval (2/4 products)
 
-- **Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
-- **Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
-- **APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
-- **Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
-- **Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
-- **OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+_How the Sales Manager uses this: Generates the space rental agreement directly from the confirmed opportunity, without retyping terms into Word._
+
+- **Enterprise — Contracts** — Generates the space rental agreement for an event, bundling bookings/service/housing orders, contract addendums, clauses, and revision history tracking. _(inferred)_ _(source: Enterprise Contracts – Momentus Support Center)_
+- **Elite — Sales (Contracts)** — Proposal/contract creation and revisions plus the contract approval workflow — part of Elite’s combined Sales module. _(source: Elite Sales – Momentus Support Center)_
+
+#### Event Booking / Facility Reservation (2/4 products)
+
+_How the Sales Manager uses this: Checks the Booking Calendar against a client's requested dates before committing to anything verbally._
+
+- **Enterprise — Facility Booking** — Reserves and sells space via Bookings, with a Booking Calendar/Agenda, Availability Report, recurring bookings search, and booking-order auto-generation for space rental charges. _(inferred)_ _(source: Enterprise Facility Booking – Momentus Support Center)_
+- **Elite — Booking Events** — Books events or holds with statuses (prospect/tentative/definite), conflict checking, blackouts/internal events, and Manage Holds by Day. _(inferred)_ _(source: Elite Booking Events – Momentus Support Center)_
+
+#### Exhibition & Exhibitor Management (2/4 products)
+
+_How the Sales Manager uses this: Manages the exhibitor sales pipeline and booth proposals as its own mini sales cycle inside the larger event._
+
+- **Enterprise — Exhibition Management** — Manages Exhibitors as CRM extensions, exhibitor sales pipelines, booth proposals, co-exhibitors, automatic booth-space charging, and exhibitor invoicing. _(inferred)_ _(source: Enterprise Exhibition Management – Momentus Support Center)_
+- **Elite — Exhibitor Ordering** — Configures events for exhibitor orders, runs an online Exhibitor Store (with instructions/item images), creates/refunds exhibitor invoices, and downloads exhibitor service orders. _(inferred)_ _(source: Elite Exhibitor Ordering – Momentus Support Center)_
+
+#### Integrations & Connectors (2/4 products)
+
+- **Elite — Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+- **WeTrack — Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
+
+#### Opportunity / Inquiry Qualification (2/4 products)
+
+_How the Sales Manager uses this: Logs a new inquiry here first, before spending time on a proposal, to catch deal-breakers early._
+
+- **Enterprise — Event Opportunities** — Tracks a specific possibility of business with an account, usually used at the beginning of a sale, including Room Flow hotel forecasting, economic impact figures, and Group Profiles for recurring events. _(source: Enterprise Event Opportunities – Momentus Support Center)_
+- **Elite — Sales (Inquiries)** — Manages Inquiries with rental rates, economic impact, estimated revenue, and probability-of-closing updates — part of Elite’s combined Sales module. _(source: Elite Sales – Momentus Support Center)_
+
+#### AI Assistant (1/4 products)
+
+- **Platform — Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
+
+#### APIs & Webhooks (1/4 products)
+
+- **Platform — APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
+
+#### Booking Cancellation & Lost-Business Tracking (1/4 products)
+
+_How the Sales Manager uses this: Marks a hold Lost vs. Cancel deliberately, since the two carry different reporting and re-booking implications._
+
+- **Elite — Postponed, Canceled, and Lost Holds and Events** — Best-practice workflows for canceling or marking events/holds as Lost vs. Cancel, restoring them, and tracking lost business. _(inferred)_ _(source: Elite Postponed, Canceled, and Lost Holds and Events – Momentus Support Center)_
+
+#### Campaign / Mass Outreach (1/4 products)
+
+_How the Sales Manager uses this: Runs targeted email or phone campaigns against a filtered account list rather than one-by-one outreach._
+
+- **Enterprise — Campaigns** — Gathers accounts/contacts meeting defined criteria for mass communication efforts; campaigns can be copied, edited, and worked via email or phone outreach steps. _(inferred)_ _(source: Enterprise Campaigns – Momentus Support Center)_
+
+#### Cross-Product Analytics (1/4 products)
+
+_How the Sales Manager uses this: Gets the first release of this — standard CRM dashboards — before Operations/Financials analytics ship._
+
+- **Platform — Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
+
+#### Email Communication (1/4 products)
+
+_How the Sales Manager uses this: Sends proposal and follow-up email with merge fields straight from the account/contact record._
+
+- **Elite — Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
+
+#### Follow-Up & Checklist Tasks (1/4 products)
+
+_How the Sales Manager uses this: Tracks lead follow-ups and contract/insurance due dates so nothing slips between touchpoints._
+
+- **Elite — Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
+
+#### Live Entertainment Booking (1/4 products)
+
+_How the Sales Manager uses this: Manages artist and performance Avails and house holds — a distinct booking workflow from standard space rental._
+
+- **Elite — Live Entertainment** — Booking workflow for artists/performances with Avails views, house holds, announce/on-sale/pre-sale date management, and post-show settlement/ticket-scaling reports. _(inferred)_ _(source: Elite Live Entertainment – Momentus Support Center)_
+
+#### Membership Management (1/4 products)
+
+_How the Sales Manager uses this: Administers member renewals and additions as a revenue stream that runs in parallel to event bookings._
+
+- **Enterprise — Membership** — Creates, renews, and administers members via membership types/statuses; supports prospective members and individual or group membership additions. Legacy Membership (pre-v30.97) is retained for continuity after this was rewritten. _(inferred)_ _(source: Enterprise Membership – Momentus Support Center)_
+
+#### Multi-Venue Shared Calendar (1/4 products)
+
+- **Platform — OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+
+#### No-Code Workflow Automation (1/4 products)
+
+- **Platform — Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
+
+#### Non-Event Sales Pipeline (CRM) (1/4 products)
+
+_How the Sales Manager uses this: Tracks non-event business opportunities, like sponsorships, that don't have their own event record yet._
+
+- **Enterprise — Opportunities** — Non-event sales pipeline feature, distinct from Event Opportunities which is used specifically for potential events. _(source: Enterprise Opportunities – Momentus Support Center)_
+
+#### Partner Integration Marketplace (1/4 products)
+
+- **Platform — Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
+
+#### Reporting & Dashboards (1/4 products)
+
+_How the Sales Manager uses this: Pulls prebuilt account/revenue reports without needing a dedicated analyst._
+
+- **Elite — Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
+
+#### Sales Goals & Revenue Forecasting (1/4 products)
+
+_How the Sales Manager uses this: Tracks Probable Revenue and progress against Sales Goals to know if they're on pace for the period._
+
+- **Enterprise — Sales** — Account Leads (pre-qualification), Probable Revenue calculation (potential revenue × win probability), Sales Goals tracking, and the Group Room Calendar. _(source: Enterprise Sales – Momentus Support Center)_
+
+#### Status Indicator System (RAG) (1/4 products)
+
+- **WeTrack — RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+
+#### Sustainability Tracking (1/4 products)
+
+- **WeTrack — Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
+
+#### System Admin & Account-Wide Settings (1/4 products)
+
+- **Elite — System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
+
+#### User Role Permissions (1/4 products)
+
+- **Elite — User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
 
 ### Momentus for Planning (Planning)
 
-#### Enterprise
+#### Core Event Record (3/4 products)
 
-- **Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
-- **Functions** — Sub-activities of an event with their own date/time/space; supports Function Requirements, presenters, Topics & Tracks for conferences, Function Scripting, and Smart Import. _(inferred)_ _(source: Enterprise Functions – Momentus Support Center)_
-- **General Registration** — Back-office registration order management: promo codes, waitlists, registrant types, seating chart auto-fill, session swapping, and Continuing Education Credit tracking. _(inferred)_ _(source: Enterprise General Registration – Momentus Support Center)_
-- **Registration** — Public-facing online registration configuration: registrant profile fields, multi-language/multi-page registration, guest and group registration, dictionaries, and PayPal Express Checkout. _(inferred)_ _(source: Enterprise Registration – Momentus Support Center)_
-- **Room Diagrams** — Space-specific room layout diagramming with layer management, a shape library/common symbols, hotkeys, and direct service-order creation from a diagram. Still live and documented today alongside the newer EventDraw connector below — not fully retired as an earlier PMO strategy doc suggested. _(inferred)_ _(source: Enterprise Room Diagrams – Momentus Support Center)_
-- **Session Proposals** — Collects, evaluates, and manages speaker/abstract proposals for conferences, with evaluator scoring criteria, submission forms, and Topics for conference tracks. Not available in Elite, per the Elite/Enterprise Glossary. _(source: Enterprise Session Proposals – Momentus Support Center)_
-- **Event Diagramming powered by EventDraw** — 2026.2 SSO-integrated diagramming connector: a new EventDraw Diagrams tab alongside Room Diagrams, admin-mapped space/template and shape/resource mapping, and direct service-order creation/updates from a diagram. Room diagramming only — exhibitor floor plan isn’t included. _(inferred)_ _(source: Enterprise About Event Diagramming powered by EventDraw – Momentus Connect)_
-- **Registration powered by InvitePeople** — Connects Enterprise to InvitePeople, a white-label registration/form-building platform, via SSO; event configuration (functions, price lists, promo codes, payment plans) syncs from Enterprise, and all orders/payments record back to Enterprise as the system of record. _(inferred)_ _(source: About Registration powered by InvitePeople – Momentus Connect)_
-- **Banquet Event Order (BEO), native builder** — An in-system Banquet Event Order builder — proof-of-concept targeted for release 25.3, first built for Disney, per internal PMO strategy docs. Service Orders already produce BEO-style Event Order reports today; this would be a dedicated native builder. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf / PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
+_How the Event Planner uses this: Inherits it at handoff and fills in the full function/detail picture before operations can act._
 
-#### Elite
+- **Enterprise — Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
+- **Elite — Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
+- **WeTrack — Events** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
 
-- **Venues & Rooms** — Configures venues, rooms, and Combo Rooms (e.g. a ballroom splittable into Ballroom A+B, B+C, etc.) for booking; combos of combos aren’t supported. _(inferred)_ _(source: Elite Venues & Rooms – Momentus Support Center)_
-- **Calendar** — Event and Function Calendar views (color-coded, filterable, exportable to PDF), custom Avails headers, and publishing to Apple/Google/Outlook calendars. _(inferred)_ _(source: Elite Calendar – Momentus Support Center)_
-- **Detailing Events** — Adds items, instruction sets, packages, price schedules, discounts, and rental rates to event functions; supports mass edit/add and Event Order creation. _(inferred)_ _(source: Elite Detailing Events – Momentus Support Center)_
-- **Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
-- **Event Schedule & Functions** — Creates and batch-edits Functions (event-wide vs. regular), with a Function Mass Editor and cancel/uncancel workflows. _(inferred)_ _(source: Elite Event Schedule & Functions – Momentus Support Center)_
-- **Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
-- **Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
-- **Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
-- **Inventory & Prices** — Manages inventory items/categories/departments, price schedules, packages, and Instruction Sets, with bulk cost/price/GL-code adjustment and multi-language translation. _(inferred)_ _(source: Elite Inventory & Prices – Momentus Support Center)_
-- **Series** — Groups related recurring events into a Series for bulk editing, adding existing events, and shared series-level notes/documents. _(inferred)_ _(source: Elite Series – Momentus Support Center)_
-- **System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
-- **Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
-- **User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
+#### Event Detailing (Functions, Items, Instructions) (2/4 products)
 
-#### WeTrack
+_How the Event Planner uses this: Builds out every function's items, instructions, and packages — the bulk of a planner's daily work._
 
-- **Events (WeTrack)** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
-- **Projects** — Organizational containers with an Owner, Lead Department, tags, and Open/Confidential privacy; RAG status and percent-complete are auto-calculated from constituent tasks. _(inferred)_ _(source: WeTrack About Projects – WeTrack)_
-- **Tasks & Milestones** — Tasks are units of work with owners, departments/user groups, baseline dates, and dependencies; Milestones are zero-duration tasks categorized Gold/Silver/Bronze for reporting; tasks can be broken into sub-tasks and grouped into Task Groups/Sub-Projects. _(inferred)_ _(source: WeTrack About Tasks and Sub-Tasks – WeTrack)_
-- **The Gantt Chart** — Visual timeline of all projects/tasks with dependency arrows and milestone diamonds; a Gantt tab exists on every project’s details page (not available on tablet/mobile). _(inferred)_ _(source: WeTrack About the Gantt Chart – WeTrack)_
-- **Planning Module & Dashboard** — The Planning module (Projects > Tasks > optional Task Groups/Sub-Tasks) uses Kanban boards and RAG color indicators; the Planning Dashboard offers configurable widgets like Momentum, Department Task RAG Breakdown, and a Leaderboard of on-time milestone completion. _(source: WeTrack Introduction to Planning – WeTrack)_
-- **Risk, Issue & Opportunity Management** — An optional module tracking Risks (might happen), Issues (currently happening), and Opportunities using five-point impact/probability scales and seven strategies (Avoid, Exploit, Mitigate, Insure, Share, Contingency, Accept). This is a native WeTrack module per its own docs, not a separate product — see the Risk & Incident Management entry below for how this squares with Momentus’s commercial product catalog. _(inferred)_ _(source: WeTrack Introduction to Risks, Issues and Opportunities – WeTrack)_
-- **Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
-- **Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
-- **RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+- **Enterprise — Functions** — Sub-activities of an event with their own date/time/space; supports Function Requirements, presenters, Topics & Tracks for conferences, Function Scripting, and Smart Import. _(inferred)_ _(source: Enterprise Functions – Momentus Support Center)_
+- **Elite — Detailing Events** — Adds items, instruction sets, packages, price schedules, discounts, and rental rates to event functions; supports mass edit/add and Event Order creation. _(inferred)_ _(source: Elite Detailing Events – Momentus Support Center)_
 
-#### Platform
+#### Integrations & Connectors (2/4 products)
 
-- **Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
-- **Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
-- **APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
-- **Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
-- **Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
-- **OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+_How the Event Planner uses this: Relies on the EventDraw connector to keep room diagrams linked to the live event record._
+
+- **Elite — Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+- **WeTrack — Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
+
+#### Room / Floor Plan Diagramming (2/4 products)
+
+_How the Event Planner uses this: Draws the room layout that operations will later execute from — errors here become setup errors on-site._
+
+- **Enterprise — Room Diagrams / EventDraw** — Space-specific room layout diagramming with layer management, a shape library, hotkeys, and direct service-order creation from a diagram; the 2026.2 EventDraw connector adds SSO-integrated diagramming alongside it. _(inferred)_ _(source: Enterprise Room Diagrams – Momentus Support Center)_
+- **Elite — EventDraw Connector** — API-credentialed floor-plan linking via the EventDraw Connector, part of Elite Integrations. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+
+#### AI Assistant (1/4 products)
+
+- **Platform — Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
+
+#### APIs & Webhooks (1/4 products)
+
+- **Platform — APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
+
+#### Back-Office Registration Management (1/4 products)
+
+_How the Event Planner uses this: Manages waitlists and registrant types after the public registration form is live._
+
+- **Enterprise — General Registration** — Back-office registration order management: promo codes, waitlists, registrant types, seating chart auto-fill, session swapping, and Continuing Education Credit tracking. _(inferred)_ _(source: Enterprise General Registration – Momentus Support Center)_
+
+#### Calendar & Schedule Views (1/4 products)
+
+_How the Event Planner uses this: Checks the Function Calendar to spot scheduling conflicts across a multi-function event._
+
+- **Elite — Calendar** — Event and Function Calendar views (color-coded, filterable, exportable to PDF), custom Avails headers, and publishing to Apple/Google/Outlook calendars. _(inferred)_ _(source: Elite Calendar – Momentus Support Center)_
+
+#### Cross-Product Analytics (1/4 products)
+
+- **Platform — Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
+
+#### Email Communication (1/4 products)
+
+_How the Event Planner uses this: Uses templated email to distribute finalized event details to clients and vendors without leaving the platform._
+
+- **Elite — Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
+
+#### Event / Session Series & Recurrence (1/4 products)
+
+_How the Event Planner uses this: Bulk-edits a whole recurring series instead of touching each instance individually._
+
+- **Elite — Series** — Groups related recurring events into a Series for bulk editing, adding existing events, and shared series-level notes/documents. _(inferred)_ _(source: Elite Series – Momentus Support Center)_
+
+#### Follow-Up & Checklist Tasks (1/4 products)
+
+_How the Event Planner uses this: Uses event checklists to confirm every pre-event requirement before handoff._
+
+- **Elite — Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
+
+#### Inventory & Pricing Setup (1/4 products)
+
+_How the Event Planner uses this: Sets package pricing once so it applies consistently across every booking of that package._
+
+- **Elite — Inventory & Prices** — Manages inventory items/categories/departments, price schedules, packages, and Instruction Sets, with bulk cost/price/GL-code adjustment and multi-language translation. _(inferred)_ _(source: Elite Inventory & Prices – Momentus Support Center)_
+
+#### Multi-Venue Shared Calendar (1/4 products)
+
+- **Platform — OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+
+#### Native BEO Builder (upcoming) (1/4 products)
+
+_How the Event Planner uses this: Would replace today's workaround of generating BEO-style output from Service Orders with a purpose-built editor._
+
+- **Enterprise — Banquet Event Order (BEO), native builder** — An in-system Banquet Event Order builder — proof-of-concept targeted for release 25.3, first built for Disney. Service Orders already produce BEO-style Event Order reports today; this would be a dedicated native builder. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf / PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
+
+#### No-Code Workflow Automation (1/4 products)
+
+- **Platform — Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
+
+#### Partner Integration Marketplace (1/4 products)
+
+- **Platform — Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
+
+#### Project & Task Planning (Gantt, Kanban) (1/4 products)
+
+_How the Event Planner uses this: Used less by the classic Event Planner and more by cross-functional teams coordinating a large-scale event's moving parts._
+
+- **WeTrack — Projects, Tasks & The Gantt Chart** — Projects are organizational containers (Owner, Lead Department, tags) with RAG status and percent-complete auto-calculated from constituent Tasks/Milestones; the Planning Dashboard adds Kanban boards and widgets (Momentum, Department Task RAG Breakdown, on-time-milestone Leaderboard), and the Gantt Chart gives a visual timeline with dependency arrows. _(inferred)_ _(source: WeTrack Introduction to Planning – WeTrack)_
+
+#### Public Registration Configuration (1/4 products)
+
+_How the Event Planner uses this: Configures the public-facing registration form once per event type rather than rebuilding it manually._
+
+- **Enterprise — Registration** — Public-facing online registration configuration: registrant profile fields, multi-language/multi-page registration, guest and group registration, dictionaries, and PayPal Express Checkout. Registration powered by InvitePeople offers a white-label alternative via SSO, syncing config and orders/payments back to Enterprise. _(inferred)_ _(source: Enterprise Registration – Momentus Support Center)_
+
+#### Reporting & Dashboards (1/4 products)
+
+- **Elite — Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
+
+#### Risk, Issue & Opportunity Planning (1/4 products)
+
+- **WeTrack — Risk, Issue & Opportunity Management** — An optional module tracking Risks (might happen), Issues (currently happening), and Opportunities using five-point impact/probability scales and seven strategies (Avoid, Exploit, Mitigate, Insure, Share, Contingency, Accept). _(inferred)_ _(source: WeTrack Introduction to Risks, Issues and Opportunities – WeTrack)_
+
+#### Speaker / Session Proposal Management (1/4 products)
+
+_How the Event Planner uses this: Runs the call-for-proposals and evaluator scoring for conference content._
+
+- **Enterprise — Session Proposals** — Collects, evaluates, and manages speaker/abstract proposals for conferences, with evaluator scoring criteria, submission forms, and Topics for conference tracks. Not available in Elite. _(source: Enterprise Session Proposals – Momentus Support Center)_
+
+#### Status Indicator System (RAG) (1/4 products)
+
+- **WeTrack — RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+
+#### Sustainability Tracking (1/4 products)
+
+- **WeTrack — Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
+
+#### System Admin & Account-Wide Settings (1/4 products)
+
+- **Elite — System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
+
+#### User Role Permissions (1/4 products)
+
+- **Elite — User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
+
+#### Venue / Room Configuration (1/4 products)
+
+_How the Event Planner uses this: Sets up combo-room splits once, so every future booking against that space just works._
+
+- **Elite — Venues & Rooms** — Configures venues, rooms, and Combo Rooms (e.g. a ballroom splittable into Ballroom A+B, B+C, etc.) for booking; combos of combos aren’t supported. _(inferred)_ _(source: Elite Venues & Rooms – Momentus Support Center)_
 
 ### Momentus for Operations (Operations)
 
-#### Enterprise
+#### Core Event Record (3/4 products)
 
-- **Event Portal** — A licensed public-facing portal where external users complete Event Portal Tasks (reviewing contracts, approving items) while internal staff manage Operations Tasks and portal messages/documents. _(inferred)_ _(source: Enterprise Event Portal – Momentus Support Center)_
-- **Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
-- **Floor Plan (Exhibition Floor Plan)** — Interactive AutoCAD-based floor plan tool to sell/manage booth space, highlight booths by availability/status, place exhibitors, and process onsite booth renewals. _(inferred)_ _(source: Enterprise Floor Plan – Momentus Support Center)_
-- **Inventory** — Maintains available quantities for equipment/consumables tied to resources, with cost synchronization, physical count batches, inventory valuation, and Excel-based import. _(inferred)_ _(source: Enterprise Inventory – Momentus Support Center)_
-- **Job Management (Facility Maintenance)** — Schedules facility maintenance and other facility work, reserving space and creating service orders; supports Job Profiles as templates and linking jobs to fixed assets. _(inferred)_ _(source: Enterprise Job Management – Momentus Support Center)_
-- **Mobile Inventory** — Mobile app within the Enterprise Operations Suite letting staff search items and create inventory transactions from the floor. _(inferred)_ _(source: Enterprise Mobile Inventory – Momentus Support Center)_
-- **Mobile Work Orders** — Mobile app allowing users to view current work order information and complete item deliveries from a mobile device. _(inferred)_ _(source: Enterprise Mobile Work Orders – Momentus Support Center)_
-- **Personnel Management** — Licensed module assigning personnel to work order items/skilled labor, tracking availability, and creating service-order actuals from posted timesheet entries. _(inferred)_ _(source: Enterprise Personnel Management – Momentus Support Center)_
-- **Registration Check-In (RCI) & Badges** — Checks registrants in/out via mobile (iOS app), self-service kiosk, or back office; includes badge templates, barcode/QR scanning, and Function Check-In. _(source: Enterprise Registration Check-In (RCI) & Badges – Momentus Support Center)_
-- **Service Orders** — Lists items/labor/fees for an event across Forecast, Revised Forecast, and Ordered/Actual phases; supports commission orders, discounts/surcharges, and BEO-style Event Order reports. _(inferred)_ _(source: Enterprise Service Orders – Momentus Support Center)_
-- **Work Orders** — Department-level delivery instructions generated from service orders; tracks item completion/covers (catering headcounts), Rush processing, and work order actuals. _(inferred)_ _(source: Enterprise Work Orders – Momentus Support Center)_
-- **Operations Change Log** — Operational reporting on changes made to an event after confirmation — targeted for release 25.2 per internal PMO strategy docs. Not yet documented in the live Support Center, so likely still unreleased or newly released. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
+_How the Operations Director uses this: Reads it to know what's confirmed and when execution starts — receives it, doesn't create it._
 
-#### Elite
+- **Enterprise — Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
+- **Elite — Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
+- **WeTrack — Events** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
 
-- **Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
-- **Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
-- **Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
-- **Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
-- **Mobile** — Mobile access to Elite via home-screen icon, Mobile Avails, Mobile Calendar, and Google Calendar sync on Android. _(inferred)_ _(source: Elite Mobile – Momentus Support Center)_
-- **Operations Hub** — Streamlines complex event operations from planning to execution: an Event List/Dashboard (with a Gantt chart of functions), block-based Event Outlines (Elite’s BEO equivalent, with reusable templates and version control), and Jobs (Management to create/assign checklists, Fulfillment for teams to claim/complete jobs on mobile). Also includes a Daily View, event-order downloading, and custom saved views. An add-on for Elite Premier users. _(source: Elite Operations Hub Overview – Momentus Support Center)_
-- **System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
-- **Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
-- **Track Changes to Event Details** — Once a function status is set to Ready, tracks changes to functions/items/instructions so operations staff can see late edits on the Daily View and function change log; must be enabled by System Admin. _(inferred)_ _(source: Elite Track Changes to Event Details – Momentus Support Center)_
-- **User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
+#### Work Order / Task Management (3/4 products)
 
-#### WeTrack
+_How the Operations Director uses this: Doesn't create these — they're generated automatically from service orders — but assigns, tracks, and closes them through the team._
 
-- **Events (WeTrack)** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
-- **Incident Management** — The Incident/Issue tracking system operations teams switch to at or just before event time, with geolocation to a precise site location, 1–5 severity grading, action-owner assignment, and Confidential incident visibility. Also a native WeTrack module, same terminology note as Risk above. _(source: WeTrack Introduction to Incidents – WeTrack)_
-- **Jobs (Control)** — Located within the Control module, tracks maintenance issues (e.g. a broken chair in a specific row) and venue/stadium checks across live events — distinct from WeTrack’s Planning-side Tasks. _(source: WeTrack Introduction to Jobs – WeTrack)_
-- **Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
-- **Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
-- **RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+- **Enterprise — Work Orders** — Department-level delivery instructions generated from service orders; tracks item completion/covers (catering headcounts), Rush processing, and work order actuals. _(inferred)_ _(source: Enterprise Work Orders – Momentus Support Center)_
+- **Elite — Jobs (Operations Hub)** — Jobs Management creates/assigns checklists; Jobs Fulfillment lets teams claim/complete jobs on mobile — part of the Operations Hub add-on for Elite Premier users, alongside an Event List/Dashboard with a Gantt chart and block-based Event Outlines (Elite’s BEO equivalent). _(source: Elite Operations Hub Overview – Momentus Support Center)_
+- **WeTrack — Jobs (Control)** — Located within the Control module, tracks maintenance issues (e.g. a broken chair in a specific row) and venue/stadium checks across live events — distinct from WeTrack’s Planning-side Tasks. _(source: WeTrack Introduction to Jobs – WeTrack)_
 
-#### Platform
+#### Change Tracking (2/4 products)
 
-- **Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
-- **Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
-- **APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
-- **Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
-- **Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
-- **OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+_How the Operations Director uses this: Checks this to catch a late change before dispatching crew against an outdated plan._
+
+- **Enterprise — Operations Change Log** — Operational reporting on changes made to an event after confirmation — targeted for release 25.2 per internal PMO strategy docs. Not yet documented in the live Support Center, so likely still unreleased or newly released. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
+- **Elite — Track Changes to Event Details** — Once a function status is set to Ready, tracks changes to functions/items/instructions so operations staff can see late edits on the Daily View and function change log; must be enabled by System Admin. _(inferred)_ _(source: Elite Track Changes to Event Details – Momentus Support Center)_
+
+#### Integrations & Connectors (2/4 products)
+
+_How the Operations Director uses this: Depends on WeTrack/Enterprise event sync so operational and risk data don't live in two disconnected systems._
+
+- **Elite — Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+- **WeTrack — Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
+
+#### Mobile Field Access (2/4 products)
+
+_How the Operations Director uses this: Depends on this for crew to work from a device on the floor instead of carrying printed sheets._
+
+- **Enterprise — Mobile Work Orders / Mobile Inventory** — Mobile apps within the Enterprise Operations Suite: Mobile Work Orders lets users view current work order information and complete item deliveries from a mobile device; Mobile Inventory lets staff search items and create inventory transactions from the floor. _(inferred)_ _(source: Enterprise Mobile Work Orders – Momentus Support Center)_
+- **Elite — Mobile** — Mobile access to Elite via home-screen icon, Mobile Avails, Mobile Calendar, and Google Calendar sync on Android. _(inferred)_ _(source: Elite Mobile – Momentus Support Center)_
+
+#### AI Assistant (1/4 products)
+
+- **Platform — Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
+
+#### APIs & Webhooks (1/4 products)
+
+- **Platform — APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
+
+#### Cross-Product Analytics (1/4 products)
+
+- **Platform — Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
+
+#### Email Communication (1/4 products)
+
+- **Elite — Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
+
+#### External-Facing Task Portal (1/4 products)
+
+_How the Operations Director uses this: Lets external stakeholders complete their own tasks, like contract review or approvals, without operations chasing them down._
+
+- **Enterprise — Event Portal** — A licensed public-facing portal where external users complete Event Portal Tasks (reviewing contracts, approving items) while internal staff manage Operations Tasks and portal messages/documents. _(inferred)_ _(source: Enterprise Event Portal – Momentus Support Center)_
+
+#### Facility & Asset Maintenance (1/4 products)
+
+_How the Operations Director uses this: Schedules non-event facility upkeep, like HVAC or equipment, separately from event-day work orders._
+
+- **Enterprise — Job Management (Facility Maintenance)** — Schedules facility maintenance and other facility work, reserving space and creating service orders; supports Job Profiles as templates and linking jobs to fixed assets. Internal SME interviews describe this as not a full CMMS — no usage-based maintenance triggers, no parts/assembly hierarchy, and the old mobile FMS app was sunset. _(inferred)_ _(source: Enterprise Job Management – Momentus Support Center)_
+- **Third-Party — MaintainX** — A dedicated facility-maintenance/CMMS tool some customers use instead of or alongside Enterprise’s Job Management module, per internal SME interviews — chosen for capabilities like usage-based maintenance triggers and mobile issue-reporting that Job Management doesn’t fully cover.
+
+#### Follow-Up & Checklist Tasks (1/4 products)
+
+- **Elite — Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
+
+#### Incident & Risk Management (1/4 products)
+
+_How the Operations Director uses this: Used by the risk/safety side of operations, not the Operations Director's own work-order workflow directly._
+
+- **WeTrack — Incident Management** — The Incident/Issue tracking system operations teams switch to at or just before event time, with geolocation to a precise site location, 1–5 severity grading, action-owner assignment, and Confidential incident visibility. _(source: WeTrack Introduction to Incidents – WeTrack)_
+- **Third-Party — 24Now** — A competing incident/risk platform mentioned in internal SME interviews as using ML-driven camera monitoring to proactively flag risks — an approach Momentus doesn’t currently offer.
+
+#### Inventory Management (1/4 products)
+
+_How the Operations Director uses this: Checks on-hand equipment and consumable quantities before committing crew to a setup plan._
+
+- **Enterprise — Inventory** — Maintains available quantities for equipment/consumables tied to resources, with cost synchronization, physical count batches, inventory valuation, and Excel-based import. _(inferred)_ _(source: Enterprise Inventory – Momentus Support Center)_
+
+#### Multi-Venue Shared Calendar (1/4 products)
+
+- **Platform — OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+
+#### No-Code Workflow Automation (1/4 products)
+
+- **Platform — Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
+
+#### On-Site Registration Check-In (1/4 products)
+
+_How the Operations Director uses this: Used by front-of-house crew checking attendees in, not the Operations Director's own core workflow._
+
+- **Enterprise — Registration Check-In (RCI) & Badges** — Checks registrants in/out via mobile (iOS app), self-service kiosk, or back office; includes badge templates, barcode/QR scanning, and Function Check-In. _(source: Enterprise Registration Check-In (RCI) & Badges – Momentus Support Center)_
+
+#### Partner Integration Marketplace (1/4 products)
+
+- **Platform — Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
+
+#### Reporting & Dashboards (1/4 products)
+
+- **Elite — Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
+
+#### Status Indicator System (RAG) (1/4 products)
+
+_How the Operations Director uses this: Reads RAG color to triage which tasks or risks need attention first without opening every record._
+
+- **WeTrack — RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+
+#### Sustainability Tracking (1/4 products)
+
+_How the Operations Director uses this: Tracks ESG indicators (energy, waste, labor practices) for the operations they run, separate from event-day execution._
+
+- **WeTrack — Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
+
+#### System Admin & Account-Wide Settings (1/4 products)
+
+- **Elite — System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
+
+#### User Role Permissions (1/4 products)
+
+- **Elite — User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
 
 ### Momentus for Financial (Financial)
 
-#### Enterprise
+#### Core Event Record (3/4 products)
 
-- **Accounts Payable** — Handles supplier/vendor vouchers (invoices), 1099-MISC/NEC statements, EFT/check exports, remittance advices, AP Automation invoice scanning, and prepayment tracking. _(source: Enterprise Accounts Payable – Momentus Support Center)_
-- **Accounts Receivable** — Covers AR Demographics, credit ratings/limits, dunning and customer statements, tax exemption, account hold/warn status, and the Receivable Ledger for payment/invoice history. _(source: Enterprise Accounts Receivable – Momentus Support Center)_
-- **Cash Book** — Manages bank reconciliation, bank statement imports, cash forecasts based on open AR invoices and payment plans, and foreign currency translation for bank accounts. _(source: Enterprise Cash Book – Momentus Support Center)_
-- **Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
-- **Fixed Assets** — Tracks the Asset Register, depreciation forecasts/allocations (periodic vs. daily), CIP cost accounts for assets in progress, and linking purchase order items to assets. _(source: Enterprise Fixed Assets – Momentus Support Center)_
-- **General Ledger** — Core GL accounting: journal entries (incl. recurring and tax-aware), GL/entity budgeting, Sales Tax (VAT/GST) report templates, and GL/Transaction Inquiry screens. _(source: Enterprise General Ledger – Momentus Support Center)_
-- **Invoicing** — Generates Proforma/Preliminary/final invoices from service or registration orders, with invoice document headings/subheadings, multi-event invoice consolidation, and void/credit workflows. _(source: Enterprise Invoicing – Momentus Support Center)_
-- **Payment Plans** — Configures installment schedules across multiple orders, with memo payment plan calculations and final-invoice/step crediting. _(source: Enterprise Payment Plans – Momentus Support Center)_
-- **Payments** — Applies payments to orders/invoices/accounts, including Charge Now for saved credit cards, NSF check handling, refunds, and payment transfers/moves. _(source: Enterprise Payments – Momentus Support Center)_
-- **Purchasing** — Manages Purchase Orders and Requisitions, PO contracts, approval routing/email notifications, AP Automation invoice scanning, and Fill From Stock. _(inferred)_ _(source: Enterprise Purchasing – Momentus Support Center)_
-- **Ungerboeck Spreadsheet** — Excel-based reporting tool for exporting retrievals and building settlement reports for costs/revenues (e.g. for Performing Arts Centers) not captured as standard booking/order charges. _(inferred)_ _(source: Enterprise Ungerboeck Spreadsheet – Momentus Support Center)_
-- **E-Invoicing (Enterprise)** — Sends/receives e-invoices (incl. credit notes and payment-plan/quick invoices) via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden; requires the A/R module to send and A/P module to receive. _(source: About E-Invoicing in Enterprise – Momentus Connect)_
+_How the Finance Director uses this: Anchors reconciliation to it — every dollar traced back has to tie to this one record._
 
-#### Elite
+- **Enterprise — Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
+- **Elite — Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
+- **WeTrack — Events** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
 
-- **Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
-- **Event Financials** — Handles invoices/invoice schedules, payment/credit allocation, ad hoc deposits and credits, estimated revenue on inquiries/prospects, and event-level discounts/adjustments. _(source: Elite Event Financials – Momentus Support Center)_
-- **Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
-- **Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
-- **Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
-- **System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
-- **Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
-- **User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
-- **E-Invoicing (Elite)** — Sends e-invoices and credit notes from Elite via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden, requiring tax/account configuration prerequisites in Elite. _(source: About E-Invoicing in Elite – Momentus Connect)_
-- **Xero + Elite Integration** — Syncs invoices created in Elite (line items, taxes, GL-code mapping, credits/deposits) with Xero accounting software; payments allocated in either system sync to the other. No dedicated Elite support article describes a native GL/accounting module the way Enterprise has one — this Xero integration appears to be Elite’s primary path to real bookkeeping today, though that absence isn’t explicitly stated as a design decision in the docs. _(inferred)_ _(source: Use the Xero+Elite Integration – Momentus Connect)_
+#### Payments Processing (3/4 products)
 
-#### WeTrack
+_How the Finance Director uses this: Applies incoming payments and resolves NSF or refund cases against the right invoice._
 
-- **Events (WeTrack)** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
-- **Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
-- **Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
-- **RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+- **Enterprise — Payments** — Applies payments to orders/invoices/accounts, including Charge Now for saved credit cards, NSF check handling, refunds, and payment transfers/moves. _(source: Enterprise Payments – Momentus Support Center)_
+- **Elite — Event Financials (Payments)** — Payment/credit allocation and ad hoc deposits and credits — part of Elite’s combined Event Financials module. _(source: Elite Event Financials – Momentus Support Center)_
+- **Platform — Momentus Payments Platform** — Merchant payment processing with Batches, Billing, Disputes, Transactions, and a Unified Checkout experience; supports Enterprise Automated Reconciliation (auto-creates Cash Book deposit transactions) and third-party gateway credentials. _(source: Momentus Payments Platform – Momentus Connect)_
 
-#### Platform
+#### E-Invoicing (PEPPOL) (2/4 products)
 
-- **Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
-- **Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
-- **APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
-- **Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
-- **Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
-- **Momentus Payments Platform** — Merchant payment processing with Batches, Billing, Disputes, Transactions, and a Unified Checkout experience; supports Enterprise Automated Reconciliation (auto-creates Cash Book deposit transactions) and third-party gateway credentials. _(source: Momentus Payments Platform – Momentus Connect)_
-- **OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+_How the Finance Director uses this: Used only for the specific EU countries requiring PEPPOL e-invoicing compliance._
 
-### The Momentus Offering (End-to-End)
+- **Enterprise — E-Invoicing (Enterprise)** — Sends/receives e-invoices (incl. credit notes and payment-plan/quick invoices) via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden; requires the A/R module to send and A/P module to receive. _(source: About E-Invoicing in Enterprise – Momentus Connect)_
+- **Elite — E-Invoicing (Elite)** — Sends e-invoices and credit notes from Elite via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden, requiring tax/account configuration prerequisites in Elite. _(source: About E-Invoicing in Elite – Momentus Connect)_
 
-#### Enterprise
+#### Integrations & Connectors (2/4 products)
 
-- **Accounts & Contacts** — Manages Account (company/organization) and Contact (person) records with affiliations, designations/statuses, relationships (incl. bill-to), duplicate checking, and CSV/XLSX/XML import. _(inferred)_ _(source: Enterprise Accounts & Contacts – Momentus Support Center)_
-- **Accounts Payable** — Handles supplier/vendor vouchers (invoices), 1099-MISC/NEC statements, EFT/check exports, remittance advices, AP Automation invoice scanning, and prepayment tracking. _(source: Enterprise Accounts Payable – Momentus Support Center)_
-- **Accounts Receivable** — Covers AR Demographics, credit ratings/limits, dunning and customer statements, tax exemption, account hold/warn status, and the Receivable Ledger for payment/invoice history. _(source: Enterprise Accounts Receivable – Momentus Support Center)_
-- **Campaigns** — Gathers accounts/contacts meeting defined criteria for mass communication efforts; campaigns can be copied, edited, and worked via email or phone outreach steps. _(inferred)_ _(source: Enterprise Campaigns – Momentus Support Center)_
-- **Cash Book** — Manages bank reconciliation, bank statement imports, cash forecasts based on open AR invoices and payment plans, and foreign currency translation for bank accounts. _(source: Enterprise Cash Book – Momentus Support Center)_
-- **Contracts** — Generates the space rental agreement for an event, bundling bookings/service/housing orders, contract addendums, clauses, and revision history tracking. _(inferred)_ _(source: Enterprise Contracts – Momentus Support Center)_
-- **Event Opportunities** — Tracks a specific possibility of business with an account, usually used at the beginning of a sale, including Room Flow hotel forecasting, economic impact figures, and Group Profiles for recurring events. _(source: Enterprise Event Opportunities – Momentus Support Center)_
-- **Event Portal** — A licensed public-facing portal where external users complete Event Portal Tasks (reviewing contracts, approving items) while internal staff manage Operations Tasks and portal messages/documents. _(inferred)_ _(source: Enterprise Event Portal – Momentus Support Center)_
-- **Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
-- **Exhibition Management** — Manages Exhibitors as CRM extensions, exhibitor sales pipelines, booth proposals, co-exhibitors, automatic booth-space charging, and exhibitor invoicing — described in-product as a full suite to plan, sell, and deliver exhibits. _(inferred)_ _(source: Enterprise Exhibition Management – Momentus Support Center)_
-- **Facility Booking** — Reserves and sells space via Bookings, with a Booking Calendar/Agenda, Availability Report, recurring bookings search, and booking-order auto-generation for space rental charges. _(inferred)_ _(source: Enterprise Facility Booking – Momentus Support Center)_
-- **Fixed Assets** — Tracks the Asset Register, depreciation forecasts/allocations (periodic vs. daily), CIP cost accounts for assets in progress, and linking purchase order items to assets. _(source: Enterprise Fixed Assets – Momentus Support Center)_
-- **Floor Plan (Exhibition Floor Plan)** — Interactive AutoCAD-based floor plan tool to sell/manage booth space, highlight booths by availability/status, place exhibitors, and process onsite booth renewals. _(inferred)_ _(source: Enterprise Floor Plan – Momentus Support Center)_
-- **Functions** — Sub-activities of an event with their own date/time/space; supports Function Requirements, presenters, Topics & Tracks for conferences, Function Scripting, and Smart Import. _(inferred)_ _(source: Enterprise Functions – Momentus Support Center)_
-- **General Ledger** — Core GL accounting: journal entries (incl. recurring and tax-aware), GL/entity budgeting, Sales Tax (VAT/GST) report templates, and GL/Transaction Inquiry screens. _(source: Enterprise General Ledger – Momentus Support Center)_
-- **General Registration** — Back-office registration order management: promo codes, waitlists, registrant types, seating chart auto-fill, session swapping, and Continuing Education Credit tracking. _(inferred)_ _(source: Enterprise General Registration – Momentus Support Center)_
-- **Inventory** — Maintains available quantities for equipment/consumables tied to resources, with cost synchronization, physical count batches, inventory valuation, and Excel-based import. _(inferred)_ _(source: Enterprise Inventory – Momentus Support Center)_
-- **Invoicing** — Generates Proforma/Preliminary/final invoices from service or registration orders, with invoice document headings/subheadings, multi-event invoice consolidation, and void/credit workflows. _(source: Enterprise Invoicing – Momentus Support Center)_
-- **Job Management (Facility Maintenance)** — Schedules facility maintenance and other facility work, reserving space and creating service orders; supports Job Profiles as templates and linking jobs to fixed assets. _(inferred)_ _(source: Enterprise Job Management – Momentus Support Center)_
-- **Legacy Membership** — Pre-v30.97 membership functionality (demographics, orders, standing orders) retained for continuity after Membership was rewritten. _(inferred)_ _(source: Enterprise Legacy Membership – Momentus Support Center)_
-- **Membership** — Creates, renews, and administers members via membership types/statuses; supports prospective members and individual or group membership additions. _(inferred)_ _(source: Enterprise Membership – Momentus Support Center)_
-- **Mobile Inventory** — Mobile app within the Enterprise Operations Suite letting staff search items and create inventory transactions from the floor. _(inferred)_ _(source: Enterprise Mobile Inventory – Momentus Support Center)_
-- **Mobile Work Orders** — Mobile app allowing users to view current work order information and complete item deliveries from a mobile device. _(inferred)_ _(source: Enterprise Mobile Work Orders – Momentus Support Center)_
-- **Opportunities** — Non-event sales pipeline feature, distinct from Event Opportunities which is used specifically for potential events. _(source: Enterprise Opportunities – Momentus Support Center)_
-- **Payment Plans** — Configures installment schedules across multiple orders, with memo payment plan calculations and final-invoice/step crediting. _(source: Enterprise Payment Plans – Momentus Support Center)_
-- **Payments** — Applies payments to orders/invoices/accounts, including Charge Now for saved credit cards, NSF check handling, refunds, and payment transfers/moves. _(source: Enterprise Payments – Momentus Support Center)_
-- **Personnel Management** — Licensed module assigning personnel to work order items/skilled labor, tracking availability, and creating service-order actuals from posted timesheet entries. _(inferred)_ _(source: Enterprise Personnel Management – Momentus Support Center)_
-- **Purchasing** — Manages Purchase Orders and Requisitions, PO contracts, approval routing/email notifications, AP Automation invoice scanning, and Fill From Stock. _(inferred)_ _(source: Enterprise Purchasing – Momentus Support Center)_
-- **Registration Check-In (RCI) & Badges** — Checks registrants in/out via mobile (iOS app), self-service kiosk, or back office; includes badge templates, barcode/QR scanning, and Function Check-In. _(source: Enterprise Registration Check-In (RCI) & Badges – Momentus Support Center)_
-- **Registration** — Public-facing online registration configuration: registrant profile fields, multi-language/multi-page registration, guest and group registration, dictionaries, and PayPal Express Checkout. _(inferred)_ _(source: Enterprise Registration – Momentus Support Center)_
-- **Room Diagrams** — Space-specific room layout diagramming with layer management, a shape library/common symbols, hotkeys, and direct service-order creation from a diagram. Still live and documented today alongside the newer EventDraw connector below — not fully retired as an earlier PMO strategy doc suggested. _(inferred)_ _(source: Enterprise Room Diagrams – Momentus Support Center)_
-- **Sales** — Account Leads (pre-qualification), Probable Revenue calculation (potential revenue × win probability), Sales Goals tracking, and the Group Room Calendar. _(source: Enterprise Sales – Momentus Support Center)_
-- **Service Orders** — Lists items/labor/fees for an event across Forecast, Revised Forecast, and Ordered/Actual phases; supports commission orders, discounts/surcharges, and BEO-style Event Order reports. _(inferred)_ _(source: Enterprise Service Orders – Momentus Support Center)_
-- **Session Proposals** — Collects, evaluates, and manages speaker/abstract proposals for conferences, with evaluator scoring criteria, submission forms, and Topics for conference tracks. Not available in Elite, per the Elite/Enterprise Glossary. _(source: Enterprise Session Proposals – Momentus Support Center)_
-- **Ungerboeck Spreadsheet** — Excel-based reporting tool for exporting retrievals and building settlement reports for costs/revenues (e.g. for Performing Arts Centers) not captured as standard booking/order charges. _(inferred)_ _(source: Enterprise Ungerboeck Spreadsheet – Momentus Support Center)_
-- **Work Orders** — Department-level delivery instructions generated from service orders; tracks item completion/covers (catering headcounts), Rush processing, and work order actuals. _(inferred)_ _(source: Enterprise Work Orders – Momentus Support Center)_
-- **Event Diagramming powered by EventDraw** — 2026.2 SSO-integrated diagramming connector: a new EventDraw Diagrams tab alongside Room Diagrams, admin-mapped space/template and shape/resource mapping, and direct service-order creation/updates from a diagram. Room diagramming only — exhibitor floor plan isn’t included. _(inferred)_ _(source: Enterprise About Event Diagramming powered by EventDraw – Momentus Connect)_
-- **E-Invoicing (Enterprise)** — Sends/receives e-invoices (incl. credit notes and payment-plan/quick invoices) via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden; requires the A/R module to send and A/P module to receive. _(source: About E-Invoicing in Enterprise – Momentus Connect)_
-- **Registration powered by InvitePeople** — Connects Enterprise to InvitePeople, a white-label registration/form-building platform, via SSO; event configuration (functions, price lists, promo codes, payment plans) syncs from Enterprise, and all orders/payments record back to Enterprise as the system of record. _(inferred)_ _(source: About Registration powered by InvitePeople – Momentus Connect)_
-- **Operations Change Log** — Operational reporting on changes made to an event after confirmation — targeted for release 25.2 per internal PMO strategy docs. Not yet documented in the live Support Center, so likely still unreleased or newly released. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
-- **Banquet Event Order (BEO), native builder** — An in-system Banquet Event Order builder — proof-of-concept targeted for release 25.3, first built for Disney, per internal PMO strategy docs. Service Orders already produce BEO-style Event Order reports today; this would be a dedicated native builder. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf / PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
+- **Elite — Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+- **WeTrack — Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
 
-#### Elite
+#### Invoicing (2/4 products)
 
-- **Venues & Rooms** — Configures venues, rooms, and Combo Rooms (e.g. a ballroom splittable into Ballroom A+B, B+C, etc.) for booking; combos of combos aren’t supported. _(inferred)_ _(source: Elite Venues & Rooms – Momentus Support Center)_
-- **Accounts & Contacts** — Manages Account/Contact records, tags, hierarchies, groups, and duplicate merging, plus each contact’s Booking Portal account. _(inferred)_ _(source: Elite Accounts & Contacts – Momentus Support Center)_
-- **Booking Events** — Books events or holds with statuses (prospect/tentative/definite), conflict checking, blackouts/internal events, and Manage Holds by Day. _(inferred)_ _(source: Elite Booking Events – Momentus Support Center)_
-- **Calendar** — Event and Function Calendar views (color-coded, filterable, exportable to PDF), custom Avails headers, and publishing to Apple/Google/Outlook calendars. _(inferred)_ _(source: Elite Calendar – Momentus Support Center)_
-- **Detailing Events** — Adds items, instruction sets, packages, price schedules, discounts, and rental rates to event functions; supports mass edit/add and Event Order creation. _(inferred)_ _(source: Elite Detailing Events – Momentus Support Center)_
-- **Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
-- **Event Financials** — Handles invoices/invoice schedules, payment/credit allocation, ad hoc deposits and credits, estimated revenue on inquiries/prospects, and event-level discounts/adjustments. _(source: Elite Event Financials – Momentus Support Center)_
-- **Event Schedule & Functions** — Creates and batch-edits Functions (event-wide vs. regular), with a Function Mass Editor and cancel/uncancel workflows. _(inferred)_ _(source: Elite Event Schedule & Functions – Momentus Support Center)_
-- **Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
-- **Exhibitor Ordering** — Configures events for exhibitor orders, runs an online Exhibitor Store (with instructions/item images), creates/refunds exhibitor invoices, and downloads exhibitor service orders. _(inferred)_ _(source: Elite Exhibitor Ordering – Momentus Support Center)_
-- **Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
-- **Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
-- **Inventory & Prices** — Manages inventory items/categories/departments, price schedules, packages, and Instruction Sets, with bulk cost/price/GL-code adjustment and multi-language translation. _(inferred)_ _(source: Elite Inventory & Prices – Momentus Support Center)_
-- **Live Entertainment** — Booking workflow for artists/performances with Avails views, house holds, announce/on-sale/pre-sale date management, and post-show settlement/ticket-scaling reports. _(inferred)_ _(source: Elite Live Entertainment – Momentus Support Center)_
-- **Mobile** — Mobile access to Elite via home-screen icon, Mobile Avails, Mobile Calendar, and Google Calendar sync on Android. _(inferred)_ _(source: Elite Mobile – Momentus Support Center)_
-- **Operations Hub** — Streamlines complex event operations from planning to execution: an Event List/Dashboard (with a Gantt chart of functions), block-based Event Outlines (Elite’s BEO equivalent, with reusable templates and version control), and Jobs (Management to create/assign checklists, Fulfillment for teams to claim/complete jobs on mobile). Also includes a Daily View, event-order downloading, and custom saved views. An add-on for Elite Premier users. _(source: Elite Operations Hub Overview – Momentus Support Center)_
-- **Postponed, Canceled, and Lost Holds and Events** — Best-practice workflows for canceling or marking events/holds as Lost vs. Cancel, restoring them, and tracking lost business. _(inferred)_ _(source: Elite Postponed, Canceled, and Lost Holds and Events – Momentus Support Center)_
-- **Sales** — Manages Inquiries (with rental rates, economic impact, estimated revenue), proposal/contract creation and revisions, probability-of-closing updates, and the contract approval workflow. _(source: Elite Sales – Momentus Support Center)_
-- **Series** — Groups related recurring events into a Series for bulk editing, adding existing events, and shared series-level notes/documents. _(inferred)_ _(source: Elite Series – Momentus Support Center)_
-- **System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
-- **Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
-- **Track Changes to Event Details** — Once a function status is set to Ready, tracks changes to functions/items/instructions so operations staff can see late edits on the Daily View and function change log; must be enabled by System Admin. _(inferred)_ _(source: Elite Track Changes to Event Details – Momentus Support Center)_
-- **User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
-- **E-Invoicing (Elite)** — Sends e-invoices and credit notes from Elite via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden, requiring tax/account configuration prerequisites in Elite. _(source: About E-Invoicing in Elite – Momentus Connect)_
-- **Xero + Elite Integration** — Syncs invoices created in Elite (line items, taxes, GL-code mapping, credits/deposits) with Xero accounting software; payments allocated in either system sync to the other. No dedicated Elite support article describes a native GL/accounting module the way Enterprise has one — this Xero integration appears to be Elite’s primary path to real bookkeeping today, though that absence isn’t explicitly stated as a design decision in the docs. _(inferred)_ _(source: Use the Xero+Elite Integration – Momentus Connect)_
+_How the Finance Director uses this: Generates the final invoice from closed service orders once operations confirms actuals._
 
-#### WeTrack
+- **Enterprise — Invoicing** — Generates Proforma/Preliminary/final invoices from service or registration orders, with invoice document headings/subheadings, multi-event invoice consolidation, and void/credit workflows. _(source: Enterprise Invoicing – Momentus Support Center)_
+- **Elite — Event Financials (Invoicing)** — Handles invoices/invoice schedules and event-level discounts/adjustments — part of Elite’s combined Event Financials module. _(source: Elite Event Financials – Momentus Support Center)_
 
-- **Events (WeTrack)** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
-- **Projects** — Organizational containers with an Owner, Lead Department, tags, and Open/Confidential privacy; RAG status and percent-complete are auto-calculated from constituent tasks. _(inferred)_ _(source: WeTrack About Projects – WeTrack)_
-- **Tasks & Milestones** — Tasks are units of work with owners, departments/user groups, baseline dates, and dependencies; Milestones are zero-duration tasks categorized Gold/Silver/Bronze for reporting; tasks can be broken into sub-tasks and grouped into Task Groups/Sub-Projects. _(inferred)_ _(source: WeTrack About Tasks and Sub-Tasks – WeTrack)_
-- **The Gantt Chart** — Visual timeline of all projects/tasks with dependency arrows and milestone diamonds; a Gantt tab exists on every project’s details page (not available on tablet/mobile). _(inferred)_ _(source: WeTrack About the Gantt Chart – WeTrack)_
-- **Planning Module & Dashboard** — The Planning module (Projects > Tasks > optional Task Groups/Sub-Tasks) uses Kanban boards and RAG color indicators; the Planning Dashboard offers configurable widgets like Momentum, Department Task RAG Breakdown, and a Leaderboard of on-time milestone completion. _(source: WeTrack Introduction to Planning – WeTrack)_
-- **Risk, Issue & Opportunity Management** — An optional module tracking Risks (might happen), Issues (currently happening), and Opportunities using five-point impact/probability scales and seven strategies (Avoid, Exploit, Mitigate, Insure, Share, Contingency, Accept). This is a native WeTrack module per its own docs, not a separate product — see the Risk & Incident Management entry below for how this squares with Momentus’s commercial product catalog. _(inferred)_ _(source: WeTrack Introduction to Risks, Issues and Opportunities – WeTrack)_
-- **Incident Management** — The Incident/Issue tracking system operations teams switch to at or just before event time, with geolocation to a precise site location, 1–5 severity grading, action-owner assignment, and Confidential incident visibility. Also a native WeTrack module, same terminology note as Risk above. _(source: WeTrack Introduction to Incidents – WeTrack)_
-- **Jobs (Control)** — Located within the Control module, tracks maintenance issues (e.g. a broken chair in a specific row) and venue/stadium checks across live events — distinct from WeTrack’s Planning-side Tasks. _(source: WeTrack Introduction to Jobs – WeTrack)_
-- **Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
-- **Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
-- **RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+#### Payment Plans & Installments (2/4 products)
 
-#### Platform
+_How the Finance Director uses this: Sets up installment schedules for clients who can't pay the full balance upfront._
 
-- **Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
-- **Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
-- **APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
-- **Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
-- **Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
-- **Momentus Payments Platform** — Merchant payment processing with Batches, Billing, Disputes, Transactions, and a Unified Checkout experience; supports Enterprise Automated Reconciliation (auto-creates Cash Book deposit transactions) and third-party gateway credentials. _(source: Momentus Payments Platform – Momentus Connect)_
-- **OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+- **Enterprise — Payment Plans** — Configures installment schedules across multiple orders, with memo payment plan calculations and final-invoice/step crediting. _(source: Enterprise Payment Plans – Momentus Support Center)_
+- **Elite — Event Financials (Invoice Schedules)** — Invoice schedules for spreading payments across a timeline — part of Elite’s combined Event Financials module. _(source: Elite Event Financials – Momentus Support Center)_
+
+#### Accounts Payable & Vendor Payments (1/4 products)
+
+_How the Finance Director uses this: Processes vendor vouchers and 1099 statements for contracted labor and services._
+
+- **Enterprise — Accounts Payable** — Handles supplier/vendor vouchers (invoices), 1099-MISC/NEC statements, EFT/check exports, remittance advices, AP Automation invoice scanning, and prepayment tracking. _(source: Enterprise Accounts Payable – Momentus Support Center)_
+
+#### Accounts Receivable & Credit Management (1/4 products)
+
+_How the Finance Director uses this: Reviews dunning and credit-hold status to decide whether to extend further credit to a client._
+
+- **Enterprise — Accounts Receivable** — Covers AR Demographics, credit ratings/limits, dunning and customer statements, tax exemption, account hold/warn status, and the Receivable Ledger for payment/invoice history. _(source: Enterprise Accounts Receivable – Momentus Support Center)_
+
+#### Ad Hoc Settlement Reporting (1/4 products)
+
+_How the Finance Director uses this: Builds a one-off settlement report for costs and revenues that don't fit standard order structures, like performing-arts settlements._
+
+- **Enterprise — Ungerboeck Spreadsheet** — Excel-based reporting tool for exporting retrievals and building settlement reports for costs/revenues (e.g. for Performing Arts Centers) not captured as standard booking/order charges. _(inferred)_ _(source: Enterprise Ungerboeck Spreadsheet – Momentus Support Center)_
+
+#### AI Assistant (1/4 products)
+
+- **Platform — Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
+
+#### APIs & Webhooks (1/4 products)
+
+- **Platform — APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
+
+#### Bank Reconciliation & Cash Forecasting (1/4 products)
+
+_How the Finance Director uses this: Forecasts cash position based on open AR and payment plans, not just what's already collected._
+
+- **Enterprise — Cash Book** — Manages bank reconciliation, bank statement imports, cash forecasts based on open AR invoices and payment plans, and foreign currency translation for bank accounts. _(source: Enterprise Cash Book – Momentus Support Center)_
+
+#### Cross-Product Analytics (1/4 products)
+
+- **Platform — Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
+
+#### Email Communication (1/4 products)
+
+- **Elite — Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
+
+#### External Accounting Sync (1/4 products)
+
+_How the Finance Director uses this: Used specifically by Elite customers without a native GL, syncing invoices to Xero instead._
+
+- **Elite — Xero + Elite Integration** — Syncs invoices created in Elite (line items, taxes, GL-code mapping, credits/deposits) with Xero accounting software; payments allocated in either system sync to the other. No dedicated Elite support article describes a native GL/accounting module the way Enterprise has one. _(inferred)_ _(source: Use the Xero+Elite Integration – Momentus Connect)_
+
+#### Fixed Asset Tracking & Depreciation (1/4 products)
+
+_How the Finance Director uses this: Tracks depreciation on venue equipment purchased through operations._
+
+- **Enterprise — Fixed Assets** — Tracks the Asset Register, depreciation forecasts/allocations (periodic vs. daily), CIP cost accounts for assets in progress, and linking purchase order items to assets. _(source: Enterprise Fixed Assets – Momentus Support Center)_
+
+#### Follow-Up & Checklist Tasks (1/4 products)
+
+- **Elite — Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
+
+#### General Ledger & Journal Entries (1/4 products)
+
+_How the Finance Director uses this: Posts journal entries and reviews GL inquiry when reconciling an event's full financial picture._
+
+- **Enterprise — General Ledger** — Core GL accounting: journal entries (incl. recurring and tax-aware), GL/entity budgeting, Sales Tax (VAT/GST) report templates, and GL/Transaction Inquiry screens. _(source: Enterprise General Ledger – Momentus Support Center)_
+
+#### Multi-Venue Shared Calendar (1/4 products)
+
+- **Platform — OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+
+#### No-Code Workflow Automation (1/4 products)
+
+- **Platform — Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
+
+#### Partner Integration Marketplace (1/4 products)
+
+- **Platform — Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
+
+#### Purchasing & Purchase Orders (1/4 products)
+
+_How the Finance Director uses this: Routes a purchase requisition through approval before a vendor commitment is made._
+
+- **Enterprise — Purchasing** — Manages Purchase Orders and Requisitions, PO contracts, approval routing/email notifications, AP Automation invoice scanning, and Fill From Stock. _(inferred)_ _(source: Enterprise Purchasing – Momentus Support Center)_
+
+#### Reporting & Dashboards (1/4 products)
+
+- **Elite — Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
+
+#### Status Indicator System (RAG) (1/4 products)
+
+- **WeTrack — RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+
+#### Sustainability Tracking (1/4 products)
+
+- **WeTrack — Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
+
+#### System Admin & Account-Wide Settings (1/4 products)
+
+- **Elite — System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
+
+#### User Role Permissions (1/4 products)
+
+- **Elite — User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
+
+### Momentus for Leadership (Leadership)
+
+#### Core Event Record (3/4 products)
+
+_How the Venue Director uses this: Uses it as the single source of truth for where any event sits in its lifecycle._
+
+- **Enterprise — Events** — The central event record holding potential/current/future event data; supports seasons/series, event statistics, meeting attendees, cancel/restore, and five configurable calendar views. _(inferred)_ _(source: Enterprise Events – Momentus Support Center)_
+- **Elite — Events** — Core event record supporting tags, notes, document management (Create Event Summaries/Hold Confirmations), and full event duplication. _(inferred)_ _(source: Elite Events – Momentus Support Center)_
+- **WeTrack — Events** — Ties together Risk Profiles/Assessments, Jobs, Incidents, and Logs for a specific event via zones/areas; on event day, status changes to Live and the Control module filters by the selected event. _(inferred)_ _(source: WeTrack About Events in WeTrack – WeTrack)_
+
+#### Payments Processing (3/4 products)
+
+- **Enterprise — Payments** — Applies payments to orders/invoices/accounts, including Charge Now for saved credit cards, NSF check handling, refunds, and payment transfers/moves. _(source: Enterprise Payments – Momentus Support Center)_
+- **Elite — Event Financials (Payments)** — Payment/credit allocation and ad hoc deposits and credits — part of Elite’s combined Event Financials module. _(source: Elite Event Financials – Momentus Support Center)_
+- **Platform — Momentus Payments Platform** — Merchant payment processing with Batches, Billing, Disputes, Transactions, and a Unified Checkout experience; supports Enterprise Automated Reconciliation (auto-creates Cash Book deposit transactions) and third-party gateway credentials. _(source: Momentus Payments Platform – Momentus Connect)_
+
+#### Work Order / Task Management (3/4 products)
+
+- **Enterprise — Work Orders** — Department-level delivery instructions generated from service orders; tracks item completion/covers (catering headcounts), Rush processing, and work order actuals. _(inferred)_ _(source: Enterprise Work Orders – Momentus Support Center)_
+- **Elite — Jobs (Operations Hub)** — Jobs Management creates/assigns checklists; Jobs Fulfillment lets teams claim/complete jobs on mobile — part of the Operations Hub add-on for Elite Premier users, alongside an Event List/Dashboard with a Gantt chart and block-based Event Outlines (Elite’s BEO equivalent). _(source: Elite Operations Hub Overview – Momentus Support Center)_
+- **WeTrack — Jobs (Control)** — Located within the Control module, tracks maintenance issues (e.g. a broken chair in a specific row) and venue/stadium checks across live events — distinct from WeTrack’s Planning-side Tasks. _(source: WeTrack Introduction to Jobs – WeTrack)_
+
+#### Accounts & Contacts Management (2/4 products)
+
+_How the Venue Director uses this: Confirms there's one clean account record, not duplicate entries fragmenting a client's history._
+
+- **Enterprise — Accounts & Contacts** — Manages Account (company/organization) and Contact (person) records with affiliations, designations/statuses, relationships (incl. bill-to), duplicate checking, and CSV/XLSX/XML import. _(inferred)_ _(source: Enterprise Accounts & Contacts – Momentus Support Center)_
+- **Elite — Accounts & Contacts** — Manages Account/Contact records, tags, hierarchies, groups, and duplicate merging, plus each contact’s Booking Portal account. _(inferred)_ _(source: Elite Accounts & Contacts – Momentus Support Center)_
+
+#### Change Tracking (2/4 products)
+
+- **Enterprise — Operations Change Log** — Operational reporting on changes made to an event after confirmation — targeted for release 25.2 per internal PMO strategy docs. Not yet documented in the live Support Center, so likely still unreleased or newly released. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf)_
+- **Elite — Track Changes to Event Details** — Once a function status is set to Ready, tracks changes to functions/items/instructions so operations staff can see late edits on the Daily View and function change log; must be enabled by System Admin. _(inferred)_ _(source: Elite Track Changes to Event Details – Momentus Support Center)_
+
+#### Contract Generation & Approval (2/4 products)
+
+_How the Venue Director uses this: Checks that a contract went through proper approval before treating a booking as confirmed._
+
+- **Enterprise — Contracts** — Generates the space rental agreement for an event, bundling bookings/service/housing orders, contract addendums, clauses, and revision history tracking. _(inferred)_ _(source: Enterprise Contracts – Momentus Support Center)_
+- **Elite — Sales (Contracts)** — Proposal/contract creation and revisions plus the contract approval workflow — part of Elite’s combined Sales module. _(source: Elite Sales – Momentus Support Center)_
+
+#### E-Invoicing (PEPPOL) (2/4 products)
+
+- **Enterprise — E-Invoicing (Enterprise)** — Sends/receives e-invoices (incl. credit notes and payment-plan/quick invoices) via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden; requires the A/R module to send and A/P module to receive. _(source: About E-Invoicing in Enterprise – Momentus Connect)_
+- **Elite — E-Invoicing (Elite)** — Sends e-invoices and credit notes from Elite via the PEPPOL network for Austria, Belgium, Germany, Netherlands, and Sweden, requiring tax/account configuration prerequisites in Elite. _(source: About E-Invoicing in Elite – Momentus Connect)_
+
+#### Event Booking / Facility Reservation (2/4 products)
+
+_How the Venue Director uses this: Confirms no double-booking risk exists across the full venue calendar._
+
+- **Enterprise — Facility Booking** — Reserves and sells space via Bookings, with a Booking Calendar/Agenda, Availability Report, recurring bookings search, and booking-order auto-generation for space rental charges. _(inferred)_ _(source: Enterprise Facility Booking – Momentus Support Center)_
+- **Elite — Booking Events** — Books events or holds with statuses (prospect/tentative/definite), conflict checking, blackouts/internal events, and Manage Holds by Day. _(inferred)_ _(source: Elite Booking Events – Momentus Support Center)_
+
+#### Event Detailing (Functions, Items, Instructions) (2/4 products)
+
+- **Enterprise — Functions** — Sub-activities of an event with their own date/time/space; supports Function Requirements, presenters, Topics & Tracks for conferences, Function Scripting, and Smart Import. _(inferred)_ _(source: Enterprise Functions – Momentus Support Center)_
+- **Elite — Detailing Events** — Adds items, instruction sets, packages, price schedules, discounts, and rental rates to event functions; supports mass edit/add and Event Order creation. _(inferred)_ _(source: Elite Detailing Events – Momentus Support Center)_
+
+#### Exhibition & Exhibitor Management (2/4 products)
+
+- **Enterprise — Exhibition Management** — Manages Exhibitors as CRM extensions, exhibitor sales pipelines, booth proposals, co-exhibitors, automatic booth-space charging, and exhibitor invoicing. _(inferred)_ _(source: Enterprise Exhibition Management – Momentus Support Center)_
+- **Elite — Exhibitor Ordering** — Configures events for exhibitor orders, runs an online Exhibitor Store (with instructions/item images), creates/refunds exhibitor invoices, and downloads exhibitor service orders. _(inferred)_ _(source: Elite Exhibitor Ordering – Momentus Support Center)_
+
+#### Integrations & Connectors (2/4 products)
+
+_How the Venue Director uses this: Treats every unintegrated system as a risk — each gap is a place the single-source-of-truth story breaks._
+
+- **Elite — Integrations** — Elite’s standard integrations: DocuSign (e-signature for proposals/contracts/invoices), Tessitura (push performances, pull ticketing/attendance data), the EventDraw Connector (API-credentialed floor-plan linking), and access to the Momentus Connect marketplace/API. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+- **WeTrack — Integrations** — Automatic event sync between Momentus Elite and WeTrack, plus data-visualization integrations with Google Looker Studio (via Google Sheets) and Microsoft Power BI. _(inferred)_ _(source: WeTrack Integrations – WeTrack)_
+
+#### Invoicing (2/4 products)
+
+- **Enterprise — Invoicing** — Generates Proforma/Preliminary/final invoices from service or registration orders, with invoice document headings/subheadings, multi-event invoice consolidation, and void/credit workflows. _(source: Enterprise Invoicing – Momentus Support Center)_
+- **Elite — Event Financials (Invoicing)** — Handles invoices/invoice schedules and event-level discounts/adjustments — part of Elite’s combined Event Financials module. _(source: Elite Event Financials – Momentus Support Center)_
+
+#### Mobile Field Access (2/4 products)
+
+- **Enterprise — Mobile Work Orders / Mobile Inventory** — Mobile apps within the Enterprise Operations Suite: Mobile Work Orders lets users view current work order information and complete item deliveries from a mobile device; Mobile Inventory lets staff search items and create inventory transactions from the floor. _(inferred)_ _(source: Enterprise Mobile Work Orders – Momentus Support Center)_
+- **Elite — Mobile** — Mobile access to Elite via home-screen icon, Mobile Avails, Mobile Calendar, and Google Calendar sync on Android. _(inferred)_ _(source: Elite Mobile – Momentus Support Center)_
+
+#### Opportunity / Inquiry Qualification (2/4 products)
+
+_How the Venue Director uses this: Reviews qualified pipeline volume as a leading indicator of future bookings._
+
+- **Enterprise — Event Opportunities** — Tracks a specific possibility of business with an account, usually used at the beginning of a sale, including Room Flow hotel forecasting, economic impact figures, and Group Profiles for recurring events. _(source: Enterprise Event Opportunities – Momentus Support Center)_
+- **Elite — Sales (Inquiries)** — Manages Inquiries with rental rates, economic impact, estimated revenue, and probability-of-closing updates — part of Elite’s combined Sales module. _(source: Elite Sales – Momentus Support Center)_
+
+#### Payment Plans & Installments (2/4 products)
+
+- **Enterprise — Payment Plans** — Configures installment schedules across multiple orders, with memo payment plan calculations and final-invoice/step crediting. _(source: Enterprise Payment Plans – Momentus Support Center)_
+- **Elite — Event Financials (Invoice Schedules)** — Invoice schedules for spreading payments across a timeline — part of Elite’s combined Event Financials module. _(source: Elite Event Financials – Momentus Support Center)_
+
+#### Room / Floor Plan Diagramming (2/4 products)
+
+- **Enterprise — Room Diagrams / EventDraw** — Space-specific room layout diagramming with layer management, a shape library, hotkeys, and direct service-order creation from a diagram; the 2026.2 EventDraw connector adds SSO-integrated diagramming alongside it. _(inferred)_ _(source: Enterprise Room Diagrams – Momentus Support Center)_
+- **Elite — EventDraw Connector** — API-credentialed floor-plan linking via the EventDraw Connector, part of Elite Integrations. _(inferred)_ _(source: Elite Integrations – Momentus Support Center)_
+
+#### Accounts Payable & Vendor Payments (1/4 products)
+
+- **Enterprise — Accounts Payable** — Handles supplier/vendor vouchers (invoices), 1099-MISC/NEC statements, EFT/check exports, remittance advices, AP Automation invoice scanning, and prepayment tracking. _(source: Enterprise Accounts Payable – Momentus Support Center)_
+
+#### Accounts Receivable & Credit Management (1/4 products)
+
+- **Enterprise — Accounts Receivable** — Covers AR Demographics, credit ratings/limits, dunning and customer statements, tax exemption, account hold/warn status, and the Receivable Ledger for payment/invoice history. _(source: Enterprise Accounts Receivable – Momentus Support Center)_
+
+#### Ad Hoc Settlement Reporting (1/4 products)
+
+- **Enterprise — Ungerboeck Spreadsheet** — Excel-based reporting tool for exporting retrievals and building settlement reports for costs/revenues (e.g. for Performing Arts Centers) not captured as standard booking/order charges. _(inferred)_ _(source: Enterprise Ungerboeck Spreadsheet – Momentus Support Center)_
+
+#### AI Assistant (1/4 products)
+
+_How the Venue Director uses this: Uses Ask Mo for natural-language answers instead of digging through documentation or reports._
+
+- **Platform — Ask Mo** — Momentus’s AI assistant: Ask Mo Support gives natural-language how-to answers from the knowledge base (free on all packages), and Ask Mo Data gives natural-language answers to Enterprise data questions (requires Pro/Premier packaging and a specific role). Not available for Azure-hosted or Singapore accounts. _(source: About Ask Mo and Ask Mo Support – Momentus Connect)_
+
+#### APIs & Webhooks (1/4 products)
+
+_How the Venue Director uses this: Relies on this only when IT or an implementation partner is building a custom integration — not a direct end-user tool._
+
+- **Platform — APIs & Webhooks** — The Momentus Connect API is a unified gateway for accessing the APIs of Momentus’s core products, with Swagger-format interactive reference docs, credential/trusted-IP-range management, and a built-in webhook management interface. _(inferred)_ _(source: General – Momentus Connect)_
+
+#### Back-Office Registration Management (1/4 products)
+
+- **Enterprise — General Registration** — Back-office registration order management: promo codes, waitlists, registrant types, seating chart auto-fill, session swapping, and Continuing Education Credit tracking. _(inferred)_ _(source: Enterprise General Registration – Momentus Support Center)_
+
+#### Bank Reconciliation & Cash Forecasting (1/4 products)
+
+- **Enterprise — Cash Book** — Manages bank reconciliation, bank statement imports, cash forecasts based on open AR invoices and payment plans, and foreign currency translation for bank accounts. _(source: Enterprise Cash Book – Momentus Support Center)_
+
+#### Booking Cancellation & Lost-Business Tracking (1/4 products)
+
+_How the Venue Director uses this: Reviews lost-business patterns to spot systemic reasons deals fall through._
+
+- **Elite — Postponed, Canceled, and Lost Holds and Events** — Best-practice workflows for canceling or marking events/holds as Lost vs. Cancel, restoring them, and tracking lost business. _(inferred)_ _(source: Elite Postponed, Canceled, and Lost Holds and Events – Momentus Support Center)_
+
+#### Calendar & Schedule Views (1/4 products)
+
+- **Elite — Calendar** — Event and Function Calendar views (color-coded, filterable, exportable to PDF), custom Avails headers, and publishing to Apple/Google/Outlook calendars. _(inferred)_ _(source: Elite Calendar – Momentus Support Center)_
+
+#### Campaign / Mass Outreach (1/4 products)
+
+- **Enterprise — Campaigns** — Gathers accounts/contacts meeting defined criteria for mass communication efforts; campaigns can be copied, edited, and worked via email or phone outreach steps. _(inferred)_ _(source: Enterprise Campaigns – Momentus Support Center)_
+
+#### Cross-Product Analytics (1/4 products)
+
+_How the Venue Director uses this: Uses cross-product benchmarking to see how the venue compares to peer venues._
+
+- **Platform — Momentus Analytics** — Analytics platform with three parts: Observe (standard Sales/CRM dashboards), Empower (drag-and-drop or AI-assisted custom dashboards), and Benchmarking (peer comparison via an AI classifier mapped to IAVM standards, US convention centers only). Data replicates into a separate analytics data lake every 24 hours; first release is Sales-focused, with Operations/Financials planned incrementally. _(source: About Momentus Analytics – Momentus Connect)_
+
+#### Email Communication (1/4 products)
+
+- **Elite — Email** — Sends ad hoc and templated email with merge fields to multiple recipients, tracks bounces, and manages signatures/templates. _(inferred)_ _(source: Elite Email – Momentus Support Center)_
+
+#### Event / Session Series & Recurrence (1/4 products)
+
+- **Elite — Series** — Groups related recurring events into a Series for bulk editing, adding existing events, and shared series-level notes/documents. _(inferred)_ _(source: Elite Series – Momentus Support Center)_
+
+#### External Accounting Sync (1/4 products)
+
+- **Elite — Xero + Elite Integration** — Syncs invoices created in Elite (line items, taxes, GL-code mapping, credits/deposits) with Xero accounting software; payments allocated in either system sync to the other. No dedicated Elite support article describes a native GL/accounting module the way Enterprise has one. _(inferred)_ _(source: Use the Xero+Elite Integration – Momentus Connect)_
+
+#### External-Facing Task Portal (1/4 products)
+
+- **Enterprise — Event Portal** — A licensed public-facing portal where external users complete Event Portal Tasks (reviewing contracts, approving items) while internal staff manage Operations Tasks and portal messages/documents. _(inferred)_ _(source: Enterprise Event Portal – Momentus Support Center)_
+
+#### Facility & Asset Maintenance (1/4 products)
+
+- **Enterprise — Job Management (Facility Maintenance)** — Schedules facility maintenance and other facility work, reserving space and creating service orders; supports Job Profiles as templates and linking jobs to fixed assets. Internal SME interviews describe this as not a full CMMS — no usage-based maintenance triggers, no parts/assembly hierarchy, and the old mobile FMS app was sunset. _(inferred)_ _(source: Enterprise Job Management – Momentus Support Center)_
+- **Third-Party — MaintainX** — A dedicated facility-maintenance/CMMS tool some customers use instead of or alongside Enterprise’s Job Management module, per internal SME interviews — chosen for capabilities like usage-based maintenance triggers and mobile issue-reporting that Job Management doesn’t fully cover.
+
+#### Fixed Asset Tracking & Depreciation (1/4 products)
+
+- **Enterprise — Fixed Assets** — Tracks the Asset Register, depreciation forecasts/allocations (periodic vs. daily), CIP cost accounts for assets in progress, and linking purchase order items to assets. _(source: Enterprise Fixed Assets – Momentus Support Center)_
+
+#### Follow-Up & Checklist Tasks (1/4 products)
+
+- **Elite — Tasks & Task Templates** — Tracks lead follow-ups, contract/insurance due dates, and event checklists via Tasks; Task Templates can be applied/duplicated and drive Tessitura and other cross-department workflows. _(inferred)_ _(source: Elite Tasks & Task Templates – Momentus Support Center)_
+
+#### General Ledger & Journal Entries (1/4 products)
+
+- **Enterprise — General Ledger** — Core GL accounting: journal entries (incl. recurring and tax-aware), GL/entity budgeting, Sales Tax (VAT/GST) report templates, and GL/Transaction Inquiry screens. _(source: Enterprise General Ledger – Momentus Support Center)_
+
+#### Incident & Risk Management (1/4 products)
+
+- **WeTrack — Incident Management** — The Incident/Issue tracking system operations teams switch to at or just before event time, with geolocation to a precise site location, 1–5 severity grading, action-owner assignment, and Confidential incident visibility. _(source: WeTrack Introduction to Incidents – WeTrack)_
+- **Third-Party — 24Now** — A competing incident/risk platform mentioned in internal SME interviews as using ML-driven camera monitoring to proactively flag risks — an approach Momentus doesn’t currently offer.
+
+#### Inventory & Pricing Setup (1/4 products)
+
+- **Elite — Inventory & Prices** — Manages inventory items/categories/departments, price schedules, packages, and Instruction Sets, with bulk cost/price/GL-code adjustment and multi-language translation. _(inferred)_ _(source: Elite Inventory & Prices – Momentus Support Center)_
+
+#### Inventory Management (1/4 products)
+
+- **Enterprise — Inventory** — Maintains available quantities for equipment/consumables tied to resources, with cost synchronization, physical count batches, inventory valuation, and Excel-based import. _(inferred)_ _(source: Enterprise Inventory – Momentus Support Center)_
+
+#### Live Entertainment Booking (1/4 products)
+
+- **Elite — Live Entertainment** — Booking workflow for artists/performances with Avails views, house holds, announce/on-sale/pre-sale date management, and post-show settlement/ticket-scaling reports. _(inferred)_ _(source: Elite Live Entertainment – Momentus Support Center)_
+
+#### Membership Management (1/4 products)
+
+- **Enterprise — Membership** — Creates, renews, and administers members via membership types/statuses; supports prospective members and individual or group membership additions. Legacy Membership (pre-v30.97) is retained for continuity after this was rewritten. _(inferred)_ _(source: Enterprise Membership – Momentus Support Center)_
+
+#### Multi-Venue Shared Calendar (1/4 products)
+
+_How the Venue Director uses this: Uses OneView specifically when overseeing multiple venues, to see availability across all of them at once._
+
+- **Platform — OneView** — A shared calendar platform for corporate campuses, universities, and venue-management groups to view events/availability across all their venues on Momentus platforms, including view-only access for third-party contractors/stakeholders. _(source: OneView – Momentus Connect)_
+
+#### Native BEO Builder (upcoming) (1/4 products)
+
+- **Enterprise — Banquet Event Order (BEO), native builder** — An in-system Banquet Event Order builder — proof-of-concept targeted for release 25.3, first built for Disney. Service Orders already produce BEO-style Event Order reports today; this would be a dedicated native builder. _(source: PMO-Enterprise Convention Centers - Product Strategy.pdf / PMO-Enterprise for Hotels, Casinos and Resorts - 3 Year Strategy.pdf)_
+
+#### No-Code Workflow Automation (1/4 products)
+
+_How the Venue Director uses this: Automates a cross-department trigger-action (e.g. CRM sync) without waiting on engineering._
+
+- **Platform — Momentus Workflow Builder** — A low-code, drag-and-drop automation platform connecting Momentus to external systems (HubSpot, Salesforce, NetSuite, SAP, Microsoft 365, DocuSign, Power BI, etc.), with trigger-action workflows, a sandbox test environment, and execution-log monitoring. Requires Enterprise 25.3+. _(source: About Momentus Workflow Builder – Momentus Connect)_
+
+#### Non-Event Sales Pipeline (CRM) (1/4 products)
+
+- **Enterprise — Opportunities** — Non-event sales pipeline feature, distinct from Event Opportunities which is used specifically for potential events. _(source: Enterprise Opportunities – Momentus Support Center)_
+
+#### On-Site Registration Check-In (1/4 products)
+
+- **Enterprise — Registration Check-In (RCI) & Badges** — Checks registrants in/out via mobile (iOS app), self-service kiosk, or back office; includes badge templates, barcode/QR scanning, and Function Check-In. _(source: Enterprise Registration Check-In (RCI) & Badges – Momentus Support Center)_
+
+#### Partner Integration Marketplace (1/4 products)
+
+_How the Venue Director uses this: Evaluates and installs third-party add-ons here rather than requesting custom development._
+
+- **Platform — Momentus Connect Marketplace & Administration** — A marketplace showcasing integrations/value-added services for all Momentus products; users get a default User role, upgradable to Customer Admin (configure apps, manage users) or Custom Roles scoped to specific apps. _(inferred)_ _(source: Momentus Connect About Momentus Connect – Momentus Connect)_
+
+#### Project & Task Planning (Gantt, Kanban) (1/4 products)
+
+- **WeTrack — Projects, Tasks & The Gantt Chart** — Projects are organizational containers (Owner, Lead Department, tags) with RAG status and percent-complete auto-calculated from constituent Tasks/Milestones; the Planning Dashboard adds Kanban boards and widgets (Momentum, Department Task RAG Breakdown, on-time-milestone Leaderboard), and the Gantt Chart gives a visual timeline with dependency arrows. _(inferred)_ _(source: WeTrack Introduction to Planning – WeTrack)_
+
+#### Public Registration Configuration (1/4 products)
+
+- **Enterprise — Registration** — Public-facing online registration configuration: registrant profile fields, multi-language/multi-page registration, guest and group registration, dictionaries, and PayPal Express Checkout. Registration powered by InvitePeople offers a white-label alternative via SSO, syncing config and orders/payments back to Enterprise. _(inferred)_ _(source: Enterprise Registration – Momentus Support Center)_
+
+#### Purchasing & Purchase Orders (1/4 products)
+
+- **Enterprise — Purchasing** — Manages Purchase Orders and Requisitions, PO contracts, approval routing/email notifications, AP Automation invoice scanning, and Fill From Stock. _(inferred)_ _(source: Enterprise Purchasing – Momentus Support Center)_
+
+#### Reporting & Dashboards (1/4 products)
+
+_How the Venue Director uses this: Uses the custom report builder for cross-department performance reviews._
+
+- **Elite — Insights (Reports & Dashboards)** — Elite’s reporting engine: a Report/Dashboard Library and Document Template Library with prebuilt examples (e.g. New Accounts by Year, Event Order/BEO templates), a custom report builder, and a Data Dictionary. _(inferred)_ _(source: Elite Insights Reports & Dashboards – Momentus Support Center)_
+
+#### Risk, Issue & Opportunity Planning (1/4 products)
+
+- **WeTrack — Risk, Issue & Opportunity Management** — An optional module tracking Risks (might happen), Issues (currently happening), and Opportunities using five-point impact/probability scales and seven strategies (Avoid, Exploit, Mitigate, Insure, Share, Contingency, Accept). _(inferred)_ _(source: WeTrack Introduction to Risks, Issues and Opportunities – WeTrack)_
+
+#### Sales Goals & Revenue Forecasting (1/4 products)
+
+- **Enterprise — Sales** — Account Leads (pre-qualification), Probable Revenue calculation (potential revenue × win probability), Sales Goals tracking, and the Group Room Calendar. _(source: Enterprise Sales – Momentus Support Center)_
+
+#### Speaker / Session Proposal Management (1/4 products)
+
+- **Enterprise — Session Proposals** — Collects, evaluates, and manages speaker/abstract proposals for conferences, with evaluator scoring criteria, submission forms, and Topics for conference tracks. Not available in Elite. _(source: Enterprise Session Proposals – Momentus Support Center)_
+
+#### Status Indicator System (RAG) (1/4 products)
+
+- **WeTrack — RAG Status System** — The Red/Amber/Green traffic-light framework (plus Grey=Not Started and Blue=Complete for tasks) used consistently across Projects/Tasks/Sub-Tasks and Risks/Issues/Opportunities to communicate health at a glance. _(inferred)_ _(source: WeTrack The RAG (Red, Amber, Green) System_ Basic Principles – WeTrack)_
+
+#### Sustainability Tracking (1/4 products)
+
+_How the Venue Director uses this: Reports sustainability performance at the venue level for board/executive visibility._
+
+- **WeTrack — Sustainability** — Tracks environmental/social/governance indicators (energy use, waste, community program growth, labor practices) against targets, with achievements when targets are hit, viewable via lists, dashboards, and reports. _(inferred)_ _(source: WeTrack Introduction to Sustainability – WeTrack)_
+
+#### System Admin & Account-Wide Settings (1/4 products)
+
+_How the Venue Director uses this: Configures account-wide branding, roles, and reference data once, rather than per department._
+
+- **Elite — System Admin Info & Account-Wide Settings** — Account-wide configuration: Open API credential creation, business classifications, contact roles, email/phone/address types, booking-portal branding, and status/reference-data customization. _(inferred)_ _(source: Elite System Admin Info & Account-Wide Settings – Momentus Support Center)_
+
+#### User Role Permissions (1/4 products)
+
+_How the Venue Director uses this: Defines which roles can see or edit what, balancing access against the platform's buyer/decision-maker structure._
+
+- **Elite — User Role Permissions** — Documents System Admin and Insights Admin system roles plus granular feature/data permissions used to build custom user roles; not all permissions are available in every tier. _(inferred)_ _(source: Elite User Role Permissions – Momentus Support Center)_
+
+#### Venue / Room Configuration (1/4 products)
+
+- **Elite — Venues & Rooms** — Configures venues, rooms, and Combo Rooms (e.g. a ballroom splittable into Ballroom A+B, B+C, etc.) for booking; combos of combos aren’t supported. _(inferred)_ _(source: Elite Venues & Rooms – Momentus Support Center)_
 
 ## Jobs to Be Done Map (Innovation Layer)
 
@@ -1499,7 +2210,7 @@ Built on Ulwick's Jobs to Be Done (JTBD) and Outcome-Driven Innovation (ODI) fra
 - **07 · Modify** (Update · Adjust · Maintain)
 - **08 · Conclude** (Store · Finish · Close)
 
-### Secure Event Opportunity — Alex Smith, Sales Manager ("The Dream Catcher")
+### Secure Event Opportunity — Sales Manager ("The Dream Catcher")
 
 **Product area:** Event Sales · **Primary object:** Event Opportunity  
 **Functional job:** Book high-value events that maximize revenue and calendar utilization for the venue
@@ -1695,7 +2406,7 @@ Close the booking, transfer it to planning, and archive the sales record for rep
 11. Maximize the accuracy of displacement outcome records archived at booking close — when reconciling whether the original displacement decision resulted in the forecasted revenue outcome for performance review
 12. Maximize the speed of initiating a rebooking conversation with a client — when the event has just closed successfully and goodwill is highest for securing next year's business before a competing venue does
 
-### Detail Event Plan — Sam Evans, Event Planner ("The Promise Keeper")
+### Detail Event Plan — Event Planner ("The Promise Keeper")
 
 **Product area:** Event Planning · **Primary object:** Event Plan  
 **Functional job:** Gather, confirm, and communicate every detail of a committed event so operations can execute it exactly as the client expects
@@ -1801,7 +2512,7 @@ Distribute the finalized BEO (Banquet Event Order) to all relevant operations de
 8. Minimize the likelihood of a department receiving an incomplete BEO because only their relevant section was extracted for distribution — when the event plan was built as a single document and requires manual extraction of department-specific sections before distribution
 9. Maximize the professional, polished appearance of the BEO or event schedule distributed to the client and operations — when the system-generated document does not meet the visual standard the planner needs to present externally
 10. Minimize the likelihood of operations working from an outdated event diagram — when a revised diagram is uploaded to the Event Plan after the original has already been referenced or printed by operations
-11. Minimize the number of separate documents that must be compiled and distributed to operations for a single event — when work orders and diagrams are generated as individual files rather than one consolidated package
+11. Minimize the number of separate documents that must be compiled and distributed to operations for a single event — when Event Work and diagrams are generated as individual files rather than one consolidated package
 
 #### 06 · Monitor — Track completion
 
@@ -1867,83 +2578,87 @@ Ensure all function records are closed and complete, confirm post-event customer
 8. Minimize the likelihood of a discrepancy between the closed BEO and the finance invoice going undetected before billing — when finalizing event records for a complex event where multiple last-minute changes were made in the final 24 hours
 9. Maximize the completion rate of post-event summary documentation across the planning team — when the department wants to analyze the closed-event portfolio to identify commonalities and improve future planning
 
-### Execute Event Work — Jordan Olsen, Operations Director ("The Moment Maker")
+### Orchestrate Event Work — Operations Director ("The Moment Maker")
 
 **Product area:** Event Operations · **Primary object:** Event Work  
-**Functional job:** Execute all work orders required to set up, run, and tear down an event — deploying crew and resources efficiently across multiple simultaneous events
+**Functional job:** Direct all Event Work required to set up, run, and tear down an event — deploying crew and resources efficiently across multiple simultaneous events through the department heads who report up
 
-**JTBD statement** — When the finalized event plan and work orders arrive from planning, I want to assign, track, and close all work orders inside Momentus, so I can run a flawless event — with every crew member knowing exactly where to be and when, without paper, radio guesswork, or last-minute scrambles.
+**JTBD statement** — When the finalized event plan and Event Work arrive from planning, I want to assign, track, and close all Event Work inside Momentus, so I can my team runs a flawless event — with every crew member knowing exactly where to be and when, without paper, radio guesswork, or last-minute scrambles.
 
-#### 01 · Define — Scope work orders
+#### 01 · Define — Scope Event Work
 
 *Verbs: Plan · Select · Determine*
 
-Scope the full set of operational tasks required to execute an Event Plan from setup to teardown — In-system assignment notifications would bring crew communication into the platform, eliminating dependence on outside channels and reducing the risk of missed assignments and delayed acknowledgments.
+Scope the full set of Event Work required to execute an Event Plan from setup to teardown — In-system assignment notifications would bring crew communication into the platform, eliminating dependence on outside channels and reducing the risk of missed assignments and delayed acknowledgments.
 
-**Research opportunity:** An operations-specific planning view at event intake — surfacing staffing requirements, resource needs, and scheduling constraints at the point when events are still being scoped. Moving staffing coordination into Momentus from Outlook and email would give operations managers a single place to see crew availability and event demand simultaneously.
+**Research opportunity:** An operations-specific planning view at event intake — surfacing staffing requirements, resource needs, and scheduling constraints at the point when events are still being scoped. Moving staffing coordination into Momentus from Outlook and email would give operations managers a single place to see crew availability and event demand simultaneously. The same Event Work duration estimates needed here to size the staffing plan are also what Prepare would need to derive accurate start times, not just deadlines.
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to identify all setup, execution, and teardown tasks required for an Event Plan — when receiving the finalized BEO from the planning team and beginning operational task planning
-2. Minimize the likelihood of an Event Work being omitted from the pre-event work order — when scoping a complex multi-department event plan with interdependent setup sequences
-3. Maximize the completeness of the initial operational task list for an Event Plan — when planning setup for an event with non-standard configurations, external vendors, or time-critical dependencies
-4. Maximize the accuracy of the pre-event staffing plan based on the scope of work orders — when scheduling crew for a complex event with multiple concurrent setup tracks and time-sensitive sequencing
-5. Minimize the likelihood of discovering a missing task dependency after setup has already begun — when reviewing the operational task list for an event with non-standard space configurations or external vendor integrations
-6. Maximize the accuracy of equipment and material quantities required to execute all Event Works — when scoping operational tasks for an event with non-standard configurations that differ significantly from the venue's standard setup inventory
-7. Minimize the effort required to decompose a BEO into individual actionable work units — when receiving a complex multi-function event plan that has not previously been broken down into crew-level task assignments
+1. Minimize the time it takes to identify all setup, execution, and teardown Event Work required for an Event Plan — when receiving the finalized BEO from the planning team and beginning Event Work planning
+2. Minimize the likelihood of an Event Work being omitted during pre-event scoping — when scoping a complex multi-department event plan with interdependent setup sequences
+3. Maximize the completeness of the initial list of Event Work for an Event Plan — when planning setup for an event with non-standard configurations, external vendors, or time-critical dependencies
+4. Maximize the accuracy of the pre-event staffing plan based on the scope of Event Work — when scheduling crew for a complex event with multiple concurrent setup tracks and time-sensitive sequencing
+5. Minimize the likelihood of discovering a missing Event Work dependency after setup has already begun — when reviewing the Event Work list for an event with non-standard space configurations or external vendor integrations
+6. Maximize the accuracy of equipment and material quantities required to execute all Event Works — when scoping Event Work for an event with non-standard configurations that differ significantly from the venue's standard setup inventory
+7. Minimize the effort required to translate auto-generated Event Work into individual crew-level assignments — when receiving a complex multi-function event plan whose Event Work has not previously been broken down to specific crew members
 8. Minimize the likelihood of over-staffing or under-staffing an event — when estimating crew size from a BEO where headcount and timing information is incomplete or non-standard
+9. Maximize the effectiveness of the handoff from the Event Plan to Event Work — when a finalized Event Plan must become directly actionable for the operations team without requiring manual rework to translate it into Event Work
+10. Minimize the amount of missing or conflicting information carried over in the handoff from Event Plan to Event Work — when the operations team must stop and request clarification instead of proceeding, causing knowledge loss and rework
+11. Maximize the likelihood that missing or conflicting information in a piece of Event Work is flagged automatically before execution begins — when that gap would otherwise only surface once crew are already on-site and underway
 
-#### 02 · Locate — Access work orders
+#### 02 · Locate — Access Event Work
 
 *Verbs: Gather · Access · Retrieve*
 
-Access the finalized BEO (Banquet Event Order) and all supporting documentation needed to build and assign work orders
+Access the finalized BEO (Banquet Event Order) and all supporting documentation needed to review and assign the Event Work the system generates from it
 
-**Research opportunity:** An operations-ready event view — filtering and presenting only the work orders, spaces, and timing relevant to a given crew member’s scope, rather than exposing the full event record. Real-time inventory availability visible at work order assignment would eliminate the parallel spreadsheet tracking that operations managers currently maintain to know what resources are in use.
+**Research opportunity:** An operations-ready event view — filtering and presenting only the Event Work, spaces, and timing relevant to a given crew member’s scope, rather than exposing the full event record. Real-time inventory availability visible at Event Work assignment would eliminate the parallel spreadsheet tracking that operations managers currently maintain to know what resources are in use.
 
-**Product documentation opportunity:** Room diagrams accessible directly from MWO (Mobile Work Orders) — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans. Today, floor plans and dietary lists are filed at the full-event level rather than to the specific function or work order — extending document association down to the work order itself, not just improving how MWO displays what already exists, would let crew find only what is relevant to their assignment instead of sorting through an entire event’s paperwork.
+**Product documentation opportunity:** Room diagrams accessible directly from MWO (Mobile Work Orders) — enabling crew to reference layouts on-site without switching to a separate system, reducing setup errors caused by working from memory or outdated printed plans. Today, floor plans and dietary lists are filed at the full-event level rather than to the specific function or piece of Event Work — extending document association down to the Event Work itself, not just improving how MWO displays what already exists, would let crew find only what is relevant to their assignment instead of sorting through an entire event’s paperwork.
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to access the finalized BEO and associated function details for a scheduled event — when beginning task assignment for a function whose BEO has just been distributed by the planning team
-2. Minimize the likelihood of building a work order from an outdated or unfinalized version of the BEO — when the event planner is still making changes to the Event Plan while the operations team is beginning preparation
-3. Minimize the effort required to locate all space, equipment, and resource specifications needed to build a complete work order — when accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations
-4. Maximize the speed of confirming that the BEO accessed is the most current approved version — when starting work order creation for an event where recent changes may have been submitted by the planning team
-5. Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO — when building work orders for a non-standard setup that requires visual reference materials to assign work orders correctly
-6. Minimize the effort required to confirm the BEO is fully approved and authorized before beginning work order creation — when the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system
-7. Maximize the accuracy of all floor plan and space layout details available at the time of work order creation — when building operational task assignments for an event using a non-standard room configuration that requires custom layout reference materials
-8. Minimize the likelihood of beginning work order creation from a BEO that the planning team is still revising — when the event planner and operations team are working on parallel timelines and the final detail has not been formally locked
-9. Minimize the likelihood of a just-uploaded diagram failing to render and requiring a manual re-upload before crew can reference it on site — when building a work order immediately after the planning team distributes a new floor plan or diagram
+1. Minimize the time it takes to access the finalized BEO and associated function details for a scheduled event — when beginning Event Work assignment for a function whose BEO has just been distributed by the planning team
+2. Minimize the likelihood of receiving Event Work generated from an outdated or unfinalized version of the BEO — when the event planner is still making changes to the Event Plan while the operations team is beginning preparation
+3. Minimize the effort required to locate all space, equipment, and resource specifications needed to act on received Event Work — when accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations
+4. Maximize the speed of confirming that the BEO accessed is the most current approved version — when Event Work is generated for an event where recent changes may have been submitted by the planning team
+5. Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO — when preparing to execute a non-standard setup's Event Work, which requires visual reference materials to assign correctly
+6. Minimize the effort required to confirm the BEO is fully approved and authorized before Event Work is generated and delivered to operations — when the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system
+7. Maximize the accuracy of all floor plan and space layout details available at the time Event Work is received — when preparing Event Work assignments for an event using a non-standard room configuration that requires custom layout reference materials
+8. Minimize the likelihood of receiving Event Work generated from a BEO that the planning team is still revising — when the event planner and operations team are working on parallel timelines and the final detail has not been formally locked
+9. Minimize the likelihood of a just-uploaded diagram failing to render and requiring a manual re-upload before crew can reference it on site — when preparing to execute a piece of Event Work immediately after the planning team distributes a new floor plan or diagram
 10. Minimize the likelihood of a space or inventory item appearing available for another use before setup or teardown time has been accounted for — when the venue calendar reflects only the contracted event hours and not the surrounding turnover window operations needs
 
-#### 03 · Prepare — Forecast & publish orders
+#### 03 · Prepare — Forecast & publish Event Work
 
 *Verbs: Set Up · Organize · Examine*
 
-Assign all operational tasks to crew members, departments, and equipment, with timing and location details
+Assign all Event Work to crew members, departments, and equipment, with timing and location details
 
-**Research opportunity:** Field-ready work order output — formatted for legibility in operational settings, not back-office screens — would reduce the paper-printing workaround that crews currently rely on when digital displays are impractical. Automated staffing assignment based on event type, crew skills, and availability would replace the manual scheduling process that currently requires cross-referencing multiple systems.
+**Research opportunity:** Field-ready Event Work output — formatted for legibility in operational settings, not back-office screens — would reduce the paper-printing workaround that crews currently rely on when digital displays are impractical. Automated staffing assignment based on event type, crew skills, and availability would replace the manual scheduling process that currently requires cross-referencing multiple systems.
 
-**Product documentation opportunity:** Temporary and contract staff able to access and be assigned work in MWO (Mobile Work Orders) without requiring full user accounts — enabling operations teams to scale their workforce for peak periods without provisioning full platform licenses. Work order items assignable to multiple people with specific dates, times, and contact details would support coordinated pre-event delivery scheduling. Configurable default filters, searchable dropdowns, and custom item status visibility would let operations managers tailor the MWO experience for their teams, reducing clutter and speeding up task navigation for field staff.
+**Product documentation opportunity:** Temporary and contract staff able to access and be assigned work in MWO (Mobile Work Orders) without requiring full user accounts — enabling operations teams to scale their workforce for peak periods without provisioning full platform licenses. Event Work items assignable to multiple people with specific dates, times, and contact details would support coordinated pre-event delivery scheduling. Configurable default filters, searchable dropdowns, and custom item status visibility would let operations managers tailor the MWO experience for their teams, reducing clutter and speeding up how field staff find their assignments.
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to assign all Event Works to the appropriate crew members and departments — when building work orders for a multi-function event with concurrent setup tracks across multiple venue spaces
-2. Minimize the likelihood of an Event Work being unassigned or assigned to the wrong crew member — when distributing work orders across multiple departments with different staffing levels on event day
-3. Minimize the effort required to replicate a standard task assignment template from a prior similar event — when preparing work orders for a recurring event type with a consistent setup configuration
-4. Maximize the accuracy of task timing assignments relative to the overall event timeline — when building work orders where setup sequences are interdependent and crew from different departments must coordinate arrivals
-5. Minimize the likelihood of a crew member receiving a task assignment without sufficient detail to complete it independently — when assigning work orders to staff who were not involved in the pre-event planning discussion
-6. Maximize the clarity of task priority and sequencing communicated to each crew member — when assigning interdependent setup tasks where the completion of one job must precede the start of another
-7. Minimize the effort required to build a complete crew schedule from a work order template for a recurring event type — when preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before
+1. Minimize the time it takes to assign all Event Works to the appropriate crew members and departments — when coordinating a multi-function event with concurrent setup tracks across multiple venue spaces
+2. Minimize the likelihood of an Event Work being unassigned or assigned to the wrong crew member — when distributing Event Work across multiple departments with different staffing levels on event day
+3. Minimize the effort required to replicate a standard Event Work assignment template from a prior similar event — when preparing Event Work for a recurring event type with a consistent setup configuration
+4. Maximize the accuracy of Event Work timing assignments relative to the overall event timeline — when assigning crew across Event Work where setup sequences are interdependent and crew from different departments must coordinate arrivals
+5. Minimize the likelihood of a crew member receiving an Event Work assignment without sufficient detail to complete it independently — when assigning Event Work to staff who were not involved in the pre-event planning discussion
+6. Maximize the clarity of Event Work priority and sequencing communicated to each crew member — when assigning interdependent setup Event Work where the completion of one piece must precede the start of another
+7. Minimize the effort required to build a complete crew schedule from an Event Work template for a recurring event type — when preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before
 8. Minimize the likelihood of a time conflict between two assignments given to the same crew member — when scheduling staff who are assigned to multiple sequential functions within the same event window
 9. Minimize the effort required to generate accurate physical labels for booth-specific equipment such as power cords and utility drops — when preparing hundreds of individually labeled items for a large exhibition event
-10. Minimize the effort required to produce a single, field-legible packet combining work orders and room diagrams — when distributing daily assignments to an operations team that primarily works from print rather than devices
+10. Minimize the effort required to produce a single, field-legible packet combining Event Work and room diagrams — when distributing daily assignments to an operations team that primarily works from print rather than devices
 11. Maximize the speed at which open or available shifts generated by a staffing-need change are broadcast to eligible crew — when a BEO or resume update triggers new labor requirements across departments
-12. Minimize the effort required to translate a bundled service package into individual crew-actionable tasks — when preparing an order that combines multiple sub-items under a single package line
-13. Minimize the effort required to assign a task to whichever available crew member holds the right role or department, rather than a specific named person — when the assigning supervisor only cares that the right department covers the task, not who specifically does it
+12. Minimize the effort required to translate a bundled service package into individual, crew-actionable pieces of Event Work — when preparing an order that combines multiple sub-items under a single package line
+13. Minimize the effort required to assign a piece of Event Work to whichever available crew member holds the right role or department, rather than a specific named person — when the assigning supervisor only cares that the right department covers it, not who specifically does it
 14. Minimize the effort required to re-enter start and end dates and times for every individual item, instruction, or package — when applying a template to a recurring event where the overall schedule shifts but the relative timing between items does not
-15. Maximize the clarity of a timeline view of all functions and tasks across every department — when coordinating a multi-department event where interdependent tasks need to be sequenced and milestones tracked visually rather than in an external spreadsheet
-16. Maximize the usability of the same task and dashboard interface — when the operation scales from a small crew handling a few dozen tasks to a large crew handling over a thousand
+15. Maximize the clarity of a timeline view of all functions and Event Work across every department — when coordinating a multi-department event where interdependent Event Work needs to be sequenced and milestones tracked visually rather than in an external spreadsheet
+16. Maximize the usability of the same Event Work and dashboard interface — when the operation scales from a small crew handling a few dozen pieces of Event Work to a large crew handling over a thousand
+17. Maximize the accuracy of a piece of Event Work's assigned start time, derived from how long that type of work typically takes to complete — when crew need to know exactly when to begin, not just the deadline by which it must be finished
 
 #### 04 · Confirm — Confirm no last-minute changes
 
@@ -1954,46 +2669,46 @@ Validate all assignments, run a pre-event readiness check, and confirm crew is o
 **Desired outcomes:**
 
 1. Minimize the time it takes to verify that all Event Works are assigned, acknowledged, and on-schedule — when conducting a pre-event readiness check in the final hours before setup begins
-2. Minimize the likelihood of discovering an unassigned or unacknowledged work order during the pre-event check — when supervising a multi-team setup with staff distributed across several venue spaces
-3. Maximize the confidence in crew readiness and task assignment completeness before the event window opens — when overseeing a high-stakes event where setup delays directly impact the client experience
+2. Minimize the likelihood of discovering unassigned or unacknowledged Event Work during the pre-event check — when supervising a multi-team setup with staff distributed across several venue spaces
+3. Maximize the confidence in crew readiness and Event Work assignment completeness before the event window opens — when overseeing a high-stakes event where setup delays directly impact the client experience
 4. Maximize the speed of resolving a missing assignment or resource gap identified during the pre-event readiness check — when completing final preparation for an event that begins within two hours and requires immediate corrective action
-5. Minimize the likelihood of a crew member arriving at the wrong location or time due to a miscommunication in task assignment — when supervising a multi-space event where crew members are assigned to rooms they have not previously worked
+5. Minimize the likelihood of a crew member arriving at the wrong location or time due to a miscommunication in Event Work assignment — when supervising a multi-space event where crew members are assigned to rooms they have not previously worked
 6. Maximize the completeness of the pre-event readiness verification across all departments — when conducting the final check before a high-profile event where any gap in preparation would be immediately visible to the client
 7. Minimize the effort required to escalate a readiness issue to the appropriate department head before the event window opens — when a pre-event check reveals a missing resource or incomplete setup that requires managerial intervention to resolve
-8. Minimize the likelihood of a last-minute BEO change invalidating work orders already distributed and acknowledged by crew — when a planning team revision arrives after the crew has been dispatched and briefed on their assignments
+8. Minimize the likelihood of a last-minute BEO change invalidating Event Work already distributed and acknowledged by crew — when a planning team revision arrives after the crew has been dispatched and briefed on their assignments
 
 #### 05 · Execute — Run the event
 
 *Verbs: Perform · Transact · Administer*
 
-Supervise live work order execution across all crew and spaces during the event window, from setup to teardown — In-system real-time task updates could replace ad hoc radio and paper coordination, giving operations a live view of execution across every crew and space. A purpose-built mobile work order experience would drive field adoption and close the gap between what is planned and what is actually logged. Surfacing operations constraints such as load-in windows and labor limits to sales and planning during booking would prevent commitments that operations cannot deliver. A cross-event labor view would allow crews to optimize deployment across adjacent events and eliminate redundant setup and teardown cycles.
+Supervise live Event Work execution across all crew and spaces during the event window, from setup to teardown — In-system real-time updates could replace ad hoc radio and paper coordination, giving operations a live view of execution across every crew and space. A purpose-built mobile experience would drive field adoption and close the gap between what is planned and what is actually logged. Surfacing operations constraints such as load-in windows and labor limits to sales and planning during booking would prevent commitments that operations cannot deliver. A cross-event labor view would allow crews to optimize deployment across adjacent events and eliminate redundant setup and teardown cycles.
 
-**Research opportunity:** Reliable mobile work order access for field crews — without requiring a Momentus login — would replace the printed manifest and radio-driven workflows that make real-time status tracking impossible. A live event-day dashboard consolidating all active work orders, crew assignments, and space statuses would give supervisors the situational awareness currently assembled from radio calls and printed sheets.
+**Research opportunity:** Reliable mobile access to Event Work for field crews — without requiring a Momentus login — would replace the printed manifest and radio-driven workflows that make real-time status tracking impossible. A live event-day dashboard consolidating all active Event Work, crew assignments, and space statuses would give supervisors the situational awareness currently assembled from radio calls and printed sheets.
 
-**Product documentation opportunity:** Capture client signatures and photo evidence per work order item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on work orders would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each work order. Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.
+**Product documentation opportunity:** Capture client signatures and photo evidence per Event Work item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on Event Work would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each piece of Event Work. Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to begin executing setup tasks — when the operations crew arrives on site at the start of the event window
+1. Minimize the time it takes to begin executing setup Event Work — when the operations crew arrives on site at the start of the event window
 2. Minimize the likelihood of an Event Work being performed incorrectly — when crew members reference their assignments from a mobile device in the field during active execution
 3. Minimize the disruption to the event timeline caused by a setup discrepancy during live execution — when the operations team must resolve the issue without stopping the event flow
-4. Maximize the speed of communicating a real-time task update or priority change to crew in the field — when a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue
-5. Minimize the effort required to confirm task completion in real time without interrupting crew during active execution — when supervising multiple concurrent setup tracks that are progressing simultaneously across the venue
-6. Minimize the likelihood of a crew member executing an Event Work against an outdated task specification — when a modification was issued by the planning team after the crew was dispatched with printed task assignments
-7. Maximize the clarity of real-time task status, from setup to teardown, visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
-8. Minimize the effort required to reallocate crew from a lower-priority task to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
-9. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized work order quantities
-10. Minimize the likelihood of losing in-progress mobile work order entries due to application performance failures such as crashes, logouts, or slow diagram loads — when low-tech-savvy field crew are completing setup tasks on a mobile device in real time
-11. Minimize the likelihood of a work order item being marked complete by someone other than the authorized supervisor or coordinator — when a maintenance or install crew member can update status but only a designated coordinator should verify and close the item
+4. Maximize the speed of communicating a real-time Event Work update or priority change to crew in the field — when a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue
+5. Minimize the effort required to confirm Event Work completion in real time without interrupting crew during active execution — when supervising multiple concurrent setup tracks that are progressing simultaneously across the venue
+6. Minimize the likelihood of a crew member executing an Event Work against an outdated specification — when a modification was issued by the planning team after the crew was dispatched with printed assignments
+7. Maximize the clarity of real-time Event Work status, from setup to teardown, visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
+8. Minimize the effort required to reallocate crew from lower-priority Event Work to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
+9. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized Event Work quantities
+10. Minimize the likelihood of losing in-progress mobile Event Work entries due to application performance failures such as crashes, logouts, or slow diagram loads — when low-tech-savvy field crew are completing setup Event Work on a mobile device in real time
+11. Minimize the likelihood of an Event Work item being marked complete by someone other than the authorized supervisor or coordinator — when a maintenance or install crew member can update status but only a designated coordinator should verify and close the item
 12. Minimize the likelihood of an unplanned on-site request going unfulfilled or unbilled — when a need falls outside the original scope of work and must be routed back through another team before it can be addressed
 
 #### 06 · Monitor — Real-time track
 
 *Verbs: Verify · Track · Check*
 
-Track work order completion, crew location, and incident status in real time during the event
+Track Event Work completion, crew location, and incident status in real time during the event
 
-**Research opportunity:** A living event manifest that updates in real time as changes are made — replacing the static PDF export that becomes outdated the moment it is distributed. System-pushed notifications to crew when a work order changes would eliminate the need for supervisors to manually relay updates over radio or messaging apps, closing the gap between what was planned and what crew knows in the field.
+**Research opportunity:** A living event manifest that updates in real time as changes are made — replacing the static PDF export that becomes outdated the moment it is distributed. System-pushed notifications to crew when a piece of Event Work changes would eliminate the need for supervisors to manually relay updates over radio or messaging apps, closing the gap between what was planned and what crew knows in the field.
 
 **Product documentation opportunity:** Venue-level filtering in Change Tracking for a consolidated view of all changes per location — enabling operations supervisors to monitor activity across multi-venue environments without manually selecting individual spaces. Granular resource filtering by group and resource type would surface relevant operational changes without sifting through unrelated data. Exhibitor booth number changes captured in Change Tracking would keep operations and logistics teams aligned without relying on manual communication when stand assignments shift. Extending the Operations Change Log to capture changes up to a full year out would give supervisors a complete longitudinal record of operational decisions for events booked far in advance.
 
@@ -2001,68 +2716,72 @@ Track work order completion, crew location, and incident status in real time dur
 
 1. Minimize the time it takes to verify the completion status of all Event Works — when supervising a multi-team, multi-space event in real time
 2. Minimize the likelihood of an operational incident going unaddressed — when monitoring Event Work activity across concurrent functions running simultaneously in the venue
-3. Minimize the effort required to maintain visibility into crew location and work order progress — when supervising a complex event with staff distributed across multiple venue spaces
+3. Minimize the effort required to maintain visibility into crew location and Event Work progress — when supervising a complex event with staff distributed across multiple venue spaces
 4. Maximize the speed of routing an operational incident to the correct crew member for immediate resolution — when an issue is reported during an active event and the closest available staff member must be identified and dispatched
-5. Minimize the likelihood of an operational gap going undetected until it escalates into a client-visible failure — when monitoring task status across a large-scale event with multiple functions running concurrently in different venue spaces
-6. Maximize the speed of identifying a task that is falling behind schedule during live execution — when monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event
+5. Minimize the likelihood of an operational gap going undetected until it escalates into a client-visible failure — when monitoring Event Work status across a large-scale event with multiple functions running concurrently in different venue spaces
+6. Maximize the speed of identifying a piece of Event Work that is falling behind schedule during live execution — when monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event
 7. Minimize the effort required to document an operational incident in real time — when managing an active event and a client-visible issue requires immediate logging without stopping the operations supervisor from coordinating the resolution
 8. Maximize the accuracy of the real-time status view of all active Event Works — when a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team
-9. Minimize the cognitive effort required to parse a shared dashboard view for only the work orders and spaces relevant to a specific supervisor — when using a shared, unfiltered view that surfaces every department's activity instead of just the supervisor's own scope
+9. Minimize the cognitive effort required to parse a shared dashboard view for only the Event Work and spaces relevant to a specific supervisor — when using a shared, unfiltered view that surfaces every department's activity instead of just the supervisor's own scope
 10. Maximize the traceability of an individual Event Work item's status history from installed to verified to flagged for repair — when a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record
 11. Maximize the accessibility of real-time status indicators for crew and supervisors with different visual abilities — when monitoring incident or risk status across a mixed-ability team during an active event
 12. Maximize the degree to which a resolved incident informs future risk identification — when closing out an incident that reveals a previously unassessed risk
 13. Minimize the effort required to confirm event floor status without physically returning to a desk or device — when supervising active work from the floor and needing an update in the moment
 14. Maximize the flexibility of switching between a single-event view and a consolidated view spanning every concurrent event — when different roles on the same team need different scopes — one overseeing one event in depth, another overseeing the full portfolio running that day
+15. Maximize the visibility into how actual crew time, staffing, and resource usage are diverging from what was planned for this event's operations — when the operations plan called for a certain staffing and resource level and live execution is revealing that the actual need differs
+16. Minimize the effort required to decide whether an incident needs escalation to leadership or can remain part of the standard local log — when monitoring a high-volume event where most incidents are routine but a small number carry reputational or safety significance
 
 #### 07 · Modify — Handle change orders
 
 *Verbs: Update · Adjust · Maintain*
 
-Reassign or update work orders when changes are communicated from the planning team during execution
+Reassign or update Event Work when changes are communicated from the planning team during execution
 
-**Research opportunity:** In-event change order propagation — updates made in Momentus immediately reflected in the work orders visible to crew in the field, without requiring a manual re-export or radio broadcast. Change acknowledgment tracking would give supervisors confidence that a modification has been received and actioned by the right crew member, not just sent.
+**Research opportunity:** In-event change propagation — updates made in Momentus immediately reflected in the Event Work visible to crew in the field, without requiring a manual re-export or radio broadcast. Change acknowledgment tracking would give supervisors confidence that a modification has been received and actioned by the right crew member, not just sent. Beyond notifying that something changed, surface the calculated downstream effect directly — e.g. an attendance increase of 50 translates to a specific quantity increase across specific catering line items and specific dates — so operations doesn't have to re-derive the impact by hand.
 
 **Desired outcomes:**
 
 1. Minimize the time it takes to reassign or update an Event Work — when a last-minute change is communicated by the event planner during live execution
-2. Minimize the likelihood of a change request being missed by crew in the field — when a modification arrives while staff are actively executing work orders across multiple venue spaces
-3. Minimize the disruption to the operational sequence caused by an unexpected work order re-sequencing or emergency resource reallocation — when a client change requires immediate adjustment during a live event
+2. Minimize the likelihood of a change request being missed by crew in the field — when a modification arrives while staff are actively executing Event Work across multiple venue spaces
+3. Minimize the disruption to the operational sequence caused by an unexpected Event Work re-sequencing or emergency resource reallocation — when a client change requires immediate adjustment during a live event
 4. Maximize the speed of communicating a change request from the event planner to the affected crew member — when a client modification arrives mid-event and requires immediate reassignment of resources already deployed in the field
-5. Minimize the likelihood of a task conflict arising from a mid-event reassignment — when reallocating crew or equipment from one function to another while both are actively executing in the venue
+5. Minimize the likelihood of an Event Work conflict arising from a mid-event reassignment — when reallocating crew or equipment from one function to another while both are actively executing in the venue
 6. Maximize the speed of acknowledging a change request from the planning team and confirming the correct crew member has been notified — when a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update
-7. Minimize the effort required to document the reason for a task reassignment and the time it was actioned — when a mid-event change is made that may need to be referenced during post-event billing or incident review
-8. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a task modification is communicated directly by the event planner to an individual crew member without updating the formal work order record
+7. Minimize the effort required to document the reason for an Event Work reassignment and the time it was actioned — when a mid-event change is made that may need to be referenced during post-event billing or incident review
+8. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a modification is communicated directly by the event planner to an individual crew member without updating the formal Event Work record
 9. Minimize the effort required to confirm that a change reported through operations was actually applied by the planning team — when a customer relays a change to operations directly, and operations has no visibility into whether or when the planning team updated the record
 10. Minimize the time it takes to receive event-manager approval or denial for a change that operations identifies on-site — when a customer requests a modification during setup and operations must wait for a yes or no before proceeding
 11. Maximize the completeness of change detection during live execution — when a modification is communicated through unstructured notes rather than a structured field update
+12. Maximize the accuracy of the calculated downstream impact automatically surfaced when a change occurs — when a single attribute change, such as attendee count, affects multiple line items, departments, or dates that would otherwise require manual recalculation
 
 #### 08 · Conclude — Capture actuals & close
 
 *Verbs: Store · Finish · Close*
 
-Log work order completion, document all actuals and incidents, close the work order record, and hand off to the finance team for post-event invoicing and billing — A mobile-first actuals capture flow would replace paper-based and verbal recording at the venue, enabling real-time quantity logging and more accurate post-event records for billing and reporting.
+Log Event Work completion, document all actuals and incidents, close the Event Work record, and hand off to the finance team for post-event invoicing and billing — A mobile-first actuals capture flow would replace paper-based and verbal recording at the venue, enabling real-time quantity logging and more accurate post-event records for billing and reporting.
 
-**Research opportunity:** Actuals capture within the work order at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close.
+**Research opportunity:** Actuals capture within Event Work at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close. Operations teams already produce manual end-of-shift/end-of-day summaries today — that existing reporting habit is a more realistic data-capture surface for a dashboard than introducing new data entry.
 
-**Product documentation opportunity:** Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO (Mobile Work Orders) — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced on MWO work orders would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per work order item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a work order right away instead of holding the entire record open until final counts are in.
+**Product documentation opportunity:** Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO (Mobile Work Orders) — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced in MWO would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per Event Work item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a piece of Event Work right away instead of holding the entire record open until final counts are in.
 
 **Desired outcomes:**
 
 1. Minimize the time it takes to log completion of all Event Works and document operational actuals — when the event has concluded and teardown is complete
 2. Minimize the likelihood of incomplete or inaccurate incident records — when concluding the operational log for a complex multi-department event
 3. Maximize the accuracy of resource, labor, and material actuals captured — when closing out all Event Works to support post-event financial reconciliation with the planning team
-4. Maximize the completeness of incident and deviation records captured at event conclusion — when closing out a work order for an event where multiple unplanned operational issues required real-time resolution during execution
-5. Minimize the effort required to confirm all Event Work completions and submit the closed work order to the planning team — when wrapping up teardown for a late-running event while crew are still on site and pending their next assignment
+4. Maximize the completeness of incident and deviation records captured at event conclusion — when closing out Event Work for an event where multiple unplanned operational issues required real-time resolution during execution
+5. Minimize the effort required to confirm all Event Work completions and submit the closed Event Work to the planning team — when wrapping up teardown for a late-running event while crew are still on site and pending their next assignment
 6. Minimize the effort required to collect and consolidate completion confirmations from all crew members after teardown — when wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times
 7. Maximize the accuracy of equipment return and inventory counts submitted at event close — when concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest
-8. Minimize the likelihood of an unresolved incident remaining open after the work order is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
-9. Minimize the reliance on memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building — when producing an end-of-day report for other departments without a system-generated summary of work order status
-10. Minimize the likelihood of being blocked from closing a completed work order because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
+8. Minimize the likelihood of an unresolved incident remaining open after the Event Work is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
+9. Minimize the reliance on memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building — when producing an end-of-day report for other departments without a system-generated summary of Event Work status
+10. Minimize the likelihood of being blocked from closing completed Event Work because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
 11. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
-12. Maximize the ability of the operations team to independently verify and close a work order upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
+12. Maximize the ability of the operations team to independently verify and close a piece of Event Work upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
 13. Maximize the accuracy of distinguishing consumable resources from reusable equipment in actuals reporting — when quantities delivered on-site differ from quantities originally ordered and must be reconciled at close
+14. Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced — when a comparable event type is entering the pipeline and historical operational delivery data could improve the accuracy of the next staffing and resourcing plan
 
-### Reconcile Event Financials — Casey Lindgren, Finance Director ("The Financial Steward")
+### Reconcile Event Financials — Finance Director ("The Financial Steward")
 
 **Product area:** Event Finance · **Primary object:** Event Financials  
 **Functional job:** Reconcile event and venue-level financial performance — from budget through final closeout — so every dollar is accounted for and the venue’s financial story holds up to scrutiny
@@ -2142,12 +2861,12 @@ Monitor event spend and vouchers as they post, check GL (General Ledger) entries
 
 1. Minimize the time it takes to identify a GL variance while an event is still in progress — when reviewing GL entries throughout a live, multi-day event
 2. Minimize the likelihood of a labor cost discrepancy going unnoticed until after payroll runs — when verifying contracted and in-house labor actuals against event-day staffing
-3. Maximize the accuracy of data entered by event planners and operations into service orders and work orders — when an event’s post-event reconciliation depends on that data being correct at the source
+3. Maximize the accuracy of data entered by event planners and operations into service orders and Event Work — when an event’s post-event reconciliation depends on that data being correct at the source
 4. Minimize the effort required to confirm that billable vouchers are being recorded correctly as the event unfolds — when monitoring spend across a multi-department, multi-day event
 5. Maximize the speed of flagging a cost that is tracking meaningfully over budget while the event is still running — when there is still time to intervene before the event concludes
 6. Minimize the likelihood of contractor costs going untracked during the event because the invoice hasn’t arrived yet — when third-party vendors are on-site but bill separately and later
 7. Maximize the confidence in the real-time financial picture of an in-progress event — when an executive or department head asks how an event is tracking against budget before it has closed
-8. Minimize the likelihood of a service or work order being closed to process an invoice payment before the associated labor has actually occurred — when the system requires orders to be closed in order to invoice a credit-card payment
+8. Minimize the likelihood of a service order or piece of Event Work being closed to process an invoice payment before the associated labor has actually occurred — when the system requires orders to be closed in order to invoice a credit-card payment
 
 #### 06 · Monitor — Catch variances early
 
@@ -2155,12 +2874,12 @@ Monitor event spend and vouchers as they post, check GL (General Ledger) entries
 
 Track budget-vs-actual variance on an ongoing basis and forecast the likely month-end financial position — rather than discovering shortfalls only when the books close.
 
-**Research opportunity:** ML (Machine Learning) forecasts month-end position from mid-month signals — unposted vouchers, labor actuals, open work orders — alerting Finance weeks before a surprise hits, e.g. "Based on current trajectory, you’re likely to close 7% over budget on labor."
+**Research opportunity:** ML (Machine Learning) forecasts month-end position from mid-month signals — unposted vouchers, labor actuals, open Event Work — alerting Finance weeks before a surprise hits, e.g. "Based on current trajectory, you’re likely to close 7% over budget on labor."
 
 **Desired outcomes:**
 
 1. Minimize the time it takes to detect that an event or department is trending over budget — when reviewing spend partway through a month with many concurrent or overlapping events
-2. Maximize the visibility into a forecasted month-end financial position based on mid-month signals — when unposted vouchers, labor actuals, and open work orders have not yet been finalized
+2. Maximize the visibility into a forecasted month-end financial position based on mid-month signals — when unposted vouchers, labor actuals, and open Event Work have not yet been finalized
 3. Minimize the likelihood of a revenue shortfall between an event’s budget and its actual performance going unnoticed until month-end close — when individual event budgets don’t automatically roll up into an aggregate view
 4. Maximize the speed of alerting the responsible department head to a developing variance — when there is still enough time in the month to take corrective action
 5. Minimize the effort required to determine which events are driving an emerging budget variance — when a department’s aggregate numbers look off but the specific cause isn’t yet clear
@@ -2193,15 +2912,15 @@ Investigate and resolve contested costs, correct GL (General Ledger) coding erro
 
 *Verbs: Store · Finish · Close*
 
-Verify service orders and work orders were entered correctly, reconcile the GL (General Ledger), generate and route the invoice through multi-step approval, chase any outstanding contractor invoices, and share the final balance with the customer — closing the financial record for the event. — The financial lifecycle of an event routinely extends weeks or months past the event itself while contractor invoices remain outstanding.
+Verify service orders and Event Work were entered correctly, reconcile the GL (General Ledger), generate and route the invoice through multi-step approval, chase any outstanding contractor invoices, and share the final balance with the customer — closing the financial record for the event. — The financial lifecycle of an event routinely extends weeks or months past the event itself while contractor invoices remain outstanding.
 
-**Research opportunity:** Predict invoice timing and auto-match line items to work orders via NLP (Natural Language Processing) — Finance reviews exceptions only, not every invoice.
+**Research opportunity:** Predict invoice timing and auto-match line items to Event Work via NLP (Natural Language Processing) — Finance reviews exceptions only, not every invoice.
 
 **Product documentation opportunity:** A consolidated P&L (profit and loss) dashboard across ERP (Enterprise Resource Planning), payroll, ticketing, and contractor systems, with natural-language query on top ("Why did F&B (Food & Beverage) margin drop in March?"); AI (Artificial Intelligence)-generated plain-language variance digests pushed to department heads automatically after each event closes.
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to verify that all service orders and work orders were entered correctly before starting reconciliation — when beginning post-event closeout for a multi-department event
+1. Minimize the time it takes to verify that all service orders and Event Work were entered correctly before starting reconciliation — when beginning post-event closeout for a multi-department event
 2. Minimize the likelihood of an event remaining unreconciled because a contractor invoice hasn’t arrived — when third-party vendors routinely submit invoices weeks or months after an event closes
 3. Maximize the speed of generating and routing a customer invoice through its full approval chain — when an invoice must be reviewed by the event manager and approved by the executive director before it reaches the customer
 4. Minimize the effort required to assemble a consolidated profit-and-loss view for a single event — when P&L data currently must be pulled from separate ERP, payroll, ticketing, and contractor systems and combined by hand
@@ -2213,12 +2932,12 @@ Verify service orders and work orders were entered correctly, reconcile the GL (
 10. Minimize the effort required to re-key invoice data into an external accounting system to generate the final, official customer invoice — when the accounting system of record for final invoicing is separate from the event management system
 11. Maximize the consolidation of exhibitor-service and show-level charges into a single customer invoice — when exhibitor and show billing currently must be tracked and invoiced separately, requiring manual bulk-number reconciliation
 
-### Manage Event — Morgan Rivera, Venue Director ("The Orchestrator")
+### Synthesize Event Intelligence — Venue Director ("The Orchestrator")
 
-**Product area:** Momentus Events · **Primary object:** Event  
+**Product area:** Momentus Events · **Primary object:** Event Intelligence  
 **Functional job:** Oversee the full event lifecycle — from booking through execution — to deliver consistently exceptional experiences and sustainable business outcomes
 
-**JTBD statement** — When a new event enters the pipeline, I want to maintain real-time visibility and control across sales, planning, and operations in a single connected system — most of this today is an innovation opportunity, not yet a solved workflow, so I can make faster, more confident decisions — and ensure every team is aligned, with handoffs tracked and performance visible across the full lifecycle.
+**JTBD statement** — When a new event enters the pipeline, I want to synthesize Event Intelligence — one connected story pulled from sales, planning, operations, and finance — instead of assembling it manually across four departments, so I can make faster, more confident decisions — and ensure every team is aligned, with handoffs tracked and performance visible across the full lifecycle.
 
 #### 01 · Define — Set the strategy
 
@@ -2302,7 +3021,7 @@ Authorize events that meet strategic, financial, and operational criteria, and c
 
 Maintain real-time visibility over all in-progress events and ensure every team has what they need to execute without escalation
 
-**Research opportunity:** A concurrent event oversight view — surfacing the status of all events running simultaneously, with drill-down to individual work order progress and crew assignments — would give venue directors operational visibility without requiring radio calls or physical walkthroughs. An incident-to-event feedback loop connecting risk records to the event record would ensure that operational incidents during execution are captured against the event, not isolated in a separate system.
+**Research opportunity:** A concurrent event oversight view — surfacing the status of all events running simultaneously, with drill-down to individual Event Work progress and crew assignments — would give venue directors operational visibility without requiring radio calls or physical walkthroughs. An incident-to-event feedback loop connecting risk records to the event record would ensure that operational incidents during execution are captured against the event, not isolated in a separate system.
 
 **Desired outcomes:**
 
@@ -2339,6 +3058,7 @@ Track revenue performance, capacity utilization, and team effectiveness across a
 10. Maximize the completeness of sustainability data captured across departments and vendor partners — when compiling a sustainability report for city, board, or customer stakeholders and the underlying data lives in disconnected vendor reports and manual estimates
 11. Minimize the effort required to reconcile event data between the event management system and connected CRM (Customer Relationship Management) or financial systems — when sales, finance, and bureau partners each maintain a separate record of the same event and totals must match before reporting
 12. Maximize the completeness of the audit trail identifying who changed which event details and when — when investigating a discrepancy in cost, space assignment, or contract terms after multiple team members have edited the same event record
+13. Maximize the visibility into how far actual delivery has diverged from what sales originally estimated and planning later refined — when sales estimated one scope, planning turned it into specifics, and operations is now delivering something that differs from both
 
 #### 07 · Modify — Direct adjustments
 
@@ -2379,6 +3099,7 @@ Close all event records, review performance outcomes, and apply learnings to imp
 7. Maximize the speed of extracting actionable learnings from completed events to improve the team's approach going forward — when closing out a period in which several events surfaced recurring process failures or client dissatisfaction patterns
 8. Minimize the likelihood of a repeat event launching without incorporating improvements identified at the previous event's close — when a recurring client event is re-entering the pipeline and the post-event record from the prior year has not been reviewed
 9. Maximize the completeness of all booking, planning, operations, and risk documentation consolidated automatically into a single event record — when a liability or legal inquiry arises months after the event and every relevant document needs to be found in one place without manually searching across departments
+10. Maximize the degree to which the gap between estimated, planned, and actual delivery on a closed event informs how the next similar event is estimated and sold — when a recurring or comparable event is entering the pipeline and historical delivery data could sharpen the next estimate
 
 ## Curated Opportunity Actions (reference data)
 
@@ -2438,31 +3159,31 @@ _This data (`OPPS_ACTIONS` in index.html) maps each persona/stage to short, cura
 
 ### owen
 
-- **define / gap:** Move crew assignment notifications in-platform — _targets:_ Maximize the accuracy of the pre-event staffing plan based on the scope of work orders
+- **define / gap:** Move crew assignment notifications in-platform — _targets:_ Maximize the accuracy of the pre-event staffing plan based on the scope of Event Work
 
-- **define / research:** Add operations intake view with staffing and resource visibility — _targets:_ Minimize the time it takes to identify all setup, execution, and teardown tasks required for an Event Plan
+- **define / research:** Add operations intake view with staffing and resource visibility — _targets:_ Minimize the time it takes to identify all setup, execution, and teardown Event Work required for an Event Plan
 
-- **locate / research:** Add crew-filtered work order view with real-time inventory — _targets:_ Minimize the effort required to locate all space, equipment, and resource specifications needed to build a complete work order
+- **locate / research:** Add crew-filtered Event Work view with real-time inventory — _targets:_ Minimize the effort required to locate all space, equipment, and resource specifications needed to act on received Event Work
 
 - **locate / productdoc:** Make room diagrams accessible directly from MWO — _targets:_ Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO
 
-- **prepare / research:** Add field-ready work order format for on-site use — _targets:_ Minimize the likelihood of a crew member receiving a task assignment without sufficient detail to complete it independently
+- **prepare / research:** Add field-ready Event Work format for on-site use — _targets:_ Minimize the likelihood of a crew member receiving an Event Work assignment without sufficient detail to complete it independently
 
 - **prepare / productdoc:** Allow contract staff MWO access without full platform licenses — _targets:_ Minimize the time it takes to assign all Event Works to the appropriate crew members and departments
 
-- **execute / gap:** Replace radio and paper coordination with real-time task updates — _targets:_ Maximize the speed of communicating a real-time task update or priority change to crew in the field
+- **execute / gap:** Replace radio and paper coordination with real-time updates — _targets:_ Maximize the speed of communicating a real-time Event Work update or priority change to crew in the field
 
-- **execute / research:** Enable login-free mobile MWO access for field crews — _targets:_ Minimize the time it takes to begin executing setup tasks
+- **execute / research:** Enable login-free mobile MWO access for field crews — _targets:_ Minimize the time it takes to begin executing setup Event Work
 
-- **execute / productdoc:** Add on-site signature and photo capture per work order item — _targets:_ Minimize the effort required to confirm task completion in real time without interrupting crew during active execution
+- **execute / productdoc:** Add on-site signature and photo capture per Event Work item — _targets:_ Minimize the effort required to confirm Event Work completion in real time without interrupting crew during active execution
 
 - **monitor / research:** Add real-time event manifest with auto-push crew notifications — _targets:_ Minimize the time it takes to verify the completion status of all Event Works
 
-- **monitor / productdoc:** Add venue-level Change Tracking filter for multi-space oversight — _targets:_ Minimize the effort required to maintain visibility into crew location and work order progress
+- **monitor / productdoc:** Add venue-level Change Tracking filter for multi-space oversight — _targets:_ Minimize the effort required to maintain visibility into crew location and Event Work progress
 
-- **modify / research:** Push change order updates instantly to field crew work orders — _targets:_ Maximize the speed of communicating a change request from the event planner to the affected crew member
+- **modify / research:** Push change updates instantly to field crew Event Work — _targets:_ Maximize the speed of communicating a change request from the event planner to the affected crew member
 
-- **conclude / gap:** Enable mobile-first actuals capture at work order completion — _targets:_ Minimize the time it takes to log completion of all Event Works and document operational actuals
+- **conclude / gap:** Enable mobile-first actuals capture at Event Work completion — _targets:_ Minimize the time it takes to log completion of all Event Works and document operational actuals
 
 - **conclude / research:** Log and invoice actuals directly from mobile MWO — _targets:_ Maximize the accuracy of resource, labor, and material actuals captured
 

@@ -22,8 +22,8 @@ const SRC = path.join(ROOT, 'index.html');
 const OUT = path.join(ROOT, 'SITE_CONTENT.md');
 
 const PERSONA_ORDER = ['sharon', 'emilie', 'owen', 'dana', 'me'];
-const OBJECT_ORDER = ['booking', 'planning', 'operations', 'financials', 'event'];
-const STAGE_LABEL_BY_OBJ = { booking: 'Sales', planning: 'Planning', operations: 'Operations', financials: 'Financial', event: 'End-to-End' };
+const OBJECT_ORDER = ['booking', 'planning', 'operations', 'financials', 'intelligence', 'event'];
+const STAGE_LABEL_BY_OBJ = { booking: 'Sales', planning: 'Planning', operations: 'Operations', financials: 'Financial', intelligence: 'Leadership', event: 'End-to-End' };
 
 const html = fs.readFileSync(SRC, 'utf8');
 
@@ -39,6 +39,7 @@ function extractDataObjects(rawHtml) {
     'PERSONAS_DETAIL', 'VERTICAL_ATTRS', 'SECONDARY_PERSONAS',
     'STAGES', 'PERSONAS_J', 'SHORT', 'MAP', 'OPPS_ACTIONS', 'LAYER_INFO',
     'MOMENTUS_OFFERING', 'OFFER_CARD_META', 'PRODUCT_META', 'PRODUCT_ORDER',
+    'MOMENTUS_VISION', 'MOMENTUS_VISION_UMBRELLA',
   ];
   const trailer = `\nvar __DATA__ = {${names.join(',')}};\n`;
 
@@ -107,8 +108,8 @@ function extractStaticContent(rawHtml) {
     const stripEl = root.querySelector('.persona-strip');
     const persona = stripEl
       ? {
-        name: clean(stripEl.querySelector('.pname').textContent),
-        role: clean(stripEl.querySelector('.prole').textContent).replace(/^—\s*/, ''),
+        role: clean(stripEl.querySelector('.pname').textContent),
+        archetype: clean(stripEl.querySelector('.prole').textContent).replace(/^—\s*/, ''),
       }
       : null;
     const inputs = [...root.querySelectorAll('.ic')].map((ic) => ({
@@ -145,9 +146,18 @@ function extractStaticContent(rawHtml) {
     return { name, columns, actions };
   }
 
+  function textById(id) {
+    const el = doc.getElementById(id);
+    return el ? clean(el.textContent) : null;
+  }
+
   return {
     northStars: Object.fromEntries(['me', ...PERSONA_ORDER.filter((p) => p !== 'me')].map((id) => [id, northStar(id)])),
     primaryObjects: Object.fromEntries(OBJECT_ORDER.map((id) => [id, primaryObject(id)])),
+    productVision: textById('product-vision-text'),
+    productVisionSlogan: textById('product-vision-slogan'),
+    productWhy: textById('product-why-text'),
+    productWhySlogan: textById('product-why-slogan'),
   };
 }
 
@@ -184,9 +194,9 @@ function render(data, staticContent) {
   h(2, 'Personas (Human Layer)');
   for (const pid of PERSONA_ORDER) {
     const d = data.PERSONAS_DETAIL[pid];
-    const [name, role] = d.role.split(' · ');
-    h(3, `${name} — ${role} ("${d.archetype}")`);
-    p(`**Product area:** ${d.product}  \n**Primary object:** ${d.object}  \n**Quote:** "${d.quote.replace(/[“”]/g, '')}" — ${d.quoteSrc}  \n**Interaction grammar:** ${d.grammarPills.join(' · ')} — *${d.interaction}*`);
+    const role = d.role;
+    h(3, `${role} ("${d.archetype}")`);
+    p(`**Product area:** ${d.product}  \n**Primary object:** ${d.object}  \n**Quote:** "${d.quote.replace(/[“”]/g, '')}"  \n**Interaction grammar:** ${d.grammarPills.join(' · ')} — *${d.interaction}*`);
     h(4, 'Fixed Conditions');
     p(bulletList(d.fixed));
     h(4, 'Dynamic States');
@@ -196,7 +206,7 @@ function render(data, staticContent) {
 
     const verticals = data.VERTICAL_ATTRS[pid] || {};
     if (Object.keys(verticals).length) {
-      h(4, `Vertical-specific variants of ${name}`);
+      h(4, `Vertical-specific variants of ${role}`);
       for (const [vertical, v] of Object.entries(verticals)) {
         if (v.emptyNote) {
           h(5, `${vertical}: not yet documented`);
@@ -210,10 +220,10 @@ function render(data, staticContent) {
 
     const secondaries = data.SECONDARY_PERSONAS[pid] || [];
     if (secondaries.length) {
-      h(4, `Secondary / adjacent personas around ${name}`);
+      h(4, `Secondary / adjacent personas around ${role}`);
       for (const s of secondaries) {
-        h(5, `${s.name} — ${s.role} (${s.vertical}) · "${s.archetype}"`);
-        p(`**Relationship to ${name}:** ${s.relationship}`);
+        h(5, `${s.role} (${s.vertical}) · "${s.archetype}"`);
+        p(`**Relationship to ${role}:** ${s.relationship}`);
         p(`**Fixed Conditions**\n${bulletList(s.fixed)}\n\n**Dynamic States**\n${bulletList(s.dynamic)}\n\n**Structural Status**\n${bulletList(s.structural)}`);
       }
     }
@@ -234,14 +244,39 @@ function render(data, staticContent) {
   }
   p('_Note: each object card also has a "Secondary Objects" slot in the UI (`sec-objs-*`) that is currently an empty placeholder — not yet wired to data. See ARCHITECTURE.md._');
 
-  // ── North Star ──
-  h(2, 'North Star Framework (Strategy Layer)');
-  for (const pid of ['me', ...PERSONA_ORDER.filter((x) => x !== 'me')]) {
+  // ── Strategy and North Stars ──
+  h(2, 'Strategy and North Stars (Strategy Layer)');
+  if (staticContent.productVision) p(`**Vision** — ${staticContent.productVision}`);
+  if (staticContent.productVisionSlogan) p(`**Vision Slogan** — ${staticContent.productVisionSlogan}`);
+  if (staticContent.productWhy) p(`**Why We Do It** — ${staticContent.productWhy}`);
+  if (staticContent.productWhySlogan) p(`**Why We Do It Slogan** — ${staticContent.productWhySlogan}`);
+  p('Each product area is headed "Momentus <Area>" — its Primary Object/Persona/Job, then its own Mission, Vision, and Why We Do It, then the North Star metric that proves the strategy is working, then Key Input Metrics. A Golden Circle (Why/How/What) read of the product org\'s 3-year vision. Finance has no supporting GTM deck yet, unlike Sales/Planning/Operations/Events — its Why/Mission/Vision are grounded only in Event Lifecycle Map research, a known gap. See `MOMENTUS_GOLDEN_CIRCLE_PROJECT_BRIEF.md` for full sourcing and the style rules behind this copy.');
+  h(3, 'Momentus Events North Star');
+  p('**Event and venue management professionals\' expertise amplified**');
+  p('Momentus Events core value is delivered to event and venue management professionals when their expertise is amplified. Built from five teams working as one — Sales, Planning, Operations, Finance, and Leadership — Momentus Events signals that the entire journey, from first opportunity through final reconciliation, completes end to end, entirely inside the platform, without falling back to outside tools at any handoff. When the key input metrics below are all moving in the right direction, it means the full event lifecycle is delivering its value inside Momentus, start to finish.');
+  for (const pid of PERSONA_ORDER) {
     const ns = staticContent.northStars[pid];
-    h(3, `${ns.metricName} ${ns.abbr}`);
-    p(ns.def);
+    const v = data.MOMENTUS_VISION[pid];
+    const areaLabel = data.OFFER_CARD_META[pid].eyebrow;
+    const areaTitle = `Momentus ${areaLabel}`;
+    const pJob = data.PERSONAS_J.find((x) => x.id === pid);
+    h(3, areaTitle);
+    p(`The strategic approach Momentus has chosen for ${areaLabel}. The mission and vision driving it, the product area North Star metric that proves it's working, and the specific signals tracked to measure progress. This North Star ladders up into Momentus Events (ME), the company-wide measure of the full event lifecycle.`);
+    if (pJob) p(`**Primary object:** ${pJob.object}`);
+    if (ns.persona) p(`**Primary persona:** ${ns.persona.role} — ${ns.persona.archetype}`);
+    if (pJob) p(`**Primary job:** ${pJob.mainAction}`);
+    if (v) {
+      p(`**Mission:** ${v.slogan}`);
+      p(`**Vision:** ${v.vision}`);
+      p(`**Why We Do It:** ${v.why}`);
+    }
+    const primaryRole = pJob ? pJob.role : 'Venue Director';
+    const coreValueTag = `Momentus ${areaLabel} core value is delivered to the ${primaryRole} when their expertise is amplified.`;
+    h(4, `Product Area North Star Metric — ${ns.metricName} ${ns.abbr} (core value)`);
+    p(`**${primaryRole}'s expertise amplified**`);
+    p(`${coreValueTag} ${v && v.coreValueNarrative ? v.coreValueNarrative : ''}`);
+    p(`_Full metric definition:_ ${ns.def}`);
     if (ns.badges.length) p(ns.badges.map((b) => `\`${b}\``).join('  '));
-    if (ns.persona) p(`**Primary persona:** ${ns.persona.name} — ${ns.persona.role}`);
     h(4, 'Key Input Metrics');
     for (const i of ns.inputs) p(`**${i.dimension} — ${i.name}**  \n${i.def}`);
     if (ns.rationale.length) {
@@ -252,21 +287,38 @@ function render(data, staticContent) {
 
   // ── Momentus Offering ──
   h(2, 'Momentus Offering (Strategy Layer)');
-  p('Which Momentus products serve each stage of the event lifecycle — "stage" here means Sales/Planning/Operations/Financial/End-to-End, not the 8 JTBD stages used elsewhere on this site. Each area card below shows only entries tagged to that area; the End-to-End card shows every entry, including universal (cross-area) ones. "Inferred" flags a piece-to-stage assignment that is this map\'s own judgment call rather than a literal statement in the source.');
+  p('A capability matrix showing which Momentus products serve each stage of the event lifecycle — "stage" here means Sales/Planning/Operations/Financial/Leadership, not the 8 JTBD stages used elsewhere on this site. Rows are generic capability names, ordered from broadest (found across the most products) to narrowest (product-specific). Each area section below shows only capabilities tagged to that area, plus universal (cross-area) ones; the Leadership section shows every capability. "Inferred" flags a piece-to-capability assignment that is this map\'s own judgment call rather than a literal statement in the source. A "Third-Party" line lists non-Momentus tools customers use for that capability where known.');
+  function capBreadth(cap) {
+    return data.PRODUCT_ORDER.filter((prod) => cap.products[prod]).length;
+  }
   for (const pid of PERSONA_ORDER) {
     const meta = data.OFFER_CARD_META[pid];
-    const items = data.MOMENTUS_OFFERING
-      .filter((e) => !meta.areas || e.area === 'universal' || meta.areas.includes(e.area));
+    const rows = data.MOMENTUS_OFFERING
+      .filter((c) => !meta.areas || c.area === 'universal' || meta.areas.includes(c.area))
+      .slice()
+      .sort((a, b) => capBreadth(b) - capBreadth(a) || a.capability.localeCompare(b.capability));
     h(3, `${meta.label} (${meta.eyebrow})`);
-    if (!items.length) {
+    if (!rows.length) {
       p('_No offerings mapped yet for this area._');
       continue;
     }
-    for (const product of data.PRODUCT_ORDER) {
-      const pItems = items.filter((e) => e.product === product);
-      if (!pItems.length) continue;
-      h(4, data.PRODUCT_META[product].label);
-      p(pItems.map((e) => `- **${e.module}** — ${e.desc}${e.inferred ? ' _(inferred)_' : ''} _(source: ${e.source})_`).join('\n'));
+    for (const cap of rows) {
+      h(4, `${cap.capability} (${capBreadth(cap)}/${data.PRODUCT_ORDER.length} products)`);
+      if (cap.personaUse && cap.personaUse[pid]) {
+        p(`_How the ${data.PERSONAS_DETAIL[pid].role} uses this: ${cap.personaUse[pid]}_`);
+      }
+      const lines = [];
+      for (const prod of data.PRODUCT_ORDER) {
+        const entry = cap.products[prod];
+        if (!entry) continue;
+        lines.push(`- **${data.PRODUCT_META[prod].label} — ${entry.module}** — ${entry.desc}${entry.inferred ? ' _(inferred)_' : ''} _(source: ${entry.source})_`);
+      }
+      if (cap.thirdParty && cap.thirdParty.length) {
+        for (const tp of cap.thirdParty) {
+          lines.push(`- **Third-Party — ${tp.name}** — ${tp.desc}`);
+        }
+      }
+      p(lines.join('\n'));
     }
   }
 
@@ -277,7 +329,7 @@ function render(data, staticContent) {
   p(bulletList(data.STAGES.map((s) => `**${s.num} · ${s.label}** (${s.verbs})`)));
 
   for (const p_ of data.PERSONAS_J) {
-    h(3, `${p_.mainAction} — ${p_.name}, ${p_.role} ("${p_.archetype}")`);
+    h(3, `${p_.mainAction} — ${p_.role} ("${p_.archetype}")`);
     p(`**Product area:** ${p_.product} · **Primary object:** ${p_.object}  \n**Functional job:** ${p_.job}`);
     p(`**JTBD statement** — When ${p_.jtbd.when}, I want to ${p_.jtbd.want}, so I can ${p_.jtbd.soCan}.`);
     for (const stage of data.STAGES) {
