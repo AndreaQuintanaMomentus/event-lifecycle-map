@@ -2595,17 +2595,17 @@ Scope the full set of Event Work required to execute an Event Plan from setup to
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to identify all setup, execution, and teardown Event Work required for an Event Plan — when receiving the finalized BEO from the planning team and beginning Event Work planning
-2. Minimize the likelihood of an Event Work being omitted during pre-event scoping — when scoping a complex multi-department event plan with interdependent setup sequences
-3. Maximize the completeness of the initial list of Event Work for an Event Plan — when planning setup for an event with non-standard configurations, external vendors, or time-critical dependencies
-4. Maximize the accuracy of the pre-event staffing plan based on the scope of Event Work — when scheduling crew for a complex event with multiple concurrent setup tracks and time-sensitive sequencing
-5. Minimize the likelihood of discovering a missing Event Work dependency after setup has already begun — when reviewing the Event Work list for an event with non-standard space configurations or external vendor integrations
-6. Maximize the accuracy of equipment and material quantities required to execute all Event Works — when scoping Event Work for an event with non-standard configurations that differ significantly from the venue's standard setup inventory
-7. Minimize the effort required to translate auto-generated Event Work into individual crew-level assignments — when receiving a complex multi-function event plan whose Event Work has not previously been broken down to specific crew members
-8. Minimize the likelihood of over-staffing or under-staffing an event — when estimating crew size from a BEO where headcount and timing information is incomplete or non-standard
-9. Maximize the effectiveness of the handoff from the Event Plan to Event Work — when a finalized Event Plan must become directly actionable for the operations team without requiring manual rework to translate it into Event Work
-10. Minimize the amount of missing or conflicting information carried over in the handoff from Event Plan to Event Work — when the operations team must stop and request clarification instead of proceeding, causing knowledge loss and rework
-11. Maximize the likelihood that missing or conflicting information in a piece of Event Work is flagged automatically before execution begins — when that gap would otherwise only surface once crew are already on-site and underway
+1. Maximize the effectiveness of the handoff from the Event Plan to Event Work — when a finalized Event Plan must become directly actionable for the operations team without requiring manual rework to translate it into Event Work
+2. Minimize the amount of missing or conflicting information carried over in the handoff from Event Plan to Event Work — when the operations team must stop and request clarification instead of proceeding, causing knowledge loss and rework
+3. Maximize the likelihood that missing or conflicting information in a piece of Event Work is flagged automatically before execution begins — when that gap would otherwise only surface once crew are already on-site and underway
+4. Minimize the effort required to translate auto-generated Event Work into individual crew-level assignments — when receiving a complex multi-function event plan whose Event Work has not previously been broken down to specific crew members
+5. Maximize the accuracy of the pre-event staffing plan based on the scope of Event Work — when scheduling crew for a complex event with multiple concurrent setup tracks and time-sensitive sequencing
+6. Minimize the likelihood of over-staffing or under-staffing an event — when estimating crew size from a BEO where headcount and timing information is incomplete or non-standard
+7. Minimize the time it takes to identify all setup, execution, and teardown Event Work required for an Event Plan — when receiving the finalized BEO from the planning team and beginning Event Work planning
+8. Minimize the likelihood of an Event Work being omitted during pre-event scoping — when scoping a complex multi-department event plan with interdependent setup sequences
+9. Maximize the completeness of the initial list of Event Work for an Event Plan — when planning setup for an event with non-standard configurations, external vendors, or time-critical dependencies
+10. Minimize the likelihood of discovering a missing Event Work dependency after setup has already begun — when reviewing the Event Work list for an event with non-standard space configurations or external vendor integrations
+11. Maximize the accuracy of equipment and material quantities required to execute all Event Works — when scoping Event Work for an event with non-standard configurations that differ significantly from the venue's standard setup inventory
 
 #### 02 · Locate — Access Event Work
 
@@ -2619,16 +2619,16 @@ Access the finalized BEO (Banquet Event Order) and all supporting documentation 
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to access the finalized BEO and associated function details for a scheduled event — when beginning Event Work assignment for a function whose BEO has just been distributed by the planning team
-2. Minimize the likelihood of receiving Event Work generated from an outdated or unfinalized version of the BEO — when the event planner is still making changes to the Event Plan while the operations team is beginning preparation
-3. Minimize the effort required to locate all space, equipment, and resource specifications needed to act on received Event Work — when accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations
+1. Minimize the likelihood of a space or inventory item appearing available for another use before setup or teardown time has been accounted for — when the venue calendar reflects only the contracted event hours and not the surrounding turnover window operations needs
+2. Minimize the likelihood of a just-uploaded diagram failing to render and requiring a manual re-upload before crew can reference it on site — when preparing to execute a piece of Event Work immediately after the planning team distributes a new floor plan or diagram
+3. Minimize the likelihood of receiving Event Work generated from an outdated or unfinalized version of the BEO — when the event planner is still making changes to the Event Plan while the operations team is beginning preparation
 4. Maximize the speed of confirming that the BEO accessed is the most current approved version — when Event Work is generated for an event where recent changes may have been submitted by the planning team
-5. Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO — when preparing to execute a non-standard setup's Event Work, which requires visual reference materials to assign correctly
-6. Minimize the effort required to confirm the BEO is fully approved and authorized before Event Work is generated and delivered to operations — when the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system
-7. Maximize the accuracy of all floor plan and space layout details available at the time Event Work is received — when preparing Event Work assignments for an event using a non-standard room configuration that requires custom layout reference materials
-8. Minimize the likelihood of receiving Event Work generated from a BEO that the planning team is still revising — when the event planner and operations team are working on parallel timelines and the final detail has not been formally locked
-9. Minimize the likelihood of a just-uploaded diagram failing to render and requiring a manual re-upload before crew can reference it on site — when preparing to execute a piece of Event Work immediately after the planning team distributes a new floor plan or diagram
-10. Minimize the likelihood of a space or inventory item appearing available for another use before setup or teardown time has been accounted for — when the venue calendar reflects only the contracted event hours and not the surrounding turnover window operations needs
+5. Minimize the effort required to confirm the BEO is fully approved and authorized before Event Work is generated and delivered to operations — when the event planner has indicated the BEO is finalized but the formal approval record has not yet been updated in the system
+6. Minimize the likelihood of receiving Event Work generated from a BEO that the planning team is still revising — when the event planner and operations team are working on parallel timelines and the final detail has not been formally locked
+7. Minimize the time it takes to access the finalized BEO and associated function details for a scheduled event — when beginning Event Work assignment for a function whose BEO has just been distributed by the planning team
+8. Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO — when preparing to execute a non-standard setup's Event Work, which requires visual reference materials to assign correctly
+9. Maximize the accuracy of all floor plan and space layout details available at the time Event Work is received — when preparing Event Work assignments for an event using a non-standard room configuration that requires custom layout reference materials
+10. Minimize the effort required to locate all space, equipment, and resource specifications needed to act on received Event Work — when accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations
 
 #### 03 · Prepare — Forecast & publish Event Work
 
@@ -2642,23 +2642,23 @@ Assign all Event Work to crew members, departments, and equipment, with timing a
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to assign all Event Works to the appropriate crew members and departments — when coordinating a multi-function event with concurrent setup tracks across multiple venue spaces
-2. Minimize the likelihood of an Event Work being unassigned or assigned to the wrong crew member — when distributing Event Work across multiple departments with different staffing levels on event day
-3. Minimize the effort required to replicate a standard Event Work assignment template from a prior similar event — when preparing Event Work for a recurring event type with a consistent setup configuration
-4. Maximize the accuracy of Event Work timing assignments relative to the overall event timeline — when assigning crew across Event Work where setup sequences are interdependent and crew from different departments must coordinate arrivals
-5. Minimize the likelihood of a crew member receiving an Event Work assignment without sufficient detail to complete it independently — when assigning Event Work to staff who were not involved in the pre-event planning discussion
+1. Maximize the accuracy of a piece of Event Work's assigned start time, derived from how long that type of work typically takes to complete — when crew need to know exactly when to begin, not just the deadline by which it must be finished
+2. Minimize the effort required to produce a single, field-legible packet combining Event Work and room diagrams — when distributing daily assignments to an operations team that primarily works from print rather than devices
+3. Maximize the clarity of a timeline view of all functions and Event Work across every department — when coordinating a multi-department event where interdependent Event Work needs to be sequenced and milestones tracked visually rather than in an external spreadsheet
+4. Minimize the time it takes to assign all Event Works to the appropriate crew members and departments — when coordinating a multi-function event with concurrent setup tracks across multiple venue spaces
+5. Maximize the accuracy of Event Work timing assignments relative to the overall event timeline — when assigning crew across Event Work where setup sequences are interdependent and crew from different departments must coordinate arrivals
 6. Maximize the clarity of Event Work priority and sequencing communicated to each crew member — when assigning interdependent setup Event Work where the completion of one piece must precede the start of another
-7. Minimize the effort required to build a complete crew schedule from an Event Work template for a recurring event type — when preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before
-8. Minimize the likelihood of a time conflict between two assignments given to the same crew member — when scheduling staff who are assigned to multiple sequential functions within the same event window
-9. Minimize the effort required to generate accurate physical labels for booth-specific equipment such as power cords and utility drops — when preparing hundreds of individually labeled items for a large exhibition event
-10. Minimize the effort required to produce a single, field-legible packet combining Event Work and room diagrams — when distributing daily assignments to an operations team that primarily works from print rather than devices
-11. Maximize the speed at which open or available shifts generated by a staffing-need change are broadcast to eligible crew — when a BEO or resume update triggers new labor requirements across departments
-12. Minimize the effort required to translate a bundled service package into individual, crew-actionable pieces of Event Work — when preparing an order that combines multiple sub-items under a single package line
-13. Minimize the effort required to assign a piece of Event Work to whichever available crew member holds the right role or department, rather than a specific named person — when the assigning supervisor only cares that the right department covers it, not who specifically does it
-14. Minimize the effort required to re-enter start and end dates and times for every individual item, instruction, or package — when applying a template to a recurring event where the overall schedule shifts but the relative timing between items does not
-15. Maximize the clarity of a timeline view of all functions and Event Work across every department — when coordinating a multi-department event where interdependent Event Work needs to be sequenced and milestones tracked visually rather than in an external spreadsheet
-16. Maximize the usability of the same Event Work and dashboard interface — when the operation scales from a small crew handling a few dozen pieces of Event Work to a large crew handling over a thousand
-17. Maximize the accuracy of a piece of Event Work's assigned start time, derived from how long that type of work typically takes to complete — when crew need to know exactly when to begin, not just the deadline by which it must be finished
+7. Minimize the likelihood of an Event Work being unassigned or assigned to the wrong crew member — when distributing Event Work across multiple departments with different staffing levels on event day
+8. Minimize the likelihood of a crew member receiving an Event Work assignment without sufficient detail to complete it independently — when assigning Event Work to staff who were not involved in the pre-event planning discussion
+9. Minimize the likelihood of a time conflict between two assignments given to the same crew member — when scheduling staff who are assigned to multiple sequential functions within the same event window
+10. Minimize the effort required to replicate a standard Event Work assignment template from a prior similar event — when preparing Event Work for a recurring event type with a consistent setup configuration
+11. Minimize the effort required to build a complete crew schedule from an Event Work template for a recurring event type — when preparing staff assignments for a standard conference or banquet that uses the same configuration the venue has executed multiple times before
+12. Minimize the effort required to re-enter start and end dates and times for every individual item, instruction, or package — when applying a template to a recurring event where the overall schedule shifts but the relative timing between items does not
+13. Maximize the usability of the same Event Work and dashboard interface — when the operation scales from a small crew handling a few dozen pieces of Event Work to a large crew handling over a thousand
+14. Minimize the effort required to translate a bundled service package into individual, crew-actionable pieces of Event Work — when preparing an order that combines multiple sub-items under a single package line
+15. Minimize the effort required to assign a piece of Event Work to whichever available crew member holds the right role or department, rather than a specific named person — when the assigning supervisor only cares that the right department covers it, not who specifically does it
+16. Minimize the effort required to generate accurate physical labels for booth-specific equipment such as power cords and utility drops — when preparing hundreds of individually labeled items for a large exhibition event
+17. Maximize the speed at which open or available shifts generated by a staffing-need change are broadcast to eligible crew — when a BEO or resume update triggers new labor requirements across departments
 
 #### 04 · Confirm — Confirm no last-minute changes
 
@@ -2668,14 +2668,14 @@ Validate all assignments, run a pre-event readiness check, and confirm crew is o
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to verify that all Event Works are assigned, acknowledged, and on-schedule — when conducting a pre-event readiness check in the final hours before setup begins
-2. Minimize the likelihood of discovering unassigned or unacknowledged Event Work during the pre-event check — when supervising a multi-team setup with staff distributed across several venue spaces
-3. Maximize the confidence in crew readiness and Event Work assignment completeness before the event window opens — when overseeing a high-stakes event where setup delays directly impact the client experience
-4. Maximize the speed of resolving a missing assignment or resource gap identified during the pre-event readiness check — when completing final preparation for an event that begins within two hours and requires immediate corrective action
-5. Minimize the likelihood of a crew member arriving at the wrong location or time due to a miscommunication in Event Work assignment — when supervising a multi-space event where crew members are assigned to rooms they have not previously worked
+1. Minimize the likelihood of a last-minute BEO change invalidating Event Work already distributed and acknowledged by crew — when a planning team revision arrives after the crew has been dispatched and briefed on their assignments
+2. Maximize the speed of resolving a missing assignment or resource gap identified during the pre-event readiness check — when completing final preparation for an event that begins within two hours and requires immediate corrective action
+3. Minimize the effort required to escalate a readiness issue to the appropriate department head before the event window opens — when a pre-event check reveals a missing resource or incomplete setup that requires managerial intervention to resolve
+4. Minimize the time it takes to verify that all Event Works are assigned, acknowledged, and on-schedule — when conducting a pre-event readiness check in the final hours before setup begins
+5. Maximize the confidence in crew readiness and Event Work assignment completeness before the event window opens — when overseeing a high-stakes event where setup delays directly impact the client experience
 6. Maximize the completeness of the pre-event readiness verification across all departments — when conducting the final check before a high-profile event where any gap in preparation would be immediately visible to the client
-7. Minimize the effort required to escalate a readiness issue to the appropriate department head before the event window opens — when a pre-event check reveals a missing resource or incomplete setup that requires managerial intervention to resolve
-8. Minimize the likelihood of a last-minute BEO change invalidating Event Work already distributed and acknowledged by crew — when a planning team revision arrives after the crew has been dispatched and briefed on their assignments
+7. Minimize the likelihood of discovering unassigned or unacknowledged Event Work during the pre-event check — when supervising a multi-team setup with staff distributed across several venue spaces
+8. Minimize the likelihood of a crew member arriving at the wrong location or time due to a miscommunication in Event Work assignment — when supervising a multi-space event where crew members are assigned to rooms they have not previously worked
 
 #### 05 · Execute — Run the event
 
@@ -2689,18 +2689,18 @@ Supervise live Event Work execution across all crew and spaces during the event 
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to begin executing setup Event Work — when the operations crew arrives on site at the start of the event window
-2. Minimize the likelihood of an Event Work being performed incorrectly — when crew members reference their assignments from a mobile device in the field during active execution
-3. Minimize the disruption to the event timeline caused by a setup discrepancy during live execution — when the operations team must resolve the issue without stopping the event flow
-4. Maximize the speed of communicating a real-time Event Work update or priority change to crew in the field — when a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue
-5. Minimize the effort required to confirm Event Work completion in real time without interrupting crew during active execution — when supervising multiple concurrent setup tracks that are progressing simultaneously across the venue
-6. Minimize the likelihood of a crew member executing an Event Work against an outdated specification — when a modification was issued by the planning team after the crew was dispatched with printed assignments
-7. Maximize the clarity of real-time Event Work status, from setup to teardown, visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
-8. Minimize the effort required to reallocate crew from lower-priority Event Work to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
-9. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized Event Work quantities
-10. Minimize the likelihood of losing in-progress mobile Event Work entries due to application performance failures such as crashes, logouts, or slow diagram loads — when low-tech-savvy field crew are completing setup Event Work on a mobile device in real time
+1. Minimize the effort required to confirm Event Work completion in real time without interrupting crew during active execution — when supervising multiple concurrent setup tracks that are progressing simultaneously across the venue
+2. Maximize the speed of communicating a real-time Event Work update or priority change to crew in the field — when a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue
+3. Maximize the clarity of real-time Event Work status, from setup to teardown, visible to the operations lead — when supervising crew distributed across multiple concurrent event spaces during peak execution
+4. Minimize the likelihood of losing in-progress mobile Event Work entries due to application performance failures such as crashes, logouts, or slow diagram loads — when low-tech-savvy field crew are completing setup Event Work on a mobile device in real time
+5. Minimize the likelihood of a crew member executing an Event Work against an outdated specification — when a modification was issued by the planning team after the crew was dispatched with printed assignments
+6. Minimize the likelihood of an unplanned on-site request going unfulfilled or unbilled — when a need falls outside the original scope of work and must be routed back through another team before it can be addressed
+7. Minimize the time it takes to begin executing setup Event Work — when the operations crew arrives on site at the start of the event window
+8. Minimize the likelihood of an Event Work being performed incorrectly — when crew members reference their assignments from a mobile device in the field during active execution
+9. Minimize the disruption to the event timeline caused by a setup discrepancy during live execution — when the operations team must resolve the issue without stopping the event flow
+10. Minimize the effort required to reallocate crew from lower-priority Event Work to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
 11. Minimize the likelihood of an Event Work item being marked complete by someone other than the authorized supervisor or coordinator — when a maintenance or install crew member can update status but only a designated coordinator should verify and close the item
-12. Minimize the likelihood of an unplanned on-site request going unfulfilled or unbilled — when a need falls outside the original scope of work and must be routed back through another team before it can be addressed
+12. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized Event Work quantities
 
 #### 06 · Monitor — Real-time track
 
@@ -2714,22 +2714,22 @@ Track Event Work completion, crew location, and incident status in real time dur
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to verify the completion status of all Event Works — when supervising a multi-team, multi-space event in real time
-2. Minimize the likelihood of an operational incident going unaddressed — when monitoring Event Work activity across concurrent functions running simultaneously in the venue
-3. Minimize the effort required to maintain visibility into crew location and Event Work progress — when supervising a complex event with staff distributed across multiple venue spaces
-4. Maximize the speed of routing an operational incident to the correct crew member for immediate resolution — when an issue is reported during an active event and the closest available staff member must be identified and dispatched
-5. Minimize the likelihood of an operational gap going undetected until it escalates into a client-visible failure — when monitoring Event Work status across a large-scale event with multiple functions running concurrently in different venue spaces
-6. Maximize the speed of identifying a piece of Event Work that is falling behind schedule during live execution — when monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event
-7. Minimize the effort required to document an operational incident in real time — when managing an active event and a client-visible issue requires immediate logging without stopping the operations supervisor from coordinating the resolution
-8. Maximize the accuracy of the real-time status view of all active Event Works — when a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team
-9. Minimize the cognitive effort required to parse a shared dashboard view for only the Event Work and spaces relevant to a specific supervisor — when using a shared, unfiltered view that surfaces every department's activity instead of just the supervisor's own scope
-10. Maximize the traceability of an individual Event Work item's status history from installed to verified to flagged for repair — when a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record
-11. Maximize the accessibility of real-time status indicators for crew and supervisors with different visual abilities — when monitoring incident or risk status across a mixed-ability team during an active event
-12. Maximize the degree to which a resolved incident informs future risk identification — when closing out an incident that reveals a previously unassessed risk
-13. Minimize the effort required to confirm event floor status without physically returning to a desk or device — when supervising active work from the floor and needing an update in the moment
-14. Maximize the flexibility of switching between a single-event view and a consolidated view spanning every concurrent event — when different roles on the same team need different scopes — one overseeing one event in depth, another overseeing the full portfolio running that day
-15. Maximize the visibility into how actual crew time, staffing, and resource usage are diverging from what was planned for this event's operations — when the operations plan called for a certain staffing and resource level and live execution is revealing that the actual need differs
-16. Minimize the effort required to decide whether an incident needs escalation to leadership or can remain part of the standard local log — when monitoring a high-volume event where most incidents are routine but a small number carry reputational or safety significance
+1. Maximize the accuracy of the real-time status view of all active Event Works — when a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team
+2. Minimize the cognitive effort required to parse a shared dashboard view for only the Event Work and spaces relevant to a specific supervisor — when using a shared, unfiltered view that surfaces every department's activity instead of just the supervisor's own scope
+3. Minimize the effort required to decide whether an incident needs escalation to leadership or can remain part of the standard local log — when monitoring a high-volume event where most incidents are routine but a small number carry reputational or safety significance
+4. Maximize the visibility into how actual crew time, staffing, and resource usage are diverging from what was planned for this event's operations — when the operations plan called for a certain staffing and resource level and live execution is revealing that the actual need differs
+5. Maximize the flexibility of switching between a single-event view and a consolidated view spanning every concurrent event — when different roles on the same team need different scopes — one overseeing one event in depth, another overseeing the full portfolio running that day
+6. Maximize the speed of routing an operational incident to the correct crew member for immediate resolution — when an issue is reported during an active event and the closest available staff member must be identified and dispatched
+7. Minimize the effort required to confirm event floor status without physically returning to a desk or device — when supervising active work from the floor and needing an update in the moment
+8. Minimize the effort required to maintain visibility into crew location and Event Work progress — when supervising a complex event with staff distributed across multiple venue spaces
+9. Minimize the effort required to document an operational incident in real time — when managing an active event and a client-visible issue requires immediate logging without stopping the operations supervisor from coordinating the resolution
+10. Maximize the degree to which a resolved incident informs future risk identification — when closing out an incident that reveals a previously unassessed risk
+11. Minimize the time it takes to verify the completion status of all Event Works — when supervising a multi-team, multi-space event in real time
+12. Minimize the likelihood of an operational incident going unaddressed — when monitoring Event Work activity across concurrent functions running simultaneously in the venue
+13. Minimize the likelihood of an operational gap going undetected until it escalates into a client-visible failure — when monitoring Event Work status across a large-scale event with multiple functions running concurrently in different venue spaces
+14. Maximize the speed of identifying a piece of Event Work that is falling behind schedule during live execution — when monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event
+15. Maximize the traceability of an individual Event Work item's status history from installed to verified to flagged for repair — when a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record
+16. Maximize the accessibility of real-time status indicators for crew and supervisors with different visual abilities — when monitoring incident or risk status across a mixed-ability team during an active event
 
 #### 07 · Modify — Handle change orders
 
@@ -2741,18 +2741,18 @@ Reassign or update Event Work when changes are communicated from the planning te
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to reassign or update an Event Work — when a last-minute change is communicated by the event planner during live execution
+1. Maximize the accuracy of the calculated downstream impact automatically surfaced when a change occurs — when a single attribute change, such as attendee count, affects multiple line items, departments, or dates that would otherwise require manual recalculation
 2. Minimize the likelihood of a change request being missed by crew in the field — when a modification arrives while staff are actively executing Event Work across multiple venue spaces
-3. Minimize the disruption to the operational sequence caused by an unexpected Event Work re-sequencing or emergency resource reallocation — when a client change requires immediate adjustment during a live event
+3. Maximize the speed of acknowledging a change request from the planning team and confirming the correct crew member has been notified — when a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update
 4. Maximize the speed of communicating a change request from the event planner to the affected crew member — when a client modification arrives mid-event and requires immediate reassignment of resources already deployed in the field
-5. Minimize the likelihood of an Event Work conflict arising from a mid-event reassignment — when reallocating crew or equipment from one function to another while both are actively executing in the venue
-6. Maximize the speed of acknowledging a change request from the planning team and confirming the correct crew member has been notified — when a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update
-7. Minimize the effort required to document the reason for an Event Work reassignment and the time it was actioned — when a mid-event change is made that may need to be referenced during post-event billing or incident review
-8. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a modification is communicated directly by the event planner to an individual crew member without updating the formal Event Work record
-9. Minimize the effort required to confirm that a change reported through operations was actually applied by the planning team — when a customer relays a change to operations directly, and operations has no visibility into whether or when the planning team updated the record
-10. Minimize the time it takes to receive event-manager approval or denial for a change that operations identifies on-site — when a customer requests a modification during setup and operations must wait for a yes or no before proceeding
-11. Maximize the completeness of change detection during live execution — when a modification is communicated through unstructured notes rather than a structured field update
-12. Maximize the accuracy of the calculated downstream impact automatically surfaced when a change occurs — when a single attribute change, such as attendee count, affects multiple line items, departments, or dates that would otherwise require manual recalculation
+5. Maximize the completeness of change detection during live execution — when a modification is communicated through unstructured notes rather than a structured field update
+6. Minimize the effort required to confirm that a change reported through operations was actually applied by the planning team — when a customer relays a change to operations directly, and operations has no visibility into whether or when the planning team updated the record
+7. Minimize the time it takes to receive event-manager approval or denial for a change that operations identifies on-site — when a customer requests a modification during setup and operations must wait for a yes or no before proceeding
+8. Minimize the time it takes to reassign or update an Event Work — when a last-minute change is communicated by the event planner during live execution
+9. Minimize the disruption to the operational sequence caused by an unexpected Event Work re-sequencing or emergency resource reallocation — when a client change requires immediate adjustment during a live event
+10. Minimize the likelihood of an Event Work conflict arising from a mid-event reassignment — when reallocating crew or equipment from one function to another while both are actively executing in the venue
+11. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a modification is communicated directly by the event planner to an individual crew member without updating the formal Event Work record
+12. Minimize the effort required to document the reason for an Event Work reassignment and the time it was actioned — when a mid-event change is made that may need to be referenced during post-event billing or incident review
 
 #### 08 · Conclude — Capture actuals & close
 
@@ -2766,20 +2766,20 @@ Log Event Work completion, document all actuals and incidents, close the Event W
 
 **Desired outcomes:**
 
-1. Minimize the time it takes to log completion of all Event Works and document operational actuals — when the event has concluded and teardown is complete
-2. Minimize the likelihood of incomplete or inaccurate incident records — when concluding the operational log for a complex multi-department event
-3. Maximize the accuracy of resource, labor, and material actuals captured — when closing out all Event Works to support post-event financial reconciliation with the planning team
-4. Maximize the completeness of incident and deviation records captured at event conclusion — when closing out Event Work for an event where multiple unplanned operational issues required real-time resolution during execution
-5. Minimize the effort required to confirm all Event Work completions and submit the closed Event Work to the planning team — when wrapping up teardown for a late-running event while crew are still on site and pending their next assignment
-6. Minimize the effort required to collect and consolidate completion confirmations from all crew members after teardown — when wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times
-7. Maximize the accuracy of equipment return and inventory counts submitted at event close — when concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest
-8. Minimize the likelihood of an unresolved incident remaining open after the Event Work is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
-9. Minimize the reliance on memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building — when producing an end-of-day report for other departments without a system-generated summary of Event Work status
-10. Minimize the likelihood of being blocked from closing completed Event Work because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
-11. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
-12. Maximize the ability of the operations team to independently verify and close a piece of Event Work upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
-13. Maximize the accuracy of distinguishing consumable resources from reusable equipment in actuals reporting — when quantities delivered on-site differ from quantities originally ordered and must be reconciled at close
-14. Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced — when a comparable event type is entering the pipeline and historical operational delivery data could improve the accuracy of the next staffing and resourcing plan
+1. Minimize the likelihood of being blocked from closing completed Event Work because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
+2. Minimize the reliance on memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building — when producing an end-of-day report for other departments without a system-generated summary of Event Work status
+3. Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced — when a comparable event type is entering the pipeline and historical operational delivery data could improve the accuracy of the next staffing and resourcing plan
+4. Maximize the ability of the operations team to independently verify and close a piece of Event Work upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
+5. Minimize the likelihood of an unresolved incident remaining open after the Event Work is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
+6. Maximize the accuracy of resource, labor, and material actuals captured — when closing out all Event Works to support post-event financial reconciliation with the planning team
+7. Minimize the time it takes to log completion of all Event Works and document operational actuals — when the event has concluded and teardown is complete
+8. Minimize the effort required to confirm all Event Work completions and submit the closed Event Work to the planning team — when wrapping up teardown for a late-running event while crew are still on site and pending their next assignment
+9. Minimize the effort required to collect and consolidate completion confirmations from all crew members after teardown — when wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times
+10. Minimize the likelihood of incomplete or inaccurate incident records — when concluding the operational log for a complex multi-department event
+11. Maximize the completeness of incident and deviation records captured at event conclusion — when closing out Event Work for an event where multiple unplanned operational issues required real-time resolution during execution
+12. Maximize the accuracy of equipment return and inventory counts submitted at event close — when concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest
+13. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
+14. Maximize the accuracy of distinguishing consumable resources from reusable equipment in actuals reporting — when quantities delivered on-site differ from quantities originally ordered and must be reconciled at close
 
 ### Reconcile Event Financials — Finance Director ("The Financial Steward")
 
@@ -3159,35 +3159,35 @@ _This data (`OPPS_ACTIONS` in index.html) maps each persona/stage to short, cura
 
 ### owen
 
-- **define / gap:** Move crew assignment notifications in-platform — _targets:_ Maximize the accuracy of the pre-event staffing plan based on the scope of Event Work
+- **define / gap:** Move crew assignment notifications in-platform — _targets:_ Minimize the effort required to translate auto-generated Event Work into individual crew-level assignments
 
-- **define / research:** Add operations intake view with staffing and resource visibility — _targets:_ Minimize the time it takes to identify all setup, execution, and teardown Event Work required for an Event Plan
+- **define / research:** Add operations intake view with staffing and resource visibility — _targets:_ Maximize the effectiveness of the handoff from the Event Plan to Event Work
 
-- **locate / research:** Add crew-filtered Event Work view with real-time inventory — _targets:_ Minimize the effort required to locate all space, equipment, and resource specifications needed to act on received Event Work
+- **locate / research:** Add crew-filtered Event Work view with real-time inventory — _targets:_ Minimize the likelihood of receiving Event Work generated from an outdated or unfinalized version of the BEO
 
-- **locate / productdoc:** Make room diagrams accessible directly from MWO — _targets:_ Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO
+- **locate / productdoc:** Make room diagrams accessible directly from MWO — _targets:_ Minimize the effort required to confirm the BEO is fully approved and authorized before Event Work is generated and delivered to operations
 
-- **prepare / research:** Add field-ready Event Work format for on-site use — _targets:_ Minimize the likelihood of a crew member receiving an Event Work assignment without sufficient detail to complete it independently
+- **prepare / research:** Add field-ready Event Work format for on-site use — _targets:_ Maximize the accuracy of Event Work timing assignments relative to the overall event timeline
 
-- **prepare / productdoc:** Allow contract staff MWO access without full platform licenses — _targets:_ Minimize the time it takes to assign all Event Works to the appropriate crew members and departments
+- **prepare / productdoc:** Allow contract staff MWO access without full platform licenses — _targets:_ Maximize the accuracy of a piece of Event Work's assigned start time, derived from how long that type of work typically takes to complete
 
-- **execute / gap:** Replace radio and paper coordination with real-time updates — _targets:_ Maximize the speed of communicating a real-time Event Work update or priority change to crew in the field
+- **execute / gap:** Replace radio and paper coordination with real-time updates — _targets:_ Minimize the likelihood of losing in-progress mobile Event Work entries due to application performance failures such as crashes, logouts, or slow diagram loads
 
-- **execute / research:** Enable login-free mobile MWO access for field crews — _targets:_ Minimize the time it takes to begin executing setup Event Work
+- **execute / research:** Enable login-free mobile MWO access for field crews — _targets:_ Minimize the effort required to confirm Event Work completion in real time without interrupting crew during active execution
 
-- **execute / productdoc:** Add on-site signature and photo capture per Event Work item — _targets:_ Minimize the effort required to confirm Event Work completion in real time without interrupting crew during active execution
+- **execute / productdoc:** Add on-site signature and photo capture per Event Work item — _targets:_ Minimize the likelihood of a crew member executing an Event Work against an outdated specification
 
-- **monitor / research:** Add real-time event manifest with auto-push crew notifications — _targets:_ Minimize the time it takes to verify the completion status of all Event Works
+- **monitor / research:** Add real-time event manifest with auto-push crew notifications — _targets:_ Maximize the accuracy of the real-time status view of all active Event Works
 
-- **monitor / productdoc:** Add venue-level Change Tracking filter for multi-space oversight — _targets:_ Minimize the effort required to maintain visibility into crew location and Event Work progress
+- **monitor / productdoc:** Add venue-level Change Tracking filter for multi-space oversight — _targets:_ Minimize the effort required to decide whether an incident needs escalation to leadership or can remain part of the standard local log
 
 - **modify / research:** Push change updates instantly to field crew Event Work — _targets:_ Maximize the speed of communicating a change request from the event planner to the affected crew member
 
-- **conclude / gap:** Enable mobile-first actuals capture at Event Work completion — _targets:_ Minimize the time it takes to log completion of all Event Works and document operational actuals
+- **conclude / gap:** Enable mobile-first actuals capture at Event Work completion — _targets:_ Minimize the likelihood of being blocked from closing completed Event Work because unrelated child service order items remain open
 
-- **conclude / research:** Log and invoice actuals directly from mobile MWO — _targets:_ Maximize the accuracy of resource, labor, and material actuals captured
+- **conclude / research:** Log and invoice actuals directly from mobile MWO — _targets:_ Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced
 
-- **conclude / productdoc:** Surface cost breakdowns and bill-to context in MWO actuals — _targets:_ Maximize the accuracy of resource, labor, and material actuals captured
+- **conclude / productdoc:** Surface cost breakdowns and bill-to context in MWO actuals — _targets:_ Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced
 
 ### dana
 
