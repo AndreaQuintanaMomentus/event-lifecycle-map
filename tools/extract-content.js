@@ -222,7 +222,7 @@ function render(data, staticContent) {
     if (secondaries.length) {
       h(4, `Secondary / adjacent personas around ${role}`);
       for (const s of secondaries) {
-        h(5, `${s.role} (${s.vertical}) · "${s.archetype}"`);
+        h(5, `${s.role} (${s.orgLevel}) · "${s.archetype}"`);
         p(`**Relationship to ${role}:** ${s.relationship}`);
         p(`**Fixed Conditions**\n${bulletList(s.fixed)}\n\n**Dynamic States**\n${bulletList(s.dynamic)}\n\n**Structural Status**\n${bulletList(s.structural)}`);
       }

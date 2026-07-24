@@ -133,7 +133,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 #### Secondary / adjacent personas around Sales Manager
 
-##### Booking Manager (Arts & Culture) · "The Booking Boss"
+##### Booking Manager (Manager) · "The Booking Boss"
 
 **Relationship to Sales Manager:** Manages artist and performer bookings for presented content — a parallel booking function that operates on mission and artistic merit, not space availability.
 
@@ -152,7 +152,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Accountable to Executive Director for mission alignment; every booking must justify itself on both artistic and financial terms
 - Triggers the post-show settlement process alongside Finance — a financial close step unique to presented arts that venue rental sales does not have
 
-##### Entertainment Booking Director (Stadiums & Arenas) · "The Main Event Booker"
+##### Entertainment Booking Director (Director) · "The Main Event Booker"
 
 **Relationship to Sales Manager:** Manages the public event calendar (concerts, shows) whose holds directly constrain the calendar gaps that private event sales can fill.
 
@@ -171,7 +171,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - His decisions about which dates to hold for entertainment directly determine how many calendar gaps exist for private event revenue
 - Settlement is the final step of every show — currently done entirely in Excel outside Momentus; represents a major product gap
 
-##### Hospitality Sales Manager (Stadiums & Arenas) · "The Revenue Generator"
+##### Hospitality Sales Manager (Manager) · "The Revenue Generator"
 
 **Relationship to Sales Manager:** Sells premium spaces (suites, boxes, clubs) by event, season, or multi-year package — an adjacent revenue stream that runs alongside private event sales.
 
@@ -305,7 +305,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 
 #### Secondary / adjacent personas around Event Planner
 
-##### Program Coordinator (Arts & Culture) · "The Content Curator"
+##### Program Coordinator (Individual Contributor) · "The Content Curator"
 
 **Relationship to Event Planner:** Plans and produces season content — programs, artists, and performances — rather than managing venue bookings; a content-first planning role that parallels event management.
 
@@ -324,7 +324,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Responsible for artist contracts, program collateral, and execution of show content during the run — a content accountability layer absent in other verticals
 - Manages cross-functional coordination for Marketing and Operations without being able to bring them into the system; relies on email and ad hoc meetings
 
-##### Event Management Lead (Corporate) · "The Events Oversight"
+##### Event Management Lead (Manager) · "The Events Oversight"
 
 **Relationship to Event Planner:** Manages the event management team and tracks performance — adds a team leadership and analytics layer above the individual event coordinator role.
 
@@ -343,7 +343,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Reports to the Director of Events Experience — that role is the conduit between individual event execution and strategic program reporting
 - Accountable for utilization, attendee counts, event breakdowns, and budget forecasts across all events on campus
 
-##### Registration Manager (Higher Ed) · "The Registration Rockstar"
+##### Registration Manager (Manager) · "The Registration Rockstar"
 
 **Relationship to Event Planner:** Manages the full conference registration lifecycle — a parallel planning workflow that runs alongside event coordination for any event with attendee sign-up.
 
@@ -362,7 +362,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Owns the full attendee communication stream: confirmation emails, changes, waitlist management, and post-event survey distribution
 - Accountable for payment collection and scholarship tracking; financial actuals from registration feed into the Senior Manager's profit reporting
 
-##### Catering Sales Manager (Corporate) · "The Creative Foodie"
+##### Catering Sales Manager (Manager) · "The Creative Foodie"
 
 **Relationship to Event Planner:** Manages F&B (Food & Beverage) intake and BEO distribution — a parallel planning workflow that runs alongside event coordination and must stay in sync through constant changes.
 
@@ -381,7 +381,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Manages BEO distribution to kitchen staff who have no Momentus access — the last-mile gap in the data chain from event plan to food delivery
 - Responsible for updating actuals and closing catering Event Work after events; this step is often delayed because it requires returning to a desk
 
-##### Catering Sales Coordinator (Convention Centers) · "The Dot Connector"
+##### Catering Sales Coordinator (Individual Contributor) · "The Dot Connector"
 
 **Relationship to Event Planner:** Builds functions and service orders from client F&B (Food & Beverage) requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.
 
@@ -467,6 +467,7 @@ The map has four layers, always in this order: Semantic → Human → Innovation
 - Bridges event coordinator and operations crew; accountable for daily briefings, Event Work assignment, and end-of-day actuals
 - Manages inventory and staffing for multi-day conventions — scale and complexity exceeds most other verticals
 - Forecasting is a key responsibility: budget and staffing predictions directly impact performance during convention week
+- Work that isn't tied to a specific event — building-wide maintenance, space scheduling, shared/warehouse-space coordination — is tracked entirely outside the platform today; other departments beyond operations report the same pattern, suggesting this is a structural gap in how non-event work is captured, not an operations-specific one
 
 ##### Corporate: Operations Lead ("The Operations Oversight")
 
@@ -509,7 +510,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 #### Secondary / adjacent personas around Operations Director
 
-##### Operations Crew (Stadiums & Arenas) · "The Hands On The Ground"
+##### Operations Crew (Entry Level) · "The Hands On The Ground"
 
 **Relationship to Operations Director:** Back-of-house: executes setup, teardown, and all in-event Event Work on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.
 
@@ -531,7 +532,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Responsible for logging Event Work status, time stamps (e.g., doors opened), and incidents — these actuals feed back into event records and post-event reporting
 - The final link in the operational data chain: if field staff can't log actuals in real time, the data that feeds reporting, forecasting, and incident analysis is incomplete
 
-##### Health, Safety & Risk Manager (Stadiums & Arenas) · "The Risk Manager"
+##### Health, Safety & Risk Manager (Manager) · "The Risk Manager"
 
 **Relationship to Operations Director:** Spans both front-of-house and back-of-house: manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.
 
@@ -553,7 +554,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - The people who actually own and budget for risk and safety tooling are often a different audience than the event and booking relationship Momentus typically holds — closing this gap requires an organizational bridge, not just a technical one
 - At smaller organizations, this role can also extend to injury and workers'-compensation case management — medical certificates, return-to-work plans, and claim records — which needs tighter, privacy-restricted access than general incident and risk data
 
-##### Public Events Manager (Stadiums & Arenas) · "The Logistics Queen"
+##### Public Events Manager (Manager) · "The Logistics Queen"
 
 **Relationship to Operations Director:** Spans both front-of-house and back-of-house: coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).
 
@@ -572,7 +573,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Interfaces simultaneously with sales, operations, risk, and the control room — the most cross-functional coordination role in the vertical
 - Lots of redundancy in game day operations: most details are the same event-to-event; only the mini-events change — a strong case for templates and copy workflows
 
-##### AV Technician (Corporate) · "The Technical Help"
+##### AV Technician (Individual Contributor) · "The Technical Help"
 
 **Relationship to Operations Director:** Back-of-house: executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.
 
@@ -591,7 +592,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Responsible for post-event AV equipment retrieval and maintenance — a closure step that must be coordinated with event schedule and other teams
 - One of multiple specialized operations sub-roles that collectively make up the ops function; no Momentus access by default — depends on printed orders
 
-##### Control Room Operator (Stadiums & Arenas) · "The Incident Response"
+##### Control Room Operator (Individual Contributor) · "The Incident Response"
 
 **Relationship to Operations Director:** Back-of-house: runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.
 
@@ -614,7 +615,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Incident records carry confidentiality tiers by type — medical and security details are restricted to those who need them, not visible to the entire organization by default
 - Operates within a three-tier information flow — individual contributors on the ground log what's happening, this role consolidates and decides what needs escalating, and only escalation-worthy items reach director/executive-level dashboards
 
-##### Meeting Services Crew (Convention Centers) · "The Analog Anchor"
+##### Meeting Services Crew (Entry Level) · "The Analog Anchor"
 
 **Relationship to Operations Director:** Back-of-house: executes setup, changeover, and breakdown work under the Meeting Services Supervisor's direction — the front-line role where, in the supervisor's own words, "technology stops."
 
@@ -632,6 +633,67 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Receives daily assignments and printed Event Work from the Meeting Services Supervisor at the morning briefing — the last link in the chain from event plan to physical setup
 - Has no direct system access — every status update, completion, and incident is relayed verbally or by radio and re-entered into the system by the supervisor at day's end
 - The point where the operational data chain currently goes fully manual — closing the same last-mile gap other front-line crew roles represent elsewhere, but with even less digital access (radio only, no mobile tool)
+
+##### Operations Head (VP) · "The Policy Architect"
+
+**Relationship to Operations Director:** Strategic oversight role sitting above the Operations Director across multiple concurrent accounts/events — sets the policy and resourcing decisions the Operations Director executes within, using aggregated account-level data rather than any single event.
+
+**Fixed Conditions**
+- Their personality is data-driven and strategic, focused on patterns across accounts rather than any single event's execution
+- They have a background in multi-site or multi-account operations leadership, resourcing and setting policy for teams they don't directly execute alongside
+- They are skilled in translating recurring operational patterns into policy and resourcing decisions — though currently doing so from memory and intuition rather than aggregated data
+
+**Dynamic States**
+- From policy set on gut feel → to policy recommendations surfaced from recurring change patterns across accounts (e.g. a repeated exception suggesting the policy itself should shift)
+- From reporting that doesn't roll up across events → to account-level intelligence benchmarking cost, risk, and staffing patterns across the full portfolio
+- From discovering staffing or time-buffer gaps after they recur → to predictive adjustments applied before the next similar event
+
+**Structural Status**
+- Sets change-management policy and approves exceptions that the Operations Director and department heads operate within
+- Escalation point for incidents or resourcing conflicts that exceed a single Operations Director's authority
+- Resources department heads across multiple concurrent events/accounts — a portfolio view no single Operations Director holds
+- Accountable for cost, risk, and repeat-friction reduction at the account level, not any individual event's outcome
+
+##### Department Head (Manager) · "The Domain Owner"
+
+**Relationship to Operations Director:** Back-of-house or front-of-house depending on domain: leads one functional operations domain (e.g. AV, security, housekeeping, setup/inventory, risk) reporting to the Operations Director — executing that domain's slice of Event Work incident-free.
+
+**Fixed Conditions**
+- Their personality is domain-focused and accountable, responsible for one functional slice of operations — labor, equipment, or safety/compliance — rather than the full event
+- They have a background in their specific operational domain, managing crew and equipment within that domain across concurrent events
+- They are skilled in domain-specific pre-event readiness checks and incident response, though currently without a standardized, auditable way to prove that readiness
+
+**Dynamic States**
+- From learning about changes affecting their area only after the fact → to changes surfaced to their domain as soon as they're flagged, not after
+- From an ad hoc pre-event check with no record → to a standardized, auditable checklist that proves domain readiness before doors open
+- From manually searching for moved or misplaced equipment → to real-time visibility into where domain equipment currently is
+- From a broken asset becoming a disconnected, informal report → to a direct link from a flagged asset to a maintenance record
+
+**Structural Status**
+- Reports to the Operations Director — schedules their own crew/contractors and owns their domain's slice of Event Work, equipment, and incidents
+- Owns domain-specific pre-event checks (e.g. equipment tests, safety walk-throughs) as a distinct accountability from the overall event readiness check the Operations Director runs
+- Resource and equipment tracking for their domain sometimes lives outside the operations function itself — the same structural mismatch already noted for the Operations Director generally, felt most directly at the department level
+- Success is measured domain-locally (readiness-check completion, equipment retrieval time, incident time-to-resolution) rather than event-wide
+
+##### Contractor / Vendor Staff (External/Contractor) · "The Field Hands"
+
+**Relationship to Operations Director:** Back-of-house: picks up and completes assigned onsite tasks — contractors, vendor staff, temporary labor — the front-line execution layer across any vertical, not tied to a specific one.
+
+**Fixed Conditions**
+- Their personality is task-focused and mobile, moving between assignments onsite rather than working from a fixed desk or device
+- They have a background as contract, vendor, or temporary labor brought in for a specific event or role, without the ongoing institutional context a full-time crew member accumulates
+- They are skilled in executing a clearly defined onsite task once assigned, but depend entirely on that assignment being clear and reachable — there's no fallback to asking around for context
+
+**Dynamic States**
+- From unclear task ownership → to a clear, individually-assigned task with accountability for who's doing it
+- From no easy way to log an issue and confirm it reached the right person → to a simple way to log a job, incident, or lost item that routes correctly the first time
+- From being disconnected from the change/requirements context behind a task → to enough task-level context to execute correctly without needing the full event record
+
+**Structural Status**
+- Picks up and completes assigned Event Work via a contractor-facing portal — no expectation of full platform access or login
+- Logs jobs, incidents, and lost & found items as they happen — the front-line data-entry point that Department Heads and the Operations Director depend on for accurate real-time status
+- Success is measured by task completion and first-time-correct routing, not by broader event outcomes — a narrower accountability than any other Operations Director-adjacent persona
+- At larger venues, an entire functional domain — most commonly catering and food & beverage — is sometimes run end-to-end by a single contracted operator rather than individual contracted staff embedded in the venue's own team, shifting who a Department Head coordinates with for that domain entirely outside the venue's own reporting chain
 
 ### Finance Director ("The Financial Steward")
 
@@ -740,7 +802,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 
 #### Secondary / adjacent personas around Venue Director
 
-##### Executive Director (Arts & Culture) · "The Momentus Buyer"
+##### Executive Director (Chief) · "The Momentus Buyer"
 
 **Relationship to Venue Director:** Mission-driven executive leader who balances community impact with financial sustainability — a different decision-making framework than revenue-first venue management.
 
@@ -759,7 +821,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Must balance earned revenue (rentals, ticket sales) with contributed revenue (donor support, grants) — a financial model unique to cultural institutions
 - Holds final say on whether the venue pursues presented content — this strategic choice determines the full scope of operational complexity the team must manage
 
-##### Director, Events Experience (Corporate) · "The Momentus Buyer"
+##### Director, Events Experience (Director) · "The Momentus Buyer"
 
 **Relationship to Venue Director:** Drives the corporate campus events technology purchase and oversees global rollout — success at one campus determines whether Momentus scales to all locations worldwide.
 
@@ -778,7 +840,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Works closely with the Event Management Lead for performance data and the Bookings Manager for calendar operations; low personal system usage
 - Manages a multi-campus deployment ambition — standardization and replicability are as important as functionality at the current campus
 
-##### Manager, Workplace Experience (Corporate) · "The Partner Buyer"
+##### Manager, Workplace Experience (Manager) · "The Partner Buyer"
 
 **Relationship to Venue Director:** Proposed and drives Momentus adoption on campus — manages both the corporate company relationship and the employee hospitality experience simultaneously.
 
@@ -797,7 +859,7 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Drives team adoption — his buy-in is necessary but insufficient; the team must also adopt the platform for the investment to pay off
 - Reports to corporate client company on events performance and ROI (Return on Investment); must quantify and communicate the value of the events program in business terms
 
-##### Director, Special Events (Arts & Culture) · "The Space Maximizer"
+##### Director, Special Events (Director) · "The Space Maximizer"
 
 **Relationship to Venue Director:** Oversees venue rentals, internal programming, donor events, and regular tours — a mid-level director who drove the Momentus purchase decision and manages multiple event types simultaneously.
 
@@ -815,6 +877,26 @@ No distinct Operations persona documented yet for Higher Ed — not yet covered 
 - Oversees a combination of venue rentals, recurring programming, donor and membership events — a portfolio breadth that no other single director in any other vertical manages
 - Consults on mission + revenue go/no-go decisions for rental inquiries alongside the Rental Sales Coordinator — approves which events serve the institution's interests
 - Platform language that defaults to rental-centric concepts (contracts, customers) creates friction for programming and exhibition use cases unique to the A&C vertical
+
+##### Chief Operating Officer (VP) · "The Business Backbone"
+
+**Relationship to Venue Director:** Oversees the business-operations layer beneath the Executive Director — finance, HR, facilities, and security — as a distinct executive tier separate from artistic and mission leadership; manages roughly half the institution's staff.
+
+**Fixed Conditions**
+- Their personality is operationally minded and cross-functional, focused on the business machinery that lets the Executive Director focus on mission and programming
+- They have a background in institutional operations or business management within cultural institutions, having risen through finance, facilities, or administrative leadership rather than a curatorial or programming track
+- They are skilled in running multiple support functions simultaneously — finance, HR, facilities, security — as a single coordinated operation
+
+**Dynamic States**
+- From finance, HR, facilities, and security each reporting up independently → to one accountable executive who sees all of them together
+- From business/operations decisions and mission/programming decisions living in separate conversations → to a single operating leader who can weigh both before they reach the Executive Director
+- From ad hoc coordination across support functions → to one person accountable for how they work together day to day
+
+**Structural Status**
+- Manages roughly half of the institution's staff — finance, HR, facilities, and security — as a business-operations layer distinct from the Executive Director's mission and artistic authority
+- Reports directly to the Executive Director — the second-highest authority at the institution; final decision-making authority still sits with the Executive Director
+- Exists in roughly half of surveyed art museums; where the role doesn't exist, the Executive Director likely absorbs this scope directly rather than delegating it
+- Classified as VP, not Chief, despite the literal job title — the role reports into this map's Chief-level Executive Director and oversees a multi-functional swath rather than holding final venue-wide authority; a direct example of why org-level is classified by scope and reporting line, not by title text
 
 ## Primary Objects (Semantic Layer)
 
@@ -2629,6 +2711,7 @@ Access the finalized BEO (Banquet Event Order) and all supporting documentation 
 8. Minimize the effort required to access event-specific floor plans, room diagrams, and equipment specs alongside the BEO — when preparing to execute a non-standard setup's Event Work, which requires visual reference materials to assign correctly
 9. Maximize the accuracy of all floor plan and space layout details available at the time Event Work is received — when preparing Event Work assignments for an event using a non-standard room configuration that requires custom layout reference materials
 10. Minimize the effort required to locate all space, equipment, and resource specifications needed to act on received Event Work — when accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations
+11. Maximize the flexibility to group and view Event Work according to a team's own structure and workflow — when the default organization of Event Work doesn't match how a specific crew or department actually thinks about and executes their work
 
 #### 03 · Prepare — Forecast & publish Event Work
 
@@ -2659,6 +2742,7 @@ Assign all Event Work to crew members, departments, and equipment, with timing a
 15. Minimize the effort required to assign a piece of Event Work to whichever available crew member holds the right role or department, rather than a specific named person — when the assigning supervisor only cares that the right department covers it, not who specifically does it
 16. Minimize the effort required to generate accurate physical labels for booth-specific equipment such as power cords and utility drops — when preparing hundreds of individually labeled items for a large exhibition event
 17. Maximize the speed at which open or available shifts generated by a staffing-need change are broadcast to eligible crew — when a BEO or resume update triggers new labor requirements across departments
+18. Minimize the effort required to schedule load-in, dock access, and room turnover windows against the rest of the event timeline — when multiple deliveries and a room turnover both compete for the same window before an event begins
 
 #### 04 · Confirm — Confirm no last-minute changes
 
@@ -2676,6 +2760,7 @@ Validate all assignments, run a pre-event readiness check, and confirm crew is o
 6. Maximize the completeness of the pre-event readiness verification across all departments — when conducting the final check before a high-profile event where any gap in preparation would be immediately visible to the client
 7. Minimize the likelihood of discovering unassigned or unacknowledged Event Work during the pre-event check — when supervising a multi-team setup with staff distributed across several venue spaces
 8. Minimize the likelihood of a crew member arriving at the wrong location or time due to a miscommunication in Event Work assignment — when supervising a multi-space event where crew members are assigned to rooms they have not previously worked
+9. Maximize the auditability of a completed pre-event readiness check — when readiness needs to be provable after the fact, not just assumed because no one raised an issue
 
 #### 05 · Execute — Run the event
 
@@ -2685,7 +2770,7 @@ Supervise live Event Work execution across all crew and spaces during the event 
 
 **Research opportunity:** Reliable mobile access to Event Work for field crews — without requiring a Momentus login — would replace the printed manifest and radio-driven workflows that make real-time status tracking impossible. A live event-day dashboard consolidating all active Event Work, crew assignments, and space statuses would give supervisors the situational awareness currently assembled from radio calls and printed sheets.
 
-**Product documentation opportunity:** Capture client signatures and photo evidence per Event Work item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on Event Work would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each piece of Event Work. Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.
+**Product documentation opportunity:** Capture client signatures and photo evidence per Event Work item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on Event Work would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each piece of Event Work — for a multi-day event where most of a room's setup doesn't change day to day, this alone could cut close-out actions by two-thirds or more (one 4-day, 50-item room needed roughly 200 individual completions today versus an estimated 60 if only day-to-day changes required action). Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.
 
 **Desired outcomes:**
 
@@ -2701,6 +2786,7 @@ Supervise live Event Work execution across all crew and spaces during the event 
 10. Minimize the effort required to reallocate crew from lower-priority Event Work to address an urgent execution gap — when an issue is identified during live execution that requires pulling resources away from non-critical setup work
 11. Minimize the likelihood of an Event Work item being marked complete by someone other than the authorized supervisor or coordinator — when a maintenance or install crew member can update status but only a designated coordinator should verify and close the item
 12. Minimize the likelihood of an inaccurate item quantity or spec going undetected during setup — when crew reference only the visual room diagram and do not cross-check the itemized Event Work quantities
+13. Minimize the effort required to reconfirm Event Work that hasn't changed since the day before — when executing a multi-day event where most of a room's setup carries over unchanged from one day to the next and only a small subset of items differ
 
 #### 06 · Monitor — Real-time track
 
@@ -2730,6 +2816,9 @@ Track Event Work completion, crew location, and incident status in real time dur
 14. Maximize the speed of identifying a piece of Event Work that is falling behind schedule during live execution — when monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event
 15. Maximize the traceability of an individual Event Work item's status history from installed to verified to flagged for repair — when a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record
 16. Maximize the accessibility of real-time status indicators for crew and supervisors with different visual abilities — when monitoring incident or risk status across a mixed-ability team during an active event
+17. Maximize the completeness of customer requests, complaints, and lost & found items captured in one place during the event — when a front-of-house issue is reported and needs to reach the right owner without whoever captured it needing to know who that is
+18. Minimize the time it takes to reunite a guest with a lost item found during the event — when an item is logged as found and the original report needs to be matched to it before the guest leaves
+19. Maximize the speed of a first response to a customer complaint reported during the event — when a guest-facing issue risks escalating the longer it goes unacknowledged
 
 #### 07 · Modify — Handle change orders
 
@@ -2741,7 +2830,7 @@ Reassign or update Event Work when changes are communicated from the planning te
 
 **Desired outcomes:**
 
-1. Maximize the accuracy of the calculated downstream impact automatically surfaced when a change occurs — when a single attribute change, such as attendee count, affects multiple line items, departments, or dates that would otherwise require manual recalculation
+1. Maximize the accuracy of the calculated downstream impact automatically surfaced when a change occurs — when a single attribute change, such as attendee count, affects multiple functions, line items, departments, or dates that would otherwise require manual recalculation
 2. Minimize the likelihood of a change request being missed by crew in the field — when a modification arrives while staff are actively executing Event Work across multiple venue spaces
 3. Maximize the speed of acknowledging a change request from the planning team and confirming the correct crew member has been notified — when a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update
 4. Maximize the speed of communicating a change request from the event planner to the affected crew member — when a client modification arrives mid-event and requires immediate reassignment of resources already deployed in the field
@@ -2753,6 +2842,9 @@ Reassign or update Event Work when changes are communicated from the planning te
 10. Minimize the likelihood of an Event Work conflict arising from a mid-event reassignment — when reallocating crew or equipment from one function to another while both are actively executing in the venue
 11. Minimize the likelihood of a crew member receiving conflicting instructions from both the original assignment and a verbal update — when a modification is communicated directly by the event planner to an individual crew member without updating the formal Event Work record
 12. Minimize the effort required to document the reason for an Event Work reassignment and the time it was actioned — when a mid-event change is made that may need to be referenced during post-event billing or incident review
+13. Maximize the likelihood that a change request is automatically checked against policy before it proceeds — when only in-policy changes should execute without manual review, and out-of-policy changes need to be blocked until someone decides
+14. Maximize the visibility of a change's billing impact at the moment the change is made — when a modification during execution may affect the client invoice and that risk needs to be flagged separately from the operational change itself
+15. Maximize the degree to which a repeated pattern of change requests across accounts surfaces as a policy-adjustment recommendation — when the same exception keeps being requested and evolving the policy itself would remove the need to keep requesting it
 
 #### 08 · Conclude — Capture actuals & close
 
@@ -2768,18 +2860,19 @@ Log Event Work completion, document all actuals and incidents, close the Event W
 
 1. Minimize the likelihood of being blocked from closing completed Event Work because unrelated child service order items remain open — when only a subset of an event's service orders are complete at the time of the on-site check
 2. Minimize the reliance on memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building — when producing an end-of-day report for other departments without a system-generated summary of Event Work status
-3. Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced — when a comparable event type is entering the pipeline and historical operational delivery data could improve the accuracy of the next staffing and resourcing plan
-4. Maximize the ability of the operations team to independently verify and close a piece of Event Work upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
-5. Minimize the likelihood of an unresolved incident remaining open after the Event Work is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
-6. Maximize the accuracy of resource, labor, and material actuals captured — when closing out all Event Works to support post-event financial reconciliation with the planning team
-7. Minimize the time it takes to log completion of all Event Works and document operational actuals — when the event has concluded and teardown is complete
-8. Minimize the effort required to confirm all Event Work completions and submit the closed Event Work to the planning team — when wrapping up teardown for a late-running event while crew are still on site and pending their next assignment
-9. Minimize the effort required to collect and consolidate completion confirmations from all crew members after teardown — when wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times
-10. Minimize the likelihood of incomplete or inaccurate incident records — when concluding the operational log for a complex multi-department event
-11. Maximize the completeness of incident and deviation records captured at event conclusion — when closing out Event Work for an event where multiple unplanned operational issues required real-time resolution during execution
-12. Maximize the accuracy of equipment return and inventory counts submitted at event close — when concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest
-13. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
-14. Maximize the accuracy of distinguishing consumable resources from reusable equipment in actuals reporting — when quantities delivered on-site differ from quantities originally ordered and must be reconciled at close
+3. Minimize the effort required to compile information captured during execution into closing documentation — when producing an end-of-event record that others need to be able to consume quickly, without the person closing it having to manually re-locate and re-enter what was already captured elsewhere
+4. Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced — when a comparable event type is entering the pipeline and historical operational delivery data could improve the accuracy of the next staffing and resourcing plan
+5. Maximize the ability of the operations team to independently verify and close a piece of Event Work upon room check — when the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection
+6. Minimize the likelihood of an unresolved incident remaining open after the Event Work is submitted as complete — when concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented
+7. Maximize the accuracy of resource, labor, and material actuals captured — when closing out all Event Works to support post-event financial reconciliation with the planning team
+8. Minimize the time it takes to log completion of all Event Works and document operational actuals — when the event has concluded and teardown is complete
+9. Minimize the effort required to confirm all Event Work completions and submit the closed Event Work to the planning team — when wrapping up teardown for a late-running event while crew are still on site and pending their next assignment
+10. Minimize the effort required to collect and consolidate completion confirmations from all crew members after teardown — when wrapping up a large-scale event where staff were distributed across multiple spaces and are departing at different times
+11. Minimize the likelihood of incomplete or inaccurate incident records — when concluding the operational log for a complex multi-department event
+12. Maximize the completeness of incident and deviation records captured at event conclusion — when closing out Event Work for an event where multiple unplanned operational issues required real-time resolution during execution
+13. Maximize the accuracy of equipment return and inventory counts submitted at event close — when concluding an event where non-standard equipment was sourced from an external vendor and must be reconciled against the delivery manifest
+14. Minimize the likelihood of losing entered completion or actuals data due to an application save failure — when a supervisor is logging quantities and labor actuals on a tablet immediately after teardown
+15. Maximize the accuracy of distinguishing consumable resources from reusable equipment in actuals reporting — when quantities delivered on-site differ from quantities originally ordered and must be reconciled at close
 
 ### Reconcile Event Financials — Finance Director ("The Financial Steward")
 
@@ -3185,9 +3278,9 @@ _This data (`OPPS_ACTIONS` in index.html) maps each persona/stage to short, cura
 
 - **conclude / gap:** Enable mobile-first actuals capture at Event Work completion — _targets:_ Minimize the likelihood of being blocked from closing completed Event Work because unrelated child service order items remain open
 
-- **conclude / research:** Log and invoice actuals directly from mobile MWO — _targets:_ Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced
+- **conclude / research:** Log and invoice actuals directly from mobile MWO — _targets:_ Minimize the effort required to compile information captured during execution into closing documentation
 
-- **conclude / productdoc:** Surface cost breakdowns and bill-to context in MWO actuals — _targets:_ Maximize the degree to which the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced
+- **conclude / productdoc:** Surface cost breakdowns and bill-to context in MWO actuals — _targets:_ Minimize the effort required to compile information captured during execution into closing documentation
 
 ### dana
 

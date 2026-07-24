@@ -3206,7 +3206,8 @@ const VERTICAL_ATTRS = {
       structural: [
         'Bridges event coordinator and operations crew; accountable for daily briefings, Event Work assignment, and end-of-day actuals',
         'Manages inventory and staffing for multi-day conventions — scale and complexity exceeds most other verticals',
-        'Forecasting is a key responsibility: budget and staffing predictions directly impact performance during convention week'
+        'Forecasting is a key responsibility: budget and staffing predictions directly impact performance during convention week',
+        'Work that isn\'t tied to a specific event — building-wide maintenance, space scheduling, shared/warehouse-space coordination — is tracked entirely outside the platform today; other departments beyond operations report the same pattern, suggesting this is a structural gap in how non-event work is captured, not an operations-specific one'
       ]
     },
     'Corporate': {
@@ -3314,7 +3315,7 @@ const VERTICAL_ATTRS = {
 const SECONDARY_PERSONAS = {
   sharon: [
     {
-      role: 'Booking Manager', archetype: 'The Booking Boss', vertical: 'Arts & Culture',
+      role: 'Booking Manager', archetype: 'The Booking Boss', orgLevel: 'Manager',
       relationship: 'Manages artist and performer bookings for presented content — a parallel booking function that operates on mission and artistic merit, not space availability.',
       fixed: [
         'Their personality is passionate, mission-driven, and detail-oriented, with deep arts advocacy as a former dancer and a commitment to balancing institutional mission with revenue',
@@ -3333,7 +3334,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Entertainment Booking Director', archetype: 'The Main Event Booker', vertical: 'Stadiums & Arenas',
+      role: 'Entertainment Booking Director', archetype: 'The Main Event Booker', orgLevel: 'Director',
       relationship: 'Manages the public event calendar (concerts, shows) whose holds directly constrain the calendar gaps that private event sales can fill.',
       fixed: [
         'Their personality is experienced, relationship-focused, and analytical, driven by promoter partnerships and the deal-making side of entertainment booking',
@@ -3352,7 +3353,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Hospitality Sales Manager', archetype: 'The Revenue Generator', vertical: 'Stadiums & Arenas',
+      role: 'Hospitality Sales Manager', archetype: 'The Revenue Generator', orgLevel: 'Manager',
       relationship: 'Sells premium spaces (suites, boxes, clubs) by event, season, or multi-year package — an adjacent revenue stream that runs alongside private event sales.',
       fixed: [
         'Their personality is communicative, charismatic, and customer-focused, with a flair for selling premium hospitality experiences rather than just event space',
@@ -3373,7 +3374,7 @@ const SECONDARY_PERSONAS = {
   ],
   emilie: [
     {
-      role: 'Program Coordinator', archetype: 'The Content Curator', vertical: 'Arts & Culture',
+      role: 'Program Coordinator', archetype: 'The Content Curator', orgLevel: 'Individual Contributor',
       relationship: 'Plans and produces season content — programs, artists, and performances — rather than managing venue bookings; a content-first planning role that parallels event management.',
       fixed: [
         'Their personality is mission-driven and creative, a multi-hat wearer who views themselves as a content curator rather than an event planner',
@@ -3392,7 +3393,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Event Management Lead', archetype: 'The Events Oversight', vertical: 'Corporate',
+      role: 'Event Management Lead', archetype: 'The Events Oversight', orgLevel: 'Manager',
       relationship: 'Manages the event management team and tracks performance — adds a team leadership and analytics layer above the individual event coordinator role.',
       fixed: [
         'Their personality is analytical and strategic, bringing 10+ years of hotel and corporate events experience to a team leadership role focused on performance rather than individual event delivery',
@@ -3411,7 +3412,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Registration Manager', archetype: 'The Registration Rockstar', vertical: 'Higher Ed',
+      role: 'Registration Manager', archetype: 'The Registration Rockstar', orgLevel: 'Manager',
       relationship: 'Manages the full conference registration lifecycle — a parallel planning workflow that runs alongside event coordination for any event with attendee sign-up.',
       fixed: [
         'Their personality is detail-oriented, client-focused, and process-driven, with moderate industry and Momentus experience',
@@ -3430,7 +3431,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Catering Sales Manager', archetype: 'The Creative Foodie', vertical: 'Corporate',
+      role: 'Catering Sales Manager', archetype: 'The Creative Foodie', orgLevel: 'Manager',
       relationship: 'Manages F&B (Food & Beverage) intake and BEO distribution — a parallel planning workflow that runs alongside event coordination and must stay in sync through constant changes.',
       fixed: [
         'Their personality is creative, adaptable, and detail-oriented, managing both client-facing catering intake and kitchen-facing execution as two connected but distinct workflows',
@@ -3449,7 +3450,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Catering Sales Coordinator', archetype: 'The Dot Connector', vertical: 'Convention Centers',
+      role: 'Catering Sales Coordinator', archetype: 'The Dot Connector', orgLevel: 'Individual Contributor',
       relationship: 'Builds functions and service orders from client F&B (Food & Beverage) requirements so operations can execute them — having previously worked the operations extraction side, uniquely positioned to see where the input and execution flows don’t line up.',
       fixed: [
         'Their personality is pragmatic and process-minded, having worked both the operations execution side and the catering sales input side of the same venue',
@@ -3470,7 +3471,7 @@ const SECONDARY_PERSONAS = {
   ],
   owen: [
     {
-      role: 'Operations Crew', archetype: 'The Hands On The Ground', vertical: 'Stadiums & Arenas',
+      role: 'Operations Crew', archetype: 'The Hands On The Ground', orgLevel: 'Entry Level',
       relationship: 'Back-of-house: executes setup, teardown, and all in-event Event Work on the ground — the field-level worker whose experience determines whether the operations plan becomes reality.',
       fixed: [
         'Their personality is hands-on, responsive, and reliable — always in motion on event days, executing setup, teardown, and all in-event Event Work',
@@ -3492,7 +3493,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Health, Safety & Risk Manager', archetype: 'The Risk Manager', vertical: 'Stadiums & Arenas',
+      role: 'Health, Safety & Risk Manager', archetype: 'The Risk Manager', orgLevel: 'Manager',
       relationship: 'Spans both front-of-house and back-of-house: manages event risk assessment and safety compliance alongside operations — a cross-functional accountability that depends on operations data to identify and respond to threats.',
       fixed: [
         'Their personality is accountable, safety-focused, and detail-oriented, driven by public safety and regulatory compliance across 10+ years in risk management',
@@ -3514,7 +3515,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Public Events Manager', archetype: 'The Logistics Queen', vertical: 'Stadiums & Arenas',
+      role: 'Public Events Manager', archetype: 'The Logistics Queen', orgLevel: 'Manager',
       relationship: 'Spans both front-of-house and back-of-house: coordinates game day and public events — a parallel operations layer managing the main event and all simultaneous mini-events (suites, satellite catering, sponsorships, parking).',
       fixed: [
         'Their personality is investigative, organized, and communicative, having transitioned from corporate events into a stadium environment where the scale and complexity required significant adjustment',
@@ -3533,7 +3534,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'AV Technician', archetype: 'The Technical Help', vertical: 'Corporate',
+      role: 'AV Technician', archetype: 'The Technical Help', orgLevel: 'Individual Contributor',
       relationship: 'Back-of-house: executes AV (Audio/Visual) setup, operation, and troubleshooting as a specialized member of the operations team — receives work assignments from the Operations Lead.',
       fixed: [
         'Their personality is technical, organized, and detail-oriented, focused on precise execution of AV setup, live operation, troubleshooting, and equipment maintenance',
@@ -3552,7 +3553,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Control Room Operator', archetype: 'The Incident Response', vertical: 'Stadiums & Arenas',
+      role: 'Control Room Operator', archetype: 'The Incident Response', orgLevel: 'Individual Contributor',
       relationship: 'Back-of-house: runs the 24/7 control room during events, logging every call and coordinating immediate responses — the real-time information hub that operations teams report to during execution.',
       fixed: [
         'Their personality is calm under pressure, responsive, and organized, managing the control room through the full intensity of game days and major events',
@@ -3575,7 +3576,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Meeting Services Crew', archetype: 'The Analog Anchor', vertical: 'Convention Centers',
+      role: 'Meeting Services Crew', archetype: 'The Analog Anchor', orgLevel: 'Entry Level',
       relationship: 'Back-of-house: executes setup, changeover, and breakdown work under the Meeting Services Supervisor\'s direction — the front-line role where, in the supervisor\'s own words, "technology stops."',
       fixed: [
         'Their personality is task-focused and constantly moving — coordinating setup, changeover, and breakdown across rooms entirely by radio',
@@ -3592,11 +3593,72 @@ const SECONDARY_PERSONAS = {
         'Has no direct system access — every status update, completion, and incident is relayed verbally or by radio and re-entered into the system by the supervisor at day\'s end',
         'The point where the operational data chain currently goes fully manual — closing the same last-mile gap other front-line crew roles represent elsewhere, but with even less digital access (radio only, no mobile tool)'
       ]
+    },
+    {
+      role: 'Operations Head', archetype: 'The Policy Architect', orgLevel: 'VP',
+      relationship: 'Strategic oversight role sitting above the Operations Director across multiple concurrent accounts/events — sets the policy and resourcing decisions the Operations Director executes within, using aggregated account-level data rather than any single event.',
+      fixed: [
+        'Their personality is data-driven and strategic, focused on patterns across accounts rather than any single event\'s execution',
+        'They have a background in multi-site or multi-account operations leadership, resourcing and setting policy for teams they don\'t directly execute alongside',
+        'They are skilled in translating recurring operational patterns into policy and resourcing decisions — though currently doing so from memory and intuition rather than aggregated data'
+      ],
+      dynamic: [
+        'From policy set on gut feel → to policy recommendations surfaced from recurring change patterns across accounts (e.g. a repeated exception suggesting the policy itself should shift)',
+        'From reporting that doesn\'t roll up across events → to account-level intelligence benchmarking cost, risk, and staffing patterns across the full portfolio',
+        'From discovering staffing or time-buffer gaps after they recur → to predictive adjustments applied before the next similar event'
+      ],
+      structural: [
+        'Sets change-management policy and approves exceptions that the Operations Director and department heads operate within',
+        'Escalation point for incidents or resourcing conflicts that exceed a single Operations Director\'s authority',
+        'Resources department heads across multiple concurrent events/accounts — a portfolio view no single Operations Director holds',
+        'Accountable for cost, risk, and repeat-friction reduction at the account level, not any individual event\'s outcome'
+      ]
+    },
+    {
+      role: 'Department Head', archetype: 'The Domain Owner', orgLevel: 'Manager',
+      relationship: 'Back-of-house or front-of-house depending on domain: leads one functional operations domain (e.g. AV, security, housekeeping, setup/inventory, risk) reporting to the Operations Director — executing that domain\'s slice of Event Work incident-free.',
+      fixed: [
+        'Their personality is domain-focused and accountable, responsible for one functional slice of operations — labor, equipment, or safety/compliance — rather than the full event',
+        'They have a background in their specific operational domain, managing crew and equipment within that domain across concurrent events',
+        'They are skilled in domain-specific pre-event readiness checks and incident response, though currently without a standardized, auditable way to prove that readiness'
+      ],
+      dynamic: [
+        'From learning about changes affecting their area only after the fact → to changes surfaced to their domain as soon as they\'re flagged, not after',
+        'From an ad hoc pre-event check with no record → to a standardized, auditable checklist that proves domain readiness before doors open',
+        'From manually searching for moved or misplaced equipment → to real-time visibility into where domain equipment currently is',
+        'From a broken asset becoming a disconnected, informal report → to a direct link from a flagged asset to a maintenance record'
+      ],
+      structural: [
+        'Reports to the Operations Director — schedules their own crew/contractors and owns their domain\'s slice of Event Work, equipment, and incidents',
+        'Owns domain-specific pre-event checks (e.g. equipment tests, safety walk-throughs) as a distinct accountability from the overall event readiness check the Operations Director runs',
+        'Resource and equipment tracking for their domain sometimes lives outside the operations function itself — the same structural mismatch already noted for the Operations Director generally, felt most directly at the department level',
+        'Success is measured domain-locally (readiness-check completion, equipment retrieval time, incident time-to-resolution) rather than event-wide'
+      ]
+    },
+    {
+      role: 'Contractor / Vendor Staff', archetype: 'The Field Hands', orgLevel: 'External/Contractor',
+      relationship: 'Back-of-house: picks up and completes assigned onsite tasks — contractors, vendor staff, temporary labor — the front-line execution layer across any vertical, not tied to a specific one.',
+      fixed: [
+        'Their personality is task-focused and mobile, moving between assignments onsite rather than working from a fixed desk or device',
+        'They have a background as contract, vendor, or temporary labor brought in for a specific event or role, without the ongoing institutional context a full-time crew member accumulates',
+        'They are skilled in executing a clearly defined onsite task once assigned, but depend entirely on that assignment being clear and reachable — there\'s no fallback to asking around for context'
+      ],
+      dynamic: [
+        'From unclear task ownership → to a clear, individually-assigned task with accountability for who\'s doing it',
+        'From no easy way to log an issue and confirm it reached the right person → to a simple way to log a job, incident, or lost item that routes correctly the first time',
+        'From being disconnected from the change/requirements context behind a task → to enough task-level context to execute correctly without needing the full event record'
+      ],
+      structural: [
+        'Picks up and completes assigned Event Work via a contractor-facing portal — no expectation of full platform access or login',
+        'Logs jobs, incidents, and lost & found items as they happen — the front-line data-entry point that Department Heads and the Operations Director depend on for accurate real-time status',
+        'Success is measured by task completion and first-time-correct routing, not by broader event outcomes — a narrower accountability than any other Operations Director-adjacent persona',
+        'At larger venues, an entire functional domain — most commonly catering and food & beverage — is sometimes run end-to-end by a single contracted operator rather than individual contracted staff embedded in the venue\'s own team, shifting who a Department Head coordinates with for that domain entirely outside the venue\'s own reporting chain'
+      ]
     }
   ],
   me: [
     {
-      role: 'Executive Director', archetype: 'The Momentus Buyer', vertical: 'Arts & Culture',
+      role: 'Executive Director', archetype: 'The Momentus Buyer', orgLevel: 'Chief',
       relationship: 'Mission-driven executive leader who balances community impact with financial sustainability — a different decision-making framework than revenue-first venue management.',
       fixed: [
         'Their personality is caring, artistic, and community-oriented — a former performer who is deeply mission-driven but pragmatic about the bottom line',
@@ -3615,7 +3677,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Director, Events Experience', archetype: 'The Momentus Buyer', vertical: 'Corporate',
+      role: 'Director, Events Experience', archetype: 'The Momentus Buyer', orgLevel: 'Director',
       relationship: 'Drives the corporate campus events technology purchase and oversees global rollout — success at one campus determines whether Momentus scales to all locations worldwide.',
       fixed: [
         'Their personality is outgoing, analytical, strategic, and client-centric, bringing extensive hotel and corporate events experience and a competitive evaluation mindset to platform decisions',
@@ -3634,7 +3696,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Manager, Workplace Experience', archetype: 'The Partner Buyer', vertical: 'Corporate',
+      role: 'Manager, Workplace Experience', archetype: 'The Partner Buyer', orgLevel: 'Manager',
       relationship: 'Proposed and drives Momentus adoption on campus — manages both the corporate company relationship and the employee hospitality experience simultaneously.',
       fixed: [
         'Their personality is decisive, organized, approachable, proactive, and empathetic — the internal champion who proposed Momentus as the centralized platform for the campus',
@@ -3653,7 +3715,7 @@ const SECONDARY_PERSONAS = {
       ]
     },
     {
-      role: 'Director, Special Events', archetype: 'The Space Maximizer', vertical: 'Arts & Culture',
+      role: 'Director, Special Events', archetype: 'The Space Maximizer', orgLevel: 'Director',
       relationship: 'Oversees venue rentals, internal programming, donor events, and regular tours — a mid-level director who drove the Momentus purchase decision and manages multiple event types simultaneously.',
       fixed: [
         'Their personality is knowledgeable, strategic, visionary, and considerate — a lifelong cultural institution advocate who drives community engagement through diverse event programming',
@@ -3669,6 +3731,26 @@ const SECONDARY_PERSONAS = {
         'Oversees a combination of venue rentals, recurring programming, donor and membership events — a portfolio breadth that no other single director in any other vertical manages',
         'Consults on mission + revenue go/no-go decisions for rental inquiries alongside the Rental Sales Coordinator — approves which events serve the institution\'s interests',
         'Platform language that defaults to rental-centric concepts (contracts, customers) creates friction for programming and exhibition use cases unique to the A&C vertical'
+      ]
+    },
+    {
+      role: 'Chief Operating Officer', archetype: 'The Business Backbone', orgLevel: 'VP',
+      relationship: 'Oversees the business-operations layer beneath the Executive Director — finance, HR, facilities, and security — as a distinct executive tier separate from artistic and mission leadership; manages roughly half the institution\'s staff.',
+      fixed: [
+        'Their personality is operationally minded and cross-functional, focused on the business machinery that lets the Executive Director focus on mission and programming',
+        'They have a background in institutional operations or business management within cultural institutions, having risen through finance, facilities, or administrative leadership rather than a curatorial or programming track',
+        'They are skilled in running multiple support functions simultaneously — finance, HR, facilities, security — as a single coordinated operation'
+      ],
+      dynamic: [
+        'From finance, HR, facilities, and security each reporting up independently → to one accountable executive who sees all of them together',
+        'From business/operations decisions and mission/programming decisions living in separate conversations → to a single operating leader who can weigh both before they reach the Executive Director',
+        'From ad hoc coordination across support functions → to one person accountable for how they work together day to day'
+      ],
+      structural: [
+        'Manages roughly half of the institution\'s staff — finance, HR, facilities, and security — as a business-operations layer distinct from the Executive Director\'s mission and artistic authority',
+        'Reports directly to the Executive Director — the second-highest authority at the institution; final decision-making authority still sits with the Executive Director',
+        'Exists in roughly half of surveyed art museums; where the role doesn\'t exist, the Executive Director likely absorbs this scope directly rather than delegating it',
+        'Classified as VP, not Chief, despite the literal job title — the role reports into this map\'s Chief-level Executive Director and oversees a multi-functional swath rather than holding final venue-wide authority; a direct example of why org-level is classified by scope and reporting line, not by title text'
       ]
     }
   ]
@@ -3781,7 +3863,7 @@ function buildSecondaryPersonaTiles() {
            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSecondaryPersonaModal('${pId}',${i});}">
         <div class="sec-persona-tile-role">Secondary Persona</div>
         <div class="sec-persona-tile-name">${sp.role}</div>
-        <div class="sec-persona-tile-arch">${sp.vertical}</div>
+        <div class="sec-persona-tile-arch">${sp.orgLevel}</div>
       </div>`).join('');
   });
 }
@@ -3804,7 +3886,7 @@ function openSecondaryPersonaModal(pId, idx) {
           <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${c};margin-bottom:5px">${area} Secondary Persona</div>
           <div style="font-family:var(--f-disp);font-size:20px;font-weight:800;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:8px">${personaIcon}${sp.role}</div>
           <div style="font-size:13px;color:var(--text-s)">${sp.archetype}</div>
-          <div class="sec-persona-tag">${sp.vertical}</div>
+          <div class="sec-persona-tag">${sp.orgLevel}</div>
         </div>
         <button class="jd-close" aria-label="Close dialog" onclick="closePersonaModal()">✕</button>
       </div>
@@ -4852,7 +4934,8 @@ const MAP = {
       {dir:'Minimize',metric:'the time it takes to',obj:'access the finalized BEO and associated function details for a scheduled event',when:'beginning Event Work assignment for a function whose BEO has just been distributed by the planning team'},
       {dir:'Minimize',metric:'the effort required to',obj:'access event-specific floor plans, room diagrams, and equipment specs alongside the BEO',when:'preparing to execute a non-standard setup\'s Event Work, which requires visual reference materials to assign correctly'},
       {dir:'Maximize',metric:'the accuracy of',obj:'all floor plan and space layout details available at the time Event Work is received',when:'preparing Event Work assignments for an event using a non-standard room configuration that requires custom layout reference materials'},
-      {dir:'Minimize',metric:'the effort required to',obj:'locate all space, equipment, and resource specifications needed to act on received Event Work',when:'accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations'}
+      {dir:'Minimize',metric:'the effort required to',obj:'locate all space, equipment, and resource specifications needed to act on received Event Work',when:'accessing function detail for an event with non-standard AV (Audio/Visual), catering, or setup configurations'},
+      {dir:'Maximize',metric:'the flexibility to',obj:'group and view Event Work according to a team\'s own structure and workflow',when:'the default organization of Event Work doesn\'t match how a specific crew or department actually thinks about and executes their work'}
     ]},
     prepare:{ step:'Assign all Event Work to crew members, departments, and equipment, with timing and location details', researchOpps:'Field-ready Event Work output — formatted for legibility in operational settings, not back-office screens — would reduce the paper-printing workaround that crews currently rely on when digital displays are impractical. Automated staffing assignment based on event type, crew skills, and availability would replace the manual scheduling process that currently requires cross-referencing multiple systems.', productDocOpps:'Temporary and contract staff able to access and be assigned work in MWO (Mobile Work Orders) without requiring full user accounts — enabling operations teams to scale their workforce for peak periods without provisioning full platform licenses. Event Work items assignable to multiple people with specific dates, times, and contact details would support coordinated pre-event delivery scheduling. Configurable default filters, searchable dropdowns, and custom item status visibility would let operations managers tailor the MWO experience for their teams, reducing clutter and speeding up how field staff find their assignments.', outcomes:[
       {dir:'Maximize',metric:'the accuracy of',obj:'a piece of Event Work\'s assigned start time, derived from how long that type of work typically takes to complete',when:'crew need to know exactly when to begin, not just the deadline by which it must be finished'},
@@ -4871,7 +4954,8 @@ const MAP = {
       {dir:'Minimize',metric:'the effort required to',obj:'translate a bundled service package into individual, crew-actionable pieces of Event Work',when:'preparing an order that combines multiple sub-items under a single package line'},
       {dir:'Minimize',metric:'the effort required to',obj:'assign a piece of Event Work to whichever available crew member holds the right role or department, rather than a specific named person',when:'the assigning supervisor only cares that the right department covers it, not who specifically does it'},
       {dir:'Minimize',metric:'the effort required to',obj:'generate accurate physical labels for booth-specific equipment such as power cords and utility drops',when:'preparing hundreds of individually labeled items for a large exhibition event'},
-      {dir:'Maximize',metric:'the speed at which',obj:'open or available shifts generated by a staffing-need change are broadcast to eligible crew',when:'a BEO or resume update triggers new labor requirements across departments'}
+      {dir:'Maximize',metric:'the speed at which',obj:'open or available shifts generated by a staffing-need change are broadcast to eligible crew',when:'a BEO or resume update triggers new labor requirements across departments'},
+      {dir:'Minimize',metric:'the effort required to',obj:'schedule load-in, dock access, and room turnover windows against the rest of the event timeline',when:'multiple deliveries and a room turnover both compete for the same window before an event begins'}
     ]},
     confirm:{ step:'Validate all assignments, run a pre-event readiness check, and confirm crew is on-schedule before the event begins', outcomes:[
       {dir:'Minimize',metric:'the likelihood of',obj:'a last-minute BEO change invalidating Event Work already distributed and acknowledged by crew',when:'a planning team revision arrives after the crew has been dispatched and briefed on their assignments'},
@@ -4881,9 +4965,10 @@ const MAP = {
       {dir:'Maximize',metric:'the confidence in',obj:'crew readiness and Event Work assignment completeness before the event window opens',when:'overseeing a high-stakes event where setup delays directly impact the client experience'},
       {dir:'Maximize',metric:'the completeness of',obj:'the pre-event readiness verification across all departments',when:'conducting the final check before a high-profile event where any gap in preparation would be immediately visible to the client'},
       {dir:'Minimize',metric:'the likelihood of',obj:'discovering unassigned or unacknowledged Event Work during the pre-event check',when:'supervising a multi-team setup with staff distributed across several venue spaces'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member arriving at the wrong location or time due to a miscommunication in Event Work assignment',when:'supervising a multi-space event where crew members are assigned to rooms they have not previously worked'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'a crew member arriving at the wrong location or time due to a miscommunication in Event Work assignment',when:'supervising a multi-space event where crew members are assigned to rooms they have not previously worked'},
+      {dir:'Maximize',metric:'the auditability of',obj:'a completed pre-event readiness check',when:'readiness needs to be provable after the fact, not just assumed because no one raised an issue'}
     ]},
-    execute:{ step:'Supervise live Event Work execution across all crew and spaces during the event window, from setup to teardown — In-system real-time updates could replace ad hoc radio and paper coordination, giving operations a live view of execution across every crew and space. A purpose-built mobile experience would drive field adoption and close the gap between what is planned and what is actually logged. Surfacing operations constraints such as load-in windows and labor limits to sales and planning during booking would prevent commitments that operations cannot deliver. A cross-event labor view would allow crews to optimize deployment across adjacent events and eliminate redundant setup and teardown cycles.', researchOpps:'Reliable mobile access to Event Work for field crews — without requiring a Momentus login — would replace the printed manifest and radio-driven workflows that make real-time status tracking impossible. A live event-day dashboard consolidating all active Event Work, crew assignments, and space statuses would give supervisors the situational awareness currently assembled from radio calls and printed sheets.', productDocOpps:'Capture client signatures and photo evidence per Event Work item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on Event Work would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each piece of Event Work. Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.', outcomes:[
+    execute:{ step:'Supervise live Event Work execution across all crew and spaces during the event window, from setup to teardown — In-system real-time updates could replace ad hoc radio and paper coordination, giving operations a live view of execution across every crew and space. A purpose-built mobile experience would drive field adoption and close the gap between what is planned and what is actually logged. Surfacing operations constraints such as load-in windows and labor limits to sales and planning during booking would prevent commitments that operations cannot deliver. A cross-event labor view would allow crews to optimize deployment across adjacent events and eliminate redundant setup and teardown cycles.', researchOpps:'Reliable mobile access to Event Work for field crews — without requiring a Momentus login — would replace the printed manifest and radio-driven workflows that make real-time status tracking impossible. A live event-day dashboard consolidating all active Event Work, crew assignments, and space statuses would give supervisors the situational awareness currently assembled from radio calls and printed sheets.', productDocOpps:'Capture client signatures and photo evidence per Event Work item on-site — confirming delivery and getting approval without paper forms. Booth names, company banners, event names, and event IDs visible on Event Work would let crew identify the right location and customer on the show floor without cross-referencing other systems. Set/strike status and pickup item tracking in MWO (Mobile Work Orders) would surface the full setup-teardown lifecycle of each piece of Event Work — for a multi-day event where most of a room\'s setup doesn\'t change day to day, this alone could cut close-out actions by two-thirds or more (one 4-day, 50-item room needed roughly 200 individual completions today versus an estimated 60 if only day-to-day changes required action). Note templates with auto-save protection would prevent field crew from losing information mid-entry. Department-based completion privileges would ensure only authorized staff can close out work in their domain. Multi-language display of resource and item descriptions would enable multilingual field teams at international venues to work without translation errors.', outcomes:[
       {dir:'Minimize',metric:'the effort required to',obj:'confirm Event Work completion in real time without interrupting crew during active execution',when:'supervising multiple concurrent setup tracks that are progressing simultaneously across the venue'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a real-time Event Work update or priority change to crew in the field',when:'a setup issue is identified during active execution and the crew member responsible is working in a different part of the venue'},
       {dir:'Maximize',metric:'the clarity of',obj:'real-time Event Work status, from setup to teardown, visible to the operations lead',when:'supervising crew distributed across multiple concurrent event spaces during peak execution'},
@@ -4895,7 +4980,8 @@ const MAP = {
       {dir:'Minimize',metric:'the disruption to the event timeline caused by',obj:'a setup discrepancy during live execution',when:'the operations team must resolve the issue without stopping the event flow'},
       {dir:'Minimize',metric:'the effort required to',obj:'reallocate crew from lower-priority Event Work to address an urgent execution gap',when:'an issue is identified during live execution that requires pulling resources away from non-critical setup work'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an Event Work item being marked complete by someone other than the authorized supervisor or coordinator',when:'a maintenance or install crew member can update status but only a designated coordinator should verify and close the item'},
-      {dir:'Minimize',metric:'the likelihood of',obj:'an inaccurate item quantity or spec going undetected during setup',when:'crew reference only the visual room diagram and do not cross-check the itemized Event Work quantities'}
+      {dir:'Minimize',metric:'the likelihood of',obj:'an inaccurate item quantity or spec going undetected during setup',when:'crew reference only the visual room diagram and do not cross-check the itemized Event Work quantities'},
+      {dir:'Minimize',metric:'the effort required to',obj:'reconfirm Event Work that hasn\'t changed since the day before',when:'executing a multi-day event where most of a room\'s setup carries over unchanged from one day to the next and only a small subset of items differ'}
     ]},
     monitor:{ step:'Track Event Work completion, crew location, and incident status in real time during the event', researchOpps:'A living event manifest that updates in real time as changes are made — replacing the static PDF export that becomes outdated the moment it is distributed. System-pushed notifications to crew when a piece of Event Work changes would eliminate the need for supervisors to manually relay updates over radio or messaging apps, closing the gap between what was planned and what crew knows in the field.', productDocOpps:'Venue-level filtering in Change Tracking for a consolidated view of all changes per location — enabling operations supervisors to monitor activity across multi-venue environments without manually selecting individual spaces. Granular resource filtering by group and resource type would surface relevant operational changes without sifting through unrelated data. Exhibitor booth number changes captured in Change Tracking would keep operations and logistics teams aligned without relying on manual communication when stand assignments shift. Extending the Operations Change Log to capture changes up to a full year out would give supervisors a complete longitudinal record of operational decisions for events booked far in advance.', outcomes:[
       {dir:'Maximize',metric:'the accuracy of',obj:'the real-time status view of all active Event Works',when:'a venue director or client representative is monitoring setup progress and requiring up-to-date information without interrupting the operations team'},
@@ -4913,10 +4999,13 @@ const MAP = {
       {dir:'Minimize',metric:'the likelihood of',obj:'an operational gap going undetected until it escalates into a client-visible failure',when:'monitoring Event Work status across a large-scale event with multiple functions running concurrently in different venue spaces'},
       {dir:'Maximize',metric:'the speed of',obj:'identifying a piece of Event Work that is falling behind schedule during live execution',when:'monitoring crew progress across multiple simultaneous event spaces during a complex multi-function event'},
       {dir:'Maximize',metric:'the traceability of',obj:'an individual Event Work item\'s status history from installed to verified to flagged for repair',when:'a crew member discovers a defect during setup and needs to route it for correction without creating a separate, disconnected incident record'},
-      {dir:'Maximize',metric:'the accessibility of',obj:'real-time status indicators for crew and supervisors with different visual abilities',when:'monitoring incident or risk status across a mixed-ability team during an active event'}
+      {dir:'Maximize',metric:'the accessibility of',obj:'real-time status indicators for crew and supervisors with different visual abilities',when:'monitoring incident or risk status across a mixed-ability team during an active event'},
+      {dir:'Maximize',metric:'the completeness of',obj:'customer requests, complaints, and lost & found items captured in one place during the event',when:'a front-of-house issue is reported and needs to reach the right owner without whoever captured it needing to know who that is'},
+      {dir:'Minimize',metric:'the time it takes to',obj:'reunite a guest with a lost item found during the event',when:'an item is logged as found and the original report needs to be matched to it before the guest leaves'},
+      {dir:'Maximize',metric:'the speed of',obj:'a first response to a customer complaint reported during the event',when:'a guest-facing issue risks escalating the longer it goes unacknowledged'}
     ]},
     modify:{ step:'Reassign or update Event Work when changes are communicated from the planning team during execution', researchOpps:'In-event change propagation — updates made in Momentus immediately reflected in the Event Work visible to crew in the field, without requiring a manual re-export or radio broadcast. Change acknowledgment tracking would give supervisors confidence that a modification has been received and actioned by the right crew member, not just sent. Beyond notifying that something changed, surface the calculated downstream effect directly — e.g. an attendance increase of 50 translates to a specific quantity increase across specific catering line items and specific dates — so operations doesn\'t have to re-derive the impact by hand.', outcomes:[
-      {dir:'Maximize',metric:'the accuracy of',obj:'the calculated downstream impact automatically surfaced when a change occurs',when:'a single attribute change, such as attendee count, affects multiple line items, departments, or dates that would otherwise require manual recalculation'},
+      {dir:'Maximize',metric:'the accuracy of',obj:'the calculated downstream impact automatically surfaced when a change occurs',when:'a single attribute change, such as attendee count, affects multiple functions, line items, departments, or dates that would otherwise require manual recalculation'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a change request being missed by crew in the field',when:'a modification arrives while staff are actively executing Event Work across multiple venue spaces'},
       {dir:'Maximize',metric:'the speed of',obj:'acknowledging a change request from the planning team and confirming the correct crew member has been notified',when:'a modification is received mid-event and the planner needs confirmation that the operations team has actioned the update'},
       {dir:'Maximize',metric:'the speed of',obj:'communicating a change request from the event planner to the affected crew member',when:'a client modification arrives mid-event and requires immediate reassignment of resources already deployed in the field'},
@@ -4927,11 +5016,15 @@ const MAP = {
       {dir:'Minimize',metric:'the disruption to the operational sequence caused by',obj:'an unexpected Event Work re-sequencing or emergency resource reallocation',when:'a client change requires immediate adjustment during a live event'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an Event Work conflict arising from a mid-event reassignment',when:'reallocating crew or equipment from one function to another while both are actively executing in the venue'},
       {dir:'Minimize',metric:'the likelihood of',obj:'a crew member receiving conflicting instructions from both the original assignment and a verbal update',when:'a modification is communicated directly by the event planner to an individual crew member without updating the formal Event Work record'},
-      {dir:'Minimize',metric:'the effort required to',obj:'document the reason for an Event Work reassignment and the time it was actioned',when:'a mid-event change is made that may need to be referenced during post-event billing or incident review'}
+      {dir:'Minimize',metric:'the effort required to',obj:'document the reason for an Event Work reassignment and the time it was actioned',when:'a mid-event change is made that may need to be referenced during post-event billing or incident review'},
+      {dir:'Maximize',metric:'the likelihood that',obj:'a change request is automatically checked against policy before it proceeds',when:'only in-policy changes should execute without manual review, and out-of-policy changes need to be blocked until someone decides'},
+      {dir:'Maximize',metric:'the visibility of',obj:'a change\'s billing impact at the moment the change is made',when:'a modification during execution may affect the client invoice and that risk needs to be flagged separately from the operational change itself'},
+      {dir:'Maximize',metric:'the degree to which',obj:'a repeated pattern of change requests across accounts surfaces as a policy-adjustment recommendation',when:'the same exception keeps being requested and evolving the policy itself would remove the need to keep requesting it'}
     ]},
     conclude:{ step:'Log Event Work completion, document all actuals and incidents, close the Event Work record, and hand off to the finance team for post-event invoicing and billing — A mobile-first actuals capture flow would replace paper-based and verbal recording at the venue, enabling real-time quantity logging and more accurate post-event records for billing and reporting.', researchOpps:'Actuals capture within Event Work at completion — allowing crew to log what was used, what changed, and what was left undone directly from mobile — would replace the post-event verbal debrief and manual entry cycle. Automated invoice generation from captured actuals would eliminate the manual reconciliation step between operations and finance at event close. Operations teams already produce manual end-of-shift/end-of-day summaries today — that existing reporting habit is a more realistic data-capture surface for a dashboard than introducing new data entry.', productDocOpps:'Unit pricing, resource codes, and equipment/labor breakdowns visible when adding actuals in MWO (Mobile Work Orders) — enabling crew to accurately document costs on-site and feeding cleaner data into post-event invoicing. The bill-to account surfaced in MWO would let crew verify billing context before marking work complete, preventing post-event billing disputes. Digital signature capture per Event Work item at completion would create a proof-of-delivery record that replaces paper forms for client sign-off. Clearly distinguishing consumption-based items — bar pours, banquet beverages — that can only be finalized after the event from as-ordered items that can close immediately would let crew complete the bulk of a piece of Event Work right away instead of holding the entire record open until final counts are in.', outcomes:[
       {dir:'Minimize',metric:'the likelihood of',obj:'being blocked from closing completed Event Work because unrelated child service order items remain open',when:'only a subset of an event\'s service orders are complete at the time of the on-site check'},
       {dir:'Minimize',metric:'the reliance on',obj:'memory and manual note-taking to compile a daily summary of completed, in-progress, and added work across the building',when:'producing an end-of-day report for other departments without a system-generated summary of Event Work status'},
+      {dir:'Minimize',metric:'the effort required to',obj:'compile information captured during execution into closing documentation',when:'producing an end-of-event record that others need to be able to consume quickly, without the person closing it having to manually re-locate and re-enter what was already captured elsewhere'},
       {dir:'Maximize',metric:'the degree to which',obj:'the gap between planned and actual staffing, resource, and timing needs on a closed event sharpens how similar future events are staffed and resourced',when:'a comparable event type is entering the pipeline and historical operational delivery data could improve the accuracy of the next staffing and resourcing plan'},
       {dir:'Maximize',metric:'the ability of',obj:'the operations team to independently verify and close a piece of Event Work upon room check',when:'the event manager currently must perform the closure but wants accountability shifted to the team that did the physical inspection'},
       {dir:'Minimize',metric:'the likelihood of',obj:'an unresolved incident remaining open after the Event Work is submitted as complete',when:'concluding a complex event where multiple operational issues were logged in real time but not all have been formally resolved and documented'},
